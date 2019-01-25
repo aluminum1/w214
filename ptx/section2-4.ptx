@@ -1,0 +1,398 @@
+
+
+<section>
+  <title>More examples and non-examples</title>
+  <example>
+    <title>A non-example</title>
+    <statement>
+      <p>
+        Define the set <m>V</m> by
+        <men>
+          V := \{ \mathbf{a}, \mathbf{b} \} 
+        </men>.
+      </p>
+
+      <p>
+        Define the addition operation by
+        <md>
+          <mrow>\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{a}</mrow>
+          <mrow>\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{c}</mrow>
+        </md>
+      </p>
+
+      <p>
+        For this to be a well-defined addition operation,
+        we need to check that whenever you add two elements of <m>V</m> together,
+        you get out a well-defined element of <m>V</m>.
+        But <m>\ve{b} + \ve{b} = \ve{c}</m>,
+        so adding <m>\ve{b} \in V</m> to itself outputs something,
+        namely <m>\ve{c}</m>, which is not an element of <m>V</m>.
+        So <m>V</m> does not form a vector space since it does not even have a well-defined addition operation.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Another non-example</title>
+    <statement>
+    <p>
+      Define the set <m>V</m> by
+      <men>
+        V := \{ \mathbf{a}, \mathbf{b} \} 
+      </men>.
+    </p>
+
+    <p>
+      Define the addition operation by
+      <md>
+        <mrow>\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{b}</mrow>
+        <mrow>\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{a}</mrow>
+      </md>
+    </p>
+
+    <p>
+      This is a well-defined addition operation,
+      since whenever you add two elements of <m>V</m> together,
+      you get out a well-defined element of <m>V</m>.
+    </p>
+
+    <p>
+      Define the zero vector by
+      <men xml:id="ne_13">
+        \ve{0} := \ve{a}
+      </men>.
+    </p>
+
+    <p>
+      This is well-defined,
+      since <m>\ve{a}</m> is indeed an element of <m>V</m>.
+    </p>
+
+    <p>
+      Define scalar multiplication by a real number <m>k \in \mathbb{R}</m> by
+      <men xml:id="ne_14">
+        k \cdot \ve{a} := \ve{a}  \mbox{and}   k \cdot \ve{b} := \ve{b}
+      </men>.
+    </p>
+
+    <p>
+      This is a well-defined scalar multiplication,
+      since it allows us to multiply any element
+      <m>\ve{v} \in V</m> by a scalar <m>k</m> and it outputs a well-defined element <m>k \cdot \ve{v} \in V</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>The zero vector space</title>
+    <statement>
+    <p>
+      Define the set <m>Z</m> by
+      <men>
+        Z := \{ \ve{z} \}
+      </men>.
+    </p>
+
+    <p>
+      Note that it contains just a single element, <m>\ve{z}</m>.
+      Define the addition operation as
+      <men>
+        \ve{z} + \ve{z} := \ve{z}
+      </men>
+    </p>
+
+    <p>
+      Define the zero element as
+      <men>
+        \ve{0} := \ve{z}
+      </men>.
+    </p>
+
+    <p>
+      Finally define scalar multiplication by a scalar <m>k \in \mathbb{R}</m> as:
+      <men>
+        k \cdot \ve{z} := \ve{z}
+      </men>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that this data satisfies the rules R1 to R8.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>$\mathbb{R}^n$</title>
+    <statement>
+    <p>
+      Define the set <m>\mathbb{R}^n</m> by
+      <men>
+        \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \mbox{ for all }  i = 1 \ldots n\}
+      </men>.
+    </p>
+
+    <p>
+      Define the addition operation as
+      <men>
+        (x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) := (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)
+      </men>.
+    </p>
+
+    <p>
+      Define the zero element as
+      <men>
+        \ve{0} := (0, \, 0, \, \ldots, \, 0)
+      </men>.
+    </p>
+
+    <p>
+      Define scalar multiplication by
+      <men>
+        k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)
+      </men>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that this data satisfies the rules R1 to R8.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>$\mathbb{R}^\infty$</title>
+    <statement>
+    <p>
+      Define the set <m>\mathbb{R}^\infty</m> by
+      <men>
+        \mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in \mathbb{R} \mbox{ for all }  i = 1, 2, 3, \ldots\}
+      </men>
+    </p>
+
+    <p>
+      So an element <m>\ve{x} \in \mathbb{R}^\infty</m> is an infinite sequence of real numbers.
+      Define the addition operation componentwise:
+      <men>
+        (x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) := (x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)
+      </men>.
+    </p>
+
+    <p>
+      Define the zero element as
+      <men>
+        \ve{0} := (0, \, 0, \, 0, \, \ldots )
+      </men>,
+      the infinite sequence whose components are all zero.
+      Finally, define scalar multiplication componentwise:
+      <men>
+        k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
+      </men>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that this data satisfies the rules R1 to R8.
+        </p>
+      </statement>
+    </exercise>
+
+    <p>
+
+      <assemblage>
+        Thinking about infinity is an important part of mathematics. Have you watched the movie about me called <em>The man who knew infinity</em>?
+      </assemblage>
+
+    </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Functions on a set</title>
+    <statement>
+    <p>
+      Let <m>X</m> be any set.
+      Define the set <m>\Fun(X)</m> of
+      <em>real-valued functions on <m>X</m></em> by
+      <men>
+        \Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}
+      </men>.
+    </p>
+
+    <p>
+      Note that the functions can be arbitrary;
+      there is no requirement for them to be continuous, or differentiable.
+      Such a requirement would not make sense,
+      since <m>X</m> could be an arbitrary set.
+      For instance <m>X</m> could be the set
+      <m>\{a, b, c\}</m> <mdash />without any further informaiton,
+      it does not make sense to say that a function <m>\mathbf{f} : X \rightarrow \mathbb{R}</m> is continuous.
+    </p>
+
+    <p>
+      Define the addition operation by
+      <men>
+        (\mathbf{f} + \mathbf{g}) (x) := \mathbf{f}(x) + \mathbf{g}(x),  x \in X
+      </men>
+    </p>
+
+    <p>
+      Make sure you understand what this formula is saying!
+      We start with two functions
+      <m>\mathbf{f}</m> and <m>\mathbf{g}</m>,
+      and we are defining their sum <m>\mathbf{f} + \mathbf{g}</m>.
+      This is supposed to be another function on <m>X</m>.
+      To define a function on <m>X</m>, I am supposed to write down what value it outputs for each <m>x \in X</m>.
+      And that is what the formula says:
+      the value that the function
+      <m>\mathbf{f} + \mathbf{g}</m> assigns to the element <m>x \in X</m> is defined to be the number
+      <m>\mathbf{f}(x)</m> plus the number <m>\mathbf{g}(x)</m>.
+      Remember: <m>\mathbf{f}</m> is a function,
+      while <m>\mathbf{f}(x)</m> is a number!
+    </p>
+
+    <p>
+      Define the zero vector <m>\mathbf{0}</m> to be the function which outputs the number <m>0</m> for every input value of <m>x \in X</m>:
+      <men>
+        \ve{0} (x) := 0  \mbox{for all \(x \in X\).}
+      </men>
+    </p>
+
+    <p>
+      Define scalar multiplication by
+      <men>
+        (k \cdot \mathbf{f})(x) := k \mathbf{f}(x)
+      </men>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Notation quiz!
+          Say whether the following combination of symbols represents a real number or a function.
+
+          <ol>
+            <li>
+              <p>
+                <m>\mathbf{f}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\mathbf{f}(x)</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>k \cdot \mathbf{f}</m>
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>(k \cdot \mathbf{f})(x)</m>
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Let <m>X = \{a, b, c\}</m>.
+
+          <ol>
+            <li>
+              <p>
+                Write down three different functions <m>\mathbf{f}, \mathbf{g}, \mathbf{h}</m> in <m>\Fun(X)</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                For the functions you constructed in (i),
+                calculate <m>\mathbf{f} + \mathbf{g}</m> as well as <m>3 \cdot \mathbf{h}</m>.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that the data above satisfies the rules R1 to R8, so that <m>\Fun(X)</m> is a vector space.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example xml:id="matrices_example_vec_space">
+    <title>Matrices</title>
+    <statement>
+    <p>
+      the set <m>\Mat_{n, m}</m> of all
+      <m>n \times m</m> matrices is a vector space.
+      See <xref ref="reminder-matrices-chap">Appendix</xref>
+      for a reminder about matrices.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that when equipped with the addition operation, zero vector,
+          and scalar multplication operation as defined in <xref ref="reminder-matrices-chap">Appendix</xref>,
+          the set <m>\Mat_{n, m}</m> of all
+          <m>n \times m</m> matrices is a vector space.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+      <p>
+        We will write <m>\Col_n</m> for the vector space
+        <m>\Mat_{n,1}</m> of <m>n</m>-dimensional
+        <em>column vectors</em>,
+        <me>
+          \Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n
+          \end{array}  \right] : x_1, \ldots, x_n \in \mathbb{R} \right\}
+        </me>
+      </p>
+
+      <p>
+        So, <m>\Col_n</m> <sq>is</sq> just <m>\mathbb{R}^n</m>,
+        but we make explicit the fact that the components of the vectors are arranged in a column.
+      </p>
+    </statement>
+  </example>
+</section>
+

@@ -1,0 +1,202 @@
+
+
+<section>
+  <title>Further exercises for \thesection</title>
+  <exercise xml:id="exercise_for_new_basis">
+    <statement>
+      <p>
+        Sift the list of vectors
+        <md>
+          <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2, 3)</mrow>
+          <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="true_false_span_lin_ind">
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space of dimension <m>n</m>.
+        State whether each of the following statements is true or false.
+        If it is true, prove it.
+        If it is false, give a counterexample.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Any list of vectors which spans <m>V</m> contains at least <m>n</m> vectors.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a linearly independent list of vectors in a vector space <m>V</m>.
+        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors from <m>\basis{B}</m>.
+        Show that the list <m>\basis{B}' = \bopen \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \bclose</m> is still linearly independent.
+        (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="n_lin_ind_is_basis">
+    <statement>
+      <p>
+        Complete the proof of the following lemma.
+      </p>
+
+      <p>
+        <em>Lemma.</em> Suppose <m>V</m> is a vector space of dimension <m>n</m>.
+        Then any linearly independent set of <m>n</m> vectors in <m>V</m> is a basis for <m>V</m>.
+      </p>
+
+      <p>
+        <em>Proof.</em> Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a linearly independent set of vectors in <m>V</m>.
+      </p>
+
+      <p>
+        Suppose that <m>\basis{B}</m> is
+        <em>not</em> a basis for <m>V</m>.
+      </p>
+
+      <p>
+        Therefore, <m>\basis{B}</m> does not span <m>V</m>, since ... (a)
+      </p>
+
+      <p>
+        Therefore, there exists <m>\ve{v} \in V</m> such that ... (b)
+      </p>
+
+      <p>
+        Now, add <m>\ve{v}</m> to the list
+        <m>\basis{B}</m> to obtain a new list <m>\basis{B}' :=</m> ... (c)
+      </p>
+
+      <p>
+        The new list <m>\basis{B}'</m> is linearly independent because ... (d)
+      </p>
+
+      <p>
+        This is a contradiction because ... (e)
+      </p>
+
+      <p>
+        Hence, <m>\basis{B}</m> must be a basis for <m>V</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="checking_matrices_lin_dep">
+    <statement>
+      <p>
+        Use <xref ref="true_false_span_lin_ind">Exercise</xref>(a) to show that the list of matrices in
+        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        In each case,
+        use the results in <xref ref="true_false_span_lin_ind">Exercises</xref>
+        and <xref ref="n_lin_ind_is_basis"></xref>
+        to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \Poly_2</m>,
+              <m>\basis{B} = \bopen 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \bclose</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \Mat_{2,2}</m>,
+              <m>\basis{B} = \left\{ \cmatrix{1 \amp 2 \\ -1 \amp 3}, \, \cmatrix{0 \amp 1 \\ 3 \amp -1}, \, \cmatrix{1 \amp 2 \\ 3 \amp 4} \right\}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              <m>V = \Trig_2</m>,
+              <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\bopen \ve{u}, \ve{v}, \ve{w} \bclose</m> be a linearly independent list of vectors in a vector space <m>V</m>.
+        State whether each of the following statements is true or false.
+        If it is true, prove it.
+        If it is false, give a counterexample.
+        (Hint: Use the definition of linear independence.)
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              The list <m>\bopen \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \bclose</m> is linearly independent.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              The list <m>\bopen \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \bclose</m> is linearly independent.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="dim_poly_at_2_ex">
+    <statement>
+      <p>
+        For each of the following,
+        show that <m>V</m> is a subspace of <m>\Poly_2</m>,
+        find a basis for <m>V</m>, and compute <m>\Dim V</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+</section>
+

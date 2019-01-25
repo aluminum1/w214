@@ -1,0 +1,361 @@
+
+
+<section>
+  <title>Linear independence</title>
+  <definition>
+    <statement>
+      <p>
+        A list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in a vector space <m>V</m> is called
+        <term>linearly independent</term> if the equation
+        <men xml:id="lin_independence_eqn">
+          k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}
+        </men>
+        has only the trivial solution <m>k_1 = k_2 = \cdots = k_n = 0</m>.
+        Otherwise, the list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> is called
+        <term>linearly dependent</term>.
+      </p>
+    </statement>
+  </definition>
+
+  <remark xml:id="remark_about_lin_dependence">
+    <p>
+      Suppose one of the vectors in the collection <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>,
+      <m>\ldots</m>, <m>\ve{v}_n</m> is the zero vector <m>\ve{0}</m>;
+      for instance suppose <m>\ve{v}_1 = \ve{0}</m>.
+      Then the vectors must be linearly dependent,
+      since the equation <xref ref="lin_independence_eqn" /> has the nontrivial solution <m>k_1 = 1</m>,
+      <m>k_2 = k_2 = \cdots = k_n = 0</m>.
+      So: <em>a list of linearly independent vectors never contains the zero vector!</em>
+    </p>
+  </remark>
+
+  <remark xml:id="crit_ind">
+    <p>
+      The criterion for a list of vectors
+      <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> to be linearly independent,
+      <me>
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}  \Rightarrow  k_1 = k_2 = \cdots = k_n = 0
+      </me>
+      is clearly equivalent to the criterion that
+      <me>
+        \begin{minipage}{10cm} { All of the \(\ve{v}_i\) are nonzero and none of them can be expressed as a nontrivial linear combination of the others.} \end{minipage}
+      </me>
+    </p>
+  </remark>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove this last remark.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <statement>
+    <p>
+      The list of vectors <m>\ve{f}_1 = (-1, \, 2)</m>,
+      <m>\ve{f}_2 = (1, \,1)</m> from <xref ref="three_vectors_spanning_R2_example">Example</xref>
+      is linearly independent, because the equation
+      <me>
+        k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
+      </me>
+      is equivalent to the system of equations
+      <men xml:id="system_from_r2_example">
+        \systeme{-k_1 + k_2 = 0, 2k_1 + k_2 = 0}
+      </men>
+      which has only the trivial solution <m>k_1 = 0</m> and <m>k_2 = 0</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check that <xref ref="system_from_r2_example" /> has only the trivial solution.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example xml:id="example_about_lin_dep_1">
+    <statement>
+    <p>
+      The list of vectors <m>\ve{f}_1 = (-1, \, 2)</m>,
+      <m>\ve{f}_2 = (1, \,1)</m>,
+      <m>\ve{f}_3 = (2, \, -1)</m> from <xref ref="three_vectors_spanning_R2_example">Example</xref>
+      is linearly dependent, because the equation
+      <men xml:id="eqn_to_check_lin_ind">
+        k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)
+      </men>
+      is equivalent to the system of equations
+      <men xml:id="system_from_r2_example_new">
+        \systeme{-k_1 + k_2 + 2k_3 = 0, 2k_1 + k_2 - k_3 = 0}
+      </men>
+      which has a one-dimensional vector space of solutions parameterized by <m>t</m>,
+      <men xml:id="supposed_soln">
+        k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}
+      </men>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check that <xref ref="system_from_r2_example_new" /> has the solution set <xref ref="supposed_soln" />.
+        </p>
+      </statement>
+    </exercise>
+
+    <p>
+      For instance, for <m>t=2</m>, we have
+      <me>
+        2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
+      </me>
+      so that <xref ref="eqn_to_check_lin_ind" /> has nontrivial solutions.
+    </p>
+    </statement>
+  </example>
+
+  <example xml:id="new_basis_for_poly_3">
+    <statement>
+      <p>
+        The list of polynomials
+        <me>
+          \ve{q}_0(x) := 1, \,\, \ve{q}_1(x) := x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
+        </me>
+        from <xref ref="chebyshev_example">Example</xref>
+        is linearly independent in <m>\Poly_3</m>.
+        This is because the equation
+        <me>
+          k_0 \ve{q}_0 + k_1 \ve{q}_1 + k_2 \ve{q}_2 + k_3 \ve{q}_3 = \ve{0}
+        </me>
+        becomes the following equation between polynomials:
+        <me>
+          4k_3 x^3 + 2k_2 x^2 + (-3k_3 + k_1) x + (-k_2 + k_0) = 0
+        </me>
+      </p>
+
+      <p>
+        This is equivalent to the following system of equations,
+        <me>
+          \systeme{ 4k_3 = 0, 2k_2 = 0, -3 k_3 + k_1 = 0 , k_0 - k_2 = 0}
+        </me>
+        which has only the trivial solution <m>k_0 = k_1 = k_2 = k_3 = 0</m>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    At the moment,
+    the definition of a list of vectors being <sq>linearly dependent</sq> is that the list is <sq>not linearly independent</sq>!
+    That might get your head in a knot.
+    Here is a more straightforward way to think about linearly depdendent lists of vectors.
+  </p>
+
+  <proposition xml:id="lin_dependence_prop">
+    <title>Linear Combination of Preceding Vectors</title>
+    <statement>
+      <p>
+        Let <m>\ve{v}_1</m>, <m>\ve{v}_2</m>, <m>\ldots</m>,
+        <m>\ve{v}_n</m> be a list of vectors in a vector space <m>V</m>.
+        The following statements are equivalent:
+
+        <ol>
+          <li>
+            <p>
+              The list of vectors <m>\ve{v}_1</m>, <m>\ve{v}_2</m>,
+              <m>\ldots</m>, <m>\ve{v}_n</m> is linearly dependent.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Either <m>\ve{v}_1 = \ve{0}</m>,
+              or for some <m>r \in \{2, 3, \ldots,
+              n\}</m>, <m>\ve{v}_r</m> is a linear combination of <m>\ve{v}_1</m>,
+              <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      (1) <m>\Rightarrow</m> (2).
+      Suppose that the list <m>\ve{v}_1</m>, <m>\ve{v}_2</m>,
+      <m>\ldots</m>, <m>\ve{v}_n</m> is linearly dependent.
+      This means that there are scalars <m>k_1</m>,
+      <m>k_2</m>, <m>\ldots</m>, <m>k_n</m>, not all zero, such that
+      <men xml:id="lin_dep_lem_first_eqn">
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
+      </men>.
+    </p>
+
+    <p>
+      Let <m>r \in \{1, \,2, \ldots, \, n\}</m> be the largest index such that <m>k_r \neq 0</m>.
+      (We are told that not all the <m>k_i</m> are zero, so this makes sense.)
+      If <m>r=1</m>,
+      then <xref ref="lin_dep_lem_first_eqn" /> is simply the equation
+      <me>
+        k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0
+      </me>.
+    </p>
+
+    <p>
+      Therefore <m>\ve{v}_1 = \ve{0}</m> by <xref ref="dichotomy_lem">Lemma</xref>,
+      and we are done.
+      On the other hand, suppose <m>r \neq 1</m>.
+      Then <xref ref="lin_dep_lem_first_eqn" /> becomes the equation
+      <me>
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0
+      </me>.
+    </p>
+
+    <p>
+      By dividing by <m>k_r</m>,
+      we can now solve for <m>\ve{v}_r</m> in terms of the preceding vectors <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>:
+      <me>
+        \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \, 
+      </me>.
+    </p>
+
+    <p>
+      (2) <m>\Rightarrow</m> (1).
+      If <m>\ve{v}_1 = \ve{0}</m>,
+      then the list of vectors <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>,
+      <m>\ve{v}_n</m> is certainly linearly dependent by <xref ref="remark_about_lin_dependence">Remark</xref>.
+      On the other hand,
+      suppose that for some <m>r \in \{2, 3, \ldots, n\}</m>,
+      <m>\ve{v}_r</m> is a linear combination of the preceding vectors, that is
+      <me>
+        \ve{v}_r = a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{r-1} \ve{v}_{r-1}
+      </me>.
+    </p>
+
+    <p>
+      Then clearly
+      <me>
+        a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{r-1} \ve{v}_{r-1} - \ve{v}_r + 0 \ve{v}_{r+1} + \cdots + 0 \ve{v}_n = \ve{0}
+      </me>
+      which shows that the list of vectors <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>,
+      <m>\ve{v}_n</m> is not linearly independent,
+      since not all the coefficients are zero above <mdash /> in particular the coefficient of <m>\ve{v}_r</m> is <m>-1</m>.
+    </p>
+  </proof>
+
+  <p>
+
+    <assemblage>
+      I call this the <sq>Linear Combination of Preceding Vectors Proposition</sq>. You should give all your theorems names, it helps you to remember them and become familiar with them.
+    </assemblage>
+
+  </p>
+
+  <example xml:id="app_of_prop_preceding">
+    <statement>
+      <p>
+        We saw in <xref ref="example_about_lin_dep_1">Example</xref>
+        that the list of vectors <m>\ve{f}_1 = (-1, \, 2)</m>,
+        <m>\ve{f}_2 = (1, \,1)</m>,
+        <m>\ve{f}_3 = (2, \, -1)</m> in
+        <m>\mathbb{R}^3</m> is linearly dependent.
+        Therefore, by <xref ref="lin_dependence_prop">Proposition</xref>,
+        we must have either:
+
+        <ul>
+          <li>
+            <p>
+              <m>\ve{f}_1 = \ve{0}</m>
+              (not the case),
+              or
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{f}_2</m> is a scalar multiple of <m>\ve{f}_1</m>
+              (not the case),
+              or
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{f}_3</m> is a linear combination of
+              <m>\ve{f}_1</m> and <m>\ve{f}_2</m>, which is true:
+              <me>
+                \ve{f}_3 = - \ve{f}_1 + \ve{f}_2
+              </me>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <proposition xml:id="bumping_off_lemma">
+    <title>Bumping Off Proposition</title>
+    <statement>
+      <p>
+        Suppose <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> is a linearly independent list of vectors in a vector space <m>V</m>,
+        and that <m>\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose</m> spans <m>V</m>.
+        Then <m>m \leq n</m>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      Start with the original spanning list of vectors
+      <men>
+        \basis{S} = \bopen \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose
+      </men>
+      and consider the <sq>bloated</sq> list
+      <men xml:id="bloated_list">
+        \basis{S}' = \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \bclose
+      </men>
+    </p>
+
+    <p>
+      Since <m>\ve{l}_1</m> is a linear combination of the <m>\ve{s}_i</m>,
+      this list is linearly dependent by <xref ref="crit_ind">Remark</xref>.
+      Thus, by <xref ref="lin_dependence_prop">Proposition</xref>
+      (Linear Combination of Preceding Vectors),
+      one of the <m>\ve{s}</m>-vectors, say <m>\ve{s}_r</m>,
+      can be expressed as a linear combination of the preceding vectors.
+      We can then remove <m>\ve{s}_r</m> from the list (<sq>bump it off</sq>),
+      and the resulting list
+      <men>
+        \basis{S}_1 :=  \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \bclose \qquad \mbox{(\(\ve{s}_r\) omitted)}
+      </men>
+      still spans <m>V</m>.
+      We can go on in this way,
+      each time transferring another one of the <m>\ve{l}</m>-vectors into the list,
+      and removing another one of the <m>\ve{s}</m>-vectors,
+      to arrive at a new spanning list <m>\basis{S}_2</m>,
+      <m>\basis{S}_3</m>, <m>\basis{S}_4</m>, and so on,
+      where list <m>\basis{S}_k</m> has <m>(n-k)</m> <m>\ve{s}</m>-vectors.
+    </p>
+
+    <p>
+      Suppose <m>m > n</m>.
+      Then the list <m>\basis{S}_n</m> will consist only of <m>\ve{l}</m>-vectors,
+      <me>
+        \basis{S}_n: \,\, \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_n
+      </me>
+      and it spans <m>V</m> by construction.
+      But there are still some <m>\ve{l}</m>-vectors <m>\ve{l}_{n+1}, \ldots \ve{l}_{m}</m> left over!
+      This means that <m>\ve{l}_{n+1}</m> is a linear combination of the vectors in <m>\basis{S}_n</m>,
+      which contradicts the fact that the list
+      <m>\bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> was linearly independent.
+      So we cannot have <m>m > n</m> and hence <m>m \leq n</m>.
+    </p>
+  </proof>
+</section>
+
