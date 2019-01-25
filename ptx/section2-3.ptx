@@ -26,6 +26,10 @@
         B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} 
       </men>.
     </p>
+
+    <p>
+      \end{example}
+    </p>
   </subsection>
 
   <subsection>
@@ -127,13 +131,7 @@
       <md>
         <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
         <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp  \mbox{
-
-        <sidebyside>
-          (because \(x + y = y + x\) is true for real numbers)
-        </sidebyside>
-
-        }</mrow>
+        <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp  \mbox{(because \(x + y = y + x\) is true for real numbers)}</mrow>
         <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
       </md>
     </p>
@@ -145,13 +143,7 @@
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
         <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
         <mrow>\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
-        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp  \mbox{
-
-        <sidebyside>
-          (since \((x + y) + z = x + (y + z)\) is true for real numbers)
-        </sidebyside>
-
-        }</mrow>
+        <mrow>\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp  \mbox{(since \((x + y) + z = x + (y + z)\) is true for real numbers)}</mrow>
         <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
         <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(by defn of addition in \(B\))} </mrow>
       </md>.

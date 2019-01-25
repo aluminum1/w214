@@ -31,24 +31,27 @@
     for a schematic representation.
   </p>
 
-  <p>
+  <assemblage>
+    <p>
+      Sometimes, to be absolutely clear, I will put a subscript on the zero vector to indicate which vector space it belongs to, eg.
+      <m>\ve{0}_W</m> refers to the zero vector in <m>W</m>,
+      while <m>\ve{0}_V</m> refers to the zero vector in <m>V</m>.
+    </p>
+  </assemblage>
 
-    <assemblage>
-      Sometimes, to be absolutely clear, I will put a subscript on the zero vector to indicate which vector space it belongs to, eg. <m>\ve{0}_W</m> refers to the zero vector in <m>W</m>, while <m>\ve{0}_V</m> refers to the zero vector in <m>V</m>.
-    </assemblage>
-
-    <assemblage>
-      Another name for the kernel of <m>T</m> is the <em>nullspace</em> of <m>T</m>, and another name for the image of <m>T</m> is the <em>range</em> of <m>T</m>.
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      Another name for the kernel of <m>T</m> is the
+      <em>nullspace</em> of <m>T</m>,
+      and another name for the image of <m>T</m> is the
+      <em>range</em> of <m>T</m>.
+    </p>
+  </assemblage>
 
   <figure>
+    <me>
 
-    <sidebyside>
-      <me>
-
-        <image>
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -63,13 +66,13 @@
  \node at (3.4, 0) {\(\ve{0}_W\)};
  \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
 </latex-image>
-        </image>
+      </image>
 
-      </me>
-      \subcaption{Kernel of <m>T</m>}
-      <me>
+    </me>
+    \subcaption{Kernel of <m>T</m>}
+    <me>
 
-        <image>
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -82,12 +85,10 @@
  \draw (0.15, -0.987) -- (3.03,-0.3);
  \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
 </latex-image>
-        </image>
+      </image>
 
-      </me>
-      \subcaption{Image of <m>T</m>}
-    </sidebyside>
-
+    </me>
+    \subcaption{Image of <m>T</m>}
   </figure>
 
   <lemma xml:id="ker-im-subspace">
@@ -233,13 +234,15 @@
     </statement>
   </definition>
 
-  <p>
-
-    <assemblage>
-      The <sq>dimension of <m>\Ker(T)</m></sq> makes sense because <m>\Ker(T)</m> is a subspace of a finite-dimensional vector space <m>V</m>, and hence is finite-dimensional by <xref ref="dim-of-subspace-prop">Proposition</xref>. We do not yet know that <m>\Im(T)</m> is finite-dimensional, but this will follow from the Rank-Nullity Theorem (<xref ref="rank-nullity-theorem">Theorem</xref>).
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      The <sq>dimension of <m>\Ker(T)</m></sq> makes sense because <m>\Ker(T)</m> is a subspace of a finite-dimensional vector space <m>V</m>,
+      and hence is finite-dimensional by <xref ref="dim-of-subspace-prop">Proposition</xref>.
+      We do not yet know that <m>\Im(T)</m> is finite-dimensional,
+      but this will follow from the Rank-Nullity Theorem
+      (<xref ref="rank-nullity-theorem">Theorem</xref>).
+    </p>
+  </assemblage>
 
   <example xml:id="cross-product-example">
     <statement>
@@ -395,15 +398,7 @@
         with no constraints on the other constants <m>a_1, a_2, b_2</m>.
         In other words,
         <me>
-          \Ker(I) = \left\{ \mbox{
-
-          <sidebyside>
-            all trigonometric polynomials of the form  
-            \(a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}\), 
-            where \(a_0, a_1, a_2, b_2 \in \mathbb{R}\).
-          </sidebyside>
-
-          }  \right\}
+          \Ker(I) = \left\{ \mbox{ all trigonometric polynomials of the form  \\ \(a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}\), \\ where \(a_0, a_1, a_2, b_2 \in \mathbb{R}\). }  \right\}
         </me>
       </p>
 
@@ -500,14 +495,7 @@
         where <m>t \in \mathbb{R}</m>.
         Hence
         <me>
-          \Ker(T) =  \left\{ \mbox{
-
-          <sidebyside>
-            all polynomials of the form  
-            \( -t -2t x + t x^2\)  where  \(t \in \mathbb{R}\)
-          </sidebyside>
-
-          }  \right\}
+          \Ker(T) =  \left\{ \mbox{ all polynomials of the form  \\ \( -t -2t x + t x^2\)  where  \(t \in \mathbb{R}\) }  \right\}
         </me>.
       </p>
 

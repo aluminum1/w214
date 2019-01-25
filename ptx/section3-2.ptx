@@ -39,7 +39,7 @@
       </me>
       is clearly equivalent to the criterion that
       <me>
-        \begin{minipage}{10cm} { All of the \(\ve{v}_i\) are nonzero and none of them can be expressed as a nontrivial linear combination of the others.} \end{minipage}
+        { All of the \(\ve{v}_i\) are nonzero and none of them can be expressed as a nontrivial linear combination of the others.}
       </me>
     </p>
   </remark>
@@ -249,13 +249,13 @@
     </p>
   </proof>
 
-  <p>
-
-    <assemblage>
-      I call this the <sq>Linear Combination of Preceding Vectors Proposition</sq>. You should give all your theorems names, it helps you to remember them and become familiar with them.
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      I call this the <sq>Linear Combination of Preceding Vectors Proposition</sq>.
+      You should give all your theorems names,
+      it helps you to remember them and become familiar with them.
+    </p>
+  </assemblage>
 
   <example xml:id="app_of_prop_preceding">
     <statement>

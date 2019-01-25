@@ -21,10 +21,10 @@
       is defined to be the set of all ordered pairs <m>(x,y)</m> where <m>x</m> and <m>y</m> are real numbers.
     </p>
 
-    <p>
-
-      <assemblage>
-        Let us pause for a second and translate this definition from English into mathematical symbols. The translation is:
+    <assemblage>
+      <p>
+        Let us pause for a second and translate this definition from English into mathematical symbols.
+        The translation is:
         <men>
           A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \} 
         </men>.
@@ -41,9 +41,8 @@
 
       <p>
         Well done <mdash /> you are learning the language of mathematics!
-      </assemblage>
-
-    </p>
+      </p>
+    </assemblage>
 
     <p>
       An element of <m>A</m> is an arbitrary pair of real numbers <m>\ve{a} = (a_1, \, a_2)</m>.
@@ -542,7 +541,14 @@
             There is no analogue of this operation in <m>A</m> and <m>B</m>.
 
             <assemblage>
-              Note that there is no <em>integration</em> map from <m>C</m> to <m>C</m>, because integrating a polynomial <em>increases</em> the degree by <m>1</m>, so the result might be a polynomial of degree <m>5</m>, which does not live in <m>C</m>!
+              <p>
+                Note that there is no <em>integration</em>
+                map from <m>C</m> to <m>C</m>,
+                because integrating a polynomial
+                <em>increases</em> the degree by <m>1</m>,
+                so the result might be a polynomial of degree <m>5</m>,
+                which does not live in <m>C</m>!
+              </p>
             </assemblage>
 
           </p>

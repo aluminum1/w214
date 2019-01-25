@@ -28,13 +28,13 @@
     In that case <sq>being an eigenvector</sq> wouldn't be a very special property of <m>T</m>.
   </p>
 
-  <p>
-
-    <assemblage>
-      It is perfectly fine for a linear operator <m>T</m> to have a zero <em>eigenvalue</em>. But our convention is that an <em>eigenvector</em> cannot be the zero vector.
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      It is perfectly fine for a linear operator <m>T</m> to have a zero <em>eigenvalue</em>.
+      But our convention is that an <em>eigenvector</em>
+      cannot be the zero vector.
+    </p>
+  </assemblage>
 
   <p>
     Instead of considering just a <em>single</em>
@@ -56,12 +56,17 @@
     </statement>
   </definition>
 
+  <assemblage>
+    <p>
+      Note that if <m>\lambda</m> is an eigenvalue of <m>T</m>,
+      then the zero vector <m>\ve{0}</m> <em>is</em>
+      in the eigenspace <m>E_\lambda</m> of <m>T</m> associated to <m>\lambda</m>.
+      But it is not an <em>eigenvector</em> of <m>T</m>.
+      That is just terminology.
+    </p>
+  </assemblage>
+
   <p>
-
-    <assemblage>
-      Note that if <m>\lambda</m> is an eigenvalue of <m>T</m>, then the zero vector <m>\ve{0}</m> <em>is</em> in the eigenspace <m>E_\lambda</m> of <m>T</m> associated to <m>\lambda</m>. But it is not an <em>eigenvector</em> of <m>T</m>. That is just terminology.
-    </assemblage>
-
     Note that we can also express <m>E_\lambda</m> as
     <men xml:id="eigenspace_as_kernel">
       E_\lambda = \Ker(\lambda \id - T)

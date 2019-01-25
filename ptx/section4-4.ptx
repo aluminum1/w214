@@ -19,13 +19,11 @@
     </statement>
   </definition>
 
-  <p>
-
-    <assemblage>
+  <assemblage>
+    <p>
       Do you understand why <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> is an <m>n \times m</m> matrix?
-    </assemblage>
-
-  </p>
+    </p>
+  </assemblage>
 
   <example>
     <statement>
@@ -82,13 +80,13 @@
     </proof>
   </theorem>
 
-  <p>
-
-    <assemblage>
-      If we could give this theorem a name, it would be <q>The Relationship Between Linear Maps, Coordinate Vectors, and Matrix Multiplication of Column Vectors Theorem</q>!
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      If we could give this theorem a name,
+      it would be <q>The Relationship Between Linear Maps, Coordinate Vectors,
+      and Matrix Multiplication of Column Vectors Theorem</q>!
+    </p>
+  </assemblage>
 
   <example>
     <statement>
@@ -227,13 +225,8 @@
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S(\ve{b}_i]_\basis{C} \amp \amp  \mbox{(<xref ref="lin-map-in-matrix-theorem">Theorem</xref>)}</mrow>
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, [\ve{b}_i]_\basis{B} \amp \amp  \mbox{(<xref ref="lin-map-in-matrix-theorem">Theorem</xref>)}</mrow>
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, \mat{e}_i \amp \amp  \left(\mbox{
-
-        <sidebyside>
-          since \([\ve{b}_i]_\basis{B} = \mat{e}_i\), the \(i\)th 
-
-          standard basis column vector.
-        </sidebyside>
-
+        since \([\ve{b}_i]_\basis{B} = \mat{e}_i\), the \(i\)th \\
+        standard basis column vector.
         }  \right)</mrow>
         <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  \mbox{(by (4.4.2))} </mrow>
       </md>.

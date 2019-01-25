@@ -113,13 +113,14 @@
     </statement>
   </lemma>
 
-  <p>
-
-    <assemblage>
-      This lemma justifies us calling <m>T</m> <em>the</em> inverse of <m>S</m> (as opposed to <em>an</em> inverse of <m>S</m>), and also justifies us writing <m>T = S^{-1}</m>.
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      This lemma justifies us calling <m>T</m>
+      <em>the</em> inverse of <m>S</m>
+      (as opposed to <em>an</em> inverse of <m>S</m>),
+      and also justifies us writing <m>T = S^{-1}</m>.
+    </p>
+  </assemblage>
 
   <proof>
     <p>
@@ -397,12 +398,14 @@
     </p>
   </proof>
 
-  <p>
+  <assemblage>
+    <p>
+      The result above is very important in linear algebra.
+      It says that,
+      once we have chosen a basis for an abstract finite-dimensional vector space <m>V</m>,
+      we can treat the elements of <m>V</m> as if they were column vectors!
+    </p>
+  </assemblage>
 
-    <assemblage>
-      The result above is very important in linear algebra. It says that, once we have chosen a basis for an abstract finite-dimensional vector space <m>V</m>, we can treat the elements of <m>V</m> as if they were column vectors!
-    </assemblage>
-
-  </p>
 </section>
 

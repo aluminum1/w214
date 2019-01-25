@@ -58,13 +58,12 @@
     </statement>
   </definition>
 
-  <p>
-
-    <assemblage>
-      Another name for a linear map is a <em>linear transformation</em>.
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      Another name for a linear map is a
+      <em>linear transformation</em>.
+    </p>
+  </assemblage>
 
   <example>
     <title>Identity map</title>
@@ -218,13 +217,15 @@
         </md>.
       </p>
 
-      <p>
+      <assemblage>
+        <p>
+          We will soon see that <em>all</em>
+          linear maps <m>\mathbb{R}^3 \rightarrow \mathbb{R}</m>
+          (indeed all linear maps <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>)
+          are of this form.
+        </p>
+      </assemblage>
 
-        <assemblage>
-          We will soon see that <em>all</em> linear maps <m>\mathbb{R}^3 \rightarrow \mathbb{R}</m> (indeed all linear maps <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>) are of this form.
-        </assemblage>
-
-      </p>
     </statement>
   </example>
 
@@ -341,12 +342,14 @@
         That is, <m>T_{\mat{A}} (\col{v}) := \mat{A} \col{v}</m> is the matrix product of <m>\mat{A}</m> with the column vector <m>\col{v}</m>.
         The fact that <m>T_\mat{A}</m> is indeed a linear map follows from the linearity of matrix multiplication
         (<xref ref="props_of_matrix_ops">Proposition</xref> parts 2 and 3).
-
-        <assemblage>
-          Note that an <m>n \times m</m> matrix gives a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
-        </assemblage>
-
       </p>
+
+      <assemblage>
+        <p>
+          Note that an <m>n \times m</m> matrix gives a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
+        </p>
+      </assemblage>
+
     </statement>
   </example>
 

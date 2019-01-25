@@ -19,13 +19,17 @@
     </me>
   </p>
 
-  <p>
-
-    <assemblage>
-      I will always write matrices in <sq>sans serif</sq> font, eg. <m>\mat{A}</m>. It is difficult to <sq>change fonts</sq> in handwritten text, but I encourage you to at least reserve the letters <m>\mat{A}</m>, <m>\mat{B}</m>, <m>\mat{C}</m>, etc. for matrices, and <m>S</m>, <m>T</m>, etc. for linear maps!
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      I will always write matrices in <sq>sans serif</sq> font, eg.
+      <m>\mat{A}</m>.
+      It is difficult to <sq>change fonts</sq> in handwritten text,
+      but I encourage you to at least reserve the letters <m>\mat{A}</m>,
+      <m>\mat{B}</m>, <m>\mat{C}</m>,
+      etc. for matrices, and <m>S</m>,
+      <m>T</m>, etc. for linear maps!
+    </p>
+  </assemblage>
 
   <p>
     Two <m>n \times m</m> matrices <m>\mat{A}</m> and <m>\mat{B}</m> can be added,
@@ -101,10 +105,15 @@
     </statement>
   </example>
 
-  <p>
-
-    <assemblage>
-      Usually <m>\mat{A}</m> is a matrix, and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>. But now <m>\mat{E}_{ij}</m> is a matrix in its own right! Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>. I hope you don't find this too confusing. In fact, we can write down an elegant formula for the elements of <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
+  <assemblage>
+    <p>
+      Usually <m>\mat{A}</m> is a matrix,
+      and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
+      But now <m>\mat{E}_{ij}</m> is a matrix in its own right!
+      Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>.
+      I hope you don't find this too confusing.
+      In fact, we can write down an elegant formula for the elements of
+      <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
       <men xml:id="kronecker_for_matrix_basis-2">
         (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
       </men>
@@ -117,11 +126,7 @@
         </p>
       </statement>
     </exercise>
-
-    <p>
-    </assemblage>
-
-  </p>
+  </assemblage>
 
   <example>
     <statement>
@@ -247,10 +252,15 @@
     </p>
   </proof>
 
-  <p>
-
-    <assemblage>
-      I hope the <m>\Sigma</m>-notation does not confuse you in the above proof! Let me write out the exact same proof <em>without</em> <m>\Sigma</m>-notation, in the simple case where <m>\mat{A}</m>, <m>\mat{B}</m> and <m>\mat{C}</m> are all <m>2 \times 2</m> matrices, and we are trying to calculate, say, the entry at position <m>11</m>.
+  <assemblage>
+    <p>
+      I hope the <m>\Sigma</m>-notation does not confuse you in the above proof!
+      Let me write out the exact same proof
+      <em>without</em> <m>\Sigma</m>-notation,
+      in the simple case where <m>\mat{A}</m>,
+      <m>\mat{B}</m> and <m>\mat{C}</m> are all <m>2 \times 2</m> matrices,
+      and we are trying to calculate, say,
+      the entry at position <m>11</m>.
       <md>
         <mrow>((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11} \mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}</mrow>
         <mrow>\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21}) \mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12} \mat{B}_{22}) \mat{C}_{21}</mrow>
@@ -266,9 +276,8 @@
       The crucial step
       (going from the second to the fourth lines)
       is called <em>exchanging the order of summation</em>.
-    </assemblage>
-
-  </p>
+    </p>
+  </assemblage>
 
   <p>
     The <em>transpose</em> of an

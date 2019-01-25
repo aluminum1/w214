@@ -24,13 +24,17 @@
     </statement>
   </definition>
 
-  <p>
-
-    <assemblage>
-      I indicate that a collection of things is a <em>list</em> (where the order matters) and not merely a <em>set</em> (where the order does not matter) using my own home-made symbols <m>\{ \}</m>. A basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is a list of vectors. The order of the vectors matters because it affects the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      I indicate that a collection of things is a <em>list</em>
+      (where the order matters)
+      and not merely a <em>set</em>
+      (where the order does not matter)
+      using my own home-made symbols <m>\{ \}</m>.
+      A basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is a list of vectors.
+      The order of the vectors matters because it affects the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
+    </p>
+  </assemblage>
 
   <example>
     <statement>

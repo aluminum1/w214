@@ -48,13 +48,15 @@
     </me>
   </figure>
 
-  <p>
-
-    <assemblage>
-      The standard convention in mathematics is to write the evaluation of a function from right-to-left, eg. <m>f(x)</m>. That is, you start with the right hand symbol <m>x</m>, then you apply <m>f</m>. So the most natural way to draw these pictures is from right-to-left!
-    </assemblage>
-
-  </p>
+  <assemblage>
+    <p>
+      The standard convention in mathematics is to write the evaluation of a function from right-to-left, eg.
+      <m>f(x)</m>.
+      That is, you start with the right hand symbol <m>x</m>,
+      then you apply <m>f</m>.
+      So the most natural way to draw these pictures is from right-to-left!
+    </p>
+  </assemblage>
 
   <example>
     <statement>
@@ -145,12 +147,16 @@
         <m>\id_{\Poly_n}</m> agree on a basis for <m>\Poly_n</m>,
         they agree on all vectors <m>\ve{p} \in \Poly_n</m> by <xref ref="defining_linear_map_on_basis">Proposition</xref>.
         Hence <m>D \circ A = \id_{\Poly_n}</m>.
-
-        <assemblage>
-          In fact, the statement that <m>D \circ A = \id_{\Poly_n}</m> is precisely Part I of the Fundamental Theorem of Calculus, applied to the special case of polynomials!
-        </assemblage>
-
       </p>
+
+      <assemblage>
+        <p>
+          In fact, the statement that
+          <m>D \circ A = \id_{\Poly_n}</m> is precisely Part I of the Fundamental Theorem of Calculus,
+          applied to the special case of polynomials!
+        </p>
+      </assemblage>
+
     </solution>
 
     <exercise>

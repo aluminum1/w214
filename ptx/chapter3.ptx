@@ -9,13 +9,13 @@
       which we will define in this chapter.
     </p>
 
-    <p>
+    <assemblage>
+      <p>
+        <em>Warning</em>: From now on, I will use shorthand and write scalar multiplication
+        <m>k \cdot \ve{v}</m> simply as <m>k \ve{v}</m>!
+      </p>
+    </assemblage>
 
-      <assemblage>
-        <em>Warning</em>: From now on, I will use shorthand and write scalar multiplication <m>k \cdot \ve{v}</m> simply as <m>k \ve{v}</m>!
-      </assemblage>
-
-    </p>
   </introduction>
 
   <xi:include  href="section3-1.ptx" />

@@ -247,20 +247,16 @@
     </statement>
   </definition>
 
-  <p>
-
-    <assemblage>
-      From Multivariable Calculus, you know that we can equivalently express the tangent space to <m>M</m> at <m>p</m> as
+  <assemblage>
+    <p>
+      From Multivariable Calculus,
+      you know that we can equivalently express the tangent space to <m>M</m> at <m>p</m> as
       <md>
         <mrow>T_\ve{p} M \amp =  \{ \ve{v} \in \mathbb{R}^{n+1} \, : \, D_\ve{v} f (\ve{p}) = 0 \}</mrow>
         <mrow>\amp =  \left\{ \ve{v} \in \mathbb{R}^{n+1} \, : \, \frac{d}{dt}\Big|_{t=0} f(\ve{p} + t \ve{v}) = 0 \right\}</mrow>
       </md>
     </p>
-
-    <p>
-    </assemblage>
-
-  </p>
+  </assemblage>
 
   <lemma>
     <statement>
@@ -338,13 +334,15 @@
         </me>
       </p>
 
-      <p>
+      <assemblage>
+        <p>
+          The red line in the first picture,
+          drawn for the sake of illustration,
+          is the tangent space shifted so that it passes through <m>\ve{p}</m>.
+          The actual tangent space <m>T_\ve{p} M</m> goes through the origin as in the second picture.
+        </p>
+      </assemblage>
 
-        <assemblage>
-          The red line in the first picture, drawn for the sake of illustration, is the tangent space shifted so that it passes through <m>\ve{p}</m>. The actual tangent space <m>T_\ve{p} M</m> goes through the origin as in the second picture.
-        </assemblage>
-
-      </p>
     </solution>
   </example>
 

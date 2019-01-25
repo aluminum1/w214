@@ -138,34 +138,28 @@
     one therefore needs to do the following:
   </p>
 
-  <p>
+  <assemblage>
+    <ol>
+      <li>
+        <p>
+          Define a set <m>V</m>.
+        </p>
+      </li>
 
-    <assemblage>
-      <ol>
-        <li>
-          <p>
-            Define a set <m>V</m>.
-          </p>
-        </li>
+      <li>
+        <p>
+          Define the data of an addition operation (D1), a zero vector (D2),
+          and a scalar multiplication operation (D3) on <m>V</m>.
+        </p>
+      </li>
 
-        <li>
-          <p>
-            Define the data of an addition operation (D1), a zero vector (D2),
-            and a scalar multiplication operation (D3) on <m>V</m>.
-          </p>
-        </li>
+      <li>
+        <p>
+          Check that this data satisfies the rules (R1) - (R8).
+        </p>
+      </li>
+    </ol>
+  </assemblage>
 
-        <li>
-          <p>
-            Check that this data satisfies the rules (R1) - (R8).
-          </p>
-        </li>
-      </ol>
-    </p>
-
-    <p>
-    </assemblage>
-
-  </p>
 </section>
 

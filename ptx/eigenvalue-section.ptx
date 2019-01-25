@@ -54,23 +54,21 @@
     </statement>
   </proposition>
 
-  <p>
-
-    <assemblage>
-      I hope you understand the notation here. If <m>S, T : V \rightarrow W</m> are linear maps, we can <em>add them</em> together to get a new linear map
+  <assemblage>
+    <p>
+      I hope you understand the notation here.
+      If <m>S, T : V \rightarrow W</m> are linear maps,
+      we can <em>add them</em> together to get a new linear map
       <me>
         S+T : V \rightarrow W
       </me>
-      defined by <m>(S+T)(\ve{v}) := S(\ve{v}) + T(\ve{v})</m>. So when I write <sq><m>T - \lambda \id_V</m></sq>, I am referring to the linear map <m>V \rightarrow V</m> defined by
+      defined by <m>(S+T)(\ve{v}) := S(\ve{v}) + T(\ve{v})</m>.
+      So when I write <sq><m>T - \lambda \id_V</m></sq>, I am referring to the linear map <m>V \rightarrow V</m> defined by
       <me>
         (\lambda \id_V - T) (\ve{v}) := \lambda \id_V(\ve{v}) - T (\ve{v}) = \lambda \ve{v} - T(\ve{v})
       </me>.
     </p>
-
-    <p>
-    </assemblage>
-
-  </p>
+  </assemblage>
 
   <proof>
     <p>
@@ -117,12 +115,14 @@
     If <m>\det(A) \neq 0</m>, the matrix is invertible.
   </p>
 
+  <assemblage>
+    <p>
+      Indeed, this is where the word <sq>determinant</sq> comes from!
+      It <em>determines</em> whether a matrix is invertible or not.
+    </p>
+  </assemblage>
+
   <p>
-
-    <assemblage>
-      Indeed, this is where the word <sq>determinant</sq> comes from! It <em>determines</em> whether a matrix is invertible or not.
-    </assemblage>
-
     But how do we know when a <em>linear operator</em> is invertible?
   </p>
 
@@ -188,13 +188,18 @@
     </statement>
   </definition>
 
+  <assemblage>
+    <p>
+      The reason that <m>\chi_T</m> is a <em>polynomial</em>
+      (and not just an arbitrary function)
+      comes from the formula for the determinant.
+      More on this later.
+    </p>
+  </assemblage>
+
   <p>
-
-    <assemblage>
-      The reason that <m>\chi_T</m> is a <em>polynomial</em> (and not just an arbitrary function) comes from the formula for the determinant. More on this later.
-    </assemblage>
-
-    In summary, we see that <m>\lambda</m> is an eigenvalue of a linear operator <m>T</m> if and only if <m>\lambda</m> is a root of the characteristic polynomial of <m>T</m>. Let us record this formally as an extension of <xref ref="prop_eigenvalue">Proposition</xref>.
+    In summary, we see that <m>\lambda</m> is an eigenvalue of a linear operator <m>T</m> if and only if <m>\lambda</m> is a root of the characteristic polynomial of <m>T</m>.
+    Let us record this formally as an extension of <xref ref="prop_eigenvalue">Proposition</xref>.
   </p>
 
   <proposition xml:id="eigvalue_root_charpoly">
