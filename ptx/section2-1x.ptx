@@ -1,0 +1,25 @@
+
+
+<section>
+  <title>Further exercises for \thesection</title>
+  <exercise>
+    <statement>
+      <p>
+        Prove that set <m>A</m> from <xref ref="intro1">Section</xref>
+        together with the addition operation <xref ref="add_in_A" />,
+        the zero vector <xref ref="zero_in_A" /> and the scalar multiplication operation <xref ref="sm_in_A" /> forms a vector space.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that set <m>C</m> from <xref ref="intro1">Section</xref>
+        together with the addition operation <xref ref="add_in_C" />,
+        the zero vector <xref ref="zero_in_C" /> and the scalar multiplication operation <xref ref="sm_in_C" /> forms a vector space.
+      </p>
+    </statement>
+  </exercise>
+</section>
+

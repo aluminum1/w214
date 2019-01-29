@@ -1,0 +1,215 @@
+
+
+<section>
+  <title>Coordinate vectors</title>
+  <definition>
+    <statement>
+      <p>
+        Let <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> be a basis for a vector space <m>V</m>,
+        and let <m>\ve{v} \in V</m>.
+        Write
+        <me>
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + \ve{a}_n \ve{b}_n \, 
+        </me>.
+      </p>
+
+      <p>
+        Then the column vector
+        <me>
+          [\ve{v}]_\basis{B} := \left[ \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_n
+          \end{array}  \right] \in \Col_n
+        </me>
+        is called the <term>coordinate vector of <m>\ve{v}</m> with respect to the basis <m>\basis{B}</m></term>.
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      I indicate that a collection of things is a <em>list</em>
+      (where the order matters)
+      and not merely a <em>set</em>
+      (where the order does not matter)
+      using my own home-made symbols <m>\{ \}</m>.
+      A basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is a list of vectors.
+      The order of the vectors matters because it affects the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
+    </p>
+  </assemblage>
+
+  <example>
+    <statement>
+      <p>
+        Find the coordinate vector of
+        <m>\ve{p} = 2x^2 - 2x + 3</m> with respect to the basis <m>\basis{B} = \bopen 1+x, x^2 + x -1, x^2 + x + 1\bclose</m> of <m>\Poly_3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We write <m>\ve{p}</m> as a linear combination of polynomials from the basis <m>\basis{B}</m>:
+        <me>
+          2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) + \frac{9}{2}(x^2 + x +1)
+        </me>
+      </p>
+
+      <exercise>
+        <statement>
+          <p>
+            Check this!
+          </p>
+        </statement>
+      </exercise>
+
+      <me>
+        [\ve{p}]_\basis{B} = \cvector{ -4 \\ - \frac{5}{2} \\ \frac{9}{2} }
+      </me>
+    </solution>
+  </example>
+
+  <example xml:id="coord_vectors_finding_example">
+    <statement>
+      <p>
+        Find the coordinate vectors of <m>\ve{v}</m> and <m>\ve{w}</m> in <xref ref="v_and_w_in_basis_B">Figure</xref>
+        with respect to the basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        By inspection,
+        we see that <m>\ve{v} = 2 \ve{b}_1 - \ve{b}_2</m>, so that
+        <me>
+          [\ve{v}]_\basis{B} = \cvector{ 2 \\ -1}
+        </me>
+      </p>
+
+      <p>
+        Also by inspection,
+        we see that <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>, so that
+        <me>
+          [\ve{v}]_\basis{B} = \cvector{ -3 \\ 2}
+        </me>
+      </p>
+    </solution>
+  </example>
+
+  <figure xml:id="v_and_w_in_basis_B">
+    <caption>The basis <m>B</m> for <m>\mathbb{R}^2</m>.</caption>
+    <me>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+  \draw[red, dotted] (-9, -9) -- (3, -3);
+  \draw[red, dotted] (-8, -7) -- (4, -1);
+  \draw[red, dotted] (-7, -5) -- (5, 1);
+  \draw[red, dotted] (-6, -3) -- (6, 3);
+  \draw[red, dotted] (-5, -1) -- (7, 5);
+  \draw[red, dotted] (-4, 1) -- (8, 7);
+  \draw[red, dotted] (-3, 3) -- (9, 9);
+
+  \draw[red, dotted] (-9, -9) -- (-3, 3);
+  \draw[red, dotted] (-7, -8) -- (-1, 4);
+  \draw[red, dotted] (-5, -7) -- (1, 5);
+  \draw[red, dotted] (-3, -6) -- (3, 6);
+  \draw[red, dotted] (-1, -5) -- (5, 7);
+  \draw[red, dotted] (1, -4) -- (7, 8);
+  \draw[red, dotted] (3, -3) -- (9, 9);
+
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);
+  \draw[thick, ->] (0,0) -- (3,0) node[below right] {\(\ve{v}\)};
+  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </me>
+  </figure>
+
+  <example>
+    <statement>
+      <p>
+        Find the coordinate vector of the function <m>\ve{f}</m> given by
+        <me>
+          \ve{f}(x) = \sin^2 x - \cos^3 x
+        </me>
+        with respect to the standard basis
+        <me>
+          \basis{S} = \bopen 1, \cos x, \sin x, \cos 2x, \sin 2x, \cos 3x, \sin 3x\bclose
+        </me>
+        of <m>\Trig_3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Using the addition formulae for <m>\sin</m> and <m>\cos</m> as in <xref ref="trig_ex_early">Exercise</xref>,
+        we compute
+        <me>
+          \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x - \frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x
+        </me>.
+      </p>
+
+      <exercise>
+        <statement>
+          <p>
+            Check this!
+          </p>
+        </statement>
+      </exercise>
+
+      <p>
+        Hence
+        <me>
+          [\ve{f}]_\basis{S} = \cvector{ \frac{1}{2} \\ - \frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ - \frac{1}{4} \\ 0}
+        </me>
+      </p>
+    </solution>
+  </example>
+
+  <lemma xml:id="lin_of_coord_vectors">
+    <statement>
+      <p>
+        Let <m>\basis{B} = \bopen \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose</m> be a basis for a vector space <m>V</m>.
+        Then for all vectors <m>\ve{v}, \ve{w} \in V</m> and all scalars <m>k</m> we have
+
+        <ol type="a">
+          <li>
+            <p>
+              <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>[k \ve{v}]_\basis{B} = k [ \ve{v}]_\basis{B}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      (a) Suppose that
+      <md>
+        <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n</mrow>
+        <intertext>and</intertext>
+        <mrow>\ve{w} \amp = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n \, .</mrow>
+        <intertext>Then, using the rules of a vector space, we compute</intertext>
+        <mrow>\ve{v} + \ve{w} \amp = (a_1 + b_1) \ve{e}_1 + (a_2 + b_2) \ve{e}_2 + \cdots + (a_n + b_n) \ve{e}_n \, </mrow>
+      </md>.
+    </p>
+
+    <p>
+      From this we read off that
+      <me>
+        [\ve{v} + \ve{w}]_\basis{B} = \cvector{a_1 + b_1 \\ a_2 + b_2 \\ \vdots \\ a_n + b_n} \, 
+      </me>.
+    </p>
+
+    <p>
+      The proof of (b) is similar.
+    </p>
+  </proof>
+</section>
+

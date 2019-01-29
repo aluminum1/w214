@@ -1,0 +1,402 @@
+
+
+<section>
+  <title>Subspaces</title>
+  <p>
+    The notion of a subspace will allow us to quickly establish many more examples of vector spaces.
+  </p>
+
+  <definition>
+    <statement>
+      <p>
+        A subset <m>U \subseteq V</m> of a vector space <m>V</m> is called a
+        <term>subspace of <m>V</m></term> if:
+
+        <ul>
+          <li>
+            <p>
+              For all <m>\ve{u}, \ve{u}' \in U</m>,
+              <m>\ve{u}+\ve{u}' \in U</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{0} \in U</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              For all scalars <m>k</m> and all vectors <m>\ve{u} \in U</m>,
+              <m>k \cdot \ve{u} \in U</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="subspace_lem">
+    <statement>
+      <p>
+        If <m>U</m> is a subspace of a vector space <m>V</m>,
+        then <m>U</m> is also a vector space,
+        when we equip it with the same addition operation,
+        zero vector and scalar multiplication as in <m>V</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      Since <m>U</m> is a subspace,
+      we know that it actually makes sense to
+      <q>equip it with the same addition operation,
+      zero vector and scalar multiplication as in <m>V</m></q>.
+      (If <m>U</m> was <em>not</em> a subspace,
+      then we might have for instance
+      <m>\ve{u}, \ve{u}' \in U</m> but <m>\ve{u}+\ve{u}' \notin U</m>,
+      so the addition operation would not make sense.)
+    </p>
+
+    <p>
+      So we simply need to check the rules R1 to R8.
+      Since these rules hold for all vectors <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m>,
+      they certainly hold for all vectors <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>U</m>.
+      So R1 to R8 are satisfied.
+    </p>
+  </proof>
+
+  <example>
+    <title>Line in $\mathbb{R}^2$</title>
+    <statement>
+    <p>
+      A line <m>L</m> through the origin in
+      <m>\mathbb{R}^2</m> is a subspace of <m>\mathbb{R}^2</m>:
+      <men xml:id="pic_of_L1">
+        \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned}
+      </men>
+    </p>
+
+    <p>
+      Indeed, recall that <m>L</m> can be specified by a homogenous linear equation of the form:
+      <men xml:id="eqn_of_L">
+        L = \{ (x,y) \in \mathbb{R}^2 : ax + by = 0 \}
+      </men>
+      for some constants <m>a</m> and <m>b</m>.
+      So, if <m>\ve{v} = (x, \, y)</m> and <m>\ve{v}' = (x', \, y')</m> lie on <m>L</m>,
+      then their sum <m>\ve{v} + \ve{v}' = (x + x', \, y + y')</m> also lies on <m>L</m>,
+      because its components satisfy the defining equation <xref ref="eqn_of_L" />:
+      <md>
+        <mrow>\amp a(x + x') + b (y + y')</mrow>
+        <mrow>\amp  = (ax + by) + (ax' + by')</mrow>
+        <mrow>\amp = 0 + 0 \amp \amp  \mbox{(since \(ax + by = 0\) and \(ax' + by' = 0\))}</mrow>
+        <mrow>\amp = 0</mrow>
+      </md>.
+    </p>
+
+    <p>
+      This also makes sense geometrically:
+      if you look at the picture <xref ref="pic_of_L1" />,
+      then you will see that adding two vectors
+      <m>\ve{v}, \ve{v}'</m> on <m>L</m> by the head-to-tail method will produce another vector on <m>L</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Complete the proof that <m>L</m> is a subspace of
+          <m>\mathbb{R}^2</m> by checking that the zero vector is in <m>L</m>,
+          and that multiplying a vector in <m>L</m> by a scalar outputs a vector still in <m>L</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>Lines and planes in $\mathbb{R}^3$</title>
+    <statement>
+      <p>
+        Similarly a line <m>L</m> or a plane <m>P</m> through the origin in
+        <m>\mathbb{R}^3</m> is a subspace of <m>\mathbb{R}^3</m>:
+        <men xml:id="pic_of_L">
+          \begin{aligned}
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[->] (0, 0) -- (2,0) node[right] {$y$};
+  \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+  \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+  \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+          \end{aligned}
+          \qquad \qquad
+          \begin{aligned}
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[->] (0, 0) -- (2,0) node[right] {$y$};
+  \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+  \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+  \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
+  \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
+  \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+  \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+          \end{aligned}
+        </men>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Zero vector space</title>
+    <statement>
+    <p>
+      If <m>V</m> is a vector space,
+      the the set <m>\{\ve{0}\} \subseteq V</m> containing just the zero vector <m>\ve{0}</m> is a subspace of <m>V</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check this.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>Non-example: Line not through origin</title>
+    <statement>
+      <p>
+        Be careful though <mdash /> not <em>every</em>
+        line <m>L \subset \mathbb{R}^2</m> is a subspace of <m>\mathbb{R}^2</m>.
+        If <m>L</m> does not go through the origin,
+        then <m>\ve{0} \notin L</m>, so <m>L</m> is not a subspace.
+      </p>
+
+      <p>
+        Another reason that <m>L</m> is not a subspace is that it is not closed under addition:
+        when we add two nonzero vectors <m>\ve{v}</m> and <m>\ve{v}'</m> on <m>L</m>,
+        we end up with a vector <m>\ve{v} + \ve{v}'</m> which does not lie on <m>L</m>:
+        <men xml:id="pic_of_bad_L">
+          \begin{aligned}
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=2]
+  \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+  \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+  \draw[very thick, red, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+  \draw[very thick, red, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+  \draw[very thick, red, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+          \end{aligned}
+        </men>
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Continuous functions as a subspace</title>
+    <statement>
+      <p>
+        The set
+        <me>
+          \Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ continuous}  \}
+        </me>
+        of all continuous functions on an interval <m>I</m> is a subspace of the set <m>\Fun(I)</m> of
+        <em>all</em> functions on <m>I</m>.
+        Let us check that it satisfies the definition.
+        You know from earlier courses that:
+
+        <ul>
+          <li>
+            <p>
+              If <m>\ve{f}</m> and <m>\ve{g}</m> are continuous functions on <m>I</m>,
+              then <m>\ve{f} + \ve{g}</m> is also a continuous function.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The zero function <m>{0}</m> defined by
+              <m>\ve{0}(x) = 0</m> for all <m>x \in I</m> is a continuous function.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              If <m>\ve{f}</m> is a continuous function,
+              and <m>k</m> is a scalar, then <m>k \cdot \ve{f}</m> is also continuous.
+            </p>
+          </li>
+        </ul>
+      </p>
+
+      <p>
+        Hence, by <xref ref="subspace_lem">Lemma</xref>,
+        <m>\Cont(I)</m> is a vector space in its own right.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Differentiable functions as a subspace</title>
+    <statement>
+    <p>
+      Similarly, the set
+      <me>
+        \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ differentiable}  \}
+      </me>
+      of differentiable functions on an open interval <m>I</m> is a subspace of <m>\Fun (I)</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check this.
+          Also, is <m>\Diff( I)</m> a subspace of <m>\Cont(I)</m>?
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>Vector spaces of polynomials</title>
+    <statement>
+    <p>
+      A <em>polynomial</em> is a function <m>\ve{p} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
+      <men xml:id="formula_poly">
+        \ve{p}(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0
+      </men>.
+      for some fixed real coefficients <m>a_0, \ldots, a_n</m>.
+      Two polynomials <m>\ve{p}</m> and <m>\ve{q}</m> are <em>equal</em>
+      if they are equal <em>as functions</em>,
+      that is if <m>\ve{p}(x) = \ve{q} (x)</m> for all <m>x \in \mathbb{R}</m>.
+      The <em>degree</em> of a polynomial is the highest power of <m>x</m> which occurs in its formula.
+    </p>
+
+    <p>
+      For example,
+      <m>2x^3 - x + 7</m> is a polynomial of degree 3, while <m>x^5 - 2</m> is a polynomial of degree 5.
+      We write the set of <em>all</em>
+      polynomials as <m>\Poly</m> and the set of all polynomials having degree less than or equal to <m>n</m> as <m>\Poly_n</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check that <m>\Poly</m> and <m>\Poly_n</m> are subspaces of <m>\Cont (\mathbb{R})</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example xml:id="trig_poly_example">
+    <title>Trigonometric polynomials</title>
+    <statement>
+    <p>
+      A <em>trigonometric polynomial</em>
+      is a function <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
+      <md xml:id="formula_for_trig_poly">
+        \ve{T} (x) = a_0 + a_1 \cos(x) + b_1 \sin(x) + a_2 \cos(2x) + b_2 \sin(2x) + \cdots \\ + a_n \cos(nx) + b_n \sin(nx) \, .
+      </md>
+    </p>
+
+    <p>
+      The <em>degree</em> of a trigonometric polynomial is the highest multiple of <m>x</m> which occurs inside one of the sines or cosines in its formula.
+      For instance,
+      <me>
+        3 - \cos(x) + 6 \sin(3x)
+      </me>
+      is a trigonometric polynomial of degree 3.
+      We write the set of <em>all</em>
+      trigonometric polynomials as <m>\Trig</m> and the set of all trigonometric polynomials having degree less than or equal to <m>n</m> as <m>\Trig_n</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that <m>\Trig</m> and <m>\Trig_n</m> are subspaces of <m>\Cont (\mathbb{R})</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="trig_ex_early">
+      <statement>
+        <p>
+          Consider the function <m>\ve{f} (x) = \sin^3(x)</m>.
+          Show that <m>\ve{f} \in \Trig_3</m> by writing it in the form <xref ref="formula_for_trig_poly" />.
+          Hint: use the identities
+          <md>
+            <mrow>\sin(A) \sin(B) \amp = \frac{1}{2}(\cos(A-B) - \cos(A+B))</mrow>
+            <mrow>\sin(A) \cos(B) \amp = \frac{1}{2}(\sin(A-B) + \sin(A+B))</mrow>
+            <mrow>\cos(A)\cos(B) \amp = \frac{1}{2}(\cos(A-B) + \cos(A+B))</mrow>
+          </md>
+          which follow easily from the addition formulae
+          <md>
+            <mrow>\sin(A \pm B) \amp = \sin A \cos B \pm \cos A \sin B</mrow>
+            <mrow>\cos(A \pm B) \amp = \cos A \cos B \mp \sin A \sin B</mrow>
+          </md>.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>Solutions to linear differential equations</title>
+    <statement>
+    <p>
+      Fix constants <m>a,b</m> and <m>c</m>.
+      Let <m>V \subseteq \Diff(\mathbb{R})</m> be the set of all solutions to the following differential equation:
+      <me>
+        a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
+      </me>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Show that <m>V</m> is a subspace of <m>\Diff(\mathbb{R})</m>.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+</section>
+

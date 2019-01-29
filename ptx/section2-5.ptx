@@ -1,0 +1,178 @@
+
+
+<section>
+  <title>Some results about abstract vector spaces</title>
+  <p>
+    It is time to use the rules of a vector space to prove some general results.
+  </p>
+
+  <assemblage>
+    <p>
+      We are about to do our first formal proof in the course!
+    </p>
+  </assemblage>
+
+  <lemma>
+    <statement>
+      <p>
+        Suppose <m>V</m> is a vector spaces with zero vector <m>\ve{0}</m>.
+        If <m>\ve{0}'</m> is another vector satisfying R3(a),
+        <men xml:id="uniqueness_zero">
+          \ve{0}' + \ve{v} = \ve{v} \mbox{\, for all <m>\ve{v} \in V</m>}
+        </men>
+        then <m>\ve{0} = \ve{0}'</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <md>
+      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \mbox{(using (2.5.1)) for \(\ve{v} = \ve{0}\))}</mrow>
+      <mrow>\amp = \ve{0}' \amp \amp  \mbox{(using R3(b) for \(\ve{v} = \ve{0}'\))}</mrow>
+    </md>
+  </proof>
+
+  <definition>
+    <statement>
+      <p>
+        If <m>V</m> is a vector space,
+        we define the <term>additive inverse</term>
+        of a vector <m>\ve{v} \in V</m> as
+        <me>
+          - \ve{v} := (-1) \cdot \ve{v}
+        </me>
+      </p>
+    </statement>
+  </definition>
+
+  <lemma xml:id="add_inv">
+    <statement>
+      <p>
+        If <m>V</m> is a vector space,
+        then for all <m>\ve{v} \in V</m>,
+        <men>
+          -\ve{v} + \ve{v} = \ve{0} \mbox{ and }  \ve{v} + (-\ve{v}) = \ve{0}
+        </men>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <md>
+      <mrow>-\ve{v} + \ve{v} \amp = (-1) \cdot \ve{v} + \ve{v} \amp \amp  \mbox{(using defn of \(- \ve{v}\))}</mrow>
+      <mrow>\amp = (-1) \cdot \ve{v} + 1 \cdot \ve{v} \amp \amp  \mbox{(R7)}</mrow>
+      <mrow>\amp  = (-1 + 1) \cdot \ve{v} \amp \amp  \mbox{(R5)}</mrow>
+      <mrow>\amp = 0 \cdot \ve{v}</mrow>
+      <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
+    </md>
+    <p>
+      In addition,
+      <md>
+        <mrow>\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}</mrow>
+        <mrow>\amp  = \ve{0} \amp \amp  \mbox{(by previous proof)}</mrow>
+      </md>
+    </p>
+  </proof>
+
+  <lemma>
+    <statement>
+      <p>
+        Suppose that two vectors <m>\ve{w}</m> and <m>\ve{v}</m> in a vector space satisfy <m>\ve{w} + \ve{v} = \ve{0}</m>.
+        Then <m>\ve{w} = -\ve{v}</m>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <md>
+      <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}</mrow>
+      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \mbox{(by <xref ref="add_inv">Lemma</xref>)}</mrow>
+      <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}</mrow>
+      <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(by assumption)}</mrow>
+      <mrow>\amp = -\ve{v} \amp \amp  \mbox{(R3a)} </mrow>
+    </md>.
+  </proof>
+
+  <example xml:id="explicit_solve_x">
+    <statement>
+      <p>
+        Let us practice using the rules of a vector space to perform everyday calculations.
+        For instance,
+        suppose that we are trying to solve for the vector <m>\ve{x}</m> appearing in the following equation:
+        <men>
+          \ve{v} + 7 \cdot \ve{x} = \ve{w}
+        </men>
+      </p>
+
+      <p>
+        We do this using the rules as follows:
+        <md>
+          <mrow>\ve{v} + 7 \cdot \ve{x} \amp  = \ve{w}</mrow>
+          <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(Added \(-\ve{v}\) on left to both sides)}</mrow>
+          <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used R2 on LHS)}</mrow>
+          <mrow>\therefore  \ve{0} + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used <xref ref="add_inv">Lemma</xref> on LHS)}</mrow>
+          <mrow>\therefore  7 \cdot \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(used R3a on LHS)}</mrow>
+          <mrow>\therefore  \frac{1}{7} \cdot (7 \cdot \ve{x}) \amp  = \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(scalar multiplied both sides by \(\frac{1}{7}\))}</mrow>
+          <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(used R6 on LHS)}</mrow>
+          <mrow>\therefore  1 \cdot \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w})  \amp \amp  \mbox{(multiplied \(\frac{1}{7}\) with \(7\))}</mrow>
+          <mrow>\therefore  \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(R7)}</mrow>
+        </md>
+      </p>
+
+      <p>
+        As the course goes on we will leave out all these steps.
+        But it is important for you to be able to reproduce them all,
+        if asked to do so!
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    We will need one final lemma.
+  </p>
+
+  <lemma xml:id="dichotomy_lem">
+    <statement>
+      <p>
+        Suppose that <m>\ve{v}</m> is a vector in a vector space <m>V</m> and that <m>k</m> is a scalar.
+        Then
+        <me>
+          k \cdot \ve{v} = \ve{0}  \Leftrightarrow  k = 0 \mbox{ or }  \ve{v} = \ve{0}
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      (Proof of <m>\Leftarrow</m>).
+      Suppose <m>k=0</m>.
+      Then <m>k \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> by R8 of a vector space.
+      On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
+      Then <m>k \cdot \ve{v} = k \cdot \ve{0} = \ve{0}</m> by <xref ref="imp_ex_1">Exercise</xref>.
+    </p>
+
+    <p>
+      (Proof of <m>\Rightarrow</m>).
+      Suppose <m>k \cdot \ve{v} = \ve{0}</m>.
+      There are two possibilities:
+      either <m>k = 0</m>, or <m>k \neq 0</m>.
+      If <m>k=0</m>, then we are done.
+      If <m>k \neq 0</m>,
+      then <m>\frac{1}{k}</m> exists and we can multiply both sides by it:
+      <md>
+        <mrow>k \cdot \ve{v} \amp  = \ve{0}</mrow>
+        <mrow>\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k} \cdot \ve{0} \amp \amp  \mbox{(Multiplied both sides by \(\frac{1}{k}\))}</mrow>
+        <mrow>\therefore (\frac{1}{k} k) \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{ (On the LHS, we used R6. \\ On the RHS, we used <xref ref="imp_ex_1">Exercise</xref>.)  }</mrow>
+        <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(using \(\frac{1}{k} k = 1\))}</mrow>
+        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
+      </md>
+    </p>
+
+    <p>
+      Hence in the case <m>k \neq 0</m> we must have <m>\ve{v} = \ve{0}</m>,
+      which is what we wanted to show.
+    </p>
+  </proof>
+</section>
+

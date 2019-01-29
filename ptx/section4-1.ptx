@@ -1,0 +1,565 @@
+
+
+<section>
+  <title>Definition and examples</title>
+  <p>
+    Recall that a <em>function</em>
+    (or a <em>map</em>)
+    <m>f : X \rightarrow Y</m> from a set <m>X</m> to a set <m>Y</m> is simply a rule which assigns to each element of <m>X</m> an element <m>f(x)</m> of <m>Y</m>.
+    We write <m>x \mapsto f(x)</m> to indicate that an element <m>x \in X</m> maps to
+    <m>f(x) \in Y</m> under the function <m>f</m>.
+    See <xref ref="explanation_of_mapsto">Figure</xref>.
+    Two functions <m>f, g : X \rightarrow Y</m> are <em>equal</em>
+    if <m>f(x) = g(x)</m> for all <m>x</m> in <m>X</m>.
+  </p>
+
+  <figure xml:id="explanation_of_mapsto">
+    <caption>A function <m>f : X \rightarrow Y</m>.</caption>
+    <me>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw (-2, 0) circle (1);
+    \draw (2,0) circle (1);
+    \node at (-2, -1.3) {\(X\)};
+    \node at (2, -1.3) {\(Y\)};
+    \draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {\(f\)} (0.8, 0.3); 
+    \node (a) at (-2, -0.5) {\(x\)};
+    \node (b) at (2, -0.5) {\(f(x)\)};
+    \draw[|->] (a) to[out=-20, in=200] (b);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </me>
+  </figure>
+
+  <definition>
+    <statement>
+      <p>
+        Let <m>V</m> and <m>W</m> be vector spaces.
+        A <term>linear map</term> from <m>V</m> to <m>W</m> is a function <m>T : V \rightarrow W</m> satisfying:
+
+        <ul>
+          <li>
+            <p>
+              <m>T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}')</m> for all vectors <m>\ve{v}, \ve{v}' \in V</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T(k \ve{v}) = k T (\ve{v})</m> for all vectors
+              <m>\ve{v} \in V</m> and scalars <m>k \in \mathbb{R}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      Another name for a linear map is a
+      <em>linear transformation</em>.
+    </p>
+  </assemblage>
+
+  <example>
+    <title>Identity map</title>
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space.
+        The function
+        <md>
+          <mrow>\id_V : V \amp \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{v}</mrow>
+        </md>
+        is called the <em>identity map</em> on <m>V</m>.
+        It is clearly a linear map, since
+        <md>
+          <mrow>\id_V (\ve{v} + \ve{w}) \amp = \ve{v} + \ve{w}</mrow>
+          <mrow>\amp = \id_V (\ve{v}) + \id_V (\ve{w})</mrow>
+        </md>
+        and
+        <md>
+          <mrow>\id_V (k \ve{v}) \amp = k \ve{v}</mrow>
+          <mrow>\amp = k \id_V (\ve{v})</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="projection_map_example">
+    <title>Projection</title>
+    <statement>
+    <p>
+      The function
+      <md>
+        <mrow>T : \mathbb{R}^2 \amp \rightarrow \mathbb{R}</mrow>
+        <mrow>(x, y) \amp \mapsto x</mrow>
+      </md>
+      which projects vectors onto the <m>x</m>-axis is a linear map.
+    </p>
+
+    <p>
+      Let us check additivity algebraically:
+      <me>
+        T \left ( (x_1, y_1 \right)) + \left((x_2, y_2) \right) \stackrel{\mbox{?} }{=} T\left((x_1, y_1) \right) + T\left((x_2, y_2)\right)
+      </me>
+      <md>
+        <mrow>\mbox{LHS}  \amp = T \left( (x_1 + x_2, y_1 + y_2) \right) \amp  \mbox{RHS}  \amp = x_1 + x_2</mrow>
+        <mrow>\amp = x_1 + x_2</mrow>
+      </md>
+    </p>
+
+    <p>
+      Here is a a graphical version of this proof:
+      <me>
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[xscale=1.5]
+      \draw[<->] (-1, 0) -- (3, 0);
+      \draw[<->] (0, -1) -- (0, 3);
+      \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
+      \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
+      \draw[dotted] (0.5, 1) -- (0.5, 0);
+      \draw[dotted] (1.5, 1.5) -- (1.5, 0);
+      \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
+      \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
+      \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
+      \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+      </me>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Prove algebraically that <m>T(k \ve{v}) = k T(\ve{v})</m>,
+          so that <m>T</m> is a linear map.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example xml:id="rotation_as_linear_map">
+    <title>Rotation</title>
+    <statement>
+      <p>
+        Fix an angle <m>\theta</m>.
+        The function
+        <md>
+          <mrow>R : \mathbb{R}^2 \amp  \rightarrow \mathbb{R}^2</mrow>
+          <mrow>\ve{v} \amp  \mapsto \mbox{rotation of \(\ve{v}\) counterclockwise through angle \(\theta\)}</mrow>
+        </md>
+        is a linear map,
+        by a similar graphical argument as in <xref ref="projection_map_example">Example</xref>.
+        <me>
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+      \draw[<->] (0, -1) -- (0, 2);
+      \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
+      \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
+      \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="cross_prod_as_linear_map">
+    <statement>
+      <p>
+        (Cross product with a fixed vector) Fix a vector <m>\ve{w} \in \mathbb{R}^3</m>.
+        The function
+        <md>
+          <mrow>C : \mathbb{R}^3 \amp \rightarrow \mathbb{R}^3</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{w} \times \ve{v}</mrow>
+        </md>
+        is a linear map because of the properties of the cross-product,
+        <md>
+          <mrow>\ve{w} \times (\ve{v}_1 + \ve{v}_2) \amp = \ve{w} \times \ve{v}_1 + \ve{w} \times \ve{v}_2</mrow>
+          <mrow>\ve{w} \times (k \ve{v}) \amp = k \ve{w} \times \ve{v}</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="dot_prod_with_fix_vec">
+    <statement>
+      <p>
+        (Dot product with a fixed vector) Fix a vector <m>\ve{u} \in \mathbb{R}^3</m>.
+        The function
+        <md>
+          <mrow>D : \mathbb{R}^3 \amp \rightarrow \mathbb{R}</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{u} \cdot \ve{v}</mrow>
+        </md>
+      </p>
+
+      <p>
+        (here <m>\cdot</m> is the dot product of vectors,
+        not scalar multiplication!) is a linear map, because of the properties
+        <md>
+          <mrow>\ve{u} \cdot (\ve{v}_1 + \ve{v}_2) \amp = \ve{u} \cdot \ve{v}_1 + \ve{u} \cdot \ve{v}_2</mrow>
+          <mrow>\ve{u} \cdot (k \ve{v}) \amp = k \ve{u} \cdot \ve{v}</mrow>
+        </md>.
+      </p>
+
+      <assemblage>
+        <p>
+          We will soon see that <em>all</em>
+          linear maps <m>\mathbb{R}^3 \rightarrow \mathbb{R}</m>
+          (indeed all linear maps <m>\mathbb{R}^n \rightarrow \mathbb{R}</m>)
+          are of this form.
+        </p>
+      </assemblage>
+
+    </statement>
+  </example>
+
+  <example xml:id="diff_of_poly">
+    <statement>
+    <p>
+      (Differentiation) The operation <sq>take the derivative</sq> can be interpreted as a linear map
+      <md>
+        <mrow>D : \Poly_n \amp  \rightarrow \Poly_{n-1}</mrow>
+        <mrow>\ve{p} \amp  \mapsto \ve{p}' \, </mrow>
+      </md>.
+    </p>
+
+    <p>
+      For example, <m>D(2x^3 - 6x + 2) = 6x - 6</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          (a) Why is <m>D</m> a map from <m>\Poly_n</m> to
+          <m>\Poly_{n-1}</m>? (b) Check that <m>D</m> is linear.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <statement>
+    <p>
+      (Antiderivative) The operation <sq>find the unique antiderivative with zero constant term</sq> can be interpreted as a linear map
+      <md>
+        <mrow>A : \Poly_n \amp  \rightarrow \Poly_{n+1}</mrow>
+        <mrow>\ve{p} \amp  \mapsto \int_0^x \ve{p}(t) \, dt</mrow>
+      </md>
+    </p>
+
+    <p>
+      For example, <m>A(2x^3 - 6x + 2) = 4 x^4 - 3x^2 + 2x</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          (a) Check this last sentence. (b) Why is <m>A</m> a map from <m>\Poly_n</m> to
+          <m>\Poly_{n+1}</m>? (c) Check that <m>A</m> is linear.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example xml:id="shift_example">
+    <title>Shift map</title>
+    <statement>
+    <p>
+      Define the <sq>shift forward by 1</sq> map
+      <md>
+        <mrow>S : \Poly_n \amp  \rightarrow \Poly_n</mrow>
+        <mrow>\ve{p} \amp  \mapsto S( \ve{p})</mrow>
+      </md>
+      by <m>S(\ve{p})(x) = \ve{p}(x-1)</m>.
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check that <m>S</m> is a linear map.
+        </p>
+      </statement>
+    </exercise>
+
+    <p>
+      Consider the case <m>n=3</m>.
+      In terms of the standard basis
+      <me>
+        \ve{p}_0 (x) = 1, \, \ve{p}_1 (x) = x, \, \ve{p}_2 (x) = x^2, \, \ve{p}_3 (x) = x^3
+      </me>
+      of <m>\Poly_3</m>, we have:
+      <md>
+        <mrow>S(\ve{p}_0) \amp = \ve{p}_0</mrow>
+        <mrow>S(\ve{p}_1) \amp = \ve{p}_1 - \ve{p}_0</mrow>
+        <mrow>S(\ve{p}_2) \amp = \ve{p}_2 - 2 \ve{p}_1 + \ve{p}_0</mrow>
+        <mrow>S(\ve{p}_3) \amp = \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0</mrow>
+      </md>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Check this.
+        </p>
+      </statement>
+    </exercise>
+
+    </statement>
+  </example>
+
+  <example>
+    <title>Matrices give rise to linear maps</title>
+    <statement>
+      <p>
+        Every <m>n \times m</m> matrix <m>\mat{A}</m> induces a <em>linear map</em>
+        <md>
+          <mrow>T_{\mat{A}} : \Col_m \amp  \rightarrow \Col_n</mrow>
+          <mrow>\col{v} \amp  \mapsto \mat{A} \col{v} \, </mrow>
+        </md>.
+      </p>
+
+      <p>
+        That is, <m>T_{\mat{A}} (\col{v}) := \mat{A} \col{v}</m> is the matrix product of <m>\mat{A}</m> with the column vector <m>\col{v}</m>.
+        The fact that <m>T_\mat{A}</m> is indeed a linear map follows from the linearity of matrix multiplication
+        (<xref ref="props_of_matrix_ops">Proposition</xref> parts 2 and 3).
+      </p>
+
+      <assemblage>
+        <p>
+          Note that an <m>n \times m</m> matrix gives a linear map from <m>\Col_m</m> to <m>\Col_n</m>!
+        </p>
+      </assemblage>
+
+    </statement>
+  </example>
+
+  <lemma xml:id="lin_map_zero_to_zero">
+    <statement>
+      <p>
+        Suppose <m>T : V \rightarrow W</m> is a linear map.
+        Then
+
+        <ol>
+          <li>
+            <p>
+              <m>T(\ve{0}_V) = \ve{0}_W</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>T(-\ve{v}) = - T(\ve{v})</m> for all vectors <m>\ve{v} \in V</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <md>
+      <mrow>\mbox{(i)}   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \mbox{(R8 applied to \(\ve{v} = \ve{0}_V \in V\))}</mrow>
+      <mrow>\amp = 0T(\ve{0}_V) \amp  \mbox{(T is linear)}</mrow>
+      <mrow>\amp = \ve{0}_W \amp  \mbox{(R8 applied to \(\ve{v} = T(\ve{0}_V) \in W\))}</mrow>
+    </md>
+    <md>
+      <mrow>\mbox{(ii)}    T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \mbox{(defn of \(-\ve{v}\) in \(V\))}</mrow>
+      <mrow>\amp = (-1) T(\ve{v}) \amp  \mbox{(T is linear)}</mrow>
+      <mrow>\amp = - T(\ve{v}) \amp  \mbox{(defn of \(-T(\ve{v})\) in \(W\))}</mrow>
+    </md>
+  </proof>
+
+  <p>
+    The next result is very important.
+    It tells us that if we know how a linear map <m>T</m> acts on a basis,
+    then we know how it acts on the whole vector space
+    (this is the <sq>uniqueness</sq> part).
+    Moreover, we are free to write down any willy-nilly formula for what <m>T</m> does on the basis vectors,
+    and we are guaranteed that this will always extend to a linear map defined on the whole vector space
+    (this is the <sq>existence</sq> part).
+  </p>
+
+  <proposition xml:id="defining_linear_map_on_basis">
+    <title>Sufficient to Define a Linear Map on a Basis</title>
+    <statement>
+      <p>
+        Suppose <m>\basis{B} = \bopen \ve{e}_1, \ldots, \ve{e}_m \bclose</m> is a basis for <m>V</m> and
+        <m>\ve{w}_1, \ldots, \ve{w}_m</m> are vectors in <m>W</m>.
+        Then there exists a unique linear map <m>T : V \rightarrow W</m> such that
+        <me>
+          T(\ve{e}_i) = \ve{w}_i,  i = 1 \ldots m
+        </me>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      <em>Proof of existence</em>.
+      To define a linear map <m>T</m>,
+      we must define <m>T(\ve{v})</m> for each vector <m>\ve{v}</m>.
+      We can write <m>\ve{v}</m> in terms of its coordinate vector
+      <m>[\ve{v}]_\basis{B}</m> with respect to the basis <m>\basis{B}</m> as
+      <men xml:id="expansion_of_v_in_coords">
+        \ve{v} = [\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{e}_m
+      </men>
+      where <m>[\ve{v}]_{\basis{B}, i}</m> is the entry at row <m>i</m> of the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
+      We define
+      <men xml:id="formula_for_T">
+        T(\ve{v}) := [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + [\ve{v}]_{\basis{B}, 2} \ve{w}_2 + \cdots [\ve{v}]_{\basis{B}, m} \ve{w}_m
+      </men>.
+    </p>
+
+    <p>
+      We clearly have <m>T(\ve{e}_i) = \ve{w}_i</m>.
+      To complete the proof of existence,
+      we must show that <m>T</m> is linear:
+      <md>
+        <mrow>T(\ve{v} + \ve{v}') \amp = [\ve{v} + \ve{v}']_{\basis{B},1} \ve{w}_1 + \cdots + [\ve{v} + \ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
+        <mrow>\amp = \big([\ve{v}]_{\basis{B}, 1} + [\ve{v}']_{\basis{B}, 1} \big) \ve{w}_1 + \cdots + \big([\ve{v}]_{\basis{B}, m} + [\ve{v}']_{\basis{B}, m}\big) \ve{w}_m \amp \amp  \mbox{(\([\ve{v} + \ve{v}']_\basis{B} = [\ve{v}]_\basis{B} + [\ve{v}']_\basis{B}\))}</mrow>
+        <mrow>\amp =  [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{w}_m   +</mrow>
+        <mrow>\amp  \qquad \qquad  [\ve{v}']_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}']_{\basis{B}, m} \ve{w}_m</mrow>
+        <mrow>\amp = T(\ve{v}) + T(\ve{v}')</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Similarly, one can check that <m>T(k \ve{v}) = k T(\ve{v})</m>,
+      which completes the proof of existence.
+    </p>
+
+    <p>
+      <em>Proof of uniqueness</em>.
+      Suppose that <m>S, T  : V \rightarrow W</m> are linear maps with
+      <men xml:id="thing_to_satisfy">
+        S(\ve{e}_i) = \ve{w}_i,  \text{ and }   T(\ve{e}_i) = \ve{w}_i,  i = 1 \ldots m
+      </men>.
+    </p>
+
+    <p>
+      Then,
+      <md>
+        <mrow>S (\ve{v}) \amp = S\big([\ve{v}]_{\basis{B}, 1} \ve{e}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{e}_m\big)</mrow>
+        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} S(\ve{e}_1) + \cdots + [\ve{v}]_{\basis{B}, m} S(\ve{e}_m) \amp  \mbox{(\(S\) is linear)}</mrow>
+        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} \ve{w}_1 + \cdots + [\ve{v}]_{\basis{B}, m} \ve{w}_m \amp  \mbox{(since \(S(\ve{e}_i) = \ve{w}_i\))}</mrow>
+        <mrow>\amp = [\ve{v}]_{\basis{B}, 1} T(\ve{e}_1) + \cdots + [\ve{v}]_{\basis{B}, m} T(\ve{e}_m) \amp  \mbox{(since \(T(\ve{e}_i) = \ve{w}_i\))}</mrow>
+        <mrow>\amp = T([\ve{v}]_{\basis{B}, 1} \ve{e}_1 +  \cdots + [\ve{v}]_{\basis{B}, m} \ve{e}_m) \amp  \mbox{(\(T\) is linear)}</mrow>
+        <mrow>\amp = T(\ve{v})</mrow>
+      </md>.
+    </p>
+
+    <p>
+      Hence <m>S = T</m>,
+      in other words the linear map satisfying <xref ref="thing_to_satisfy" /> is unique.
+    </p>
+  </proof>
+
+  <example>
+    <statement>
+      <p>
+        As an application of <xref ref="defining_linear_map_on_basis">Proposition</xref>,
+        we can define a linear map
+        <md>
+          <mrow>T : \Col_2 \amp  \rightarrow \Fun(\mathbb{R})</mrow>
+          <intertext>simply by defining its action on the standard basis of <m>\Col_2</m>. For instance, we may set</intertext>
+          <mrow>\mat{e}_1 \amp  \rightarrow f_1</mrow>
+          <mrow>\mat{e}_2 \amp  \rightarrow f_2</mrow>
+        </md>
+      </p>
+
+      <p>
+        The point is that we are free to send <m>\mat{e}_1</m> and
+        <m>\mat{e}_2</m> to <em>any functions</em>
+        <m>f_1</m> and <m>f_2</m> we like,
+        and we are assured that this will give a well-defined linear map <m>T : \Col_2 \rightarrow \Fun(\mathbb{R})</m>.
+        For instance, we might set
+        <m>f_1 (x) = \sin x</m> and <m>f_2 (x) = |x|</m>.
+        Then the general formula for <m>T</m> is
+        <me>
+          T \left( \cvector{ a \\ b} \right) (x) = a \sin x + b |x|
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <example xml:id="rotation-map-example-complete">
+    <title>Rotation map on standard basis</title>
+    <statement>
+      <p>
+        Let us compute the action of the <sq>counterclockwise rotation by <m>\theta</m></sq> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
+        with respect to the standard basis
+        <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
+        <me>
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+    \draw[<->] (0, -1) -- (0, 2);
+    \draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {\(\ve{e}_1\)};
+    \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(R(\ve{e}_1)\)};
+    \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {\(\theta\)};\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+          \qquad
+
+          <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+    \draw[<->] (0, -1) -- (0, 2);
+    \draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {\(\ve{e}_2\)};
+    \draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {\(R(\ve{e}_2)\)};
+    \draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {\(\theta\)} ;\end{tikzpicture}]]>
+</latex-image>
+          </image>
+
+        </me>
+      </p>
+
+      <p>
+        From the figure, we have:
+        <md>
+          <mrow>R(\ve{e}_1) \amp = (\cos \theta, \sin \theta) \amp  R(\ve{e}_2) \amp = (-\sin \theta, \cos \theta)</mrow>
+        </md>
+        so that
+        <md>
+          <mrow>R(\ve{e}_1) \amp =  \cos \theta \, \ve{e}_1 + \sin \theta\, \ve{e}_2,  R(\ve{e}_2) = -\sin \theta \, \ve{e}_1 +  \cos \theta\, \ve{e}_2</mrow>
+        </md>
+      </p>
+
+      <p>
+        Now that we know the action of <m>R</m> on the standard basis vectors,
+        we can compute its action on an arbitrary vector <m>(x, y) \in \mathbb{R}^2</m>:
+        <md>
+          <mrow>R\left( (x,y)\right) \amp = R( x \ve{e}_1 + y \ve{e}_2 )</mrow>
+          <mrow>\amp = x R(\ve{e}_1) + y R(\ve{e}_2)</mrow>
+          <mrow>\amp = x (\cos \theta, \sin \theta) + y (-\sin \theta, \cos \theta)</mrow>
+          <mrow>\amp = (x \cos \theta - y \sin \theta, \, x \sin \theta + y \cos \theta)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </example>
+</section>
+

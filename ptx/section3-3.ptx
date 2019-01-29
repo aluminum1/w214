@@ -1,0 +1,715 @@
+
+
+<section>
+  <title>Basis and dimension</title>
+  <introduction>
+    <definition>
+      <statement>
+        <p>
+          A list of vectors <m>\basis{B} = \bopen \ve{e}_1</m>,
+          <m>\ve{e}_2</m>, <m>\ldots</m>,
+          <m>\ve{e}_n\bclose</m> in a vector space <m>V</m> is called a <term>basis</term>
+          for <m>V</m> if it is linearly independent and spans <m>V</m>.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      There is a more direct way to think about a basis.
+    </p>
+
+    <proposition xml:id="prop_bases_give_coordinates">
+      <title>Bases give coordinates</title>
+      <statement>
+        <p>
+          A list of vectors <m>\basis{B} = \bopen \ve{e}_1</m>,
+          <m>\ve{e}_2</m>, <m>\ldots</m>,
+          <m>\ve{e}_n \bclose</m> in a vector space <m>V</m> is a basis for <m>V</m> if and only if every vector
+          <m>\ve{v} \in V</m> can be written as a linear combination
+          <men xml:id="trying_to_formulate_basis">
+            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+          </men>
+          in precisely <em>one</em> way. (That is,
+          for each <m>\ve{v} \in V</m> there
+          <em></em><em>exist</em> scalars <m>a_1</m>,
+          <m>a_2</m>, <m>\ldots</m>,
+          <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
+          and that moreover these scalars are
+          <em></em><em>unique</em>).
+        </p>
+      </statement>
+    </proposition>
+
+    <assemblage>
+      <p>
+        It is important to understand the mathematical phrase <sq>There exists a unique <m>X</m> satisfying <m>Y</m></sq>.
+        It means two things.
+        Firstly, that <em>there does exist an</em>
+        <m>X</m> which satisfies <m>Y</m>.
+        And secondly, that there is <em>no more than one</em>
+        <m>X</m> which satisfies <m>Y</m>.
+      </p>
+    </assemblage>
+
+    <assemblage>
+      <p>
+        We call the scalars <m>a_1, a_2, \ldots,
+        a_n</m> appearing in <xref ref="trying_to_formulate_basis" /> the <em>coordinates</em>
+        of <m>\ve{v}</m> in the basis <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m>.
+      </p>
+    </assemblage>
+
+    <proof>
+      <p>
+        <m>\Rightarrow</m>.
+        Suppose that the list of vectors <m>\basis{B} = \bopen \ve{e}_1</m>,
+        <m>\ve{e}_2</m>,
+        <m>\ldots</m>, <m>\ve{e}_n \bclose</m> is a basis for <m>V</m>.
+        Suppose <m>\ve{v} \in V</m>.
+        Since the list of vectors <m>\basis{B}</m> spans <m>V</m>,
+        we know that we <em>can</em> write <m>\ve{v}</m> as a linear combination of the vectors in the list in at least one way,
+        <men xml:id="one_way_of_expanding">
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        We need to show that this is the <em>only</em>
+        way to express <m>\ve{v}</m> as a linear combination of the vectors <m>\ve{e}_i</m>.
+        Indeed, suppose that we also have
+        <men xml:id="second_way_of_expanding">
+          \ve{v} = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        Subtracting these two equations gives
+        <me>
+          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots + (a_n - b_n) \ve{e}_n
+        </me>.
+      </p>
+
+      <p>
+        Since the list of vectors <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>,
+        <m>\ve{e}_n</m> is linearly independent, we conclude that
+        <me>
+          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n = 0
+        </me>.
+      </p>
+
+      <p>
+        That is, <m>a_1 = b_1</m>,
+        <m>a_2 = b_2</m>, and so on up to <m>a_n = b_n</m>,
+        and hence the expansion <xref ref="one_way_of_expanding" /> is unique.
+      </p>
+
+      <p>
+        <m>\Leftarrow</m>.
+        Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
+        <me>
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </me>.
+      </p>
+
+      <p>
+        The fact that each <m>\ve{v}</m> <em>can</em>
+        be written as a linear combination of the vectors <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>,
+        <m>\ve{e}_n</m> means that <m>\basis{B}</m> spans <m>V</m>.
+        We still need to show that this list
+        <m>\basis{B}</m> is linearly independent.
+        So, suppose that there exist scalars <m>b_1</m>, <m>b_2</m>,
+        <m>\ldots</m>, <m>b_n</m> such that
+        <men xml:id="finding_bs_making_zero">
+          b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
+        </men>.
+      </p>
+
+      <p>
+        We need to show that all the <m>b_i</m> must equal zero.
+        We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> : simply set each <m>b_i = 0</m>.
+        But we are told that each vector
+        (in particular, the vector <m>\ve{0}</m>)
+        can be expressed as a linear combination of the <m>\ve{e}_i</m> in exactly one way.
+        Hence this must be the only solution,
+        i.e. we must have <m>b_1 = b_2 = \cdots = b_n = 0</m>,
+        and so the list <m>\basis{B}</m> is linearly independent.
+      </p>
+    </proof>
+
+    <theorem xml:id="inv_dim">
+      <title>Invariance of dimension</title>
+      <statement>
+        <p>
+          If <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_m \bclose</m> and
+          <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2, \ldots, \ve{c}_n\bclose</m> are bases of a vector space <m>V</m>,
+          then <m>m=n</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        This is a consequence of <xref ref="bumping_off_lemma">Proposition</xref>
+        (the Bumping Off Proposition).
+        Since the <m>\ve{b}</m>-vectors are linearly independent and the <m>\ve{c}</m>-vectors span <m>V</m>,
+        we have <m>m \leq n</m>.
+        On the other hand,
+        since the <m>\ve{c}</m>-vectors are linearly independent and the <m>\ve{b}</m>-vectors span <m>V</m>,
+        we have <m>n \leq m</m>.
+        Hence <m>m=n</m>.
+      </p>
+    </proof>
+
+    <definition>
+      <statement>
+        <p>
+          A vector space <m>V</m> is <term>finite-dimensional</term> if it has a basis.
+          In that case, the <term>dimension</term>
+          of <m>V</m> is the number of elements in a basis for <m>V</m>.
+          A vector space is <term>infinte-dimensional</term>
+          if it is not finite-dimensional.
+        </p>
+      </statement>
+    </definition>
+
+    <assemblage>
+      <p>
+        Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
+      </p>
+    </assemblage>
+
+    <example xml:id="standard_basis_R_n_ex">
+      <title>Standard basis for $\mathbb{R}^n$</title>
+      <statement>
+        <p>
+          The list of vectors
+          <me>
+            \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
+          </me>
+          is a basis for <m>\mathbb{R}^n</m>.
+          We already saw in <xref ref="Rn_spanning_set">Example</xref>
+          that this list spans <m>\mathbb{R}^n</m>.
+          We need to check that it is linearly independent.
+          So, suppose that
+          <me>
+            a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}
+          </me>.
+        </p>
+
+        <p>
+          Expanding out the left hand side in components using the definition of the standard basis vectors
+          <m>\ve{e}_i</m>, this becomes the equation
+          <me>
+            (a_1, 0, 0, \ldots, 0) + (0, a_2, 0, \ldots, 0) + \cdots + (0, 0, 0,
+            \ldots, a_n) = (0, 0, 0, \ldots, 0)
+          </me>.
+        </p>
+
+        <p>
+          In other words, we have
+          <me>
+            (a_1, a_2, a_3, \ldots, a_n) = (0, 0, 0, \ldots, 0)
+          </me>
+          which says precisely that <m>a_1 = a_2 = a_3 = \cdots = a_n = 0</m>,
+          which is what we needed to prove.
+          Thus the list of vectors <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m> is linearly independent,
+          and is hence a basis for <m>\mathbb{R}^n</m>.
+          So <m>\mathbb{R}^n</m> has dimension <m>n</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          The list of polynomials
+          <me>
+            \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
+          </me>
+          is a basis for <m>\Poly_n</m>,
+          so <m>\Dim \Poly_n = n+1</m>.
+          Indeed, this list spans <m>\Poly_n</m> by definition,
+          so we just need to check that it is linearly independent.
+          Suppose that
+          <me>
+            a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}
+          </me>.
+        </p>
+
+        <p>
+          <em>This is an equation between functions,
+          so it holds for all <m>x \in \mathbb{R}</m>!</em> In other words,
+          for all <m>x \in \mathbb{R}</m>,
+          the following equation holds:
+          <men xml:id="root_of_poly">
+            a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0
+          </men>
+        </p>
+
+        <p>
+          But, we know from algebra that a polynomial equation of the form <xref ref="root_of_poly" /> with nonzero coefficients has <em>at most</em>
+          <m>n</m> roots <m>x_1, x_2, \ldots, x_n</m>.
+          So, in order for <xref ref="root_of_poly" /> to hold for
+          <em>all</em> real numbers <m>x</m>,
+          the coefficients must be zero, i.e.
+          <m>a_0 = a_1 = a_2 = \cdots = a_n = 0</m>,
+          which is what we needed to show.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+      <p>
+        Suppose <m>X</m> is a finite set.
+        Then <m>\Fun(X)</m> is finite-dimensional,
+        with dimension <m>|X|</m>,
+        with basis given by the functions <m>\ve{f}_a</m>,
+        <m>a \in X</m>, defined by:
+        <men xml:id="defn_of_basis_of_functions">
+          \ve{f}_a (x) :=  \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ otherwise}  \end{cases}
+        </men>
+      </p>
+
+      <p>
+        We will prove this in a series of exercises.
+      </p>
+
+      <assemblage>
+        <p>
+          The formula on the right hand side of <xref ref="defn_of_basis_of_functions" /> occurs so often in mathematics we give it a symbol of its own,
+          <m>\delta_{ab}</m>
+          (the <sq>Kronecker delta</sq>).
+          This symbol stands for the formula:
+          <q>If <m>a=b</m>, return a 1.
+          If <m>a \neq b</m>, return a <m>0</m></q>.
+          In this language,
+          we can rewrite the definition of the functions <m>\ve{f}_a</m> as
+          <men>
+            \ve{f}_a (x) := \delta_{ax}
+          </men>.
+        </p>
+      </assemblage>
+
+      <exercise>
+        <statement>
+          <p>
+            Suppose <m>X = \left\{\mbox{\pmglyph{\HGi}} , \mbox{\pmglyph{\He}} , \mbox{\pmglyph{\HZxi}} \right\}</m>.
+
+            <ol>
+              <li>
+                <p>
+                  Evaluate the function <m>\ve{f}_{\mbox{\tiny \pmglyph{\HGi}} }</m> at each <m>x \in X</m>.
+                </p>
+              </li>
+
+              <li>
+                <p>
+                  Show that every function <m>\ve{f} \in \Fun(X)</m> can be written as a linear combination of <m>\ve{f}_{\mbox{\tiny \pmglyph{\HGi}} }</m>,
+                  <m>\ve{f}_{\mbox{\tiny \pmglyph{\He}} }</m> and <m>\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}} }</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
+
+      <exercise>
+        <statement>
+          <p>
+            Now let <m>X</m> be an arbitrary finite set.
+            Consider the collection of functions
+            <me>
+              \ve{f}_a, \, a \in X
+            </me>
+          </p>
+
+          <p>
+            Show that this collection (i) spans <m>\Fun(X)</m> and (ii) is linearly independent.
+          </p>
+        </statement>
+      </exercise>
+
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          <m>\Trig_n</m> is <m>(2n+1)</m>-dimensional, with basis
+          <md>
+            \ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, \\ \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.
+          </md>
+        </p>
+
+        <p>
+          You know that these functions span <m>\Trig_n</m>, by definition.
+          They are also linearly independent,
+          though we will not prove this.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="dimension_of_matrix_space_example">
+      <statement>
+      <p>
+        The dimension of <m>\Mat_{n,m}</m> is <m>nm</m>,
+        with basis given by the matrices
+        <me>
+          \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
+        </me>
+        which have a <m>1</m> in the <m>i</m>th row and <m>j</m>th column and zeroes everywhere else.
+      </p>
+
+      <assemblage>
+        <p>
+          Usually <m>\mat{A}</m> is a matrix,
+          and <m>\mat{A}_{ij}</m> is the element of the matrix at position <m>(i,j)</m>.
+          But now <m>\mat{E}_{ij}</m> is a matrix in its own right!
+          Its element at position <m>(k,l)</m> will be written as <m>(\mat{E}_{ij})_{kl}</m>.
+          I hope you don't find this too confusing.
+          In fact, we can write down an elegant formula for the elements of
+          <m>\mat{E}_{ij}</m> using the Kronecker delta symbol:
+          <men xml:id="kronecker_for_matrix_basis">
+            (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
+          </men>
+        </p>
+
+        <exercise>
+          <statement>
+            <p>
+              Check that <xref ref="kronecker_for_matrix_basis" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
+            </p>
+          </statement>
+        </exercise>
+      </assemblage>
+
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          The standard basis of <m>\Mat_{2,2}</m> is
+          <me>
+            \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
+            \end{array}  \right], \, \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
+            \end{array}  \right], \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
+            \end{array}  \right], \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
+            \end{array}  \right]
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          The standard basis of <m>\Col_n</m> is
+          <me>
+            \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
+            \end{array}  \right], \, 
+            \col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
+            \end{array}  \right], \, 
+            \ldots, \,
+            \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
+            \end{array}  \right] 
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      We now consider dimensions of subspaces of vector spaces.
+    </p>
+
+    <proposition xml:id="dim-of-subspace-prop">
+      <statement>
+        <p>
+          Let <m>W</m> be a subspace of a finite-dimensional vector space <m>V</m>.
+          Then <m>W</m> is finite-dimensional,
+          and <m>\Dim(W) \leq \Dim(V)</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <proof>
+      <p>
+        Let <m>n = \Dim(V)</m>.
+        If <m>W = \{ \ve{0} \}</m>, then the statement is clearly true.
+        Suppose <m>W \neq \{ \ve{0} \}</m>.
+        Choose a nonzero vector <m>\ve{e}_1 \in W</m> and form the list <m>\basis{B}_1 = \bopen \ve{e}_1 \bclose</m>.
+        If it spans <m>W</m>, then we are done.
+        If not, there exists <m>\ve{e}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
+        Now consider the list <m>\basis{B}_2 = \bopen \ve{e}_1, \ve{e}_2 \bclose</m>.
+        If it spans <m>W</m>, we are done.
+        If not, there exists a vector
+        <m>\ve{e}_3 \in W</m> which is not a linear combination of <m>\ve{e}_1</m> and <m>\ve{e}_2</m>.
+        Consider the new list <m>\basis{B}_3 = \bopen \ve{e}_1, \ve{e}_2, \ve{e}_3 \bclose</m>.
+        And so on.
+      </p>
+
+      <p>
+        This process must eventually terminate.
+        That is, there must exist some
+        <m>k \geq 1</m> such that <m>\basis{B}_k = \bopen \ve{e}_1, \ldots, \ve{e}_k \bclose</m> spans <m>W</m>,
+        and hence is a basis for <m>W</m>.
+        This is because each list <m>\basis{B}_i</m> is linearly independent
+        (by construction,
+        no vector is a linear combination of the preceding vectors).
+        And it is impossible to construct a linearly independent list of vectors in <m>W</m>
+        (and hence in <m>V</m>)
+        which has more than <m>n</m> elements,
+        by the Bumping Off Proposition.
+        This also shows that <m>k \leq n</m>.
+      </p>
+    </proof>
+
+    <p>
+      It is good to have an example of an infinite-dimensional vector space.
+    </p>
+
+    <proposition>
+      <statement>
+        <p>
+          <m>\Poly</m> is infinite-dimensional.
+        </p>
+      </statement>
+    </proposition>
+
+    <proof>
+      <p>
+        Suppose <m>\Poly</m> is finite-dimensional.
+        This means there exists a finite collection of polynomials
+        <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> which spans <m>\Poly</m>.
+        But, let <m>d</m> be the highest degree of all the polynomials in the list <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m>.
+        Then <m>\ve{p} := x^{d+1}</m> is a polynomial which is not in the span of <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m>,
+        since adding polynomials together and multiplying them by scalars can never increase the degree.
+        We have arrived at a contradiction.
+        So our initial assumption cannot be correct, i.e.
+        <m>\Poly</m> cannot be finite-dimensional.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          We will not prove this here,
+          but the following vector spaces are also infinite-dimensional:
+
+          <ul>
+            <li>
+              <p>
+                <m>\mathbb{R}^\infty</m>,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Fun(X)</m> where <m>X</m> is an infinite set,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Cont(I)</m> for any nonempty interval <m>I</m>, and
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Diff(I)</m> for any open interval <m>I</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+  </introduction>
+
+  <subsection xml:id="sifting_subsection">
+    <title>Sifting</title>
+    <p>
+      If we consider the proof of <xref ref="bumping_off_lemma">Proposition</xref>
+      (the <sq>Bumping off</sq> Proposition)
+      carefully, we find that it makes use of a
+      <em>sifting algorithm</em>.
+      This algorithm can actually be applied to <em>any</em>
+      list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in a vector space.
+      Consider each vector <m>\ve{v}_i</m> in the list consecutively.
+      If <m>\ve{v}_i</m> is the zero vector,
+      or if it is a linear combination of the preceding vectors
+      <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_{n-1}</m>, remove it from the list.
+    </p>
+
+    <example>
+      <statement>
+      <p>
+        Sift the following list of vectors in <m>\mathbb{R}^3</m>:
+        <md>
+          <mrow>\ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6, -3)</mrow>
+          <mrow>\ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
+        </md>.
+      </p>
+
+      <p>
+        We start with <m>\ve{v}_1</m>.
+        Since it is not the zero vector,
+        and is not a linear combination of any preceding vectors,
+        it remains.
+        We move on to <m>\ve{v}_2</m>,
+        which is zero, so we remove it.
+        We move on to <m>\ve{v}_3</m>,
+        which by inspection is equal to <m>3 \ve{v}_1</m>, so we remove it.
+        We move on to <m>\ve{v}_4</m>.
+        It is not zero,
+        and cannot be expressed as a multiple of <m>\ve{v}_1</m>
+        (check this),
+        so it remains.
+        We move on to <m>\ve{v}_5</m>.
+        We check if it can be written as a linear combination
+        <me>
+          \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
+        </me>
+        and find the solution <m>a=2, b=3</m>
+        (check this),
+        so we remove it.
+        Finally we move on to <m>\ve{v}_6</m>.
+        We check if it can be written as a linear combination
+        <me>
+          \ve{v}_6 = a\ve{v}_1 + b \ve{v}_4
+        </me>
+        and find no solutions
+        (check this),
+        so it remains.
+        Our final sifted list is
+        <me>
+          \ve{v}_1, \ve{v}_4, \ve{v}_6
+        </me>.
+      </p>
+
+      <exercise>
+        <statement>
+          <p>
+            Do the three <sq>check this</sq> calculations above.
+          </p>
+        </statement>
+      </exercise>
+
+      </statement>
+    </example>
+
+    <p>
+      Sifting is a very useful way to construct a basis of a vector space!
+    </p>
+
+    <lemma xml:id="sift_lemma_basis">
+      <statement>
+        <p>
+          If a list of vectors <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> spans a vector space <m>V</m>,
+          then sifting the list will result in a basis for <m>V</m>.
+        </p>
+      </statement>
+    </lemma>
+
+    <proof>
+      <p>
+        At each step,
+        the vector that is removed from the list is either the zero vector,
+        or a linear combination of the vectors before it.
+        So if we remove this vector, the resulting list will still span <m>V</m>.
+        Thus by the end of the process,
+        the final sifted list of vectors still spans <m>V</m>.
+      </p>
+
+      <p>
+        To see that the final sifted list is linearly independent,
+        we can apply <xref ref="lin_dependence_prop">Proposition</xref>.
+        By construction,
+        no vector in the final sifted list is a linear combination of the preceding vectors
+        (if it was, it would have been removed!).
+        Hence the final sifted list is not linearly dependent,
+        so it must be linearly independent!
+      </p>
+    </proof>
+
+    <corollary xml:id="first_corollary_please">
+      <statement>
+        <p>
+          Any linearly independent list of vectors
+          <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k</m> in a finite-dimensional vector space <m>V</m> can be extended to a basis of <m>V</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <proof>
+      <p>
+        Since <m>V</m> is finite-dimensional,
+        it has a basis <m>\ve{e}_1, \ldots, \ve{e}_n</m>.
+        Now consider the list
+        <me>
+          L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n
+        </me>
+        which clearly spans <m>V</m>.
+        By sifting this list, we will arrive at a basis for <m>V</m>,
+        by <xref ref="sift_lemma_basis">Lemma</xref>.
+        Some of the <m>\ve{e}</m>-vectors may have been removed.
+        But none of the <m>\ve{v}</m>-vectors will have been removed,
+        since that would mean some
+        <m>\ve{v}_i</m> is a linear combination of the preceding vectors
+        <m>\ve{v}_1, \ldots, \ve{v}_{i-1}</m>, which is impossible,
+        as <m>\ve{v}_1, \ldots, \ve{v}_k</m> is linearly independent list.
+        Hence after sifting the list <m>L</m> we indeed extend our original list
+        <m>\ve{v}_1, \ldots, \ve{v}_k</m> to a basis of <m>V</m>.
+      </p>
+    </proof>
+
+    <corollary xml:id="lin-ind-implies-basis">
+      <statement>
+        <p>
+          If <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> is a linearly independent list of <m>n</m> vectors in an <m>n</m>-dimensional vector space <m>V</m>,
+          then it is a basis.
+        </p>
+      </statement>
+    </corollary>
+
+    <proof>
+      <p>
+        By <xref ref="first_corollary_please">Corollary</xref>,
+        we can extend <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> to a basis for <m>V</m>.
+        But <m>V</m> has dimension <m>n</m>,
+        so the basis must contain only <m>n</m> vectors by <xref ref="inv_dim">Theorem</xref> (Invariance of Dimension).
+        So we have not added any vectors at all!
+        Hence our original list was already a basis.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          In <xref ref="new_basis_for_poly_3">Example</xref>
+          we showed that the list of polynomials
+          <me>
+            \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
+          </me>
+          is linearly independent in <m>\Poly_3</m>.
+          Since <m>\Dim \Poly_3 = 4</m>,
+          we see that it is a basis of <m>\Poly_3</m>.
+        </p>
+
+        <assemblage>
+          <p>
+            In <xref ref="chebyshev_example">Exercise</xref>,
+            you showed that <m>\ve{q}_0, \ldots, \ve{q}_3</m> is a basis for <m>\Poly_3</m> by <sq>brute force</sq>.
+            This new method is <em>different</em>!
+          </p>
+        </assemblage>
+
+      </statement>
+    </example>
+  </subsection>
+
+</section>
+

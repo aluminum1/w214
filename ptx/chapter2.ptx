@@ -1,0 +1,16 @@
+
+
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude" >
+  <title>Abstract vector spaces</title>
+  <xi:include  href="intro1.ptx" />
+  <xi:include  href="section2-2.ptx" />
+  <xi:include  href="section2-3.ptx" />
+  <xi:include  href="section2-1x.ptx" />
+  <xi:include  href="section2-4.ptx" />
+  <xi:include  href="section2-2x.ptx" />
+  <xi:include  href="section2-5.ptx" />
+  <xi:include  href="section2-3x.ptx" />
+  <xi:include  href="section2-6.ptx" />
+  <xi:include  href="section2-4x.ptx" />
+</chapter>
+
