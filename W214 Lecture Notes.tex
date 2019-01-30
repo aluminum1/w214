@@ -137,7 +137,7 @@
 
 
 
-\chapter{Note for the student}
+\chapter{Note for the student} \label{Ch0NoteForStudent}
 
 You are about to meet linear algebra for the second time. In the first year, we focused on systems of linear equations, matrices, and their determinants. That was good and well, but the time has come for you to return to these topics from a more abstract, mathematical viewpoint. 
 
@@ -162,9 +162,9 @@ Good luck in this new phase of your mathematical training. Enjoy the ride!
 
 \mainmatter
 
-\chapter{Abstract vector spaces}
+\chapter{Abstract vector spaces} \label{Ch1AbstractVectorSpaces}
 
-\section{Introduction} \label{intro1}
+\section{Introduction} \label{Ch1Sec1Intro}
 
 \subsection{Three different sets}
 
@@ -188,58 +188,61 @@ Well done --- you are learning the language of mathematics!
 An element of $A$ is an arbitrary pair of real numbers $\ve{a} = (a_1, \, a_2)$. For instance, $(1, \, 2) \in A$ and $(3.891,  \, e^\pi)$ are elements of $A$. Note also that I am using a boldface $\ve{a}$ to refer to an element of $A$. This is so that we can distinguish $\ve{a}$ from its {\em components} $a_1$ and $a_2$, which are just ordinary numbers (not elements of $A$). 
 
 We can visualize an element $\ve{a}$ of $A$ as a point in the Cartesian plane whose $x$-coordinate is $a_1$ and whose $y$-coordinate is $a_2$:
-\[
-{\color{red} \ve{a}} \quad \xrightarrow{\mbox{visualize as}} \quad 
-\ba
-\begin{tikzpicture}
- 	\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
- 	\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-  \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+tikzalign
+\begin{align*}
+{\color{red} \ve{a}} \quad \xrightarrow{\mbox{visualize as}} \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
 %	\draw[->, thick] (0,0) -- (1.3, 1);
- 	\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
- 	\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
- 	\node[color=red] at (1.6,1) {$\ve{a}$};
+\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+\node[color=red] at (1.6,1) {$\ve{a}$};
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
+
+
+
 The second set, $B$, is defined to be the set of all ordered real triples $(b_1, \, b_2, \, b_3)$ satisfying $b_1 - b_2 + b_3 = 0$. Translated into mathematical symbols,
 \be
  B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ and } b_1 - b_2 + b_3 = 0\} .
 \ee
 For instance, $(2,3, 1) \in B$ but $(1,1,1) \notin B$. We can visualize an element $\ve{b}$ of $B$ as a point in the plane in 3-dimensional space carved out by the equation $x-y+z = 0$:
-\[
+tikzalign
+\begin{align*}
 {\color{red} \ve{b}} \quad \xrightarrow{\mbox{visualize as}} \quad
-\ba
-\begin{tikzpicture}
- 	\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-	\draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-	\draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-	\node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
-	\node[color=red] at (0.5, 0.9) {$\ve{b}$};
-	\draw[thick] (-0.1, -1) -- (-1, 0.4);
-	\draw[thick] (-1, 0.4) -- (0.3, 1.5);
-	\draw[thick] (0.3, 1.5) -- (1.5, 0.4);
-	\draw[thick] (1.5, 0.4) -- (-0.1, -1);
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
+\draw[->] (0, 0) -- (2,0) node[right] {$y$};
+\draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+\draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+\node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
+\node[color=red] at (0.5, 0.9) {$\ve{b}$};
+\draw[thick] (-0.1, -1) -- (-1, 0.4);
+\draw[thick] (-1, 0.4) -- (0.3, 1.5);
+\draw[thick] (0.3, 1.5) -- (1.5, 0.4);
+\draw[thick] (1.5, 0.4) -- (-0.1, -1);
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
 The third set, $C$, is the set of all polynomials of degree 4. Translated into mathematical symbols,
 \be
  C := \{ \mbox{polynomials of degree $\leq 4$}\}.
 \ee
 Recall that the {\em degree} of a polynomial is the highest power of $x$ which occurs.  For instance, $\ve{c} = x^4 - 3 x^3 + 2x^2$ is a polynomial of degree 4, and so is $\ve{p} = 2x^3 + \pi x$. So $\ve{c}$ and $\ve{p}$ are elements of $C$. But $\ve{r} = 8x^5 - 7$ and $\ve{s} = \sin(x)$ are not elements of $C$. We can visualize an element $\ve{c} \in C$ (i.e. a polynomial of degree 4) via its {\em graph}. For instance, the polynomial $\ve{c} = x^4 - 3x^3 + 2x^2 \in C$ can be visualized as:
-\[
+tikzalign
+\begin{align*}
 {\color{red} \ve{c}} \quad \xrightarrow{\mbox{visualize as}} \quad
-\ba
-\begin{tikzpicture}[domain=-0.5:2.2]
- 	\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
- 	\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-    \draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
-        node[right] {$\ve{c}$};
-
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
+node[right] {$\ve{c}$};
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
+
 
 There you have it. I have defined three different sets: $A$, $B$ and $C$, and I have explained how to visualize the elements of each of these sets. On the face of it, the sets are quite different. Elements of $A$ are arbitrary points in $\mathbb{R}^2$. Elements of $B$ are points in $\mathbb{R}^3$ satisfying a certain equation. Elements of $C$ are polynomials.
 
@@ -257,42 +260,43 @@ In set $A$, we can add two elements $\ve{a} = (a_1, \, a_2)$ and $\ve{a}' = (a_1
  \underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'} := \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}
 \ee
 For instance, $(1, \,3) + (2, \,-1.6) = (3, \,1.4)$. We can visualize this addition operation as follows:
-\[
-\ba
-\begin{tikzpicture}[scale=0.8]
- 	\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
- 	\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-  \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+tikzalign
+\begin{align*}
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
 %	\draw[->, thick] (0,0) -- (1.3, 1);
- 	\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
- 	\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
- 	\node[color=red] at (1.6,1) {$\ve{a}$};
+\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+\node[color=red] at (1.6,1) {$\ve{a}$};
 \end{tikzpicture}
-\ea \quad + \quad
-\ba
-\begin{tikzpicture}[scale=0.8]
- 	\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
- 	\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-  \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) {};
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) {};
 %	\draw[->, thick] (0,0) -- (1.3, 1);
- 	\draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
- 	\draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
- 	\node[color=red] at (0.9,0.4) {$\ve{a}'$};
+\draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
+\draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
+\node[color=red] at (0.9,0.4) {$\ve{a}'$};
 \end{tikzpicture}
-\ea
 \quad = \quad
-\ba
-\begin{tikzpicture}[scale=0.8]
- 	\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
- 	\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-  \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) {};
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) {};
 %	\draw[->, thick] (0,0) -- (1.3, 1);
- 	\draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
- 	\draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
- 	\node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
+\draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
+\draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
+\node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
+
+
 
 We can do a similar thing in set $B$. Suppose we have two elements of $B$, $\ve{b} = (b_1, \,b_2, \,b_3)$ and $\ve{b}' = (b_1', \, b_2', \, b_3')$. Note that, since $\ve{b}\in B$, its components satisfy $b_1 - b_2 + b_3 = 0$. Similarly the components of $b'$ satisfy and $b_1 - b_2 + b_3 = 0$. We can add $\ve{b}$ and $\ve{b}'$ together to get a new element $\ve{b} + \ve{b}'$ of $B$, by adding their components together as before:
 \be \label{new_add_in_B}
@@ -322,9 +326,10 @@ There is another way to think about the addition of polynomials. Each polynomial
   (\ve{c} + \ve{d})(x) := \ve{c}(x) + \ve{d}(x)
 \ee
 Thinking in this way, we can visualize the graph of $\ve{c} + \ve{d}$ as the graph of $\ve{c}$ added to the graph of $\ve{d}$:
+tikzalign
 \begin{multline*}
-\ba
-\begin{tikzpicture}[domain=-0.5:2.2]
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
  	\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
  	\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
     \draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
@@ -332,21 +337,18 @@ Thinking in this way, we can visualize the graph of $\ve{c} + \ve{d}$ as the gra
     \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
     \draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
 \end{tikzpicture}
-\ea
 \quad + \quad
-\ba
-\begin{tikzpicture}[domain=-0.5:2.2]
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
  	\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
  	\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
     \draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
         node[right] {$\ve{d}$};
    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
     \draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
-\end{tikzpicture}
-\ea
-\\ = \quad
-\ba
-\begin{tikzpicture}[domain=-0.5:2.2]
+\end{tikzpicture} \\ = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
  	\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
  	\draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
     \draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
@@ -354,7 +356,6 @@ Thinking in this way, we can visualize the graph of $\ve{c} + \ve{d}$ as the gra
    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
     \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
 \end{tikzpicture}
-\ea
 \end{multline*}
 
 \subsubsection{Zero element}
@@ -464,7 +465,7 @@ There are other rules that also hold in all three sets. For instance, in all thr
 \ee
 holds for any three elements $\ve{x}$, $\ve{y}$ and $\ve{z}$. Can you find the other common rules?
 
-\section{Definition of an abstract vector space}
+\section{Definition of an abstract vector space} \label{Ch1Sec2DefVectorSpace}
 Mathematics is about identifying patterns. We have found three different sets, $A$, $B$ and $C$, which look very different on the surface but have much in common. In each set, there is an addition operation, a zero vector, and a scalar multiplication operation. Moreover, in each set, these operations satisfy the same rules. Let us now record this pattern by giving it a name and writing down the rules explicitly. 
 
 \begin{definition}\label{real_vec_space} A {\em vector space} is a set $V$ equipped with the following data: \label{defnvec}
@@ -501,7 +502,7 @@ To prove that a certain set can be given the structure of a vector space, one th
 \end{enumerate}
 \end{ramanujansays}
 
-\section{First example of a vector space}
+\section{First example of a vector space} \label{Ch1Sec3ExampleVectorSpace}
 
 We were led to the definition (Definition \ref{defnvec}) of an abstract vector space by considering the properties of sets $A$, $B$ and $C$ in Section \ref{intro1}. Let us check, for instance, that $B$ indeed satisfies Definition \ref{defnvec}. The others will be left as exercises.
 
@@ -630,7 +631,7 @@ By the same reasoning, we can check that $\ve{v} + \ve{0} = \ve{v}$. \\
 
 
 
-\section{More examples and non-examples}
+\section{More examples and non-examples} \label{Ch1Sec4MoreExamples}
 
 \begin{example}[A non-example] Define the set $V$ by 
 \be
@@ -779,7 +780,7 @@ Define scalar multiplication by
 
 \begin{example}[Matrices] \label{matrices_example_vec_space} the set $\Mat_{n, m}$ of all $n \times m$ matrices is a vector space. See Appendix \ref{reminder-matrices-chap} for a reminder about matrices.
 
-\begin{exercise} Show that when equipped with the addition operation, zero vector, and scalar multplication operation as defined in Appendix \ref{reminder-matrices-chap}, the set $\Mat_{n, m}$ of all $n \times m$ matrices is a vector space. 
+\begin{exercise} Show that when equipped with the addition operation, zero vector, and scalar multiplication operation as defined in Appendix \ref{reminder-matrices-chap}, the set $\Mat_{n, m}$ of all $n \times m$ matrices is a vector space. 
 \end{exercise}
 \end{example}
 
@@ -832,7 +833,7 @@ where $\ve{x}$ and $\ve{y}$ are positive real numbers, and $k$ is a scalar (i.e.
 
 \end{exercise}
 
-\section{Some results about abstract vector spaces}
+\section{Some results about abstract vector spaces} \label{Ch1Sec5ResultsVectorSpace}
 It is time to use the rules of a vector space to prove some general results.
 
 \begin{ramanujansays} We are about to do our first formal proof in the course!
@@ -939,7 +940,7 @@ Hence in the case $k \neq 0$ we must have $\ve{v} = \ve{0}$, which is what we wa
 \begin{exercise} Suppose that two vectors $\ve{x}$ and $\ve{w}$ in a vector space satisfy $2 \ve{x} + 6 \ve{w} = \ve{0}$. Solve for $\ve{x}$, showing explicitly how you use the rules of a vector space, as in Example \ref{explicit_solve_x}.
 \end{exercise}
 
-\section{Subspaces}
+\section{Subspaces} \label{Ch1Sec6Subspaces}
 The notion of a subspace will allow us to quickly establish many more examples of vector spaces.
 \begin{definition}A subset $U \subseteq V$ of a vector space $V$ is called a {\em subspace of $V$} if:
 \begin{itemize} \item For all $\ve{u}, \ve{u}' \in U$, $\ve{u}+\ve{u}' \in U$
@@ -1153,14 +1154,14 @@ Is $V$ a subspace of $\mathbb{R}^\infty$? If you think it is, {\em prove} that i
 \begin{exercise} Give an example of a nonempty subset $V$ of $\mathbb{R}^2$ which is closed under scalar multiplication, but $V$ is not a subspace of $\mathbb{R}^2$.
 \end{exercise}
 
-\chapter{Finite-dimensional vector spaces}
+\chapter{Finite-dimensional vector spaces} \label{Ch2FinDimVectorSpaces}
 In this course we concentrate on {\em finite-dimensional} vector spaces, which we will define in this chapter. 
 
 \begin{ramanujansays}
 {\bf Warning}: From now on, I will use shorthand and write scalar multiplication $k \cdot \ve{v}$ simply as $k \ve{v}$!
 \end{ramanujansays}
 
-\section{Linear combinations and span}
+\section{Linear combinations and span} \label{Ch2Sec1LinearCombinationSpan}
 We start with some basic definitions.
 \begin{definition} A {\em linear combination} of a finite collection $\ve{v}_1, \ldots, \ve{v}_n$ of vectors in a vector space $V$ is a vector of the form
 \be
@@ -1227,16 +1228,15 @@ See Figure \ref{spanning_set_R2}. Note that every vector $\ve{v}$ can be written
 \end{example}
 
 \begin{figure}[t] 
-\[
-\begin{tikzpicture}
+	\centering
+	\begin{tikzpicture}
 	\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {$x$};
 	\draw[<->] (0, -2.5) -- (0, 2.5) node[right] {$y$};
 	\draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {$\ve{f}_1$};
 	\draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {$\ve{f}_2$};
 	\draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {$\ve{f}_3$} ;
-\end{tikzpicture}
-\] 
- \caption{\label{spanning_set_R2} A list of vectors which spans $\mathbb{R}^2$.}
+	\end{tikzpicture}
+	\caption{\label{spanning_set_R2} A list of vectors which spans $\mathbb{R}^2$.}
 \end{figure}
 
 \begin{example} $\mathbb{R}^n$ is spanned by  \label{Rn_spanning_set}
@@ -1275,7 +1275,7 @@ because every vector $\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)$ can be written a
 span $\Poly_3$.
 \end{exercise}
 
-\section{Linear independence}
+\section{Linear independence} \label{Ch2Sec2LinearIndependence}
 
 \begin{definition} A list of vectors $\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n$ in a vector space $V$ is called {\em linearly independent} if the equation
 \be \label{lin_independence_eqn}
@@ -1441,7 +1441,7 @@ is linearly independent (you will prove this in Exercise \ref{checking_matrices_
 
 
 
-\section{Basis and dimension}
+\section{Basis and dimension} \label{Ch2Sec3BasisDimension}
 
 
 \begin{definition} A list of vectors $\basis{B} = \bopen \ve{e}_1$, $\ve{e}_2$, $\ldots$, $\ve{e}_n\bclose$ in a vector space $V$ is called a {\em basis} for $V$ if it is linearly independent and spans $V$.
@@ -1587,11 +1587,12 @@ which have a $1$ in the $i$th row and $j$th column and zeroes everywhere else.
 \begin{ramanujansays} Usually $\mat{A}$ is a matrix, and $\mat{A}_{ij}$ is the element of the matrix at position $(i,j)$. But now $\mat{E}_{ij}$ is a matrix in its own right! Its element at position $(k,l)$ will be written as $(\mat{E}_{ij})_{kl}$. I hope you don't find this too confusing. In fact, we can write down an elegant formula for the elements of $\mat{E}_{ij}$ using the Kronecker delta symbol:
 \begin{equation} \label{kronecker_for_matrix_basis}
  (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
-\ee
+\end{equation}
+
+\end{ramanujansays}
+movebackintoramanujansays
 \begin{exercise} Check that \eqref{kronecker_for_matrix_basis} is indeed the correct formula for the matrix elements of $\mat{E}_{ij}$.
 \end{exercise}
-\end{ramanujansays}
-
 \end{example} 
 
 
@@ -1762,7 +1763,7 @@ Hence, $\basis{B}$ must be a basis for $V$.
 
 
 
-\section{Coordinate vectors}
+\section{Coordinate vectors} \label{Ch2Sec4CoordinateVectors}
 
 \begin{definition} Let $\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose$ be a basis for a vector space $V$, and let $\ve{v} \in V$. Write
 \[
@@ -1804,9 +1805,8 @@ Also by inspection, we see that $\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2$, so that
 \end{solution}
 
 \end{example}
-
 \begin{figure}
-\[
+	
  \begin{tikzpicture}[scale=0.5]
 	\draw[red, dotted] (-9, -9) -- (3, -3);
 	\draw[red, dotted] (-8, -7) -- (4, -1);
@@ -1830,7 +1830,6 @@ Also by inspection, we see that $\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2$, so that
 	\draw[thick, ->] (0,0) -- (3,0) node[below right] {$\ve{v}$};
 	\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1); 
  \end{tikzpicture}
-\]
 \caption{\label{v_and_w_in_basis_B}
 The basis $B$ for $\mathbb{R}^2$.}
 \end{figure}
@@ -1906,7 +1905,7 @@ Consider $p(x) = x^2 + x - 6$.
 
 \end{exercise}
 
-\section{Change of basis} \label{change-of-basis-sec}
+\section{Change of basis} \label{Ch2Sec5ChangeOfBasis}
 \subsection{Coordinate vectors are different in different bases}
 Suppose that $\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose$ and $\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose$ are two different bases for $\mathbb{R}^2$, shown below:
 
@@ -1949,9 +1948,9 @@ On the other hand, in the basis $\basis{C}$, we have
 \begin{equation}
  \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \cvector{1 \\ -3}. \label{correct_exp_w}
 \end{equation}
+tikzalign
 \begin{figure}
 \begin{minipage}{0.5\linewidth}
-\[
  \begin{tikzpicture}[scale=0.5]
 	\draw[red, dotted] (-9, -9) -- (3, -3);
 	\draw[red, dotted] (-8, -7) -- (4, -1);
@@ -1974,11 +1973,9 @@ On the other hand, in the basis $\basis{C}$, we have
 	\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_2$} (1,2);
 	\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1); 
  \end{tikzpicture}
-\]
 \subcaption{$\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2$}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-\[
  \begin{tikzpicture}[scale=0.5]
 	\draw[blue, dotted] (-6, 3) -- (0, -3);
 	\draw[blue, dotted] (-5, 3) -- (1, -3);
@@ -2000,7 +1997,6 @@ On the other hand, in the basis $\basis{C}$, we have
 	\draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {$\ve{c}_1$} (-1,1);
 	\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1); 
  \end{tikzpicture}
-\]
 \subcaption{$\ve{w} = \ve{c}_1 - 3 \ve{c}_2$}
 \end{minipage}
 
@@ -2018,8 +2014,9 @@ Now, suppose we only knew $[\ve{w}]_\basis{B}$, the coordinate vector of $\ve{w}
 that is, $\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2$. How could we compute $[\ve{w}]_\basis{C}$, the coordinate vector of $\ve{w}$ in the basis $\basis{C}$?
 
 The best way is to express each vector in the basis $\basis{B}$ as a linear combination of the basis vectors in $\basis{C}$. In the next figure, the vectors $\ve{b}_1$ and $\ve{b}_2$ are displayed against the background of the basis $\basis{C}$:
-\[
+tikzalign
  \begin{tikzpicture}[scale=0.5]
+ 
 	\draw[blue, dotted] (-6, 3) -- (0, -3);
 	\draw[blue, dotted] (-5, 3) -- (1, -3);
 	\draw[blue, dotted] (-4, 3) -- (2, -3);
@@ -2040,9 +2037,8 @@ The best way is to express each vector in the basis $\basis{B}$ as a linear comb
 	\draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {$\ve{c}_1$} (-1,1);
 	\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_1$} (2,1); 
 	\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_2$} (1,2);
-
+	
  \end{tikzpicture}
-\]
 We read off that:
 \begin{align} \label{b_in_terms_of_c}
 	\ve{b}_1 &= \ve{c}_1 + 3 \ve{c}_2 \\
@@ -2164,16 +2160,16 @@ of $\Trig_2$ to the basis
 \end{exercise}
 
 
-\chapter{Linear maps}
+\chapter{Linear maps} \label{Ch3LinearMaps}
 
-\section{Definition and examples}
+\section{Definition and examples} \label{Ch3Sec1DefinitionsExamples}
 
 Recall that a {\em function} (or a {\em map}) $f : X \rightarrow Y$ from a set $X$ to a set $Y$ is simply a rule which assigns to each element of $X$ an element $f(x)$ of $Y$. We write $x \mapsto f(x)$ to indicate that an element $x \in X$ maps to $f(x) \in Y$ under the function $f$.  See Figure \ref{explanation_of_mapsto}. Two functions $f, g : X \rightarrow Y$ are {\em equal} if $f(x) = g(x)$ for all $x$ in $X$. 
 
 
 
 \begin{figure}[h]
-\[
+	\centering
 	\begin{tikzpicture}
 		\draw (-2, 0) circle (1);
 		\draw (2,0) circle (1);
@@ -2184,7 +2180,6 @@ Recall that a {\em function} (or a {\em map}) $f : X \rightarrow Y$ from a set $
 		\node (b) at (2, -0.5) {$f(x)$};
 		\draw[|->] (a) to[out=-20, in=200] (b);	
 	\end{tikzpicture}
-	\]
 	\caption{\label{explanation_of_mapsto} A function $f : X \rightarrow Y$.}
 \end{figure}
 
@@ -2233,21 +2228,23 @@ Let us check additivity algebraically:
  &= x_1 + x_2
 \end{align*}
 Here is a a graphical version of this proof:
-\[
+tikzalign
+\begin{center}
 		\begin{tikzpicture}[xscale=1.5]
-			\draw[<->] (-1, 0) -- (3, 0);
-			\draw[<->] (0, -1) -- (0, 3);
-			\draw[very thick, red, ->] (0,0) -- node[above left] {$\ve{v}$} (0.5, 1) ;
-			\draw[very thick, red, ->] (0.5,1) -- node[above left] {$\ve{w}$} (1.5, 1.5) ;
-			\draw[dotted] (0.5, 1) -- (0.5, 0);
-			\draw[dotted] (1.5, 1.5) -- (1.5, 0);
-			\draw[very thick, red, ->] (0,0) -- node[below] {$T(\ve{v})$} (0.5, 0) ;
-			\draw[very thick, red, ->] (0.5, 0) -- node[below] {$T(\ve{w})$} (1.5, 0) ;
-			\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
-			\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
-		\end{tikzpicture}
-\]
-
+	\draw[<->] (-1, 0) -- (3, 0);
+	\draw[<->] (0, -1) -- (0, 3);
+	\draw[very thick, red, ->] (0,0) -- node[above left] {$\ve{v}$} (0.5, 1) ;
+	\draw[very thick, red, ->] (0.5,1) -- node[above left] {$\ve{w}$} (1.5, 1.5) ;
+	\draw[dotted] (0.5, 1) -- (0.5, 0);
+	\draw[dotted] (1.5, 1.5) -- (1.5, 0);
+	\draw[very thick, red, ->] (0,0) -- node[below] {$T(\ve{v})$} (0.5, 0) ;
+	\draw[very thick, red, ->] (0.5, 0) -- node[below] {$T(\ve{w})$} (1.5, 0) ;
+	\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
+	\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
+	\end{tikzpicture}
+	
+\end{center}
+	
 
 \begin{exercise} Prove algebraically that $T(k \ve{v}) = k T(\ve{v})$, so that $T$ is a linear map.
 \end{exercise}
@@ -2260,15 +2257,18 @@ R : \mathbb{R}^2 & \rightarrow \mathbb{R}^2 \\
  \ve{v} & \mapsto \mbox{rotation of $\ve{v}$ counterclockwise through angle $\theta$}
 \end{align*}
 is a linear map, by a similar graphical argument as in Example \ref{projection_map_example}. 
-\[
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$\ve{v}$} ;
-			\draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {$R (\ve{v})$};
-			\draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {$\theta$} ;
-		\end{tikzpicture}
-\]
+tikzalign
+\begin{center}
+	\begin{tikzpicture}
+	\draw[<->] (-1, 0) -- (2, 0);
+	\draw[<->] (0, -1) -- (0, 2);
+	\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$\ve{v}$} ;
+	\draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {$R (\ve{v})$};
+	\draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {$\theta$} ;
+	\end{tikzpicture}
+\end{center}
+		
+
 \end{example}
 
 
@@ -2426,23 +2426,26 @@ The point is that we are free to send $\mat{e}_1$ and $\mat{e}_2$ to {\em any fu
 \end{example}
 
 \begin{example}[Rotation map on standard basis] \label{rotation-map-example-complete}Let us compute the action of the `counterclockwise rotation by $\theta$' map $R$ from Example \ref{rotation_as_linear_map} with respect to the standard basis $\ve{e}_1, \ve{e}_2$ of $\mathbb{R}^2$. 
-\[
+	tikzalign
+\begin{align*}
 	\begin{tikzpicture}
-		\draw[<->] (-1, 0) -- (2, 0);
-		\draw[<->] (0, -1) -- (0, 2);
-		\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
-		\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
-		\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};
-	\end{tikzpicture}
-	\qquad
-	\begin{tikzpicture}
-		\draw[<->] (-1, 0) -- (2, 0);
-		\draw[<->] (0, -1) -- (0, 2);
-		\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
-		\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
-		\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;
-	\end{tikzpicture}
-\]
+\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}
+\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;
+\end{tikzpicture}
+\end{align*}
+
+
 From the figure, we have:
 \begin{align*}
  R(\ve{e}_1) &= (\cos \theta, \sin \theta) & R(\ve{e}_2) &= (-\sin \theta, \cos \theta) 
@@ -2511,7 +2514,7 @@ where $M(\ve{p})(x) = x^2 \ve{p}(x)$.
 \begin{exercise} Consider the cross-product linear map $C : \mathbb{R}^3 \rightarrow \mathbb{R}^3$ from Example \ref{cross_prod_as_linear_map} in the case $\ve{w} = (1, 2, 3)$. Compute the action of $C$ with respect to the standard basis of $\mathbb{R}^3$.	
 \end{exercise}
 
-\section{Composition of linear maps}
+\section{Composition of linear maps} \label{Ch3Sec2CompositionOfLinearMaps}
 \begin{definition}
 If $S : U \rightarrow V$ and $T : V \rightarrow W$ are linear maps, then the {\em composition of $T$ with $S$} is the map $T \circ S : U \rightarrow W$ defined by
 \[
@@ -2520,8 +2523,9 @@ If $S : U \rightarrow V$ and $T : V \rightarrow W$ are linear maps, then the {\e
 where $\ve{u}$ is in $U$.
 \end{definition}
 See Figure \ref{composition_of_linear_maps_fig}.
+tikzalign
 \begin{figure}[h]
-\[
+\centering
  	\begin{tikzpicture}[xscale=1.2]
 		\draw (0, 0) circle (1);
 		\draw (-4,0) circle (1);
@@ -2538,7 +2542,6 @@ See Figure \ref{composition_of_linear_maps_fig}.
 		\draw[|->] (u) to[out=170, in=10] (v);
 		\draw[|->] (v) to[out=170, in=10] (w);			
 	\end{tikzpicture}
-\]
 \caption{ \label{composition_of_linear_maps_fig} Composition of linear maps.}
 \end{figure}
 
@@ -2618,7 +2621,7 @@ Check algebraically that $R_\phi \circ R_\theta = R_{\phi + \theta}$ by computin
 \end{exercise}
 
 
-\section{Isomorphisms of vector spaces}
+\section{Isomorphisms of vector spaces} \label{Ch3Sec3Isomorphisms}
 Suppose you have two sets, 
 \[
 A = \{ \mbox{bird}, \mbox{eye}, \mbox{person} \} \quad \mbox{and} \quad  B = \left\{ \ba \includegraphics[width=1em]{bird.pdf} \ea , \ba \includegraphics[width=1em]{eye.pdf} \ea, \ba \includegraphics[width=1em]{person.pdf} \ea \right\}.
@@ -2826,7 +2829,7 @@ If they are, construct an explicit isomorphism between them. If not, prove that 
 
 
 
-\section{Linear maps and matrices}
+\section{Linear maps and matrices} \label{Ch3Sec4LinearMapsMatrices}
 
 \begin{definition} \label{matrix_of_linear_map_defn} Let $T : V \rightarrow W$ be a linear map from a vector space $V$ to a vector space $W$. Let $\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_m \bclose$ be a basis for $V$ and $\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose$ be a basis for $W$. The {\em matrix of $T$ with respect to the bases $\basis{B}$ and $\basis{C}$} is defined as the $n \times m$ matrix whose columns are the coordinate vectors of $T(\ve{b}_i)$ with respect to the basis $\basis{C}$:
 \[
@@ -2867,12 +2870,12 @@ Then,
 \end{example}
 
 We can interpret Theorem \ref{lin-map-in-matrix-theorem} in a more abstract way as follows. We have the following diagram of linear maps of vector spaces:
-\[
-\begin{tikzpicture}[yscale=0.8]
+\begin{center}
+	\begin{tikzpicture}[yscale=0.8]
 	\draw (0, 0) circle (1);
 	\draw (6,0) circle (1);
-%	\draw (0, -4) circle (1);
-%	\draw (4, -4) circle (1);
+	%	\draw (0, -4) circle (1);
+	%	\draw (4, -4) circle (1);
 	\draw [<->] (-1, -6) -- (1, -6);
 	\draw [<->] (0, -5) -- (0, -7);
 	\draw [<->] (5, -6) -- (7, -6);
@@ -2886,8 +2889,9 @@ We can interpret Theorem \ref{lin-map-in-matrix-theorem} in a more abstract way 
 	\node at (7, 1) {$W$};
 	\node at (1, -5) {$\Col_m$};
 	\node at (7, -5) {$\Col_n$};	
-\end{tikzpicture}
-\]
+	\end{tikzpicture}
+\end{center}
+
 The map at the top is the linear map $T : V \rightarrow W$. The map on the left from $V$ to $\Col_m$ is the coordinate vector map $[ \cdot ]_\basis{B}$ associated to the basis $\basis{B}$. Its inverse map $\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V$ is also drawn. The map on the right is the coordinate vector map $[ \cdot]_\basis{C}$ from $W$ to $\Col_n$ associated to the basis $C$. The dotted arrow on the bottom is the composite map, and can be computed explicitly as follows. 
 \begin{lemma} The composite map
 \[
@@ -3072,7 +3076,7 @@ and using the following bases of $\Mat_{2,2}$:
 
 
 
-\section{Kernel and range of a linear map}
+\section{Kernel and range of a linear map} \label{Ch3Sec5KernelRange}
 \begin{definition} Let $T : V \rightarrow W$ be a linear map between vector spaces $V$ and $W$. The {\em kernel} of $T$, written $\Ker(T)$, is the set of all vectors $\ve{v} \in V$ such that are mapped to $\ve{0}_W$ by $T$. That is,
 \[
 \Ker(T) := \{ \ve{v} \in V : T(\ve{v}) = \ve{0}_W \}.
@@ -3091,7 +3095,6 @@ See Figure \ref{ker_and_im_fig} for a schematic representation.
 
 \begin{figure} 
 \begin{minipage}{0.5\linewidth}
-\[
  \begin{tikzpicture}[scale=1.1]
  \draw (0,0) circle (1);
  \draw (0,0) circle (0.3);
@@ -3104,11 +3107,9 @@ See Figure \ref{ker_and_im_fig} for a schematic representation.
  \node at (3.4, 0) {$\ve{0}_W$};
  \node at (0, -0.5) {$\Ker(T)$};
  \end{tikzpicture}
-\]
 \subcaption{Kernel of $T$}
 \end{minipage}
 \begin{minipage}{0.5\linewidth}
-\[
  \begin{tikzpicture}[scale=1.1]
  \draw (0,0) circle (1);
  \draw (3,0) circle (0.3);
@@ -3119,7 +3120,6 @@ See Figure \ref{ker_and_im_fig} for a schematic representation.
  \draw (0.15, -0.987) -- (3.03,-0.3);
  \node at (3, -0.5) {$\Im(T)$};
  \end{tikzpicture}
-\]
 \subcaption{Image of $T$}
 \end{minipage}
 \caption{\label{ker_and_im_fig}}
@@ -3206,27 +3206,32 @@ I claim that the {\em image} of $C$ is the subspace of {\em all} vectors perpend
 \begin{equation} \label{image-of-C} 
  \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}.
 \end{equation}
-If you believe me, then the picture is as follows:
-\[
-\begin{tikzpicture}
+If you believe me, then the picture is as follows:\\
+tikzalign
+\begin{center}
+	\begin{tikzpicture}
 	\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
 	\draw (1.5, 1) -- (1.5,3.5) node[right] {$\Ker{C}$};
 	\draw (1.5, -0.1) -- (1.5, -2);
 	\node at (3.3, 1) {$\Im(C)$};	
 	\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
-\end{tikzpicture}
-\]
+	\end{tikzpicture}
+\end{center}
+
 Let me prove equation \eqref{image-of-C}. By definition, the image of $C$ is the subspace of $\mathbb{R}^3$ consisting of all vectors $\ve{w}$ of the form $\ve{w} = \ve{a} \times \ve{v}$ for some $\ve{v} \in \mathbb{R}^3$. This implies that $\ve{w}$ is perpendicular to $\ve{a}$. This was the `easy' part. The `harder' part is to show the converse. That is, we need to show that if $\ve{u}$ is perpendicular to $\ve{a}$, then $\ve{u}$ is in the image of $C$, i.e. there exists a vector $\ve{v}$ such that $C(\ve{v}) = \ve{u}$.
 
-Indeed, we can choose $\ve{v}$ to be the vector obtained by rotating $\ve{u}$ by 90 degrees clockwise in the plane $I$, and scaling it appropriately:
-\[
+Indeed, we can choose $\ve{v}$ to be the vector obtained by rotating $\ve{u}$ by 90 degrees clockwise in the plane $I$, and scaling it appropriately:\\
+tikzalign
+\begin{center}
 \begin{tikzpicture}
-	\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-	\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
-	\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {$\ve{u}$};
-	\draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {$\ve{v}$};
+\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
+\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {$\ve{u}$};
+\draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {$\ve{v}$};
 \end{tikzpicture}
-\]
+\end{center}
+
+
 In terms of a formula, we have
 \[
  \ve{v} = \frac{|\ve{u}|}{|\ve{a}|} \ve{u} \times \ve{a} .
@@ -3445,7 +3450,7 @@ on a finite-dimensional vector space $V$.
 \begin{exercise} Using the Rank-Nullity theorem, give a different proof of the fact that the image of the map $C$ in Example \ref{cross-product-example} is $\{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}$.
 \end{exercise}
 
-\section{Injective and surjective linear maps}
+\section{Injective and surjective linear maps} \label{Ch3Sec6InjectiveSurjective}
 
 \begin{definition} A function $f : X \rightarrow Y$ from a set $X$ to a set $Y$ is called {\em one-to-one} (or {\em injective}) if whenever $f(x) = f(x')$ for some $x, x' \in X$ it necessarily holds that $x = x'$. The function $f$ is called {\em onto} (or {\em surjective}) if for all $y \in Y$ there exists an $x \in X$ such that $f(x) = y$.
 \end{definition}
@@ -3546,8 +3551,8 @@ Hence $S$ is linear, which completes the proof.
 \end{proof}
 
 
-\chapter{Eigenvalues and eigenvectors}
-\section{Eigenvalues} \label{eigenvalue-section}
+\chapter{Eigenvalues and eigenvectors} \label{Ch4EigenvaluesEigenvectors}
+\section{Eigenvalues} \label{Ch4Sec1Eigenvalues}
 
 \begin{definition} Let $T : V \rightarrow V$ be a linear operator on a vector space $V$. We say that $\lambda \in \mathbb{R}$ is an {\em eigenvalue of $T$} if there exists a nonzero vector $\ve{v} \in V$ such that $T(\ve{v}) = \lambda \ve{v}$.
 \end{definition}
@@ -3745,7 +3750,7 @@ which has no real roots. So $A$ has no eigenvalues. This can be confirmed visual
 \end{example}
 
 
-\section{Eigenvectors}
+\section{Eigenvectors} \label{Ch4Sec2Eigenvectors}
 In the previous section we focused on eigenvalues. Now we turn our focus to eigenvectors.
 
 \begin{definition} An {\em eigenvector} of a linear operator $T : V \rightarrow V$ is a nonzero vector $\ve{v} \in V$ such that $T(\ve{v}) = \lambda \ve{v}$ for some scalar $\lambda \in \mathbb{R}$ (the associated eigenvalue). 
@@ -4108,7 +4113,7 @@ where $q_4(x) = 9 + 6x + 1$.
 \end{exercise}
 
 
-\section{Diagonalizing matrices} \label{last-sec-of-W214}
+\section{Diagonalizing matrices} \label{Ch4Sec3DiagonalizingMatricies}
 
 \begin{definition} We say that an $n \times n$ matrix $\mat{A}$ is {\em diagonalizable} if there exists an invertible $n \times n$ matrix $\mat{P}$ such that $\mat{P}^{-1} \mat{A} \mat{P}$ is a diagonal matrix.
 \end{definition}
@@ -4136,7 +4141,7 @@ which is indeed a diagonal matrix. More on this in the second semester! For now 
 \noappendicestocpagenum
 \addappheadtotoc
 
-\chapter{Reminder about matrices} \label{reminder-matrices-chap}
+\chapter{Reminder about matrices} \label{AppAReminderAboutMatrices}
 Let us recall a few things about matrices, and set up our notation. 
 
 An {\em $n \times m$ matrix} $\mat{A}$ is just a rectangular array of numbers, with $n$ rows and $m$ columns:
@@ -4188,11 +4193,12 @@ which have a $1$ in the $i$th row and $j$th column and zeroes everywhere else.
 \begin{ramanujansays} Usually $\mat{A}$ is a matrix, and $\mat{A}_{ij}$ is the element of the matrix at position $(i,j)$. But now $\mat{E}_{ij}$ is a matrix in its own right! Its element at position $(k,l)$ will be written as $(\mat{E}_{ij})_{kl}$. I hope you don't find this too confusing. In fact, we can write down an elegant formula for the elements of $\mat{E}_{ij}$ using the Kronecker delta symbol:
 \begin{equation} \label{kronecker_for_matrix_basis-2}
  (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
-\ee
+\end{equation}
+
+\end{ramanujansays}
+movebackintoramanujansays
 \begin{exercise} Check that \eqref{kronecker_for_matrix_basis-2} is indeed the correct formula for the matrix elements of $\mat{E}_{ij}$.
 \end{exercise}
-\end{ramanujansays}
-
 \begin{example} We will write $\Col_n$ for the vector space $\Mat_{n,1}$ of $n$-dimensional {\em column vectors}, and we will write the standard basis vectors ${\mathbf \mat{E}}_{i1}$ of $\Col_n$ more simply as $\col{e}_i$:
 \[
  \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0 \end{array} \right], \, 
@@ -4261,7 +4267,7 @@ The {\em transpose} of an $n \times m$ matrix $\mat{A}$ is the $m \times n$ matr
  (\mat{A}^T)_{ij} := \mat{A}_{ji}.
 \]
 
-\chapter{Hypersurfaces}
+\chapter{Hypersurfaces} \label{AppBHypersurfaces}
 \begin{definition} Let $f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}$ be a function. The {\em zero set} of $f$ is the subset $M \subset \mathbb{R}^{n+1}$ given by
 \[
  M := \{ \ve{x} \in \mathbb{R}^{n+1} : f(\ve{x}) = 0 \} .
@@ -4284,15 +4290,17 @@ Draw a picture of the zero set $M$ of $f$, and show that it is a hypersurface.
  M = \{ (x,y) \in \mathbb{R}^2 : y^2 - x^2 - 1 = 0 \}
 \]
 which is a hyperbola:
-\[
-\begin{tikzpicture}[domain=-1.2:1.2]
- \draw[<->] (-2,0) -- (2,0) node[below] {$x$};
- \draw[<->] (0, -2) -- (0,2) node[right] {$y$};
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-  %\draw[color=red, thick] plot[id=q]  (\x, {(\x-2)*\x*\x*(\x-1)});
-\end{tikzpicture}
-\]
+tikzalign
+\begin{center}
+	\begin{tikzpicture}[domain=-1.2:1.2]
+	\draw[<->] (-2,0) -- (2,0) node[below] {$x$};
+	\draw[<->] (0, -2) -- (0,2) node[right] {$y$};
+	\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+	\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+	%\draw[color=red, thick] plot[id=q]  (\x, {(\x-2)*\x*\x*(\x-1)});
+	\end{tikzpicture}
+\end{center}
+
 To show that $M$ is a hypersurface, we first compute the gradient of $f$ at a general point $\ve{r} = (x,y) \in \mathbb{R}^2$:
 \[
  \nabla_\ve{r} f = (2y, -2x) 
@@ -4316,22 +4324,23 @@ The level set of $f$ is
 \[
   M = \{ (x,y,z) \in \mathbb{R}^3 : x^2 + y^2 + z^2 - 1 = 0 \}
 \]
-This is called the {\em 2-sphere}, and is pictured below:
-\[
+This is called the {\em 2-sphere}, and is pictured below: tikzalign
+\begin{center}
 \begin{tikzpicture}
-  \shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
-  \draw (0,0) circle (2cm);
-  \draw (-2,0) arc (180:360:2 and 0.6);
-  \draw[dashed] (2,0) arc (0:180:2 and 0.6);
-  \fill[fill=black] (0,0) circle (1pt);
-	\draw[dashed] (0,0) -- (2, 0);
-	\draw[->] (2,0) -- node[pos=1.4] {$y$} (2.5, 0);	
-	\draw[dashed] (0,0) --  (0, 2);
-	\draw[->] (0,2) -- node[pos=1.4] {$z$} (0, 2.5);
-	\draw[dashed] (0,0) -- (-0.43, -0.43*4/3);
-	\draw[->] (-0.43, -0.43*4/3) -- node[pos=1.2] {$x$} (-1.5, -2);
-\end{tikzpicture}
-\]
+\shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
+\draw (0,0) circle (2cm);
+\draw (-2,0) arc (180:360:2 and 0.6);
+\draw[dashed] (2,0) arc (0:180:2 and 0.6);
+\fill[fill=black] (0,0) circle (1pt);
+\draw[dashed] (0,0) -- (2, 0);
+\draw[->] (2,0) -- node[pos=1.4] {$y$} (2.5, 0);	
+\draw[dashed] (0,0) --  (0, 2);
+\draw[->] (0,2) -- node[pos=1.4] {$z$} (0, 2.5);
+\draw[dashed] (0,0) -- (-0.43, -0.43*4/3);
+\draw[->] (-0.43, -0.43*4/3) -- node[pos=1.2] {$x$} (-1.5, -2);
+\end{tikzpicture}	
+\end{center}
+
 To show it is a hypersurface, we first compute $\nabla f$ at a general point $\ve{r} = (x,y,z) \in \mathbb{R}^3$:
 \[
  \nabla_\ve{r} f = (2x, 2y, 2z)
@@ -4355,15 +4364,17 @@ The zero set of $f$ is
 \[
   M = \{ (x,y,z) \in \mathbb{R}^3 : (2-\sqrt{x^2 + y^2})^2 + z^2 - 1 = 0 \}
 \]
-This is a {\em torus}, and is pictured below:
-\[
-\begin{tikzpicture}
-    \node at (0,0) {\includegraphics[width=0.45\textwidth]{torus.pdf}};
+This is a {\em torus}, and is pictured below: tikzalign
+\begin{center}
+	\begin{tikzpicture}
+	\node at (0,0) {\includegraphics[width=0.45\textwidth]{torus.pdf}};
 	\draw[->, very thick] (2.5,0) -- node[pos=1.4] {$y$} (3.2, 0);	
 	\draw[->, very thick] (0,0) -- node[pos=1.1] {$z$} (0, 2.5);
 	\draw[->, very thick] (-0.9, -0.9*4/3) -- node[pos=1.2] {$x$} (-1.5, -2);
-\end{tikzpicture}
-\] 
+	\end{tikzpicture}
+\end{center}
+
+
 To show $M$ is a hypersurface, we first compute $\nabla f$ at a general point $\ve{r} = (x,y,z) \in \mathbb{R}^3$:
 \[
  \nabla_\ve{r} f = \left( \frac{2x(2 - \sqrt{x^2 + y^2)}}{\sqrt{x^2 + y^2}}, \, \frac{2y(2 - \sqrt{x^2 + y^2)}}{\sqrt{x^2 + y^2}}, \, 2z \right)
@@ -4411,27 +4422,28 @@ Thus
  T_\ve{p} M &= \{ (v_1, v_2) \in \mathbb{R}^2 : \nabla_\ve{p} f \dotp (v_1, v_2) = 0 \}  \\
   &= \{ (v_1, v_2) \in \mathbb{R}^2 : 2 \sqrt{2} v_1 - 2v_2 = 0  \}
 \end{align*}
-A basis for $T_\ve{p} M$ is $\ve{u} = (1, \frac{1}{\sqrt{2}})$. The picture is:
-\[
+A basis for $T_\ve{p} M$ is $\ve{u} = (1, \frac{1}{\sqrt{2}})$. The picture is: tikzalign
+\begin{center}
 \begin{tikzpicture}[domain=-1.4:1.4]
- \draw[<->] (-2,0) -- (2,0) node[below] {$x$};
- \draw[<->] (0, -2) -- (0,2) node[right] {$y$};
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-  \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))}); 
-  \draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {$\ve{p}$};
-  \node at (-1.5, 1.4) {$M$};
-  \draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {$\ve{u}$};
+\draw[<->] (-2,0) -- (2,0) node[below] {$x$};
+\draw[<->] (0, -2) -- (0,2) node[right] {$y$};
+\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+\draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))}); 
+\draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {$\ve{p}$};
+\node at (-1.5, 1.4) {$M$};
+\draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {$\ve{u}$};
 \end{tikzpicture}
 \qquad
 \begin{tikzpicture}[domain=-1.4:1.4]
- \draw[<->] (-2,0) -- (2,0) node[below] {$v_1$};
- \draw[<->] (0, -2) -- (0,2) node[right] {$v_2$};
-  \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});   
-  \node[red] at (2, 1.8) {$T_\ve{p} M$};
-  \draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {$\ve{u}$};
+\draw[<->] (-2,0) -- (2,0) node[below] {$v_1$};
+\draw[<->] (0, -2) -- (0,2) node[right] {$v_2$};
+\draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});   
+\node[red] at (2, 1.8) {$T_\ve{p} M$};
+\draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {$\ve{u}$};
 \end{tikzpicture}
-\]
+\end{center}
+
 \begin{ramanujansays} The red line in the first picture, drawn for the sake of illustration, is the tangent space shifted so that it passes through $\ve{p}$. The actual tangent space $T_\ve{p} M$ goes through the origin as in the second picture.
 \end{ramanujansays}
 
