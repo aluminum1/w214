@@ -1,0 +1,29 @@
+
+
+<section>
+  <title>Further exercises for \thesection</title>
+  <exercise>
+    <statement>
+      <p>
+        Determine the eigenvalues and eigenspaces of the linear operator
+        <md>
+          <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
+          <mrow>T(p)(x) \amp  := \frac{d^2}{dx^2} p(x^2 + x - 2)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Determine the eigenvalues and eigenspaces of the linear operator
+        <md>
+          <mrow>T : \Poly_2 \amp  \rightarrow \Poly_2</mrow>
+          <mrow>T(p)(x) \amp  := x^2 p\left(\frac{1}{x}\right)</mrow>
+        </md>
+      </p>
+    </statement>
+  </exercise>
+</section>
+

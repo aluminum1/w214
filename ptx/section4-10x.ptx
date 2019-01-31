@@ -1,0 +1,151 @@
+
+
+<section>
+  <title>Further exercises for \thesection</title>
+  <exercise>
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space,
+        and let <m>\ve{a} \neq \ve{0}</m> be a fixed vector.
+        Let Define the map <m>T</m> as follows:
+        <md>
+          <mrow>T : V \amp \rightarrow V</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{a} + \ve{v}</mrow>
+        </md>
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Is <m>T</m> a linear map? (Yes or no)
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Prove your assertion from (a).
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the map <m>T : \mathbb{R}^3 \rightarrow \mathbb{R}^3</m> given by <m>T\left( (x,y,z) \right) = (z,x,y)</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Is <m>T</m> a linear map? (Yes or no)
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Prove your assertion from (a).
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Define the <sq>multiplication by <m>x^2</m></sq> map
+        <md>
+          <mrow>M : \Poly_n \amp  \rightarrow \Poly_{n+2}</mrow>
+          <mrow>\ve{p} \amp  \mapsto M(\ve{p})</mrow>
+        </md>
+        where <m>M(\ve{p})(x) = x^2 \ve{p}(x)</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Why does <m>M</m> map from <m>\Poly_n</m> to <m>\Poly_{n+2}</m>?
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Prove that <m>M</m> is linear.
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Compute the action of <m>M</m> in the standard basis for <m>\Poly_3</m>,
+              as in <xref ref="shift_example">Example</xref>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Define the <sq>integrate over the interval <m>[-1,1]</m></sq> map
+        <md>
+          <mrow>I : \Poly_n \amp  \rightarrow \mathbb{R}</mrow>
+          <mrow>\ve{p} \amp  \mapsto \int_{-1}^{1} \ve{p}(x) \, dx</mrow>
+        </md>
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Prove that <m>I</m> is linear.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Compute the action of <m>I</m> with respect to the standard basis <m>\ve{p}_0, \ldots, \ve{p}_3</m> for <m>\Poly_3</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Compute the action of <m>I</m> with respect to the basis
+              <m>\ve{q}_0, \ldots, \ve{q}_3</m> for <m>\Poly_3</m> from <xref ref="new_basis_for_poly_3">Example</xref>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Compute the action of the differentiation map
+        <m>D : \Poly_4 \rightarrow \Poly_3</m> from <xref ref="diff_of_poly">Example</xref>
+        with respect to the standard bases of these two vector spaces.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the cross-product linear map
+        <m>C : \mathbb{R}^3 \rightarrow \mathbb{R}^3</m> from <xref ref="cross_prod_as_linear_map">Example</xref>
+        in the case <m>\ve{w} = (1, 2, 3)</m>.
+        Compute the action of <m>C</m> with respect to the standard basis of <m>\mathbb{R}^3</m>.
+      </p>
+    </statement>
+  </exercise>
+</section>
+

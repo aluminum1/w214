@@ -1,0 +1,106 @@
+
+
+<section>
+  <title>Further exercises for \thesection</title>
+  <exercise>
+    <statement>
+      <p>
+        Show that the set
+        <me>
+          V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
+        </me>
+        is a subspace of <m>\mathbb{R}^4</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Show that the set
+        <me>
+          V := \{ \mbox{polynomials of the form }  \ve{p}(x) = ax^3 + bx^2 - cx + a, \, a,b,c \in \mathbb{R}\}
+        </me>
+        is a subspace of <m>\Poly_3</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>b \in \mathbb{R}</m>.
+        Prove that
+        <me>
+          V := \{ (x_1, \, x_2, \, x_3) \in \mathbb{R}^3 : 2x_1 - 3x_2 + 5x_3 = b \}
+        </me>
+        is a subspace of <m>\mathbb{R}^3</m> if and only if <m>b=0</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the set
+        <me>
+          V := \{ \mathbf{f} \in \Diff((-1, 1)) : f'(0) = 2 \}
+        </me>
+      </p>
+
+      <p>
+        Is <m>V</m> a subspace of <m>\Diff((-1,1))</m>?
+        If you think it is, <em>prove</em> that it is.
+        If you think it is not, <em>prove</em> that it is not!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Consider the set
+        <me>
+          V := \{ (x_1, \, x_2, \, x_3, \, \ldots) \in \mathbb{R}^\infty : \lim_{n \rightarrow \infty} x_n = 0 \}
+        </me>
+      </p>
+
+      <p>
+        Is <m>V</m> a subspace of <m>\mathbb{R}^\infty</m>?
+        If you think it is, <em>prove</em> that it is.
+        If you think it is not, <em>prove</em> that it is not!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Is <m>\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq 0 \}</m> a subspace of <m>\mathbb{R}</m>?
+        If you think it is, <em>prove</em> that it is.
+        If you think it is not, <em>prove</em> that it is not!
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a nonempty subset <m>U</m> of
+        <m>\mathbb{R}^2</m> which is closed under addition and under taking additive inverses (i.e. if <m>\ve{u}</m> is in <m>U</m> then <m>-\ve{u}</m> is in <m>V</m>),
+        but <m>U</m> is not a subspace of <m>\mathbb{R}^2</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Give an example of a nonempty subset <m>V</m> of
+        <m>\mathbb{R}^2</m> which is closed under scalar multiplication,
+        but <m>V</m> is not a subspace of <m>\mathbb{R}^2</m>.
+      </p>
+    </statement>
+  </exercise>
+</section>
+
