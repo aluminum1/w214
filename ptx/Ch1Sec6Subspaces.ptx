@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch1Sec6Subspaces">
   <title>Subspaces</title>
   <p>
     The notion of a subspace will allow us to quickly establish many more examples of vector spaces.

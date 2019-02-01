@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch3Sec2CompositionOfLinearMaps">
   <title>Composition of linear maps</title>
   <definition>
     <statement>
@@ -18,13 +18,12 @@
 
   <p>
     See <xref ref="composition_of_linear_maps_fig">Figure</xref>.
+    tikzalign
   </p>
 
   <figure xml:id="composition_of_linear_maps_fig">
     <caption>Composition of linear maps.</caption>
-    <me>
-
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[xscale=1.2]
@@ -43,9 +42,8 @@
     \draw[|->] (u) to[out=170, in=10] (v);
     \draw[|->] (v) to[out=170, in=10] (w);\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
 
-    </me>
   </figure>
 
   <assemblage>

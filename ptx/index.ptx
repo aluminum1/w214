@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
   <docinfo>
 
 <macros>
@@ -31,7 +32,6 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Nullity}{Nullity}
 \DeclareMathOperator{\Rank}{Rank}
-\DeclareMathOperator{\Im}{Im}
 </macros>
 
 <latex-image-preamble>
@@ -53,30 +53,36 @@
   <book>
     <title>Linear Algebra W214</title>
     <frontmatter>
+
       <titlepage>
+
         <author>
           <personname>\Large Bruce Bartlett</personname>
         </author>
+
       </titlepage>
+
     </frontmatter>
 
-    <xi:include href="./chapter1.ptx" />
+    <xi:include href="./Ch0NoteForStudent.ptx" />
 
-    <xi:include href="./chapter2.ptx" />
+    <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
 
-    <xi:include href="./chapter3.ptx" />
+    <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
 
-    <xi:include href="./chapter4.ptx" />
+    <xi:include href="./Ch3LinearMaps.ptx" />
 
-    <xi:include href="./chapter5.ptx" />
+    <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
 
-    <xi:include href="./reminder-matrices-chap.ptx" />
+    <xi:include href="./AppAReminderAboutMatrices.ptx" />
 
-    <xi:include href="./chapter7.ptx" />
+    <xi:include href="./AppBHypersurfaces.ptx" />
 
     <backmatter>
       <xi:include href="./bibliography.ptx" />
     </backmatter>
+
   </book>
+
 </mathbook>
 

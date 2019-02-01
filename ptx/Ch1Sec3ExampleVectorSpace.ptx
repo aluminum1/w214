@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch1Sec3ExampleVectorSpace">
   <title>First example of a vector space</title>
   <introduction>
     <p>
@@ -25,10 +25,6 @@
       <men xml:id="def_of_b">
         B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} 
       </men>.
-    </p>
-
-    <p>
-      \end{example}
     </p>
   </subsection>
 
@@ -226,6 +222,5 @@
       \end{example}
     </p>
   </subsection>
-
 </section>
 

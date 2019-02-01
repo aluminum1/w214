@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch3Sec1DefinitionsExamples">
   <title>Definition and examples</title>
   <p>
     Recall that a <em>function</em>
@@ -15,9 +15,7 @@
 
   <figure xml:id="explanation_of_mapsto">
     <caption>A function <m>f : X \rightarrow Y</m>.</caption>
-    <me>
-
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw (-2, 0) circle (1);
@@ -29,9 +27,8 @@
     \node (b) at (2, -0.5) {\(f(x)\)};
     \draw[|->] (a) to[out=-20, in=200] (b);\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
 
-    </me>
   </figure>
 
   <definition>
@@ -115,27 +112,25 @@
 
     <p>
       Here is a a graphical version of this proof:
-      <me>
+      tikzalign
+    </p>
 
-        <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[xscale=1.5]
-      \draw[<->] (-1, 0) -- (3, 0);
-      \draw[<->] (0, -1) -- (0, 3);
-      \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
-      \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
-      \draw[dotted] (0.5, 1) -- (0.5, 0);
-      \draw[dotted] (1.5, 1.5) -- (1.5, 0);
-      \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
-      \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
-      \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
-      \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
+  \draw[<->] (-1, 0) -- (3, 0);
+  \draw[<->] (0, -1) -- (0, 3);
+  \draw[very thick, red, ->] (0,0) -- node[above left] {\(\ve{v}\)} (0.5, 1) ;
+  \draw[very thick, red, ->] (0.5,1) -- node[above left] {\(\ve{w}\)} (1.5, 1.5) ;
+  \draw[dotted] (0.5, 1) -- (0.5, 0);
+  \draw[dotted] (1.5, 1.5) -- (1.5, 0);
+  \draw[very thick, red, ->] (0,0) -- node[below] {\(T(\ve{v})\)} (0.5, 0) ;
+  \draw[very thick, red, ->] (0.5, 0) -- node[below] {\(T(\ve{w})\)} (1.5, 0) ;
+  \node[red] at (2.3, 0.3) {\(T(\ve{v} + \ve{w})\)};
+  \node[red] at (2.3, -0.3) {\(T(\ve{v}) + T(\ve{w})\)};\end{tikzpicture}]]>
 </latex-image>
-        </image>
-
-      </me>
-    </p>
+    </image>
 
     <exercise>
       <statement>
@@ -161,21 +156,20 @@
         </md>
         is a linear map,
         by a similar graphical argument as in <xref ref="projection_map_example">Example</xref>.
-        <me>
+        tikzalign
+      </p>
 
-          <image>
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-      \draw[<->] (0, -1) -- (0, 2);
-      \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
-      \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
-      \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
+  \draw[<->] (0, -1) -- (0, 2);
+  \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(\ve{v}\)} ;
+  \draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {\(R (\ve{v})\)};
+  \draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt, right] {\(\theta\)} ;\end{tikzpicture}]]>
 </latex-image>
-          </image>
+      </image>
 
-        </me>
-      </p>
     </statement>
   </example>
 
@@ -509,16 +503,16 @@
         Let us compute the action of the <sq>counterclockwise rotation by <m>\theta</m></sq> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
         with respect to the standard basis
         <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
-        <me>
-
-          <image>
+        tikzalign
+        <md>
+          <mrow><image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-    \draw[<->] (0, -1) -- (0, 2);
-    \draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {\(\ve{e}_1\)};
-    \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {\(R(\ve{e}_1)\)};
-    \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {\(\theta\)};\end{tikzpicture}]]>
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
 </latex-image>
           </image>
 
@@ -528,14 +522,13 @@
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-    \draw[<->] (0, -1) -- (0, 2);
-    \draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {\(\ve{e}_2\)};
-    \draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {\(R(\ve{e}_2)\)};
-    \draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {\(\theta\)} ;\end{tikzpicture}]]>
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
 </latex-image>
-          </image>
-
-        </me>
+          </image></mrow>
+        </md>
       </p>
 
       <p>

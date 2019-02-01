@@ -1,6 +1,6 @@
 
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppBHypersurfaces">
   <title>Hypersurfaces</title>
   <definition>
     <statement>
@@ -51,21 +51,19 @@
           M = \{ (x,y) \in \mathbb{R}^2 : y^2 - x^2 - 1 = 0 \}
         </me>
         which is a hyperbola:
-        <me>
+        tikzalign
+      </p>
 
-          <image>
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[domain=-1.2:1.2]
- \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
- \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
+  \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
+  \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
   \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
   \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});\end{tikzpicture}]]>
 </latex-image>
-          </image>
-
-        </me>
-      </p>
+      </image>
 
       <p>
         To show that <m>M</m> is a hypersurface,
@@ -118,28 +116,26 @@
       </p>
 
       <p>
-        This is called the <em>2-sphere</em>, and is pictured below:
-        <me>
+        This is called the <em>2-sphere</em>,
+        and is pictured below: tikzalign
+      </p>
 
-          <image>
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\shade[ball color = gray!40, opacity = 0.4] (0,0) circle (2cm);
-  \draw (0,0) circle (2cm);
-  \draw (-2,0) arc (180:360:2 and 0.6);
-  \draw[dashed] (2,0) arc (0:180:2 and 0.6);
-  \fill[fill=black] (0,0) circle (1pt);
-  \draw[dashed] (0,0) -- (2, 0);
-  \draw[->] (2,0) -- node[pos=1.4] {\(y\)} (2.5, 0);  
-  \draw[dashed] (0,0) --  (0, 2);
-  \draw[->] (0,2) -- node[pos=1.4] {\(z\)} (0, 2.5);
-  \draw[dashed] (0,0) -- (-0.43, -0.43*4/3);
-  \draw[->] (-0.43, -0.43*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
+\draw (0,0) circle (2cm);
+\draw (-2,0) arc (180:360:2 and 0.6);
+\draw[dashed] (2,0) arc (0:180:2 and 0.6);
+\fill[fill=black] (0,0) circle (1pt);
+\draw[dashed] (0,0) -- (2, 0);
+\draw[->] (2,0) -- node[pos=1.4] {\(y\)} (2.5, 0);  
+\draw[dashed] (0,0) --  (0, 2);
+\draw[->] (0,2) -- node[pos=1.4] {\(z\)} (0, 2.5);
+\draw[dashed] (0,0) -- (-0.43, -0.43*4/3);
+\draw[->] (-0.43, -0.43*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
 </latex-image>
-          </image>
-
-        </me>
-      </p>
+      </image>
 
       <p>
         To show it is a hypersurface,
@@ -184,10 +180,10 @@
       </p>
 
       <p>
-        This is a <em>torus</em>, and is pictured below:
-        <me>
+        This is a <em>torus</em>, and is pictured below: tikzalign
+      </p>
 
-          <image>
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\node at (0,0) {\includegraphics[width=0.45\textwidth]{torus.pdf}};
@@ -195,10 +191,7 @@
   \draw[->, very thick] (0,0) -- node[pos=1.1] {\(z\)} (0, 2.5);
   \draw[->, very thick] (-0.9, -0.9*4/3) -- node[pos=1.2] {\(x\)} (-1.5, -2);\end{tikzpicture}]]>
 </latex-image>
-          </image>
-
-        </me>
-      </p>
+      </image>
 
       <p>
         To show <m>M</m> is a hypersurface,
@@ -299,40 +292,35 @@
 
       <p>
         A basis for <m>T_\ve{p} M</m> is <m>\ve{u} = (1, \frac{1}{\sqrt{2}})</m>.
-        The picture is:
-        <me>
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
- \draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
- \draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-  \draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-  \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))}); 
-  \draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {\(\ve{p}\)};
-  \node at (-1.5, 1.4) {\(M\)};
-  \draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          \qquad
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
- \draw[<->] (-2,0) -- (2,0) node[below] {\(v_1\)};
- \draw[<->] (0, -2) -- (0,2) node[right] {\(v_2\)};
-  \draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});   
-  \node[red] at (2, 1.8) {\(T_\ve{p} M\)};
-  \draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-        </me>
+        The picture is: tikzalign
       </p>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
+\draw[<->] (-2,0) -- (2,0) node[below] {\(x\)};
+\draw[<->] (0, -2) -- (0,2) node[right] {\(y\)};
+\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+\draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x) + (sqrt(2)-1/sqrt(2))}); 
+\draw[very thick, fill] (1, 1.414) circle (1pt) node[below right] {\(\ve{p}\)};
+\node at (-1.5, 1.4) {\(M\)};
+\draw[line width=0.5mm, blue, ->] (1, 1.414) -- (1.5, 1.414 + 0.5*0.707) node[below right] {\(\ve{u}\)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[domain=-1.4:1.4]
+\draw[<->] (-2,0) -- (2,0) node[below] {\(v_1\)};
+\draw[<->] (0, -2) -- (0,2) node[right] {\(v_2\)};
+\draw[very thick, red] plot[id=p] ({1.5*\x}, {1/sqrt(2)*(1.5*\x)});   
+\node[red] at (2, 1.8) {\(T_\ve{p} M\)};
+\draw[line width=0.5mm, blue, ->] (0,0) -- (0.5, 0.5*0.707) node[right, yshift=-2pt] {\(\ve{u}\)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
 
       <assemblage>
         <p>

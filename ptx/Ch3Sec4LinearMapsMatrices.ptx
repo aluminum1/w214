@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch3Sec4LinearMapsMatrices">
   <title>Linear maps and matrices</title>
   <definition xml:id="matrix_of_linear_map_defn">
     <statement>
@@ -100,9 +100,9 @@
     We can interpret <xref ref="lin-map-in-matrix-theorem">Theorem</xref>
     in a more abstract way as follows.
     We have the following diagram of linear maps of vector spaces:
-    <me>
+  </p>
 
-      <image>
+  <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[yscale=0.8]
@@ -122,10 +122,7 @@
   \node at (1, -5) {\(\Col_m\)};
   \node at (7, -5) {\(\Col_n\)};\end{tikzpicture}]]>
 </latex-image>
-      </image>
-
-    </me>
-  </p>
+  </image>
 
   <p>
     The map at the top is the linear map <m>T : V \rightarrow W</m>.

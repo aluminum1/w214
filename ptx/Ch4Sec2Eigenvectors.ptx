@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch4Sec2Eigenvectors">
   <title>Eigenvectors</title>
   <p>
     In the previous section we focused on eigenvalues.

@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch2Sec3BasisDimension">
   <title>Basis and dimension</title>
   <introduction>
     <definition>
@@ -376,15 +376,19 @@
             (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
           </men>
         </p>
-
-        <exercise>
-          <statement>
-            <p>
-              Check that <xref ref="kronecker_for_matrix_basis" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
-            </p>
-          </statement>
-        </exercise>
       </assemblage>
+
+      <p>
+        movebackintoramanujansays
+      </p>
+
+      <exercise>
+        <statement>
+          <p>
+            Check that <xref ref="kronecker_for_matrix_basis" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
+          </p>
+        </statement>
+      </exercise>
 
       </statement>
     </example>

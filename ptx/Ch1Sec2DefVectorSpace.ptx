@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch1Sec2DefVectorSpace">
   <title>Definition of an abstract vector space</title>
   <p>
     Mathematics is about identifying patterns.
@@ -160,6 +160,5 @@
       </li>
     </ol>
   </assemblage>
-
 </section>
 

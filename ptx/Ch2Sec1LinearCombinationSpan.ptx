@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch2Sec1LinearCombinationSpan">
   <title>Linear combinations and span</title>
   <p>
     We start with some basic definitions.
@@ -151,9 +151,7 @@
 
   <figure xml:id="spanning_set_R2">
     <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
-    <me>
-
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
@@ -162,9 +160,8 @@
   \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
   \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
 
-    </me>
   </figure>
 
   <example xml:id="Rn_spanning_set">

@@ -1,6 +1,6 @@
 
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch0NoteForStudent">
   <title>Note for the student</title>
   <p>
     You are about to meet linear algebra for the second time.

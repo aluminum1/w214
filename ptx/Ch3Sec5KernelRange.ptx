@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch3Sec5KernelRange">
   <title>Kernel and range of a linear map</title>
   <definition>
     <statement>
@@ -49,9 +49,8 @@
   </assemblage>
 
   <figure>
-    <me>
 
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -66,13 +65,11 @@
  \node at (3.4, 0) {\(\ve{0}_W\)};
  \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
 
-    </me>
     \subcaption{Kernel of <m>T</m>}
-    <me>
 
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=1.1]
@@ -85,9 +82,8 @@
  \draw (0.15, -0.987) -- (3.03,-0.3);
  \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
 
-    </me>
     \subcaption{Image of <m>T</m>}
   </figure>
 
@@ -295,9 +291,13 @@
 
       <p>
         If you believe me, then the picture is as follows:
-        <me>
+      </p>
 
-          <image>
+      <p>
+        tikzalign
+      </p>
+
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
@@ -306,10 +306,7 @@
   \node at (3.3, 1) {\(\Im(C)\)};  
   \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
 </latex-image>
-          </image>
-
-        </me>
-      </p>
+      </image>
 
       <p>
         Let me prove equation <xref ref="image-of-C" />.
@@ -327,20 +324,21 @@
       <p>
         Indeed, we can choose <m>\ve{v}</m> to be the vector obtained by rotating <m>\ve{u}</m> by 90 degrees clockwise in the plane <m>I</m>,
         and scaling it appropriately:
-        <me>
+      </p>
 
-          <image>
+      <p>
+        tikzalign
+      </p>
+
+      <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-  \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
-  \draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
-  \draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
+\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};
+\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {\(\ve{u}\)};
+\draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {\(\ve{v}\)};\end{tikzpicture}]]>
 </latex-image>
-          </image>
-
-        </me>
-      </p>
+      </image>
 
       <p>
         In terms of a formula, we have

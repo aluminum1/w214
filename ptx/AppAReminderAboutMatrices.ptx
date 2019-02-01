@@ -1,6 +1,6 @@
 
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="reminder-matrices-chap">
+<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppAReminderAboutMatrices">
   <title>Reminder about matrices</title>
   <p>
     Let us recall a few things about matrices, and set up our notation.
@@ -118,15 +118,19 @@
         (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
       </men>
     </p>
-
-    <exercise>
-      <statement>
-        <p>
-          Check that <xref ref="kronecker_for_matrix_basis-2" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
-        </p>
-      </statement>
-    </exercise>
   </assemblage>
+
+  <p>
+    movebackintoramanujansays
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Check that <xref ref="kronecker_for_matrix_basis-2" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
+      </p>
+    </statement>
+  </exercise>
 
   <example>
     <statement>

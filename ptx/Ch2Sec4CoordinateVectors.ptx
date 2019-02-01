@@ -1,6 +1,6 @@
 
 
-<section>
+<section xml:id="Ch2Sec4CoordinateVectors">
   <title>Coordinate vectors</title>
   <definition>
     <statement>
@@ -93,9 +93,7 @@
 
   <figure xml:id="v_and_w_in_basis_B">
     <caption>The basis <m>B</m> for <m>\mathbb{R}^2</m>.</caption>
-    <me>
-
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.5]
@@ -120,9 +118,8 @@
   \draw[thick, ->] (0,0) -- (3,0) node[below right] {\(\ve{v}\)};
   \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
 
-    </me>
   </figure>
 
   <example>
