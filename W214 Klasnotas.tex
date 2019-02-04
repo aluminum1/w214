@@ -414,42 +414,34 @@ $\ve{c}(x) + \ve{d}(x)$ teruggee. Wiskundig geskryf,
 Deur so te dink, kan ons die grafiek van $\ve{c} + \ve{d}$ as die som van
 die grafieke van $\ve{c}$ en $\ve{d}$ voorstel:
 \begin{multline*}
-	\ba
-	\begin{tikzpicture}[domain=-0.5:2.2]
-		\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-		\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
-		\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
-		node[right] {$\ve{c}$};
-		\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
-		\draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7,
-		-0.6069);
-	\end{tikzpicture}
-	\ea
-	\quad + \quad
-	\ba
-	\begin{tikzpicture}[domain=-0.5:2.2]
-		\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-		\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
-		\draw[color=red, thick] plot[id=p] (\x, {-0.2*\x*\x})
-		node[right] {$\ve{d}$};
-		\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
-		\draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7,
-		-0.578);
-	\end{tikzpicture}
-	\ea
-	\\ = \quad
-	\ba
-	\begin{tikzpicture}[domain=-0.5:2.2]
-		\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-		\draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};
-		\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1) -
-		0.2*\x* \x})
-		node[above right] {$\ve{c}+\ve{d}$};
-		\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
-		\draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$}
-		-- (1.7, -1.1849);
-	\end{tikzpicture}
-	\ea
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
+node[right] {$\ve{c}$};
+\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
+\draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
+\end{tikzpicture}
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
+node[right] {$\ve{d}$};
+\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
+\draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
+\end{tikzpicture} \\ = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
+node[above right] {$\ve{c}+\ve{d}$};
+\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
+\draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
+\end{tikzpicture}
 \end{multline*}
 
 \subsubsection{Nul-element}
@@ -2852,38 +2844,38 @@ vir $\mathbb{R}^2$ is, ge{\"i}llustreer soos volg:
 \begin{figure}[h]
 	\centering
 	\begin{minipage}{.4\linewidth}
-		\[
+		
 			\begin{tikzpicture}[scale=0.4]
 				\draw[very thick, red, ->] (0,0) -- node[pos=1.3]
 				{$\ve{b}_1$} (2,1); 
 				\draw[very thick, red, ->] (0,0) -- node[pos=1.3]
 				{$\ve{b}_2$} (1,2);
 			\end{tikzpicture}
-		\]
+		
 		\subcaption{Die basis $\basis{B} = \bopen \ve{b}_1, \ve{b}_2
 		\bclose$}
 
 	\end{minipage}
 	\begin{minipage}{.4\linewidth}
-		\[
+		
 			\begin{tikzpicture}[scale=0.4]
 				\draw[very thick, blue, ->] (0,0) -- node[pos=1.5]
 				{$\ve{c}_1$} (1,0); 
 				\draw[very thick, blue, ->] (0,0) -- node[pos=1.5]
 				{$\ve{c}_2$} (-1,1);
 			\end{tikzpicture}
-		\]
+	
 		\subcaption{Die basis $\basis{C} = \bopen \ve{c}_1, \ve{c}_2
 		\bclose$}
 	\end{minipage}
 	\caption{Twee verskillende basisse vir $\mathbb{R}^2$}
 \end{figure}
 Veronderstel ons word 'n vektor $\ve{w} \in \mathbb{R}^2$ gegee:
-\[
+
 	\begin{tikzpicture}[scale=0.4]
 		\draw[thick, ->] (0,0) -- node[pos=1.3] {$\ve{w}$} (-4, 1);
 	\end{tikzpicture}
-\]
+
 Ons wil die ko{\"o}rdinaatvektor van \emph{dieselfde} vektor $\ve{w}$
 relatief tot twee verskillende basisse $\basis{B}$ en $\basis{C}$ bereken.
 
@@ -2901,7 +2893,7 @@ Aan die anderkant, in basis $\basis{C}$ het ons
 \end{equation}
 \begin{figure}
 	\begin{minipage}{0.5\linewidth}
-		\[
+		
 			\begin{tikzpicture}[scale=0.5]
 				\draw[red, dotted] (-9, -9) -- (3, -3);
 				\draw[red, dotted] (-8, -7) -- (4, -1);
@@ -2926,11 +2918,11 @@ Aan die anderkant, in basis $\basis{C}$ het ons
 				{$\ve{b}_2$} (1,2);
 				\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1);
 			\end{tikzpicture}
-		\]
+		
 		\subcaption{$\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2$}
 	\end{minipage}
 	\begin{minipage}{0.5\linewidth}
-		\[
+	
 			\begin{tikzpicture}[scale=0.5]
 				\draw[blue, dotted] (-6, 3) -- (0, -3);
 				\draw[blue, dotted] (-5, 3) -- (1, -3);
@@ -2954,7 +2946,7 @@ Aan die anderkant, in basis $\basis{C}$ het ons
 				{$\ve{c}_1$} (-1,1);
 				\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1);
 			\end{tikzpicture}
-		\]
+	
 		\subcaption{$\ve{w} = \ve{c}_1 - 3 \ve{c}_2$}
 	\end{minipage}
 
@@ -2981,7 +2973,7 @@ Die beste benadering is om elke vektor in $\basis{B}$ as 'n line{\^e}re
 kombinasie van die basisvektore in $\basis{C}$ uit te druk. In die volgende
 figuur word die vektore $\ve{b}_1$ en $\ve{b}_2$ uitgebeeld teen die
 agtergrond van die basis $\basis{C}$:
-\[
+
 	\begin{tikzpicture}[scale=0.5]
 		\draw[blue, dotted] (-6, 3) -- (0, -3);
 		\draw[blue, dotted] (-5, 3) -- (1, -3);
@@ -3009,7 +3001,7 @@ agtergrond van die basis $\basis{C}$:
 		(1,2);
 
 	\end{tikzpicture}
-\]
+
 Ons lees af dat:
 \begin{align} \label{b_in_terms_of_c}
 	\ve{b}_1 &= \ve{c}_1 + 3 \ve{c}_2 \\
@@ -3227,19 +3219,20 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 
 
 \begin{figure}[h]
-	\[
+	\begin{center}
 		\begin{tikzpicture}
-			\draw (-2, 0) circle (1);
-			\draw (2,0) circle (1);
-			\node at (-2, -1.3) {$X$};
-			\node at (2, -1.3) {$Y$};
-			\draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {$f$}
-			(0.8, 0.3);
-			\node (a) at (-2, -0.5) {$x$};
-			\node (b) at (2, -0.5) {$f(x)$};
-			\draw[|->] (a) to[out=-20, in=200] (b);	
+		\draw (-2, 0) circle (1);
+		\draw (2,0) circle (1);
+		\node at (-2, -1.3) {$X$};
+		\node at (2, -1.3) {$Y$};
+		\draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {$f$}
+		(0.8, 0.3);
+		\node (a) at (-2, -0.5) {$x$};
+		\node (b) at (2, -0.5) {$f(x)$};
+		\draw[|->] (a) to[out=-20, in=200] (b);	
 		\end{tikzpicture}
-	\]
+	\end{center}
+		
 	\caption{\label{explanation_of_mapsto} 'n Funksie $f : X \rightarrow
 	Y$.}
 \end{figure}
@@ -3299,25 +3292,20 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 		&= x_1 + x_2
 	\end{align*}
 	Hier is 'n grafiese weergawe van hierdie bewys:
-	\[
-		\begin{tikzpicture}[xscale=1.5]
-			\draw[<->] (-1, 0) -- (3, 0);
-			\draw[<->] (0, -1) -- (0, 3);
-			\draw[very thick, red, ->] (0,0) -- node[above left] {$\ve{v}$}
-			(0.5, 1) ;
-			\draw[very thick, red, ->] (0.5,1) -- node[above left]
-			{$\ve{w}$} (1.5, 1.5) ;
-			\draw[dotted] (0.5, 1) -- (0.5, 0);
-			\draw[dotted] (1.5, 1.5) -- (1.5, 0);
-			\draw[very thick, red, ->] (0,0) -- node[below] {$T(\ve{v})$}
-			(0.5, 0) ;
-			\draw[very thick, red, ->] (0.5, 0) -- node[below]
-			{$T(\ve{w})$} (1.5, 0) ;
-			\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
-			\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
-		\end{tikzpicture}
-	\]
-
+\begin{center}
+	\begin{tikzpicture}[xscale=1.5]
+	\draw[<->] (-1, 0) -- (3, 0);
+	\draw[<->] (0, -1) -- (0, 3);
+	\draw[very thick, red, ->] (0,0) -- node[above left] {$\ve{v}$} (0.5, 1) ;
+	\draw[very thick, red, ->] (0.5,1) -- node[above left] {$\ve{w}$} (1.5, 1.5) ;
+	\draw[dotted] (0.5, 1) -- (0.5, 0);
+	\draw[dotted] (1.5, 1.5) -- (1.5, 0);
+	\draw[very thick, red, ->] (0,0) -- node[below] {$T(\ve{v})$} (0.5, 0) ;
+	\draw[very thick, red, ->] (0.5, 0) -- node[below] {$T(\ve{w})$} (1.5, 0) ;
+	\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
+	\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
+	\end{tikzpicture}
+\end{center}
 
 	\begin{exercise} Bewys algebra{\"i}es dat $T(k \ve{v}) = k T(\ve{v})$,
 		sodat $T$ 'n line{\^e}re afbeelding is.
@@ -3335,18 +3323,19 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 	\end{align*}
 	is 'n line{\^e}re afbeelding, met 'n soortgelyke grafiese argument as
 	in Voorbeeld \ref{projection_map_example}. 
-	\[
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
-			{$\ve{v}$} ;
-			\draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {$R
-			(\ve{v})$};
-			\draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt,
-			right] {$\theta$} ;
-		\end{tikzpicture}
-	\]
+	\begin{center}
+	\begin{tikzpicture}
+	\draw[<->] (-1, 0) -- (2, 0);
+	\draw[<->] (0, -1) -- (0, 2);
+	\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
+	{$\ve{v}$} ;
+	\draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {$R
+		(\ve{v})$};
+	\draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt,
+	right] {$\theta$} ;
+	\end{tikzpicture}	
+	\end{center}
+	
 \end{example}
 
 
@@ -3589,29 +3578,23 @@ hele vektorruimte gedefinieer is (dit is waarna die `bestaan' deel verwys).
 	die aksie van die `anti-kloksgewyse rotasie met $\theta$'-afbeelding
 	$R$ van Voorbeeld \ref{rotation_as_linear_map} met betrekking tot die
 	standaard basis $\ve{e}_1, \ve{e}_2$ van $\mathbb{R}^2$. 
-	\[
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right]
-			{$\ve{e}_1$};
-			\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
-			{$R(\ve{e}_1)$};
-			\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt,
-			yshift=-2pt] {$\theta$};
-		\end{tikzpicture}
-	\qquad
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right]
-			{$\ve{e}_2$};
-			\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left]
-			{$R(\ve{e}_2)$};
-			\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt,
-			yshift=2pt] {$\theta$};
-		\end{tikzpicture}
-	\]
+\begin{align*}
+\begin{tikzpicture}
+\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}
+\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;
+\end{tikzpicture}
+\end{align*}
 	Vanuit die figuur het ons:
 	\begin{align*}
 		R(\ve{e}_1) &= (\cos \theta, \sin \theta) & R(\ve{e}_2) &= (-\sin
@@ -3710,28 +3693,25 @@ hele vektorruimte gedefinieer is (dit is waarna die `bestaan' deel verwys).
 	waar $\ve{u}$ in $U$ is.
 \end{definition}
 Sien Figuur \ref{composition_of_linear_maps_fig}.
+
 \begin{figure}[h]
-\[
- 	\begin{tikzpicture}[xscale=1.2]
-		\draw (0, 0) circle (1);
-		\draw (-4,0) circle (1);
-		\draw (-8,0) circle (1);
-		\node at (0, -1.3) {$U$};
-		\node at (-4, -1.3) {$V$};
-		\node at (-8, -1.3) {$W$};
-		\draw[->] (-1.2, 0.3) to[out=150, in=30] node[above] {$S$} (-2.8,
-		0.3); 
-		\draw[->] (-5.2, 0.3) to[out=150, in=30] node[above] {$T$} (-6.8,
-		0.3); 
-		\draw[->] (-1.2, 0.6) to[out=140, in=40] node[above] {$T\circ S$}
-		(-7, 0.6);
-		\node (u) at (0, -0.5) {$\ve{u}$};
-		\node (v) at (-4, -0.5) {$S(\ve{u})$};
-		\node (w) at (-8, -0.5) {$T(S(\ve{u}))$};
-		\draw[|->] (u) to[out=170, in=10] (v);
-		\draw[|->] (v) to[out=170, in=10] (w);			
+	\centering
+	\begin{tikzpicture}[xscale=1.2]
+	\draw (0, 0) circle (1);
+	\draw (-4,0) circle (1);
+	\draw (-8,0) circle (1);
+	\node at (0, -1.3) {$U$};
+	\node at (-4, -1.3) {$V$};
+	\node at (-8, -1.3) {$W$};
+	\draw[->] (-1.2, 0.3) to[out=150, in=30] node[above] {$S$} (-2.8, 0.3);
+	\draw[->] (-5.2, 0.3) to[out=150, in=30] node[above] {$T$} (-6.8, 0.3);
+	\draw[->] (-1.2, 0.6) to[out=140, in=40] node[above] {$T\circ S$} (-7, 0.6);
+	\node (u) at (0, -0.5) {$\ve{u}$};
+	\node (v) at (-4, -0.5) {$S(\ve{u})$};
+	\node (w) at (-8, -0.5) {$T(S(\ve{u}))$};
+	\draw[|->] (u) to[out=170, in=10] (v);
+	\draw[|->] (v) to[out=170, in=10] (w);			
 	\end{tikzpicture}
-\]
 \caption{ \label{composition_of_linear_maps_fig} Komposisie van line{\^e}re
 	afbeeldings.}
 \end{figure}
@@ -4723,16 +4703,15 @@ definisie gee.
 			\}.
 		\end{equation}
 		As jy my glo, dan is die prentjie soos volg:
-		\[
-			\begin{tikzpicture}
-				\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-				\draw (1.5, 1) -- (1.5,3.5) node[right] {$\Ker{C}$};
-				\draw (1.5, -0.1) -- (1.5, -2);
-				\node at (3.3, 1) {$\Im(C)$};	
-				\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5)
-				node[right] {$\ve{a}$};
-			\end{tikzpicture}
-		\]
+	\begin{center}
+		\begin{tikzpicture}
+		\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+		\draw (1.5, 1) -- (1.5,3.5) node[right] {$\Ker{C}$};
+		\draw (1.5, -0.1) -- (1.5, -2);
+		\node at (3.3, 1) {$\Im(C)$};	
+		\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
+		\end{tikzpicture}
+	\end{center}
 		Laat ek vergelyking \eqref{image-of-C} bewys. Per definisie is die
 		beeld van $C$ die deelruimte van $\mathbb{R}^3$ bestaande uit alle
 		vektore $\ve{w}$ van die vorm $\ve{w} = \ve{a} \times \ve{v}$ vir
@@ -4746,17 +4725,14 @@ definisie gee.
 		Ons kan inderdaad $\ve{v}$ kies om die vektor te wees wat verkry
 		word deur $\ve{u}$ met 90 grade kloksgewys te roteer in die vlak
 		$I$, en dit soos nodig te skaleer:
-		\[
-			\begin{tikzpicture}
-				\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-				\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5)
-				node[right] {$\ve{a}$};
-				\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5)
-				node[right, xshift=-6pt, yshift=3pt] {$\ve{u}$};
-				\draw[very thick, green, ->] (1.5,1) -- (2, 1)
-				node[xshift=-4pt, right] {$\ve{v}$};
-			\end{tikzpicture}
-		\]
+	\begin{center}
+		\begin{tikzpicture}
+		\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+		\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
+		\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {$\ve{u}$};
+		\draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {$\ve{v}$};
+		\end{tikzpicture}
+	\end{center}
 		In terme van 'n formule het ons
 		\[
 			\ve{v} = \frac{|\ve{u}|}{|\ve{a}|} \ve{u} \times \ve{a} .
@@ -6315,16 +6291,15 @@ Die \emph{transponering} van 'n $n \times m$-matriks $\mat{A}$ is die $m
 			M = \{ (x,y) \in \mathbb{R}^2 : y^2 - x^2 - 1 = 0 \}
 		\]
 		wat 'n hiperbool is:
-		\[
+		\begin{center}
 			\begin{tikzpicture}[domain=-1.2:1.2]
-				\draw[<->] (-2,0) -- (2,0) node[below] {$x$};
-				\draw[<->] (0, -2) -- (0,2) node[right] {$y$};
-				\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-				\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-				%\draw[color=red, thick] plot[id=q]  (\x,
-				%{(\x-2)*\x*\x*(\x-1)});
+			\draw[<->] (-2,0) -- (2,0) node[below] {$x$};
+			\draw[<->] (0, -2) -- (0,2) node[right] {$y$};
+			\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+			\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+			%\draw[color=red, thick] plot[id=q]  (\x, {(\x-2)*\x*\x*(\x-1)});
 			\end{tikzpicture}
-		\]
+		\end{center}
 		Om te wys dat $M$ 'n hipervlak is, bereken ons eers die
 		gradi{\"e}nt van $f$ by 'n algemene punt $\ve{r} = (x,y) \in
 		\mathbb{R}^2$:
