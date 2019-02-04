@@ -149,7 +149,7 @@ Murray Heymann}}
 \tableofcontents
 
 
-\chapter{Nota aan die student}
+\chapter{Nota aan die student}\label{ACh0NoteForStudent}
 
 Jou tweede ontmoeting met line{\^e}re algebra l{\^e} tans voor jou. In die
 eerste jaar is daar gefokus op sisteme van line{\^e}re vergelykings,
@@ -194,9 +194,9 @@ reis!
 
 
 
-\chapter{Abstrakte vektorruimtes}
+\chapter{Abstrakte vektorruimtes}  \label{ACh1AbstractVectorSpaces}
 
-\section{Inleiding} \label{intro1}
+\section{Inleiding} \label{ACh1Sec1Intro}
 
 \subsection{Drie verskillende versamelings}
 
@@ -236,20 +236,19 @@ elemente van $A$ nie).
 Ons kan 'n element $\ve{a}$ van $A$ visualiseer as 'n punt in die
 Cartesiese vlak waarvan die $x$-ko{\"o}rdinaat $a_1$ en die
 $y$-ko{\"o}rdinaat $a_2$ is:
-\[
-	{\color{red} \ve{a}} \quad \xrightarrow{\mbox{visualiseer as}} \quad
-\ba
-\begin{tikzpicture}
-	\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-	\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-	\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red]
-	(P) at (1.3, 1) {};
-	\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-	\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-	\node[color=red] at (1.6,1) {$\ve{a}$};
+\begin{align*}
+{\color{red} \ve{a}} \quad \xrightarrow{\mbox{visualize as}} \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+%	\draw[->, thick] (0,0) -- (1.3, 1);
+\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+\node[color=red] at (1.6,1) {$\ve{a}$};
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
 Die tweede versameling, $B$, word gedefinieer as die versameling van alle
 geordende re{\"e}le drietalle $(u_1, \, u_2, \, u_3)$, wat $u_1 - u_2 + u_3
 = 0$ bevredig. In wiskundige simbole is dit soos volg:
@@ -260,23 +259,22 @@ b_1 - b_2 + b_3 = 0\} .
 Byvoorbeeld, $(2,3, 1) \in B$, maar $(1,1,1) \notin B$. Ons kan 'n element
 $\ve{b}$ van $B$ visualiseer as 'n punt in die vlak in 3-dimensionele
 ruimte wat deur die vergelyking $x-y+z = 0$ daargestel word:
-\[
-	{\color{red} \ve{b}} \quad \xrightarrow{\mbox{visualiseer as}} \quad
-\ba
-\begin{tikzpicture}
-	\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-	\draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-	\draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-	\node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3,
-	0.9) {};
-	\node[color=red] at (0.5, 0.9) {$\ve{b}$};
-	\draw[thick] (-0.1, -1) -- (-1, 0.4);
-	\draw[thick] (-1, 0.4) -- (0.3, 1.5);
-	\draw[thick] (0.3, 1.5) -- (1.5, 0.4);
-	\draw[thick] (1.5, 0.4) -- (-0.1, -1);
+\begin{align*}
+{\color{red} \ve{b}} \quad \xrightarrow{\mbox{visualiseer as}} \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
+\draw[->] (0, 0) -- (2,0) node[right] {$y$};
+\draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+\draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+\node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
+\node[color=red] at (0.5, 0.9) {$\ve{b}$};
+\draw[thick] (-0.1, -1) -- (-1, 0.4);
+\draw[thick] (-1, 0.4) -- (0.3, 1.5);
+\draw[thick] (0.3, 1.5) -- (1.5, 0.4);
+\draw[thick] (1.5, 0.4) -- (-0.1, -1);
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
+
 Die derde versameling, $C$, is die versameling van alle vierdegraadse
 polinome. Omgesit in wiskundige simbole, ,
 \be
@@ -290,17 +288,17 @@ en $\ve{p}$ is elemente van $C$. Maar $\ve{r} = 8x^5 - 7$ en $\ve{s} =
 (i.e. 'n vierdegraadse polinoom) met sy \emph{grafiek} visualiseer.
 Byvoorbeeld, die polinoom $\ve{c} = x^4 - 3x^3 + 2x^2 \in C$ word soos volg
 visualiseer:
-\[
-	{\color{red} \ve{c}} \quad \xrightarrow{\mbox{visualiseer as}} \quad
-\ba
-\begin{tikzpicture}[domain=-0.5:2.2]
-	\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-	\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
-	\draw[color=red] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
-	node[right] {$\ve{c}$};
+\begin{align*}
+{\color{red} \ve{c}} \quad \xrightarrow{\mbox{visualiseer as}} \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
+node[right] {$\ve{c}$};
 \end{tikzpicture}
-\ea
-\]
+\end{align*}
+
 Daar het jy dit. Ek het drie versamelings definieer: $A$, $B$ en $C$, en ek
 het verduidelik hoe elkeen visualiseer kan word. Die drie versamelings lyk
 aanvanklik redelik verskillend. Elemente van $A$ is arbitr{\^e}re punte in
@@ -328,47 +326,40 @@ bymekaar te tel om 'n nuwe element $\ve{a} + \ve{a}' \in A$ te vorm:
 \ee
 Byvoorbeeld, $(1, \,3) + (2, \,-1.6) = (3, \,1.4)$. Ons kan die
 sommeringsbewerking soos volg visualiseer:
-\[
-	\ba
-	\begin{tikzpicture}[scale=0.8]
-		\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-		\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-		\node [circle, fill=black, inner sep=0pt, minimum size=5pt,
-		color=red]
-		(P) at (1.3, 1) {};
-		\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-		\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-		\node[color=red] at (1.6,1) {$\ve{a}$};
-	\end{tikzpicture}
-	\ea \quad + \quad
-	\ba
-		\begin{tikzpicture}[scale=0.8]
-			\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-			\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-			\node [circle, fill=black, inner sep=0pt, minimum size=5pt,
-			color=red]
-			(P) at (0.5, 0.3) {};
-			\draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
-			\draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
-			\node[color=red] at (0.9,0.4) {$\ve{a}'$};
-		\end{tikzpicture}
-	\ea
-	\quad = \quad
-	\ba
-	\begin{tikzpicture}[scale=0.8]
-		\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-		\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-		\node [circle, fill=black, inner sep=0pt, minimum size=5pt,
-		color=red]
-		(P) at (1.8, 1.3) {};
-		%	\draw[->, thick] (0,0) -- (1.3, 1);
-		\draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
-		\draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
-		\node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
-	\end{tikzpicture}
-	\ea
-\]
-
+\begin{align*}
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+%	\draw[->, thick] (0,0) -- (1.3, 1);
+\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+\node[color=red] at (1.6,1) {$\ve{a}$};
+\end{tikzpicture}
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) {};
+%	\draw[->, thick] (0,0) -- (1.3, 1);
+\draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
+\draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
+\node[color=red] at (0.9,0.4) {$\ve{a}'$};
+\end{tikzpicture}
+\quad = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
+\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) {};
+%	\draw[->, thick] (0,0) -- (1.3, 1);
+\draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
+\draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
+\node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
+\end{tikzpicture}
+\end{align*}
 Ons kan 'n soortgelyke benadering in versameling $B$ volg. Versonderstel
 ons het twee elemente van $B$, $\ve{b} = (b_1, \,b_2, \,b_3)$ en $\ve{b}'
 = (b_1', \, b_2', \, b_3')$. Let daarop dat, omdat $\ve{b}\in B$, bevredig
@@ -423,42 +414,34 @@ $\ve{c}(x) + \ve{d}(x)$ teruggee. Wiskundig geskryf,
 Deur so te dink, kan ons die grafiek van $\ve{c} + \ve{d}$ as die som van
 die grafieke van $\ve{c}$ en $\ve{d}$ voorstel:
 \begin{multline*}
-	\ba
-	\begin{tikzpicture}[domain=-0.5:2.2]
-		\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-		\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
-		\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
-		node[right] {$\ve{c}$};
-		\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
-		\draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7,
-		-0.6069);
-	\end{tikzpicture}
-	\ea
-	\quad + \quad
-	\ba
-	\begin{tikzpicture}[domain=-0.5:2.2]
-		\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-		\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};
-		\draw[color=red, thick] plot[id=p] (\x, {-0.2*\x*\x})
-		node[right] {$\ve{d}$};
-		\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
-		\draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7,
-		-0.578);
-	\end{tikzpicture}
-	\ea
-	\\ = \quad
-	\ba
-	\begin{tikzpicture}[domain=-0.5:2.2]
-		\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-		\draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};
-		\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1) -
-		0.2*\x* \x})
-		node[above right] {$\ve{c}+\ve{d}$};
-		\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
-		\draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$}
-		-- (1.7, -1.1849);
-	\end{tikzpicture}
-	\ea
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
+node[right] {$\ve{c}$};
+\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
+\draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
+\end{tikzpicture}
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
+node[right] {$\ve{d}$};
+\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
+\draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
+\end{tikzpicture} \\ = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+	circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+\draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
+\draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
+node[above right] {$\ve{c}+\ve{d}$};
+\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
+\draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
+\end{tikzpicture}
 \end{multline*}
 
 \subsubsection{Nul-element}
@@ -652,7 +635,7 @@ Byvoorbeeld, in al drie versamelings geld die re{\"e}l
 vir alle elemente $\ve{x}$, $\ve{y}$ en $\ve{z}$. Kan jy ander re{\"e}ls
 identifiseer wat vir al drie versamelings geld?
 
-\section{Definisie van 'n abstrakte vektorruimte}
+\section{Definisie van 'n abstrakte vektorruimte}  \label{ACh1Sec2DefVectorSpace}
 Wiskunde behels die identifisering van patrone. Ons het drie versamelings
 gevind, $A$, $B$ en $C$, wat aanvanklik baie soortgelyk voorkom maar baie
 in gemeen het. In elke versamiling is daar 'n sommeringsbewerking, 'n
@@ -714,7 +697,7 @@ volgende doen:
 	\end{enumerate}
 \end{ramanujansays}
 
-\section{Eerste voorbeeld van 'n vektorruimte}
+\section{Eerste voorbeeld van 'n vektorruimte} \label{ACh1Sec3ExampleVectorSpace}
 
 Ons is na die definisie (Definisie \ref{defnvec}) van 'n abstrakte
 vektorruimte gelei deur die eienskappe van versamelings $A$, $B$ en $C$ in
@@ -907,7 +890,7 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 \end{exercise}
 
 
-\section{Verdere voorbeelde en slaggate}
+\section{Verdere voorbeelde en slaggate} \label{ACh1Sec4MoreExamples}
 
 \begin{example}[Nie 'n vektor-ruimte nie] Definieer die versameling $V$
 	deur
@@ -958,12 +941,13 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	Dit is 'n goed-gedefinieerde skalaarvermenigvuldigingsbewerking, want
 	dit laat skalaarvermenigvuldiging met enige skalaar $k$ toe en gee 'n
 	goed-gedefinieerde element $k \cdot \ve{v} \in V$ terug.
-	\begin{exercise}
-		Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar
-		nie R5 en R8 nie.
-	\end{exercise}
-\end{example}
 
+\end{example}
+movebackintoexample
+	\begin{exercise}
+	Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar
+	nie R5 en R8 nie.
+\end{exercise}
 
 \begin{example}[Die nul-vektorruimte] Definieer die versameling $Z$ as
 	\be
@@ -983,11 +967,12 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	\be
 	k \cdot \ve{z} := \ve{z}.
 	\ee
-	\begin{exercise} Wys dat hierdie data re{\"e}ls R1 tot R8 bevredig.
-	\end{exercise}
+
 
 \end{example}
-
+movebackintoexample
+	\begin{exercise} Wys dat hierdie data re{\"e}ls R1 tot R8 bevredig.
+\end{exercise}
 \begin{example}[$\mathbb{R}^n$] Definieer die versameling $\mathbb{R}^n$ as
 	\be
 	\mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in
@@ -1007,10 +992,10 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \,
 	\ldots, \, k x_n).
 	\ee
-	\begin{exercise} Wys dat hierdie data re{\"e}ls R1 tot R8 bevredig.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise} Wys dat hierdie data re{\"e}ls R1 tot R8 bevredig.
+\end{exercise}
 \begin{example}[$\mathbb{R}^\infty$] Definieer die versameling
 	$\mathbb{R}^\infty$ as
 	\be
@@ -1033,8 +1018,7 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \,
 	\ldots)
 	\ee
-	\begin{exercise} Wys dat hierdie data re{\"e}ls R1 tot R8 bevredig.
-	\end{exercise}
+
 
 	\begin{ramanujansays} Die studie van oneindigheid is 'n belangrike
 		deel van wiskunde. Het jy al die fliek \emph{The man who knew
@@ -1042,7 +1026,9 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 \end{ramanujansays}
 
 \end{example}
-
+movebackintoexample
+	\begin{exercise} Wys dat hierdie data re{\"e}ls R1 tot R8 bevredig.
+\end{exercise}
 
 
 \begin{example}[Funksies op 'n versameling] Laat $X$ enige versameling
@@ -1082,33 +1068,33 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	\be
 	(k \cdot \mathbf{f})(x) := k \mathbf{f}(x).
 	\ee
+
+\end{example}movebackintoexample (all 3)
 	\begin{exercise} Notasie-uitdaging! S{\^e} of die volgende kombinasie
-		van
-		simbole 'n re{\"e}le waarde of 'n funksie voorstel.
-		\begin{enumerate}
-			\item $\mathbf{f}$
-			\item $\mathbf{f}(x)$
-			\item $k \cdot \mathbf{f}$
-			\item $(k \cdot \mathbf{f})(x)$
-		\end{enumerate}
-	\end{exercise}
+	van
+	simbole 'n re{\"e}le waarde of 'n funksie voorstel.
+	\begin{enumerate}
+		\item $\mathbf{f}$
+		\item $\mathbf{f}(x)$
+		\item $k \cdot \mathbf{f}$
+		\item $(k \cdot \mathbf{f})(x)$
+	\end{enumerate}
+\end{exercise}
 
-	\begin{exercise} Laat $X = \{a, b, c\}$.
-		\begin{enumerate}
-			\item \label{three_function_question}Skryf drie verskillende
-				funksies$\mathbf{f}, \mathbf{g},
-				\mathbf{h}$ in $\Fun(X)$ neer.
-			\item Vir die funksies wat jy in
-				(\ref{three_function_question}) geskryf het, bereken
-				$\mathbf{f} + \mathbf{g}$, asook $3 \cdot \mathbf{h}$.
-		\end{enumerate}
-	\end{exercise}
+\begin{exercise} Laat $X = \{a, b, c\}$.
+	\begin{enumerate}
+		\item \label{three_function_question}Skryf drie verskillende
+		funksies$\mathbf{f}, \mathbf{g},
+		\mathbf{h}$ in $\Fun(X)$ neer.
+		\item Vir die funksies wat jy in
+		(\ref{three_function_question}) geskryf het, bereken
+		$\mathbf{f} + \mathbf{g}$, asook $3 \cdot \mathbf{h}$.
+	\end{enumerate}
+\end{exercise}
 
-	\begin{exercise} Wys dat die data hierbo re{\"e}ls R1 tot R8 bevredig,
-		i.e. dat $\Fun(X)$ 'n vektorruimte is.
-	\end{exercise}
-\end{example}
-
+\begin{exercise} Wys dat die data hierbo re{\"e}ls R1 tot R8 bevredig,
+	i.e. dat $\Fun(X)$ 'n vektorruimte is.
+\end{exercise}
 \begin{example}[Matrikse] \label{matrices_example_vec_space} Onthou dat 'n
 	\emph{$n \times m$-matriks}
 	$\mat{A}$ 'n reghoekigge skikking getalle is, met $n$ rye en $m$
@@ -1140,12 +1126,12 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	\[
 		(k\mat{A})_{ij} := k \mat{A}_{ij}
 	\]
-	\begin{exercise} Wys dat met hierdie bewerkings vorm die versameling
-		$\Mat_{n, m}$ van alle $n \times m$-matrikse 'n
-		vektorruimte. 
-	\end{exercise}
-\end{example}
-
+	
+\end{example}movebackintoexample
+\begin{exercise} Wys dat met hierdie bewerkings vorm die versameling
+	$\Mat_{n, m}$ van alle $n \times m$-matrikse 'n
+	vektorruimte. 
+\end{exercise}
 \begin{example} Ons sal $\Col_n$ skryf vir die vektorruimte$\Mat_{n,1}$ van
 	$n$-dimensionele \emph{kolomvektore},
 	\[
@@ -1208,7 +1194,7 @@ Met dieselfde benadering, gaan ons na dat $\ve{v} + \ve{0} = \ve{v}$. \\
 	\end{enumerate}
 \end{exercise}
 
-\section{'n Paar resultate rakende abstrakte vektorruimtes}
+\section{'n Paar resultate rakende abstrakte vektorruimtes}  \label{ACh1Sec5ResultsVectorSpace}
 Dit is tyd om die re{\"e}ls van vektorruimtes te gebruik om 'n paar
 algemene resultate te bewys.
 
@@ -1358,7 +1344,7 @@ Ons het een finale lemma nodig.
 	gebruik het, soos in Voorbeeld \ref{explicit_solve_x}.
 \end{exercise}
 
-\section{Deelruimtes}
+\section{Deelruimtes}  \label{ACh1Sec6Subspaces}
 Die konsep van 'n deelruimte sal ons toelaat om vinnig nuwe voorbeelde van
 vektorruimtes te vind.
 \begin{definition}'n deelversameling $U \subseteq V$ van 'n vektor-ruimte
@@ -1417,13 +1403,13 @@ vektorruimtes te vind.
 	Dit maak ook meetkundig sin: As jy na beeld \eqref{pic_of_L1} kyk, sal
 	jy sien dat die som van twee vektore $\ve{v}, \ve{v}'$ op $L$ met die
 	kop-op-stert-metode 'n verdere vektor op $L$ tot gevolg sal h{\^e}.
-	\begin{exercise} Voltooi die bewys dat $L$ 'n deelruimte van
-		$\mathbb{R}^2$ is deur na te gaan dat die nul-vektor op lyn $L$ is
-		en dat die vermenigvuldiging van 'n vektor in $L$ met 'n skalaar 'n
-		vektor op $L$ lewer.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise} Voltooi die bewys dat $L$ 'n deelruimte van
+	$\mathbb{R}^2$ is deur na te gaan dat die nul-vektor op lyn $L$ is
+	en dat die vermenigvuldiging van 'n vektor in $L$ met 'n skalaar 'n
+	vektor op $L$ lewer.
+\end{exercise}
 \begin{example}[Lyne en vlakke in $\mathbb{R}^3$] 'n Lyn $L$ en 'n vlak $P$
 	deur die oorsprong in $\mathbb{R}^3$ is ook 'n deelruimte van
 	$\mathbb{R}^3$:
@@ -1455,11 +1441,11 @@ vektorruimtes te vind.
 \begin{example}[Nul-vektorruimte] As $V$ 'n vektorruimte is, dan is die
 	versameling $\{\ve{0}\} \subseteq V$ wat slegs die nul-vektor $\ve{0}$
 	'n deelruimte van $V$.
-	\begin{exercise}
-		Gaan na dat dit waar is.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise}
+	Gaan na dat dit waar is.
+\end{exercise}
 \begin{example}[Nie 'n vektorruimte nie: 'n Lyn nie deur die oorsprong nie]
 	Wees versigtig --- nie \emph{elke} lyn $L \subset \mathbb{R}^2$ vorm 'n
 	deelruimte van  $\mathbb{R}^2$ nie. As $L$ nie deur die oorsprong loop
@@ -1516,11 +1502,11 @@ vektorruimtes te vind.
 	\]
 	van differensieerbare fuksies op die oop interval $I$ 'n deelruimte van
 	$\Fun (I)$.
-	\begin{exercise}
-		Bevestig dit. Ook, is $\Diff( I)$ 'n deelruimte van $\Cont(I)$?
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise}
+	Bevestig dit. Ook, is $\Diff( I)$ 'n deelruimte van $\Cont(I)$?
+\end{exercise}
 \begin{example}[Vektorruimtes van polinome] 
 	'n \emph{Polinoom} is 'n funksie $\ve{p} : \mathbb{R}
 	\rightarrow \mathbb{R}$ van die vorm
@@ -1541,12 +1527,12 @@ vektorruimtes te vind.
 	geskryf en die versameling van alle polinome van 'n graad kleiner of
 	gelyk aan $n$ word as $\Poly_n$ geskryf.
 
-	\begin{exercise}
-		Gaan na dat $\Poly$ en $\Poly_n$ wel deelruimtes van $\Cont
-		(\mathbb{R})$ is.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise}
+	Gaan na dat $\Poly$ en $\Poly_n$ wel deelruimtes van $\Cont
+	(\mathbb{R})$ is.
+\end{exercise}
 \begin{example}[Trigonometriese polinome] \label{trig_poly_example} 'n
 	\emph{Trigonometriese polinoom} is 'n funksie $\ve{T} : \mathbb{R}
 	\rightarrow \mathbb{R}$ van die vorm
@@ -1565,28 +1551,28 @@ vektorruimtes te vind.
 	van alle trigonometriese polinome van graad kleiner of gelyk aan $n$ as
 	$\Trig_n$.
 
+
+\end{example}movebackintoexample (both)
 	\begin{exercise}
-		Wys dat $\Trig$ en $\Trig_n$ deelruimtes van $\Cont (\mathbb{R})$
-		is.
-	\end{exercise}
+	Wys dat $\Trig$ en $\Trig_n$ deelruimtes van $\Cont (\mathbb{R})$
+	is.
+\end{exercise}
 
-	\begin{exercise} Oorweeg die funksie $\ve{f} (x) = \sin^3(x)$. Wys dat
-		$\ve{f} \in \Trig_3$ deur dit in die vorm
-		\eqref{formula_for_trig_poly} te skryf. Wenk: gebruik die
-		identiteite \label{trig_ex_early}
-		\begin{align*}
-			\sin(A) \sin(B) &= \frac{1}{2}(\cos(A-B) - \cos(A+B)) \\
-			\sin(A) \cos(B) &= \frac{1}{2}(\sin(A-B) + \sin(A+B)) \\
-			\cos(A)\cos(B) &= \frac{1}{2}(\cos(A-B) + \cos(A+B))
-		\end{align*}
-		wat maklik volg uit die sommeringsformules
-		\begin{align*}
-			\sin(A \pm B) &= \sin A \cos B \pm \cos A \sin B \\
-			\cos(A \pm B) &= \cos A \cos B \mp \sin A \sin B.
-		\end{align*}
-	\end{exercise}
-
-\end{example}
+\begin{exercise} Oorweeg die funksie $\ve{f} (x) = \sin^3(x)$. Wys dat
+	$\ve{f} \in \Trig_3$ deur dit in die vorm
+	\eqref{formula_for_trig_poly} te skryf. Wenk: gebruik die
+	identiteite \label{trig_ex_early}
+	\begin{align*}
+	\sin(A) \sin(B) &= \frac{1}{2}(\cos(A-B) - \cos(A+B)) \\
+	\sin(A) \cos(B) &= \frac{1}{2}(\sin(A-B) + \sin(A+B)) \\
+	\cos(A)\cos(B) &= \frac{1}{2}(\cos(A-B) + \cos(A+B))
+	\end{align*}
+	wat maklik volg uit die sommeringsformules
+	\begin{align*}
+	\sin(A \pm B) &= \sin A \cos B \pm \cos A \sin B \\
+	\cos(A \pm B) &= \cos A \cos B \mp \sin A \sin B.
+	\end{align*}
+\end{exercise}
 
 \begin{example}[Oplossings van die line{\^e}re differensi{\"e}le
 	vergelykings] Laat $a,b$ en $c$ konstantes wees. Laat $V \subseteq
@@ -1595,11 +1581,11 @@ vektorruimtes te vind.
 	\[
 		a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
 	\]
-	\begin{exercise}
-		Wys dat $V$ 'n deelruimte van $\Diff(\mathbb{R})$ is.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise}
+	Wys dat $V$ 'n deelruimte van $\Diff(\mathbb{R})$ is.
+\end{exercise}
 \furtherexercises
 
 \begin{exercise} Wys dat die versameling
@@ -1663,7 +1649,7 @@ vektorruimtes te vind.
 	ni{\'e} 'n deelruimte van $\mathbb{R}^2$ is nie.
 \end{exercise}
 
-\chapter{Eindigdimensionele vektorruimtes}
+\chapter{Eindigdimensionele vektorruimtes}\label{ACh2FinDimVectorSpaces}
 In hierdie kursus konsentreer ons op \emph{eindigdimensionele}
 vektorruimtes, wat ons in hierdie hoofstuk sal definieer.
 
@@ -1673,7 +1659,7 @@ vektorruimtes, wat ons in hierdie hoofstuk sal definieer.
 	\ve{v}$ skryf!
 \end{ramanujansays}
 
-\section{Definisie van eindigdimensionele vektorruimtes}
+\section{Definisie van eindigdimensionele vektorruimtes} \label{ACh2Sec1DefFinDimVectorSpaces}
 Ons begin met 'n paar basiese definisies.
 \begin{definition} 'n \emph{Line{\^e}re kombinasie} van 'n eindige
 	kolleksie vektore $\ve{v}_1, \ldots, \ve{v}_n$ in 'n vektorruimte $V$
@@ -1708,11 +1694,11 @@ Ons begin met 'n paar basiese definisies.
 	\systeme{a_1 + 5a_2 -a_3 = -2, 3a_1 + a_2 = -1, 2a_1 + 2a_2 + 2a_3 = 3,
 	4a_2 + a_3 = 0}
 	\ee
-	\begin{exercise} Bevestig dat die sisteem van vergelykings
-		\eqref{no_soln1} geen oplossing het nie.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise} Bevestig dat die sisteem van vergelykings
+	\eqref{no_soln1} geen oplossing het nie.
+\end{exercise}
 \begin{example} Definieer die funksies $\ve{f}, \ve{f}_1, \ve{f}_2 \in
 	\Diff$ as
 	\[
@@ -1764,12 +1750,12 @@ uitgedruk word.
 		\label{2nd_f_eqn}
 	\end{align}
 
-	\begin{exercise}
-		Bevestig dat vergelykings \eqref{1st_f_eqn} en \eqref{2nd_f_eqn}
-		korrek is.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise}
+	Bevestig dat vergelykings \eqref{1st_f_eqn} en \eqref{2nd_f_eqn}
+	korrek is.
+\end{exercise}
 \begin{figure}[t]
 	\[
 		\begin{tikzpicture}
@@ -1798,11 +1784,11 @@ uitgedruk word.
 	\ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n.
 	\ee
 	uitgedruk word.
-	\begin{exercise}
-		Bevestig die korrektheid van \eqref{standard_basis_R_n}.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise}
+	Bevestig die korrektheid van \eqref{standard_basis_R_n}.
+\end{exercise}
 \furtherexercises
 \begin{exercise} Beskou die volgende polinome in $\Poly_2$:
 	\[
@@ -1835,7 +1821,7 @@ uitgedruk word.
 
 
 
-\section{Line{\^e}re onafhanklikheid}
+\section{Line{\^e}re onafhanklikheid} \label{ACh2Sec2LinearIndependence}
 
 
 \begin{definition} 'n Lys van vektore $\ve{v}_1, \ve{v}_2, \ldots,
@@ -1889,11 +1875,11 @@ uitgedruk word.
 	\systeme{-k_1 + k_2 = 0, 2k_1 + k_2 = 0}
 	\ee
 	wat slegs die trivale oplossing $k_1 = 0$ en $k_2 = 0$ het.
-	\begin{exercise} Bevestig dat \eqref{system_from_r2_example} slegs die
-		triviale oplossing het.
-	\end{exercise}
-\end{example}
-
+	
+\end{example}movebackintoexample
+\begin{exercise} Bevestig dat \eqref{system_from_r2_example} slegs die
+	triviale oplossing het.
+\end{exercise}
 \begin{example} \label{example_about_lin_dep_1} Die vektore $\ve{f}_1 =
 	(-1, \, 2)$, $\ve{f}_2 = (1, \,1)$, $\ve{f}_3 = (2, \, -1)$ uit
 	Voorbeeld  \ref{three_vectors_spanning_R2_example} is line{\^e}r
@@ -1910,17 +1896,17 @@ uitgedruk word.
 	\be \label{supposed_soln}
 	k_1 = t, \, k_2 = -t, \, k_3 = t, \quad t \in \mathbb{R}.
 	\ee
-	\begin{exercise}
-		Wys dat \eqref{system_from_r2_example_new} die
-		oplossingsversameling \eqref{supposed_soln} het.
-	\end{exercise}
+	
 	Byvoorbeeld, vir $t=2$, is
 	\[
 		2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
 	\]
 	sodat \eqref{eqn_to_check_lin_ind} non-triviale oplossings het.
-\end{example}
-
+\end{example}movebackintoexample
+\begin{exercise}
+	Wys dat \eqref{system_from_r2_example_new} die
+	oplossingsversameling \eqref{supposed_soln} het.
+\end{exercise}
 \begin{example} 
 	\label{new_basis_for_poly_3}
 	Die lys polinome
@@ -2104,7 +2090,7 @@ te dink.
 
 
 
-\section{Basis en dimensie}
+\section{Basis en dimensie} \label{ACh2Sec3BasisDimension}
 
 
 \begin{definition} 'n Lys vektore $\ve{e}_1$, $\ve{e}_2$, $\ldots$,
@@ -2292,29 +2278,29 @@ Daar is 'n meer direkte manier om oor 'n basis te dink.
 		herskryf.
 	\end{ramanujansays}
 
+
+
+\end{example}movebackintoexample (both)
 	\begin{exercise} Veronderstel $X = \left\{\mbox{\pmglyph{\HGi}},
-		\mbox{\pmglyph{\He}}, \mbox{\pmglyph{\HZxi}} \right\}$. 
-		\begin{enumerate} 
-			\item Evalueer die funksie $\ve{f}_{\mbox{\tiny
+	\mbox{\pmglyph{\He}}, \mbox{\pmglyph{\HZxi}} \right\}$. 
+	\begin{enumerate} 
+		\item Evalueer die funksie $\ve{f}_{\mbox{\tiny
 				\pmglyph{\HGi}}}$ vir elke $x \in X$.
-			\item Wys dat elke funksie $\ve{f} \in \Fun(X)$ as 'n
-				line{\^e}re kombinasie van $\ve{f}_{\mbox{\tiny
+		\item Wys dat elke funksie $\ve{f} \in \Fun(X)$ as 'n
+		line{\^e}re kombinasie van $\ve{f}_{\mbox{\tiny
 				\pmglyph{\HGi}}}$, $\ve{f}_{\mbox{\tiny \pmglyph{\He}}}$ en
-				$\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}}}$ geskryf kan word.
-		\end{enumerate}
-	\end{exercise}
+		$\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}}}$ geskryf kan word.
+	\end{enumerate}
+\end{exercise}
 
-	\begin{exercise} Nou, laat $X$ 'n arbitr{\^e}re eindige versameling
-		wees. Oorweeg die versameling funksies 
-		\[
-			\ve{f}_a, \, a \in X
-		\]
-		Wys dat hierdie versameling (i) $\Fun(X)$ span en (ii) line{\^e}r
-		onafhanklik is.
-	\end{exercise}
-
-\end{example}
-
+\begin{exercise} Nou, laat $X$ 'n arbitr{\^e}re eindige versameling
+	wees. Oorweeg die versameling funksies 
+	\[
+	\ve{f}_a, \, a \in X
+	\]
+	Wys dat hierdie versameling (i) $\Fun(X)$ span en (ii) line{\^e}r
+	onafhanklik is.
+\end{exercise}
 \begin{example} $\Trig_n$ is $(2n+1$)-dimensioneel, met basis
 	\begin{multline}
 		\ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x)
@@ -2343,14 +2329,14 @@ Daar is 'n meer direkte manier om oor 'n basis te dink.
 	\begin{equation} \label{kronecker_for_matrix_basis}
 		(\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
 	\end{equation}
-	\begin{exercise} Kontroleer dat \eqref{kronecker_for_matrix_basis}
-		wel die korrekte formule vir die matrikselemente van $\mat{E}_{ij}$
-		gee.
-	\end{exercise}
+	***
 \end{ramanujansays}
 
-\end{example} 
-
+\end{example} movebackintoexample
+***\begin{exercise} Kontroleer dat \eqref{kronecker_for_matrix_basis}
+	wel die korrekte formule vir die matrikselemente van $\mat{E}_{ij}$
+	gee.
+\end{exercise}
 
 \begin{example} Die standaard basis van $\Mat_{2,2}$ is
 	\[
@@ -2488,10 +2474,10 @@ kombinasie van die voorafgaande vektore $\ve{v}_1, \ve{v}_2, \ldots,
 	\[
 		\ve{v}_1, \ve{v}_4, \ve{v}_6.
 	\]
-	\begin{exercise} Doen die drie `bevestig self'-bewerkings hierbo.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise} Doen die drie `bevestig self'-bewerkings hierbo.
+\end{exercise}
 Die volgende resultate wys dat sifting a baie nuttige manier is om 'n basis
 vir 'n vektorruimte te konstrueer!
 
@@ -2667,7 +2653,7 @@ vir 'n vektorruimte te konstrueer!
 
 
 
-\section{Ko{\"o}rdinaatvektore}
+\section{Ko{\"o}rdinaatvektore}\label{ACh2Sec4CoordinateVectors}
 
 \begin{definition} Laat $\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots,
 	\ve{b}_n \bclose$ 'n basis vir vektorruimte $V$ wees, en laat $\ve{v}
@@ -2703,15 +2689,15 @@ vir 'n vektorruimte te konstrueer!
 			2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) +
 			\frac{9}{2}(x^2 + x +1)
 		\]
-		\begin{exercise} Bevestig dit!
-		\end{exercise}
+	***	
 		\[ 
 			[\ve{p}]_\basis{B} = \cvector{ -4 \\ - \frac{5}{2} \\
 			\frac{9}{2} }
 		\]
 	\end{solution}
 \end{example}
-
+***movebackintoexample\begin{exercise} Bevestig dit!
+\end{exercise}
 \begin{example} Vind die ko{\"o}rdinaatvektore van $\ve{v}$ en $\ve{w}$ in
 	Figuur \ref{v_and_w_in_basis_B} met betrekking tot die basis $\basis{B}
 	= \bopen \ve{b}_1, \ve{b}_2 \bclose$.
@@ -2778,8 +2764,7 @@ vir 'n vektorruimte te konstrueer!
 			\sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x -
 			\frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x.
 		\]
-		\begin{exercise} Bevestig hierdie berekeninge!
-		\end{exercise}
+	***	
 		Gevolglik
 		\[
 			[\ve{f}]_\basis{S} = \cvector{ \frac{1}{2} \\ - \frac{3}{4} \\
@@ -2787,7 +2772,8 @@ vir 'n vektorruimte te konstrueer!
 		\] \, .
 	\end{solution}
 \end{example}
-
+***movebackintoexample\begin{exercise} Bevestig hierdie berekeninge!
+\end{exercise}
 \begin{lemma} \label{lin_of_coord_vectors} Laat $\basis{B} = \bopen
 	\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose$ 'n basis vir 'n
 	vektorruimte $V$ wees. Dan het ons dat vir alle vektore $\ve{v}, \ve{w}
@@ -2852,7 +2838,7 @@ vir 'n vektorruimte te konstrueer!
 \end{exercise}
 
 
-\section{Basisverandering} \label{change-of-basis-sec}
+\section{Basisverandering} \label{ACh2Sec5ChangeOfBasis}
 \subsection{Ko{\"o}rdinaatvektore verskil in verskillende basisse}
 Veronderstel dat $\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose$ en
 $\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose$ twee verskillende basisse
@@ -2861,38 +2847,38 @@ vir $\mathbb{R}^2$ is, ge{\"i}llustreer soos volg:
 \begin{figure}[h]
 	\centering
 	\begin{minipage}{.4\linewidth}
-		\[
+		
 			\begin{tikzpicture}[scale=0.4]
 				\draw[very thick, red, ->] (0,0) -- node[pos=1.3]
 				{$\ve{b}_1$} (2,1); 
 				\draw[very thick, red, ->] (0,0) -- node[pos=1.3]
 				{$\ve{b}_2$} (1,2);
 			\end{tikzpicture}
-		\]
+		
 		\subcaption{Die basis $\basis{B} = \bopen \ve{b}_1, \ve{b}_2
 		\bclose$}
 
 	\end{minipage}
 	\begin{minipage}{.4\linewidth}
-		\[
+		
 			\begin{tikzpicture}[scale=0.4]
 				\draw[very thick, blue, ->] (0,0) -- node[pos=1.5]
 				{$\ve{c}_1$} (1,0); 
 				\draw[very thick, blue, ->] (0,0) -- node[pos=1.5]
 				{$\ve{c}_2$} (-1,1);
 			\end{tikzpicture}
-		\]
+	
 		\subcaption{Die basis $\basis{C} = \bopen \ve{c}_1, \ve{c}_2
 		\bclose$}
 	\end{minipage}
 	\caption{Twee verskillende basisse vir $\mathbb{R}^2$}
 \end{figure}
 Veronderstel ons word 'n vektor $\ve{w} \in \mathbb{R}^2$ gegee:
-\[
+
 	\begin{tikzpicture}[scale=0.4]
 		\draw[thick, ->] (0,0) -- node[pos=1.3] {$\ve{w}$} (-4, 1);
 	\end{tikzpicture}
-\]
+
 Ons wil die ko{\"o}rdinaatvektor van \emph{dieselfde} vektor $\ve{w}$
 relatief tot twee verskillende basisse $\basis{B}$ en $\basis{C}$ bereken.
 
@@ -2910,7 +2896,7 @@ Aan die anderkant, in basis $\basis{C}$ het ons
 \end{equation}
 \begin{figure}
 	\begin{minipage}{0.5\linewidth}
-		\[
+		
 			\begin{tikzpicture}[scale=0.5]
 				\draw[red, dotted] (-9, -9) -- (3, -3);
 				\draw[red, dotted] (-8, -7) -- (4, -1);
@@ -2935,11 +2921,11 @@ Aan die anderkant, in basis $\basis{C}$ het ons
 				{$\ve{b}_2$} (1,2);
 				\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1);
 			\end{tikzpicture}
-		\]
+		
 		\subcaption{$\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2$}
 	\end{minipage}
 	\begin{minipage}{0.5\linewidth}
-		\[
+	
 			\begin{tikzpicture}[scale=0.5]
 				\draw[blue, dotted] (-6, 3) -- (0, -3);
 				\draw[blue, dotted] (-5, 3) -- (1, -3);
@@ -2963,7 +2949,7 @@ Aan die anderkant, in basis $\basis{C}$ het ons
 				{$\ve{c}_1$} (-1,1);
 				\draw[thick, ->] (0,0) -- node[pos=1.2] {$\ve{w}$} (-4,1);
 			\end{tikzpicture}
-		\]
+	
 		\subcaption{$\ve{w} = \ve{c}_1 - 3 \ve{c}_2$}
 	\end{minipage}
 
@@ -2990,7 +2976,7 @@ Die beste benadering is om elke vektor in $\basis{B}$ as 'n line{\^e}re
 kombinasie van die basisvektore in $\basis{C}$ uit te druk. In die volgende
 figuur word die vektore $\ve{b}_1$ en $\ve{b}_2$ uitgebeeld teen die
 agtergrond van die basis $\basis{C}$:
-\[
+
 	\begin{tikzpicture}[scale=0.5]
 		\draw[blue, dotted] (-6, 3) -- (0, -3);
 		\draw[blue, dotted] (-5, 3) -- (1, -3);
@@ -3018,7 +3004,7 @@ agtergrond van die basis $\basis{C}$:
 		(1,2);
 
 	\end{tikzpicture}
-\]
+
 Ons lees af dat:
 \begin{align} \label{b_in_terms_of_c}
 	\ve{b}_1 &= \ve{c}_1 + 3 \ve{c}_2 \\
@@ -3221,9 +3207,9 @@ Ons kan nou die volgende stelling bewys.
 
 
 
-\chapter{Line{\^e}re afbeeldings}
+\chapter{Line{\^e}re afbeeldings} \label{ACh3LinearMaps}
 
-\section{Definisie en Voorbeelde}
+\section{Definisie en Voorbeelde}\label{ACh3Sec1DefinitionsExamples}
 
 Herinner jouself daaraan dat 'n \emph{funksie} (of 'n \emph{afbeelding}) $f
 : X \rightarrow Y$ van 'n versameling $X$ na 'n versameling $Y$ maar net
@@ -3236,19 +3222,20 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 
 
 \begin{figure}[h]
-	\[
+	\begin{center}
 		\begin{tikzpicture}
-			\draw (-2, 0) circle (1);
-			\draw (2,0) circle (1);
-			\node at (-2, -1.3) {$X$};
-			\node at (2, -1.3) {$Y$};
-			\draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {$f$}
-			(0.8, 0.3);
-			\node (a) at (-2, -0.5) {$x$};
-			\node (b) at (2, -0.5) {$f(x)$};
-			\draw[|->] (a) to[out=-20, in=200] (b);	
+		\draw (-2, 0) circle (1);
+		\draw (2,0) circle (1);
+		\node at (-2, -1.3) {$X$};
+		\node at (2, -1.3) {$Y$};
+		\draw[->] (-0.8, 0.3) to[out=30, in=150] node[above] {$f$}
+		(0.8, 0.3);
+		\node (a) at (-2, -0.5) {$x$};
+		\node (b) at (2, -0.5) {$f(x)$};
+		\draw[|->] (a) to[out=-20, in=200] (b);	
 		\end{tikzpicture}
-	\]
+	\end{center}
+		
 	\caption{\label{explanation_of_mapsto} 'n Funksie $f : X \rightarrow
 	Y$.}
 \end{figure}
@@ -3308,31 +3295,26 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 		&= x_1 + x_2
 	\end{align*}
 	Hier is 'n grafiese weergawe van hierdie bewys:
-	\[
-		\begin{tikzpicture}[xscale=1.5]
-			\draw[<->] (-1, 0) -- (3, 0);
-			\draw[<->] (0, -1) -- (0, 3);
-			\draw[very thick, red, ->] (0,0) -- node[above left] {$\ve{v}$}
-			(0.5, 1) ;
-			\draw[very thick, red, ->] (0.5,1) -- node[above left]
-			{$\ve{w}$} (1.5, 1.5) ;
-			\draw[dotted] (0.5, 1) -- (0.5, 0);
-			\draw[dotted] (1.5, 1.5) -- (1.5, 0);
-			\draw[very thick, red, ->] (0,0) -- node[below] {$T(\ve{v})$}
-			(0.5, 0) ;
-			\draw[very thick, red, ->] (0.5, 0) -- node[below]
-			{$T(\ve{w})$} (1.5, 0) ;
-			\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
-			\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
-		\end{tikzpicture}
-	\]
+\begin{center}
+	\begin{tikzpicture}[xscale=1.5]
+	\draw[<->] (-1, 0) -- (3, 0);
+	\draw[<->] (0, -1) -- (0, 3);
+	\draw[very thick, red, ->] (0,0) -- node[above left] {$\ve{v}$} (0.5, 1) ;
+	\draw[very thick, red, ->] (0.5,1) -- node[above left] {$\ve{w}$} (1.5, 1.5) ;
+	\draw[dotted] (0.5, 1) -- (0.5, 0);
+	\draw[dotted] (1.5, 1.5) -- (1.5, 0);
+	\draw[very thick, red, ->] (0,0) -- node[below] {$T(\ve{v})$} (0.5, 0) ;
+	\draw[very thick, red, ->] (0.5, 0) -- node[below] {$T(\ve{w})$} (1.5, 0) ;
+	\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
+	\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
+	\end{tikzpicture}
+\end{center}
 
 
+\end{example}movebackintoexampel
 	\begin{exercise} Bewys algebra{\"i}es dat $T(k \ve{v}) = k T(\ve{v})$,
-		sodat $T$ 'n line{\^e}re afbeelding is.
-	\end{exercise}
-\end{example}
-
+	sodat $T$ 'n line{\^e}re afbeelding is.
+\end{exercise}
 
 
 \begin{example}[Rotasie] \label{rotation_as_linear_map}Neem 'n vaste hoek
@@ -3344,18 +3326,19 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 	\end{align*}
 	is 'n line{\^e}re afbeelding, met 'n soortgelyke grafiese argument as
 	in Voorbeeld \ref{projection_map_example}. 
-	\[
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
-			{$\ve{v}$} ;
-			\draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {$R
-			(\ve{v})$};
-			\draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt,
-			right] {$\theta$} ;
-		\end{tikzpicture}
-	\]
+	\begin{center}
+	\begin{tikzpicture}
+	\draw[<->] (-1, 0) -- (2, 0);
+	\draw[<->] (0, -1) -- (0, 2);
+	\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
+	{$\ve{v}$} ;
+	\draw[very thick, red, ->] (0,0) --  (70:1.5) node[above] {$R
+		(\ve{v})$};
+	\draw (30:0.5) arc (30:70:0.5) node[xshift=2pt, yshift=2pt,
+	right] {$\theta$} ;
+	\end{tikzpicture}	
+	\end{center}
+	
 \end{example}
 
 
@@ -3405,12 +3388,12 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 		\ve{p} & \mapsto \ve{p}' \, 
 	\end{align*}
 	interpreteer word. Byvoorbeeld, $D(2x^3 - 6x + 2) = 6x - 6$.
-	\begin{exercise} 
-		(a) Hoekom is $D$ 'n afbeelding van $\Poly_n$ na $\Poly_{n-1}$? (b)
-		Bevestig dat $D$ line{\^e}r is.
-	\end{exercise}
-\end{example}
-
+	
+\end{example}movebackintoexample
+\begin{exercise} 
+	(a) Hoekom is $D$ 'n afbeelding van $\Poly_n$ na $\Poly_{n-1}$? (b)
+	Bevestig dat $D$ line{\^e}r is.
+\end{exercise}
 \begin{example}(Anti-afgeleide) Die operasie `find die unieke
 	anti-afgeleide met nul as konstante term' kan as 'n line{\^e}re
 	afbeelding
@@ -3419,12 +3402,12 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 		\ve{p} & \mapsto \int_0^x \ve{p}(t) \, dt 
 	\end{align*}
 	interpreteer word. Byvoorbeeld, $A(2x^3 - 6x + 2) = 4 x^4 - 3x^2 + 2x$.
-	\begin{exercise} (a) Bevestig die korrektheid van die laaste sin. (b)
-		Hoekom is $A$ 'n afbeelding vanaf $\Poly_n$ na $\Poly_{n+1}$? (c)
-		Bevestig dat $A$ line{\^e}r is.
-	\end{exercise} 
-\end{example}
-
+	
+\end{example}movebackintoexample
+\begin{exercise} (a) Bevestig die korrektheid van die laaste sin. (b)
+	Hoekom is $A$ 'n afbeelding vanaf $\Poly_n$ na $\Poly_{n+1}$? (c)
+	Bevestig dat $A$ line{\^e}r is.
+\end{exercise} 
 \begin{example}[Skuifafbeelding] Definieer die `skuif aan met 1'-afbeelding
 	\label{shift_example}
 	\begin{align*}
@@ -3432,23 +3415,24 @@ op $f(x) \in Y$ afbeeld deur die funksie $f$.  Sien Figuur
 		\ve{p} & \mapsto S( \ve{p})
 	\end{align*}
 	as $S(\ve{p})(x) = \ve{p}(x-1)$. 
-	\begin{exercise} Gaan na dat $S$ 'n line{\^e}re afbeelding is.
-	\end{exercise}
-	Oorweeg die geval $n=3$. In terme van die standaard basis
-	\[
-		\ve{p}_0 (x) = 1, \, \ve{p}_1 (x) = x, \, \ve{p}_2 (x) = x^2, \,
-		\ve{p}_3 (x) = x^3
-	\]
-	van $\Poly_3$, het ons:
-	\begin{align*}
-		S(\ve{p}_0) &= \ve{p}_0 \\
-		S(\ve{p}_1) &= \ve{p}_1 - \ve{p}_0 \\
-		S(\ve{p}_2) &= \ve{p}_2 - 2 \ve{p}_1 + \ve{p}_0 \\
-		S(\ve{p}_3) &= \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0
-	\end{align*}
-	\begin{exercise} Bevestig dit.
-	\end{exercise}
-\end{example}
+	
+\end{example}movebackintoexample (both)
+\begin{exercise} Gaan na dat $S$ 'n line{\^e}re afbeelding is.
+\end{exercise}
+Oorweeg die geval $n=3$. In terme van die standaard basis
+\[
+\ve{p}_0 (x) = 1, \, \ve{p}_1 (x) = x, \, \ve{p}_2 (x) = x^2, \,
+\ve{p}_3 (x) = x^3
+\]
+van $\Poly_3$, het ons:
+\begin{align*}
+S(\ve{p}_0) &= \ve{p}_0 \\
+S(\ve{p}_1) &= \ve{p}_1 - \ve{p}_0 \\
+S(\ve{p}_2) &= \ve{p}_2 - 2 \ve{p}_1 + \ve{p}_0 \\
+S(\ve{p}_3) &= \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0
+\end{align*}
+\begin{exercise} Bevestig dit.
+\end{exercise}
 \begin{example}[Matrikse dien as line{\^e}re afbeeldings]
 	Elke $n \times m$-matriks $\mat{A}$ induseer 'n \emph{line{\^e}re
 	afbeelding}
@@ -3598,29 +3582,23 @@ hele vektorruimte gedefinieer is (dit is waarna die `bestaan' deel verwys).
 	die aksie van die `anti-kloksgewyse rotasie met $\theta$'-afbeelding
 	$R$ van Voorbeeld \ref{rotation_as_linear_map} met betrekking tot die
 	standaard basis $\ve{e}_1, \ve{e}_2$ van $\mathbb{R}^2$. 
-	\[
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right]
-			{$\ve{e}_1$};
-			\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right]
-			{$R(\ve{e}_1)$};
-			\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt,
-			yshift=-2pt] {$\theta$};
-		\end{tikzpicture}
-	\qquad
-		\begin{tikzpicture}
-			\draw[<->] (-1, 0) -- (2, 0);
-			\draw[<->] (0, -1) -- (0, 2);
-			\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right]
-			{$\ve{e}_2$};
-			\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left]
-			{$R(\ve{e}_2)$};
-			\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt,
-			yshift=2pt] {$\theta$};
-		\end{tikzpicture}
-	\]
+\begin{align*}
+\begin{tikzpicture}
+\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};
+\end{tikzpicture}
+\qquad
+\begin{tikzpicture}
+\draw[<->] (-1, 0) -- (2, 0);
+\draw[<->] (0, -1) -- (0, 2);
+\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;
+\end{tikzpicture}
+\end{align*}
 	Vanuit die figuur het ons:
 	\begin{align*}
 		R(\ve{e}_1) &= (\cos \theta, \sin \theta) & R(\ve{e}_2) &= (-\sin
@@ -3708,7 +3686,7 @@ hele vektorruimte gedefinieer is (dit is waarna die `bestaan' deel verwys).
 	$\mathbb{R}^3$.	
 \end{exercise}
 
-\section{Komposisie van line{\^e}re afbeeldings}
+\section{Komposisie van line{\^e}re afbeeldings}\label{ACh3Sec2CompositionOfLinearMaps}
 \begin{definition}
 	As $S : U \rightarrow V$ en $T : V \rightarrow W$ line{\^e}re
 	afbeeldings is, dan is die \emph{komposisie van $T$ met $S$} die
@@ -3719,28 +3697,25 @@ hele vektorruimte gedefinieer is (dit is waarna die `bestaan' deel verwys).
 	waar $\ve{u}$ in $U$ is.
 \end{definition}
 Sien Figuur \ref{composition_of_linear_maps_fig}.
+
 \begin{figure}[h]
-\[
- 	\begin{tikzpicture}[xscale=1.2]
-		\draw (0, 0) circle (1);
-		\draw (-4,0) circle (1);
-		\draw (-8,0) circle (1);
-		\node at (0, -1.3) {$U$};
-		\node at (-4, -1.3) {$V$};
-		\node at (-8, -1.3) {$W$};
-		\draw[->] (-1.2, 0.3) to[out=150, in=30] node[above] {$S$} (-2.8,
-		0.3); 
-		\draw[->] (-5.2, 0.3) to[out=150, in=30] node[above] {$T$} (-6.8,
-		0.3); 
-		\draw[->] (-1.2, 0.6) to[out=140, in=40] node[above] {$T\circ S$}
-		(-7, 0.6);
-		\node (u) at (0, -0.5) {$\ve{u}$};
-		\node (v) at (-4, -0.5) {$S(\ve{u})$};
-		\node (w) at (-8, -0.5) {$T(S(\ve{u}))$};
-		\draw[|->] (u) to[out=170, in=10] (v);
-		\draw[|->] (v) to[out=170, in=10] (w);			
+	\centering
+	\begin{tikzpicture}[xscale=1.2]
+	\draw (0, 0) circle (1);
+	\draw (-4,0) circle (1);
+	\draw (-8,0) circle (1);
+	\node at (0, -1.3) {$U$};
+	\node at (-4, -1.3) {$V$};
+	\node at (-8, -1.3) {$W$};
+	\draw[->] (-1.2, 0.3) to[out=150, in=30] node[above] {$S$} (-2.8, 0.3);
+	\draw[->] (-5.2, 0.3) to[out=150, in=30] node[above] {$T$} (-6.8, 0.3);
+	\draw[->] (-1.2, 0.6) to[out=140, in=40] node[above] {$T\circ S$} (-7, 0.6);
+	\node (u) at (0, -0.5) {$\ve{u}$};
+	\node (v) at (-4, -0.5) {$S(\ve{u})$};
+	\node (w) at (-8, -0.5) {$T(S(\ve{u}))$};
+	\draw[|->] (u) to[out=170, in=10] (v);
+	\draw[|->] (v) to[out=170, in=10] (w);			
 	\end{tikzpicture}
-\]
 \caption{ \label{composition_of_linear_maps_fig} Komposisie van line{\^e}re
 	afbeeldings.}
 \end{figure}
@@ -3823,11 +3798,11 @@ Sien Figuur \ref{composition_of_linear_maps_fig}.
 			geval van polinome!
 		\end{ramanujansays}
 	\end{solution}
-	\begin{exercise} Is $A \circ D = \id_{\Poly_{n+1}}$? As dit is, bewys
-		dit.  Indien nie, gee 'n eksplisiete teenvoorbeeld.
-	\end{exercise}
-\end{example}
 
+\end{example}movebackintoexample
+	\begin{exercise} Is $A \circ D = \id_{\Poly_{n+1}}$? As dit is, bewys
+	dit.  Indien nie, gee 'n eksplisiete teenvoorbeeld.
+\end{exercise}
 \furtherexercises
 
 \begin{exercise}
@@ -3851,7 +3826,7 @@ Sien Figuur \ref{composition_of_linear_maps_fig}.
 	p(x-1)$ wees. Bereken $S \circ M$ en $ M \circ T$. Is hulle gelyk?
 \end{exercise}
 
-\section{Isomorfismes van vektorruimtes}
+\section{Isomorfismes van vektorruimtes} \label{ACh3Sec3Isomorphisms}
 Veronderstel jy het twee versamelings,
 \[
 	A = \{ \mbox{vo{\"e}l}, \mbox{oog}, \mbox{persoon} \} \quad \mbox{en}
@@ -3959,11 +3934,12 @@ Dit lei tot die volgende definisie.
 			\cdots + a_n x^{n-1} 
 		\end{align*}
 	\end{solution}
-	\begin{exercise} Maak seker dat hierdie afbeeldings line{\^e}r is.
-	\end{exercise}
+***	
 	Ons het duidelik dat $T \circ S = \id_{\mathbb{R}^n}$ en $S \circ T =
 	\id_{\Poly_{n-1}}$.
-\end{example}
+\end{example}***movebackintoexample
+\begin{exercise} Maak seker dat hierdie afbeeldings line{\^e}r is.
+\end{exercise}
 Ons sal nou wys dat tot op die vlak van isomorfisme, bestaan daar net een
 vektorruimte van elke dimensie!
 \begin{theorem} Twee eindigdimensionele vektorruimtes $V$ en $W$ is
@@ -4153,7 +4129,7 @@ As hulle is, gee 'n eksplisiete isomorfisme tussen hulle.  Indien nie,
 
 
 
-\section{Line{\^e}re afbeeldings en matrikse}
+\section{Line{\^e}re afbeeldings en matrikse}\label{ACh3Sec4LinearMapsMatrices}
 
 \begin{definition} \label{matrix_of_linear_map_defn} Laat $T : V
 	\rightarrow W$ 'n line{\^e}re afbeelding
@@ -4534,7 +4510,7 @@ bereken.
 
 
 
-\section{Kern en waardeversameling van 'n line{\^e}re afbeelding}
+\section{Kern en waardeversameling van 'n line{\^e}re afbeelding}\label{ACh3Sec5KernelRange}
 
 \begin{definition} Laat $T : V \rightarrow W$ 'n line{\^e}re afbeelding
 	tussen vektorruimtes $V$ en $W$ wees. Die \emph{kern} van $T$, geskryf
@@ -4732,16 +4708,15 @@ definisie gee.
 			\}.
 		\end{equation}
 		As jy my glo, dan is die prentjie soos volg:
-		\[
-			\begin{tikzpicture}
-				\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-				\draw (1.5, 1) -- (1.5,3.5) node[right] {$\Ker{C}$};
-				\draw (1.5, -0.1) -- (1.5, -2);
-				\node at (3.3, 1) {$\Im(C)$};	
-				\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5)
-				node[right] {$\ve{a}$};
-			\end{tikzpicture}
-		\]
+	\begin{center}
+		\begin{tikzpicture}
+		\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+		\draw (1.5, 1) -- (1.5,3.5) node[right] {$\Ker{C}$};
+		\draw (1.5, -0.1) -- (1.5, -2);
+		\node at (3.3, 1) {$\Im(C)$};	
+		\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
+		\end{tikzpicture}
+	\end{center}
 		Laat ek vergelyking \eqref{image-of-C} bewys. Per definisie is die
 		beeld van $C$ die deelruimte van $\mathbb{R}^3$ bestaande uit alle
 		vektore $\ve{w}$ van die vorm $\ve{w} = \ve{a} \times \ve{v}$ vir
@@ -4755,17 +4730,14 @@ definisie gee.
 		Ons kan inderdaad $\ve{v}$ kies om die vektor te wees wat verkry
 		word deur $\ve{u}$ met 90 grade kloksgewys te roteer in die vlak
 		$I$, en dit soos nodig te skaleer:
-		\[
-			\begin{tikzpicture}
-				\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
-				\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5)
-				node[right] {$\ve{a}$};
-				\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5)
-				node[right, xshift=-6pt, yshift=3pt] {$\ve{u}$};
-				\draw[very thick, green, ->] (1.5,1) -- (2, 1)
-				node[xshift=-4pt, right] {$\ve{v}$};
-			\end{tikzpicture}
-		\]
+	\begin{center}
+		\begin{tikzpicture}
+		\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+		\draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {$\ve{a}$};
+		\draw[very thick, blue, ->] (1.5,1) -- (1.75, 1.5) node[right, xshift=-6pt, yshift=3pt] {$\ve{u}$};
+		\draw[very thick, green, ->] (1.5,1) -- (2, 1) node[xshift=-4pt, right] {$\ve{v}$};
+		\end{tikzpicture}
+	\end{center}
 		In terme van 'n formule het ons
 		\[
 			\ve{v} = \frac{|\ve{u}|}{|\ve{a}|} \ve{u} \times \ve{a} .
@@ -5074,7 +5046,7 @@ definisie gee.
 
 
 
-\section{Injektiewe en surjektiewe line{\^e}re afbeeldings}
+\section{Injektiewe en surjektiewe line{\^e}re afbeeldings}\label{ACh3Sec6InjectiveSurjective}
 
 \begin{definition} 'n Funksie $f : X \rightarrow Y$ vanaf 'n versameling
 	$X$ na 'n versameling $Y$ word \emph{een-tot-een} (of \emph{injektief})
@@ -5230,8 +5202,8 @@ $\Rightarrow$. Veronderstel $V$ en $W$ is isomorfies. Dit is, daar bestaan
 
 
 
-\chapter{Eiewaardes en eievektore}
-\section{Definisie en Voorbeelde}
+\chapter{Eiewaardes en eievektore}\label{ACh4EigenvaluesEigenvectors}
+\section{Definisie en Voorbeelde}\label{ACh4Sec1DefsAndExamples}
 \begin{definition} Laat $T : V \rightarrow V$ 'n line{\^e}re bewerking op
 	'n vektorruimte $V$ wees. Ons s{\^e} dat $\lambda \in \mathbb{R}$ is 'n
 	\emph{eiewaarde van $T$} as daar 'n nie-nul vektor $\ve{v} \in V$
@@ -5515,7 +5487,7 @@ algebra{\"i}ese metode soos hieronder aangetoon.
 	\end{solution}
 \end{example}
 
-\section{Eievektore}
+\section{Eievektore}\label{ACh4Sec2Eigenvectors}
 In die vorige afdeling het ons opp eiewaardes gefokus.  Nou gaan ons
 eievektore bestudeer.
 
@@ -6017,7 +5989,8 @@ bereken.
 \end{exercise}
 
 
-\section{Diagonalisering van matrikse}\label{last-sec-of-W214}
+\section{Diagonalisering van matrikse}\label{ACh4Sec3DiagonalizingMatricies}
+
 \begin{definition} Ons s{\^e} dat 'n $n \times n$-matriks $\mat{A}$ is
 	\emph{diagonaliseerbaar} as daar 'n inverteerbare $n \times n$-matriks
 	$\mat{P}$ bestaan sodat $\mat{P}^{-1} \mat{A} \mat{P}$ 'n
@@ -6055,7 +6028,7 @@ bereken.
 \addappheadtotoc
 
 
-\chapter{Matrikshersiening}
+\chapter{Matrikshersiening}\label{AAppAReminderAboutMatrices}
 
 Kom ons onthou 'n paar goed oor matrikse en stel vas watter notasie ons
 gaan gebruik. 
@@ -6293,7 +6266,7 @@ Die \emph{transponering} van 'n $n \times m$-matriks $\mat{A}$ is die $m
 	(\mat{A}^T)_{ij} := \mat{A}_{ji}.
 \]
 
-\chapter{Hipervlakke}
+\chapter{Hipervlakke}\label{AAppBHypersurfaces}
 \begin{definition} Laat $f : \mathbb{R}^{n+1} \rightarrow \mathbb{R}$ 'n
 	funksie wees. Die \emph{nul-versameling} van $f$ is die deelversameling
 	$M \subset \mathbb{R}^{n+1}$ gegee deur
@@ -6323,16 +6296,15 @@ Die \emph{transponering} van 'n $n \times m$-matriks $\mat{A}$ is die $m
 			M = \{ (x,y) \in \mathbb{R}^2 : y^2 - x^2 - 1 = 0 \}
 		\]
 		wat 'n hiperbool is:
-		\[
+		\begin{center}
 			\begin{tikzpicture}[domain=-1.2:1.2]
-				\draw[<->] (-2,0) -- (2,0) node[below] {$x$};
-				\draw[<->] (0, -2) -- (0,2) node[right] {$y$};
-				\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
-				\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
-				%\draw[color=red, thick] plot[id=q]  (\x,
-				%{(\x-2)*\x*\x*(\x-1)});
+			\draw[<->] (-2,0) -- (2,0) node[below] {$x$};
+			\draw[<->] (0, -2) -- (0,2) node[right] {$y$};
+			\draw[very thick] plot[id=p]  ({sinh(\x)}, {cosh(\x)});
+			\draw[very thick] plot[id=p]  ({sinh(\x)}, {-cosh(\x)});
+			%\draw[color=red, thick] plot[id=q]  (\x, {(\x-2)*\x*\x*(\x-1)});
 			\end{tikzpicture}
-		\]
+		\end{center}
 		Om te wys dat $M$ 'n hipervlak is, bereken ons eers die
 		gradi{\"e}nt van $f$ by 'n algemene punt $\ve{r} = (x,y) \in
 		\mathbb{R}^2$:
