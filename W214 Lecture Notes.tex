@@ -667,10 +667,11 @@ Define scalar multiplication by a real number $k \in \mathbb{R}$ by
  k \cdot \ve{a} := \ve{a} \quad \mbox{and} \quad k \cdot \ve{b} := \ve{b}. \label{ne_14}
 \ee
 This is a well-defined scalar multiplication, since it allows us to multiply any element $\ve{v} \in V$ by a scalar $k$ and it outputs a well-defined element $k \cdot \ve{v} \in V$. 
+
+\end{example}
+movebackintoexample
 \begin{exercise} Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
 \end{exercise}
-\end{example}
-
 
 \begin{example}[The zero vector space] Define the set $Z$ by 
 \be
@@ -688,10 +689,12 @@ Finally define scalar multiplication by a scalar $k \in \mathbb{R}$ as:
 \be
  k \cdot \ve{z} := \ve{z}.
 \ee
-\begin{exercise} Show that this data satisfies the rules R1 to R8. 
-\end{exercise}
+
 
 \end{example}
+movebackintoexample
+\begin{exercise} Show that this data satisfies the rules R1 to R8. 
+\end{exercise}
 
 \begin{example}[$\mathbb{R}^n$] Define the set $\mathbb{R}^n$ by
 \be
@@ -709,9 +712,11 @@ Define scalar multiplication by
 \be
  k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n).
 \ee
+
+\end{example}
+move back into example
 \begin{exercise} Show that this data satisfies the rules R1 to R8. 
 \end{exercise}
-\end{example}
 
 \begin{example}[$\mathbb{R}^\infty$] Define the set $\mathbb{R}^\infty$ by
 \be
@@ -729,14 +734,14 @@ the infinite sequence whose components are all zero. Finally, define scalar mult
 \be
  k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
 \ee
-\begin{exercise} Show that this data satisfies the rules R1 to R8.
-\end{exercise}
+
 
 \begin{ramanujansays} Thinking about infinity is an important part of mathematics. Have you watched the movie about me called {\em The man who knew infinity}?
 \end{ramanujansays}
 \end{example}
-
-
+movebackintoexample
+\begin{exercise} Show that this data satisfies the rules R1 to R8.
+\end{exercise}
 \begin{example}[Functions on a set] Let $X$ be any set. Define the set $\Fun(X)$ of {\em real-valued functions on $X$} by
 \be
 	\Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}.
@@ -757,12 +762,15 @@ Define scalar multiplication by
 \be
  (k \cdot \mathbf{f})(x) := k \mathbf{f}(x).
 \ee
+
+\end{example}
+movebackintoexample (all 3)
 \begin{exercise} Notation quiz! Say whether the following combination of symbols represents a real number or a function.
 	\begin{enumerate}
-	\item $\mathbf{f}$
-	\item $\mathbf{f}(x)$
-	\item $k \cdot \mathbf{f}$
-	\item $(k \cdot \mathbf{f})(x)$
+		\item $\mathbf{f}$
+		\item $\mathbf{f}(x)$
+		\item $k \cdot \mathbf{f}$
+		\item $(k \cdot \mathbf{f})(x)$
 	\end{enumerate}
 \end{exercise}
 
@@ -775,14 +783,14 @@ Define scalar multiplication by
 
 \begin{exercise} Show that the data above satisfies the rules R1 to R8, so that $\Fun(X)$ is a vector space.
 \end{exercise}
-\end{example}
-
 
 \begin{example}[Matrices] \label{matrices_example_vec_space} the set $\Mat_{n, m}$ of all $n \times m$ matrices is a vector space. See Appendix \ref{reminder-matrices-chap} for a reminder about matrices.
 
+
+\end{example}
+movebackintoexample 
 \begin{exercise} Show that when equipped with the addition operation, zero vector, and scalar multiplication operation as defined in Appendix \ref{reminder-matrices-chap}, the set $\Mat_{n, m}$ of all $n \times m$ matrices is a vector space. 
 \end{exercise}
-\end{example}
 
 \begin{example} We will write $\Col_n$ for the vector space $\Mat_{n,1}$ of $n$-dimensional {\em column vectors},
 \[
@@ -790,6 +798,7 @@ Define scalar multiplication by
 \]
 So, $\Col_n$ `is' just $\mathbb{R}^n$, but we make explicit the fact that the components of the vectors are arranged in a column. 
 \end{example}
+
 
 
 
@@ -977,9 +986,12 @@ for some constants $a$ and $b$. So, if $\ve{v} = (x, \, y)$ and $\ve{v}' = (x', 
  &= 0.
 \end{align*}
 This also makes sense geometrically: if you look at the picture \eqref{pic_of_L1}, then you will see that adding two vectors $\ve{v}, \ve{v}'$ on $L$ by the head-to-tail method will produce another vector on $L$.  
+
+\end{example}
+movebackintoexample
 \begin{exercise} Complete the proof that $L$ is a subspace of $\mathbb{R}^2$ by checking that the zero vector is in $L$, and that multiplying a vector in $L$ by a scalar outputs a vector still in $L$.
 \end{exercise}
-\end{example}
+
 
 \begin{example}[Lines and planes in $\mathbb{R}^3$] Similarly a line $L$ or a plane $P$ through the origin in $\mathbb{R}^3$ is a subspace of $\mathbb{R}^3$:
 \be \label{pic_of_L}
@@ -1009,10 +1021,11 @@ This also makes sense geometrically: if you look at the picture \eqref{pic_of_L1
 
 \begin{example}[Zero vector space] If $V$ is a vector space, the the set $
 \{\ve{0}\} \subseteq V$ containing just the zero vector $\ve{0}$ is a subspace of $V$.
+
+\end{example}
+movebackintoexample
 \begin{exercise} Check this.
 \end{exercise}
-\end{example}
-
 \begin{example}[Non-example: Line not through origin] Be careful though --- not {\em every} line $L \subset \mathbb{R}^2$ is a subspace of $\mathbb{R}^2$. If $L$ does not go through the origin, then $\ve{0} \notin L$, so $L$ is not a subspace. 
 
 Another reason that $L$ is not a subspace is that it is not closed under addition: when we add two nonzero vectors $\ve{v}$ and $\ve{v}'$ on $L$, we end up with a vector $\ve{v} + \ve{v}'$ which does not lie on $L$:
@@ -1050,10 +1063,11 @@ Hence, by Lemma \ref{subspace_lem}, $\Cont(I)$ is a vector space in its own righ
  \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ differentiable} \}
  \]
 of differentiable functions on an open interval $I$ is a subspace of $\Fun (I)$. 
+
+\end{example}
+movebackintoexample
 \begin{exercise} Check this. Also, is $\Diff( I)$ a subspace of $\Cont(I)$?
 \end{exercise}
-\end{example}
-
 \begin{example}[Vector spaces of polynomials]
  A {\em polynomial} is a function $\ve{p} : \mathbb{R} \rightarrow \mathbb{R}$ of the form
 \be
@@ -1064,10 +1078,11 @@ for some fixed real coefficients $a_0, \ldots, a_n$. Two polynomials $\ve{p}$ an
 For example, $2x^3 - x + 7$ is a polynomial of degree 3, while $x^5 - 2$ is a polynomial of degree 5. 
  We write the set of {\em all} polynomials as $\Poly$ and the set of all polynomials having degree less than or equal to $n$ as $\Poly_n$.
 
+
+\end{example} 
+movebackintoexample
 \begin{exercise} Check that $\Poly$ and $\Poly_n$ are subspaces of $\Cont (\mathbb{R})$.
 \end{exercise}
-\end{example} 
-
 \begin{example}[Trigonometric polynomials] \label{trig_poly_example} A {\em trigonometric polynomial} is a function $\ve{T} : \mathbb{R} \rightarrow \mathbb{R}$ of the form
 \begin{multline} \label{formula_for_trig_poly}
  \ve{T} (x) = a_0 + a_1 \cos(x) + b_1 \sin(x) + a_2 \cos(2x) + b_2 \sin(2x) + \cdots \\ + a_n \cos(nx) + b_n \sin(nx) \, .
@@ -1078,34 +1093,34 @@ The {\em degree} of a trigonometric polynomial is the highest multiple of $x$ wh
 \] 
 is a trigonometric polynomial of degree 3. We write the set of {\em all} trigonometric polynomials as $\Trig$ and the set of all trigonometric polynomials having degree less than or equal to $n$ as $\Trig_n$. 
 
+
+\end{example}
+movebackintoexample (both)
 \begin{exercise} Show that $\Trig$ and $\Trig_n$ are subspaces of $\Cont (\mathbb{R})$.
 \end{exercise}
 
 \begin{exercise} Consider the function $\ve{f} (x) = \sin^3(x)$. Show that $\ve{f} \in \Trig_3$ by writing it in the form \eqref{formula_for_trig_poly}. Hint: use the identities \label{trig_ex_early}
-\begin{align*}
- \sin(A) \sin(B) &= \frac{1}{2}(\cos(A-B) - \cos(A+B)) \\
- \sin(A) \cos(B) &= \frac{1}{2}(\sin(A-B) + \sin(A+B)) \\
- \cos(A)\cos(B) &= \frac{1}{2}(\cos(A-B) + \cos(A+B))
-\end{align*}
-which follow easily from the addition formulae 
-\begin{align*}
-\sin(A \pm B) &= \sin A \cos B \pm \cos A \sin B \\
-\cos(A \pm B) &= \cos A \cos B \mp \sin A \sin B.
-\end{align*}
+	\begin{align*}
+	\sin(A) \sin(B) &= \frac{1}{2}(\cos(A-B) - \cos(A+B)) \\
+	\sin(A) \cos(B) &= \frac{1}{2}(\sin(A-B) + \sin(A+B)) \\
+	\cos(A)\cos(B) &= \frac{1}{2}(\cos(A-B) + \cos(A+B))
+	\end{align*}
+	which follow easily from the addition formulae 
+	\begin{align*}
+	\sin(A \pm B) &= \sin A \cos B \pm \cos A \sin B \\
+	\cos(A \pm B) &= \cos A \cos B \mp \sin A \sin B.
+	\end{align*}
 \end{exercise}
-
-\end{example}
-
 
 \begin{example}[Solutions to linear differential equations] Fix constants $a,b$ and $c$. Let $V \subseteq \Diff(\mathbb{R})$ be the set of all solutions to the following differential equation:
 \[
  a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
 \]
+
+\end{example}
+movebackintoexample
 \begin{exercise} Show that $V$ is a subspace of $\Diff(\mathbb{R})$.
 \end{exercise} 
-\end{example}
-
-
 
 
 \furtherexercises
@@ -1186,10 +1201,11 @@ which is equivalent to the system of equations
 \be \label{no_soln1}
 \systeme{a_1 + 5a_2 -a_3 = -2, 3a_1 + a_2 = -1, 2a_1 + 2a_2 + 2a_3 = 3, 4a_2 + a_3 = 0}
 \ee
+
+\end{example}
+movebackintoexample
 \begin{exercise} Check that the system of equations \eqref{no_soln1} has no solution.
 \end{exercise}
-\end{example}
-
 \begin{example} Define the functions $\ve{f}, \ve{f}_1, \ve{f}_2 \in \Diff$ by
 \[
  \ve{f}(x) = \cos^3 x, \quad \ve{f}_1 (x) = \cos (x), \quad \ve{f}_2 (x) = \cos (3x).
@@ -1223,10 +1239,11 @@ See Figure \ref{spanning_set_R2}. Note that every vector $\ve{v}$ can be written
  (2,3) &= 2 \ve{f}_1 + \frac{2}{3} \ve{f}_2 + \frac{5}{3} \ve{f}_3 \label{2nd_f_eqn}
 \end{align}
 
+
+\end{example}
+movebackintoexample
 \begin{exercise} Check equations \eqref{1st_f_eqn} and \eqref{2nd_f_eqn}.
 \end{exercise}
-\end{example}
-
 \begin{figure}[t] 
 	\centering
 	\begin{tikzpicture}
@@ -1247,11 +1264,11 @@ because every vector $\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)$ can be written a
 \be \label{standard_basis_R_n}
  \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n.
 \ee
+
+\end{example}
+movebackintoexampel
 \begin{exercise} Check equation \eqref{standard_basis_R_n}.
 \end{exercise}
-\end{example}
-
-
 
 
 \furtherexercises
@@ -1310,10 +1327,10 @@ is equivalent to the system of equations
 \systeme{-k_1 + k_2 = 0, 2k_1 + k_2 = 0}
 \ee
 which has only the trivial solution $k_1 = 0$ and $k_2 = 0$.
+
+\end{example}movebackintoexample
 \begin{exercise} Check that \eqref{system_from_r2_example} has only the trivial solution.
 \end{exercise}
-\end{example}
-
 \begin{example} \label{example_about_lin_dep_1} The list of vectors $\ve{f}_1 = (-1, \, 2)$, $\ve{f}_2 = (1, \,1)$, $\ve{f}_3 = (2, \, -1)$ from Example  \ref{three_vectors_spanning_R2_example} is linearly dependent, because the equation
 \be \label{eqn_to_check_lin_ind}
  k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)
@@ -1326,16 +1343,16 @@ which has a one-dimensional vector space of solutions parameterized by $t$,
 \be \label{supposed_soln}
  k_1 = t, \, k_2 = -t, \, k_3 = t, \quad t \in \mathbb{R}.
 \ee
-\begin{exercise} Check that \eqref{system_from_r2_example_new} has the solution set \eqref{supposed_soln}.
-\end{exercise}
+
 For instance, for $t=2$, we have
 \[
  2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
 \]
 so that \eqref{eqn_to_check_lin_ind} has nontrivial solutions.
-\end{example}
+\end{example}movebackintoexample
 
-
+\begin{exercise} Check that \eqref{system_from_r2_example_new} has the solution set \eqref{supposed_soln}.
+\end{exercise}
 
 \begin{example} The list of polynomials  \label{new_basis_for_poly_3}
 \[
@@ -1553,22 +1570,24 @@ The formula on the right hand side of \eqref{defn_of_basis_of_functions} occurs 
 \ee 
 \end{ramanujansays}
 
-\begin{exercise} Suppose $X = \left\{\mbox{\pmglyph{\HGi}}, \mbox{\pmglyph{\He}}, \mbox{\pmglyph{\HZxi}} \right\}$. 
-\begin{enumerate} \item Evaluate the function $\ve{f}_{\mbox{\tiny \pmglyph{\HGi}}}$ at each $x \in X$.
-  \item Show that every function $\ve{f} \in \Fun(X)$ can be written as a linear combination of $\ve{f}_{\mbox{\tiny \pmglyph{\HGi}}}$, $\ve{f}_{\mbox{\tiny \pmglyph{\He}}}$ and $\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}}}$.
-\end{enumerate}
-\end{exercise}
 
-\begin{exercise} Now let $X$ be an arbitrary finite set. Consider the collection of functions 
-\[
-\ve{f}_a, \, a \in X
-\]
-Show that this collection (i) spans $\Fun(X)$ and (ii) is linearly independent.
-\end{exercise}
 
 \end{example}
 
+movebackintoexample (both)
 
+\begin{exercise} Suppose $X = \left\{\mbox{\pmglyph{\HGi}}, \mbox{\pmglyph{\He}}, \mbox{\pmglyph{\HZxi}} \right\}$. 
+	\begin{enumerate} \item Evaluate the function $\ve{f}_{\mbox{\tiny \pmglyph{\HGi}}}$ at each $x \in X$.
+		\item Show that every function $\ve{f} \in \Fun(X)$ can be written as a linear combination of $\ve{f}_{\mbox{\tiny \pmglyph{\HGi}}}$, $\ve{f}_{\mbox{\tiny \pmglyph{\He}}}$ and $\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}}}$.
+	\end{enumerate}
+\end{exercise}
+
+\begin{exercise} Now let $X$ be an arbitrary finite set. Consider the collection of functions 
+	\[
+	\ve{f}_a, \, a \in X
+	\]
+	Show that this collection (i) spans $\Fun(X)$ and (ii) is linearly independent.
+\end{exercise}
 
 \begin{example} $\Trig_n$ is $(2n+1)$-dimensional, with basis 
 \begin{multline}
@@ -1591,10 +1610,10 @@ which have a $1$ in the $i$th row and $j$th column and zeroes everywhere else.
 
 \end{ramanujansays}
 movebackintoramanujansays
+
+\end{example} movebackintoexample
 \begin{exercise} Check that \eqref{kronecker_for_matrix_basis} is indeed the correct formula for the matrix elements of $\mat{E}_{ij}$.
 \end{exercise}
-\end{example} 
-
 
 \begin{example} The standard basis of $\Mat_{2,2}$ is
 \[
@@ -1656,10 +1675,10 @@ and find no solutions (check this), so it remains. Our final sifted list is
 \[
  \ve{v}_1, \ve{v}_4, \ve{v}_6.
 \]
+
+\end{example}movebackintoexample
 \begin{exercise} Do the three `check this' calculations above.
 \end{exercise}
-\end{example}
-
 Sifting is a very useful way to construct a basis of a vector space!
 
 \begin{lemma} \label{sift_lemma_basis} If a list of vectors $\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n$ spans a vector space $V$, then sifting the list will result in a basis for $V$.
@@ -1784,14 +1803,15 @@ is called the {\em coordinate vector of $\ve{v}$ with respect to the basis $\bas
 \[
 2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) + \frac{9}{2}(x^2 + x +1)
 \]
-\begin{exercise} Check this!
-\end{exercise}
+
 \[ 
  [\ve{p}]_\basis{B} = \cvector{ -4 \\ - \frac{5}{2} \\ \frac{9}{2} }
 \]
 \end{solution}
 \end{example}
-
+movebackintoexample
+\begin{exercise} Check this!
+\end{exercise}
 \begin{example} \label{coord_vectors_finding_example}Find the coordinate vectors of $\ve{v}$ and $\ve{w}$ in Figure \ref{v_and_w_in_basis_B} with respect to the basis $\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose$.
 
 \begin{solution} By inspection, we see that $\ve{v} = 2 \ve{b}_1 - \ve{b}_2$, so that
@@ -1848,16 +1868,16 @@ of $\Trig_3$.
 \[ 
  \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x - \frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x.
 \]
-\begin{exercise} Check this!
-\end{exercise}
+
 Hence
 \[
  [\ve{f}]_\basis{S} = \cvector{ \frac{1}{2} \\ - \frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ - \frac{1}{4} \\ 0}
 \] \, .
 \end{solution}
 
-\end{example}
-
+\end{example}movebackintoexample
+\begin{exercise} Check this!
+\end{exercise}
 \begin{lemma} \label{lin_of_coord_vectors} Let $\basis{B} = \bopen \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose$ be a basis for a vector space $V$. Then for all vectors $\ve{v}, \ve{w} \in V$ and all scalars $k$ we have
 \begin{enumerate}[(a)]
  \item $[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} + [\ve{w}]_\basis{B}$
@@ -2251,11 +2271,11 @@ tikzalign
 \end{center}
 	
 
+
+\end{example}movebackintoexample
+
 \begin{exercise} Prove algebraically that $T(k \ve{v}) = k T(\ve{v})$, so that $T$ is a linear map.
 \end{exercise}
-\end{example}
-
-
 \begin{example}[Rotation] \label{rotation_as_linear_map}Fix an angle $\theta$. The function 
 \begin{align*}
 R : \mathbb{R}^2 & \rightarrow \mathbb{R}^2 \\
@@ -2310,20 +2330,20 @@ is a linear map because of the properties of the cross-product,
   \ve{p} & \mapsto \ve{p}' \, .
 \end{align*}
 For example, $D(2x^3 - 6x + 2) = 6x - 6$.
+
+\end{example}movebackintoexample
 \begin{exercise} (a) Why is $D$ a map from $\Poly_n$ to $\Poly_{n-1}$? (b) Check that $D$ is linear.
 \end{exercise}
-\end{example}
-
 \begin{example}(Antiderivative) The operation `find the unique antiderivative with zero constant term' can be interpreted as a linear map
 \begin{align*}
  A : \Poly_n & \rightarrow \Poly_{n+1} \\
  \ve{p} & \mapsto \int_0^x \ve{p}(t) \, dt 
 \end{align*}
 For example, $A(2x^3 - 6x + 2) = 4 x^4 - 3x^2 + 2x$.
+
+\end{example}movebackintoexample
 \begin{exercise} (a) Check this last sentence. (b) Why is $A$ a map from $\Poly_n$ to $\Poly_{n+1}$? (c) Check that $A$ is linear.
 \end{exercise} 
-\end{example}
-
 
 
 \begin{example}[Shift map] Define the `shift forward by 1' map  \label{shift_example}
@@ -2332,8 +2352,7 @@ For example, $A(2x^3 - 6x + 2) = 4 x^4 - 3x^2 + 2x$.
    \ve{p} & \mapsto S( \ve{p})
 \end{align*}
 by $S(\ve{p})(x) = \ve{p}(x-1)$. 
-\begin{exercise} Check that $S$ is a linear map.
-\end{exercise}
+***
 Consider the case $n=3$. In terms of the standard basis
 \[
 \ve{p}_0 (x) = 1, \, \ve{p}_1 (x) = x, \, \ve{p}_2 (x) = x^2, \, \ve{p}_3 (x) = x^3
@@ -2345,9 +2364,12 @@ of $\Poly_3$, we have:
  S(\ve{p}_2) &= \ve{p}_2 - 2 \ve{p}_1 + \ve{p}_0 \\
  S(\ve{p}_3) &= \ve{p}_3 - 3 \ve{p}_2 + 3 \ve{p}_1 - \ve{p}_0
 \end{align*}
+
+\end{example} movebackintoexample (both)
 \begin{exercise} Check this.
 \end{exercise}
-\end{example}
+***\begin{exercise} Check that $S$ is a linear map.
+\end{exercise}
 \begin{example}[Matrices give rise to linear maps]
 Every $n \times m$ matrix $\mat{A}$ induces a {\em linear map}
 \begin{align*}
@@ -2607,10 +2629,10 @@ Since $D \circ A$ and $\id_{\Poly_n}$ agree on a basis for $\Poly_n$, they agree
 \begin{ramanujansays} In fact, the statement that $D \circ A = \id_{\Poly_n}$ is precisely Part I of the Fundamental Theorem of Calculus, applied to the special case of polynomials!
 \end{ramanujansays}
 \end{solution}
+
+\end{example} movebackintoexample
 \begin{exercise} Is $A \circ D = \id_{\Poly_{n+1}}$? If it is, prove it. If it is not, give an explicit counterexample.
 \end{exercise}
-\end{example}
-
 \furtherexercises
 
 \begin{exercise}
@@ -2695,10 +2717,11 @@ T(\ve{w}) &= T(\id_W (\ve{w})) && \mbox{(Defn of $\id_W$)} \\
  (a_1, a_2, \ldots, a_n) & \stackrel{T}{\mapsfrom} a_1 + a_2 x + \cdots + a_n x^{n-1} 
 \end{align*}
 \end{solution}
+
+We clearly have $T \circ S = \id_{\mathbb{R}^n}$ and $S \circ T = \id_{\Poly_{n-1}}$.
+\end{example}movebackintoexample
 \begin{exercise} Check that these maps are linear.
 \end{exercise}
-We clearly have $T \circ S = \id_{\mathbb{R}^n}$ and $S \circ T = \id_{\Poly_{n-1}}$.
-\end{example}
 We will now show that up to isomorphism, there is only one vector space of each dimension!
 \begin{theorem} Two finite-dimensional vector spaces $V$ and $W$ are isomorphic if and only if they have the same dimension.
 \end{theorem}
