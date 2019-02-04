@@ -505,7 +505,7 @@ To prove that a certain set can be given the structure of a vector space, one th
 \section{First example of a vector space} \label{Ch1Sec3ExampleVectorSpace}
 
 We were led to the definition (Definition \ref{defnvec}) of an abstract vector space by considering the properties of sets $A$, $B$ and $C$ in Section \ref{intro1}. Let us check, for instance, that $B$ indeed satisfies Definition \ref{defnvec}. The others will be left as exercises.
-
+tikc
 \begin{example} The set $B$ is a vector space.
 \subsubsection{1. Define a set $B$}
 We define
@@ -1912,32 +1912,38 @@ Suppose that $\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose$ and $\basis{C} = \b
 \begin{figure}[h]
 \centering
 \begin{minipage}{.4\linewidth}
-\[
+\begin{center}
 \begin{tikzpicture}[scale=0.4]
-	\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_1$} (2,1); 
-	\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_2$} (1,2);
-\end{tikzpicture}
-\]
+\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_1$} (2,1); 
+\draw[very thick, red, ->] (0,0) -- node[pos=1.3] {$\ve{b}_2$} (1,2);
+\end{tikzpicture}	
+\end{center}
+
+
 \subcaption{The basis $\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose$}
 
 \end{minipage}
 \begin{minipage}{.4\linewidth}
-\[
+\begin{center}
 \begin{tikzpicture}[scale=0.4]
-	\draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {$\ve{c}_1$} (1,0); 
-	\draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {$\ve{c}_2$} (-1,1);
-\end{tikzpicture}
-\]
+\draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {$\ve{c}_1$} (1,0); 
+\draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {$\ve{c}_2$} (-1,1);
+\end{tikzpicture}	
+\end{center}
+
+
 \subcaption{The basis $\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose$}
 \end{minipage}
 \caption{\label{w_in_different_bases}Two different bases for $\mathbb{R}^2$}
 \end{figure}
 Suppose we are given a vector $\ve{w} \in \mathbb{R}^2$:
-\[
- \begin{tikzpicture}[scale=0.4]
- 	\draw[thick, ->] (0,0) -- node[pos=1.3] {$\ve{w}$} (-4, 1);
- \end{tikzpicture}
-\]
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+\draw[thick, ->] (0,0) -- node[pos=1.3] {$\ve{w}$} (-4, 1);
+\end{tikzpicture}	
+\end{center}
+ 
+
 We would like to compute the coordinate vector of the {\em same} vector $\ve{w}$ with respect to the two different bases $\basis{B}$ and $\basis{C}$. 
 
 For this particular $\ve{w}$, from Figure \ref{w_in_different_bases}(a), we see that in the basis $\basis{B}$, we have
@@ -2242,7 +2248,6 @@ tikzalign
 	\node[red] at (2.3, 0.3) {$T(\ve{v} + \ve{w})$};
 	\node[red] at (2.3, -0.3) {$T(\ve{v}) + T(\ve{w})$};
 	\end{tikzpicture}
-	
 \end{center}
 	
 
