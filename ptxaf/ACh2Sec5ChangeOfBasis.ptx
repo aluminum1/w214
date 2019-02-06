@@ -1,0 +1,579 @@
+
+
+<section xml:id="ACh2Sec5ChangeOfBasis">
+  <title>Basisverandering</title>
+  <subsection>
+    <title>Ko&#xf6;rdinaatvektore verskil in verskillende basisse</title>
+    <p>
+      Veronderstel dat <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> en
+      <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> twee verskillende basisse
+      vir <m>\mathbb{R}^2</m> is, ge&#xef;llustreer soos volg:
+    </p>
+
+    <figure>
+      <caption>Twee verskillende basisse vir <m>\mathbb{R}^2</m></caption>
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.4]
+        \draw[very thick, red, ->] (0,0) -- node[pos=1.3]
+        {\(\ve{b}_1\)} (2,1); 
+        \draw[very thick, red, ->] (0,0) -- node[pos=1.3]
+        {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      \subcaption{Die basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2
+      \bclose</m>}
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.4]
+        \draw[very thick, blue, ->] (0,0) -- node[pos=1.5]
+        {\(\ve{c}_1\)} (1,0); 
+        \draw[very thick, blue, ->] (0,0) -- node[pos=1.5]
+        {\(\ve{c}_2\)} (-1,1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      \subcaption{Die basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2
+      \bclose</m>}
+    </figure>
+
+    <p>
+      Veronderstel ons word 'n vektor <m>\ve{w} \in \mathbb{R}^2</m> gegee:
+    </p>
+
+    <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.4]
+    \draw[thick, ->] (0,0) -- node[pos=1.3] {\(\ve{w}\)} (-4, 1);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+
+    <p>
+      Ons wil die ko&#xf6;rdinaatvektor van
+      <em>dieselfde</em> vektor <m>\ve{w}</m>
+      relatief tot twee verskillende basisse
+      <m>\basis{B}</m> en <m>\basis{C}</m> bereken.
+    </p>
+
+    <p>
+      Met hierdie spesifieke vektor <m>\ve{w}</m>, uit
+      <xref ref="w_in_different_bases">Figuur</xref>(a) sien ons dat in die basis <m>\basis{B}</m>
+      het ons
+      <men>
+        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \,
+        [\ve{w}]_\basis{B} = \cvector{-3 \\ 2}  \,
+      </men>.
+    </p>
+
+    <p>
+      Aan die anderkant, in basis <m>\basis{C}</m> het ons
+      <men xml:id="correct_exp_w">
+        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} =
+        \cvector{1 \\ -3}
+      </men>.
+    </p>
+
+    <figure>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+        \draw[red, dotted] (-9, -9) -- (3, -3);
+        \draw[red, dotted] (-8, -7) -- (4, -1);
+        \draw[red, dotted] (-7, -5) -- (5, 1);
+        \draw[red, dotted] (-6, -3) -- (6, 3);
+        \draw[red, dotted] (-5, -1) -- (7, 5);
+        \draw[red, dotted] (-4, 1) -- (8, 7);
+        \draw[red, dotted] (-3, 3) -- (9, 9);
+
+        \draw[red, dotted] (-9, -9) -- (-3, 3);
+        \draw[red, dotted] (-7, -8) -- (-1, 4);
+        \draw[red, dotted] (-5, -7) -- (1, 5);
+        \draw[red, dotted] (-3, -6) -- (3, 6);
+        \draw[red, dotted] (-1, -5) -- (5, 7);
+        \draw[red, dotted] (1, -4) -- (7, 8);
+        \draw[red, dotted] (3, -3) -- (9, 9);
+
+        \draw[very thick, red, ->] (0,0) -- node[pos=1.3]
+        {\(\ve{b}_1\)} (2,1); 
+        \draw[very thick, red, ->] (0,0) -- node[pos=1.3]
+        {\(\ve{b}_2\)} (1,2);
+        \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      \subcaption{<m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>}
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+        \draw[blue, dotted] (-6, 3) -- (0, -3);
+        \draw[blue, dotted] (-5, 3) -- (1, -3);
+        \draw[blue, dotted] (-4, 3) -- (2, -3);
+        \draw[blue, dotted] (-3, 3) -- (3, -3);
+        \draw[blue, dotted] (-2, 3) -- (4, -3);
+        \draw[blue, dotted] (-1, 3) -- (5, -3);
+        \draw[blue, dotted] (-0, 3) -- (6, -3);
+
+        \draw[blue, dotted] (-6, 3) -- (0, 3);
+        \draw[blue, dotted] (-5, 2) -- (1, 2);
+        \draw[blue, dotted] (-4, 1) -- (2, 1);
+        \draw[blue, dotted] (-3, 0) -- (3, 0);
+        \draw[blue, dotted] (-2, -1) -- (4, -1);
+        \draw[blue, dotted] (-1, -2) -- (5, -2);
+        \draw[blue, dotted] (0, -3) -- (6, -3);
+
+        \draw[very thick, blue, ->] (0,0) -- node[pos=1.6]
+        {\(\ve{c}_2\)} (1,0); 
+        \draw[very thick, blue, ->] (0,0) -- node[pos=1.6]
+        {\(\ve{c}_1\)} (-1,1);
+        \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      \subcaption{<m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m>}
+    </figure>
+
+    <p>
+      So <em>dieselfde</em> vektor <m>\ve{w}</m> het verskillende ko&#xf6;rdinaatvektore
+      <m>[\ve{w}]_\basis{B}</m> en
+      <m>[\ve{w}]_\basis{C}</m> relatief tot die basisse
+      <m>\basis{B}</m> en <m>\basis{C}</m>!
+    </p>
+  </subsection>
+
+  <subsection>
+    <title>Omskakeling van een basis na 'n ander</title>
+    <p>
+      Veronderstel nou ons het slegs <m>[\ve{w}]_\basis{B}</m>, die
+      ko&#xf6;rdinaatvektor van <m>\ve{w}</m> in basis <m>\basis{B}</m>.
+      Met ander woorde,
+      veronderstel ons weet net dat
+      <me>
+        [\ve{w}]_\basis{B} = \cvector{-3 \\ 2} 
+      </me>,
+      dit is, <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>.
+      Hoe kan ons
+      <m>[\ve{w}]_\basis{C}</m>,
+      die ko&#xf6;rdinaatvektor van <m>\ve{w}</m> in die basis
+      <m>\basis{C}</m> bereken?
+    </p>
+
+    <p>
+      Die beste benadering is om elke vektor in <m>\basis{B}</m> as 'n line&#xea;re
+      kombinasie van die basisvektore in <m>\basis{C}</m> uit te druk.
+      In die volgende
+      figuur word die vektore <m>\ve{b}_1</m> en <m>\ve{b}_2</m> uitgebeeld teen die
+      agtergrond van die basis <m>\basis{C}</m>:
+    </p>
+
+    <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+    \draw[blue, dotted] (-6, 3) -- (0, -3);
+    \draw[blue, dotted] (-5, 3) -- (1, -3);
+    \draw[blue, dotted] (-4, 3) -- (2, -3);
+    \draw[blue, dotted] (-3, 3) -- (3, -3);
+    \draw[blue, dotted] (-2, 3) -- (4, -3);
+    \draw[blue, dotted] (-1, 3) -- (5, -3);
+    \draw[blue, dotted] (-0, 3) -- (6, -3);
+
+    \draw[blue, dotted] (-6, 3) -- (0, 3);
+    \draw[blue, dotted] (-5, 2) -- (1, 2);
+    \draw[blue, dotted] (-4, 1) -- (2, 1);
+    \draw[blue, dotted] (-3, 0) -- (3, 0);
+    \draw[blue, dotted] (-2, -1) -- (4, -1);
+    \draw[blue, dotted] (-1, -2) -- (5, -2);
+    \draw[blue, dotted] (0, -3) -- (6, -3);
+
+    \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)}
+    (1,0); 
+    \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)}
+    (-1,1);
+    \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)}
+    (2,1); 
+    \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)}
+    (1,2);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+
+    <p>
+      Ons lees af dat:
+      <md>
+        <mrow>\ve{b}_1 \amp = \ve{c}_1 + 3 \ve{c}_2</mrow>
+        <mrow>\ve{b}_2 \amp = 2 \ve{c}_1 + 3 \ve{c}_2</mrow>
+      </md>
+    </p>
+
+    <p>
+      Daarom bereken ons:
+      <md>
+        <mrow>\ve{w} \amp = -3 \ve{b}_1 + 2 \ve{b}_2</mrow>
+        <mrow>\amp = -3 (\ve{c}_1 + 3 \ve{c}_2) + 2(2 \ve{c}_1 + 3 \ve{c}_2)</mrow>
+        <mrow>\amp = \ve{c}_1 - 3 \ve{c}_2</mrow>
+      </md>
+    </p>
+
+    <p>
+      Hiervan lees ons af dat
+      <men xml:id="w_in_basis_C">
+        [\ve{w}]_\basis{C} = \cvector{1 \\ -3}
+      </men>
+    </p>
+
+    <p>
+      Wat die korrekte antwoord is,
+      soos ons weet uit <xref ref="correct_exp_w" />.
+    </p>
+
+    <p>
+      Hierdie berekening kan in terme van matrikse uitgedruk word.
+    </p>
+
+    <definition>
+      <statement>
+        <p>
+          Laat <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_n
+          \bclose</m> en <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m>
+          basisse vir 'n vektorruimte <m>V</m> wees.
+          Die
+          <term>basisomskakelingsmatriks van
+          <m>\basis{B}</m> na <m>\basis{C}</m></term> is die
+          <m>n \times n</m>-matriks waarvan die kolomme die ko&#xf6;rdinaatvektore
+          <m>[\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}</m> is:
+          <me>
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \left[ \cvector{ \\
+            \ve{b}_1 \\}_\basis{C} \,  \cvector{ \\ \ve{b}_2 \\}_\basis{C} \,
+            \cdots \, \cvector{ \\ \ve{b}_n \\}_\basis{C}\right]
+          </me>
+        </p>
+      </statement>
+    </definition>
+
+    <example>
+      <statement>
+        <p>
+          In die deurlopende voorbeeld, sien ons uit
+          <xref ref="b_in_terms_of_c" /> en <xref ref="b_in_terms_of_c_2" /> dat
+          <me>
+            [\ve{b}_1]_\basis{C} = \cvector{1 \\ 3}, 
+            [\ve{b}_2]_\basis{C} = \cvector{2 \\ 3} \, 
+          </me>.
+        </p>
+
+        <p>
+          Daarom is die basisomskakelingsmatriks van <m>\basis{B}</m> na <m>\basis{C}</m>
+          <md>
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  2 \\ 3 \amp 
+            3} \, .
+          </md>
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Voordat ons verder gaan, hersien ons 'n aspek van matriksvermenigvuldiging.
+      Veronderstel ons groepeer <m>m</m> kolomvektore saam om 'n matriks te vorm:
+      <me>
+        \left[ \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3);
+  \node at (0.5, 1.5) {\(\mat{C}_1\)};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned}  
+        \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node
+  at (0.5, 1.5) {\(\mat{C}_2\)};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned}  
+        \cdots 
+        \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node
+  at (0.5, 1.5) {\(\mat{C}_m\)};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned}  \right]
+      </me>
+    </p>
+
+    <p>
+      (Ons basisomskakelingsmatriks <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> is
+      so gevorm.) Dan word die produk van hierdie matriks met 'n kolomvektor soos
+      volg bereken:
+      <men xml:id="column_vector_multiplication">
+        \left[ \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] 
+    \draw (0,0) rectangle (1,3);
+    \node at (0.5, 1.5) {$\mat{C}_1$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned} \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] 
+    \draw (0,0) rectangle (1,3); 
+    \node at (0.5, 1.5) {$\mat{C}_2$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned} \cdots \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] 
+    \draw (0,0) rectangle (1,3);
+    \node at (0.5, 1.5) {$\mat{C}_m$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned} \right] \left[
+        \begin{array}{c}
+        a_1 \\
+        a_2 \\
+        \vdots \\
+        a_m
+        \end{array}
+        \right] = a_1  \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5] 
+    \draw (0,0) rectangle (1,3); 
+    \node at (0.5, 1.5) {$\mat{C}_1$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned} + a_2  \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+    \draw (0,0) rectangle (1,3);
+    \node at (0.5, 1.5) {$\mat{C}_2$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned} + \cdots + a_n \begin{aligned}
+
+        <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+    \draw (0,0) rectangle (1,3);
+    \node at (0.5, 1.5) {$\mat{C}_m$};\end{tikzpicture}]]>
+</latex-image>
+        </image>
+
+        \end{aligned}
+      </men>
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Bewys die bostaande formule!
+        </p>
+      </statement>
+    </exercise>
+
+    <p>
+      Ons kan nou die volgende stelling bewys.
+    </p>
+
+    <theorem>
+      <title>Basisomskakeling</title>
+      <statement>
+        <p>
+          Veronderstel dat <m>\basis{B} = \bopen
+          \ve{b}_1, \ldots, \ve{b}_n\bclose</m> en
+          <m>\basis{C} = \bopen \ve{c}_1,
+          \ldots, \ve{c}_n \bclose</m> basisse vir 'n vektorruimte <m>V</m> is, en laat
+          <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> die
+          basiskomskakelingsmatriks van
+          <m>\basis{B}</m> na <m>\basis{C}</m> wees.
+          Dan, vir
+          alle vektore <m>\ve{v}</m> in <m>V</m>,
+          <men xml:id="change-of-basis-in-action">
+            [\ve{v}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}}
+            [\ve{v}]_\basis{B} 
+          </men>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        Laat <m>\ve{v} \in V</m>.
+        Brei <m>\ve{v}</m> uit in die basis <m>\basis{B}</m>:
+        <me>
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n, 
+          \mbox{i.e. }  [\ve{v}]_\basis{B} = \cvector{a_1 \\ \vdots \\ a_n}
+        </me>.
+      </p>
+
+      <p>
+        Dan,
+        <md>
+          <mrow>_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n
+          \ve{b}_n]_\basis{C}</mrow>
+          <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp 
+          \mbox{(volgens <xref ref="lin_of_coord_vectors">Lemma</xref>)}</mrow>
+          <mrow>\amp = \left[ \cvector{</mrow>
+          <mrow>\ve{b}_1</mrow>
+          <mrow>}_\basis{C} \, \cvector{</mrow>
+          <mrow>\ve{b}_2</mrow>
+          <mrow>}_\basis{C} \, \cdots \, \cvector{</mrow>
+          <mrow>\ve{b}_n</mrow>
+          <mrow>}_\basis{C}\right] \cvector{a_1</mrow>
+          <mrow>\vdots</mrow>
+          <mrow>a_n} \amp \amp 
+          \mbox{(volgens (3.5.6))}</mrow>
+          <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B}
+          \, </mrow>
+        </md>.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          In ons deurlopende voorbeeld,
+          s&#xea; die stelling dat vir
+          <em>enige</em> vektor <m>\ve{v} \in \mathbb{R}^2</m>,
+          <md>
+            [\ve{v}]_\basis{C} = \cmatrix{1 \amp  2 \\ 3 \amp  3} [\ve{v}]_\basis{B} .
+          </md>
+        </p>
+
+        <p>
+          Dit geld dan ook vir ons vektor <m>\ve{w}</m>,
+          waarvan die ko&#xf6;rdinate in
+          die basis <m>\ve{B}</m> is:
+          <me>
+            [\ve{w}]_\basis{B} = \cvector{ -3 \\ 2} 
+          </me>.
+        </p>
+
+        <p>
+          So in hierdie geval s&#xea; die stelling dat
+          <md>
+            [\ve{w}]_{\basis{C}} = \cmatrix{1 \amp  2 \\ 3 \amp  3} \cvector{-3 \\ 2}
+            = \cvector{1 \\ -3}
+          </md>
+          wat met ons vorige berekening <xref ref="w_in_basis_C" /> ooreenstem!
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      \furtherexercises
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Dit is 'n voortsetting van <xref ref="matrix_basis_exercise">Oefening</xref>.
+          Beskou die volgende twee basisse vir
+          <m>\Mat_{2,2}</m>:
+          <md>
+            \basis{B}  = {  \bopen} \mat{B}_1 = \cmatrix{1 \amp  0 \\ 0 \amp  1},
+            \, \mat{B}_2 = \cmatrix{1 \amp  0 \\ 0 \amp  -1}, \, \mat{B}_3 = \cmatrix{1
+            \amp  1 \\ 1 \amp  1}, \, \mat{B}_4 = \cmatrix{0 \amp  1 \\ -1 \amp  0} {
+            \bclose}
+          </md>
+          <md>
+            \basis{C} = { \bopen} \mat{C}_1 = \cmatrix{1 \amp  1 \\ 0 \amp  0}, \,
+            \mat{C}_2 = \cmatrix{1 \amp  -1 \\ 0 \amp  0}, \, \mat{C}_3 = \cmatrix{0 \amp 
+            0 \\ 1 \amp  1}, \, \mat{C}_4 = \cmatrix{0 \amp  0 \\ 1 \amp  -1} {
+            \bclose}
+          </md>
+          <ul>
+            <li>
+              <title>(a)</title>
+              <p>
+                Bereken die basisomskakelingmatrikse
+                <m>\mat{P}_{\basis{C}
+                \leftarrow \basis{B}}</m> en <m>\mat{P}_{\basis{B} \leftarrow
+                \basis{C}}</m>.
+              </p>
+            </li>
+
+            <li>
+              <title>(b)</title>
+              <p>
+                Bereken <m>[\mat{A}]_\basis{B}</m> en <m>[\mat{A}]_\basis{C}</m>,
+                waar
+                <md>
+                  A = \cmatrix{1 \amp  2 \\ 3 \amp  4}
+                </md>
+              </p>
+            </li>
+
+            <li>
+              <title>(c)</title>
+              <p>
+                Gaan na dat <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C}
+                \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> en dat
+                <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}}
+                [\mat{A}]_\basis{C}</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Bereken die basisomskakelingmatriks
+          <m>\mat{P}_{\basis{B} \leftarrow
+          \basis{S}}</m> van die standaardbasis
+          <me>
+            \basis{S} = \bopen 1, \cos x, \sin x, \cos 2x, \sin 2x \bclose
+          </me>
+          van <m>\Trig_2</m> na die basis
+          <me>
+            \basis{B} = \bopen 1, \cos x, \sin x, \cos^2 x, \sin^2 x \bclose \,
+
+          </me>.
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+</section>
+

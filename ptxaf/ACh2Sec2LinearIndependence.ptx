@@ -1,0 +1,458 @@
+
+
+<section xml:id="ACh2Sec2LinearIndependence">
+  <title>Line&#xea;re onafhanklikheid</title>
+  <definition>
+    <statement>
+      <p>
+        'n Lys van vektore <m>\ve{v}_1, \ve{v}_2, \ldots,
+        \ve{v}_n</m> in 'n vektorruimte <m>V</m> is
+        <term>line&#xea;r onafhanklik</term> as
+        die vergelyking
+        <men xml:id="lin_independence_eqn">
+          k_1 \ve{e}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{e}_n = \ve{0}
+        </men>
+        slegs die triviale oplossing <m>k_1 = k_2 = \cdots = k_n = 0</m> het.
+        Andersins word die lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m>
+        <term>line&#xea;r afhanklik</term> genoem.
+      </p>
+    </statement>
+  </definition>
+
+  <remark xml:id="remark_about_lin_dependence">
+    <p>
+      Veronderstel een van die vektore in die versameling
+      <m>\ve{v}_1</m>, <m>\ve{v}_2</m>, <m>\ldots</m>,
+      <m>\ve{v}_n</m> is die nul-vektor
+      <m>\ve{0}</m>;
+      byvoorbeeld, veronderstel <m>\ve{v}_1 = \ve{0}</m>.
+      Dan moet die
+      lys vektore line&#xea;r afhanklik wees, omdat vergelyking
+      <xref ref="lin_independence_eqn" /> die nie-triviale oplossing <m>k_1 = 1</m>, <m>k_2
+      = k_2 = \cdots = k_n = 0</m> het.
+    </p>
+  </remark>
+
+  <remark xml:id="crit_ind">
+    <p>
+      Die kriteria vir 'n lys vektore
+      <m>\ve{v}_1, \ve{v}_2,
+      \ldots, \ve{v}_n</m> om line&#xea;r onafhanklik te wees,
+      <me>
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0} 
+        \Rightarrow  k_1 = k_2 = \cdots = k_n = 0
+      </me>
+      is duidelik ekwivalent aan die kriteria dat
+      <me>
+        { 
+        Al die vektore \(\ve{v}_i\) nie nul is nie en geen een as 'n
+        nie-triviale line{\^e}re kombinasie van die ander uitgedruk kan
+        word nie.
+        }
+      </me>
+    </p>
+  </remark>
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys <xref ref="crit_ind">opmerking</xref>.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <statement>
+      <p>
+        Die lys van vektore <m>\ve{f}_1 = (-1, \, 2)</m> en
+        <m>\ve{f}_2 =
+        (1, \,1)</m> uit <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is
+        line&#xea;r onafhanklik, omdat die vergelyking
+        <me>
+          k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
+        </me>
+        ekwivalent is aan die sisteem van vergelykings
+        <men xml:id="system_from_r2_example">
+          \systeme{-k_1 + k_2 = 0, 2k_1 + k_2 = 0}
+        </men>
+        wat slegs die trivale oplossing <m>k_1 = 0</m> en <m>k_2 = 0</m> het.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig dat <xref ref="system_from_r2_example" /> slegs die
+        triviale oplossing het.
+      </p>
+    </statement>
+  </exercise>
+
+  <example xml:id="example_about_lin_dep_1">
+    <statement>
+      <p>
+        Die vektore <m>\ve{f}_1 =
+        (-1, \, 2)</m>, <m>\ve{f}_2 = (1, \,1)</m>,
+        <m>\ve{f}_3 = (2, \, -1)</m> uit
+        <xref ref="three_vectors_spanning_R2_example">Voorbeeld</xref> is line&#xea;r
+        afhanklik, want die vergelyking
+        <men xml:id="eqn_to_check_lin_ind">
+          k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)
+        </men>
+        is ekwivalent aan die sisteem van vergelykings
+        <men xml:id="system_from_r2_example_new">
+          \systeme{-k_1 + k_2 + 2k_3 = 0, 2k_1 + k_2 - k_3 = 0}
+        </men>
+        wat 'n een-dimansionele vektorruimte van oplossings het wat deur <m>t</m>
+        parameteriseer word,
+        <men xml:id="supposed_soln">
+          k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}
+        </men>.
+      </p>
+
+      <p>
+        Byvoorbeeld, vir <m>t=2</m>, is
+        <me>
+          2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
+        </me>
+        sodat <xref ref="eqn_to_check_lin_ind" /> non-triviale oplossings het.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat <xref ref="system_from_r2_example_new" /> die
+        oplossingsversameling <xref ref="supposed_soln" /> het.
+      </p>
+    </statement>
+  </exercise>
+
+  <example xml:id="new_basis_for_poly_3">
+    <statement>
+      <p>
+        Die lys polinome
+        <me>
+          \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x) := x, \,\, \ve{q}_2 (x) :=
+          2x^2 - 1, \,\, \ve{q}_3 (x) := 4x^3 - 3x
+        </me>
+        uit <xref ref="chebyshev_example">Voorbeeld</xref> is line&#xea;r onafhanklik in
+        <m>\Poly_3</m>.
+        Dit is omdat die vergelyking
+        <me>
+          k_0 \ve{q}_0 + k_1 \ve{q}_1 + k_2 \ve{q}_2 + k_3 \ve{q}_3 = \ve{0}
+        </me>
+        vereenvoudig as die volgende polinoomvergelyking:
+        <me>
+          4k_3 x^3 + 2k_2 x^2 + (-3k_3 + k_1) x + (-k_2 + k_0) = 0
+        </me>
+      </p>
+
+      <p>
+        Hierdie is ekwivalent aan die volgende stelsel vergelykings,
+        <me>
+          \systeme{ 4k_3 = 0, 2k_2 = 0, -3 k_3 + k_1 = 0 , k_0 - k_2 = 0}
+        </me>
+        wat slegs die triviale oplossing <m>k_0 = k_1 = k_2 = k_3 = 0</m> het.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    Op die oomblik is die definisie van line&#xea;re afhanklikheid van vektore
+    dat hulle nie line&#xea;r onafhanklik is nie.
+    Dit kan baie verwarrend wees!
+    Hier is 'n meer direkte manier om aan line&#xea;re afhanklikheid van vektore
+    te dink.
+  </p>
+
+  <proposition xml:id="lin_dependence_prop">
+    <title>Line&#xea;re kombinase van voorafgaande vektore</title>
+    <statement>
+      <p>
+        Laat <m>\ve{v}_1</m>,
+        <m>\ve{v}_2</m>, <m>\ldots</m>,
+        <m>\ve{v}_n</m> 'n lys vektore in 'n vektorruimte <m>V</m>
+        wees.
+        Die volgende stellings is ekwivalent:
+
+        <ol>
+          <li>
+            <p>
+              Die lys vektore <m>\ve{v}_1</m>,
+              <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_n</m>
+              is line&#xea;r afhanklik.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Óf <m>\ve{v}_1 = \ve{0}</m>, &#xf3;f vir 'n
+              <m>r \in \{2, 3, \ldots,
+              n\}</m>, is <m>\ve{v}_r</m> 'n line&#xea;re kombinasie van <m>\ve{v}_1</m>,
+              <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_{r-1}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      (1) <m>\Rightarrow</m> (2).
+      Veronderstel die lys <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>,
+      <m>\ve{v}_n</m> is line&#xea;r afhanklik.
+      Dit beteken
+      dat daar skalare.
+      <m>k_1</m>, <m>k_2</m>, <m>\ldots</m>,
+      <m>k_n</m> bestaan, waarvan nie
+      almal nul is nie, sodat
+      <men xml:id="lin_dep_lem_first_eqn">
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}
+      </men>.
+    </p>
+
+    <p>
+      Laat <m>r \in \{1, \,2, \ldots, \, n\}</m> die grootste index wees sodat
+      <m>k_r \neq 0</m>.
+      (Ons weet dat nie alle <m>k_i</m> is nul nie, so dit maak
+      sin.)
+      As <m>r=1</m>,
+      dan is <xref ref="lin_dep_lem_first_eqn" /> eenvoudig die
+      vergelyking
+      <me>
+        k_1 \ve{v}_1 = \ve{0},  \mbox{waar }  k_1 \neq 0
+      </me>.
+    </p>
+
+    <p>
+      Daarom is <m>\ve{v}_1 = \ve{0}</m> volgens <xref ref="dichotomy_lem">Lemma</xref> en ons
+      is klaar.
+      Andersins, veronderstel <m>r \neq 1</m>.
+      Dan word
+      <xref ref="lin_dep_lem_first_eqn" /> die vergelyking
+      <me>
+        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0}, 
+        \mbox{waar }  k_r \neq 0
+      </me>.
+    </p>
+
+    <p>
+      Deur met <m>k_r</m> te deel, kan ons nou vir <m>\ve{v}_r</m> oplos in terme van
+      die voorafgaande vektore <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>,
+      <m>\ve{v}_{r-1}</m>:
+      <me>
+        \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r}
+        \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \, 
+      </me>.
+    </p>
+
+    <p>
+      (2) <m>\Rightarrow</m> (1).
+      As <m>\ve{v}_1 = \ve{0}</m>, dan is die lys vektore
+      <m>\ve{v}_1</m>, <m>\ve{v}_2</m>,
+      <m>\ldots</m>, <m>\ve{v}_n</m> sonder twyfel line&#xea;r
+      afhanklik deur <xref ref="remark_about_lin_dependence">Opmerking</xref>.
+      Andersins,
+      veronderstel dat vir 'n <m>r \in \{2, 3, \ldots,
+      n\}</m> is <m>\ve{v}_r</m> 'n
+      line&#xea;re kombinasie van die voorafgaande vektore, dit is
+      <me>
+        \ve{v}_r = a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{r-1}
+        \ve{v}_{r-1}
+      </me>.
+    </p>
+
+    <p>
+      Dan volg dit duidelik dat
+      <me>
+        a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{r-1} \ve{v}_{r-1} -
+        \ve{v}_r + 0 \ve{v}_{r+1} + \cdots + 0 \ve{v}_n = \ve{0}
+      </me>
+      wat wys dat die vektore <m>\ve{v}_1</m>,
+      <m>\ve{v}_2</m>, <m>\ldots</m>, <m>\ve{v}_n</m>
+      nie line&#xea;r onafhanklik is nie, aangesien nie al die
+      ko&#xeb;ffisi&#xeb;nte nul is
+      nie <mdash /> in besonder is die ko&#xeb;ffisi&#xeb;nt van <m>\ve{v}_r</m> gelyk aan
+      <m>-1</m>.
+    </p>
+  </proof>
+
+  <assemblage>
+    <p>
+      Ek noem dit die <sq>Line&#xea;re Kombinasie van
+      Voorafgaande Vektore Proposisie</sq>.
+      Jy moet al jou stellings name gee,
+      dit sal joyu help om hulle te onthou en hulle beter te leer ken.
+    </p>
+  </assemblage>
+
+  <example xml:id="app_of_prop_preceding">
+    <statement>
+      <p>
+        Ons het in <xref ref="example_about_lin_dep_1">Voorbeeld</xref>
+        gesien dat die lys vektore
+        <m>\ve{f}_1 =
+        (-1, \, 2)</m>, <m>\ve{f}_2 = (1, \,1)</m>,
+        <m>\ve{f}_3 = (2, \, -1)</m> in
+        <m>\mathbb{R}^3</m> line&#xea;r afhanklik is.
+        Daarom, deur <xref ref="lin_dependence_prop">Proposisie</xref>,
+        het ons &#xf3;f:
+
+        <ul>
+          <li>
+            <p>
+              <m>\ve{f}_1 = \ve{0}</m>
+              (nie waar nie),
+              &#xf3;f
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{f}_2</m> is 'n skalaarveelvoud van <m>\ve{f}_1</m>
+              (nie waar
+              nie),
+              &#xf3;f
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\ve{f}_3</m> is 'n line&#xea;re kombinasie van <m>\ve{f}_1</m> en
+              <m>\ve{f}_2</m>, wat waar is:
+              <me>
+                \ve{f}_3 = - \ve{f}_1 + \ve{f}_2
+              </me>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </example>
+
+  <proposition xml:id="bumping_off_lemma">
+    <title>Afstampproposisie</title>
+    <statement>
+      <p>
+        Veronderstel <m>\ve{l}_1, \ve{l}_2,
+        \ldots, \ve{l}_m</m> is 'n line&#xea;r onafhanklike lys vektore in 'n
+        vektorruimte <m>V</m> en dat <m>\ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n</m> <m>V</m>
+        span.
+        Dan is <m>m \leq n</m>.
+      </p>
+    </statement>
+  </proposition>
+
+  <proof>
+    <p>
+      Begin met die oorspronglike lys vektore
+      <men>
+        \basis{S} = \bopen \,\, L_0: \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n
+        \bclose
+      </men>
+      wat <m>V</m> span en oorweeg die <sq>opgeblase</sq> lys
+      <men xml:id="bloated_list">
+        \basis{S^{\prime}} = \bopen \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
+        \ve{s}_n.
+        \bclose
+      </men>
+    </p>
+
+    <p>
+      Omdat <m>\ve{l}_1</m> 'n line&#xea;re kombinasie van <m>\ve{s}_i</m> is, is
+      hierdie lys line&#xea;r afhanklik volgens <xref ref="crit_ind">Opmerking</xref>.
+      Dus,
+      deur <xref ref="lin_dependence_prop">Proposisie</xref> (Line&#xea;re Kombinasie van
+      Voorafgaande Vektore), kan een van die <m>\ve{s}</m>-vektore, s&#xea;
+      <m>\ve{s}_r</m>,
+      uitgedruk word as 'n line&#xea;re kombinasie van die
+      voorafgaande vektore.
+      Ons kan dan <m>\ve{s}_r</m> uit die lys verwyder
+      (<sq>afstamp</sq>), en die resulterende lys
+      <men>
+        \basis{S_1}:= \bopen \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
+        \hat{\ve{s}_r}, \cdots,
+        \ve{s}_n  \bclose \qquad \mbox{(\(\ve{s}_r\) weggelaat)}
+      </men>
+      span steeds <m>V</m>.
+      Ons kan so aangaan en elke keer 'n <m>\ve{l}</m>-vektor
+      oorplaas op dieselfde manier,
+      om elke keer by 'n nuwe lys <m>L_2</m>, <m>L_3</m>,
+      <m>L_4</m>, en so voorts uit te kom,
+      waar lys <m>L_k</m> <m>(n-k)</m> <m>\ve{s}</m>-vektore
+      bevat.
+    </p>
+
+    <p>
+      Veronderstel <m>m > n</m>.
+      Dan sal die lys <m>L_n</m> slegs <m>\ve{l}</m>-vektore
+      bevat,
+      <me>
+        \basis{S_n}: \,\, \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_n
+      </me>
+      en dit span <m>V</m> volgens konstruksie.
+      Maar daar bly not 'n paar
+      <m>\ve{l}</m>-vektore <m>\ve{l}_{n+1}, \ldots \ve{l}_{m}</m> oor!
+      Dit dui daarop
+      dat <m>\ve{l}_{n+1}</m> 'n line&#xea;re kombinasie van vektore in <m>L_n</m> is,
+      wat in teenstelling is met die feit dat die lys vektore
+      <m>\ve{l}_1,
+      \ve{l}_2, \ldots, \ve{l}_m</m> line&#xea;r onafhanklik is.
+      So dit kan nie
+      wees dat <m>m > n</m>, daarom is <m>m \leq n</m>.
+    </p>
+  </proof>
+
+  <p>
+    \furtherexercises
+  </p>
+
+  <exercise xml:id="exercise_for_new_basis">
+    <statement>
+      <p>
+        Wys dat die lys vektore <m>(2,
+        \, 3, \, 1)</m>, <m>(1, \, -1, \,
+        2)</m>, <m>(7, \, 3, \, c)</m> line&#xea;r afhanklik in <m>\mathbb{R}^3</m> is as en
+        slegs as <m>c=8</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="x2_by_2_matrices_lin_dep">
+    <statement>
+      <p>
+        Die lys vektore in
+        <m>\Mat_{2,2}</m> gegee deur
+        <md>
+          \ve{v}_1 = \cmatrix{1 \amp  2 \\ 1 \amp  1}, \, \ve{v}_2 = \cmatrix{0 \amp  1
+          \\ -2 \amp  1}, \, \ve{v}_3 = \cmatrix{1 \amp  0 \\ 2 \amp  3}, \, \ve{v}_4 =
+          \cmatrix{0 \amp  3 \\ 1 \amp  -1}, \, \ve{v}_5 = \cmatrix{1 \amp  0 \\ 0 \amp  1}
+        </md>
+        is line&#xea;r onafhanklik
+        (ons sal dit in <xref ref="checking_matrices_lin_dep">Oefening</xref> bewys,
+        maar ter wille van hierdie vraag
+        kan jy aanvaar dat dit waar is).
+        Herhaal dieselfde stappe as in
+        <xref ref="app_of_prop_preceding">Voorbeeld</xref>
+        om die eerste vektor in die lys
+        te vind wat of die nulvektor of 'n line&#xea;re kombinasie van die
+        voorafgaande vektore is.
+      </p>
+    </statement>
+  </exercise>
+</section>
+

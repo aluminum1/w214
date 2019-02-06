@@ -1,0 +1,320 @@
+
+
+<section xml:id="ACh2Sec4CoordinateVectors">
+  <title>Ko&#xf6;rdinaatvektore</title>
+  <definition>
+    <statement>
+      <p>
+        Laat <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots,
+        \ve{b}_n \bclose</m> 'n basis vir vektorruimte <m>V</m> wees,
+        en laat <m>\ve{v}
+        \in V</m>.
+        Skryf
+        <me>
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + \ve{a}_n \ve{b}_n
+          \, 
+        </me>.
+      </p>
+
+      <p>
+        Dan word die kolomvektor
+        <me>
+          [\ve{v}]_\basis{B} := \left[ \begin{array}{c} a_1 \\ a_2 \\ \vdots
+          \\ a_n
+          \end{array}  \right] \in \Col_n
+        </me>
+        die <term>ko&#xf6;rdinaatvektor van <m>\ve{v}</m> met betrekking tot basis
+        <m>\basis{B}</m></term> genoem.
+      </p>
+    </statement>
+  </definition>
+
+  <assemblage>
+    <p>
+      Ek dui aan dat 'n kolleksie objekte 'n <em>lys</em> is
+      (waar volgorde van belang is) en nie bloot 'n <em>versameling</em>
+      nie (waar dit nie van belang is nie) deur van my eie tuisgemaakte
+      simbole <m>\bopen</m> en <m>\bclose</m> gebruik te maak. 'n BAsis <m>\basis{B} =
+      \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is 'n lys van
+      vektore.
+      Die volgorde van die vektore is van belang want dit affekteer
+      die ko&#xf6;rdinaatvektor <m>[\ve{v}]_\basis{B}</m>.
+    </p>
+  </assemblage>
+
+  <example>
+    <statement>
+      <p>
+        Vind die ko&#xf6;rdinaatvektor van <m>\ve{p} = 2x^2 - 2x + 3</m>
+        met betrekking tot die basis <m>\basis{B} = \bopen 1+x, x^2 + x -1, x^2 +
+        x + 1\bclose</m> van <m>\Poly_3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Ons skryf <m>\ve{p}</m> as 'n line&#xea;re kombinasie van
+        polinome van die basis <m>\basis{B}</m>:
+        <me>
+          2x^2 - 2x + 3 = -4(1+x) - \frac{5}{2} (x^2 + x -1) +
+          \frac{9}{2}(x^2 + x +1)
+        </me>
+        <me>
+          [\ve{p}]_\basis{B} = \cvector{ -4 \\ - \frac{5}{2} \\
+          \frac{9}{2} }
+        </me>
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    ***movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig dit!
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <statement>
+      <p>
+        Vind die ko&#xf6;rdinaatvektore van <m>\ve{v}</m> en <m>\ve{w}</m> in
+        <xref ref="v_and_w_in_basis_B">Figuur</xref>
+        met betrekking tot die basis <m>\basis{B}
+        = \bopen \ve{b}_1, \ve{b}_2 \bclose</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Deur inspeksie sien ons dat <m>\ve{v} = 2 \ve{b}_1 -
+        \ve{b}_2</m>, sodat
+        <me>
+          [\ve{v}]_\basis{B} = \cvector{ 2 \\ -1}
+        </me>
+      </p>
+
+      <p>
+        Ook deur inspeksie sien ons dat <m>\ve{w} = -3 \ve{b}_1 + 2
+        \ve{b}_2</m>, sodat
+        <me>
+          [\ve{v}]_\basis{B} = \cvector{ -3 \\ 2}
+        </me>
+      </p>
+    </solution>
+  </example>
+
+  <figure xml:id="v_and_w_in_basis_B">
+    <caption>Die basis <m>B</m> vir <m>\mathbb{R}^2</m>.</caption>
+    <me>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+      \draw[red, dotted] (-9, -9) -- (3, -3);
+      \draw[red, dotted] (-8, -7) -- (4, -1);
+      \draw[red, dotted] (-7, -5) -- (5, 1);
+      \draw[red, dotted] (-6, -3) -- (6, 3);
+      \draw[red, dotted] (-5, -1) -- (7, 5);
+      \draw[red, dotted] (-4, 1) -- (8, 7);
+      \draw[red, dotted] (-3, 3) -- (9, 9);
+
+      \draw[red, dotted] (-9, -9) -- (-3, 3);
+      \draw[red, dotted] (-7, -8) -- (-1, 4);
+      \draw[red, dotted] (-5, -7) -- (1, 5);
+      \draw[red, dotted] (-3, -6) -- (3, 6);
+      \draw[red, dotted] (-1, -5) -- (5, 7);
+      \draw[red, dotted] (1, -4) -- (7, 8);
+      \draw[red, dotted] (3, -3) -- (9, 9);
+
+      \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)}
+      (2,1);
+      \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)}
+      (1,2);
+      \draw[thick, ->] (0,0) -- (3,0) node[below right] {\(\ve{v}\)};
+      \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </me>
+  </figure>
+
+  <example>
+    <statement>
+      <p>
+        Vind die ko&#xf6;rdinaatvektor van die funksie <m>\ve{f}</m>
+        gegee deur
+        <me>
+          \ve{f}(x) = \sin^2 x - \cos^3 x
+        </me>
+        met betrekking tot die standaard basis
+        <me>
+          \basis{S} = \{1, \cos x, \sin x, \cos 2x, \sin 2x, \cos 3x, \sin
+          3x\}
+        </me>
+        van <m>\Trig_3</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Met die sommeringsformules vir <m>\sin</m> en <m>\cos</m> soos
+        in <xref ref="trig_ex_early">Oefening</xref> bereken ons
+        <me>
+          \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x -
+          \frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x
+        </me>.
+      </p>
+
+      <p>
+        ***
+        Gevolglik
+        <me>
+          [\ve{f}]_\basis{S} = \cvector{ \frac{1}{2} \\ - \frac{3}{4} \\
+          0 \\ -\frac{1}{2} \\ - \frac{1}{4} \\ 0}
+        </me>
+      </p>
+    </solution>
+  </example>
+
+  <p>
+    ***movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Bevestig hierdie berekeninge!
+      </p>
+    </statement>
+  </exercise>
+
+  <lemma xml:id="lin_of_coord_vectors">
+    <statement>
+      <p>
+        Laat <m>\basis{B} = \bopen
+        \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose</m> 'n basis vir 'n
+        vektorruimte <m>V</m> wees.
+        Dan het ons dat vir alle vektore
+        <m>\ve{v}, \ve{w}
+        \in V</m> en alle skalare <m>k</m>
+
+        <ol type="a">
+          <li>
+            <p>
+              <m>[\ve{v} + \ve{w}]_\basis{B} = [\ve{v}]_\basis{B} +
+              [\ve{w}]_\basis{B}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>[k \ve{v}]_\basis{B} = k [ \ve{v}]_\basis{B}</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      (a) Veronderstel dat
+      <md>
+        <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n</mrow>
+        <intertext>en</intertext>
+        <mrow>\ve{w} \amp = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n \, .</mrow>
+        <intertext>Dan, deur van die re{\"e}ls van 'n vektorruimte gebruik
+        te maak, bereken ons</intertext>
+        <mrow>\ve{v} + \ve{w} \amp = (a_1 + b_1) \ve{e}_1 + (a_2 + b_2) \ve{e}_2 +
+        \cdots + (a_n + b_n) \ve{e}_n \, </mrow>
+      </md>.
+    </p>
+
+    <p>
+      Van hier af lees ons dat
+      <me>
+        [\ve{v} + \ve{w}]_\basis{B} = \cvector{a_1 + b_1 \\ a_2 + b_2 \\
+        \vdots \\ a_n + b_n} \, 
+      </me>.
+    </p>
+
+    <p>
+      Die bewys van (b) is soortgelyk.
+    </p>
+  </proof>
+
+  <p>
+    \furtherexercises
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys <xref ref="lin_of_coord_vectors">Lemma</xref>(b) in die geval
+        waar <m>V</m> twee-dimensioneel is,
+        sodat <m>\basis{B} = \bopen \ve{e}_1,
+        \ve{e}_2\bclose</m>.
+        Verduidelik elke stap met die toepaslike re&#xeb;l van
+        'n vektorruimte.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="matrix_basis_exercise">
+    <statement>
+      <p>
+        Laat <m>\basis{B}</m> die
+        volgende basis van <m>\Mat_{2,2}</m> wees:
+        <md>
+          \mat{B}_1 = \cmatrix{1 \amp  0 \\ 0 \amp  1},  \mat{B}_2 = \cmatrix{1
+          \amp  0 \\ 0 \amp  -1},  \mat{B}_3 = \cmatrix{1 \amp  1 \\ 1 \amp  1}, 
+          \mat{B}_4 = \cmatrix{0 \amp  1 \\ -1 \amp  0} \, .
+        </md>
+      </p>
+
+      <p>
+        Bereken <m>[\mat{A}]_\basis{B}</m>, waar
+        <md>
+          \mat{A} = \cmatrix{1 \amp  2 \\ 3 \amp  4} \, .
+        </md>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        In <xref ref="dim_poly_at_2_ex">Oefening</xref> is jy gevra om 'n basis
+        <m>\basis{B}</m> vir die vektorruimte
+        <me>
+          V := \{ p \in \Poly_2 : p(2) = 0 \}
+        </me>
+        te bepaal.
+        Beskou <m>p(x) = x^2 + x - 6</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Toon aan dat <m>p \in V</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Bereken die ko&#xf6;rdinaatvektor van <m>p</m> met betrekking
+              tot jou basis <m>\basis{B}</m>.
+              Met ander woorde, bereken
+              <m>[p]_\basis{B}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+</section>
+
