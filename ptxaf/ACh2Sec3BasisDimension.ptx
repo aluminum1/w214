@@ -1,0 +1,1068 @@
+
+
+<section xml:id="ACh2Sec3BasisDimension">
+  <title>Basis en dimensie</title>
+  <introduction>
+    <definition>
+      <statement>
+        <p>
+          'n Lys vektore <m>\ve{e}_1</m>,
+          <m>\ve{e}_2</m>, <m>\ldots</m>,
+          <m>\ve{e}_n</m> in 'n vektorruimte <m>V</m> word 'n
+          <term>basis</term> van <m>V</m> genoem
+          as dit line&#xea;r onafhanklik is en <m>V</m> span.
+        </p>
+      </statement>
+    </definition>
+
+    <p>
+      Daar is 'n meer direkte manier om oor 'n basis te dink.
+    </p>
+
+    <proposition xml:id="prop_bases_give_coordinates">
+      <title>Basisse gee ko&#xf6;rdinate</title>
+      <statement>
+        <p>
+          'n Lys vektore <m>\ve{e}_1</m>,
+          <m>\ve{e}_2</m>, <m>\ldots</m>,
+          <m>\ve{e}_n</m> in 'n vektorruimte <m>V</m> is 'n basis van
+          <m>V</m> as en slegs as elke vektor
+          <m>\ve{v} \in V</m> op presies <em>een</em>
+          manier as 'n line&#xea;re kombinasie
+          <men xml:id="trying_to_formulate_basis">
+            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+          </men>
+          geskryf kan word.
+          Dit is, vir elke <m>\ve{v} \in V</m>
+          <em>bestaan</em> daar skalare <m>a_1</m>,
+          <m>a_2</m>, <m>\ldots</m>, <m>a_n</m> wat
+          <xref ref="trying_to_formulate_basis" /> bevredig en verder is hierdie skalare
+          <em>uniek</em>.
+        </p>
+      </statement>
+    </proposition>
+
+    <assemblage>
+      <p>
+        Dit is belangrik om die wiskundige frase <sq>daar bestaan </sq>n unieke <m>X</m>
+        wat <m>Y</m> bevredig' te verstaan.
+        Dit beteken twee dinge.
+        Eerstens, daar
+        <em>bestaan</em> 'n <m>X</m> wat <m>Y</m> bevredig.
+        Tweedens, daar <em>geen
+        ander</em> <m>X</m> wat <m>Y</m> bevredig nie.
+      </p>
+    </assemblage>
+
+    <assemblage>
+      <p>
+        Ons noem die skalare <m>a_1, a_2, \ldots, a_n</m> in
+        <xref ref="trying_to_formulate_basis" /> die
+        <em>ko&#xf6;rdinate</em> van
+        <m>\ve{v}</m> in die basis <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m>.
+      </p>
+    </assemblage>
+
+    <proof>
+      <p>
+        <m>\Rightarrow</m>.
+        Veronderstel dat die lys vektore <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>,
+        <m>\ve{e}_n</m> 'n basis vir <m>V</m> vorm.
+        Veronderstel
+        <m>\ve{v} \in V</m>.
+        Omdat die lys vektore <m>V</m> span, weet ons dat ons
+        <m>\ve{v}</m> as 'n line&#xea;re kombinasie van vektore in die lys op ten
+        minste een manier <em>kan</em> skryf,
+        <men xml:id="one_way_of_expanding">
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        Ons moet wys dat dit die <em>enigste</em>
+        manier is om <m>\ve{v}</m> as 'n
+        line&#xea;re kombinasie van die vektore <m>\ve{e}_i</m> uit te druk.
+        Veronderstel ons het ook
+        <men xml:id="second_way_of_expanding">
+          \ve{v} = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        Die verskil van die twee vergelykings lewer
+        <me>
+          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots +
+          (a_n - b_n) \ve{e}_n
+        </me>.
+      </p>
+
+      <p>
+        Omdat die lys vektore <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
+        line&#xea;r onafhanklik is, kom ons tot die gevolgtrekking dat
+        <me>
+          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n =
+          0
+        </me>.
+      </p>
+
+      <p>
+        Dit is, <m>a_1 = b_1</m>,
+        <m>a_2 = b_2</m>, ensovoorts tot en met <m>a_n = b_n</m> en
+        daarom is <xref ref="one_way_of_expanding" /> uniek.
+      </p>
+
+      <p>
+        <m>\Leftarrow</m>.
+        Aan die ander kant, veronderstel dat elke vektor <m>\ve{v}</m>
+        as 'n unieke line&#xea;re kombinasie
+        <me>
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </me>
+        geskryf kan word.
+        Die feit dat elke <m>\ve{v}</m> as 'n line&#xea;re
+        kombinasie van <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m> geskryf
+        <em>kan</em> word, beteken hulle span <m>V</m>.
+        Ons moet steeds wys dat hulle
+        line&#xea;r onafhanklik is.
+        So, veronderstel daar bestaan skalare
+        <m>b_1</m>, <m>b_2</m>, <m>\ldots</m>, <m>b_n</m>, sodat
+        <men xml:id="finding_bs_making_zero">
+          b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
+        </men>.
+      </p>
+
+      <p>
+        Ons moet wys dat <m>b_i</m> almal nul moet wees.
+        Ons weet reeds van
+        <em>een</em> moontlike oplossing van <xref ref="finding_bs_making_zero" /> :
+        stel elke <m>b_i = 0</m>.
+        Maar ons weet ook dat elke vektor (spesifiek, die
+        vektor <m>\ve{0}</m>) op presies een manier as 'n line&#xea;re kombinasie van
+        vektore <m>\ve{e}_i</m> uitgedurk kan word.
+        Daarom moet dit die enigste
+        oplossing wees,
+        i.e. ons vind dat <m>b_1 = b_2 = \cdots = b_n = 0</m>, en
+        daarom is die lys vektore <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
+        line&#xea;r onafhanklik.
+      </p>
+    </proof>
+
+    <theorem xml:id="inv_dim">
+      <title>Konstantheid van dimensie</title>
+      <statement>
+        <p>
+          As <m>\ve{e}_1,
+          \ve{e}_2, \ldots, \ve{e}_n</m> en <m>\ve{f}_1, \ve{f}_2, \ldots, \ve{f}_n</m>
+          basisse van 'n vektorruimte <m>V</m> is, dan is <m>m=n</m>.
+        </p>
+      </statement>
+    </theorem>
+
+    <proof>
+      <p>
+        Dit is 'n gevolg van <xref ref="bumping_off_lemma">Proposisie</xref>
+        (die
+        afstampproposisie).
+        Aangesien die <m>\ve{e}</m>-vectore <m>V</m> line&#xea;r
+        onfafhanklik is en die <m>\ve{f}</m>-vektore <m>V</m> span,
+        het ons <m>m \leq n</m>.
+        Aan die ander kant,
+        omdat die <m>\ve{f}</m>-vektore lin&#xea;r onfahanklik is
+        en die <m>\ve{e}</m>-vektore <m>V</m> span, het ons <m>n \leq m</m>.
+        Daarom is <m>m=n</m>.
+      </p>
+    </proof>
+
+    <definition>
+      <statement>
+        <p>
+          'n Vektorruimte <m>V</m> is <term>eindigdimensioneel</term> as dit
+          'n eindige basis het.
+          In daardie geval is die <term>dimensie</term> van <m>V</m>
+          die aantal elemente in 'n basis vir <m>V</m>. 'n Vektorruimte is
+          <term>oneindigdimensioneel</term>
+          as dit nie eindigdimensioneel is nie.
+        </p>
+      </statement>
+    </definition>
+
+    <assemblage>
+      <p>
+        Let op dat die konsep van die <sq>dimensie van </sq>n vektorruimte' slegs
+        goedgedefinieerd is as gevolg van <xref ref="inv_dim">Stelling</xref>.
+      </p>
+    </assemblage>
+
+    <example xml:id="standard_basis_R_n_ex">
+      <title>Standaard basis vir $\mathbb{R}^n$</title>
+      <statement>
+        <p>
+          Die lys vektore
+          <me>
+            \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots,
+            0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
+          </me>
+          is 'n basis vir <m>\mathbb{R}^n</m>.
+          Ons het reeds in <xref ref="Rn_spanning_set">Voorbeeld</xref>
+          gesien dat die lys <m>\mathbb{R}^n</m> span.
+          Ons moet
+          seker maak dat die lys line&#xea;r onafhanklik is.
+          So, suppose that
+          <me>
+            a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}
+          </me>.
+        </p>
+
+        <p>
+          Uitbreiding van die linkerkant na komponente volgens die definisie van
+          die standaard basisvektore
+          <m>\ve{e}_i</m> lewer die vergelyking
+          <me>
+            (a_1, 0, 0, \ldots, 0) + (0, a_2, 0, \ldots, 0) + \cdots + (0, 0,
+            0, \ldots, a_n) = (0, 0, 0, \ldots, 0)
+          </me>.
+        </p>
+
+        <p>
+          Met ander woorde, ons het dat
+          <me>
+            (a_1, a_2, a_3, \ldots, a_n) = (0, 0, 0, \ldots, 0)
+          </me>
+          wat beteken dat <m>a_1 = a_2 = a_3 = \cdots = a_n = 0</m>, presies
+          wat ons moes bewys.
+          Gevolglik is die lys vektore
+          <m>\ve{e}_1, \ve{e}_2,
+          \ldots, \ve{e}_n</m> line&#xea;r onafhanklik en daarom is dit 'n basis vir
+          <m>\mathbb{R}^n</m>.
+          So <m>\mathbb{R}^n</m> het dimensie <m>n</m>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Die lys polinome
+          <me>
+            \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \,
+            \ldots, \, \ve{p}_n (x) := x^n
+          </me>
+          is 'n basis vir <m>\Poly_n</m>,
+          so <m>\dim \Poly_n = n+1</m>.
+          Duidelik span
+          hierdie lys <m>\Poly_n</m> per definisie,
+          so ons moet net seker maak dat
+          hulle line{&#xea;r} onafhanklik is.
+          Veronderstel dat
+          <me>
+            a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n
+            = \ve{0}
+          </me>.
+        </p>
+
+        <p>
+          <em>Dit is 'n vergelyking van funksies,
+          so dit geld vir alle <m>x \in
+          \mathbb{R}</m>!</em> Met ander woorde,
+          vir <em>alle</em> <m>x \in \mathbb{R}</m> het
+          ons het die vergelyking
+          <men xml:id="root_of_poly">
+            a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0
+          </men>.
+        </p>
+
+        <p>
+          Maar, ons weet uit algebra dat 'n
+          polinoom van die vorm <xref ref="root_of_poly" /> met nie-nul
+          ko&#xeb;ffisi&#xeb;nte <em>meestens</em>
+          <m>n</m> wortels <m>x_1, x_2, \ldots,
+          x_n</m> het . So, die ko&#xeb;ffisi&#xeb;nte moet nul wees, i.e.
+          <m>a_0 = a_1
+          = a_2 = \cdots = a_n = 0</m>,
+          wat is wat ons moes bewys.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Veronderstel <m>X</m> is 'n eindige versameling.
+          Dan is
+          <m>\Fun(X)</m> eindig-dimensioneel,
+          met dimensie <m>|X|</m>, waar die basis gegee
+          word deur die funksies <m>\ve{f}_a</m>,
+          <m>a \in X</m>, gedefinieer deur:
+          <men xml:id="defn_of_basis_of_functions">
+            \ve{f}_a (x) :=  
+            \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ andersins}  
+            \end{cases}
+          </men>
+        </p>
+
+        <p>
+          Ons sal dit in 'n reeks oefeninge bewys.
+        </p>
+
+        <assemblage>
+          <p>
+            Die formule aan die regterkant van
+            <xref ref="defn_of_basis_of_functions" /> kom so gereeld in wiskunde voor
+            dat ons dit 'n spesiale simbool gee,
+            naamlik <m>\delta_{ab}</m>
+            (die
+            <sq>Kronecker-delta</sq>).
+            Hierdie simbool staan vir die formule: <q>As
+            <m>a=b</m>, gee die waarde 1.
+            As <m>a \neq b</m>, gee die waarde <m>0</m></q>.
+            In
+            hierdie taal kan ons die definisie van die funksies<m>\ve{f}_a</m> as
+            <men>
+              \ve{f}_a (x) := \delta_{ax}
+            </men>
+            herskryf.
+          </p>
+        </assemblage>
+
+      </statement>
+    </example>
+
+    <p>
+      movebackintoexample (both)
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Veronderstel <m>X = \left\{\mbox{\pmglyph{\HGi}} ,
+          \mbox{\pmglyph{\He}} , \mbox{\pmglyph{\HZxi}} \right\}</m>.
+
+          <ol>
+            <li>
+              <p>
+                Evalueer die funksie <m>\ve{f}_{\mbox{\tiny
+                \pmglyph{\HGi}} }</m> vir elke <m>x \in X</m>.
+              </p>
+            </li>
+
+            <li>
+              <p>
+                Wys dat elke funksie <m>\ve{f} \in \Fun(X)</m> as 'n
+                line&#xea;re kombinasie van
+                <m>\ve{f}_{\mbox{\tiny
+                \pmglyph{\HGi}} }</m>, <m>\ve{f}_{\mbox{\tiny \pmglyph{\He}} }</m> en
+                <m>\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}} }</m> geskryf kan word.
+              </p>
+            </li>
+          </ol>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Nou, laat <m>X</m> 'n arbitr&#xea;re eindige versameling
+          wees.
+          Oorweeg die versameling funksies
+          <me>
+            \ve{f}_a, \, a \in X
+          </me>
+        </p>
+
+        <p>
+          Wys dat hierdie versameling (i) <m>\Fun(X)</m> span en (ii) line&#xea;r
+          onafhanklik is.
+        </p>
+      </statement>
+    </exercise>
+
+    <example>
+      <statement>
+        <p>
+          <m>\Trig_n</m> is <m>(2n+1</m>)-dimensioneel, met basis
+          <md>
+            \ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x)
+            := \sin x, \, \ve{T}_3 (x) := \cos 2x, \\ \ve{T}_4 (x) := \sin 2x,
+            \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) :=
+            \sin nx.
+          </md>
+        </p>
+
+        <p>
+          Hierdie funksies span <m>\Trig_n</m> per definisie.
+          Hulle is ook line&#xea;r
+          onafhanklik, alhoewel ons dit nie sal bewys nie.
+        </p>
+      </statement>
+    </example>
+
+    <example xml:id="dimension_of_matrix_space_example">
+      <statement>
+        <p>
+          Die dimensie van
+          <m>\Mat_{n,m}</m> is <m>nm</m>. 'n Basis word gegee deur die matrikse
+          <me>
+            \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
+          </me>
+          wat 'n <m>1</m> in ry <m>i</m> en kolom <m>j</m> het, en nulle orals elders.
+        </p>
+
+        <assemblage>
+          <p>
+            Normaalweg is <m>\mat{A}</m> 'n matriks en <m>\mat{A}_{ij}</m>
+            is die element van die matriks in die posisie <m>(i,j)</m>.
+            Maar nou is
+            <m>\mat{E}_{ij}</m> 'n matriks in eie reg! 'n Element in posisie <m>(k,l)</m> sal
+            geskryf word as <m>(\mat{E}_{ij})_{kl}</m>.
+            Ek hoop jy vind dit nie te
+            verwarrend nie.
+            Trouens, ons kan 'n elegante formule vir die elemente
+            van <m>\mat{E}_{ij}</m> neerskryf deur gebruik te maak van die Kronecker
+            delta-simbool:
+            <men xml:id="kronecker_for_matrix_basis">
+              (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}
+            </men>
+          </p>
+        </assemblage>
+
+      </statement>
+    </example>
+
+    <p>
+      movebackintoexample
+      ***
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Kontroleer dat <xref ref="kronecker_for_matrix_basis" />
+          wel die korrekte formule vir die matrikselemente van <m>\mat{E}_{ij}</m>
+          gee.
+        </p>
+      </statement>
+    </exercise>
+
+    <example>
+      <statement>
+        <p>
+          Die standaard basis van <m>\Mat_{2,2}</m> is
+          <me>
+            \mat{E}_{11} = \left[ 
+            \begin{array}{cc} 
+            1 \amp  0 \\
+            0 \amp  0
+            \end{array}  
+            \right], \, \mat{E}_{12} = \left[ 
+            \begin{array}{cc} 
+            0 \amp  1 \\
+            0 \amp  0
+            \end{array}  
+            \right], \mat{E}_{21} = \left[ 
+            \begin{array}{cc} 
+            0 \amp  0 \\ 
+            1 \amp  0
+            \end{array}  \right], \mat{E}_{22} = \left[ 
+            \begin{array}{cc} 
+            0 \amp  0 \\
+            0 \amp  1
+            \end{array}  
+            \right]
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <example>
+      <statement>
+        <p>
+          Die standaard basis van <m>\Col_n</m> is
+          <me>
+            \col{e}_1 := \cvector{1 \\
+            0 \\
+            \vdots \\
+            0}, \, \col{e}_2 := \cvector{
+            0 \\
+            1 \\
+            \vdots \\
+            0}, \, \ldots, \, \col{e}_n := \cvector{0 \\
+            0 \\
+            \vdots \\
+            1 } 
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      Ons gaan nou deelruimtes van vektorruimtes se dimensie bestudeer.
+    </p>
+
+    <proposition xml:id="dim-of-subspace-prop">
+      <statement>
+        <p>
+          Laat <m>W</m> 'n deelruimte van 'n eindig-dimensionele
+          vektorruimte <m>V</m> wees.
+          Dan is <m>W</m> eindig-dimensioneel, en <m>\Dim(W) \leq
+          \Dim(V)</m>.
+        </p>
+      </statement>
+    </proposition>
+
+    <proof>
+      <p>
+        Laat <m>n = \Dim(V)</m>.
+        As <m>W = \{ \ve{0} \}</m>, dan is die
+        stelling duidelik waar.
+        Veronderstel <m>W \neq \{ \ve{0} \}</m>.
+        Kies 'n
+        nie-nul vektor <m>\ve{e}_1 \in W</m> en vorm die lys <m>\basis{B}_1 = \bopen
+        \ve{e}_1 \bclose</m>.
+        As dit <m>W</m> span, dan is ons klaar.
+        Indien nie, dan
+        bestaan daar <m>\ve{e}_2 \in W</m> wat nie 'n skalaarveelvoud van <m>\ve{e}_1</m>
+        is nie.
+        Oorweeg nou die lys <m>\basis{B}_2 = \bopen \ve{e}_1, \ve{e}_2
+        \bclose</m>.
+        As dit <m>W</m> span, dan is ons klaar.
+        Indien nie, dan bestaan
+        daar 'n vektor <m>\ve{e}_3 \in W</m> wat nie 'n line&#xea;re kombinasie van
+        <m>\ve{e}_1</m> en <m>\ve{e}_2</m> is nie.
+        Oorweeg die nuwe lys <m>\basis{B}_3 =
+        \bopen \ve{e}_1, \ve{e}_2, \ve{e}_3 \bclose</m>.
+        En so voorts.
+      </p>
+
+      <p>
+        Hierdie proses moet uiteindelik termineer.
+        Dit is, daar bestaan 'n <m>k
+        \geq 1</m>, sodat <m>\basis{B}_k = \bopen \ve{e}_1, \ldots, \ve{e}_k
+        \bclose</m> <m>W</m> span, en gevolglik 'n basis vir <m>W</m> is.
+        Dit is omdat elke
+        lys <m>\basis{B}_i</m> line&#xea;r onafhanklik is
+        (volgens konstruksie is
+        geen vektor 'n line&#xea;re kombinasie van die voorafgaande vektore
+        nie).
+        En dit is onmoonltik om 'n line&#xea;r onafhanklik lys vektore in <m>W</m>
+        (en daarom in <m>V</m>) saam te stel wat meer as <m>n</m> elemente het nie,
+        volgens die Afstampproposisie.
+        Dit wys dat <m>k \leq n</m>.
+      </p>
+    </proof>
+
+    <p>
+      Dit is goed om 'n voorbeeld van 'n oneindig-dimensionele vektorruimte te
+      h&#xea;.
+    </p>
+
+    <proposition>
+      <statement>
+        <p>
+          <m>\Poly</m> is oneindigdimensioneel.
+        </p>
+      </statement>
+    </proposition>
+
+    <proof>
+      <p>
+        Veronderstel <m>\Poly</m> is eindigdimensioneel.
+        Dit beteken daar
+        bestaan 'n eindige versameling polinome
+        <m>\ve{p}_1, \ve{p}_2, \ldots,
+        \ve{p}_n</m> wat <m>\Poly</m> span.
+        Maar, laat <m>d</m> die hoogste graad van al die
+        polinome in die lys <m>\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n</m> wees.
+        Dan is
+        <m>\ve{p} := x^{d+1}</m> 'n polinoom wat nie in die span van
+        <m>\ve{p}_1,
+        \ve{p}_2, \ldots, \ve{p}_n</m> is nie, want die sommering en
+        skalaarvermenigvuldiging van polinome kan nooit die graad verhoog nie.
+        Ons het 'n teenstelling bereik.
+        So ons aanvanklike aanname kan nie waar
+        wees nie, i.e.
+        <m>\Poly</m> kan nie eindigdimensioneel wees nie.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          Ons sal dit nie hier bewys nie, maar die volgende
+          vektorruimtes is ook eindigdimensioneel:
+
+          <ul>
+            <li>
+              <p>
+                <m>\mathbb{R}^\infty</m>,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Fun(X)</m> waar <m>X</m> 'n eindige versameling is,
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Cont(I)</m> vir enige nie-le&#xeb; interval <m>I</m> en
+              </p>
+            </li>
+
+            <li>
+              <p>
+                <m>\Diff(I)</m> vir enige oop interval <m>I</m>.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </example>
+  </introduction>
+
+  <subsection xml:id="sifting_subsection">
+    <title>Sifting</title>
+    <p>
+      As ons die bewys van <xref ref="bumping_off_lemma">Proposisie</xref> (die
+      <sq>Afstampproposisie</sq>) noukeurig bestudeer, vind ons dat dit van 'n
+      <em>sif-algoritme</em> gebruik maak.
+      Hierdie algoritme kan op <em>enige</em>
+      lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in 'n vektorruimte
+      toegepas word.
+      Beskou elke vektor <m>\ve{v}_i</m> in so 'n lys
+      opeenvolgend.
+      As <m>\ve{v}_i</m> die nul-vektor is, of as dit 'n line&#xea;re
+      kombinasie van die voorafgaande vektore
+      <m>\ve{v}_1, \ve{v}_2, \ldots,
+      \ve{v}_{n-1}</m> is, verwyder dit van die lys.
+    </p>
+
+    <example>
+      <statement>
+        <p>
+          Sif die volgende lys vektore in <m>\mathbb{R}^3</m>:
+          <md>
+            <mrow>\ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6,
+            -3)</mrow>
+            <mrow>\ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1,
+            1, 0)</mrow>
+          </md>.
+        </p>
+
+        <p>
+          Ons begin met <m>\ve{v}_1</m>.
+          Aangesien dit nie die nul-vektor is nie en
+          nie 'n line&#xea;re kombinasie van enige voorafgaande vektore is nie,
+          bly dit in die lys.
+          Nou beweeg ons aan na <m>\ve{v}_2</m>, wat nul is, so
+          ons verwyder dit.
+          Ons skuif aan na <m>\ve{v}_3</m>, wat ons deur inspeksie
+          vasstel dat dit as<m>3 \ve{v}_1</m> geskryf kan word, so ons verwyder dit.
+          Ons beweeg aan na <m>\ve{v}_4</m>.
+          Dit is nie nul nie, en dit kan nie as 'n
+          veelvoud van <m>\ve{v}_1</m> uitgedruk word nie (bevestig dit vir jouself),
+          so dit bly in die lys.
+          Ons beweeg aan na <m>\ve{v}_5</m>.
+          Ons kyk of dit as
+          die line&#xea;re kombinasie
+          <me>
+            \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
+          </me>
+          geskryf kan word en vind die oplossing <m>a=2, b=3</m>
+          (bevestig self),
+          so
+          ons verwyder dit.
+          Uiteindelik kom ons by <m>\ve{v}_6</m>.
+          Ons ondersoek of
+          dit as 'n line&#xea;re kombinasie
+          <me>
+            \ve{v}_6 = a\ve{v}_1 + b \ve{v}_4
+          </me>
+          geskryf kan word en vind geen oplossings nie
+          (bevestig self),
+          so dit
+          bly in die lys.
+          Ons finale gesifte lys is
+          <me>
+            \ve{v}_1, \ve{v}_4, \ve{v}_6
+          </me>.
+        </p>
+      </statement>
+    </example>
+
+    <p>
+      movebackintoexample
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Doen die drie <sq>bevestig self</sq>-bewerkings hierbo.
+        </p>
+      </statement>
+    </exercise>
+
+    <p>
+      Die volgende resultate wys dat sifting a baie nuttige manier is om 'n basis
+      vir 'n vektorruimte te konstrueer!
+    </p>
+
+    <lemma xml:id="sift_lemma_basis">
+      <statement>
+        <p>
+          As 'n lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots,
+          \ve{v}_n</m> 'n vektorruimte <m>V</m> span,
+          dan sal sifting van die lys in 'n
+          basis vir <m>V</m> resulteer.
+        </p>
+      </statement>
+    </lemma>
+
+    <proof>
+      <p>
+        By elke stap vind ons dat 'n vektor wat uit die lys verwyder word
+        &#xf3;f die nul-vektor is, &#xf3;f 'n line&#xea;re kombinasie van die
+        voorafgaande vektore is wat ni&#xe9;
+        uit die lys verwyder word nie.
+        So
+        as ons die vektor uit die lys verwyder,
+        sal die oorblywende vektore
+        steeds <m>V</m> span.
+        Daarom span die vektore in die finale lys steeds <m>V</m>.
+      </p>
+
+      <p>
+        Om te sien dat die finale gesifte lys line&#xea;r onafhanklik is, pas
+        ons <xref ref="lin_dependence_prop">Proposisie</xref> toe.
+        Deur konstruksie is geen
+        vektor in die finale lys 'n line&#xea;re kombinasie van die voorafgaande
+        vektore nie
+        (ander sou dit verwyder gewees het!).
+        Daarom is die finale
+        lys nie line&#xea;r afhanklik nie,
+        so dit moet line&#xea;r onafhanklik
+        wees!
+      </p>
+    </proof>
+
+    <corollary xml:id="first_corollary_please">
+      <statement>
+        <p>
+          Enige line&#xea;r onafhanklike lys vektore
+          <m>\ve{v}_1,
+          \ve{v}_2, \ldots, \ve{v}_k</m> in 'n eindig-dimensionele vektorruimte <m>V</m>
+          kan uitgebrei word tot 'n basis van <m>V</m>.
+        </p>
+      </statement>
+    </corollary>
+
+    <proof>
+      <p>
+        Aangesien <m>V</m> eindig-dimensioneel is, het dit 'n basis
+        <m>\ve{e}_1, \ldots, \ve{e}_n</m>.
+        Oorweeg nou die lys
+        <me>
+          L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2,
+          \ldots, \ve{e}_n
+        </me>
+        wat duidelik <m>V</m> span.
+        Deur die lys te sif, sal ons 'n basis vir <m>V</m>
+        kry, volgens <xref ref="sift_lemma_basis">Lemma</xref>.
+        Sommige van die
+        <m>\ve{e}</m>-vektore mag dalk verwyder wees in die proses.
+        Maar geeneen van
+        die <m>\ve{v}</m>-vektore sal verwyder word nie, aangesien dit sou beteken
+        dat sommige vektore <m>\ve{v}_i</m> 'n line&#xea;re kombinasie van die
+        voorafgaande vektore <m>\ve{v}_1, \ldots, \ve{v}_{i-1}</m> is, wat
+        onmoontlik is,
+        omdat <m>\ve{v}_1, \ldots, \ve{v}_k</m> 'n line&#xea;r
+        onafhanklike lys is.
+        Dus n&#xe1; sifting van die lys <m>L</m> brei ons ons
+        die oorspronklike lys <m>\ve{v}_1, \ldots, \ve{v}_k</m> uit na 'n basis van
+        <m>V</m>.
+      </p>
+    </proof>
+
+    <corollary xml:id="lin-ind-implies-basis">
+      <statement>
+        <p>
+          As <m>\ve{v}_1, \ve{v}_2,
+          \ldots, \ve{v}_n</m> 'n line&#xea;r
+          onafhanklike lys van <m>n</m> vektore in 'n <m>n</m>-dimensionele vektorruimte
+          <m>V</m> is, dan is dit 'n basis.
+        </p>
+      </statement>
+    </corollary>
+
+    <proof>
+      <p>
+        Volgens <xref ref="first_corollary_please">Gevolgtrekking</xref> kan ons
+        <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> uitbrei tot 'n basis van <m>V</m>.
+        Maar <m>V</m> het dimensie <m>n</m>,
+        so die basis moet slegs <m>n</m> vektore bevat
+        volgens <xref ref="inv_dim">Stelling</xref>
+        (Onveranderlikheid van Dimensie).
+        Gevolglike het ons geen vektore bygevoeg nie, en ons oorspronklike lys
+        is reeds 'n basis.
+      </p>
+    </proof>
+
+    <example>
+      <statement>
+        <p>
+          In <xref ref="new_basis_for_poly_3">Voorbeeld</xref> het ons gewys dat
+          die lys polinome
+          <me>
+            \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2
+            - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
+          </me>
+          line&#xea;r onafhanklik in <m>\Poly_3</m> is.
+          Aangesien <m>\dim \Poly_3 = 4</m>,
+          sien ons dat dit 'n basis vir <m>\Poly_3</m> is.
+        </p>
+
+        <assemblage>
+          <p>
+            In <xref ref="chebyshev_example">Oefening</xref> het jy gewys
+            dat <m>\ve{q}_0, \ldots, \ve{q}_3</m> 'n basis vir <m>\Poly_3</m> is deur 'n
+            <sq>brute krag</sq> benadering.
+            Hierdie nuwe metode is <em>verskillend</em>!
+          </p>
+        </assemblage>
+
+      </statement>
+    </example>
+
+    <p>
+      \furtherexercises
+    </p>
+
+    <exercise>
+      <statement>
+        <p>
+          Sif die lys vektore
+          <md>
+            <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2,
+            3)</mrow>
+            <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1,
+            1, 0)</mrow>
+          </md>.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="true_false_span_lin_ind">
+      <statement>
+        <p>
+          Laat <m>V</m> 'n vektorruimte van dimensie <m>n</m> wees.
+          Besluit
+          (en skryf jou besluit neer!) of die volgende bewerings waar of onwaar
+          is.
+          As dit waar is, bewys dit.
+          Indien nie, gee 'n teenvoorbeeld.
+
+          <ul>
+            <li>
+              <title>(a)</title>
+              <p>
+                Enige line&#xea;r onafhanklike lys vektore in <m>V</m> bevat
+                hoogstens <m>n</m> vektore.
+              </p>
+            </li>
+
+            <li>
+              <title>(b)</title>
+              <p>
+                Enige lys vektore wat <m>V</m> span bevat ten minste <m>n</m>
+                vektore.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n
+          \bclose</m> 'n line&#xea;r onafhanklike lys vektore in 'n vektorruimte <m>V</m>
+          wees.
+          Veronderstel dat <m>\ve{v}</m> 'n vektor in <m>V</m> is wat nie as 'n
+          line&#xea;re kombinasie van die vektore uit <m>\basis{B}</m> geskryf kan word
+          nie.
+          Toon aan dat die lys <m>\basis{B}' = \bopen \ve{v}_1, \ldots,
+          \ve{v}_n, \ve{v} \bclose</m> line&#xea;r onafhanklik is.
+          (Wenk: Gebruik die
+          Line&#xea;re Kombinasie van Voorafgaande Vektore Proposisie.)
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="n_lin_ind_is_basis">
+      <statement>
+        <p>
+          Voltooi die bewys van die
+          volgende Lemma.
+        </p>
+
+        <p>
+          <em>Lemma.</em> Veronderstel dat <m>V</m> 'n vektorruimte van dimensie <m>n</m> is.
+          Dan is enige line&#xea;r onafhanklike lys van <m>n</m> vektore in <m>V</m> 'n
+          basis vir <m>V</m>.
+        </p>
+
+        <p>
+          <em>Bewys.</em> Laat <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n
+          \bclose</m> 'n line&#xea;r onafhanklike lys vektore in <m>V</m> wees.
+        </p>
+
+        <p>
+          Veronderstel dat <m>\basis{B}</m> <em>nie</em>
+          'n basis vir <m>V</m> is nie.
+        </p>
+
+        <p>
+          Daarom span <m>\basis{B}</m> nie <m>V</m> nie, want... (a)
+        </p>
+
+        <p>
+          Daarom bestaan daar <m>\ve{v} \in V</m> sodanig dat ... (b)
+        </p>
+
+        <p>
+          Voeg nou <m>\ve{v}</m> by die lys
+          <m>\basis{B}</m> om 'n nuwe lys te vorm,
+          <m>\basis{B}' :=</m> ... (c)
+        </p>
+
+        <p>
+          Die nuwe lys <m>\basis{B}'</m> is line&#xea;r onafhanklik omdat ... (d)
+        </p>
+
+        <p>
+          Dit is 'n teenstelling, omdat ... (e)
+        </p>
+
+        <p>
+          Dus <m>\basis{B}</m> moet 'n basis vir <m>V</m> wees.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="checking_matrices_lin_dep">
+      <statement>
+        <p>
+          Gebruik <xref ref="true_false_span_lin_ind">Oefening</xref>(a) om aan te toon dat die lys matrikse in
+          <m>\Mat_{2,2}</m> vanaf <xref ref="x2_by_2_matrices_lin_dep">Oefening</xref> line&#xea;r
+          onafhanklik is.
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="dim_poly_at_2_ex">
+      <statement>
+        <p>
+          In elke geval, gebruik die
+          resultate uit <xref ref="true_false_span_lin_ind">Oefeninge</xref>
+          <xref ref="n_lin_ind_is_basis">en</xref> om te bepaal
+          of <m>\basis{B}</m> 'n basis vir <m>V</m> is:
+
+          <ul>
+            <li>
+              <title>(a)</title>
+              <p>
+                <m>V = \Poly_2</m>, <m>\basis{B} = \bopen 2 + x^2, \, 1-x, \, 1
+                + x - 3x^2, \, x-x^2 \bclose</m>
+              </p>
+            </li>
+
+            <li>
+              <title>(b)</title>
+              <p>
+                <m>V = \Mat_{2,2}</m>, <m>\basis{B} = \left\{ \cmatrix{1 \amp 2 \\
+                -1 \amp 3}, \, \cmatrix{0 \amp 1 \\ 3 \amp -1}, \, \cmatrix{1 \amp 2 \\ 3 \amp 
+                4} \right\}</m>
+              </p>
+            </li>
+
+            <li>
+              <title>(c)</title>
+              <p>
+                <m>V = \Trig_2</m>, <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2
+                x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Laat <m>\bopen \ve{u}, \ve{v}, \ve{w} \bclose</m> 'n line&#xea;r
+          onafhanklike lys vektore in 'n vektorruimte <m>V</m> wees.
+          Skryf neer of die
+          volgende bewerings waar of onwaar is.
+          As dit waar is, bewys dit.
+          As dit
+          onwaar is, gee 'n teenvoorbeeld.
+          Wenk: Gebruik die definisie van
+          line&#xea;re onafhanklikheid.
+
+          <ul>
+            <li>
+              <title>(a)</title>
+              <p>
+                Die lys <m>\bopen \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \,
+                \ve{u} + \ve{w} \bclose</m> is line&#xea;r onafhanklik.
+              </p>
+            </li>
+
+            <li>
+              <title>(b)</title>
+              <p>
+                Die lys <m>\bopen \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \,
+                \ve{u} - \ve{w} \bclose</m> is line&#xea;r onafhanklik.
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </exercise>
+
+    <exercise>
+      <statement>
+        <p>
+          Vir elkeen van die volgende, toon aan dat <m>V</m> 'n
+          deelruimte van <m>\Poly_2</m> is,
+          vind 'n basis vir <m>V</m>, en bereken <m>\dim
+          V</m>.
+
+          <ul>
+            <li>
+              <title>(a)</title>
+              <p>
+                <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
+              </p>
+            </li>
+
+            <li>
+              <title>(b)</title>
+              <p>
+                <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
+              </p>
+            </li>
+          </ul>
+        </p>
+      </statement>
+    </exercise>
+  </subsection>
+</section>
+

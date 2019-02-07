@@ -1,0 +1,592 @@
+
+
+<section xml:id="ACh1Sec4MoreExamples">
+  <title>Verdere voorbeelde en slaggate</title>
+  <example>
+    <title>Nie 'n vektor-ruimte nie</title>
+    <statement>
+      <p>
+        Definieer die versameling <m>V</m>
+        deur
+        <men>
+          V := \{ a, b \} 
+        </men>.
+      </p>
+
+      <p>
+        Definieer die sommeringsbewerking deur
+        <md>
+          <mrow>\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{a}</mrow>
+          <mrow>\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{c}</mrow>
+        </md>
+      </p>
+
+      <p>
+        Om na te gaan of dit 'n goed-gedefinieerde bewerking is, moet ons
+        nagaan dat die sommering van enige twee elemente van <m>V</m> 'n
+        goed-gedefinieerde element van <m>V</m> lewer.
+        Maar <m>\ve{v} + \ve{b} =
+        \ve{c}</m>, so die som van
+        <m>\ve{b} \in V</m> met homself lewer iets
+        (<m>\ve{c}</m>) wat nie 'n element van <m>V</m> is nie.
+        So <m>V</m> is nie 'n
+        vektorruimte nie want dit het nie 'n goed-gedefinieerde
+        sommeringsbewerking nie.
+      </p>
+    </statement>
+  </example>
+
+  <example>
+    <title>Weereens nie 'n vektor-ruimte nie</title>
+    <statement>
+      <p>
+        Definieer die
+        versameling <m>V</m> deur
+        <men>
+          V := \{ a, b \} 
+        </men>.
+      </p>
+
+      <p>
+        Definieer die sommeringsbewerking as
+        <md>
+          <mrow>\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{b}</mrow>
+          <mrow>\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{a}</mrow>
+        </md>
+      </p>
+
+      <p>
+        Dit is 'n goed-gedefinieerde bewerking,
+        omdat enige twee elemente van
+        <m>V</m> se som n goedgedefinieerde element van <m>V</m> lewer.
+      </p>
+
+      <p>
+        Definieer die nul-vektor deur
+        <men xml:id="ne_13">
+          \ve{0} := \ve{a}
+        </men>.
+      </p>
+
+      <p>
+        Dit is goed-gedefinieerd, want <m>\ve{a}</m> is 'n element van <m>V</m>.
+      </p>
+
+      <p>
+        Definieer skalaarvermenigvuldiging met 'n re&#xeb;le getal <m>k \in
+        \mathbb{R}</m> as
+        <men xml:id="ne_14">
+          k \cdot \ve{a} := \ve{a}  \mbox{en}   k \cdot \ve{b} :=
+          \ve{b}
+        </men>.
+      </p>
+
+      <p>
+        Dit is 'n goed-gedefinieerde skalaarvermenigvuldigingsbewerking, want
+        dit laat skalaarvermenigvuldiging met enige skalaar <m>k</m> toe en gee 'n
+        goed-gedefinieerde element <m>k \cdot \ve{v} \in V</m> terug.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar
+        nie R5 en R8 nie.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <title>Die nul-vektorruimte</title>
+    <statement>
+      <p>
+        Definieer die versameling <m>Z</m> as
+        <men>
+          Z := \{ \ve{z} \}
+        </men>.
+      </p>
+
+      <p>
+        Let op dat dit net 'n enkele element bevat, <m>\ve{z}</m>.
+        Definieer
+        sommering as
+        <men>
+          \ve{z} + \ve{z} := \ve{z}
+        </men>
+      </p>
+
+      <p>
+        Definieer die nul-element as
+        <men>
+          \ve{0} := z
+        </men>.
+      </p>
+
+      <p>
+        Laastens, definieer skalaarvermenigvuldiging met 'n skalaar <m>k \in
+        \mathbb{R}</m> as:
+        <men>
+          k \cdot \ve{z} := \ve{z}
+        </men>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat hierdie data re&#xeb;ls R1 tot R8 bevredig.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <title>$\mathbb{R}^n$</title>
+    <statement>
+      <p>
+        Definieer die versameling <m>\mathbb{R}^n</m> as
+        <men>
+          \mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in
+          \mathbb{R} \mbox{ vir alle }  i = 1 \ldots n\}
+        </men>.
+      </p>
+
+      <p>
+        Definieer sommering as
+        <men>
+          (x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) :=
+          (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)
+        </men>.
+      </p>
+
+      <p>
+        Definieer die nul-element as
+        <men>
+          \ve{0} := (0, \, 0, \, \ldots, \, 0)
+        </men>.
+      </p>
+
+      <p>
+        Definieer skalaarvermenigvuldiging as
+        <men>
+          k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \,
+          \ldots, \, k x_n)
+        </men>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat hierdie data re&#xeb;ls R1 tot R8 bevredig.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <title>$\mathbb{R}^\infty$</title>
+    <statement>
+      <p>
+        Definieer die versameling
+        <m>\mathbb{R}^\infty</m> as
+        <men>
+          \mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in
+          \mathbb{R} \mbox{ vir alle }  i = 1, 2, 3, \ldots\}
+        </men>
+      </p>
+
+      <p>
+        So 'n element <m>\ve{x} \in \mathbb{R}^\infty</m> is 'n oneindige ry van
+        re&#xeb;le getalle.
+        Definieer die sommeringsbewerking komponentgewys:
+        <men>
+          (x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) :=
+          (x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)
+        </men>.
+      </p>
+
+      <p>
+        Definieer die nul-element as
+        <men>
+          \ve{0} := (0, \, 0, \, 0, \, \ldots )
+        </men>,
+        die oneindige reeks waarvan alle komponente nul is.
+        Laastens, definieer
+        skalaarvermenigvuldiging komponentgewys:
+        <men>
+          k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \,
+          \ldots)
+        </men>
+      </p>
+
+      <assemblage>
+        <p>
+          Die studie van oneindigheid is 'n belangrike
+          deel van wiskunde.
+          Het jy al die fliek <em>The man who knew
+          infinity</em> wat oor my gaan, gesien?
+        </p>
+      </assemblage>
+
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat hierdie data re&#xeb;ls R1 tot R8 bevredig.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <title>Funksies op 'n versameling</title>
+    <statement>
+      <p>
+        Laat <m>X</m> enige versameling
+        wees.
+        Definieer die versameling <m>\Fun(X)</m> van <em>re&#xeb;le
+        getal-funksies op <m>X</m></em> as
+        <men>
+          \Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}
+        </men>.
+      </p>
+
+      <p>
+        Let op dat die funksies arbitr&#xea;r kan wees;
+        daar is geen vereiste
+        dat hulle kontinu of differensieerbaar moet wees nie.
+        So 'n vereiste
+        maak nie sin nie,
+        aangesien <m>X</m> 'n arbitr&#xea;re versameling kan wees.
+        Byvoorbeeld, <m>X</m> kan die versameling
+        <m>\{a, b, c\}</m> wees <mdash /> sonder
+        enige verdere inligting maak dit nie sin om te s&#xea;
+        dat die funksie
+        <m>\mathbf{f} : X \rightarrow \mathbb{R}</m> kontinu is nie.
+      </p>
+
+      <p>
+        Definieer die sommeringsbewerking as
+        <men>
+          (\mathbf{f} + \mathbf{g}) (x) := \mathbf{f}(x) + \mathbf{g}(x),  x
+          \in X
+        </men>
+      </p>
+
+      <p>
+        Maak seker dat jy verstaan wat hierdie formule s&#xea;! Ons begin met
+        twee funksies<m>\mathbf{f}</m> en <m>\mathbf{g}</m>,
+        en ons definieer hulle som
+        <m>\mathbf{f} + \mathbf{g}</m>.
+        Dit is veronderstel om self 'n funksie van
+        <m>X</m> te wees.
+        Om 'n funksie op <m>X</m> te definieer, moet ek vir elke
+        <m>x \in
+        X</m> neerskryf watter waarde die funksie lewer.
+        En dit is wat die formule
+        s&#xea;: die waarde wat die funksie <m>\mathbf{f} + \mathbf{g}</m> aan die
+        element <m>x \in X</m> toeken,
+        word defnieer as die waarde <m>\mathbf{f}(x)</m>
+        plus die getal <m>\mathbf{g}(x)</m>.
+        Onthou: <m>\mathbf{f}</m> is 'n funksie,
+        terwyl <m>\mathbf{f}(x)</m> 'n getal is!
+      </p>
+
+      <p>
+        Definieer die nul-vektor <m>\mathbf{0}</m> as die funksie wat die getal <m>0</m>
+        lewer vir elke insetwaarde <m>x \in X</m>:
+        <men>
+          \ve{0} (x) := 0  \mbox{vir alle \(x \in X\).}
+        </men>
+      </p>
+
+      <p>
+        Definieer skalaarvermenigvuldiging as
+        <men>
+          (k \cdot \mathbf{f})(x) := k \mathbf{f}(x)
+        </men>.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample (all 3)
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Notasie-uitdaging!
+        S&#xea; of die volgende kombinasie
+        van
+        simbole 'n re&#xeb;le waarde of 'n funksie voorstel.
+
+        <ol>
+          <li>
+            <p>
+              <m>\mathbf{f}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>\mathbf{f}(x)</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>k \cdot \mathbf{f}</m>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m>(k \cdot \mathbf{f})(x)</m>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>X = \{a, b, c\}</m>.
+
+        <ol>
+          <li xml:id="three_function_question">
+
+            <p>
+              Skryf drie verskillende
+              funksies<m>\mathbf{f}, \mathbf{g},
+              \mathbf{h}</m> in <m>\Fun(X)</m> neer.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Vir die funksies wat jy in
+              <xref ref="three_function_question" /> geskryf het, bereken
+              <m>\mathbf{f} + \mathbf{g}</m>,
+              asook <m>3 \cdot \mathbf{h}</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat die data hierbo re&#xeb;ls R1 tot R8 bevredig,
+        i.e. dat <m>\Fun(X)</m> 'n vektorruimte is.
+      </p>
+    </statement>
+  </exercise>
+
+  <example xml:id="matrices_example_vec_space">
+    <title>Matrikse</title>
+    <statement>
+      <p>
+        Onthou dat 'n
+        <em><m>n \times m</m>-matriks</em>
+        <m>\mat{A}</m> 'n reghoekigge skikking getalle is,
+        met <m>n</m> rye en <m>m</m>
+        kolomme:
+        <me>
+          \mat{A} = \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp 
+          \cdots \amp  \mat{A}_{1m} \\
+          \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
+          \vdots \amp  \amp  \ddots \amp  \vdots \\
+          \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
+          \end{array} 
+          \right]
+        </me>
+      </p>
+
+      <p>
+        Twee <m>n \times m</m> matrikse <m>\mat{A}</m> en <m>\mat{B}</m> kan saamgetel word,
+        om 'n nuwe <m>n \times m</m>-matriks <m>\mat{A} + \mat{B}</m> te kry:
+        <me>
+          (\mat{A} + \mat{B})_{ij} := \mat{A}_{ij} + \mat{B}_{ij}
+        </me>
+      </p>
+
+      <p>
+        Daar is die <em>null-<m>n \times m</m>-matriks</em>:
+        <me>
+          \mat{0} = \left[ \begin{array}{cccc} 
+          0 \amp  0 \amp   \cdots \amp 0 \\
+          0 \amp  0 \amp   \cdots \amp  0 \\
+          \vdots \amp  \amp  \ddots \amp  \vdots \\
+          0 \amp  0 \amp  \cdots \amp  0
+          \end{array}  \right]
+        </me>
+      </p>
+
+      <p>
+        Jy kan ook 'n <m>n \times m</m>-matriks <m>\mat{A}</m> met 'n skalaar <m>k</m>
+        vermenigvuldig om 'n nuwe <m>n \times m</m>-matrik <m>k \mat{A}</m> te kry:
+        <me>
+          (k\mat{A})_{ij} := k \mat{A}_{ij}
+        </me>
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    movebackintoexample
+  </p>
+
+  <exercise>
+    <statement>
+      <p>
+        Wys dat met hierdie bewerkings vorm die versameling
+        <m>\Mat_{n, m}</m> van alle <m>n \times m</m>-matrikse 'n
+        vektorruimte.
+      </p>
+    </statement>
+  </exercise>
+
+  <example>
+    <statement>
+      <p>
+        Ons sal <m>\Col_n</m> skryf vir die vektorruimte<m>\Mat_{n,1}</m> van
+        <m>n</m>-dimensionele <em>kolomvektore</em>,
+        <me>
+          \Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\
+          x_n
+          \end{array}  \right] : x_1, \ldots, x_n \in \mathbb{R} \right\}
+        </me>.
+      </p>
+
+      <p>
+        So, <m>\Col_n</m> <sq>is</sq> net <m>\mathbb{R}^n</m>,
+        maar ons beklemtoon dat die
+        komponente in kolomme gerangskik word.
+      </p>
+    </statement>
+  </example>
+
+  <p>
+    \furtherexercises
+  </p>
+
+  <exercise xml:id="non_ass_ex">
+    <statement>
+      <p>
+        Definieer 'n sommeringsbewerking op die
+        versameling <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m> met die volgende
+        tabel:
+        <me>
+          \begin{array}{c|ccc}
+          + \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
+          \hline
+          \ve{0} \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
+          \ve{a} \amp  \ve{a} \amp  \ve{0} \amp  \ve{a} \\
+          \ve{b} \amp  \ve{b} \amp  \ve{a} \amp  \ve{0}
+          \end{array}
+        </me>
+      </p>
+
+      <p>
+        Die tabel werk soos volg.
+        Vir die berekening <m>\ve{b} + \ve{a}</m>, vind
+        die kruising van ry <m>\ve{b}</m> en kolom <m>\ve{a}</m>. ons sien dat <m>\ve{b} +
+        \ve{a} := \ve{a}</m>.
+      </p>
+
+      <p>
+        Bewys dat hierdie sommeringsbewerking R1 bevredig.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Bewys dat die sommeringsoperasie van <xref ref="non_ass_ex">Oefening</xref> nie R2 bevredig nie.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Definieer 'n snaakse sommeringsbewerking<m>\hat{+}</m> op
+        <m>\mathbb{R}</m> as
+        <me>
+          x \hat{+} y := x - y
+        </me>
+      </p>
+
+      <p>
+        Bevredig <m>\hat{+}</m> R2?
+        Indien wel, bewys dit.
+        Indien nie, gee 'n
+        teenvoorbeeld.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Laat <m>\mathbb{R}^+</m> 'n versameling van positiewe re&#xeb;le
+        getalle wees.
+        Definieer 'n sommeringsbewerking, 'n nul-vektor en 'n
+        skalaarvermenigvuldiging op <m>\mathbb{R}^+</m> as
+        <md>
+          <mrow>\ve{x} + \ve{y} \amp := \ve{x} \ve{y}</mrow>
+          <mrow>\ve{0} \amp  := 1</mrow>
+          <mrow>k \cdot \ve{x} \amp := \ve{x}^k</mrow>
+        </md>
+        waar <m>\ve{x}</m> en <m>\ve{y}</m> positiewe re&#xeb;le getalle is en <m>k</m> 'n
+        skalaar is (i.e. 'n arbitr&#xea;re re&#xeb;le getal).
+
+        <ol>
+          <li>
+            <p>
+              Gaan na dat hierdie bewerkings goed-gedefinieerd is.
+              Byvoorbeeld,
+              is <m>\ve{x} + \ve{y} \in \mathbb{R}^+</m>, soos dit
+              hoort?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Gaan na dat hulle R1 tot R8 bevredig,
+              sodat<m>\mathbb{R}^+</m> 'n
+              vektorruimte met hierdie bewerkings vorm.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+</section>
+
