@@ -280,8 +280,8 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         There is also an addition operation in set <m>C</m>.
         We can add two polynomials together algebraically by adding their corresponding coefficients:
         <md xml:id="add_in_C">
-          + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0] \\
-          := (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)
+         <mrow>[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
+          <mrow>:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
         </md>
       </p>
 
@@ -313,7 +313,6 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         Thinking in this way, we can visualize the graph of
         <m>\ve{c} + \ve{d}</m> as the graph of <m>\ve{c}</m> added to the graph of <m>\ve{d}</m>:
-        tikzalign
         <md>
 
           <image>
@@ -425,8 +424,8 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         when we add the zero polynomial to another polynomial,
         nothing happens!
         <md>
-          + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] \\
-          = [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0]
+          <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
+          <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
         </md>
       </p>
     </subsubsection>
@@ -456,7 +455,7 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         <m>\ve{a} \in A</m> by <m>k</m> to get a new element
         <m>k \cdot \ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
-          \underbrace{k \cdot (a_1, \, a_2)}_{\mbox{\tiny Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\mbox{\tiny Multiplying two numbers together} }, \, \underbrace{k a_2})
+          \underbrace{k \cdot (a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
         </me>
       </p>
 
@@ -485,9 +484,9 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         There is also a scalar multiplication operation in <m>C</m>.
         We simply multiply each coefficient of a polynomial <m>\ve{c} \in C</m> by <m>k</m>:
-        <men xml:id="sm_in_C">
+        <me xml:id="sm_in_C">
           k \cdot [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
-        </men>
+        </me>
       </p>
 
       <p>
