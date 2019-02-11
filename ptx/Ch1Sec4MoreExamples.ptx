@@ -71,7 +71,7 @@
     <p>
       Define scalar multiplication by a real number <m>k \in \mathbb{R}</m> by
       <men xml:id="ne_14">
-        k \cdot \ve{a} := \ve{a}  \mbox{and}   k \cdot \ve{b} := \ve{b}
+        k \cdot \ve{a} := \ve{a}  \text{ and }   k \cdot \ve{b} := \ve{b}
       </men>.
     </p>
 
@@ -136,7 +136,7 @@
   </example>
 
   <example>
-    <title>$\mathbb{R}^n$</title>
+    <title><m>\mathbb{R}^n</m></title>
     <statement>
     <p>
       Define the set <m>\mathbb{R}^n</m> by
@@ -178,7 +178,7 @@
   </example>
 
   <example>
-    <title>$\mathbb{R}^\infty$</title>
+    <title><m>\mathbb{R}^\infty</m></title>
     <statement>
     <p>
       Define the set <m>\mathbb{R}^\infty</m> by
@@ -273,7 +273,7 @@
     <p>
       Define the zero vector <m>\mathbf{0}</m> to be the function which outputs the number <m>0</m> for every input value of <m>x \in X</m>:
       <men>
-        \ve{0} (x) := 0  \mbox{for all \(x \in X\).}
+        \ve{0} (x) := 0  \text{ for all \(x \in X\).}
       </men>
     </p>
 
@@ -357,9 +357,9 @@
     <title>Matrices</title>
     <statement>
     <p>
-      the set <m>\Mat_{n, m}</m> of all
+      The set <m>\Mat_{n, m}</m> of all
       <m>n \times m</m> matrices is a vector space.
-      See <xref ref="reminder-matrices-chap">Appendix</xref>
+      See <xref ref="AppAReminderAboutMatrices">Appendix</xref>
       for a reminder about matrices.
     </p>
 
@@ -367,7 +367,7 @@
       <statement>
         <p>
           Show that when equipped with the addition operation, zero vector,
-          and scalar multiplication operation as defined in <xref ref="reminder-matrices-chap">Appendix</xref>,
+          and scalar multiplication operation as defined in <xref ref="AppAReminderAboutMatrices">Appendix</xref>,
           the set <m>\Mat_{n, m}</m> of all
           <m>n \times m</m> matrices is a vector space.
         </p>
