@@ -18,9 +18,9 @@
       <p>
         A <term>vector space</term> is a set <m>V</m> equipped with the following data:
 
-        <ul>
+        <dl>
           <li>
-            <title>D1.</title>
+            <title xml:id="D1">D1.</title>
             <p>
               An <em>addition operation</em>.
               (That is, for every pair of elements <m>\ve{u}, \ve{v} \in V</m>,
@@ -29,7 +29,7 @@
           </li>
 
           <li>
-            <title>D2.</title>
+            <title xml:id="D2">D2.</title>
             <p>
               A <em>zero vector</em>.
               (That is, a special vector <m>\ve{0} \in V</m> is marked out.)
@@ -37,79 +37,79 @@
           </li>
 
           <li>
-            <title>D3.</title>
+            <title xml:id="D3">D3.</title>
             <p>
               A <em>scalar multiplication operation</em>. (That is,
               for each real number <m>k</m> and each element <m>\ve{v} \in V</m>,
               a new element <m>k \cdot \ve{v} \in V</m> is defined).
             </p>
           </li>
-        </ul>
+        </dl>
       </p>
 
       <p>
         This data should satisfy the following rules for all
         <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m> and for all real numbers <m>k</m> and <m>l</m>:
 
-        <ol>
+        <dl>
           <li>
-            <title>R1.</title>
+            <title xml:id="R1">R1.</title>
             <p>
               <m>\ve{v} + \ve{w} = \ve{w} + \ve{v}</m>
             </p>
           </li>
 
           <li>
-            <title>R2.</title>
+            <title xml:id="R2">R2.</title>
             <p>
               <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})</m>
             </p>
           </li>
 
           <li>
-            <title>R3.</title>
+            <title xml:id="R3">R3.</title>
             <p>
-              a) <m>\ve{0} + \ve{v} = \ve{v}</m> 
+              a) <m>\ve{0} + \ve{v} = \ve{v}</m>
 
               b) <m>\ve{v} + \ve{0} = \ve{v}</m>
             </p>
           </li>
 
           <li>
-            <title>R4.</title>
+            <title xml:id="R4">R4.</title>
             <p>
               <m>k \cdot (\ve{v} + \ve{w}) = k \cdot \ve{v} + k \cdot \ve{w}</m>
             </p>
           </li>
 
           <li>
-            <title>R5.</title>
+            <title xml:id="R5">R5.</title>
             <p>
               <m>(k + l) \cdot \ve{v} = k \cdot \ve{v} + l \cdot {\ve{v}}</m>
             </p>
           </li>
 
           <li>
-            <title>R6.</title>
+            <title xml:id="R6">R6.</title>
             <p>
               <m>k \cdot (l \cdot \ve{v}) = (kl) \cdot \ve{v}</m>
             </p>
           </li>
 
           <li>
-            <title>R7.</title>
+            <title xml:id="R7">R7.</title>
             <p>
               <m>1 \cdot \ve{v} = \ve{v}</m>
             </p>
           </li>
 
           <li>
-            <title>R8.</title>
+            <title xml:id="R8">R8.</title>
             <p>
               <m>0 \cdot \ve{v} = \ve{0}</m>
             </p>
           </li>
-        </ol>
+        </dl>
       </p>
     </statement>
   </definition>

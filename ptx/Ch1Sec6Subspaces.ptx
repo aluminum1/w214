@@ -69,7 +69,7 @@
   </proof>
 
   <example>
-    <title>Line in $\mathbb{R}^2$</title>
+    <title>Line in <m>\mathbb{R}^2</m></title>
     <statement>
     <p>
       A line <m>L</m> through the origin in
@@ -128,7 +128,7 @@
   </example>
 
   <example>
-    <title>Lines and planes in $\mathbb{R}^3$</title>
+    <title>Lines and planes in <m>\mathbb{R}^3</m>m></title>
     <statement>
       <p>
         Similarly a line <m>L</m> or a plane <m>P</m> through the origin in
