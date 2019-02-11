@@ -5,16 +5,16 @@
   <introduction>
     <p>
       We were led to the definition
-      (<xref ref="defnvec">Definition</xref>)
+      (<xref ref="real_vec_space">Definition</xref>)
       of an abstract vector space by considering the properties of sets <m>A</m>,
-      <m>B</m> and <m>C</m> in <xref ref="intro1">Section</xref>.
+      <m>B</m> and <m>C</m> in <xref ref="Ch1Sec1Intro">Section</xref>.
       Let us check, for instance,
-      that <m>B</m> indeed satisfies <xref ref="defnvec">Definition</xref>.
+      that <m>B</m> indeed satisfies <xref ref="real_vec_space">Definition</xref>.
       The others will be left as exercises.
     </p>
 
     <p>
-      \begin{example} The set <m>B</m> is a vector space.
+       The set <m>B</m> is a vector space.
     </p>
   </introduction>
 
