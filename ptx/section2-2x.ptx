@@ -1,7 +1,7 @@
 
 
 <section>
-  <title>Further exercises for \thesection</title>
+  <title>Further exercises for <xref ref="Ch1Sec4MoreExamples"> Section</xref></title>
   <exercise xml:id="non_ass_ex">
     <statement>
       <p>

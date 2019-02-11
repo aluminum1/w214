@@ -16,9 +16,9 @@
     <statement>
       <p>
         Suppose <m>V</m> is a vector spaces with zero vector <m>\ve{0}</m>.
-        If <m>\ve{0}'</m> is another vector satisfying R3(a),
+        If <m>\ve{0}'</m> is another vector satisfying R3(a) ,
         <men xml:id="uniqueness_zero">
-          \ve{0}' + \ve{v} = \ve{v} \mbox{\, for all <m>\ve{v} \in V</m>}
+          \ve{0}' + \ve{v} = \ve{v} \text{ for all }\ve{v} \in V
         </men>
         then <m>\ve{0} = \ve{0}'</m>.
       </p>
@@ -27,8 +27,8 @@
 
   <proof>
     <md>
-      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \mbox{(using (2.5.1)) for \(\ve{v} = \ve{0}\))}</mrow>
-      <mrow>\amp = \ve{0}' \amp \amp  \mbox{(using R3(b) for \(\ve{v} = \ve{0}'\))}</mrow>
+      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \mbox{using } <xref ref="uniqueness_zero"/> \text{ with } \ve{v}=0 </mrow>
+      <mrow>\amp = \ve{0}' \amp \mbox{R3(a)}   </mrow>
     </md>
   </proof>
 
@@ -86,7 +86,7 @@
   <proof>
     <md>
       <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}</mrow>
-      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \mbox{(by <xref ref="add_inv">Lemma</xref>)}</mrow>
+      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \mbox{by } <xref ref="add_inv"/></mrow>
       <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}</mrow>
       <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(by assumption)}</mrow>
       <mrow>\amp = -\ve{v} \amp \amp  \mbox{(R3a)} </mrow>
@@ -110,7 +110,7 @@
           <mrow>\ve{v} + 7 \cdot \ve{x} \amp  = \ve{w}</mrow>
           <mrow>\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(Added \(-\ve{v}\) on left to both sides)}</mrow>
           <mrow>\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used R2 on LHS)}</mrow>
-          <mrow>\therefore  \ve{0} + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used <xref ref="add_inv">Lemma</xref> on LHS)}</mrow>
+          <mrow>\therefore  \ve{0} + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp  \mbox{(used } <xref ref="add_inv"/> \mbox{ on LHS)}</mrow>
           <mrow>\therefore  7 \cdot \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(used R3a on LHS)}</mrow>
           <mrow>\therefore  \frac{1}{7} \cdot (7 \cdot \ve{x}) \amp  = \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(scalar multiplied both sides by \(\frac{1}{7}\))}</mrow>
           <mrow>\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(used R6 on LHS)}</mrow>
@@ -149,7 +149,7 @@
       Suppose <m>k=0</m>.
       Then <m>k \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> by R8 of a vector space.
       On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
-      Then <m>k \cdot \ve{v} = k \cdot \ve{0} = \ve{0}</m> by <xref ref="imp_ex_1">Exercise</xref>.
+      Then <m>k \cdot \ve{v} = k \cdot \ve{0} = \ve{0}</m> by <xref ref="mult_by_zero_ex">Exercise</xref>.
     </p>
 
     <p>
@@ -163,7 +163,7 @@
       <md>
         <mrow>k \cdot \ve{v} \amp  = \ve{0}</mrow>
         <mrow>\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k} \cdot \ve{0} \amp \amp  \mbox{(Multiplied both sides by \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore (\frac{1}{k} k) \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{ (On the LHS, we used R6. \\ On the RHS, we used <xref ref="imp_ex_1">Exercise</xref>.)  }</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(On the LHS, we used R6. On the RHS, we used } <xref ref="mult_by_zero_ex"/>)</mrow>
         <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(using \(\frac{1}{k} k = 1\))}</mrow>
         <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
       </md>
