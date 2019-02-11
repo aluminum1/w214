@@ -279,10 +279,10 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         There is also an addition operation in set <m>C</m>.
         We can add two polynomials together algebraically by adding their corresponding coefficients:
-        <md xml:id="add_in_C">
-         <mrow>[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
-          <mrow>:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
-        </md>
+        <mdn>
+         <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
+          <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
+        </mdn>
       </p>
 
       <p>
@@ -484,9 +484,9 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         There is also a scalar multiplication operation in <m>C</m>.
         We simply multiply each coefficient of a polynomial <m>\ve{c} \in C</m> by <m>k</m>:
-        <me xml:id="sm_in_C">
+        <men xml:id="sm_in_C">
           k \cdot [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
-        </me>
+        </men>
       </p>
 
       <p>
