@@ -62,9 +62,12 @@
 
       </titlepage>
 
+ <xi:include href="./Ch0NoteForStudent.ptx" />
+
+
     </frontmatter>
 
-    <xi:include href="./Ch0NoteForStudent.ptx" />
+
 
     <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
 
