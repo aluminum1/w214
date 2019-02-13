@@ -89,5 +89,28 @@
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+<statement>
+Construct an operation on <m>\mathbb{R}</m> satisfying R1 but not R2.
+</statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      Prove that if <m>A \in \Mat_{2,2}</m> satisfies
+      <me>
+AB = BA
+    </me>
+    for all <m>B \in \Mat_{2,2}</m>, then <m>A</m> is of the form
+    <me>
+      \mat{A} = \left[ \begin{array}{cccc} a \amp 0 \\
+      0 \amp a
+      \end{array}  \right].
+    </me>
+
+
+</statement>
+  </exercise>
 </section>
 
