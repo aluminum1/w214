@@ -21,5 +21,17 @@
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Define the set <m>C^\prime</m> consisting of all polynomials of degree <em>exactly </em> 4. Show that if <m>C^\prime</m> is given the addition operation <xref ref="add_in_C"/>, the zero vector <xref ref="zero_in_C" /> and the scalar multiplication operation <xref ref="sm_in_C" /> then <m>C^\prime</m> <em> does not </em> form a vector space.
+      </p>
+    </statement>
+    <hint>
+Give a counterexample!
+  </hint>
+  </exercise>
+
 </section>
 
