@@ -114,7 +114,11 @@
       <m>\ve{v}, \ve{v}'</m> on <m>L</m> by the head-to-tail method will produce another vector on <m>L</m>.
     </p>
 
-    <exercise>
+
+    </statement>
+  </example>
+
+     <exercise>
       <statement>
         <p>
           Complete the proof that <m>L</m> is a subspace of
@@ -123,9 +127,6 @@
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 
   <example>
     <title>Lines and planes in <m>\mathbb{R}^3</m>m></title>
@@ -177,16 +178,18 @@
       the the set <m>\{\ve{0}\} \subseteq V</m> containing just the zero vector <m>\ve{0}</m> is a subspace of <m>V</m>.
     </p>
 
-    <exercise>
+
+
+    </statement>
+  </example>
+
+     <exercise>
       <statement>
         <p>
           Check this.
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 
   <example>
     <title>Non-example: Line not through origin</title>
@@ -279,7 +282,12 @@
       of differentiable functions on an open interval <m>I</m> is a subspace of <m>\Fun (I)</m>.
     </p>
 
-    <exercise>
+
+
+    </statement>
+  </example>
+
+   <exercise>
       <statement>
         <p>
           Check this.
@@ -287,9 +295,6 @@
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 
   <example>
     <title>Vector spaces of polynomials</title>
@@ -313,6 +318,11 @@
       polynomials as <m>\Poly</m> and the set of all polynomials having degree less than or equal to <m>n</m> as <m>\Poly_n</m>.
     </p>
 
+
+
+    </statement>
+  </example>
+
     <exercise>
       <statement>
         <p>
@@ -321,18 +331,15 @@
       </statement>
     </exercise>
 
-    </statement>
-  </example>
-
   <example xml:id="trig_poly_example">
     <title>Trigonometric polynomials</title>
     <statement>
     <p>
       A <em>trigonometric polynomial</em>
       is a function <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
-      <md xml:id="formula_for_trig_poly">
-        \ve{T} (x) = a_0 + a_1 \cos(x) + b_1 \sin(x) + a_2 \cos(2x) + b_2 \sin(2x) + \cdots \\ + a_n \cos(nx) + b_n \sin(nx) \, .
-      </md>
+      <men xml:id="formula_for_trig_poly">
+        \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx)
+      </men>
     </p>
 
     <p>
@@ -346,7 +353,11 @@
       trigonometric polynomials as <m>\Trig</m> and the set of all trigonometric polynomials having degree less than or equal to <m>n</m> as <m>\Trig_n</m>.
     </p>
 
-    <exercise>
+    </statement>
+  </example>
+
+
+  <exercise>
       <statement>
         <p>
           Show that <m>\Trig</m> and <m>\Trig_n</m> are subspaces of <m>\Cont (\mathbb{R})</m>.
@@ -374,9 +385,6 @@
       </statement>
     </exercise>
 
-    </statement>
-  </example>
-
   <example>
     <title>Solutions to linear differential equations</title>
     <statement>
@@ -388,15 +396,17 @@
       </me>
     </p>
 
-    <exercise>
+
+
+    </statement>
+  </example>
+
+   <exercise>
       <statement>
         <p>
           Show that <m>V</m> is a subspace of <m>\Diff(\mathbb{R})</m>.
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 </section>
 

@@ -70,12 +70,14 @@
 
 
     <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
+    <!--
 
     <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
 
     <xi:include href="./Ch3LinearMaps.ptx" />
 
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
+    -->
 
     <xi:include href="./AppAReminderAboutMatrices.ptx" />
 
@@ -84,6 +86,7 @@
     <backmatter>
       <xi:include href="./bibliography.ptx" />
     </backmatter>
+
 
   </book>
 
