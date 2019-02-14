@@ -71,7 +71,7 @@
     <p>
       Define scalar multiplication by a real number <m>k \in \mathbb{R}</m> by
       <men xml:id="ne_14">
-        k \cdot \ve{a} := \ve{a}  \mbox{and}   k \cdot \ve{b} := \ve{b}
+        k \cdot \ve{a} := \ve{a}  \text{ and }   k \cdot \ve{b} := \ve{b}
       </men>.
     </p>
 
@@ -81,16 +81,18 @@
       <m>\ve{v} \in V</m> by a scalar <m>k</m> and it outputs a well-defined element <m>k \cdot \ve{v} \in V</m>.
     </p>
 
-    <exercise>
+
+
+    </statement>
+  </example>
+
+   <exercise>
       <statement>
         <p>
           Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 
   <example>
     <title>The zero vector space</title>
@@ -124,7 +126,12 @@
       </men>.
     </p>
 
-    <exercise>
+    
+
+    </statement>
+  </example>
+
+<exercise>
       <statement>
         <p>
           Show that this data satisfies the rules R1 to R8.
@@ -132,11 +139,8 @@
       </statement>
     </exercise>
 
-    </statement>
-  </example>
-
   <example>
-    <title>$\mathbb{R}^n$</title>
+    <title><m>\mathbb{R}^n</m></title>
     <statement>
     <p>
       Define the set <m>\mathbb{R}^n</m> by
@@ -166,7 +170,12 @@
       </men>.
     </p>
 
-    <exercise>
+    
+
+    </statement>
+  </example>
+
+  <exercise>
       <statement>
         <p>
           Show that this data satisfies the rules R1 to R8.
@@ -174,11 +183,8 @@
       </statement>
     </exercise>
 
-    </statement>
-  </example>
-
   <example>
-    <title>$\mathbb{R}^\infty$</title>
+    <title><m>\mathbb{R}^\infty</m></title>
     <statement>
     <p>
       Define the set <m>\mathbb{R}^\infty</m> by
@@ -207,13 +213,7 @@
       </men>
     </p>
 
-    <exercise>
-      <statement>
-        <p>
-          Show that this data satisfies the rules R1 to R8.
-        </p>
-      </statement>
-    </exercise>
+    
 
     <assemblage>
       <p>
@@ -225,6 +225,14 @@
 
     </statement>
   </example>
+
+  <exercise>
+      <statement>
+        <p>
+          Show that this data satisfies the rules R1 to R8.
+        </p>
+      </statement>
+    </exercise>
 
   <example>
     <title>Functions on a set</title>
@@ -273,7 +281,7 @@
     <p>
       Define the zero vector <m>\mathbf{0}</m> to be the function which outputs the number <m>0</m> for every input value of <m>x \in X</m>:
       <men>
-        \ve{0} (x) := 0  \mbox{for all \(x \in X\).}
+        \ve{0} (x) := 0  \text{ for all \(x \in X\).}
       </men>
     </p>
 
@@ -284,7 +292,12 @@
       </men>.
     </p>
 
-    <exercise>
+    
+
+    </statement>
+  </example>
+
+  <exercise>
       <statement>
         <p>
           Notation quiz!
@@ -350,32 +363,31 @@
       </statement>
     </exercise>
 
-    </statement>
-  </example>
-
   <example xml:id="matrices_example_vec_space">
     <title>Matrices</title>
     <statement>
     <p>
-      the set <m>\Mat_{n, m}</m> of all
+      The set <m>\Mat_{n, m}</m> of all
       <m>n \times m</m> matrices is a vector space.
-      See <xref ref="reminder-matrices-chap">Appendix</xref>
+      See <xref ref="AppAReminderAboutMatrices">Appendix</xref>
       for a reminder about matrices.
     </p>
 
-    <exercise>
+    
+
+    </statement>
+  </example>
+
+  <exercise>
       <statement>
         <p>
           Show that when equipped with the addition operation, zero vector,
-          and scalar multiplication operation as defined in <xref ref="reminder-matrices-chap">Appendix</xref>,
+          and scalar multiplication operation as defined in <xref ref="AppAReminderAboutMatrices">Appendix</xref>,
           the set <m>\Mat_{n, m}</m> of all
           <m>n \times m</m> matrices is a vector space.
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 
   <example>
     <statement>

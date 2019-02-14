@@ -57,7 +57,6 @@
 
     <p>
       We can visualize an element <m>\ve{a}</m> of <m>A</m> as a point in the Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose <m>y</m>-coordinate is <m>a_2</m>:
-      tikzalign
       <md>
         <mrow>{\color{red} \ve{a}}  \xrightarrow{\mbox{visualize as} }
 
@@ -77,6 +76,7 @@
       </md>
     </p>
 
+
     <p>
       The second set, <m>B</m>,
       is defined to be the set of all ordered real triples
@@ -90,7 +90,6 @@
     <p>
       For instance, <m>(2,3, 1) \in B</m> but <m>(1,1,1) \notin B</m>.
       We can visualize an element <m>\ve{b}</m> of <m>B</m> as a point in the plane in 3-dimensional space carved out by the equation <m>x-y+z = 0</m>:
-      tikzalign
       <md>
         <mrow>{\color{red} \ve{b}}  \xrightarrow{\mbox{visualize as} }
 
@@ -134,7 +133,7 @@
       <m>\ve{c} \in C</m> (i.e. a polynomial of degree 4) via its <em>graph</em>.
       For instance, the polynomial
       <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> can be visualized as:
-      tikzalign
+
       <md>
         <mrow>{\color{red} \ve{c}}  \xrightarrow{\mbox{visualize as} }
 
@@ -151,7 +150,6 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         </image></mrow>
       </md>
     </p>
-
     <p>
       There you have it.
       I have defined three different sets:
@@ -199,7 +197,6 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         For instance, <m>(1, \,3) + (2, \,-1.6) = (3, \,1.4)</m>.
         We can visualize this addition operation as follows:
-        tikzalign
         <md>
           <mrow><image>
 
@@ -248,7 +245,6 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
           </image></mrow>
         </md>
       </p>
-
       <p>
         We can do a similar thing in set <m>B</m>.
         Suppose we have two elements of <m>B</m>,
@@ -283,10 +279,10 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         There is also an addition operation in set <m>C</m>.
         We can add two polynomials together algebraically by adding their corresponding coefficients:
-        <md xml:id="add_in_C">
-          + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0] \\
-          := (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)
-        </md>
+        <mdn>
+         <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
+          <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
+        </mdn>
       </p>
 
       <p>
@@ -317,7 +313,6 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         Thinking in this way, we can visualize the graph of
         <m>\ve{c} + \ve{d}</m> as the graph of <m>\ve{c}</m> added to the graph of <m>\ve{d}</m>:
-        tikzalign
         <md>
 
           <image>
@@ -429,8 +424,8 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         when we add the zero polynomial to another polynomial,
         nothing happens!
         <md>
-          + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] \\
-          = [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0]
+          <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
+          <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
         </md>
       </p>
     </subsubsection>
@@ -460,7 +455,7 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         <m>\ve{a} \in A</m> by <m>k</m> to get a new element
         <m>k \cdot \ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
-          \underbrace{k \cdot (a_1, \, a_2)}_{\mbox{\tiny Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\mbox{\tiny Multiplying two numbers together} }, \, \underbrace{k a_2})
+          \underbrace{k \cdot (a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
         </me>
       </p>
 

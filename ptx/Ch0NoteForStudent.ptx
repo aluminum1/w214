@@ -1,7 +1,7 @@
 
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch0NoteForStudent">
-  <title>Note for the student</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="Ch0NoteForStudent">
+  <title  number="no" >Note for the student</title>
   <p>
     You are about to meet linear algebra for the second time.
     In the first year, we focused on systems of linear equations,
@@ -55,5 +55,5 @@
     Good luck in this new phase of your mathematical training.
     Enjoy the ride!
   </p>
-</chapter>
+</section>
 

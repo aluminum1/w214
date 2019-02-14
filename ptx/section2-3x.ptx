@@ -1,7 +1,7 @@
 
 
 <section>
-  <title>Further exercises for \thesection</title>
+  <title>Further exercises for <xref ref="Ch1Sec5ResultsVectorSpace"/></title>
   <exercise>
     <statement>
       <p>
@@ -27,7 +27,7 @@
         Suppose that two vectors <m>\ve{x}</m> and <m>\ve{w}</m> in a vector space satisfy <m>2 \ve{x} + 6 \ve{w} = \ve{0}</m>.
         Solve for <m>\ve{x}</m>,
         showing explicitly how you use the rules of a vector space,
-        as in <xref ref="explicit_solve_x">Example</xref>.
+        as in <xref ref="explicit_solve_x"/>.
       </p>
     </statement>
   </exercise>
