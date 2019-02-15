@@ -279,7 +279,7 @@
     </md>
     which sends a vector <m>\ve{v} \in V</m> to its corresponding coordinate vector <m>[\ve{v}]_\basis{B} \in \Col_m</m>.
     <xref ref="lin_of_coord_vectors">Lemma</xref>
-    says precisely that <m>[ \cdot ]_\basis{B}</m> is a linear map.
+    says precisely that <m>[ \smul]_\basis{B}</m> is a linear map.
     We will now describe its inverse.
   </p>
 
@@ -384,7 +384,7 @@
       </me>,
       we have
       <md>
-        <mrow>\big( [ \cdot ]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp = 
+        <mrow>\big( [ \smul]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp = 
         \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
         <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
         <mrow>\amp = \cvector{ c_1</mrow>

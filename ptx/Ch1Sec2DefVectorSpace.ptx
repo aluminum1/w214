@@ -19,8 +19,8 @@
         A <term>vector space</term> is a set <m>V</m> equipped with the following data:
 
         <dl>
-          <li>
-            <title xml:id="D1">D1.</title>
+          <li xml:id="D1">
+            <title>D1.</title>
             <p>
               An <em>addition operation</em>.
               (That is, for every pair of elements <m>\ve{u}, \ve{v} \in V</m>,
@@ -28,20 +28,20 @@
             </p>
           </li>
 
-          <li>
-            <title xml:id="D2">D2.</title>
+          <li xml:id="D2">
+            <title>D2.</title>
             <p>
               A <em>zero vector</em>.
               (That is, a special vector <m>\ve{0} \in V</m> is marked out.)
             </p>
           </li>
 
-          <li>
-            <title xml:id="D3">D3.</title>
+          <li xml:id="D3">
+            <title>D3.</title>
             <p>
               A <em>scalar multiplication operation</em>. (That is,
               for each real number <m>k</m> and each element <m>\ve{v} \in V</m>,
-              a new element <m>k \cdot \ve{v} \in V</m> is defined).
+              a new element <m>k \smul\ve{v} \in V</m> is defined).
             </p>
           </li>
         </dl>
@@ -50,67 +50,71 @@
       <p>
         This data should satisfy the following rules for all
         <m>\ve{u}, \ve{v}, \ve{w}</m> in <m>V</m> and for all real numbers <m>k</m> and <m>l</m>:
+      </p>
 
         <dl>
-          <li>
-            <title xml:id="R1">R1.</title>
+          <li xml:id="R1">
+            <title>R1.</title>
             <p>
               <m>\ve{v} + \ve{w} = \ve{w} + \ve{v}</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R2">R2.</title>
+          <li xml:id="R2">
+            <title>R2.</title>
             <p>
               <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R3">R3.</title>
+          <li xml:id="R3a">
+            <title>R3a.</title>
             <p>
-              a) <m>\ve{0} + \ve{v} = \ve{v}</m>
-
-              b) <m>\ve{v} + \ve{0} = \ve{v}</m>
+              <m>\ve{0} + \ve{v} = \ve{v}</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R4">R4.</title>
-            <p>
-              <m>k \cdot (\ve{v} + \ve{w}) = k \cdot \ve{v} + k \cdot \ve{w}</m>
+          <li xml:id="R3b">
+            <title>R3b.</title>
+            <p> <m>\ve{v} + \ve{0} = \ve{v}</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R5">R5.</title>
+          <li xml:id="R4">
+            <title>R4.</title>
             <p>
-              <m>(k + l) \cdot \ve{v} = k \cdot \ve{v} + l \cdot {\ve{v}}</m>
+              <m>k \smul(\ve{v} + \ve{w}) = k \smul\ve{v} + k \smul\ve{w}</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R6">R6.</title>
+          <li xml:id="R5">
+            <title>R5.</title>
             <p>
-              <m>k \cdot (l \cdot \ve{v}) = (kl) \cdot \ve{v}</m>
+              <m>(k + l) \smul\ve{v} = k \smul\ve{v} + l \smul{\ve{v}}</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R7">R7.</title>
+          <li xml:id="R6">
+            <title>R6.</title>
             <p>
-              <m>1 \cdot \ve{v} = \ve{v}</m>
+              <m>k \smul(l \smul\ve{v}) = (kl) \smul\ve{v}</m>
             </p>
           </li>
 
-          <li>
-            <title xml:id="R8">R8.</title>
+          <li xml:id="R7">
+            <title>R7.</title>
             <p>
-              <m>0 \cdot \ve{v} = \ve{0}</m>
+              <m>1 \smul\ve{v} = \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id="R8">
+            <title>R8.</title>
+            <p>
+              <m>0 \smul\ve{v} = \ve{0}</m>
             </p>
           </li>
         </dl>
-      </p>
     </statement>
   </definition>
 
@@ -128,7 +132,7 @@
 
   <p>
     Also, in this chapter we will write scalar multiplication with a <m>\cdot</m>,
-    for instance <m>k \cdot \ve{v}</m>,
+    for instance <m>k \smul\ve{v}</m>,
     but in later chapters we will simply write it as
     <m>k \ve{v}</m> for brevity, so be careful!
   </p>

@@ -34,7 +34,6 @@
 
   <example>
     <title>Another non-example</title>
-    <statement>
     <p>
       Define the set <m>V</m> by
       <men>
@@ -71,28 +70,25 @@
     <p>
       Define scalar multiplication by a real number <m>k \in \mathbb{R}</m> by
       <men xml:id="ne_14">
-        k \cdot \ve{a} := \ve{a}  \text{ and }   k \cdot \ve{b} := \ve{b}
+        k \smul\ve{a} := \ve{a}  \text{ and }   k \smul\ve{b} := \ve{b}
       </men>.
     </p>
 
     <p>
       This is a well-defined scalar multiplication,
       since it allows us to multiply any element
-      <m>\ve{v} \in V</m> by a scalar <m>k</m> and it outputs a well-defined element <m>k \cdot \ve{v} \in V</m>.
+      <m>\ve{v} \in V</m> by a scalar <m>k</m> and it outputs a well-defined element <m>k \smul\ve{v} \in V</m>.
     </p>
 
-
-
-    </statement>
   </example>
 
-   <exercise>
+    <exercise>
       <statement>
         <p>
           Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
         </p>
       </statement>
-    </exercise>
+    </exercise>   
 
   <example>
     <title>The zero vector space</title>
@@ -122,7 +118,7 @@
     <p>
       Finally define scalar multiplication by a scalar <m>k \in \mathbb{R}</m> as:
       <men>
-        k \cdot \ve{z} := \ve{z}
+        k \smul\ve{z} := \ve{z}
       </men>.
     </p>
 
@@ -166,7 +162,7 @@
     <p>
       Define scalar multiplication by
       <men>
-        k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)
+        k \smul(x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)
       </men>.
     </p>
 
@@ -209,7 +205,7 @@
       the infinite sequence whose components are all zero.
       Finally, define scalar multiplication componentwise:
       <men>
-        k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
+        k \smul(x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)
       </men>
     </p>
 
@@ -242,7 +238,7 @@
       Define the set <m>\Fun(X)</m> of
       <em>real-valued functions on <m>X</m></em> by
       <men>
-        \Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}
+        \Fun(X) := \{ f : X \rightarrow \mathbb{R} \}
       </men>.
     </p>
 
@@ -253,51 +249,48 @@
       since <m>X</m> could be an arbitrary set.
       For instance <m>X</m> could be the set
       <m>\{a, b, c\}</m> <mdash />without any further informaiton,
-      it does not make sense to say that a function <m>\mathbf{f} : X \rightarrow \mathbb{R}</m> is continuous.
+      it does not make sense to say that a function <m>f : X \rightarrow \mathbb{R}</m> is continuous.
     </p>
 
     <p>
       Define the addition operation by
-      <men>
-        (\mathbf{f} + \mathbf{g}) (x) := \mathbf{f}(x) + \mathbf{g}(x),  x \in X
+      <men xml:id="add_op_functions">
+        (f + g) (x) := f(x) + g(x),  x \in X
       </men>
     </p>
 
     <p>
       Make sure you understand what this formula is saying!
       We start with two functions
-      <m>\mathbf{f}</m> and <m>\mathbf{g}</m>,
-      and we are defining their sum <m>\mathbf{f} + \mathbf{g}</m>.
+      <m>f</m> and <m>g</m>,
+      and we are defining their sum <m>f + g</m>.
       This is supposed to be another function on <m>X</m>.
-      To define a function on <m>X</m>, I am supposed to write down what value it outputs for each <m>x \in X</m>.
+      To define a function on <m>X</m>, I am supposed to write down what value it assigns to each <m>x \in X</m>.
       And that is what the formula says:
       the value that the function
-      <m>\mathbf{f} + \mathbf{g}</m> assigns to the element <m>x \in X</m> is defined to be the number
-      <m>\mathbf{f}(x)</m> plus the number <m>\mathbf{g}(x)</m>.
-      Remember: <m>\mathbf{f}</m> is a function,
-      while <m>\mathbf{f}(x)</m> is a number!
+      <m>\mathbf{f} + \mathbf{g}</m> assigns to an element <m>x \in X</m> is defined to be the number
+      <m>f(x)</m> plus the number <m>g(x)</m>.
+      Remember: <m>f</m> is a function,
+      while <m>f(x)</m> is a number!
     </p>
 
     <p>
-      Define the zero vector <m>\mathbf{0}</m> to be the function which outputs the number <m>0</m> for every input value of <m>x \in X</m>:
-      <men>
-        \ve{0} (x) := 0  \text{ for all \(x \in X\).}
+      Define the zero vector, which we will call <m>z</m> in this example, to be the function which outputs the number <m>0</m> for every input value of <m>x \in X</m>:
+      <men xml:id="zero_vec_functions">
+        z (x) := 0  \text{ for all \(x \in X\).}
       </men>
     </p>
 
     <p>
       Define scalar multiplication by
-      <men>
-        (k \cdot \mathbf{f})(x) := k \mathbf{f}(x)
+      <men xml:id="smul_functions">
+        (k \smul f)(x) := k f(x)
       </men>.
     </p>
-
-    
-
     </statement>
   </example>
 
-  <exercise>
+  <exercise xml:id="notation_quiz_functions">
       <statement>
         <p>
           Notation quiz!
@@ -306,25 +299,25 @@
           <ol>
             <li>
               <p>
-                <m>\mathbf{f}</m>
+                <m>f</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>\mathbf{f}(x)</m>
+                <m>f(x)</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>k \cdot \mathbf{f}</m>
+                <m>k \smul f</m>
               </p>
             </li>
 
             <li>
               <p>
-                <m>(k \cdot \mathbf{f})(x)</m>
+                <m>(k \smul f)(x)</m>
               </p>
             </li>
           </ol>
@@ -332,22 +325,22 @@
       </statement>
     </exercise>
 
-    <exercise>
+    <exercise xml:id="quiz_different_functions">
       <statement>
         <p>
           Let <m>X = \{a, b, c\}</m>.
 
           <ol>
-            <li>
+            <li xml:id="three_functions">
               <p>
-                Write down three different functions <m>\mathbf{f}, \mathbf{g}, \mathbf{h}</m> in <m>\Fun(X)</m>.
+                Write down three different functions <m>f, g, h</m> in <m>\Fun(X)</m>.
               </p>
             </li>
 
             <li>
               <p>
-                For the functions you constructed in (i),
-                calculate <m>\mathbf{f} + \mathbf{g}</m> as well as <m>3 \cdot \mathbf{h}</m>.
+                For each of the functions you wrote down in  <xref ref="three_functions"/>,
+                calculate (i) <m>f + g</m> and (ii) <m>3 \smul h</m>.
               </p>
             </li>
           </ol>
@@ -358,7 +351,7 @@
     <exercise>
       <statement>
         <p>
-          Show that the data above satisfies the rules R1 to R8, so that <m>\Fun(X)</m> is a vector space.
+          Show that the data <xref ref="add_op_functions"/>, <xref ref="zero_vec_functions"/>, <xref ref="smul_functions"/> satisfies the rules R1 to R8, so that <m>\Fun(X)</m> is a vector space.
         </p>
       </statement>
     </exercise>
@@ -407,5 +400,131 @@
       </p>
     </statement>
   </example>
+
+
+
+<exercises>
+  <exercise xml:id="non_ass_ex">
+    <statement>
+      <p>
+        Define an addition operation on the set
+        <m>X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}</m> by the following table:
+        <me>
+          \begin{array}{c|ccc}
+          + \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\ 
+          \hline
+          \ve{0} \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
+          \ve{a} \amp  \ve{a} \amp  \ve{0} \amp  \ve{a} \\
+          \ve{b} \amp  \ve{b} \amp  \ve{a} \amp  \ve{0}
+          \end{array}
+        </me>
+      </p>
+
+      <p>
+        This table works as follows.
+        To calculate, for example, <m>\ve{b} + \ve{a}</m>,
+        find the intersection of the row labelled by <m>\ve{b}</m> with the column labelled by <m>\ve{a}</m>.
+        We see that <m>\ve{b} + \ve{a} := \ve{a}</m>.
+      </p>
+
+      <p>
+        Prove that this addition operation satisfies R1.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that the addition operation from <xref ref="non_ass_ex">Exercise</xref> does not satisfy R2.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="strange_addition_R">
+    <statement>
+      <p>
+        Define a strange new addition operation <m>\hat{+}</m> on <m>\mathbb{R}</m> by
+        <me>
+          x \hat{+} y := x - y, \qquad x, y \in \mathbb{R}
+        </me>.
+      </p>
+
+      <p>
+        Does <m>\hat{+}</m> satisfy R2?
+        If it does, prove it.
+        If it does not, give a counterexample.
+      </p>
+    </statement>
+  </exercise>
+
+    <exercise xml:id="strange_addition_R_new">
+    <statement>
+      <p>
+        Construct an operation <m>\boxplus</m> on <m>\mathbb{R}</m> satisfying R1 but not R2.
+      </p>
+    </statement>
+    <hint> 
+      <p>
+        Try adjusting the formula from <xref ref="strange_addition_R"/>.
+      </p>
+    </hint>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\mathbb{R}^+</m> be the set of positive real numbers.
+        Define an addition operation <m>\oplus</m>,
+        a zero vector <m>z</m> and a scalar multiplication <m>.</m>on <m>\mathbb{R}^+</m> by
+        <md>
+          <mrow>x \oplus y \amp := xy</mrow>
+          <mrow>z \amp  := 1</mrow>
+          <mrow>k \smul x \amp := x^k</mrow>
+        </md>
+        where <m>x, y \in \mathbb{R}^+</m>, 
+        and <m>k</m> is a scalar (i.e. an arbitrary real number).
+
+        <ol>
+          <li>
+            <p>
+              Check that these operations are well-defined.
+              For instance,
+              is <m>x+ y \in \mathbb{R}^+</m>, as it should be?
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Check that these operations satisfy R1 to R8. 
+            </p>
+          </li>
+        </ol>
+      </p>
+      <p>
+        We conclude that <m>\mathbb{R}^+</m>, equipped with these operations, forms a vector space.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <p> Consider the operation <m>\oplus</m> on <m>\mathbb{R}^2</m> defined by:
+    </p>
+    <me>
+      (a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
+    </me>
+    <ol>
+      <li> Does this operation satisfy <xref ref="R1">R1</xref>? </li>
+      <li> Does this operation satisfy <xref ref="R2">R2</xref>? </li>
+    </ol>
+  </exercise>
+ 
+</exercises>
+
+
+
+
+
+
 </section>
 

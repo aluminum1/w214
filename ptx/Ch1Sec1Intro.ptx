@@ -442,10 +442,10 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         For instance,
         if <m>\ve{a} = (a_1, a_2)</m> is an element of <m>A</m>,
         then we can multiply it by some arbitrary real number,
-        say <m>9</m>, to get a new element <m>9\cdot a</m> of <m>A</m>.
+        say <m>9</m>, to get a new element <m>9\smul \ve{a}</m> of <m>A</m>.
         We do this multiplication component-wise:
         <men xml:id="sm_in_A">
-          9 \cdot (a_1, \,a_2) := (9 a_1, \, 9a_2)
+          9 \smul(a_1, \,a_2) := (9 a_1, \, 9a_2)
         </men>.
       </p>
 
@@ -453,15 +453,15 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         In general, if <m>k \in \mathbb{R}</m> is an arbitrary real number,
         then we can multiply elements
         <m>\ve{a} \in A</m> by <m>k</m> to get a new element
-        <m>k \cdot \ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
+        <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
-          \underbrace{k \cdot (a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
+          \underbrace{k \smul(a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
         </me>
       </p>
 
       <p>
-        Just be careful to distinguish scalar multiplication <m>k \cdot \ve{a}</m>
-        (written with a <m>\cdot</m>)
+        Just be careful to distinguish scalar multiplication <m>k \smul\ve{a}</m>
+        (written with a <m>\smul</m>)
         from ordinary multiplication of real numbers <m>k a_1</m>
         (written with no symbol, just using juxtaposition).
         Later on, because we are lazy,
@@ -485,7 +485,7 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         There is also a scalar multiplication operation in <m>C</m>.
         We simply multiply each coefficient of a polynomial <m>\ve{c} \in C</m> by <m>k</m>:
         <men xml:id="sm_in_C">
-          k \cdot [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
+          k \smul[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
         </men>
       </p>
 

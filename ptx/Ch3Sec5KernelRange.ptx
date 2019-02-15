@@ -285,7 +285,7 @@
         of <m>C</m> is the subspace of <em>all</em>
         vectors perpendicular to <m>\ve{a}</m>, i.e.
         <men xml:id="image-of-C">
-          \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}
+          \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
         </men>.
       </p>
 

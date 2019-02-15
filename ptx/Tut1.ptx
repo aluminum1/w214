@@ -1,0 +1,56 @@
+<section xml:id="Tut1">
+  <title>Tutorial 1</title>
+  <introduction>
+  	<p>
+  		Tutorial 1 covers <xref ref="Ch1Sec1Intro"/> up until the end of <xref ref="Ch1Sec5ResultsVectorSpace"/>. The following exercises have been selected.
+  	</p>
+  </introduction>
+  <p>
+  	<xref ref="prove_C_is_vector_space"/>
+  </p>
+
+  <p>
+  	<xref ref="prove_C_prime_is_not_vector_space"/>
+  </p>
+
+  <p>
+  	<xref ref="show_X_is_not_vector_space"/>
+  </p>  
+
+  <p>
+  	<xref ref="notation_quiz_functions"/>
+  </p>
+
+  <p>
+  	<xref ref="quiz_different_functions"/>
+  </p>
+
+  <p>
+  	<xref ref="strange_addition_R"/>
+  </p>
+
+  <p>
+  	<xref ref="strange_addition_R_new"/>
+  </p>
+
+  <p>
+  	<xref ref="minus_minus_v_equals_v"/>
+  </p>
+
+  <p>
+  	<xref ref="fivevequals2v"/>
+  </p>
+
+  <p>
+  	<xref ref="is_k_equal_to_zero"/>
+  </p>
+
+  <p>
+  	<xref ref="empty_vector_space"/>
+  </p>
+
+	<p>
+  	<xref ref="R7_follows"/>
+  </p>
+
+</section>

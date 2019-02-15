@@ -257,3 +257,16 @@ TSWLatexianTemp*
 
 # standalone packages
 *.sta
+
+# zip
+*.zip
+
+# html
+*.html
+
+# html directory
+/ptx/html
+
+# latex directory
+/ptx/latex
+

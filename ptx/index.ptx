@@ -13,11 +13,12 @@
 \newcommand{\et}{\end{tikzpicture} \end{aligned}}
 \newcommand{\ve}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\mathsf{#1}}
-\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
 \newcommand{\basis}[1]{{\mathcal #1}}
 \newcommand{\cvector}[1]{\bracketVectorstack{#1}}
 \newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
 \newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
 \DeclareMathOperator{\Fun}{Fun}
 \DeclareMathOperator{\Cont}{Cont}
@@ -81,7 +82,7 @@
 
     <xi:include href="./AppAReminderAboutMatrices.ptx" />
 
-    <xi:include href="./AppBHypersurfaces.ptx" />
+    <!-- <xi:include href="./AppBHypersurfaces.ptx" /> -->
 
     <backmatter>
       <xi:include href="./bibliography.ptx" />

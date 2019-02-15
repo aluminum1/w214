@@ -198,7 +198,7 @@
         The function
         <md>
           <mrow>D : \mathbb{R}^3 \amp \rightarrow \mathbb{R}</mrow>
-          <mrow>\ve{v} \amp  \mapsto \ve{u} \cdot \ve{v}</mrow>
+          <mrow>\ve{v} \amp  \mapsto \ve{u} \smul\ve{v}</mrow>
         </md>
       </p>
 
@@ -206,8 +206,8 @@
         (here <m>\cdot</m> is the dot product of vectors,
         not scalar multiplication!) is a linear map, because of the properties
         <md>
-          <mrow>\ve{u} \cdot (\ve{v}_1 + \ve{v}_2) \amp = \ve{u} \cdot \ve{v}_1 + \ve{u} \cdot \ve{v}_2</mrow>
-          <mrow>\ve{u} \cdot (k \ve{v}) \amp = k \ve{u} \cdot \ve{v}</mrow>
+          <mrow>\ve{u} \smul(\ve{v}_1 + \ve{v}_2) \amp = \ve{u} \smul\ve{v}_1 + \ve{u} \smul\ve{v}_2</mrow>
+          <mrow>\ve{u} \smul(k \ve{v}) \amp = k \ve{u} \smul\ve{v}</mrow>
         </md>.
       </p>
 
