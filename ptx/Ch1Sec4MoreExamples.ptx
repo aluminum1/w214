@@ -88,7 +88,52 @@
           Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.
         </p>
       </statement>
-    </exercise>   
+      <solution>
+<p>
+R1: We must check whether <m>\ve v + \ve w = \ve w + \ve v \text{ for all } \ve v,\ve w \in \{\ve a,\v b\}</m>.
+Clearly <m> \ve a + \ve a = \ve a + \ve a</m> and likewise for <m>\ve b</m>. And finally <m>\ve b = \ve a+\ve b = \ve b+\ve a</m>.
+</p>
+
+<p>
+R2: We must check whether <m> (\ve u + \ve v) + \ve w = \ve u + (\ve v + \ve w)  \text{ for all } \ve u , \ve v,\ve w \in \{\ve a,\v b\}</m>. This requires we check 8 equations in total. For brevity, we shall only present the solution for one of them, the rest are virtually identical. We check whether
+<md>
+<mrow>(\ve a + \ve b) + \ve b = \ve a +(\ve b + \ve b</mrow>
+</md>
+To that end, consider:
+<md>
+<mrow>\text{LHS} \amp = (\ve a + \ve b) + \ve b</mrow>
+<mrow> \amp = \ve b + \ve b</mrow>
+<mrow> \amp = \ve a</mrow>
+</md>.
+By a similar method:
+<md>
+<mrow>\text{RHS} \amp = \ve a +(\ve b + \ve b)</mrow>
+<mrow> \amp = \ve a + \ve a</mrow>
+<mrow> \amp = \ve a</mrow>
+</md>.
+  </p>
+<p>
+R3, R4, R6, and R7 all follow from routine checks.
+</p>
+<p>
+We shall demonstrate why R5 is not satisfied. For that, we need to find a counterexample. Take <m>k=2=l, \ve v = \ve b</m>. Then
+<md>
+<mrow>\text{LHS} \amp = (2+2).\ve b</mrow>
+<mrow> \amp = 4.\ve b</mrow>
+<mrow>\amp = \ve b</mrow>
+</md>
+whereas
+<md>
+<mrow>\text{RUS} \amp = 2.\ve b + 2.\ve b</mrow>
+<mrow> \amp = \ve b + \ve b</mrow>
+<mrow>\amp =\ve a</mrow>.
+</md>
+Since <m>\text{LHS} \neq \text{RHS}</m>, R5 cannot be true.
+  </p>
+    </solution>
+    </exercise>
+
+
 
   <example>
     <title>The zero vector space</title>
@@ -121,8 +166,6 @@
         k \smul\ve{z} := \ve{z}
       </men>.
     </p>
-
-    
 
     </statement>
   </example>
@@ -228,6 +271,32 @@
           Show that this data satisfies the rules R1 to R8.
         </p>
       </statement>
+      <solution>
+        <p>
+        We shall only check R4 below, the rest are similar.
+      </p>
+<p>R4 :Let 
+<md>
+  <mrow> \amp \ve v = (v_1,v_2,v_3,\ldots) </mrow>
+  <mrow> \amp \ve w = (w_1,w_2,w_3,\ldots) </mrow>.
+</md>
+We must check whether <m>k.(\ve v + \ve w) = k.\ve v + k. \ve w</m>.
+<md>
+<mrow>\text{LHS} \amp = k.(\ve v + \ve w)</mrow>
+<mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
+<mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
+<mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
+<mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
+<mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
+<mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
+<mrow> \amp = k.\ve v + k.\ve w </mrow>
+<mrow> \amp = \text{LHS} </mrow>
+</md>
+</p>
+      </solution>
+
+
+
     </exercise>
 
   <example>
