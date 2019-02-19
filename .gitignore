@@ -270,3 +270,6 @@ TSWLatexianTemp*
 # latex directory
 /ptx/latex
 
+# vagrant 
+/.vagrant
+Vagrantfile
