@@ -71,9 +71,11 @@
 
 
     <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
-    <!--
+
 
     <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
+
+  <!--
 
     <xi:include href="./Ch3LinearMaps.ptx" />
 
