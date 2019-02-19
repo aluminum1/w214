@@ -511,6 +511,56 @@
       </p>
     </statement>
   </exercise>
+
+<p>
+The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.
+</p>
+<definition xml:id="def_sum_subspace">
+  <statement>
+    <p>
+Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
+<me>
+U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+</me>
+</p>
+</statement>
+</definition>
+
+<p>
+  In the exercises below, <m>V,U,W</m> will be as above.
+</p>
+
+<exercise>
+    <statement>
+      <p>
+      Show that <m>U + V</m> is a subspace of <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      If <m>W \subset U</m> what is <m>U + W</m>?
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
+    </p>
+    </statement>
+  </exercise>
 </exercises>
 
 
