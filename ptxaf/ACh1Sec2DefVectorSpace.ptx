@@ -16,14 +16,14 @@
     'n naam te gee en die re&#xeb;ls eksplisiet neer te pen.
   </p>
 
-  <definition xml:id="defnvec">
+  <definition xml:id="real_vec_space">
     <statement>
       <p>
         A <term>vektorruimte</term> is 'n versameling <m>V</m> wat met die
         volgende data toegerus is:
 
-        <ul>
-          <li>
+        <dl>
+          <li xml:id="D1">
             <title>D1.</title>
             <p>
               'n <em>Sommeringsbewerking</em>. (I.e. vir elke
@@ -32,7 +32,7 @@
             </p>
           </li>
 
-          <li>
+          <li xml:id = "D2">
             <title>D2.</title>
             <p>
               'n <em>Nul-vektor</em>. (I.e. 'n spesiale vektor <m>\ve{0}
@@ -40,7 +40,7 @@
             </p>
           </li>
 
-          <li>
+          <li xml:id="D3">
             <title>D3.</title>
             <p>
               'n <em>Skalaarvermenigvuldigingsbewerking</em>. (I.e.,
@@ -48,7 +48,7 @@
               word 'n nuwe element <m>k \cdot \ve{v} \in V</m> definieer.)
             </p>
           </li>
-        </ul>
+        </dl>
       </p>
 
       <p>
@@ -56,15 +56,15 @@
         <m>\ve{u}, \ve{v},
         \ve{w}</m> in <m>V</m> en vir alle re&#xeb;le getalle <m>k</m> en <m>l</m> voldoen:
 
-        <ol>
-          <li>
+        <dl>
+          <li xml:id="R1">
             <title>R1.</title>
             <p>
               <m>\ve{v} + \ve{w} = \ve{w} + \ve{v}</m>
             </p>
           </li>
 
-          <li>
+          <li xml:id="R2">
             <title>R2.</title>
             <p>
               <m>(\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} +
@@ -72,7 +72,7 @@
             </p>
           </li>
 
-          <li>
+          <li xml:id="R3">
             <title>R3.</title>
             <p>
               <m>\ve{0} + \ve{v} = \ve{v}</m> and <m>\ve{v} + \ve{0} =
@@ -80,7 +80,7 @@
             </p>
           </li>
 
-          <li>
+          <li xml:id = "R4">
             <title>R4.</title>
             <p>
               <m>k \cdot (\ve{v} + \ve{w}) = k \cdot \ve{v} + k \cdot
@@ -88,7 +88,7 @@
             </p>
           </li>
 
-          <li>
+          <li xml:id="R5">
             <title>R5.</title>
             <p>
               <m>(k + l) \cdot \ve{v} = k \cdot \ve{v} + l \cdot
@@ -96,27 +96,27 @@
             </p>
           </li>
 
-          <li>
+          <li xml:id="R6">
             <title>R6.</title>
             <p>
               <m>k \cdot (l \cdot \ve{v}) = (kl) \cdot \ve{v}</m>
             </p>
           </li>
 
-          <li>
+          <li xml:id="R7">
             <title>R7.</title>
             <p>
               <m>1 \cdot \ve{v} = \ve{v}</m>
             </p>
           </li>
 
-          <li>
+          <li xml:id="R8">
             <title>R8.</title>
             <p>
               <m>0 \cdot \ve{v} = \ve{0}</m>
             </p>
           </li>
-        </ol>
+        </dl>
       </p>
     </statement>
   </definition>
@@ -147,7 +147,9 @@
     volgende doen:
   </p>
 
+
   <assemblage>
+    <p>
     <ol>
       <li>
         <p>
@@ -157,9 +159,10 @@
 
       <li>
         <p>
-          Definieer die data van 'n sommeringsbewerking (D1), 'n
+                    Definieer die data van 'n sommeringsbewerking (D1), 'n
           nul-vektor (D2) en 'n skalaarvermenigvuldigingsbewerking (D3)
           op <m>V</m>.
+
         </p>
       </li>
 
@@ -169,6 +172,7 @@
         </p>
       </li>
     </ol>
+  </p>
   </assemblage>
 </section>
 

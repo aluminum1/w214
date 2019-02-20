@@ -5,38 +5,32 @@
   <introduction>
     <p>
       Ons is na die definisie
-      (<xref ref="defnvec">Definisie</xref>)
+      (<xref ref="real_vec_space">Definisie</xref>)
       van 'n abstrakte
       vektorruimte gelei deur die eienskappe van versamelings <m>A</m>,
       <m>B</m> en <m>C</m> in
-      <xref ref="intro1">Afdeling</xref> te bestudeer.
+      <xref ref="ACh1Sec1Intro">Afdeling</xref> te bestudeer.
       Kom ons gaan na dat <m>B</m> wel 'n
-      abstrakte vektorruimte is soos gedifineer in <xref ref="defnvec">Definisie</xref>.
+      abstrakte vektorruimte is soos gedifineer in <xref ref="real_vec_space">Definisie</xref>.
       Die
       ander versamelings word as oefeninge aan jou oorgelaat.
     </p>
-
-    <p>
-      \begin{example} Die versameling <m>B</m> is 'n vektorruimte.
-    </p>
   </introduction>
 
-  <subsection>
-    <title>1. Definieer 'n versameling <m>B</m></title>
+ <example xml:id="B_is_vs">
+    <title>Die versameling Bi s 'n vektorruimte.</title>
+    <heading>1. Definieer 'n versameling <m>B</m></heading>
     <p>
       Ons definieer
       <men xml:id="def_of_b">
-        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and
-        }  u_1 - u_2 + u_3 = 0\} 
+        B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} 
       </men>.
     </p>
-  </subsection>
 
-  <subsection>
-    <title>2. Definieer sommering, die nul-vektor en
-    skalaarvermenigvuldiging.</title>
+    <heading>2. Definieer sommering, die nul-vektor en
+    skalaarvermenigvuldiging.</heading>
     <p>
-      D1.
+       D1.
       Ons definieer sommering soos volg.
       Veronderstel <m>\ve{u} = (u_1, \,
       u_2, \, u_3)</m> en <m>\ve{v} = (v_1, , v_2, \, v_3)</m> is elemente van <m>B</m>.
@@ -48,7 +42,7 @@
     </p>
 
     <p>
-      Ons moet nagaan dat dit sin maak.
+           Ons moet nagaan dat dit sin maak.
       Ons behoort te vind dat <m>\ve{u} +
       \ve{v}</m> ook 'n element van <m>B</m> is.
       Ons kan nie bloot enige definisie
@@ -76,6 +70,7 @@
 
     <p>
       D2.
+            D2.
       Ons definieer die nulvektor <m>\ve{0} \in B</m> as
       <men xml:id="zero_vec_in_B">
         \ve{0} := (0, 0, 0)
@@ -105,7 +100,7 @@
     </p>
 
     <p>
-      Ons moet seker maak dat dit sinmaak.
+Ons moet seker maak dat dit sinmaak.
       As ek 'n vektor <m>\ve{v}</m> in <m>B</m>
       met 'n skalaar <m>k</m> vermenigvuldig,
       dan moet die resultaat <m>k \cdot
@@ -128,12 +123,10 @@
       so ons het 'n
       goed-gedefinieerde skalaarvermenigvuldigingsbewerking op <m>B</m> gevind.
     </p>
-  </subsection>
 
-  <subsection>
-    <title>3. Maak seker die data bevredig die re&#xeb;ls</title>
+    <heading>3. Maak seker die data bevredig die re&#xeb;ls.</heading>
     <p>
-      Ons moet seker maak dat ons dataD1, D2 en D3 re&#xeb;ls R1 <mdash /> R8
+      Ons moet seker maak dat ons data D1, D2 en D3 re&#xeb;ls R1 <mdash /> R8
       bevredig.
       So, veronderstel <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
       <m>\ve{v} =
@@ -157,7 +150,7 @@
     </p>
 
     <p>
-      R2.
+     R2.
       Ons gaan na:
       <md>
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
@@ -245,7 +238,7 @@
     </p>
 
     <p>
-      R7.
+R7.
       Ons gaan na:
       <md>
         <mrow>1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(definisie van
@@ -266,19 +259,12 @@
         <mrow>\amp = \ve{0} \amp \amp  \mbox{(definisie van die nul-vektor in \(B\))} </mrow>
       </md>.
     </p>
-
-    <p>
-      \end{example}
-    </p>
-
-    <p>
-      \furtherexercises
-    </p>
+  </example>
 
     <exercise>
       <statement>
         <p>
-          Bewys dat versameling <m>A</m> uit <xref ref="intro1">Afdeling</xref> saam
+          Bewys dat versameling <m>A</m> uit <xref ref="ACh1Sec1Intro">Afdeling</xref> saam
           met die sommeringsbewerking <xref ref="add_in_A" />, die nul-vektor
           <xref ref="zero_in_A" /> en die skalaarvermenigvuldigingsbewerking
           <xref ref="sm_in_A" /> 'n vektorruimte vorm.
@@ -289,13 +275,12 @@
     <exercise>
       <statement>
         <p>
-          Bewys dat versameling <m>C</m> in <xref ref="intro1">Afdeling</xref> saam
+          Bewys dat versameling <m>C</m> in <xref ref="ACh1Sec1Intro">Afdeling</xref> saam
           met die sommeringsbewerking <xref ref="add_in_C" />, die nul-vektor
           <xref ref="zero_in_C" /> en die skalaarvermenigvuldigingsbewerking
           <xref ref="sm_in_C" /> 'n vektorruimte vorm.
         </p>
       </statement>
     </exercise>
-  </subsection>
 </section>
 

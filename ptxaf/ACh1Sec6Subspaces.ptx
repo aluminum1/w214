@@ -125,9 +125,6 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -141,7 +138,7 @@
   </exercise>
 
   <example>
-    <title>Lyne en vlakke in $\mathbb{R}^3$</title>
+    <title>Lyne en vlakke in <m>\mathbb{R}^3</m></title>
     <statement>
       <p>
         'n Lyn <m>L</m> en 'n vlak <m>P</m>
@@ -193,10 +190,6 @@
       </p>
     </statement>
   </example>
-
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -312,10 +305,6 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
-
   <exercise>
     <statement>
       <p>
@@ -360,9 +349,7 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
+ 
 
   <exercise>
     <statement>
@@ -381,10 +368,9 @@
         <em>Trigonometriese polinoom</em>
         is 'n funksie <m>\ve{T} : \mathbb{R}
         \rightarrow \mathbb{R}</m> van die vorm
-        <md xml:id="formula_for_trig_poly">
-          \ve{T} (x) = a_0 + a_1 \cos(x) + b_1 \sin(x) + a_2 \cos(2x) + b_2
-          \sin(2x) + \cdots \\ + a_n \cos(nx) + b_n \sin(nx) \, .
-        </md>
+        <men xml:id="formula_for_trig_poly">
+          \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).
+        </men>
       </p>
 
       <p>
@@ -403,10 +389,6 @@
       </p>
     </statement>
   </example>
-
-  <p>
-    movebackintoexample (both)
-  </p>
 
   <exercise>
     <statement>
@@ -456,9 +438,7 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
+ 
 
   <exercise>
     <statement>
@@ -468,9 +448,7 @@
     </statement>
   </exercise>
 
-  <p>
-    \furtherexercises
-  </p>
+ <exercises>
 
   <exercise>
     <statement>
@@ -599,5 +577,6 @@
       </p>
     </statement>
   </exercise>
+</exercises>
 </section>
 
