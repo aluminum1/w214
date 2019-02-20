@@ -129,7 +129,7 @@
     </exercise>
 
   <example>
-    <title>Lines and planes in <m>\mathbb{R}^3</m>m></title>
+    <title>Lines and planes in <m>\mathbb{R}^3</m></title>
     <statement>
       <p>
         Similarly a line <m>L</m> or a plane <m>P</m> through the origin in
@@ -338,7 +338,7 @@
       A <em>trigonometric polynomial</em>
       is a function <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
       <men xml:id="formula_for_trig_poly">
-        \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx)
+        \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).
       </men>
     </p>
 

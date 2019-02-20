@@ -321,12 +321,10 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         polinome algebra&#xef;es bymekaartel deur hulle ooreenstemmende
         ko&#xeb;ffisi&#xeb;nte
         bymekaar te tel:
-        <md>
-          + [d_4 x^4 + d_3 x^3 +
-          d_2 x^2 + d_1 x^1 + d_0] \\
-          := (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1)
-          x^1 + (c_0 + d_0)
-        </md>
+        <mdn>
+         <mrow number="no">[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]</mrow>
+          <mrow xml:id="add_in_C">:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)</mrow>
+        </mdn>
       </p>
 
       <p>
@@ -352,7 +350,7 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         wanneer 'n getal <m>x</m> invervang word, dit die waarde
         <m>\ve{c}(x) + \ve{d}(x)</m> teruggee.
         Wiskundig geskryf,
-        <men xml:id="add_in_C">
+       <men xml:id="add_in_C2">
           (\ve{c} + \ve{d})(x) := \ve{c}(x) + \ve{d}(x)
         </men>
       </p>
@@ -472,10 +470,9 @@ node[above right] {$\ve{c}+\ve{d}$};
         = 0</m> vir alle <m>x</m>.
         Hoe ons ookal daaraan dink, as ons die nul-polinoom by
         'n ander polinoom tel, gebeur niks nie!
-        <md>
-          + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1
-          x + c_0] \\
-          = [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0]
+<md>
+          <mrow> [0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
+          <mrow>= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] </mrow>
         </md>
       </p>
     </subsubsection>
@@ -512,9 +509,7 @@ node[above right] {$\ve{c}+\ve{d}$};
         om 'n nuwe element <m>k \cdot \ve{a} \in A</m> te kry deur elke komponent van
         <m>\ve{a}</m> met <m>k</m> te vermenigvuldig:
         <me>
-          \underbrace{k \cdot (a_1, \, a_2)}_{\mbox{\tiny Vermenigvuldig 'n
-          vektor met 'n skalaar} } := (\underbrace{k a_1}_{\mbox{\tiny
-          Vermenigvuldig twee getalle} }, \, k a_2)
+          \underbrace{k.(a_1, \, a_2)}_{\text{ Skalaarvermenigvuldiging} } := (\underbrace{k a_1}_{\text{Vermenigvuldig twee getalle} }, \, \underbrace{k a_2})
         </me>
       </p>
 
@@ -731,7 +726,7 @@ node[above right] {$\ve{c}+\ve{d}$};
       So vir elke insetwaarde <m>x</m>,
       <m>(\ve{c} + \ve{c}') (x) =
       (\ve{c}' + \ve{c})(x)</m>.
-      Daarom is die polinome <m>\ve{c}</m> en <m>\ve{c}'</m> en
+      Daarom is die polinome <m>\ve{c}+\ve{c}'</m> en
       <m>\ve{c}' + \ve{c}</m> gelyk,
       hulle uitsetwaarde is dieselfde vir alle getalle
       <m>x</m>.

@@ -76,7 +76,7 @@
         Definieer skalaarvermenigvuldiging met 'n re&#xeb;le getal <m>k \in
         \mathbb{R}</m> as
         <men xml:id="ne_14">
-          k \cdot \ve{a} := \ve{a}  \mbox{en}   k \cdot \ve{b} :=
+          k \cdot \ve{a} := \ve{a}  \mbox{ en }   k \cdot \ve{b} :=
           \ve{b}
         </men>.
       </p>
@@ -88,10 +88,6 @@
       </p>
     </statement>
   </example>
-
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -138,9 +134,6 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -151,7 +144,7 @@
   </exercise>
 
   <example>
-    <title>$\mathbb{R}^n$</title>
+    <title><m>\mathbb{R}^n</m></title>
     <statement>
       <p>
         Definieer die versameling <m>\mathbb{R}^n</m> as
@@ -186,10 +179,6 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
-
   <exercise>
     <statement>
       <p>
@@ -199,7 +188,7 @@
   </exercise>
 
   <example>
-    <title>$\mathbb{R}^\infty$</title>
+    <title><m>\mathbb{R}^\infty</m></title>
     <statement>
       <p>
         Definieer die versameling
@@ -246,9 +235,7 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
+
 
   <exercise>
     <statement>
@@ -316,7 +303,7 @@
         Definieer die nul-vektor <m>\mathbf{0}</m> as die funksie wat die getal <m>0</m>
         lewer vir elke insetwaarde <m>x \in X</m>:
         <men>
-          \ve{0} (x) := 0  \mbox{vir alle \(x \in X\).}
+          \ve{0} (x) := 0  \mbox{ vir alle \(x \in X\).}
         </men>
       </p>
 
@@ -328,10 +315,6 @@
       </p>
     </statement>
   </example>
-
-  <p>
-    movebackintoexample (all 3)
-  </p>
 
   <exercise>
     <statement>
@@ -457,9 +440,6 @@
     </statement>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -491,9 +471,7 @@
     </statement>
   </example>
 
-  <p>
-    \furtherexercises
-  </p>
+<exercises>
 
   <exercise xml:id="non_ass_ex">
     <statement>
@@ -588,5 +566,6 @@
       </p>
     </statement>
   </exercise>
+</exercises>
 </section>
 

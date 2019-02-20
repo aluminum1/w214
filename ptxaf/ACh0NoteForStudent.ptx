@@ -1,7 +1,7 @@
 
 
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh0NoteForStudent">
-  <title>Nota aan die student</title>
+<section xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="ACh0NoteForStudent">
+  <title title="no">Nota aan die student</title>
   <p>
     Jou tweede ontmoeting met line&#xea;re algebra l&#xea;
     tans voor jou.
@@ -68,5 +68,5 @@
     Geniet die
     reis!
   </p>
-</chapter>
+</section>
 
