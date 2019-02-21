@@ -6,9 +6,9 @@
     <definition>
       <statement>
         <p>
-          A list of vectors <m>\basis{B} = \bopen \ve{e}_1</m>,
-          <m>\ve{e}_2</m>, <m>\ldots</m>,
-          <m>\ve{e}_n\bclose</m> in a vector space <m>V</m> is called a <term>basis</term>
+          A list of vectors <m>\basis{B} = \left\{ \ve{e}_1,
+          \ve{e}_2,\ldots,
+         \ve{e}_n\right\}</m> in a vector space <m>V</m> is called a <term>basis</term>
           for <m>V</m> if it is linearly independent and spans <m>V</m>.
         </p>
       </statement>
@@ -22,9 +22,9 @@
       <title>Bases give coordinates</title>
       <statement>
         <p>
-          A list of vectors <m>\basis{B} = \bopen \ve{e}_1</m>,
-          <m>\ve{e}_2</m>, <m>\ldots</m>,
-          <m>\ve{e}_n \bclose</m> in a vector space <m>V</m> is a basis for <m>V</m> if and only if every vector
+          A list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
+          \ve{e}_2,\ldots,
+         \ve{e}_n\right\}</m>  in a vector space <m>V</m> is a basis for <m>V</m> if and only if every vector
           <m>\ve{v} \in V</m> can be written as a linear combination
           <men xml:id="trying_to_formulate_basis">
             \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
@@ -62,9 +62,9 @@
     <proof>
       <p>
         <m>\Rightarrow</m>.
-        Suppose that the list of vectors <m>\basis{B} = \bopen \ve{e}_1</m>,
-        <m>\ve{e}_2</m>,
-        <m>\ldots</m>, <m>\ve{e}_n \bclose</m> is a basis for <m>V</m>.
+        Suppose that the list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
+          \ve{e}_2,\ldots,
+         \ve{e}_n\right\}</m>  is a basis for <m>V</m>.
         Suppose <m>\ve{v} \in V</m>.
         Since the list of vectors <m>\basis{B}</m> spans <m>V</m>,
         we know that we <em>can</em> write <m>\ve{v}</m> as a linear combination of the vectors in the list in at least one way,
@@ -142,8 +142,8 @@
       <title>Invariance of dimension</title>
       <statement>
         <p>
-          If <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_m \bclose</m> and
-          <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2, \ldots, \ve{c}_n\bclose</m> are bases of a vector space <m>V</m>,
+          If <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_m \right\}</m> and
+          <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2, \ldots, \ve{c}_n\right\}</m> are bases of a vector space <m>V</m>,
           then <m>m=n</m>.
         </p>
       </statement>
@@ -181,7 +181,7 @@
     </assemblage>
 
     <example xml:id="standard_basis_R_n_ex">
-      <title>Standard basis for $\mathbb{R}^n$</title>
+      <title>Standard basis for <m>\mathbb{R}^n</m></title>
       <statement>
         <p>
           The list of vectors
@@ -292,8 +292,12 @@
           </men>.
         </p>
       </assemblage>
+      </statement>
+    </example>
 
-      <exercise>
+    <!--ERROR FIX THIS HIEROGLYPHIC STUFF AND THE NEXT EXERCISE TOO
+
+    <exercise>
         <statement>
           <p>
             Suppose <m>X = \left\{\mbox{\pmglyph{\HGi}} , \mbox{\pmglyph{\He}} , \mbox{\pmglyph{\HZxi}} \right\}</m>.
@@ -316,6 +320,8 @@
         </statement>
       </exercise>
 
+      
+
       <exercise>
         <statement>
           <p>
@@ -325,22 +331,21 @@
               \ve{f}_a, \, a \in X
             </me>
           </p>
-
           <p>
             Show that this collection (i) spans <m>\Fun(X)</m> and (ii) is linearly independent.
           </p>
         </statement>
       </exercise>
 
-      </statement>
-    </example>
+      -->
 
     <example>
       <statement>
         <p>
           <m>\Trig_n</m> is <m>(2n+1)</m>-dimensional, with basis
           <md>
-            \ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, \\ \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.
+            <mrow>\ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, </mrow>
+            <mrow> \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.</mrow>
           </md>
         </p>
 
@@ -377,21 +382,16 @@
           </men>
         </p>
       </assemblage>
+      </statement>
+    </example>
 
-      <p>
-        movebackintoramanujansays
-      </p>
-
-      <exercise>
+    <exercise>
         <statement>
           <p>
             Check that <xref ref="kronecker_for_matrix_basis" /> is indeed the correct formula for the matrix elements of <m>\mat{E}_{ij}</m>.
           </p>
         </statement>
       </exercise>
-
-      </statement>
-    </example>
 
     <example>
       <statement>
@@ -444,21 +444,21 @@
         Let <m>n = \Dim(V)</m>.
         If <m>W = \{ \ve{0} \}</m>, then the statement is clearly true.
         Suppose <m>W \neq \{ \ve{0} \}</m>.
-        Choose a nonzero vector <m>\ve{e}_1 \in W</m> and form the list <m>\basis{B}_1 = \bopen \ve{e}_1 \bclose</m>.
+        Choose a nonzero vector <m>\ve{e}_1 \in W</m> and form the list <m>\basis{B}_1 = \left\{ \ve{e}_1 \right\}</m>.
         If it spans <m>W</m>, then we are done.
         If not, there exists <m>\ve{e}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
-        Now consider the list <m>\basis{B}_2 = \bopen \ve{e}_1, \ve{e}_2 \bclose</m>.
+        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>.
         If it spans <m>W</m>, we are done.
         If not, there exists a vector
         <m>\ve{e}_3 \in W</m> which is not a linear combination of <m>\ve{e}_1</m> and <m>\ve{e}_2</m>.
-        Consider the new list <m>\basis{B}_3 = \bopen \ve{e}_1, \ve{e}_2, \ve{e}_3 \bclose</m>.
+        Consider the new list <m>\basis{B}_3 = \left\{ \ve{e}_1, \ve{e}_2, \ve{e}_3 \right\}</m>.
         And so on.
       </p>
 
       <p>
         This process must eventually terminate.
         That is, there must exist some
-        <m>k \geq 1</m> such that <m>\basis{B}_k = \bopen \ve{e}_1, \ldots, \ve{e}_k \bclose</m> spans <m>W</m>,
+        <m>k \geq 1</m> such that <m>\basis{B}_k = \left\{ \ve{e}_1, \ldots, \ve{e}_k \right\}</m> spans <m>W</m>,
         and hence is a basis for <m>W</m>.
         This is because each list <m>\basis{B}_i</m> is linearly independent
         (by construction,
@@ -594,16 +594,18 @@
         </me>.
       </p>
 
-      <exercise>
+      
+
+      </statement>
+    </example>
+
+    <exercise>
         <statement>
           <p>
             Do the three <sq>check this</sq> calculations above.
           </p>
         </statement>
       </exercise>
-
-      </statement>
-    </example>
 
     <p>
       Sifting is a very useful way to construct a basis of a vector space!
@@ -714,6 +716,220 @@
       </statement>
     </example>
   </subsection>
+
+  <exercises>
+
+<exercise xml:id="exercise_for_new_basis">
+    <statement>
+      <p>
+        Sift the list of vectors
+        <md>
+          <mrow>\ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2, 3)</mrow>
+          <mrow>\ve{v}_4 \amp = (3, 4, 5), \amp  \ve{v}_5 \amp = (4, 8, 12), \amp   \ve{v}_6 \amp = (1, 1, 0)</mrow>
+        </md>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="true_false_span_lin_ind">
+    <statement>
+      <p>
+        Let <m>V</m> be a vector space of dimension <m>n</m>.
+        State whether each of the following statements is true or false.
+        If it is true, prove it.
+        If it is false, give a counterexample.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Any list of vectors which spans <m>V</m> contains at least <m>n</m> vectors.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
+        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors from <m>\basis{B}</m>.
+        Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
+        (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="n_lin_ind_is_basis">
+    <statement>
+      <p>
+        Complete the proof of the following lemma.
+      </p>
+
+      <p>
+        <em>Lemma.</em> Suppose <m>V</m> is a vector space of dimension <m>n</m>.
+        Then any linearly independent set of <m>n</m> vectors in <m>V</m> is a basis for <m>V</m>.
+      </p>
+
+      <p>
+        <em>Proof.</em> Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent set of vectors in <m>V</m>.
+      </p>
+
+      <p>
+        Suppose that <m>\basis{B}</m> is
+        <em>not</em> a basis for <m>V</m>.
+      </p>
+
+      <p>
+        Therefore, <m>\basis{B}</m> does not span <m>V</m>, since ... (a)
+      </p>
+
+      <p>
+        Therefore, there exists <m>\ve{v} \in V</m> such that ... (b)
+      </p>
+
+      <p>
+        Now, add <m>\ve{v}</m> to the list
+        <m>\basis{B}</m> to obtain a new list <m>\basis{B}' :=</m> ... (c)
+      </p>
+
+      <p>
+        The new list <m>\basis{B}'</m> is linearly independent because ... (d)
+      </p>
+
+      <p>
+        This is a contradiction because ... (e)
+      </p>
+
+      <p>
+        Hence, <m>\basis{B}</m> must be a basis for <m>V</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="checking_matrices_lin_dep">
+    <statement>
+      <p>
+        Use <xref ref="true_false_span_lin_ind">Exercise</xref>(a) to show that the list of matrices in
+        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        In each case,
+        use the results in <xref ref="true_false_span_lin_ind">Exercises</xref>
+        and <xref ref="n_lin_ind_is_basis"></xref>
+        to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \Poly_2</m>,
+              <m>\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \right\}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \Mat_{2,2}</m>,
+              <me>\basis{B} = \left\{ 
+ \begin{bmatrix}
+1 &amp; 2 \\
+-1 &amp; 3
+\end{bmatrix},\,
+ \begin{bmatrix}
+0 &amp; 1\\
+3 &amp; -1
+\end{bmatrix},\,
+\begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}
+     \right\} </me>
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              <m>V = \Trig_2</m>,
+              <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
+        State whether each of the following statements is true or false.
+        If it is true, prove it.
+        If it is false, give a counterexample.
+        (Hint: Use the definition of linear independence.)
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              The list <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              The list <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly independent.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="dim_poly_at_2_ex">
+    <statement>
+      <p>
+        For each of the following,
+        show that <m>V</m> is a subspace of <m>\Poly_2</m>,
+        find a basis for <m>V</m>, and compute <m>\Dim V</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : p(2) = 0 \}</m>
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+  </exercises>
 
 </section>
 
