@@ -5,7 +5,7 @@
   <definition>
     <statement>
       <p>
-        Let <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> be a basis for a vector space <m>V</m>,
+        Let <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m> be a basis for a vector space <m>V</m>,
         and let <m>\ve{v} \in V</m>.
         Write
         <me>
@@ -31,7 +31,7 @@
       and not merely a <em>set</em>
       (where the order does not matter)
       using my own home-made symbols <m>\{ \}</m>.
-      A basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is a list of vectors.
+      A basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m> is a list of vectors.
       The order of the vectors matters because it affects the coordinate vector <m>[\ve{v}]_\basis{B}</m>.
     </p>
   </assemblage>
@@ -40,7 +40,7 @@
     <statement>
       <p>
         Find the coordinate vector of
-        <m>\ve{p} = 2x^2 - 2x + 3</m> with respect to the basis <m>\basis{B} = \bopen 1+x, x^2 + x -1, x^2 + x + 1\bclose</m> of <m>\Poly_3</m>.
+        <m>\ve{p} = 2x^2 - 2x + 3</m> with respect to the basis <m>\basis{B} = \left\{ 1+x, x^2 + x -1, x^2 + x + 1\right\}</m> of <m>\Poly_3</m>.
       </p>
     </statement>
     <solution>
@@ -51,7 +51,13 @@
         </me>
       </p>
 
-      <exercise>
+      <me>
+        [\ve{p}]_\basis{B} := \left[ \begin{array}{c} -4 \\ -\frac{5}{2}\\  \frac{9}{2} \end{array}  \right]
+      </me>
+    </solution>
+  </example>
+
+  <exercise>
         <statement>
           <p>
             Check this!
@@ -59,17 +65,12 @@
         </statement>
       </exercise>
 
-      <me>
-        [\ve{p}]_\basis{B} = \cvector{ -4 \\ - \frac{5}{2} \\ \frac{9}{2} }
-      </me>
-    </solution>
-  </example>
 
   <example xml:id="coord_vectors_finding_example">
     <statement>
       <p>
         Find the coordinate vectors of <m>\ve{v}</m> and <m>\ve{w}</m> in <xref ref="v_and_w_in_basis_B">Figure</xref>
-        with respect to the basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m>.
+        with respect to the basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m>.
       </p>
     </statement>
     <solution>
@@ -77,7 +78,8 @@
         By inspection,
         we see that <m>\ve{v} = 2 \ve{b}_1 - \ve{b}_2</m>, so that
         <me>
-          [\ve{v}]_\basis{B} = \cvector{ 2 \\ -1}
+           [\ve{v}]_\basis{B} := \left[ \begin{array}{c} 2 \\  -1
+          \end{array}  \right]
         </me>
       </p>
 
@@ -85,7 +87,8 @@
         Also by inspection,
         we see that <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>, so that
         <me>
-          [\ve{v}]_\basis{B} = \cvector{ -3 \\ 2}
+          [\ve{v}]_\basis{B} = \left[ \begin{array}{c} -3 \\  2
+          \end{array}  \right]
         </me>
       </p>
     </solution>
@@ -131,7 +134,7 @@
         </me>
         with respect to the standard basis
         <me>
-          \basis{S} = \bopen 1, \cos x, \sin x, \cos 2x, \sin 2x, \cos 3x, \sin 3x\bclose
+          \basis{S} = \left\{ 1, \cos x, \sin x, \cos 2x, \sin 2x, \cos 3x, \sin 3x\right\}
         </me>
         of <m>\Trig_3</m>.
       </p>
@@ -145,7 +148,17 @@
         </me>.
       </p>
 
-      <exercise>
+      <p>
+        Hence <!-- FIX THIS first entry is looking a little wonky-->
+        <me>
+          [\ve{f}]_\basis{S} = \left[ \begin{array}{c} \frac{1}{2} \\  -\frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ -\frac{1}{4} \\ 0
+          \end{array}  \right]
+        </me>
+      </p>
+    </solution>
+  </example>
+
+   <exercise>
         <statement>
           <p>
             Check this!
@@ -153,19 +166,11 @@
         </statement>
       </exercise>
 
-      <p>
-        Hence
-        <me>
-          [\ve{f}]_\basis{S} = \cvector{ \frac{1}{2} \\ - \frac{3}{4} \\ 0 \\ -\frac{1}{2} \\ 0 \\ - \frac{1}{4} \\ 0}
-        </me>
-      </p>
-    </solution>
-  </example>
 
   <lemma xml:id="lin_of_coord_vectors">
     <statement>
       <p>
-        Let <m>\basis{B} = \bopen \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \bclose</m> be a basis for a vector space <m>V</m>.
+        Let <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n \right\}</m> be a basis for a vector space <m>V</m>.
         Then for all vectors <m>\ve{v}, \ve{w} \in V</m> and all scalars <m>k</m> we have
 
         <ol type="a">
@@ -200,7 +205,8 @@
     <p>
       From this we read off that
       <me>
-        [\ve{v} + \ve{w}]_\basis{B} = \cvector{a_1 + b_1 \\ a_2 + b_2 \\ \vdots \\ a_n + b_n} \, 
+        [\ve{v} + \ve{w}]_\basis{B} = \left[ \begin{array}{c} a_1 + b_1 \\  a_2 + b_2 \\ \vdots \\ a_n + b_n
+        \end{array}  \right]
       </me>.
     </p>
 
@@ -208,5 +214,71 @@
       The proof of (b) is similar.
     </p>
   </proof>
+
+  <exercises>
+  <exercise>
+    <statement>
+      <p>
+        Prove <xref ref="lin_of_coord_vectors">Lemma</xref>(b) in the case where <m>V</m> is two-dimensional,
+        so that <m>\basis{B} = \left\{ \ve{e}_1, \ve{e}_2\right\}</m>.
+        Justify each step using the rules of a vector space.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="matrix_basis_exercise">
+    <statement>
+      <p>
+        Let <m>\basis{B}</m> be the basis of <m>\Mat_{2,2}</m> given by
+        <md>
+          \mat{B}_1 = \cmatrix{1 \amp  0 \\ 0 \amp  1},  \mat{B}_2 = \cmatrix{1 \amp  0 \\ 0 \amp  -1},  \mat{B}_3 = \cmatrix{1 \amp  1 \\ 1 \amp  1},  \mat{B}_4 = \cmatrix{0 \amp  1 \\ -1 \amp  0} \, .
+        </md>
+      </p>
+
+      <p>
+        Determine <m>[\mat{A}]_\basis{B}</m>, where
+        <md>
+          \mat{A} = \cmatrix{1 \amp  2 \\ 3 \amp  4} \, .
+        </md>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        In <xref ref="dim_poly_at_2_ex">Exercise</xref>,
+        you were asked to find a basis <m>\basis{B}</m> for the vector space
+        <me>
+          V := \{ p \in \Poly_2 : p(2) = 0 \}
+        </me>.
+      </p>
+
+      <p>
+        Consider <m>p(x) = x^2 + x - 6</m>.
+
+        <ul>
+          <li>
+            <title>(a)</title>
+            <p>
+              Show that <m>p \in V</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Determine the coordinate vector of <m>p</m> with respect to your basis <m>\basis{B}</m>,
+              i.e. determine <m>[p]_\basis{B}</m>.
+            </p>
+          </li>
+        </ul>
+      </p>
+    </statement>
+  </exercise>
+
+
+
+  </exercises>
 </section>
 
