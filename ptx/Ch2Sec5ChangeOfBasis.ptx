@@ -5,8 +5,8 @@
   <subsection>
     <title>Coordinate vectors are different in different bases</title>
     <p>
-      Suppose that <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> and
-      <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> are two different bases for <m>\mathbb{R}^2</m>,
+      Suppose that <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m> and
+      <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m> are two different bases for <m>\mathbb{R}^2</m>,
       shown below:
     </p>
 
@@ -24,7 +24,7 @@
         </image>
 
       </me>
-      \subcaption{The basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m>}
+      \subcaption{The basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m>}
       <me>
 
         <image>
@@ -37,7 +37,7 @@
         </image>
 
       </me>
-      \subcaption{The basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m>}
+      \subcaption{The basis <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m>}
     </figure>
 
     <p>
@@ -66,17 +66,21 @@
       from <xref ref="w_in_different_bases">Figure</xref>(a),
       we see that in the basis <m>\basis{B}</m>, we have
       <men>
-        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \cvector{-3 \\ 2}  \,
+        \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2   \end{array}\right] \,
       </men>.
     </p>
 
     <p>
       On the other hand, in the basis <m>\basis{C}</m>, we have
       <men xml:id="correct_exp_w">
-        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \cvector{1 \\ -3}
+        \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3   \end{array}\right]
       </men>.
-      tikzalign
     </p>
+
+    
+      <!--tikzalign-->
+
+    
 
     <figure>
 
@@ -106,7 +110,7 @@
 </latex-image>
       </image>
 
-      \subcaption{<m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>}
+     <!-- \subcaption{<m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>} -->
 
       <image>
 
@@ -134,7 +138,7 @@
 </latex-image>
       </image>
 
-      \subcaption{<m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m>}
+      <!--\subcaption{<m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m>}-->
     </figure>
 
     <p>
@@ -151,7 +155,7 @@
       the coordinate vector of <m>\ve{w}</m> in the basis <m>\basis{B}</m>.
       In other words, suppose we only knew that
       <me>
-        [\ve{w}]_\basis{B} = \cvector{-3 \\ 2} 
+        [\ve{w}]_\basis{B} = \left[ \begin{array}{c} -3 \\ 2 \end{array}\right]
       </me>,
       that is, <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>.
       How could we compute <m>[\ve{w}]_\basis{C}</m>,
@@ -163,7 +167,7 @@
       <m>\basis{B}</m> as a linear combination of the basis vectors in <m>\basis{C}</m>.
       In the next figure, the vectors <m>\ve{b}_1</m> and
       <m>\ve{b}_2</m> are displayed against the background of the basis <m>\basis{C}</m>:
-      tikzalign
+      <!--FIX THIS TIKZALIGN -->
     </p>
 
     <image>
@@ -196,10 +200,10 @@
 
     <p>
       We read off that:
-      <md>
-        <mrow>\ve{b}_1 \amp = \ve{c}_1 + 3 \ve{c}_2</mrow>
-        <mrow>\ve{b}_2 \amp = 2 \ve{c}_1 + 3 \ve{c}_2</mrow>
-      </md>
+      <mdn>
+        <mrow xml:id="b_in_terms_of_c">\ve{b}_1 \amp = \ve{c}_1 + 3 \ve{c}_2</mrow>
+        <mrow xml:id="b_in_terms_of_c_2">\ve{b}_2 \amp = 2 \ve{c}_1 + 3 \ve{c}_2</mrow>
+      </mdn>
     </p>
 
     <p>
@@ -214,7 +218,7 @@
     <p>
       From this we read off that
       <men xml:id="w_in_basis_C">
-        [\ve{w}]_\basis{C} = \cvector{1 \\ -3}
+        [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3 \end{array}\right]
       </men>
       which is the right answer, as we know from <xref ref="correct_exp_w" />.
     </p>
@@ -226,14 +230,14 @@
     <definition>
       <statement>
         <p>
-          Let <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_n \bclose</m> and
-          <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m> be bases for a vector space <m>V</m>.
+          Let <m>\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n \right\}</m> and
+          <m>\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}</m> be bases for a vector space <m>V</m>.
           The <term>change-of-basis matrix from
           <m>\basis{B}</m> to <m>\basis{C}</m></term>
           is the <m>n \times n</m> matrix whose columns are the coordinate vectors <m>[\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}</m>:
           <me>
-            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \left[ \cvector{ \\ \ve{b}_1 \\}_\basis{C} \,  \cvector{ \\ \ve{b}_2 \\}_\basis{C} \, \cdots \, \cvector{ \\ \ve{b}_n \\}_\basis{C}\right]
-          </me>
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\, 
+          </me>.
         </p>
       </statement>
     </definition>
@@ -244,16 +248,16 @@
           In our running example,
           we see from <xref ref="b_in_terms_of_c" /> and <xref ref="b_in_terms_of_c_2" /> that
           <me>
-            [\ve{b}_1]_\basis{C} = \cvector{1 \\ 3},  [\ve{b}_2]_\basis{C} = \cvector{2 \\ 3} \, 
+            [\ve{b}_1]_\basis{C} = \left[ \begin{array}{c} 1 \\ 3 \end{array} \right], \quad [\ve{b}_2]_\basis{C} = \left[ \begin{array}{c} 2 \\ 3 \end{array} \right] \, 
           </me>.
         </p>
 
         <p>
           Hence the change-of-basis matrix from
           <m>\basis{B}</m> to <m>\basis{C}</m> is
-          <md>
-            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \cmatrix{ 1 \amp  2 \\ 3 \amp  3} \, .
-          </md>
+          <me>
+            \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 3  \end{bmatrix}
+          </me>
         </p>
       </statement>
     </example>
@@ -262,106 +266,17 @@
       Before we move on,
       we need to recall something about matrix multiplication.
       Suppose you collect together <m>m</m> column vectors to form a matrix:
-      <me>
-        \left[ \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {\(\mat{C}_1\)};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned}  
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {\(\mat{C}_2\)};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned}  
-        \cdots 
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {\(\mat{C}_m\)};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned}  \right]
-      </me>
+    <me>
+\begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
+  </me>
     </p>
 
     <p>
       (For instance, our change-of-basis matrix
       <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> was formed in this way.) Then the product of this matrix with a column vector can be computed as follows:
       <men xml:id="column_vector_multiplication">
-        \left[ \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {$\mat{C}_1$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned} 
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {$\mat{C}_2$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned} 
-        \cdots 
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {$\mat{C}_m$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned} \right] \left[ \begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_m \end{array} \right] = a_1  \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {$\mat{C}_1$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned} + a_2  
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {$\mat{C}_2$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned} + \cdots + a_n 
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=0.5] \draw (0,0) rectangle (1,3); \node at (0.5, 1.5) {$\mat{C}_m$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned}
-      </men>
+        \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_m \end{array}\right] = a_1 \left[\begin{array}{c} \,  \\ \text{C}_1 \\ \, \end{array}\right] + a_2 \left[\begin{array}{c} \,  \\ \text{C}_2 \\ \, \end{array}\right] + \cdots + a_m \left[\begin{array}{c} \,  \\ \text{C}_m \\ \, \end{array}\right]
+      </men>.
     </p>
 
     <exercise>
@@ -380,8 +295,8 @@
       <title>Change of basis</title>
       <statement>
         <p>
-          Suppose that <m>\basis{B} = \bopen \ve{b}_1, \ldots, \ve{b}_n\bclose</m> and
-          <m>\basis{C} = \bopen \ve{c}_1, \ldots, \ve{c}_n \bclose</m> are bases for a vector space <m>V</m>,
+          Suppose that <m>\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n\right\}</m> and
+          <m>\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}</m> are bases for a vector space <m>V</m>,
           and let <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> be the change-of-basis matrix from <m>\basis{B}</m> to <m>\basis{C}</m>.
           Then for all vectors <m>\ve{v}</m> in <m>V</m>,
           <men xml:id="change-of-basis-in-action">
@@ -396,7 +311,7 @@
         Let <m>\ve{v} \in V</m>.
         Expand it in the basis <m>\basis{B}</m>:
         <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \cvector{a_1 \\ \vdots \\ a_n}
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]
         </me>.
       </p>
 
@@ -404,16 +319,8 @@
         Then,
         <md>
           <mrow>_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}</mrow>
-          <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  \mbox{(by <xref ref="lin_of_coord_vectors">Lemma</xref>)}</mrow>
-          <mrow>\amp = \left[ \cvector{</mrow>
-          <mrow>\ve{b}_1</mrow>
-          <mrow>}_\basis{C} \,  \cvector{</mrow>
-          <mrow>\ve{b}_2</mrow>
-          <mrow>}_\basis{C} \, \cdots \, \cvector{</mrow>
-          <mrow>\ve{b}_n</mrow>
-          <mrow>}_\basis{C}\right] \cvector{a_1</mrow>
-          <mrow>\vdots</mrow>
-          <mrow>a_n} \amp \amp  \mbox{(by (3.5.6))}</mrow>
+          <mrow>\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (<xref ref="lin_of_coord_vectors">Lemma</xref>)</mrow>)
+          <mrow>\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp <xref ref = "column_vector_multiplication"/></mrow>
           <mrow>\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
         </md>.
       </p>
@@ -424,28 +331,102 @@
         <p>
           In our running example, the theorem says that for <em>any</em>
           vector <m>\ve{v} \in \mathbb{R}^2</m>,
-          <md>
-            [\ve{v}]_\basis{C} = \cmatrix{1 \amp  2 \\ 3 \amp  3} [\ve{v}]_\basis{B} .
-          </md>
+          <me>
+            [\ve{v}]_\basis{C} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3  \end{bmatrix} [\ve{v}]_\basis{B}  .
+          </me>
         </p>
 
         <p>
           In particular, this must hold for our vector <m>\ve{w}</m>,
           whose coordinate vector in the basis <m>\ve{B}</m> was:
           <me>
-            [\ve{w}]_\basis{B} = \cvector{ -3 \\ 2} 
+            [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2 \end{array}\right]
           </me>.
         </p>
 
         <p>
           So in this case, the theorem is saying that
-          <md>
-            [\ve{w}]_{\basis{C}} = \cmatrix{1 \amp  2 \\ 3 \amp  3} \cvector{-3 \\ 2}  = \cvector{1 \\ -3}
-          </md>
+          <me>
+            [\ve{w}]_{\basis{C}} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3 \end{bmatrix} \left[\begin{array}{c} -3 \\ 2\end{array}\right] = \left[ \begin{array}{c} 1 \\ -3 \end{array} \right]
+          </me>
           which agrees with our previous calculation <xref ref="w_in_basis_C" />!
         </p>
       </statement>
     </example>
   </subsection>
+
+ <exercises>
+<exercise>
+    <statement>
+      <p>
+        This is a continuation of <xref ref="matrix_basis_exercise">Exercise</xref>.
+        Consider the following two bases for <m>\Mat_{2,2}</m>:
+        <me>
+\basis B = \left\{ 
+\text{B}_1 =   \begin{bmatrix} 1 &amp;  0 \\ 0 &amp;  11 \end{bmatrix}, \,
+\text{B}_2 =   \begin{bmatrix} 1 &amp;  0\\ 0 &amp;  -1 \end{bmatrix}, \, 
+\text{B}_3 =   \begin{bmatrix} 1 &amp;  1 \\ 1 &amp;  1 \end{bmatrix}, \,
+\text{B}_4 =   \begin{bmatrix} 0 &amp;  1 \\ -1 &amp; 0 \end{bmatrix}               
+\right\}
+      </me>
+
+      <me>
+\basis C = \left\{ 
+\text{C}_1 =   \begin{bmatrix} 1 &amp;  1 \\ 0 &amp;  0  \end{bmatrix}, \,
+\text{C}_2 =   \begin{bmatrix} 1 &amp;  -1 \\ 0 &amp;  0 \end{bmatrix}, \, 
+\text{C}_3 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp;  1 \end{bmatrix}, \,
+\text{C}_4 =   \begin{bmatrix} 0 &amp;  0 \\ 1 &amp; -1 \end{bmatrix}               
+\right\}
+      </me>
+
+        <dl>
+          <li>
+            <title>(a)</title>
+            <p>
+              Determine the change-of-basis matrices
+              <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m> and <m>\mat{P}_{\basis{B} \leftarrow \basis{C}}</m>.
+            </p>
+          </li>
+
+          <li>
+            <title>(b)</title>
+            <p>
+              Determine <m>[\mat{A}]_\basis{B}</m> and <m>[\mat{A}]_\basis{C}</m> where
+              <me>
+                A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Check that <m>[\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}</m> and that <m>[\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}</m>.
+            </p>
+          </li>
+        </dl>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Compute the change-of-basis matrix
+        <m>\mat{P}_{\basis{B} \leftarrow \basis{S}}</m> from the standard basis
+        <me>
+          \basis{S} = \left\{ 1, \cos x, \sin x, \cos 2x, \sin 2x \right\}
+        </me>
+        of <m>\Trig_2</m> to the basis
+        <me>
+          \basis{B} = \left\{ 1, \cos x, \sin x, \cos^2 x, \sin^2 x \right\} \, 
+        </me>.
+      </p>
+    </statement>
+  </exercise>
+
+
+
+ </exercises>
 </section>
 

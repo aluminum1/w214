@@ -31,9 +31,14 @@
   <xi:include  href="section3-7x.ptx" />
 -->
   <xi:include  href="Ch2Sec4CoordinateVectors.ptx" />
+  <!--
   <xi:include  href="section3-8x.ptx" />
+-->
   <xi:include  href="Ch2Sec5ChangeOfBasis.ptx" />
+
+  <!--
   <xi:include  href="section3-9x.ptx" />
+-->
 
 </chapter>
 
