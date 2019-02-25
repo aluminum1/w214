@@ -394,12 +394,31 @@
       <me>
         a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
       </me>
+      To be completely explicit, let us consider the ordinary differential equation
+      <men xml:id="explicit_diff_eq">
+    5y^{\prime \prime} + y^\prime - 3y = 0.
+      </men>
+      You can use methods learnt in first year to show that
+      <me>
+y_1 = e^{-\frac{1}{10}(1 + \sqrt{61})x}, \quad y_2 = e^{\frac{1}{10}(-1 + \sqrt{61})x}
+    </me>
+    are two solutions to <xref ref="explicit_diff_eq"/>.
     </p>
-
-
-
+    <p>
+Use the sage script below to check if linear combinations of <m>y_1</m> and <m>y_2</m> also solves the ODE.
+    </p>
     </statement>
   </example>
+
+<sage>
+  <input>
+y1 = e^(-1/10*x*(sqrt(61) + 1))
+y2 = e^(1/10*x*(sqrt(61) - 1))
+
+def solves_de(f):
+ return bool(5*diff(diff(f,x),x) + diff(f,x) - 3*f == 0)
+</input>
+</sage>
 
    <exercise>
       <statement>
@@ -408,6 +427,34 @@
         </p>
       </statement>
     </exercise>
+
+    <example xml:id="non_example_nonlinear_ode">
+        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <statement>
+          <p>
+            We saw in the previous example that linear ordinary differential equations are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            <men xml:id="explicit_nonlinear_ode">
+y^\prime = y^2.
+          </men>
+This equation has a family of solutions given by
+<me>
+y_c = \frac{1}{c - x}
+</me> where <m>c</m> is a constant.
+          </p>
+          <p>
+            Use the sage script below to check whether linear combinations of the <m>y_c</m>'s solves <xref ref ="explicit_nonlinear_ode"/>
+          </p>
+        </statement>
+    </example>
+    <sage>
+  <input>
+y = function('y')(x)
+
+def solves_de(f):
+ return bool(diff(f,x) - f^2 == 0)
+</input>
+</sage>
+
 
 
 <exercises>

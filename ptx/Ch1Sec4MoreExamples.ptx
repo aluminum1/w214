@@ -124,7 +124,7 @@ We shall demonstrate why R5 is not satisfied. For that, we need to find a counte
 </md>
 whereas
 <md>
-<mrow>\text{RUS} \amp = 2.\ve b + 2.\ve b</mrow>
+<mrow>\text{RHS} \amp = 2.\ve b + 2.\ve b</mrow>
 <mrow> \amp = \ve b + \ve b</mrow>
 <mrow>\amp =\ve a</mrow>.
 </md>
