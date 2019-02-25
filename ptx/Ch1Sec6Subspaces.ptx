@@ -436,7 +436,7 @@ def solves_de(f):
             <men xml:id="explicit_nonlinear_ode">
 y^\prime = y^2.
           </men>
-This equation has a family of solutions given by 
+This equation has a family of solutions given by
 <me>
 y_c = \frac{1}{c - x}
 </me> where <m>c</m> is a constant.
