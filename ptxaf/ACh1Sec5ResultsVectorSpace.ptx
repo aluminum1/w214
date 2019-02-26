@@ -19,7 +19,7 @@
         Veronderstel <m>V</m> is 'n vektor-ruimte met nul-vektor <m>\ve{0}</m>.
         As <m>\ve{0}'</m> 'n ander vektor is wat re&#xeb;l R3(a) bevredig,
         <men xml:id="uniqueness_zero">
-          \ve{0}' + \ve{v} = \ve{v} \mbox{\, vir alle <m>\ve{v} \in V</m>}
+          \ve{0}' + \ve{v} = \ve{v}\text{ vir alle }\ve{v} \in V
         </men>
         dan volg dit dat <m>\ve{0} = \ve{0}'</m>.
       </p>
@@ -28,9 +28,8 @@
 
   <proof>
     <md>
-      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \mbox{(gebruik
-      (2.5.1) vir \(\ve{v} = \ve{0}\))}</mrow>
-      <mrow>\amp = \ve{0}' \amp \amp  \mbox{(gebruik R3(b) vir \(\ve{v} = \ve{0}'\))}</mrow>
+      <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero"/> \text{ vir } \ve{v}=\ve{0} </mrow>
+      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3">R3b </xref>\text{)}</mrow>
     </md>
   </proof>
 
@@ -60,10 +59,10 @@
 
   <proof>
     <md>
-      <mrow>-\ve{v} + \ve{v} \amp = (-1) \cdot \ve{v} + \ve{v} \amp \amp  \mbox{(Definisie
-      van \(- \ve{v}\))}</mrow>
-      <mrow>\amp  = (-1 + 1) \cdot \ve{v} \amp \amp  \mbox{(R5)}</mrow>
-      <mrow>\amp = 0 \cdot \ve{v}</mrow>
+      <mrow>-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \mbox{(Definisie \(- \ve{v}\))}</mrow>
+      <mrow>\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \mbox{}</mrow>
+      <mrow>\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \mbox{(R5)}</mrow>
+      <mrow>\amp = 0 \smul\ve{v}</mrow>
       <mrow>\amp = \ve{0} \amp \amp  \mbox{(R8)}</mrow>
     </md>
     <p>
@@ -86,10 +85,11 @@
     </statement>
   </lemma>
 
+
   <proof>
     <md>
       <mrow>\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}</mrow>
-      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \mbox{(<xref ref="add_inv">Lemma</xref>)}</mrow>
+      <mrow>\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  <xref ref="add_inv"/></mrow>
       <mrow>\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}</mrow>
       <mrow>\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(volgens aanname)}</mrow>
       <mrow>\amp = -\ve{v} \amp \amp  \mbox{(R3a)} </mrow>
@@ -168,7 +168,7 @@
       \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
       Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
       Dan <m>k \cdot \ve{v}
-      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="imp_ex_1">Oefening</xref>.
+      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex">Oefening</xref>.
     </p>
 
     <p>
@@ -186,8 +186,8 @@
         <mrow>\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k}
         \cdot \ve{0} \amp \amp  \mbox{(Vermenigvuldig beide kante met
         \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore (\frac{1}{k} k) \cdot \ve{v} \amp = \ve{0} \amp \amp 
-        \mbox{ (R6 aan LK. \\ Gebruik <xref ref="imp_ex_1">Oefening</xref> aan die RK.)  }</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp 
+         \mbox{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex">Oefening</xref> \mbox{ aan die RK.)}</mrow>
         <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(gebruik \(\frac{1}{k}
         k = 1\))}</mrow>
         <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
@@ -200,9 +200,7 @@
     </p>
   </proof>
 
-  <p>
-    \furtherexercises
-  </p>
+  <exercises>
 
   <exercise>
     <statement>
@@ -213,7 +211,7 @@
     </statement>
   </exercise>
 
-  <exercise xml:id="imp_ex_1">
+  <exercise xml:id="mult_by_zero_ex">
     <statement>
       <p>
         Laat <m>V</m> 'n vektorruimte wees met nul-vektor <m>\ve{0}</m>.
@@ -236,5 +234,7 @@
       </p>
     </statement>
   </exercise>
+
+</exercises>
 </section>
 

@@ -129,7 +129,7 @@
     </exercise>
 
   <example>
-    <title>Lines and planes in <m>\mathbb{R}^3</m>m></title>
+    <title>Lines and planes in <m>\mathbb{R}^3</m></title>
     <statement>
       <p>
         Similarly a line <m>L</m> or a plane <m>P</m> through the origin in
@@ -338,7 +338,7 @@
       A <em>trigonometric polynomial</em>
       is a function <m>\ve{T} : \mathbb{R} \rightarrow \mathbb{R}</m> of the form
       <men xml:id="formula_for_trig_poly">
-        \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx)
+        \ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).
       </men>
     </p>
 
@@ -394,12 +394,31 @@
       <me>
         a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
       </me>
+      To be completely explicit, let us consider the ordinary differential equation
+      <men xml:id="explicit_diff_eq">
+    5y^{\prime \prime} + y^\prime - 3y = 0.
+      </men>
+      You can use methods learnt in first year to show that
+      <me>
+y_1 = e^{-\frac{1}{10}(1 + \sqrt{61})x}, \quad y_2 = e^{\frac{1}{10}(-1 + \sqrt{61})x}
+    </me>
+    are two solutions to <xref ref="explicit_diff_eq"/>.
     </p>
-
-
-
+    <p>
+Use the sage script below to check if linear combinations of <m>y_1</m> and <m>y_2</m> also solves the ODE.
+    </p>
     </statement>
   </example>
+
+<sage>
+  <input>
+y1 = e^(-1/10*x*(sqrt(61) + 1))
+y2 = e^(1/10*x*(sqrt(61) - 1))
+
+def solves_de(f):
+ return bool(5*diff(diff(f,x),x) + diff(f,x) - 3*f == 0)
+</input>
+</sage>
 
    <exercise>
       <statement>
@@ -408,6 +427,34 @@
         </p>
       </statement>
     </exercise>
+
+    <example xml:id="non_example_nonlinear_ode">
+        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <statement>
+          <p>
+            We saw in the previous example that linear ordinary differential equations are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            <men xml:id="explicit_nonlinear_ode">
+y^\prime = y^2.
+          </men>
+This equation has a family of solutions given by
+<me>
+y_c = \frac{1}{c - x}
+</me> where <m>c</m> is a constant.
+          </p>
+          <p>
+            Use the sage script below to check whether linear combinations of the <m>y_c</m>'s solves <xref ref ="explicit_nonlinear_ode"/>
+          </p>
+        </statement>
+    </example>
+    <sage>
+  <input>
+y = function('y')(x)
+
+def solves_de(f):
+ return bool(diff(f,x) - f^2 == 0)
+</input>
+</sage>
+
 
 
 <exercises>
@@ -509,6 +556,56 @@
         <m>\mathbb{R}^2</m> which is closed under scalar multiplication,
         but <m>V</m> is not a subspace of <m>\mathbb{R}^2</m>.
       </p>
+    </statement>
+  </exercise>
+
+<p>
+The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.
+</p>
+<definition xml:id="def_sum_subspace">
+  <statement>
+    <p>
+Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
+<me>
+U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+</me>
+</p>
+</statement>
+</definition>
+
+<p>
+  In the exercises below, <m>V,U,W</m> will be as above.
+</p>
+
+<exercise>
+    <statement>
+      <p>
+      Show that <m>U + V</m> is a subspace of <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      If <m>W \subset U</m> what is <m>U + W</m>?
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
+    </p>
     </statement>
   </exercise>
 </exercises>

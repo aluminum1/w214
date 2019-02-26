@@ -37,10 +37,10 @@
       <me>
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}  \Rightarrow  k_1 = k_2 = \cdots = k_n = 0
       </me>
-      is clearly equivalent to the criterion that
-      <me>
-        { All of the \(\ve{v}_i\) are nonzero and none of them can be expressed as a nontrivial linear combination of the others.}
-      </me>
+      is clearly equivalent to the criterion:
+      <p>
+         All of the <m>(\ve{v}_i)</m> are nonzero and none of them can be expressed as a nontrivial linear combination of the others. In fact, this seemingly obvious remark will be the starting point for many future proofs concerning linear independence!
+       </p>
     </p>
   </remark>
 
@@ -63,21 +63,22 @@
       </me>
       is equivalent to the system of equations
       <men xml:id="system_from_r2_example">
-        \systeme{-k_1 + k_2 = 0, 2k_1 + k_2 = 0}
+       -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0
       </men>
       which has only the trivial solution <m>k_1 = 0</m> and <m>k_2 = 0</m>.
     </p>
 
-    <exercise>
+
+    </statement>
+  </example>
+
+   <exercise>
       <statement>
         <p>
           Check that <xref ref="system_from_r2_example" /> has only the trivial solution.
         </p>
       </statement>
     </exercise>
-
-    </statement>
-  </example>
 
   <example xml:id="example_about_lin_dep_1">
     <statement>
@@ -91,21 +92,13 @@
       </men>
       is equivalent to the system of equations
       <men xml:id="system_from_r2_example_new">
-        \systeme{-k_1 + k_2 + 2k_3 = 0, 2k_1 + k_2 - k_3 = 0}
+       -k_1 + k_2 + 2k_3 = 0, \quad 2k_1 + k_2 - k_3 = 0
       </men>
       which has a one-dimensional vector space of solutions parameterized by <m>t</m>,
       <men xml:id="supposed_soln">
         k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}
       </men>.
     </p>
-
-    <exercise>
-      <statement>
-        <p>
-          Check that <xref ref="system_from_r2_example_new" /> has the solution set <xref ref="supposed_soln" />.
-        </p>
-      </statement>
-    </exercise>
 
     <p>
       For instance, for <m>t=2</m>, we have
@@ -116,6 +109,14 @@
     </p>
     </statement>
   </example>
+
+    <exercise>
+      <statement>
+        <p>
+          Check that <xref ref="system_from_r2_example_new" /> has the solution set <xref ref="supposed_soln" />.
+        </p>
+      </statement>
+    </exercise>
 
   <example xml:id="new_basis_for_poly_3">
     <statement>
@@ -139,7 +140,7 @@
       <p>
         This is equivalent to the following system of equations,
         <me>
-          \systeme{ 4k_3 = 0, 2k_2 = 0, -3 k_3 + k_1 = 0 , k_0 - k_2 = 0}
+          4k_3 = 0, \quad 2k_2 = 0, \quad -3 k_3 + k_1 = 0, \quadk_0 - k_2 = 0
         </me>
         which has only the trivial solution <m>k_0 = k_1 = k_2 = k_3 = 0</m>.
       </p>
@@ -303,8 +304,8 @@
     <title>Bumping Off Proposition</title>
     <statement>
       <p>
-        Suppose <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> is a linearly independent list of vectors in a vector space <m>V</m>,
-        and that <m>\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose</m> spans <m>V</m>.
+        Suppose <m>\basis{L} = \left\{ \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \right\}</m> is a linearly independent list of vectors in a vector space <m>V</m>,
+        and that <m>\basis{S} = \left\{ \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \right\}</m> spans <m>V</m>.
         Then <m>m \leq n</m>.
       </p>
     </statement>
@@ -314,11 +315,11 @@
     <p>
       Start with the original spanning list of vectors
       <men>
-        \basis{S} = \bopen \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose
+        \basis{S} = \left\{ \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \right\}
       </men>
       and consider the <sq>bloated</sq> list
       <men xml:id="bloated_list">
-        \basis{S}' = \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \bclose
+        \basis{S}' = \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \right\}
       </men>
     </p>
 
@@ -332,7 +333,7 @@
       We can then remove <m>\ve{s}_r</m> from the list (<sq>bump it off</sq>),
       and the resulting list
       <men>
-        \basis{S}_1 :=  \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \bclose \qquad \mbox{(\(\ve{s}_r\) omitted)}
+        \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
       </men>
       still spans <m>V</m>.
       We can go on in this way,
@@ -353,9 +354,58 @@
       But there are still some <m>\ve{l}</m>-vectors <m>\ve{l}_{n+1}, \ldots \ve{l}_{m}</m> left over!
       This means that <m>\ve{l}_{n+1}</m> is a linear combination of the vectors in <m>\basis{S}_n</m>,
       which contradicts the fact that the list
-      <m>\bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> was linearly independent.
+      <m>\left\{\ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \right\}</m> was linearly independent.
       So we cannot have <m>m > n</m> and hence <m>m \leq n</m>.
     </p>
   </proof>
+
+  <exercises>
+  <exercise>
+    <statement>
+      <p>
+        Show that the list of vectors
+        <m>(2, \, 3, \, 1)</m>, <m>(1, \, -1, \, 2)</m>,
+        <m>(7, \, 3, \, c)</m> is linearly dependent in
+        <m>\mathbb{R}^3</m> if and only if <m>c=8</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="x2_by_2_matrices_lin_dep">
+    <statement>
+      <p>
+        The list of vectors in <m>\Mat_{2,2}</m> given by
+         <me>
+\ve{v}_1 = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix},\,
+\ve{v}_2 = \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix},\,
+\ve{v}_3 = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix},\,
+\ve{v}_4 = \begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix},\,
+\ve{v}_5 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+      </me>
+        is linearly independent
+        (you will prove this in <xref ref="checking_matrices_lin_dep">Exercise</xref>,
+        but for the sake of this question you may assume it to be true).
+        Go through the same steps as in <xref ref="app_of_prop_preceding">Example</xref>
+        to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors.
+      </p>
+    </statement>
+  </exercise>
+
+  </exercises>
 </section>
 

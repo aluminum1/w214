@@ -8,7 +8,7 @@
   <xi:include  href="Ch1Sec4MoreExamples.ptx" />
   <xi:include  href="Ch1Sec5ResultsVectorSpace.ptx" />
   <xi:include  href="Tut1.ptx" />
-<!--  <xi:include  href="Ch1Sec6Subspaces.ptx" /> -->
+<xi:include  href="Ch1Sec6Subspaces.ptx" />
 
 </chapter>
 
