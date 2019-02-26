@@ -101,7 +101,7 @@
     <statement>
       Let <m>V</m> be a vector space and <m>k</m> any scalar. Then
       <me>
-        k \smul\ve{0} = \ve{0})
+        k \smul\ve{0} = \ve{0}
       </me>
     </statement>
   </lemma>
@@ -278,10 +278,6 @@
       </p>
     </exercise>
     
-    <xi:include href="./is_k_equal_to_zero_exercise.ptx"
-                xpointer="xpointer(//exercise[@id = 'is_k_equal_to_zero']/node() )"
-                xmlns:xi="http://www.w3.org/2001/XInclude"/>
-
     <exercise>
       <p>
       Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.

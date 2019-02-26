@@ -485,7 +485,7 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         There is also a scalar multiplication operation in <m>C</m>.
         We simply multiply each coefficient of a polynomial <m>\ve{c} \in C</m> by <m>k</m>:
         <men xml:id="sm_in_C">
-          k \smul[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
+          k \smul[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_4 x^4 + k c_3 x^3 + k c_2 x^2 + k c_1 x + k c_0
         </men>
       </p>
 
