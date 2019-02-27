@@ -191,16 +191,7 @@ We can visualize an element $\ve{a}$ of $A$ as a point in the Cartesian plane wh
 tikzalign
 \begin{align*}
 {\color{red} \ve{a}} \quad \xrightarrow{\mbox{visualize as}} \quad
-\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-	circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
-%	\draw[->, thick] (0,0) -- (1.3, 1);
-\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-\node[color=red] at (1.6,1) {$\ve{a}$};
-\end{tikzpicture}
+\includegraphics{visualize-a-tikz.pdf}
 \end{align*}
 
 

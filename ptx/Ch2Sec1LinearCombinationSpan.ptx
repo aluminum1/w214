@@ -128,6 +128,19 @@
         \ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1)
       </me>
     </p>
+    <figure xml:id="spanning_set_R2">
+    <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
+    <image>
+    <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
+      \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
+      \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
+      \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
+      \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
+    </latex-image>
+    </image>
+  </figure>
 
     <p>
       See <xref ref="spanning_set_R2">Figure</xref>.
@@ -141,8 +154,6 @@
       </mdn>
     </p>
 
-
-
     </statement>
   </example>
 
@@ -154,20 +165,6 @@
       </statement>
     </exercise>
 
-  <figure xml:id="spanning_set_R2">
-    <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
-    <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-2.5, 0) -- (2.5,0) node[below] {\(x\)};
-  \draw[<->] (0, -2.5) -- (0, 2.5) node[right] {\(y\)};
-  \draw[very thick, red, ->] (0,0) -- (-1, 2) node[above left] {\(\ve{f}_1\)};
-  \draw[very thick, red, ->] (0,0) -- (1, 1) node[above right] {\(\ve{f}_2\)};
-  \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
-</latex-image>
-    </image>
-
-  </figure>
 
   <example xml:id="Rn_spanning_set">
     <statement>

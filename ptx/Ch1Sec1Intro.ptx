@@ -57,29 +57,25 @@
 
     <p>
       We can visualize an element <m>\ve{a}</m> of <m>A</m> as a point in the Cartesian plane whose <m>x</m>-coordinate is <m>a_1</m> and whose <m>y</m>-coordinate is <m>a_2</m>:
-     <!-- <me>
-        {\color{red} \ve{a}}  \xrightarrow{\mbox{visualize as} }
-
-        
-<latex-image>
--->
-<figure>
-<image>
-  <latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) ;
-\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-\node[color=red] at (1.6,1) {$\ve{a}$};\
-end{tikzpicture}]]>
- </latex-image>
-</image>
-</figure>
+      <sidebyside valign="middle" margins="0%">
+        <p> <m> \ve{a} \xmapsto{\text{visualize as}} </m> </p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+              % \draw[->, thick] (0,0) -- (1.3, 1);
+              \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+              \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+              \node[color=red] at (1.6,1) {$\ve{a}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
     </p>
-
 
     <p>
       The second set, <m>B</m>,
@@ -94,26 +90,33 @@ end{tikzpicture}]]>
     <p>
       For instance, <m>(2,3, 1) \in B</m> but <m>(1,1,1) \notin B</m>.
       We can visualize an element <m>\ve{b}</m> of <m>B</m> as a point in the plane in 3-dimensional space carved out by the equation <m>x-y+z = 0</m>:
-      <md>
-        <mrow>{\color{red} \ve{b}}  \xrightarrow{\mbox{visualize as} }
-
+      <sidebyside valign="middle">
+        <p> <m> \ve{b} \xmapsto{\text{visualize as}} </m> </p>
         <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
+            \node[color=red] at (0.5, 0.9) {$\ve{b}$};
+            \draw[thick] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick] (0.3, 1.5) -- (1.5, 0.4);
+            \draw[thick] (1.5, 0.4) -- (-0.1, -1);
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
 
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
-\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-\draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-\draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-\node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) ;
-\node[color=red] at (0.5, 0.9) {$\ve{b}$};
-\draw[thick] (-0.1, -1) -- (-1, 0.4);
-\draw[thick] (-1, 0.4) -- (0.3, 1.5);
-\draw[thick] (0.3, 1.5) -- (1.5, 0.4);
-\draw[thick] (1.5, 0.4) -- (-0.1, -1);\end{tikzpicture}]]>
-</latex-image>
-        </image></mrow>
-      </md>
+
+
+      <sidebyside>
+
+
+    </sidebyside>
     </p>
 
     <p>
@@ -137,22 +140,21 @@ end{tikzpicture}]]>
       <m>\ve{c} \in C</m> (i.e. a polynomial of degree 4) via its <em>graph</em>.
       For instance, the polynomial
       <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> can be visualized as:
-
-      <md>
-        <mrow>{\color{red} \ve{c}}  \xrightarrow{\mbox{visualize as} }
-
+      <sidebyside valign="middle">
+        <p> <m> \ve{c} \xmapsto{\text{visualize as}} </m> </p>
         <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-\draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
-node[right] {$\ve{c}$};\end{tikzpicture}]]>
-</latex-image>
-        </image></mrow>
-      </md>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}[domain=-0.5:2.2]
+            \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+            \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+            \draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
+            node[right] {$\ve{c}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
     </p>
     <p>
       There you have it.
@@ -201,54 +203,54 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
       <p>
         For instance, <m>(1, \,3) + (2, \,-1.6) = (3, \,1.4)</m>.
         We can visualize this addition operation as follows:
-        <md>
-          <mrow><image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) ;
-\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-\node[color=red] at (1.6,1) {$\ve{a}$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          +
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) ;
-\draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
-\draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
-\node[color=red] at (0.9,0.4) {$\ve{a}'$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          =
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) ;
-\draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
-\draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
-\node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};\end{tikzpicture}]]>
-</latex-image>
-          </image></mrow>
-        </md>
+      <sidebyside valign="middle" widths="20% 5% 20% 5% 20%">
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) ;
+              \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+              \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+              \node[color=red] at (1.6,1) {$\ve{a}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+        <p>+</p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) ;
+              \draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
+              \draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
+              \node[color=red] at (0.9,0.4) {$\ve{a}'$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+        <p>=</p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) ;
+              \draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
+              \draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
+              \node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
       </p>
+
       <p>
         We can do a similar thing in set <m>B</m>.
         Suppose we have two elements of <m>B</m>,

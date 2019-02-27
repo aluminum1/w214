@@ -264,11 +264,12 @@ TSWLatexianTemp*
 # html
 *.html
 
-# html directory
-/ptx/html
+# ignore the html directory but include the svg files
+/ptx/html/*
+!/ptx/html/images/
 
 # latex directory
-/ptx/latex
+/ptx/latex/*
 
 # vagrant 
 /.vagrant
