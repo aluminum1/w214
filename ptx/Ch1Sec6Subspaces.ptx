@@ -6,7 +6,7 @@
     The notion of a subspace will allow us to quickly establish many more examples of vector spaces.
   </p>
 
-  <definition>
+  <definition xml:id="defn-subspace">
     <statement>
       <p>
         A subset <m>U \subseteq V</m> of a vector space <m>V</m> is called a
@@ -74,22 +74,20 @@
     <p>
       A line <m>L</m> through the origin in
       <m>\mathbb{R}^2</m> is a subspace of <m>\mathbb{R}^2</m>:
-      <men xml:id="pic_of_L1">
-        \begin{aligned}
-
-        <image>
-
-<latex-image>
+    </p>
+    <sidebyside>
+      <figure xml:id="line-through-origin-R2-example">
+      <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
+      <image width="50%">
+      <latex-image>
           <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
   \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
   \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
-</latex-image>
-        </image>
-
-        \end{aligned}
-      </men>
-    </p>
-
+      </latex-image>
+      </image>
+      </figure>
+  </sidebyside>
+    
     <p>
       Indeed, recall that <m>L</m> can be specified by a homogenous linear equation of the form:
       <men xml:id="eqn_of_L">
@@ -109,8 +107,7 @@
 
     <p>
       This also makes sense geometrically:
-      if you look at the picture <xref ref="pic_of_L1" />,
-      then you will see that adding two vectors
+      if you look at the picture, then you will see that adding two vectors
       <m>\ve{v}, \ve{v}'</m> on <m>L</m> by the head-to-tail method will produce another vector on <m>L</m>.
     </p>
 
@@ -134,38 +131,43 @@
       <p>
         Similarly a line <m>L</m> or a plane <m>P</m> through the origin in
         <m>\mathbb{R}^3</m> is a subspace of <m>\mathbb{R}^3</m>:
-        <men xml:id="pic_of_L">
-          \begin{aligned}
-
+        <sidebyside width="40%">
+        <figure xml:id="line-in-R3-example-subspace">
+          <caption>A line through the origin in <m>\mathbb{R}^3</m>.</caption>
           <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-  \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-  \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-  \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);\end{tikzpicture}]]>
-</latex-image>
+          <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);
+          \end{tikzpicture}
+          ]]>
+          </latex-image>
           </image>
+        </figure>
 
-          \end{aligned}
-          \qquad \qquad
-          \begin{aligned}
-
+        <figure xml:id="plane-in-R3-example-subspace">
+          <caption>A plane through the origin in <m>\mathbb{R}^3</m>.</caption>
           <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-  \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-  \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-  \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
-  \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
-  \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
-  \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
+          <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+            \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
+          \end{tikzpicture}
           \end{aligned}
-        </men>
+          ]]>
+          </latex-image>
+          </image>
+        </figure>
+        </sidebyside>
       </p>
     </statement>
   </example>
@@ -205,24 +207,25 @@
         Another reason that <m>L</m> is not a subspace is that it is not closed under addition:
         when we add two nonzero vectors <m>\ve{v}</m> and <m>\ve{v}'</m> on <m>L</m>,
         we end up with a vector <m>\ve{v} + \ve{v}'</m> which does not lie on <m>L</m>:
-        <men xml:id="pic_of_bad_L">
-          \begin{aligned}
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=2]
-  \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-  \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
-  \draw[very thick, red, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
-  \draw[very thick, red, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
-  \draw[very thick, red, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          \end{aligned}
-        </men>
+        <sidebyside>
+          <figure xml:id="line-not-through-origin-non-example">
+            <caption>A line which does not pass through the origin is not closed under addition.</caption>
+            <image>
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}
+                \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+                \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+                \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+                \draw[very thick, blue, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+                \draw[very thick, blue, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+                \draw[very thick, blue, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+            </image>
+        </figure>
+      </sidebyside>
       </p>
     </statement>
   </example>
@@ -279,7 +282,7 @@
       <me>
         \Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ differentiable}  \}
       </me>
-      of differentiable functions on an open interval <m>I</m> is a subspace of <m>\Fun (I)</m>.
+      of differentiable functions on an open interval <m>I</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun (I)</m>.
     </p>
 
 
@@ -559,9 +562,10 @@ def solves_de(f):
     </statement>
   </exercise>
 
-<p>
-The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.
-</p>
+<exercisegroup>
+  <introduction>
+<p>The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.</p>
+
 <definition xml:id="def_sum_subspace">
   <statement>
     <p>
@@ -572,11 +576,10 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
 </p>
 </statement>
 </definition>
-
 <p>
   In the exercises below, <m>V,U,W</m> will be as above.
 </p>
-
+</introduction>
 <exercise>
     <statement>
       <p>
@@ -608,6 +611,7 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
     </p>
     </statement>
   </exercise>
+</exercisegroup>
 </exercises>
 
 

@@ -30,28 +30,6 @@
     </p>
   </remark>
 
-  <remark xml:id="crit_ind">
-    <p>
-      The criterion for a list of vectors
-      <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> to be linearly independent,
-      <me>
-        k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}  \Rightarrow  k_1 = k_2 = \cdots = k_n = 0
-      </me>
-      is clearly equivalent to the criterion:
-      <p>
-         All of the <m>(\ve{v}_i)</m> are nonzero and none of them can be expressed as a nontrivial linear combination of the others. In fact, this seemingly obvious remark will be the starting point for many future proofs concerning linear independence!
-       </p>
-    </p>
-  </remark>
-
-  <exercise>
-    <statement>
-      <p>
-        Prove this last remark.
-      </p>
-    </statement>
-  </exercise>
-
   <example>
     <statement>
     <p>
@@ -151,7 +129,7 @@
     At the moment,
     the definition of a list of vectors being <sq>linearly dependent</sq> is that the list is <sq>not linearly independent</sq>!
     That might get your head in a knot.
-    Here is a more straightforward way to think about linearly depdendent lists of vectors.
+    Here are two more ways to think about linearly depdendent lists of vectors. 
   </p>
 
   <proposition xml:id="lin_dependence_prop">
