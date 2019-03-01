@@ -318,34 +318,34 @@
               <latex-image>
               <![CDATA[
               \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-                circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-                \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-                \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-                  \draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
-                      node[right] {$\ve{c}$};
-                  \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
-                  \draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
-              \end{tikzpicture}
-              \quad + \quad
-              \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-                circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-                \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-                \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-                  \draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
-                      node[right] {$\ve{d}$};
-                 \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
-                  \draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
-              \end{tikzpicture} = \quad
-              \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-                circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-                \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-                \draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
-                  \draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
-                      node[above right] {$\ve{c}+\ve{d}$};
-                 \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
-                  \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
-              \end{tikzpicture}
-              ]]>
+  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
+        node[right] {$\ve{c}$};
+    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
+    \draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
+\end{tikzpicture}
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
+        node[right] {$\ve{d}$};
+   \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
+    \draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
+\end{tikzpicture} = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
+        node[above right] {$\ve{c}+\ve{d}$};
+   \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
+    \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
+\end{tikzpicture}
+]]>
               </latex-image>
               </image>
         </sidebyside>

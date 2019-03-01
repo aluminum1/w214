@@ -1,16 +1,19 @@
-
-
 <section xml:id="Ch1Sec6Subspaces">
   <title>Subspaces</title>
-  <p>
-    The notion of a subspace will allow us to quickly establish many more examples of vector spaces.
-  </p>
+  <introduction>
+    <p>
+    In this section we will introduce the notion of a <em>subspace</em> of a vector space. This notion will allow us to quickly establish many more examples of vector spaces.
+    </p> 
+  </introduction>
+
+  <subsection>
+    <title>Definition of a subspace</title>
 
   <definition xml:id="defn-subspace">
     <statement>
       <p>
         A subset <m>U \subseteq V</m> of a vector space <m>V</m> is called a
-        <term>subspace of <m>V</m></term> if:
+        <term>subspace</term> of <m>V</m> if:
 
         <ul>
           <li>
@@ -228,6 +231,10 @@
       </p>
     </statement>
   </example>
+</subsection>
+
+<subsection>
+  <title>Examples of subspaces</title>
 
   <example>
     <title>Continuous functions as a subspace</title>
@@ -386,78 +393,210 @@
         </p>
       </statement>
     </exercise>
+  </subsection>
 
-  <example>
-    <title>Solutions to linear differential equations</title>
-    <statement>
-    <p>
-      Fix constants <m>a,b</m> and <m>c</m>.
-      Let <m>V \subseteq \Diff(\mathbb{R})</m> be the set of all solutions to the following differential equation:
-      <me>
-        a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
-      </me>
-      To be completely explicit, let us consider the ordinary differential equation
-      <men xml:id="explicit_diff_eq">
-    5y^{\prime \prime} + y^\prime - 3y = 0.
+  <subsection xml:id="soln-diff-eqns-subspace">
+  <title>Solutions to homogenous linear differential equations</title>
+
+    <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
+    <men xml:id="general_lin_diff_eqn">
+        a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
+    </men> 
+    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
+
+
+    <example xml:id="first_example_2nd_order_ode">
+      <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
+      <statement> <p> For instance,
+      <men xml:id="first_example_2nd_order_ode_eqn">
+        x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)
       </men>
-      You can use methods learnt in first year to show that
-      <me>
-y_1 = e^{-\frac{1}{10}(1 + \sqrt{61})x}, \quad y_2 = e^{\frac{1}{10}(-1 + \sqrt{61})x}
-    </me>
-    are two solutions to <xref ref="explicit_diff_eq"/>.
-    </p>
-    <p>
-Use the sage script below to check if linear combinations of <m>y_1</m> and <m>y_2</m> also solves the ODE.
-    </p>
-    </statement>
-  </example>
+      is a homogenous 2nd order linear differential equation on the interval <m>(0, \infty)</m>, and
+      <men xml:id="a_soln_to_my_ode">
+        y_1(x) = x^2 \sin (\log x)
+      </men>
+      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly, 
+      <men xml:id="a_2nd_soln_to_my_ode">
+        y_2(x) = x^2 \cos (\log x)
+      </men>
+      is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
+      </p>
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation. 
+      </p>
+      <sage>
+      
+      <input>
+        def solves_de(y):
+         return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
 
-<sage>
-  <input>
-y1 = e^(-1/10*x*(sqrt(61) + 1))
-y2 = e^(1/10*x*(sqrt(61) - 1))
+        y1 = x^2*sin(log(x))
 
-def solves_de(f):
- return bool(5*diff(diff(f,x),x) + diff(f,x) - 3*f == 0)
-</input>
-</sage>
+        solves_de(y1)
+      </input>
+      </sage>
 
-   <exercise>
-      <statement>
-        <p>
-          Show that <m>V</m> is a subspace of <m>\Diff(\mathbb{R})</m>.
+      <assemblage>
+         <p>
+         Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</p>
+      </assemblage>
+
+      <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
+      <sage>
+      <input>
+        y1 = x^2*sin(log(x))
+        y2 = x^2*cos(log(x))
+
+        plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
+      </input>
+      </sage>
+      <assemblage>
+        <p>Play with the code above, and plot some different functions.
         </p>
+      </assemblage>
+
       </statement>
+
+    </example>
+
+    <exercise><statement>Check by hand that <xref ref="a_soln_to_my_ode"/> and <xref ref="a_2nd_soln_to_my_ode"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</statement>
     </exercise>
 
-    <example xml:id="non_example_nonlinear_ode">
+    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn"/> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
+    <men>
+     V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}
+    </men>
+    </p>
+    <p> We can regard <m>V</m> as a subset of the set of <em>all</em> functions on the interval <m>I</m>:
+    <me>
+      V \subseteq \Fun(I)
+    </me>
+    </p>
+
+    <exercise>
+    <statement>
+     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+     </statement> 
+    </exercise>
+
+    <p>So, by <xref ref="subspace_lem"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+
+    <example xml:id="first_example_2nd_order_ode_cont">
+      <title>Continuation of <xref ref="first_example_2nd_order_ode"/></title>
+      <statement>
+        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode"/>. We saw that
+        <me>
+        y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
+        </me>
+      are solutions. So, any linear combination of <m>y_1</m> and <m>y_2</m> is <em>also</em> a solution. For instance,
+      <me>
+       y = 2y_1 + 5 y_2
+     </me>
+     is also a solution. Let us check this in SageMath. </p>
+
+    <sage>
+      <input>
+        def solves_de(y):
+          return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+        y1 = x^2*sin(log(x))
+        y2 = x^2*sin(cos(x))
+
+        solves_de(2*y1 + 5*y2)
+      </input>
+    </sage>
+              
+      </statement>
+    </example>
+
+        <example xml:id="non_example_nonlinear_ode">
         <title>A non-example: Solutions to a nonlinear ODE</title>
         <statement>
           <p>
-            We saw in the previous example that linear ordinary differential equations are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
             <men xml:id="explicit_nonlinear_ode">
-y^\prime = y^2.
-          </men>
-This equation has a family of solutions given by
-<me>
-y_c = \frac{1}{c - x}
-</me> where <m>c</m> is a constant.
+            y^\prime = y^2.
+            </men>
+            The general solution is given by
+            <me>
+            y_c = \frac{1}{c - x}
+            </me> where <m>c</m> is a constant. For instance,
+            <me>
+              y_1 = \frac{1}{1-x}, \quad \frac{1}{2-x}
+            </me>
+            are solutions.
           </p>
           <p>
-            Use the sage script below to check whether linear combinations of the <m>y_c</m>'s solves <xref ref ="explicit_nonlinear_ode"/>
+            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution. 
+            </p>
+          <sage>
+          <input>
+            y = function('y')(x)
+
+            def solves_de(f):
+             return bool(diff(f,x) - f^2 == 0)
+
+            y1 = 1/(1-x)
+            y2 = 1/(2-x)
+
+            solves_de(y1+y2)
+        </input>
+        </sage>
+        <p>
+        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
           </p>
         </statement>
     </example>
+
+
+    <example> <title>Finding the general solution to a differential equation in SageMath</title>
+      <statement>
+      <p>
+      Let us use SageMath to find the general solution of the following ordinary differential equation
+      <men xml:id="explicit_diff_eq">
+    y^{\prime \prime} + 2y^\prime + y = 0.
+      </men>
+      We can do this as follows. Note that we need to be a bit more careful now, first defining our variable <m>x</m> and then declaring that <m>y</m> is a function of <m>x</m>.</p>
+      <sage>
+        <input>
+        var('x')
+        y = function('y')(x)
+
+        diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+          desolve(diff_eqn,y)
+
+        desolve(diff_eqn, y)
+        </input>
+      </sage>
+    <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
+    </p>
+    <p>
+    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation. 
+  </p>
     <sage>
-  <input>
-y = function('y')(x)
+        <input>
+        var('x, _K1, _K2')
+        y = function('y')(x)
 
-def solves_de(f):
- return bool(diff(f,x) - f^2 == 0)
-</input>
-</sage>
+        diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+
+        my_soln = desolve(diff_eqn,y)
+
+        y1 = my_soln.substitute(_K1==1, _K2==0)
+
+        y1
+        </input>
+      </sage>
+    <p>SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution. </p>
+    <assemblage>
+      <p>
+    Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>? </p>
+  </assemblage>
+
+    </statement>
+    </example>
 
 
+</subsection>
 
 <exercises>
   <exercise>
