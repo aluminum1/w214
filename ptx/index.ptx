@@ -33,6 +33,8 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Nullity}{Nullity}
 \DeclareMathOperator{\Rank}{Rank}
+\DeclareMathOperator{\bopen}{\{}
+\DeclareMathOperator{\bclose}{\}}
 </macros>
 
 <latex-image-preamble>

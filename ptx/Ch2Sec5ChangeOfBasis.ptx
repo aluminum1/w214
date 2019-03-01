@@ -10,39 +10,35 @@
       shown below:
     </p>
 
-    <figure xml:id="w_in_different_bases">
-      <caption>Two different bases for <m>\mathbb{R}^2</m></caption>
-      <me>
+  <figure xml:id="w_in_different_bases">
+  <caption>Two different bases for <m>\mathbb{R}^2</m></caption>
 
-        <image>
-
+  <sidebyside width="30%">
+    <figure>
+<caption>The basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m></caption>
+    <image>
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.4]
   \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
   \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
 </latex-image>
-        </image>
+        </image> </figure>
 
-      </me>
-      \subcaption{The basis <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m>}
-      <me>
-
+        <figure>
+          <caption>The basis <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m>.</caption>
         <image>
-
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=0.4]
   \draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {\(\ve{c}_1\)} (1,0); 
   \draw[very thick, blue, ->] (0,0) -- node[pos=1.5] {\(\ve{c}_2\)} (-1,1);\end{tikzpicture}]]>
 </latex-image>
-        </image>
-
-      </me>
-      \subcaption{The basis <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m>}
+        </image></figure>
+      </sidebyside>
     </figure>
 
     <p>
       Suppose we are given a vector <m>\ve{w} \in \mathbb{R}^2</m>:
-      <me>
+      <sidebyside width="30%">
 
         <image>
 
@@ -52,7 +48,7 @@
 </latex-image>
         </image>
 
-      </me>
+</sidebyside>
     </p>
 
     <p>
@@ -82,7 +78,9 @@
 
     
 
-    <figure>
+    <sidebyside>
+      <figure>
+      <caption> <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m></caption>
 
       <image>
 
@@ -109,9 +107,10 @@
   \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (-4,1);\end{tikzpicture}]]>
 </latex-image>
       </image>
+    </figure>
 
-     <!-- \subcaption{<m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m>} -->
-
+  <figure>
+    <caption> <m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m> </caption>
       <image>
 
 <latex-image>
@@ -138,8 +137,8 @@
 </latex-image>
       </image>
 
-      <!--\subcaption{<m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m>}-->
     </figure>
+  </sidebyside>
 
     <p>
       So, the <em>same</em> vector <m>\ve{w}</m> has different coordinate vectors <m>[\ve{w}]_\basis{B}</m> and
@@ -167,9 +166,9 @@
       <m>\basis{B}</m> as a linear combination of the basis vectors in <m>\basis{C}</m>.
       In the next figure, the vectors <m>\ve{b}_1</m> and
       <m>\ve{b}_2</m> are displayed against the background of the basis <m>\basis{C}</m>:
-      <!--FIX THIS TIKZALIGN -->
     </p>
 
+    <sidebyside>
     <image>
 
 <latex-image>
@@ -197,6 +196,7 @@
   \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (1,2);\end{tikzpicture}]]>
 </latex-image>
     </image>
+  </sidebyside>
 
     <p>
       We read off that:

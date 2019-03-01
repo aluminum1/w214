@@ -162,7 +162,6 @@
             \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
             \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
           \end{tikzpicture}
-          \end{aligned}
           ]]>
           </latex-image>
           </image>
