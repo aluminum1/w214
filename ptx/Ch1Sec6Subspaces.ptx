@@ -1,4 +1,4 @@
-<section xml:id="Ch1Sec6Subspaces">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Sec6Subspaces">
   <title>Subspaces</title>
   <introduction>
     <p>
@@ -395,7 +395,7 @@
     </exercise>
   </subsection>
 
-  <subsection xml:id="soln-diff-eqns-subspace">
+  <subsection xml:id="soln-diff-eqns-sec">
   <title>Solutions to homogenous linear differential equations</title>
 
     <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
@@ -521,7 +521,7 @@
             y_c = \frac{1}{c - x}
             </me> where <m>c</m> is a constant. For instance,
             <me>
-              y_1 = \frac{1}{1-x}, \quad \frac{1}{2-x}
+              y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
             </me>
             are solutions.
           </p>
@@ -754,4 +754,7 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
 
 
 </section>
+
+
+
 

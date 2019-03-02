@@ -1,5 +1,5 @@
 
-<section xml:id="Ch1Sec5ResultsVectorSpace">
+<section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Sec5ResultsVectorSpace">
   <title>Some results about abstract vector spaces</title>
   <p>
     It is time to use the rules of a vector space to prove some general results.

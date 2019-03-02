@@ -72,10 +72,11 @@
 
 
 
-  <xi:include href="./Ch1AbstractVectorSpaces.ptx" />
+  <xi:include href="./Ch1AbstractVectorSpaces.ptx" /> 
+  <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
+  <xi:include href="./ChTutorials.ptx"/>
 
-<!--
-    <xi:include href="./Ch2FinDimVectorSpaces.ptx" /> -->
+
 
   <!--
 
@@ -84,12 +85,14 @@
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
     -->
 
-<!--    <xi:include href="./AppAReminderAboutMatrices.ptx" /> -->
+
 
 
     <backmatter>
+      <xi:include href="./AppAReminderAboutMatrices.ptx" />
       <xi:include href="./bibliography.ptx" />
     </backmatter>
+
 
 
   </book>

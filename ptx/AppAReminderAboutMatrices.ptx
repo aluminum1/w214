@@ -1,6 +1,4 @@
-
-
-<chapter xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppAReminderAboutMatrices">
+<appendix xmlns:xi="http://www.w3.org/2001/XInclude"  xml:id="AppAReminderAboutMatrices">
   <title>Reminder about matrices</title>
   <p>
     Let us recall a few things about matrices, and set up our notation.
@@ -303,5 +301,5 @@ AB = BA
   </exercise>
 </exercises>
 
-</chapter>
+</appendix>
 

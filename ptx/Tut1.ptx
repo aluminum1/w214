@@ -1,5 +1,6 @@
 <section xml:id="Tut1">
-  <title>Tutorial 1</title>
+  <title>W214 Linear Algebra 2019, Tutorial 1</title>
+  <shorttitle>Tutorial 1</shorttitle>
   <introduction>
   	<p>
   		Tutorial 1 covers <xref ref="Ch1Sec1Intro"/> up until the end of <xref ref="Ch1Sec5ResultsVectorSpace"/>. The following exercises have been selected.
