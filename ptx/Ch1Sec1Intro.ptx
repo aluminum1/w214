@@ -441,6 +441,13 @@
         then we can multiply elements
         <m>\ve{a} \in A</m> by <m>k</m> to get a new element
         <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
+      </p>
+
+      <p>
+        In general, if <m>k \in \mathbb{R}</m> is an arbitrary real number,
+        then we can multiply elements
+        <m>\ve{a} \in A</m> by <m>k</m> to get a new element
+        <m>k \smul\ve{a} \in A</m> by multiplying each component of <m>\ve{a}</m> by <m>k</m>:
         <me>
           \underbrace{k \smul(a_1, \, a_2)}_{\text{ Multiplying a vector by a scalar} } := (\underbrace{k a_1}_{\text{Multiplying two numbers together} }, \, \underbrace{k a_2})
         </me>

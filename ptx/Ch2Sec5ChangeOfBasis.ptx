@@ -257,7 +257,7 @@
           <m>\basis{B}</m> to <m>\basis{C}</m> is
           <me>
             \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 3  \end{bmatrix}
-          </me>
+          </me>.
         </p>
       </statement>
     </example>
