@@ -268,6 +268,9 @@ TSWLatexianTemp*
 /ptx/html/*
 !/ptx/html/images/
 
+/ptxaf/html/*
+!/ptxaf/html/images/
+
 # latex directory
 /ptx/latex/*
 

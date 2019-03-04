@@ -10,7 +10,7 @@
         <term>line&#xea;r onafhanklik</term> as
         die vergelyking
         <men xml:id="lin_independence_eqn">
-          k_1 \ve{e}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{e}_n = \ve{0}
+          k_1 \ve{v}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{v}_n = \ve{0}
         </men>
         slegs die triviale oplossing <m>k_1 = k_2 = \cdots = k_n = 0</m> het.
         Andersins word die lys vektore <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m>
@@ -42,14 +42,12 @@
         k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0} 
         \Rightarrow  k_1 = k_2 = \cdots = k_n = 0
       </me>
-      is duidelik ekwivalent aan die kriteria dat
-      <me>
-        { 
-        Al die vektore \(\ve{v}_i\) nie nul is nie en geen een as 'n
-        nie-triviale line{\^e}re kombinasie van die ander uitgedruk kan
+      is duidelik ekwivalent aan die kriteria dat:
+      <em>
+        Al die vektore <m>(\ve{v}_i)</m> nie nul is nie en geen een as 'n
+        nie-triviale line&#xea;re kombinasie van die ander uitgedruk kan
         word nie.
-        }
-      </me>
+      </em>
     </p>
   </remark>
 
@@ -73,8 +71,8 @@
         </me>
         ekwivalent is aan die sisteem van vergelykings
         <men xml:id="system_from_r2_example">
-          \systeme{-k_1 + k_2 = 0, 2k_1 + k_2 = 0}
-        </men>
+       -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0
+      </men>
         wat slegs die trivale oplossing <m>k_1 = 0</m> en <m>k_2 = 0</m> het.
       </p>
     </statement>
@@ -106,8 +104,8 @@
         </men>
         is ekwivalent aan die sisteem van vergelykings
         <men xml:id="system_from_r2_example_new">
-          \systeme{-k_1 + k_2 + 2k_3 = 0, 2k_1 + k_2 - k_3 = 0}
-        </men>
+       -k_1 + k_2 + 2k_3 = 0, \quad 2k_1 + k_2 - k_3 = 0
+      </men>
         wat 'n een-dimansionele vektorruimte van oplossings het wat deur <m>t</m>
         parameteriseer word,
         <men xml:id="supposed_soln">
@@ -124,10 +122,6 @@
       </p>
     </statement>
   </example>
-
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -160,8 +154,8 @@
 
       <p>
         Hierdie is ekwivalent aan die volgende stelsel vergelykings,
-        <me>
-          \systeme{ 4k_3 = 0, 2k_2 = 0, -3 k_3 + k_1 = 0 , k_0 - k_2 = 0}
+           <me>
+          4k_3 = 0, \quad 2k_2 = 0, \quad -3 k_3 + k_1 = 0, \quad k_0 - k_2 = 0
         </me>
         wat slegs die triviale oplossing <m>k_0 = k_1 = k_2 = k_3 = 0</m> het.
       </p>
@@ -361,14 +355,14 @@
     <p>
       Begin met die oorspronglike lys vektore
       <men>
-        \basis{S} = \bopen \,\, L_0: \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n
-        \bclose
+        \basis{S} = \left\{ \,\, L_0: \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n
+        \right\}
       </men>
       wat <m>V</m> span en oorweeg die <sq>opgeblase</sq> lys
       <men xml:id="bloated_list">
-        \basis{S^{\prime}} = \bopen \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
+        \basis{S^{\prime}} = \left\{ \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
         \ve{s}_n.
-        \bclose
+        \right\}
       </men>
     </p>
 
@@ -384,9 +378,9 @@
       Ons kan dan <m>\ve{s}_r</m> uit die lys verwyder
       (<sq>afstamp</sq>), en die resulterende lys
       <men>
-        \basis{S_1}:= \bopen \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
+        \basis{S_1}:= \left\{ \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
         \hat{\ve{s}_r}, \cdots,
-        \ve{s}_n  \bclose \qquad \mbox{(\(\ve{s}_r\) weggelaat)}
+        \ve{s}_n  \right\} \qquad \mbox{(\(\ve{s}_r\) weggelaat)}
       </men>
       span steeds <m>V</m>.
       Ons kan so aangaan en elke keer 'n <m>\ve{l}</m>-vektor
@@ -417,9 +411,7 @@
     </p>
   </proof>
 
-  <p>
-    \furtherexercises
-  </p>
+ <exercises>
 
   <exercise xml:id="exercise_for_new_basis">
     <statement>
@@ -437,11 +429,28 @@
       <p>
         Die lys vektore in
         <m>\Mat_{2,2}</m> gegee deur
-        <md>
-          \ve{v}_1 = \cmatrix{1 \amp  2 \\ 1 \amp  1}, \, \ve{v}_2 = \cmatrix{0 \amp  1
-          \\ -2 \amp  1}, \, \ve{v}_3 = \cmatrix{1 \amp  0 \\ 2 \amp  3}, \, \ve{v}_4 =
-          \cmatrix{0 \amp  3 \\ 1 \amp  -1}, \, \ve{v}_5 = \cmatrix{1 \amp  0 \\ 0 \amp  1}
-        </md>
+        <me>
+\ve{v}_1 = \begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix},\,
+\ve{v}_2 = \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix},\,
+\ve{v}_3 = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix},\,
+\ve{v}_4 = \begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix},\,
+\ve{v}_5 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+      </me>
         is line&#xea;r onafhanklik
         (ons sal dit in <xref ref="checking_matrices_lin_dep">Oefening</xref> bewys,
         maar ter wille van hierdie vraag
@@ -454,5 +463,7 @@
       </p>
     </statement>
   </exercise>
+</exercises>
+
 </section>
 

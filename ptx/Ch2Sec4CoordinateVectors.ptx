@@ -230,16 +230,34 @@
     <statement>
       <p>
         Let <m>\basis{B}</m> be the basis of <m>\Mat_{2,2}</m> given by
-        <md>
-          \mat{B}_1 = \cmatrix{1 \amp  0 \\ 0 \amp  1},  \mat{B}_2 = \cmatrix{1 \amp  0 \\ 0 \amp  -1},  \mat{B}_3 = \cmatrix{1 \amp  1 \\ 1 \amp  1},  \mat{B}_4 = \cmatrix{0 \amp  1 \\ -1 \amp  0} \, .
-        </md>
+        <me>
+ \mat{B}_1 = \begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}, \mat{B}_2 =
+ \begin{bmatrix}
+1 &amp; 0\\
+0&amp; -1
+\end{bmatrix},
+ \mat{B}_3 = \begin{bmatrix}
+1 &amp; 1\\
+1 &amp; 1
+\end{bmatrix},
+ \mat{B}_4 = \begin{bmatrix}
+0 &amp; 1\\
+-1 &amp; 0
+\end{bmatrix}
+ </me>.
       </p>
 
       <p>
         Determine <m>[\mat{A}]_\basis{B}</m>, where
-        <md>
-          \mat{A} = \cmatrix{1 \amp  2 \\ 3 \amp  4} \, .
-        </md>
+        <me>
+          \mat{A} =  \begin{bmatrix}
+1 &amp; 2\\
+3 &amp; 4
+\end{bmatrix}.
+        </me>
       </p>
     </statement>
   </exercise>

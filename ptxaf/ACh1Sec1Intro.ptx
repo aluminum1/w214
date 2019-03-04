@@ -68,23 +68,24 @@
       Ons kan 'n element <m>\ve{a}</m> van <m>A</m> visualiseer as 'n punt in die
       Cartesiese vlak waarvan die <m>x</m>-ko&#xf6;rdinaat <m>a_1</m> en die
       <m>y</m>-ko&#xf6;rdinaat <m>a_2</m> is:
-      <md>
-        <mrow>{\color{red} \ve{a}}  \xrightarrow{\mbox{visualize as} }
-
+      <sidebyside valign="middle" margins="20% 40%">
+        <p> <m> \ve{a} \xmapsto{\text{visualiseer as}} </m> </p>
         <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) ;
-\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-\node[color=red] at (1.6,1) {$\ve{a}$};\end{tikzpicture}]]>
-</latex-image>
-        </image></mrow>
-      </md>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {};
+              % \draw[->, thick] (0,0) -- (1.3, 1);
+              \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+              \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+              \node[color=red] at (1.6,1) {$\ve{a}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
     </p>
 
     <p>
@@ -106,26 +107,26 @@
       Ons kan 'n element
       <m>\ve{b}</m> van <m>B</m> visualiseer as 'n punt in die vlak in 3-dimensionele
       ruimte wat deur die vergelyking <m>x-y+z = 0</m> daargestel word:
-      <md>
-        <mrow>{\color{red} \ve{b}}  \xrightarrow{\mbox{visualiseer as} }
-
-        <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}]
-\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-\draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-\draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-\node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) ;
-\node[color=red] at (0.5, 0.9) {$\ve{b}$};
-\draw[thick] (-0.1, -1) -- (-1, 0.4);
-\draw[thick] (-1, 0.4) -- (0.3, 1.5);
-\draw[thick] (0.3, 1.5) -- (1.5, 0.4);
-\draw[thick] (1.5, 0.4) -- (-0.1, -1);\end{tikzpicture}]]>
-</latex-image>
-        </image></mrow>
-      </md>
+        <sidebyside valign="middle" margins="20% 40%">
+        <p> <m> \ve{b} \xmapsto{\text{visualiseer as}} </m> </p>
+        <image width="30%">
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \node [circle, fill=red, inner sep=0pt, minimum size=5pt] (P) at (0.3, 0.9) {};
+            \node[color=red] at (0.5, 0.9) {$\ve{b}$};
+            \draw[thick] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick] (0.3, 1.5) -- (1.5, 0.4);
+            \draw[thick] (1.5, 0.4) -- (-0.1, -1);
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
     </p>
 
     <p>
@@ -154,21 +155,21 @@
       Byvoorbeeld,
       die polinoom <m>\ve{c} = x^4 - 3x^3 + 2x^2 \in C</m> word soos volg
       visualiseer:
-      <md>
-        <mrow>{\color{red} \ve{c}}  \xrightarrow{\mbox{visualiseer as} }
-
+      <sidebyside valign="middle" margins="20% 40%">
+        <p> <m> \ve{c} \xmapsto{\text{visualiseer as}} </m> </p>
         <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-\draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
-node[right] {$\ve{c}$};\end{tikzpicture}]]>
-</latex-image>
-        </image></mrow>
-      </md>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}[domain=-0.5:2.2]
+            \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+            \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+            \draw[color=red, thick] plot[id=p]  (\x, {(\x-2)*\x*\x*(\x-1)}) 
+            node[right] {$\ve{c}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
     </p>
 
     <p>
@@ -223,53 +224,52 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         Byvoorbeeld, <m>(1, \,3) + (2, \,-1.6) = (3, \,1.4)</m>.
         Ons kan die
         sommeringsbewerking soos volg visualiseer:
-        <md>
-          <mrow><image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) ;
-\draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
-\draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
-\node[color=red] at (1.6,1) {$\ve{a}$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          +
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) ;
-\draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
-\draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
-\node[color=red] at (0.9,0.4) {$\ve{a}'$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          =
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
-  circle,fill=black!25,minimum size=18pt,inner sep=2pt}, scale=0.8]
-\draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
-\draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
-\node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) ;
-\draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
-\draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
-\node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};\end{tikzpicture}]]>
-</latex-image>
-          </image></mrow>
-        </md>
+        <sidebyside valign="middle" widths="20% 5% 20% 5% 20%">
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.3, 1) {} ;
+              \draw[dotted] (1.3, 0) node[below] {$a_1$} -- (1.3, 1);
+              \draw[dotted] (0, 1) node[left] {$a_2$} -- (1.3, 1);
+              \node[color=red] at (1.6,1) {$\ve{a}$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+        <p>+</p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (0.5, 0.3) {} ;
+              \draw[dotted] (0.5, 0) node[below] {$a'_1$} -- (0.5, 0.3);
+              \draw[dotted] (0, 0.3) node[left] {$a'_2$} -- (0.5, 0.3);
+              \node[color=red] at (0.9,0.4) {$\ve{a}'$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+        <p>=</p>
+        <image>
+        <latex-image>
+          <![CDATA[
+            \begin{tikzpicture}
+              \draw[<->] (-2, 0) -- (2,0) node[right] {$x$};
+              \draw[<->] (0, -2) -- (0, 2) node[above] {$y$};
+              \node [circle, fill=black, inner sep=0pt, minimum size=5pt, color=red] (P) at (1.8, 1.3) {} ;
+              \draw[dotted] (1.8, 0) node[below] {$a_1+ a'_1$} -- (1.8, 1.3);
+              \draw[dotted] (0, 1.3) node[left] {$a_2 + a'_2$} -- (1.8, 1.3);
+              \node[color=red] at (1.8,1.7) {$\ve{a} + \ve{a}'$};
+            \end{tikzpicture}
+          ]]>
+        </latex-image>
+        </image>
+      </sidebyside>
       </p>
 
       <p>
@@ -359,55 +359,42 @@ node[right] {$\ve{c}$};\end{tikzpicture}]]>
         Deur so te dink,
         kan ons die grafiek van <m>\ve{c} + \ve{d}</m> as die som van
         die grafieke van <m>\ve{c}</m> en <m>\ve{d}</m> voorstel:
-        <md>
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+        <sidebyside>
+              <image>
+              <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
   circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-\draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
-node[right] {$\ve{c}$};
-\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
-\draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          +
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x, {(\x-2)*\x*\x*(\x-1)})
+        node[right] {$\ve{c}$};
+    \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.6069);
+    \draw[dotted]  (0, -0.6069)  node[left] {$\ve{c}(x)$} -- (1.7, -0.6069);
+\end{tikzpicture}
+\quad + \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
   circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-\draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
-\draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
-node[right] {$\ve{d}$};
-\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
-\draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          \\ =
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -0.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x ,{-0.2*\x*\x})
+        node[right] {$\ve{d}$};
+   \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -0.578);
+    \draw[dotted]  (0, -0.578)  node[left] {$\ve{d}(x)$} -- (1.7, -0.578);
+\end{tikzpicture} = \quad
+\begin{tikzpicture}[baseline={([yshift=-.5ex]current bounding box.center)},vertex/.style={anchor=base,
   circle,fill=black!25,minimum size=18pt,inner sep=2pt},domain=-0.5:2.2]
-\draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
-\draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
-\draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
-node[above right] {$\ve{c}+\ve{d}$};
-\draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
-\draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-        </md>
+  \draw[<->] (-0.7, 0) -- (2.5,0) node[right] {$x$};
+  \draw[<->] (0, -1.8) -- (0, 1) node[above] {$y$};    
+    \draw[color=red, thick] plot[id=p] (\x,{(\x-2)*\x*\x*(\x-1) - 0.2*\x* \x})
+        node[above right] {$\ve{c}+\ve{d}$};
+   \draw[dotted]  (1.7, 0)  node[above] {$x$} -- (1.7, -1.1849);
+    \draw[dotted]  (0, -1.1849)  node[left] {$\ve{c}(x) + \ve{d}(x)$} -- (1.7, -1.1849);       
+\end{tikzpicture}
+]]>
+              </latex-image>
+              </image>
+        </sidebyside>
       </p>
     </subsubsection>
 
