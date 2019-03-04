@@ -2,7 +2,7 @@
 
 <section xml:id="Ch2Sec2LinearIndependence">
   <title>Linear independence</title>
-  <definition>
+  <definition xml:id="defn_of_linear_ind">
     <statement>
       <p>
         A list of vectors <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose</m> in a vector space <m>V</m> is called
