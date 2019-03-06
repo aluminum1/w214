@@ -458,7 +458,12 @@
 
     </example>
 
-    <exercise><statement>Check by hand that <xref ref="a_soln_to_my_ode"/> and <xref ref="a_2nd_soln_to_my_ode"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</statement>
+    <exercise>
+      <statement>
+        <p>
+          Check by hand that <xref ref="a_soln_to_my_ode"/> and <xref ref="a_2nd_soln_to_my_ode"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+        </p>
+      </statement>
     </exercise>
 
     <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn"/> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
@@ -474,7 +479,9 @@
 
     <exercise>
     <statement>
+      <p>
      Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+      </p>
      </statement> 
     </exercise>
 

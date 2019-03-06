@@ -98,11 +98,13 @@
   </p>
 
   <lemma xml:id="scalar_times_zero_vec">
-    <statement>
+    <statement> 
+      <p>
       Let <m>V</m> be a vector space and <m>k</m> any scalar. Then
       <me>
         k \smul\ve{0} = \ve{0}
       </me>
+     </p>
     </statement>
   </lemma>
   <proof>
