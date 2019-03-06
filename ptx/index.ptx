@@ -84,15 +84,15 @@
   <xi:include href="./ChTutorials.ptx"/>
 
 
-
-  <!--
+   
+<!--
+  
 
     <xi:include href="./Ch3LinearMaps.ptx" />
    
 
-
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
-   
+
 
   -->
 

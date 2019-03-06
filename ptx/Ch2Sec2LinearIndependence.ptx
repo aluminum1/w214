@@ -345,6 +345,48 @@
         <m>\mathbb{R}^3</m> if and only if <m>c=8</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+We set up a linear equation and find the necessary conditions on <m>c</m>. Suppose some linear combination of the vectors equals 0:
+<me>
+k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
+</me>
+This vector equation gives rise to a system of 3 linear equations:
+<me>
+2k_1 + k_2 + 7k_3 = 0,\\
+3k_1 - k_2 + 3k_3 = 0,\\
+k_1 + 2k_2 + ck_3 = 0.
+</me>
+The corresponding matrix equation is 
+<me>
+\begin{bmatrix}
+2 \mamp 1 \mamp 7 \\
+3 \mamp -1 \mamp 3\\
+1 \mamp 2 \mamp c
+\end{bmatrix} 
+\begin{bmatrix}
+k_1 \\
+k_2 \\
+k_3\\
+\end{bmatrix} 
+=
+\begin{bmatrix}
+0 \\ 
+0 \\
+0
+\end{bmatrix} 
+</me>
+This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s
+<me>
+\det\begin{bmatrix}
+2 \mamp 1 \mamp 7 \\
+3 \mamp -1 \mamp 3\\
+1 \mamp 2 \mamp c
+\end{bmatrix} = -5c + 40
+</me>
+which is 0 if and only if <m> c =8 </m>.
+</p>
+    </solution>
   </exercise>
 
   <exercise xml:id="x2_by_2_matrices_lin_dep">
@@ -373,18 +415,95 @@
 0 &amp; 1
 \end{bmatrix}
       </me>
-        is linearly independent
+        is linearly dependent
         (you will prove this in <xref ref="checking_matrices_lin_dep">Exercise</xref>,
         but for the sake of this question you may assume it to be true).
         Go through the same steps as in <xref ref="app_of_prop_preceding">Example</xref>
         to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors.
       </p>
     </statement>
+    <solution>
+<p>
+Firstly note that <m> \ve v_1  </m> is non-zero, so we consider <m> \ve v_2 </m>. <m> \ve v_2 </m> cannnot be a scalar multiple of <m> \ve v_1</m> by considering the matrix entry in position (1,2). We now consider <m> \ve v_3 </m>. Suppose
+<me>
+a\begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix} + b \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix} = \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix}
+</me>
+This gives rise to a system of four linear equations. In particular, we have the equation for the matrix entry in position (1,2):
+<me>
+2a + 0b = 0
+</me>
+And hence <m> a = 0 </m>. But clearly
+<me>
+b \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix} \neq \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix}
+</me>
+for any choice of <m> b</m>. Hence <m> \ve v_3 </m> is not a scalar multiple of <m> \ve v_1 </m> and <m> \ve v_2</m>. We consider <m> \ve v_4 </m> next. Suppose
+<me>
+a\begin{bmatrix}
+1 &amp; 2 \\
+1 &amp; 1
+\end{bmatrix} +
+b \begin{bmatrix}
+1 &amp; 0 \\
+-2 &amp; 1
+\end{bmatrix} +
+c \begin{bmatrix}
+1 &amp; 0 \\
+2 &amp; 3
+\end{bmatrix} = 
+\begin{bmatrix}
+0 &amp; 3 \\
+1 &amp; -1
+\end{bmatrix}
+</me>
+The equation for the entry in position (1,2) is simply 
+<me>
+2a = 3
+</me>
+and so <m> a = \frac{3}{2}</m>. The corresponding equation for the entry in position (1,1) is thus
+<me>
+\frac{3}{2} + b + c = 0.
+</me>
+Using this result, we consider the equation for the entry in position (2,2) and compute:
+<me>
+\frac{3}{2} + b + 3c = -1 \\
+\implies \frac{3}{2} + b + c + 2c = -1 \\
+\implies 2c = -1
+\implies c = -\frac{1}{2}
+</me>
+and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
+</p>
+    </solution>
   </exercise>
 
   <exercise xml:id="exercise-span-omission">
     <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
     </statement>
+    <solution>
+<p>
+To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <m> \ve v \in V </m> there exist scalars <m> (a_i^{\ve v}) </m> depending on <m>\ve v</m> such that
+<me>
+\sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
+</me>. But of course, it is also true that 
+<me>
+0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v 
+</me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
+</p>
+    </solution>
   </exercise>
 
   </exercises>
