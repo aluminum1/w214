@@ -47,10 +47,10 @@
     \ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,
     </men>
     which is an equation in the unknowns <m>a_1, a_2, a_3</m>, has any solutions. Let us write out <xref ref="first_span_ex_eqn"/> explicitly:
-    <md>
+    <mdn>
     <mrow> (2, -1, 3, 0) \amp = a_1 (1, 3, 2, 0) + a_2 (5, 1, 2, 4) + a_3 (-1, 0, 2, 1)     </mrow>
     <mrow xml:id="last_eqn_in_lin_comb_ex"> \therefore (2, -1, 3, 0) \amp = (a_1 + 5a_2 -a_3, 3a_1 + a_2, 2a_1 + 2a_2 + 2a_3, 4a_2 + a_3) </mrow>
-    </md>
+    </mdn>
     <xref ref="last_eqn_in_lin_comb_ex"/> is an equation between two vectors in <m>\mathbb{R}^4</m>. Two vectors in <m>\mathbb{R}^4</m> are equal if and only if their corresponding coefficients are equal. 
      So, <xref ref="first_span_ex_eqn"/> is equivalent to the following system of simultaneous linear equations:
       <mdn>
@@ -103,7 +103,7 @@
     Now, two polynomials are equal if and only if all their coefficients are equal. So, <xref ref="second_span_ex_eqn"/> is equivalent to the following system of simultaneous linear equations:
       <mdn>
         <mrow  xml:id="sim_lin_eqns_second_span_1ex">a_1 - 3a_2 + a_3 - a_4 \amp = -1 </mrow>
-        <mrow> a_2 + a_3 + a_4 \amp = 1</mrow>
+        <mrow> a_2 + a_3 + a_4 \amp = 0</mrow>
         <mrow xml:id="sim_lin_eqns_second_span_4ex" > a_1 + a_3 + a_4 \amp = 1 </mrow>
       </mdn>
     </p>
@@ -113,7 +113,7 @@
       var('a1, a2, a3, a4')
 
       solve([a1 - 3*a2 + a3 - a4 == -1, 
-            a2 + a3 + a4 == 1, 
+            a2 + a3 + a4 == 0, 
             a1 + a3 - a4 == 1], 
             [a1, a2, a3, a4])  
       </input>
@@ -198,6 +198,7 @@
         \ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1) 
       </me>
     </p>
+    <p>
     <figure xml:id="spanning_set_R2">
     <caption>A list of vectors which spans <m>\mathbb{R}^2</m>.</caption>
     <image width="70%">
@@ -210,8 +211,10 @@
       \draw[very thick, red, ->] (0,0) -- (2, -1) node[below right] {\(\ve{f}_3\)} ;\end{tikzpicture}]]>
     </latex-image>
     </image>
-  </figure>
-
+    </figure>
+    </p>
+   </statement>
+   <solution>
     <p>
     To check this, we need check if every vector <m>\ve{v} \in V</m> can be written as a linear combination of <m>\ve{f}_1, \ve{f}_2</m> and <m> \ve{f}_3</m>.</p>
 
@@ -288,7 +291,7 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
   <c> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </c> </p>
   </sidebyside>
  Here, <c>r1</c> is to be interpreted as our free parameter <m>t</m>. So Sage is giving us the same solution as we found by hand, <xref first="span_ex_aa1" last="span_ex_aa2"/>.</p>
-</statement>
+</solution>>
 </example>
 
   <example xml:id="Rn_spanning_set">
@@ -384,6 +387,36 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </statement>
   </exercise>
 
+  <exercise>
+    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.</p>
+    </statement>
+  </exercise>
+
+
+  <exercise xml:id="exercise-span-omission">
+    <statement> <p> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that one of the vectors in the list, say <m>\ve{v}_r</m>, can be expressed as a linear combination of the preceding vectors:
+    <men xml:id="exercise-span-omission-1">
+   \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}
+  </men>
+  Suppose that we remove <m>\ve{v}_r</m> from <m>\basis{S}</m>, to arrive at a new list
+  <me>
+   \basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
+</me>
+Prove that <m>\basis{T}</m> also spans <m>V</m>. </p>
+</statement>
+<solution><p> We must show that every vector <m>\ve{v} \in V</m> can be written as a linear combination of the vectors from <m>\basis{T}</m>. So let <m>\ve{v} \in V</m>. Since <m>\basis{S}</m> spans <m>V</m>, we know we can write <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{S}</m>:
+<men xml:id="exercise-span-omission-2">
+  \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n
+</men>
+Substituting <xref ref="exercise-span-omission-1"/> into <xref ref="exercise-span-omission-2"/> gives
+<mdn> 
+<mrow> \ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+<mrow xml:id="exercise-span-omission-3"> \amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n </mrow>
+</mdn>
+Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve{v}</m> as a linear combination of the vectors from <m>\basis{T}</m>. Hence <m>\basis{T}</m> spans V. </p>
+</solution>
+
+  </exercise>
 
 
 

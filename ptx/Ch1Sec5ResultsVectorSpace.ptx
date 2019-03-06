@@ -214,6 +214,7 @@
   </exercise>
 
   <exercise xml:id="fivevequals2v">
+    <statement>
     <p>
       Let <m>V</m> be a vector space. Suppose that a vector <m>\ve{v} \in V</m> satisfies
       <men xml:id="funny-eqn-smul">
@@ -221,6 +222,7 @@
       </men>
       Prove that <m>\ve{v}=\ve{0}</m>.
     </p>
+  </statement>
   </exercise>
 
   <exercise xml:id="solve_for_x_exercise">
@@ -262,32 +264,42 @@
       </p>
     </introduction>
     <exercise xml:id="is_k_equal_to_zero">
+      <statement>
       <p>
         If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>k=0</m>.
       </p>
+    </statement>
     </exercise>
     <exercise>
+      <statement>
       <p>
         If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>\ve{v}=\ve{0}</m>.
       </p>
+    </statement>
     </exercise>
 
     <exercise xml:id="empty_vector_space">
+      <statement>
       <p>
         The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2">D2</xref>, <xref ref="D3">D3</xref> satisfying the rules of a vector space.
       </p>
+    </statement>
     </exercise>
     
     <exercise>
+      <statement>
       <p>
       Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.
       </p>
+    </statement>
     </exercise>
 
     <exercise xml:id="R7_follows">
+      <statement>
       <p>
       Rule <xref ref="R7">R7</xref> of a vector space follows automatically from the other rules.
       </p>
+    </statement>
     </exercise>
 
   </exercisegroup>
