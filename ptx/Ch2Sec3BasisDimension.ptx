@@ -703,11 +703,11 @@
         If it is true, prove it.
         If it is false, give a counterexample.
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
-              Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors.
+              Any linearly independent list of vectors in <m>V</m> contains at most <m>n</m> vectors. 
             </p>
           </li>
 
@@ -717,20 +717,52 @@
               Any list of vectors which spans <m>V</m> contains at least <m>n</m> vectors.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        <ol>
+          <li>
+            <p>
+             True
+             <proof>
+              <p>
+             Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
+           </p>
+           </proof>
+           </p>
+          </li>
+         
+          <li>
+            <p>
+            True
+            <proof>
+              <p>
+                Try it yourself! Your proof will be very similar to the one given for <m>a</m>.
+              </p>
+            </proof>
+          </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
         Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
-        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors from <m>\basis{B}</m>.
+        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors in <m>\basis{B}</m>.
         Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
         (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
       </p>
     </statement>
+    <solution>
+      <p>
+        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="n_lin_ind_is_basis">
@@ -778,6 +810,42 @@
         Hence, <m>\basis{B}</m> must be a basis for <m>V</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+      <ol>
+        <li>
+          <p>
+Any linearly independent spanning set is by definition a basis, contradicting our assumption.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \ve v </m> is not a linearly combination of the vectors in <m> \basis B </m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \bopen \ve v_1 \ldots, \ve v_n , \ve v \bclose </m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+           No vector in  <m> \basis B'  </m> is a linear combination of the previous vectors and so the list is thus linearly indepedent by <xref ref = "lin_dependence_prop" />.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
+          </p>
+        </li>
+      </ol>
+      </p>
+</solution>
+
   </exercise>
 
   <exercise xml:id="checking_matrices_lin_dep">
@@ -787,17 +855,23 @@
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
       </p>
     </statement>
+    <solution>
+      <p>
+        <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
+        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
         In each case,
-        use the results in <xref ref="true_false_span_lin_ind">Exercises</xref>
+        use the results in <xref ref="true_false_span_lin_ind">Exercise</xref>
         and <xref ref="n_lin_ind_is_basis"></xref>
         to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -834,9 +908,27 @@
               <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        <ol>
+
+          <li>
+            <m> \Poly_2 </m> has a basis <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> and so has dimension 3. Since <m> \basis B </m> has length 4, it cannot be linearly independent by <xref ref="true_false_span_lin_ind">Exercise</xref>(a). Hence <m> \basis B </m> cannot be a basis for  <m> \Poly_2 </m>.
+          </li>
+
+          <li>
+          <m> \Mat_{2,2} </m> has dimension 4. Since <m> \basis B </m> has length 3, it cannot span <m> \Mat_{2,2} </m>. Hence  <m> \basis B </m> cannot be a basis for <m> \Mat_{2,2} </m>.
+          </li>
+
+          <li>
+<m> \Trig_2 </m> has dimension 5. Since <m> \basis B </m> has length 5, it cannot span <m> \Trig_2 </m>. Hence <m> \basis B </m> cannot be a basis for <m> \Trig_2 </m>.
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -848,7 +940,7 @@
         If it is false, give a counterexample.
         (Hint: Use the definition of linear independence.)
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -862,9 +954,61 @@
               The list <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly independent.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+<p>
+<ol>
+<li>
+  <p>
+True. Suppose there is a linear relation on  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
+<me>
+a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
+</me>
+This induces a linear relation on <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m>:
+<m>
+(a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
+</m>
+Since <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> is linearly independent, we must have that
+<me>
+a + c = 0 \qquad (1) \\
+a + b = 0 \qquad (2) \\
+b + c = 0 \qquad (3)
+</me>
+<m> (1) + (2) </m> combined with <m> (3) </m> gives us that <m> a = 0 </m> and so <m> b = c = 0 </m> too. We conclude that  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
+  </p>
+</li>
+
+
+<li>
+  <p>
+False. Let <m> V = \mathbb{R}^3 </m>. Let
+<me>
+\ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
+</me>
+and so
+<me>
+\ve u - \ve v = (1,-1,0) \\  \ve v - \ve w = (0,1,-1) \\ \ve u - \ve w = (1,0,-1)
+</me>.
+By inspection, we see that 
+<me>
+ (1,-1,0) + (0,1,-1) = (1,0,-1)
+</me>
+and so  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly dependent.</p>
+
+<p>
+Alternatively, we could have noticed that for any vectors <m> \ve u , \ve v , \ve w </m>:
+<me>
+(\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w.
+</me>
+Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  satisfies <xref ref = "lin_dependence_prop" /> and so is linearly dependent.
+</p>
+</li>
+
+</ol>
+  </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="dim_poly_at_2_ex">
@@ -874,7 +1018,7 @@
         show that <m>V</m> is a subspace of <m>\Poly_2</m>,
         find a basis for <m>V</m>, and compute <m>\Dim V</m>.
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -888,9 +1032,26 @@
               <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+<ol>
+
+  <li>
+    We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
+  </li>
+
+  <li>
+Once again, we omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m>. Pick any non-zero vector <m>\ve v_1 </m> in <m> V </m>. Let's choose <m> \ve v_1 = x </m>. It is not as obvious as before whether there are indeed any vectors in <m> V </m> not in the span of <m> \left\{ \ve v_1 \right\} </m>, and so we must do some computations. If <m> p(x) = ax^2 + bx + c</m> is in <m> V </m>, <m> p(x)</m> must satisfy
+<me>
+x(2ax + b) = ax^2 + bx + c \\
+\implies 2ax^2 + bx = ax^2 + bx + c.
+</me>
+Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
+  </li>
+</ol>
+    </solution>
   </exercise>
 
   </exercises>

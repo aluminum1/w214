@@ -325,7 +325,19 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
       Recall from <m>1^\text{st}</m> year that a function <m>f: \mathbb R \to \mathbb R </m> is <emp>even</emp> if <m> f(-x) = f(x) </m> and <emp> odd </emp> if  <m> f(-x) = -f(x) </m>. Show that every vector in the vector space <m>\Fun(\mathbb R)</m> is a linear combination of an even function and an odd function.
     </p>
   </statement>
+    <solution>
+    	<p>The solution is relatively straightforward. Define the following two functions:
+<me>
+f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
+</me>
+It is easy to see that, as the names suggest, <m>f_{\text{even}} </m> is an even function and <m>f_{\text{odd}} (x) </m> is an odd function. We simply sum <m> f_{\text{even}} </m> and <m>f_{\text{odd}}  </m>:
+<me>
+f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
+</me>
+</p>
+  </solution>
   </exercise>
+
 
 <exercise>
   <statement>
@@ -333,6 +345,17 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
       Suppose <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m>. Prove that <m> \ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4</m> also spans <m>V</m>.
 </p>
 </statement>
+<solution>
+<p>
+If we are given that <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> spans <m>V</m> then to show that any other collection of vectors in <m>V</m> spans <m>V</m> it suffices to show that each of <m>\ve v_1, \ve v_2 , \ve v_3, \ve v_4</m> can be written has a linear combination of the new collection - you should try prove this yourself! <p>With this observation in hand, the exercise has an easy solution.</p>
+<md>
+<mrow> \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+<mrow> \ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 </mrow>
+<mrow> \ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  </mrow>
+<mrow> \ve v_4 \amp= \ve v_4 </mrow>
+</md>
+</p>
+</solution>
 </exercise>
 
  <exercise>
@@ -360,7 +383,42 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         </ol>
       </p>
     </statement>
+    <solution>
+<p>
+<ol>
+<li>
+We must set up the appropriate system of linear equations:
+<md>
+<mrow> \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)</mrow>
+<mrow> \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 </mrow>
+</md>
+After grouping like powers of <m>x</m> we obtain
+<me>
+x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
+</me>
+We equate coefficients on both sides of the equation to obtain the following system of linear equations:
+<md>
+<mrow> 3a +  b +  0c +  0d  = 1,</mrow>
+<mrow>0a +  1b +  1c +  1d  = 0, </mrow>
+<mrow>-2a + 0b + 1c +  -1d  = 1 .</mrow>
+</md>
+Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:
+<md>
+<mrow>\amp d \text{ is free},</mrow>
+<mrow>\amp  a = 2 + 2d, </mrow>
+<mrow>\amp  b = -5 - 6d, </mrow>
+<mrow>\amp  c = 5 + 5d. </mrow>
+</md>
+And so <m>\ve p (x)</m> is indeed a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m>.
+ </li>
+ <li>
+Since <m>d</m> is free in the above solution set, we can write <m>\ve p (x)</m> as a linear combination of <m>\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)</m> in an uncountably infinite number of ways (one for each real number!).
+ </li>
+</ol>
+</p>
+    </solution>
   </exercise>
+
 
   <exercise>
     <statement>
@@ -373,6 +431,11 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         <m>\ve{f}_4 := \ve{e}_4</m> also span <m>V</m>.
       </p>
     </statement>
+    <solution>
+    	<p>
+You could choose to show this directly or we could use a clever approach based on <m>\mathbf 2 </m>. From <m>\mathbf 2  </m>, we know that <m> \ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4</m> must span <m> V </m>. But if these vectors span <m> V </m>, then non-zero multiples of the vectors also span <m>V</m>. Thus <m> \ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 </m> must span <m> V</m>.
+</p>
+    </solution>
   </exercise>
 
   <exercise xml:id="chebyshev_example">
@@ -385,6 +448,15 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
         span <m>\Poly_3</m>.
       </p>
     </statement>
+    <solution>
+    	<p>
+    	Once again we base our strategy on <m>2</m>. Pick a spanning set for <m>\Poly_3</m>. We'll use <m>1, x , x^2 , x^3</m>, since it's the simplest. <m> 1, x</m> are certainly spanned by <m>\ve q_0x), \ve q_1, \ve q_2, \ve q_3</m> since <m>1 = \ve q_0(x)</m> and <m>x = \ve q_1(x)</m>. It can easily be seen that <me>
+x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
+x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
+    </me>
+    .completing the proof.
+    	</p>
+    </solution>
   </exercise>
 
   <exercise>
