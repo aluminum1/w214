@@ -2,6 +2,133 @@
 
 <section xml:id="Ch2Sec4CoordinateVectors">
   <title>Coordinate vectors</title>
+  
+    <p>
+      There is a more direct way to think about a basis of a vector space.
+    </p>
+
+    <proposition xml:id="prop_bases_give_coordinates">
+      <title>Bases give coordinates</title>
+      <statement>
+        <p>
+          A list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
+          \ve{e}_2,\ldots,
+         \ve{e}_n\right\}</m>  in a vector space <m>V</m> is a basis for <m>V</m> if and only if every vector
+          <m>\ve{v} \in V</m> can be written as a linear combination
+          <men xml:id="trying_to_formulate_basis">
+            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+          </men>
+          in precisely <em>one</em> way. (That is,
+          for each <m>\ve{v} \in V</m> there
+          <em></em><em>exist</em> scalars <m>a_1</m>,
+          <m>a_2</m>, <m>\ldots</m>,
+          <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
+          and that moreover these scalars are
+          <em></em><em>unique</em>).
+        </p>
+      </statement>
+    </proposition>
+
+    <assemblage>
+      <p>
+        It is important to understand the mathematical phrase <sq>There exists a unique <m>X</m> satisfying <m>Y</m></sq>.
+        It means two things.
+        Firstly, that <em>there does exist an</em>
+        <m>X</m> which satisfies <m>Y</m>.
+        And secondly, that there is <em>no more than one</em>
+        <m>X</m> which satisfies <m>Y</m>.
+      </p>
+    </assemblage>
+
+    <assemblage>
+      <p>
+        We call the scalars <m>a_1, a_2, \ldots,
+        a_n</m> appearing in <xref ref="trying_to_formulate_basis" /> the <em>coordinates</em>
+        of <m>\ve{v}</m> in the basis <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m>.
+      </p>
+    </assemblage>
+
+    <proof>
+      <p>
+        <m>\Rightarrow</m>.
+        Suppose that the list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
+          \ve{e}_2,\ldots,
+         \ve{e}_n\right\}</m>  is a basis for <m>V</m>.
+        Suppose <m>\ve{v} \in V</m>.
+        Since the list of vectors <m>\basis{B}</m> spans <m>V</m>,
+        we know that we <em>can</em> write <m>\ve{v}</m> as a linear combination of the vectors in the list in at least one way,
+        <men xml:id="one_way_of_expanding">
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        We need to show that this is the <em>only</em>
+        way to express <m>\ve{v}</m> as a linear combination of the vectors <m>\ve{e}_i</m>.
+        Indeed, suppose that we also have
+        <men xml:id="second_way_of_expanding">
+          \ve{v} = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        Subtracting these two equations gives
+        <me>
+          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots + (a_n - b_n) \ve{e}_n
+        </me>.
+      </p>
+
+      <p>
+        Since the list of vectors <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>,
+        <m>\ve{e}_n</m> is linearly independent, we conclude that
+        <me>
+          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n = 0
+        </me>.
+      </p>
+
+      <p>
+        That is, <m>a_1 = b_1</m>,
+        <m>a_2 = b_2</m>, and so on up to <m>a_n = b_n</m>,
+        and hence the expansion <xref ref="one_way_of_expanding" /> is unique.
+      </p>
+
+      <p>
+        <m>\Leftarrow</m>.
+        Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
+        <me>
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </me>.
+      </p>
+
+      <p>
+        The fact that each <m>\ve{v}</m> <em>can</em>
+        be written as a linear combination of the vectors <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>,
+        <m>\ve{e}_n</m> means that <m>\basis{B}</m> spans <m>V</m>.
+        We still need to show that this list
+        <m>\basis{B}</m> is linearly independent.
+        So, suppose that there exist scalars <m>b_1</m>, <m>b_2</m>,
+        <m>\ldots</m>, <m>b_n</m> such that
+        <men xml:id="finding_bs_making_zero">
+          b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
+        </men>.
+      </p>
+
+      <p>
+        We need to show that all the <m>b_i</m> must equal zero.
+        We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> : simply set each <m>b_i = 0</m>.
+        But we are told that each vector
+        (in particular, the vector <m>\ve{0}</m>)
+        can be expressed as a linear combination of the <m>\ve{e}_i</m> in exactly one way.
+        Hence this must be the only solution,
+        i.e. we must have <m>b_1 = b_2 = \cdots = b_n = 0</m>,
+        and so the list <m>\basis{B}</m> is linearly independent.
+      </p>
+    </proof>
+
+
+
   <definition>
     <statement>
       <p>

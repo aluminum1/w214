@@ -14,9 +14,10 @@
     </p>
   </introduction>
 
+
   <example xml:id="B_is_vs">
     <title>The set <m>B</m> is a vector space</title>
-    <heading>1. Define a set <m>B</m></heading>
+    <p> <alert>1. Define a set <m>B</m>. </alert> </p>
     <p>
       We define
       <men xml:id="def_of_b">
@@ -24,10 +25,11 @@
       </men>.
     </p>
 
-    <heading>2. Define addition, the zero vector, and scalar multiplication</heading>
-    <p>
-      D1.
-      We define addition as follows.
+    <p> <alert>2. Define addition, the zero vector, and scalar multiplication</alert></p>
+    <dl>
+      <li>
+        <title>D1. Addition</title>
+        <p> We define addition as follows.
       Suppose <m>\ve{u} = (u_1, \, u_2, \, u_3)</m> and
       <m>\ve{v} = (v_1, , v_2, \, v_3)</m> are elements of <m>B</m>.
       Note that in particular this means
@@ -59,9 +61,11 @@
       so we have written down a well-defined addition operation on <m>B</m>,
       which takes two arbitrary elements of <m>B</m> and outputs another element of <m>B</m>.
     </p>
+    </li>
 
-    <p>
-      D2.
+    <li>
+      <title>D2. Zero vector</title>
+      <p>
       We define the zero vector <m>\ve{0} \in B</m> as
       <men xml:id="zero_vec_in_B">
         \ve{0} := (0, 0, 0)
@@ -75,9 +79,11 @@
       Yes, since <m>0 - 0 + 0 = 0</m>.
       So we have a well-defined zero vector.
     </p>
+    </li>
 
-    <p>
-      D3.
+    <li> 
+      <title>D3. Scalar multiplication</title>
+      <p>
       We define scalar multiplication on <m>B</m> as follows.
       Let <m>k</m> be a real number and
       <m>\ve{u} = (u_1, \, u_2, \, u_3)</m> be an element of <m>B</m>.
@@ -105,8 +111,10 @@
       Therefore, <m>k \smul\ve{u}</m> is indeed an element of <m>B</m>,
       so we have written down a well-defined scalar multiplication operation on <m>B</m>.
     </p>
+    </li>
+    </dl>
 
-    <heading>3. Check that the data satisfies the rules</heading>
+    <p><alert>3. Check that the data satisfies the rules</alert></p>
     <p>
       We must check that our data D1, D2 and D3 satisfies the rules R1 <mdash /> R8.
       So, suppose <m>\ve{u} = (u_1, \, u_2, \,u_3)</m>,
@@ -114,20 +122,20 @@
       and suppose that <m>k</m> and <m>l</m> are real numbers.
     </p>
 
-    <p>
-      R1.
-      We check:
+    <dl>
+      <li> <title>R1</title>
+      <p> We check:
       <md>
         <mrow>\amp  \ve{v} + \ve{w}\tag{R1.}</mrow>
         <mrow>\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
         <mrow>\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp  \mbox{(because \(x + y = y + x\) is true for real numbers)}</mrow>
         <mrow>\amp = \ve{w} + \ve{v}. \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
       </md>
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R2.
-      We check:
+      <li> <title>R2</title>
+      <p> We check:
       <md>
         <mrow>\amp  (\ve{u} + \ve{v}) + \ve{w}</mrow>
         <mrow>\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
@@ -136,10 +144,12 @@
         <mrow>\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
         <mrow>\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(by defn of addition in \(B\))} </mrow>
       </md>.
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R3.
+      <li>
+      <title>R3</title>
+      <p>
       We check:
       <md>
         <mrow>\amp \ve{0} + \ve{v}</mrow>
@@ -148,14 +158,16 @@
         <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(because \(x + 0 = x\) is true for real numbers)}</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
-    </p>
+      </p>
 
-    <p>
+      <p>
       By the same reasoning, we can check that <m>\ve{v} + \ve{0} = \ve{v}</m>.
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R4.
+      <li>
+      <title>R4</title>
+      <p>
       We check:
       <md>
         <mrow>\amp  k \smul( \ve{v + w} )</mrow>
@@ -165,10 +177,12 @@
         <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
         <mrow>\amp = k \smul\ve{v} + k \smul\ve{w} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
       </md>
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R5.
+      <li>
+      <title>R5</title>
+      <p>
       We check:
       <md>
         <mrow>\amp  (k + l) \smul\ve{v}</mrow>
@@ -177,10 +191,12 @@
         <mrow>\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp  \mbox{(by defn of addition in \(B\))}</mrow>
         <mrow>\amp = k \smul\ve{v} + l \smul\ve{v} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
       </md>
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R6.
+      <li>
+      <title>R6</title>
+      <p>
       We check:
       <md>
         <mrow>\amp  k \smul(l \smul\ve{v})</mrow>
@@ -189,29 +205,33 @@
         <mrow>\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  \mbox{(since \(k(lx) = (kl)x\) for real numbers)}</mrow>
         <mrow>\amp = (kl) \smul\ve{v} \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))} </mrow>
       </md>.
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R7.
+      <li>
+      <title>R7</title>
+      <p>
       We check:
       <md>
         <mrow>1 \smul\ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
         <mrow>\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(since \(1 x = x\) for real numbers \(x\))}</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>.
-    </p>
+      </p>
+      </li>
 
-    <p>
-      R8.
-      We check:
+      <li>
+      <title>R8</title>
+      <p>We check:
       <md>
         <mrow>0 \smul\ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \mbox{(by defn of scalar multiplication in \(B\))}</mrow>
         <mrow>\amp = (0, \, 0, \, 0) \amp \amp  \mbox{(since \(0 x = 0\) for real numbers}</mrow>
         <mrow>\amp = \ve{0} \amp \amp  \mbox{(by defn of the zero vector in \(B\))} </mrow>
       </md>.
-    </p>
-  </example>
-
+      </p>
+      </li>
+    </dl>
+  </example>  
 
 
   <exercises>

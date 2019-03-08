@@ -2,7 +2,7 @@
 
 <section xml:id="Ch2Sec2LinearIndependence">
   <title>Linear independence</title>
-  <definition>
+  <definition xml:id="defn_of_linear_ind">
     <statement>
       <p>
         A list of vectors <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose</m> in a vector space <m>V</m> is called
@@ -314,7 +314,7 @@
       <men>
         \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}
       </men>
-      will still span <m>V</m>, by <xref provisional="exercise-span-omission"/>. </li>
+      will still span <m>V</m>, by <xref ref="exercise-span-omission"/>. </li>
     </ul>
     <p> We can go on in this way,
       each time transferring another one of the <m>\ve{l}</m>-vectors into the list,
@@ -490,6 +490,7 @@ and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
     </solution>
   </exercise>
 
+<!--
   <exercise xml:id="exercise-span-omission">
     <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
     </statement>
@@ -505,7 +506,7 @@ To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <
 </p>
     </solution>
   </exercise>
-
+-->
   </exercises>
 </section>
 

@@ -14,130 +14,6 @@
       </statement>
     </definition>
 
-    <p>
-      There is a more direct way to think about a basis.
-    </p>
-
-    <proposition xml:id="prop_bases_give_coordinates">
-      <title>Bases give coordinates</title>
-      <statement>
-        <p>
-          A list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
-          \ve{e}_2,\ldots,
-         \ve{e}_n\right\}</m>  in a vector space <m>V</m> is a basis for <m>V</m> if and only if every vector
-          <m>\ve{v} \in V</m> can be written as a linear combination
-          <men xml:id="trying_to_formulate_basis">
-            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-          </men>
-          in precisely <em>one</em> way. (That is,
-          for each <m>\ve{v} \in V</m> there
-          <em></em><em>exist</em> scalars <m>a_1</m>,
-          <m>a_2</m>, <m>\ldots</m>,
-          <m>a_n</m> satisfying <xref ref="trying_to_formulate_basis" />,
-          and that moreover these scalars are
-          <em></em><em>unique</em>).
-        </p>
-      </statement>
-    </proposition>
-
-    <assemblage>
-      <p>
-        It is important to understand the mathematical phrase <sq>There exists a unique <m>X</m> satisfying <m>Y</m></sq>.
-        It means two things.
-        Firstly, that <em>there does exist an</em>
-        <m>X</m> which satisfies <m>Y</m>.
-        And secondly, that there is <em>no more than one</em>
-        <m>X</m> which satisfies <m>Y</m>.
-      </p>
-    </assemblage>
-
-    <assemblage>
-      <p>
-        We call the scalars <m>a_1, a_2, \ldots,
-        a_n</m> appearing in <xref ref="trying_to_formulate_basis" /> the <em>coordinates</em>
-        of <m>\ve{v}</m> in the basis <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m>.
-      </p>
-    </assemblage>
-
-    <proof>
-      <p>
-        <m>\Rightarrow</m>.
-        Suppose that the list of vectors<m>\basis{B} = \left\{ \ve{e}_1,
-          \ve{e}_2,\ldots,
-         \ve{e}_n\right\}</m>  is a basis for <m>V</m>.
-        Suppose <m>\ve{v} \in V</m>.
-        Since the list of vectors <m>\basis{B}</m> spans <m>V</m>,
-        we know that we <em>can</em> write <m>\ve{v}</m> as a linear combination of the vectors in the list in at least one way,
-        <men xml:id="one_way_of_expanding">
-          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-        </men>.
-      </p>
-
-      <p>
-        We need to show that this is the <em>only</em>
-        way to express <m>\ve{v}</m> as a linear combination of the vectors <m>\ve{e}_i</m>.
-        Indeed, suppose that we also have
-        <men xml:id="second_way_of_expanding">
-          \ve{v} = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n
-        </men>.
-      </p>
-
-      <p>
-        Subtracting these two equations gives
-        <me>
-          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots + (a_n - b_n) \ve{e}_n
-        </me>.
-      </p>
-
-      <p>
-        Since the list of vectors <m>\ve{e}_1</m>,
-        <m>\ve{e}_2</m>, <m>\ldots</m>,
-        <m>\ve{e}_n</m> is linearly independent, we conclude that
-        <me>
-          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n = 0
-        </me>.
-      </p>
-
-      <p>
-        That is, <m>a_1 = b_1</m>,
-        <m>a_2 = b_2</m>, and so on up to <m>a_n = b_n</m>,
-        and hence the expansion <xref ref="one_way_of_expanding" /> is unique.
-      </p>
-
-      <p>
-        <m>\Leftarrow</m>.
-        Conversely, suppose that every vector <m>\ve{v}</m> can be written as a unique linear combination
-        <me>
-          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
-        </me>.
-      </p>
-
-      <p>
-        The fact that each <m>\ve{v}</m> <em>can</em>
-        be written as a linear combination of the vectors <m>\ve{e}_1</m>,
-        <m>\ve{e}_2</m>, <m>\ldots</m>,
-        <m>\ve{e}_n</m> means that <m>\basis{B}</m> spans <m>V</m>.
-        We still need to show that this list
-        <m>\basis{B}</m> is linearly independent.
-        So, suppose that there exist scalars <m>b_1</m>, <m>b_2</m>,
-        <m>\ldots</m>, <m>b_n</m> such that
-        <men xml:id="finding_bs_making_zero">
-          b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
-        </men>.
-      </p>
-
-      <p>
-        We need to show that all the <m>b_i</m> must equal zero.
-        We already know <em>one</em> possible solution of <xref ref="finding_bs_making_zero" /> : simply set each <m>b_i = 0</m>.
-        But we are told that each vector
-        (in particular, the vector <m>\ve{0}</m>)
-        can be expressed as a linear combination of the <m>\ve{e}_i</m> in exactly one way.
-        Hence this must be the only solution,
-        i.e. we must have <m>b_1 = b_2 = \cdots = b_n = 0</m>,
-        and so the list <m>\basis{B}</m> is linearly independent.
-      </p>
-    </proof>
-
     <theorem xml:id="inv_dim">
       <title>Invariance of dimension</title>
       <statement>
@@ -219,6 +95,94 @@
           So <m>\mathbb{R}^n</m> has dimension <m>n</m>.
         </p>
       </statement>
+    </example>
+
+    <example>
+      <title>A basis for <m>\mathbb{R}^4</m></title>
+      <statement> <p> Check whether the following list of vectors
+        <men>
+       \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)
+      </men>
+      is a basis for <m>\mathbb{R}^4</m>. </p></statement>
+
+      <solution> 
+        <p>
+          First we check if the list of vectors is <xref ref="defn_of_linear_ind" text="title">linearly independent</xref>. Consider the equation
+          <mdn>
+            <mrow> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} </mrow>
+            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (0, 0, 0, 0) </mrow>
+            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (0,0,0,0) </mrow>
+        </mdn>
+        So the list of vectors is linearly indepedent if and only if the following equations have only the trivial solution <m>a_1 = 0, a_2 = 0, a_3 = 0, a_4 = 0</m>:
+        <mdn>
+    <mrow xml:id="R4-example-eqn1"> a_1 - a_2 + a_4 \amp = 0 </mrow>
+    <mrow> 3a_1 + a_3 + 2a_4 \amp = 0 </mrow>
+    <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = 0 </mrow>
+    <mrow xml:id="R4-example-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = 0 </mrow>
+        </mdn>
+        We can compute the solutions to equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  by hand, or using SageMath.
+        </p> 
+        <sage>
+          <input>
+            var('a1, a2, a3, a4')
+
+            solve([a1 - a2 + a4 == 0,
+                  3*a1 + a3 + 2*a4 == 0,
+                  2*a1 - a2 + 2*a3 + 3*a4 == 0,
+                  -3*a1 + 2*a2 - a3 + 4*a4 == 0],
+                  [a1, a2, a3, a4])
+          </input>
+        </sage>    
+      <p> SageMath outputs:
+      <sidebyside>
+       <p> <c> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </c></p>
+      </sidebyside>     
+      So indeed,  equations <xref first="R4-example-eqn1" last="R4-example-eqn4"/>  have only the trivial solution. Therefore the list of vectors is linearly independent. </p>
+
+      <p> Next, we need to check that the list of vectors spans <m>\mathbb{R}^4</m>. (There is a shorter way of doing this, using <xref ref="lin-ind-implies-basis"/> below, but for now we prove it from first principles.) So, let <m>\ve{w} = (w_1, w_2, w_3, w_4)</m> be an arbitrary vector in <m>\mathbb{R}^4</m>. We need to show that there exists at least one way to express <m>\ve{w}</m> as a linear combination of the vectors <m>\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4</m>. In other words, we need to check if there exists at least one solution to the following equation:
+         <mdn>
+            <mrow xml:id="fund_eqn_span_r4_ex"> a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} </mrow>
+            <mrow> \therefore a_1 (1, 0, 2,-3) + a_2 (1, 3, -1, 2) + a_3 (0, 1, 2, -1) + a_4 (1, 2, 3, 4) \amp = (w_1, w_2, w_3, w_4) </mrow>
+            <mrow> \therefore (a_1 - a_2 + a_4, 3a_2 + a_3 + 2a_4, 2a_1 - a_2 + 2a_3 + 3a_4, -3a_1 + 2a_2 -a_3 + 4a_4) \amp = (w_1, w_2, w_3, w_4) </mrow>
+        </mdn>
+        So the list of vectors spans <m>\mathbb{R}^4</m> if and only if the following equations for <m>a_1, a_2, a_3, a_4</m> always have a solution, no matter what the values of <m>w_1, w_2, w_3, w_4</m> are:
+           <mdn>
+    <mrow xml:id="R4-example-span-eqn1"> a_1 - a_2 + a_4 \amp = w_1 </mrow>
+    <mrow> 3a_1 + a_3 + 2a_4 \amp = w_2 </mrow>
+    <mrow> 2a_1 - a_2 + 2a_3 + 3a_4 \amp = w_3 </mrow>
+    <mrow xml:id="R4-example-span-eqn4"> -3a_1 + 2a_2 - a_3 + 4a_4 \amp = w_4 </mrow>
+        </mdn>
+        We can compute the solutions to equations <xref first="R4-example-span-eqn1" last="R4-example-span-eqn4"/>  by hand, or using SageMath:</p>
+        <sage>
+          <input>
+            var('a1, a2, a3, a4, w1, w2, w3, w4')
+
+            solve([a1 - a2 + a4 == w1,
+                  3*a1 + a3 + 2*a4 == w2,
+                  2*a1 - a2 + 2*a3 + 3*a4 == w3,
+                  -3*a1 + 2*a2 - a3 + 4*a4 == w4],
+                  [a1, a2, a3, a4])
+          </input>
+        </sage>    
+        <p>Note that we ask SageMath to solve for <c>a1, a2, a3, a4</c>, since <c>w1, w2, w3, w4</c> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
+        <sidebyside>
+          <p>
+            <c> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </c>
+          </p>
+        </sidebyside>
+        <p>In other words, there does indeed exist a solution, no matter what <m>(w_1, w_2, w_3, w_4)</m> is. For instance, if <m>(w_1, w_2, w_3, w_4) = (3, 1, 2, 4) </m>, then the solution is
+        <me>
+           a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
+      </me>
+        In other words, 
+        <me>
+          (3, 1, 2, 4) = \frac{1}{18} \ve{v}_1 - \frac{19}{12} \ve{v}_2 - \frac{17}{9} \ve{v}_3 + \frac{49}{36} \ve{v}_4.
+      </me>
+      Since there exists a solution to equation <xref ref="fund_eqn_span_r4_ex"/> for each vector <m>\ve{w} \in \mathbb{R}^4</m>, we conclude that <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m> spans <m>\mathbb{R}^4</m>. </p>
+
+      <p>Hence <m>\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose</m>  is a basis for <m>\mathbb{R}^4</m>, since it is linearly independent and spans <m>\mathbb{R}^4</m>.</p>
+      </solution>
+
     </example>
 
     <example>
@@ -764,7 +728,7 @@
              True
              <proof>
               <p>
-             Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> dim V = n</m>.
+             Suppose we had a list of <m>n+1</m> linearly independent vectors. By <xref ref = "first_corollary_please">Corollary </xref>, we can extend the list to a basis for <m>V</m>. Hence we would obtain a basis for <m>V</m> with at least <m> n + 1</m> vectors. We conclude that <m>\dim V \geq n+1 </m> contradicting, the fact that <m> \dim V = n</m>.
            </p>
            </proof>
            </p>
@@ -789,14 +753,14 @@
     <statement>
       <p>
         Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
-        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors from <m>\basis{B}</m>.
+        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors in <m>\basis{B}</m>.
         Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
         (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
       </p>
     </statement>
     <solution>
       <p>
-        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
       </p>
     </solution>
   </exercise>
@@ -851,6 +815,31 @@
       <ol>
         <li>
           <p>
+Any linearly independent spanning set is by definition a basis, contradicting our assumption.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \ve v </m> is not a linearly combination of the vectors in <m> \basis B </m>.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            <m> \bopen \ve v_1 \ldots, \ve v_n , \ve v \bclose </m>
+          </p>
+        </li>
+
+        <li>
+          <p>
+           No vector in  <m> \basis B'  </m> is a linear combination of the previous vectors and so the list is thus linearly indepedent by <xref ref = "lin_dependence_prop" />.
+          </p>
+        </li>
+
+        <li>
+          <p>
+            The vector subspace <m> W </m> of <m> V </m> spanned by the vectors in <m> \basis B' </m> has dimension <m> n + 1</m> and so <m> \dim(W) > \dim(V)</m> which contradicts <xref ref = "dim-of-subspace-prop" />.
           </p>
         </li>
       </ol>
@@ -866,17 +855,23 @@
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
       </p>
     </statement>
+    <solution>
+      <p>
+        <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
+        <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
     <statement>
       <p>
         In each case,
-        use the results in <xref ref="true_false_span_lin_ind">Exercises</xref>
+        use the results in <xref ref="true_false_span_lin_ind">Exercise</xref>
         and <xref ref="n_lin_ind_is_basis"></xref>
         to determine if <m>\basis{B}</m> is a basis for <m>V</m>.
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -913,9 +908,27 @@
               <m>\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}</m>
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+      <p>
+        <ol>
+
+          <li>
+            <m> \Poly_2 </m> has a basis <m> \basis B' = \bopen 1 , x , x^2 \bclose </m> and so has dimension 3. Since <m> \basis B </m> has length 4, it cannot be linearly independent by <xref ref="true_false_span_lin_ind">Exercise</xref>(a). Hence <m> \basis B </m> cannot be a basis for  <m> \Poly_2 </m>.
+          </li>
+
+          <li>
+          <m> \Mat_{2,2} </m> has dimension 4. Since <m> \basis B </m> has length 3, it cannot span <m> \Mat_{2,2} </m>. Hence  <m> \basis B </m> cannot be a basis for <m> \Mat_{2,2} </m>.
+          </li>
+
+          <li>
+<m> \Trig_2 </m> has dimension 5. Since <m> \basis B </m> has length 5, it cannot span <m> \Trig_2 </m>. Hence <m> \basis B </m> cannot be a basis for <m> \Trig_2 </m>.
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -927,7 +940,7 @@
         If it is false, give a counterexample.
         (Hint: Use the definition of linear independence.)
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -941,9 +954,61 @@
               The list <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly independent.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+<p>
+<ol>
+<li>
+  <p>
+True. Suppose there is a linear relation on  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m>:
+<me>
+a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
+</me>
+This induces a linear relation on <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m>:
+<m>
+(a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0
+</m>
+Since <m>\left\{ \ve{u}, \ve{v}, \ve{w} \right\}</m> is linearly independent, we must have that
+<me>
+a + c = 0 \qquad (1) \\
+a + b = 0 \qquad (2) \\
+b + c = 0 \qquad (3)
+</me>
+<m> (1) + (2) </m> combined with <m> (3) </m> gives us that <m> a = 0 </m> and so <m> b = c = 0 </m> too. We conclude that  <m>\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}</m> is linearly independent.
+  </p>
+</li>
+
+
+<li>
+  <p>
+False. Let <m> V = \mathbb{R}^3 </m>. Let
+<me>
+\ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
+</me>
+and so
+<me>
+\ve u - \ve v = (1,-1,0) \\  \ve v - \ve w = (0,1,-1) \\ \ve u - \ve w = (1,0,-1)
+</me>.
+By inspection, we see that 
+<me>
+ (1,-1,0) + (0,1,-1) = (1,0,-1)
+</me>
+and so  <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m> is linearly dependent.</p>
+
+<p>
+Alternatively, we could have noticed that for any vectors <m> \ve u , \ve v , \ve w </m>:
+<me>
+(\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w.
+</me>
+Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}</m>  satisfies <xref ref = "lin_dependence_prop" /> and so is linearly dependent.
+</p>
+</li>
+
+</ol>
+  </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="dim_poly_at_2_ex">
@@ -953,7 +1018,7 @@
         show that <m>V</m> is a subspace of <m>\Poly_2</m>,
         find a basis for <m>V</m>, and compute <m>\Dim V</m>.
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -967,9 +1032,26 @@
               <m>V = \{ p \in \Poly_2 : xp'(x) = p(x) \}</m>
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+    <solution>
+<ol>
+
+  <li>
+    We omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m> since it is routine. Let us now construct a basis for <m> V </m>. Begin with a non-zero vector <m> \ve v_1 </m>  in <m> V </m>. We make the most obvious choice, let <m> \ve v_1 = x -2 </m>. Next pick any vector  <m> \ve v_2 </m> in <m> V </m> not in the span of <m> \left \{ \ve v_1 \right\} </m>. An obvious choice is <m> \ve v_2 = x(x-2) </m>. Since <m> V </m> is not all of <m>\Poly_2 </m>, we know that <m> \dim V \lt 3 </m>. Thus <m> \basis B' = \bopen \ve v_1, \ve v_2 \bclose</m> is a basis for <m> V </m> and so <m> \dim V = 2 </m>.
+  </li>
+
+  <li>
+Once again, we omit the check that <m> V </m> is a subspace of <m> \Poly_2 </m>. Pick any non-zero vector <m>\ve v_1 </m> in <m> V </m>. Let's choose <m> \ve v_1 = x </m>. It is not as obvious as before whether there are indeed any vectors in <m> V </m> not in the span of <m> \left\{ \ve v_1 \right\} </m>, and so we must do some computations. If <m> p(x) = ax^2 + bx + c</m> is in <m> V </m>, <m> p(x)</m> must satisfy
+<me>
+x(2ax + b) = ax^2 + bx + c \\
+\implies 2ax^2 + bx = ax^2 + bx + c.
+</me>
+Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples of <m> \ve v_1 = x </m>. Hence <m> \bopen \ve v_1 \bclose </m> is a basis for <m> V </m> and so <m> \dim V = 1</m>.
+  </li>
+</ol>
+    </solution>
   </exercise>
 
   </exercises>
