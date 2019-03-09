@@ -351,6 +351,29 @@
         Justify each step using the rules of a vector space.
       </p>
     </statement>
+    <solution>
+      <p>
+     As before, suppose that 
+      <md>
+        <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>.
+      </md>
+      Which gives 
+      <me> 
+      [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
+    </me>
+    Then 
+      <md>
+<mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
+<mrow> \amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (<xref ref="R4">R4</xref>)</mrow>
+<mrow> \amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (<xref ref="R6">R6</xref>)</mrow>
+      </md>
+      Reading off the coefficients, we obtain
+      <me>
+k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
+    </me>
+    as desired.
+    </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="matrix_basis_exercise">
@@ -387,6 +410,31 @@
         </me>
       </p>
     </statement>
+    <solution>
+      <p>
+To determine  <m>[\mat{A}]_\basis{B}</m>, we must find the scalars <m>a_1 , a_2 , a_3, a_4 </m> satisfying
+<me>
+a_1 \mat{B_1} + a_2\mat{B_2} + a_3\mat{B_3} + a_4\mat{B_4} = \mat A.
+</me>
+This results in a system of 4 linear equations in 4 variables, one equation for each entry in <m>\mat A </m>:
+<md>
+<mrow>a_1 + a_2 + a_3 = 1 </mrow>
+<mrow> a_3 + a_4 = 2 </mrow>
+<mrow> a_3 - a_4 = 3 </mrow>
+<mrow> a_1 - a_2 + a_3 = 4</mrow>
+</md>
+Solving this equation, we get
+<me>
+a_1  = 0, \quad
+a_2  = -\frac{3}{2}, \quad
+a_3  = \frac{5}{2}, \quad
+a_4  = -\frac{1}{2}.
+</me>
+Hence <me>
+[\mat{A}]_\basis{B} = \begin{bmatrix} 0 \\ -\frac{3}{2} \\ \frac{5}{2} \\ -\frac{1}{2} \end{bmatrix}
+</me>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -402,7 +450,7 @@
       <p>
         Consider <m>p(x) = x^2 + x - 6</m>.
 
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
             <p>
@@ -417,9 +465,35 @@
               i.e. determine <m>[p]_\basis{B}</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
+   <solution>
+<p>
+<ol>
+
+<li>
+<p>
+<me>
+p(x) = x^2 + x -6 = (x+3)(x_2)
+</me>
+and so <m> p(2) = </m> and hence <m> p \in V </m>.
+</p>
+</li>
+
+<li>
+Recall that <m> \basis B = \bopen x-2 , x(x-2) \bclose </m>.
+<me>
+p(x) = x^2 + x -6 = (x+3)(x - 2) =  3(x-2) + x(x-2) 
+</me>
+and so 
+<me>
+[p]_\basis{B} = \begin{bmatrix} 3  \\ 1 \end{bmatrix}.
+</me>
+</li>
+</ol>
+</p>
+   </solution>
   </exercise>
 
 
