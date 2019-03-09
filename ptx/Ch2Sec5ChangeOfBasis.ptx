@@ -285,6 +285,15 @@
           Prove the above formula!
         </p>
       </statement>
+      <solution>
+        <p>
+        We check the <m>i^\text{th}</m> entry on the LHS using just the definition on matrix multiplation.
+        <me>
+(\text{LHS})_i = (\text C_1)_ia_1 + \ldots + (\text C_n)_ia_n = (\text{RHS})_i
+      </me>
+      and we're done!
+ </p>
+      </solution>
     </exercise>
 
     <p>
@@ -363,7 +372,7 @@
         Consider the following two bases for <m>\Mat_{2,2}</m>:
         <me>
 \basis B = \left\{ 
-\text{B}_1 =   \begin{bmatrix} 1 &amp;  0 \\ 0 &amp;  11 \end{bmatrix}, \,
+\text{B}_1 =   \begin{bmatrix} 1 &amp;  0 \\ 0 &amp;  1 \end{bmatrix}, \,
 \text{B}_2 =   \begin{bmatrix} 1 &amp;  0\\ 0 &amp;  -1 \end{bmatrix}, \, 
 \text{B}_3 =   \begin{bmatrix} 1 &amp;  1 \\ 1 &amp;  1 \end{bmatrix}, \,
 \text{B}_4 =   \begin{bmatrix} 0 &amp;  1 \\ -1 &amp; 0 \end{bmatrix}               

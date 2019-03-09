@@ -56,6 +56,13 @@
           Check that <xref ref="system_from_r2_example" /> has only the trivial solution.
         </p>
       </statement>
+      <solution>
+        <p>
+<me>
+(2k_1 + k_2) - (-k_1 + k_2) = 0 = 3k_2 \implies k_2 = 0 \implies k_1 = 0 \text{ too}.
+</me>
+        </p>
+      </solution>
     </exercise>
 
   <example xml:id="example_about_lin_dep_1">
@@ -94,6 +101,16 @@
           Check that <xref ref="system_from_r2_example_new" /> has the solution set <xref ref="supposed_soln" />.
         </p>
       </statement>
+      <solution>
+<p>
+We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let <m>k_1</m> be free, i.e. <m> k_1 = t, t \in \mathbb{R}</m>. Then
+<me>
+(-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
+\implies -k_1 + k_3 = 0 \implies k_3 = t.
+-t + k_2 + 2t = 0 \implies k_2 = -t
+</me>
+</p>
+      </solution>
     </exercise>
 
   <example xml:id="new_basis_for_poly_3">

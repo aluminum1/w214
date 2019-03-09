@@ -568,7 +568,43 @@
           <p>
             Do the three <sq>check this</sq> calculations above.
           </p>
-        </statement>
+        </statement>Do the 
+        <solution>
+<p>
+<ol>
+<li>
+<p>
+Suppose <me> (a,2a,-a) = (1,0,5) </me>. Then the first entry requires that <m> a =1 </m> but the second entry requires that <m> a = 0 </m>. Hence there can be no <m> a </m> satisfying the equation.
+</p>
+</li>
+
+<li>
+<p>
+<me>
+2 \ve v_1 + 3 \ve v_2 = 2(1,2,-1) + 3(1,0,5) \\ = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4
+</me>
+</p>
+</li>
+
+
+<li>
+  <p>
+Suppose 
+<me>
+a \ve v_1 + b \ve v_4 = \ve v_6 
+</me>
+i.e.
+<me>
+(a,2a,-a) + (b,0,5b)= (1,1,0).
+</me>
+Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looking at the first entry, forces <m> b = \frac{1}{2}</m> but then, if we look at the third entry, <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Hence there are no solutions to the equation.
+</p>
+</li>
+
+
+</ol>
+</p>
+        </solution>
       </exercise>
 
     <p>
