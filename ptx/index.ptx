@@ -4,6 +4,22 @@
 
   <docinfo>
 
+  <latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+
+\usepackage{pgfplots}
+
+</latex-image-preamble>
+
 <macros>
 \newcommand{\be}{\begin{equation}}
 \newcommand{\ee}{\end{equation}}
@@ -20,6 +36,11 @@
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
+\newcommand{\bopen}{\left\{}
+\newcommand{\bclose}{\right\}}
+\newcommand{\mamp}{&amp;}
+
+
 \DeclareMathOperator{\Fun}{Fun}
 \DeclareMathOperator{\Cont}{Cont}
 \DeclareMathOperator{\Diff}{Diff}
@@ -33,24 +54,10 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Nullity}{Nullity}
 \DeclareMathOperator{\Rank}{Rank}
-\DeclareMathOperator{\bopen}{\{}
-\DeclareMathOperator{\bclose}{\}}
+
 </macros>
 
-<latex-image-preamble>
-\usepackage{tikz}
-\usepackage{tkz-graph}
-\usepackage{tkz-euclide}
-\usetikzlibrary{patterns}
-\usetikzlibrary{positioning}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{calc}
-\usetikzlibrary{shapes}
-\usetikzlibrary{through,intersections,decorations,shadows,fadings}
 
-\usepackage{pgfplots}
-
-</latex-image-preamble>
   </docinfo>
 
   <book>
@@ -77,16 +84,17 @@
   <xi:include href="./ChTutorials.ptx"/>
 
 
-
-  <!--
+   
+<!--
+  
 
     <xi:include href="./Ch3LinearMaps.ptx" />
+   
 
     <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
-    -->
 
 
-
+  -->
 
     <backmatter>
       <xi:include href="./AppAReminderAboutMatrices.ptx" />
