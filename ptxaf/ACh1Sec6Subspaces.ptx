@@ -2,12 +2,16 @@
 
 <section xml:id="ACh1Sec6Subspaces">
   <title>Deelruimtes</title>
-  <p>
-    Die konsep van 'n deelruimte sal ons toelaat om vinnig nuwe voorbeelde van
+  <introduction>
+    <p>In hierdie deel san ons die konsep van 'n <em>deelruimte</em> bekend stel. Dié konsep sal ons toelaat om vinnig nuwe voorbeelde van
     vektorruimtes te vind.
   </p>
+  </introduction>
 
-  <definition>
+<subsection>
+  <title>Definition of a subspace</title>
+
+  <definition xml:id="defn-subspace">
     <statement>
       <p>
         'n deelversameling <m>U \subseteq V</m> van 'n vektor-ruimte
@@ -74,26 +78,25 @@
   </proof>
 
   <example>
-    <title>Lyn in $\mathbb{R}^2$</title>
+    <title>Lyn in <m>\mathbb{R}^2</m></title>
     <statement>
       <p>
         'n Lyn <m>L</m> deur die oorsprong in
         <m>\mathbb{R}^2</m> is 'n deelruimte van <m>\mathbb{R}^2</m>:
-        <men xml:id="pic_of_L1">
-          \begin{aligned}
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-    \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-    \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          \end{aligned}
-        </men>
       </p>
+    <sidebyside>
+      <figure xml:id="line-through-origin-R2-example">
+      <caption>A line through the origin in <m>\mathbb{R}^2</m>.</caption>
+      <image width="50%">
+      <latex-image>
+          <![CDATA[\begin{tikzpicture}\draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+  \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+  \draw[thick, red] (-2, -1) -- (2, 1) node[below] {$L$};\end{tikzpicture}]]>
+      </latex-image>
+      </image>
+      </figure>
+  </sidebyside>
+      
 
       <p>
         Onthou dat lyn <m>L</m> gespesifiseer kan word deur 'n homogene line&#xea;re
@@ -118,7 +121,7 @@
       </p>
 
       <p>
-        Dit maak ook meetkundig sin: As jy na beeld <xref ref="pic_of_L1" /> kyk, sal
+        Dit maak ook meetkundig sin: As jy na beeld <xref ref="line-through-origin-R2-example" /> kyk, sal
         jy sien dat die som van twee vektore <m>\ve{v}, \ve{v}'</m> op <m>L</m> met die
         kop-op-stert-metode 'n verdere vektor op <m>L</m> tot gevolg sal h&#xea;.
       </p>
@@ -144,38 +147,42 @@
         'n Lyn <m>L</m> en 'n vlak <m>P</m>
         deur die oorsprong in <m>\mathbb{R}^3</m> is ook 'n deelruimte van
         <m>\mathbb{R}^3</m>:
-        <men xml:id="pic_of_L">
-          \begin{aligned}
-
+        <sidebyside width="40%">
+        <figure xml:id="line-in-R3-example-subspace">
+          <caption>A line through the origin in <m>\mathbb{R}^3</m>.</caption>
           <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-    \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-    \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-    \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);\end{tikzpicture}]]>
-</latex-image>
+          <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \draw[thick, red] (-2, 1) node[above] {$L$} -- (2, -1);
+          \end{tikzpicture}
+          ]]>
+          </latex-image>
           </image>
+        </figure>
 
-          \end{aligned}
-          \qquad \qquad
-          \begin{aligned}
-
+        <figure xml:id="plane-in-R3-example-subspace">
+          <caption>A plane through the origin in <m>\mathbb{R}^3</m>.</caption>
           <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[->] (0, 0) -- (2,0) node[right] {$y$};
-    \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
-    \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
-    \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
-    \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
-    \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
-    \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);\end{tikzpicture}]]>
-</latex-image>
+          <latex-image>
+          <![CDATA[
+          \begin{tikzpicture}
+            \draw[->] (0, 0) -- (2,0) node[right] {$y$};
+            \draw[->] (0, 0) -- (0, 2) node[above] {$z$};
+            \draw[->] (0,0) -- (-0.7, -0.8) node[below left] {$x$};
+            \draw[thick, red] (-0.1, -1) -- (-1, 0.4);
+            \draw[thick, red] (-1, 0.4) -- (0.3, 1.5);
+            \draw[thick, red] (0.3, 1.5) -- node[above right] {$P$} (1.5, 0.4);
+            \draw[thick, red] (1.5, 0.4) -- (-0.1, -1);
+          \end{tikzpicture}
+          ]]>
+          </latex-image>
           </image>
-
-          \end{aligned}
-        </men>
+        </figure>
+        </sidebyside>
       </p>
     </statement>
   </example>
@@ -218,29 +225,33 @@
         <m>\ve{v}'</m> op <m>L</m> bymekaar tel,
         kry ons 'n vektor <m>\ve{v} + \ve{v}'</m> wat
         nie op <m>L</m> l&#xea; nie:
-        <men xml:id="pic_of_bad_L">
-          \begin{aligned}
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=2]
-    \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
-    \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
-    \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
-    \draw[very thick, red, ->] (0,0) -- node[left] {$\ve{v}$} (0.5,
-    0.75);
-    \draw[very thick, red, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
-    \draw[very thick, red, ->] (0.5,0.75) -- node[above left]
-    {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          \end{aligned}
-        </men>
+        <sidebyside>
+          <figure xml:id="line-not-through-origin-non-example">
+            <caption>A line which does not pass through the origin is not closed under addition.</caption>
+            <image>
+            <latex-image>
+              <![CDATA[
+              \begin{tikzpicture}
+                \draw[<->] (-2, 0) -- (2,0) node[below] {$x$};
+                \draw[<->] (0, -2) -- (0, 2) node[right] {$y$};
+                \draw[thick, red] (-2, -0.5) -- (2, 1.5) node[below] {$L$};
+                \draw[very thick, blue, ->] (0,0) -- node[left] {$\ve{v}$} (0.5, 0.75);
+                \draw[very thick, blue, ->] (0,0) -- node[right] {$\ve{v}'$} (1, 1);
+                \draw[very thick, blue, ->] (0.5,0.75) -- node[above left] {$\ve{v}'$} (1.5, 1.75) node[above right] {$\ve{v} + \ve{v}'$};
+              \end{tikzpicture}
+              ]]>
+            </latex-image>
+            </image>
+        </figure>
+      </sidebyside>
       </p>
     </statement>
   </example>
+
+</subsection>
+
+<subsection>
+  <title>Verder voorbeelde van deelruimtes</title>
 
   <example>
     <title>Kontinue funksies as 'n deelruimte</title>
@@ -422,31 +433,221 @@
     </statement>
   </exercise>
 
-  <example>
-    <title>Oplossings van die line&#xea;re differensi&#xeb;le
-    vergelykings</title>
+</subsection>
+
+<!-- TO DO: Translate into Afrikaans, beginning here -->
+
+  <subsection xml:id="soln-diff-eqns-sec">
+  <title>Solutions to homogenous linear differential equations</title>
+
+    <p> A homogenous <m>n</m>th order linear ordinary differential equation on an interval <m>I</m> is a differential equation of the form
+    <men xml:id="general_lin_diff_eqn">
+        a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I
+    </men> 
+    where <m>y^{(k)}</m> means the <m>n</m>th derivative of <m>y</m>. A <em>solution</em> to the differential equation is just some function <m>y(x)</m> defined on the interval <m>I</m> which satisfies <xref ref="general_lin_diff_eqn"/>.</p>
+
+
+    <example xml:id="first_example_2nd_order_ode">
+      <title>An example of a <m>2</m>nd order homogenous linear differential equation</title>
+      <statement> <p> For instance,
+      <men xml:id="first_example_2nd_order_ode_eqn">
+        x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)
+      </men>
+      is a homogenous 2nd order linear differential equation on the interval <m>(0, \infty)</m>, and
+      <men xml:id="a_soln_to_my_ode">
+        y_1(x) = x^2 \sin (\log x)
+      </men>
+      is a solution to <xref ref="first_example_2nd_order_ode_eqn"/>. Similarly, 
+      <men xml:id="a_2nd_soln_to_my_ode">
+        y_2(x) = x^2 \cos (\log x)
+      </men>
+      is also a solution to <xref ref="first_example_2nd_order_ode_eqn"/>.
+      </p>
+      <p>We can use SageMath to check that these are indeed solutions to <xref ref="first_example_2nd_order_ode_eqn"/>. Click the <c>Evaluate (Sage)</c> button --- it should output 'True', indicating that <m>y_1</m> is indeed a solution to the differential equation. 
+      </p>
+      <sage>
+      
+      <input>
+        def solves_de(y):
+         return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+        y1 = x^2*sin(log(x))
+
+        solves_de(y1)
+      </input>
+      </sage>
+
+      <assemblage>
+         <p>
+         Edit the code above to check whether <m>y_2</m> is a solution of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.</p>
+      </assemblage>
+
+      <p>We can also plot the graphs of <m>y_1</m> and <m>y_2</m>. Again, click on <c>Evaluate (Sage)</c>. </p>
+      <sage>
+      <input>
+        y1 = x^2*sin(log(x))
+        y2 = x^2*cos(log(x))
+
+        plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
+      </input>
+      </sage>
+      <assemblage>
+        <p>Play with the code above, and plot some different functions.
+        </p>
+      </assemblage>
+
+      </statement>
+
+    </example>
+
+    <exercise>
+      <statement>
+        <p>
+          Check by hand that <xref ref="a_soln_to_my_ode"/> and <xref ref="a_2nd_soln_to_my_ode"/> are indeed  solutions of the differential equation <xref ref="first_example_2nd_order_ode_eqn"/>.
+        </p>
+      </statement>
+    </exercise>
+
+    <p> Suppose we are given an <m>n</m>th order homogenous linear differential equation of the form <xref ref="general_lin_diff_eqn"/> on some interval <m>I \subseteq \mathbb{R}</m>. Write <m>V</m> for the set of <em>all</em> solutions to the differential equation. That is,
+    <men>
+     V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}
+    </men>
+    </p>
+    <p> We can regard <m>V</m> as a subset of the set of <em>all</em> functions on the interval <m>I</m>:
+    <me>
+      V \subseteq \Fun(I)
+    </me>
+    </p>
+
+    <exercise>
     <statement>
       <p>
-        Laat <m>a,b</m> en <m>c</m> konstantes wees.
-        Laat <m>V \subseteq
-        \Diff(\mathbb{R})</m> die versameling van alle oplossings vir die volgende
-        differensi&#xeb;le vergelyking wees:
+     Show that <m>V</m> is a <xref ref="defn-subspace" text="title">subspace</xref> of <m>\Fun(I)</m>.
+      </p>
+     </statement> 
+    </exercise>
+
+    <p>So, by <xref ref="subspace_lem"/>, we conclude that <em>the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+
+    <example xml:id="first_example_2nd_order_ode_cont">
+      <title>Continuation of <xref ref="first_example_2nd_order_ode"/></title>
+      <statement>
+        <p> Consider the differential equation from <xref ref="first_example_2nd_order_ode"/>. We saw that
         <me>
-          a \frac{d^2f}{dx^2} + b \frac{df}{dx} + cf = 0
+        y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
         </me>
-      </p>
-    </statement>
-  </example>
+      are solutions. So, any linear combination of <m>y_1</m> and <m>y_2</m> is <em>also</em> a solution. For instance,
+      <me>
+       y = 2y_1 + 5 y_2
+     </me>
+     is also a solution. Let us check this in SageMath. </p>
 
- 
+    <sage>
+      <input>
+        def solves_de(y):
+          return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
 
-  <exercise>
-    <statement>
+        y1 = x^2*sin(log(x))
+        y2 = x^2*sin(cos(x))
+
+        solves_de(2*y1 + 5*y2)
+      </input>
+    </sage>
+              
+      </statement>
+    </example>
+
+        <example xml:id="non_example_nonlinear_ode">
+        <title>A non-example: Solutions to a nonlinear ODE</title>
+        <statement>
+          <p>
+            We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE
+            <men xml:id="explicit_nonlinear_ode">
+            y^\prime = y^2.
+            </men>
+            The general solution is given by
+            <me>
+            y_c = \frac{1}{c - x}
+            </me> where <m>c</m> is a constant. For instance,
+            <me>
+              y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
+            </me>
+            are solutions.
+          </p>
+          <p>
+            Use the SageMath script below to check whether the linear combination <m>y_1 + y_2</m> is also a solution. 
+            </p>
+          <sage>
+          <input>
+            y = function('y')(x)
+
+            def solves_de(f):
+             return bool(diff(f,x) - f^2 == 0)
+
+            y1 = 1/(1-x)
+            y2 = 1/(2-x)
+
+            solves_de(y1+y2)
+        </input>
+        </sage>
+        <p>
+        The answer is <c>False!</c> So linear combinations of solutions to the nonlinear differential equation <xref ref="explicit_nonlinear_ode"/> are no longer solutions, in general.
+          </p>
+        </statement>
+    </example>
+
+
+    <example> <title>Finding the general solution to a differential equation in SageMath</title>
+      <statement>
       <p>
-        Wys dat <m>V</m> 'n deelruimte van <m>\Diff(\mathbb{R})</m> is.
-      </p>
+      Let us use SageMath to find the general solution of the following ordinary differential equation
+      <men xml:id="explicit_diff_eq">
+    y^{\prime \prime} + 2y^\prime + y = 0.
+      </men>
+      We can do this as follows. Note that we need to be a bit more careful now, first defining our variable <m>x</m> and then declaring that <m>y</m> is a function of <m>x</m>.</p>
+      <sage>
+        <input>
+        var('x')
+        y = function('y')(x)
+
+        diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+          desolve(diff_eqn,y)
+
+        desolve(diff_eqn, y)
+        </input>
+      </sage>
+    <p>SageMath reports that the general solution is given in terms of two unspecified constants <c>_K1</c> and <c>_K2</c> as <c>(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</c>.
+    </p>
+    <p>
+    If we set <c>_K1</c> equal to 1 and <c>_K2</c> equal to 0 in the general solution, we will get a particular solution <m>y_1</m> of the differential equation. 
+  </p>
+    <sage>
+        <input>
+        var('x, _K1, _K2')
+        y = function('y')(x)
+
+        diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+
+        my_soln = desolve(diff_eqn,y)
+
+        y1 = my_soln.substitute(_K1==1, _K2==0)
+
+        y1
+        </input>
+      </sage>
+    <p>SageMath is telling us that <m>y_1 = e^{-x} \sin(2x)</m> is a particular solution. </p>
+    <assemblage>
+      <p>
+    Edit the code to set <c>_K2</c> equal to 0 and <c>_K1</c> equal to 1 in the general solution to get a different particular solution <m>y_2</m>. What is <m>y_2</m>? </p>
+  </assemblage>
+
     </statement>
-  </exercise>
+    </example>
+
+
+</subsection>
+
+<!-- Translation job ends here. -->
 
  <exercises>
 
@@ -577,6 +778,64 @@
       </p>
     </statement>
   </exercise>
+
+
+<!-- TO DO: Translate into Afrikaans, beginning here -->
+
+<exercisegroup>
+  <introduction>
+<p>The next 4 exercises will help acquaint the reader with the concept of the <emp>sum of two subspaces</emp>. First, we'll need a definition.</p>
+
+<definition xml:id="def_sum_subspace">
+  <statement>
+    <p>
+Let <m>V</m> be a vector space. Suppose <m>U</m> and <m>W</m> are two subspaces of <m>V</m>. The sum <m>U + W</m> of <m>U</m> and <m>W</m> is defined by
+<me>
+U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+</me>
+</p>
+</statement>
+</definition>
+<p>
+  In the exercises below, <m>V,U,W</m> will be as above.
+</p>
+</introduction>
+<exercise>
+    <statement>
+      <p>
+      Show that <m>U + V</m> is a subspace of <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+      Show that  <m>U + V</m> is, in fact, the smallest subspace of <m>V</m> containing both <m>U</m> and <m>V</m>.
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      If <m>W \subset U</m> what is <m>U + W</m>?
+    </p>
+    </statement>
+  </exercise>
+
+   <exercise>
+    <statement>
+      <p>
+      Can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <m>\mathbb{R}^2</m>? Similarly, can you think of two subspaces of <m>\mathbb{R}^2</m> whose sum is <emp>not</emp> all of <m>\mathbb{R}^2</m>?
+    </p>
+    </statement>
+  </exercise>
+</exercisegroup>
+
+<!-- Translation job ends here -->
+
+
 </exercises>
 </section>
 

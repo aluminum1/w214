@@ -51,6 +51,7 @@
         </dl>
       </p>
 
+
       <p>
         Hierdie data moet aan die volgende re&#xeb;ls vir alle
         <m>\ve{u}, \ve{v},
@@ -72,11 +73,16 @@
             </p>
           </li>
 
-          <li xml:id="R3">
-            <title>R3.</title>
+          <li xml:id="R3a">
+            <title>R3a.</title>
             <p>
-              <m>\ve{0} + \ve{v} = \ve{v}</m> and <m>\ve{v} + \ve{0} =
-              \ve{v}</m>
+              <m>\ve{0} + \ve{v} = \ve{v}</m>
+            </p>
+          </li>
+
+          <li xml:id="R3b">
+            <title>R3b.</title>
+            <p> <m>\ve{v} + \ve{0} = \ve{v}</m>
             </p>
           </li>
 

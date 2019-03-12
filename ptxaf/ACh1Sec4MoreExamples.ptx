@@ -96,6 +96,51 @@
         nie R5 en R8 nie.
       </p>
     </statement>
+    <solution>
+    <p>
+    R1: Ons moet kontrolleer of <m>\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ vir alle } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}</m>.
+    Duidelik is <m> \ve{a} + \ve{a} = \ve{a} + \ve{a}</m> en soortgelyk vir <m>\ve{b}</m>. Finaalweg <m>\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}</m>.
+    </p>
+
+    <p>
+    R2: Ons moet kontrolleer of <m> (\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ vir alle } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}</m>. Dit vereis dat ons 8 vergelykings in totaal kontrolleer. Ons sal net die oplossing vir een van hulle aandui, die res is soortgelyk. Ons kontrolleer of
+    <md>
+    <mrow>(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}</mrow>
+    </md>
+    Beskou:
+    <md>
+    <mrow>\text{LK} \amp = (\ve{a} + \ve{b}) + \ve{b}</mrow>
+    <mrow> \amp = \ve{b} + \ve{b}</mrow>
+    <mrow> \amp = \ve{a}</mrow>
+    </md>.
+    Deur 'n soortgelyke metode,
+    <md>
+    <mrow>\text{RK} \amp = \ve{a} +(\ve{b} + \ve{b})</mrow>
+    <mrow> \amp = \ve{a} + \ve{a}</mrow>
+    <mrow> \amp = \ve{a}</mrow>
+    <mrow> \therefore LK \amp = RK </mrow>
+    </md>.
+      </p>
+    <p>
+    R3, R4, R6, en R7 volg almal in dieselfde manier.
+    </p>
+    <p>
+    Ons sal aantoon hoekom R5 nie bevredig is nie. Ons sal 'n teenvoorbeeld gee. Vat <m>k=2=l, \ve v = \ve b</m>. Dan is:
+    <md>
+    <mrow>\text{LK} \amp = (2+2).\ve{b}</mrow>
+    <mrow> \amp = 4.\ve{b}</mrow>
+    <mrow>\amp = \ve{b}</mrow>
+    </md>
+    maar
+    <md>
+    <mrow>\text{RK} \amp = 2.\ve{b} + 2.\ve{b}</mrow>
+    <mrow> \amp = \ve{b} + \ve{b}</mrow>
+    <mrow>\amp =\ve{a}</mrow>.
+    </md>
+    Omdat <m>\text{LK} \neq \text{RK}</m> in hierdie geval nie, kan R5 nie in algemeen waar wees nie.
+      </p>
+        </solution>
+
   </exercise>
 
   <example>
@@ -240,9 +285,32 @@
   <exercise>
     <statement>
       <p>
-        Wys dat hierdie data re&#xeb;ls R1 tot R8 bevredig.
+        Wys dat hierdie data die reëls R1 tot R8 bevredig.
       </p>
     </statement>
+    <solution>
+    <p>
+      Ons sal net R4 kontrolleer, die res is soortgelyk.
+          </p>
+    <p>R4 :Laat 
+    <md>
+      <mrow> \amp \ve{v} = (v_1,v_2,v_3,\ldots) </mrow>
+      <mrow> \amp \ve{w} = (w_1,w_2,w_3,\ldots) </mrow>.
+    </md>
+    Ons moet kontrolleer of <m>k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}</m>.
+    <md>
+    <mrow>\text{LK} \amp = k.(\ve{v} + \ve{w})</mrow>
+    <mrow>\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]</mrow>
+    <mrow> \amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)</mrow>
+    <mrow> \amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)</mrow>
+    <mrow> \amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)</mrow>
+    <mrow>\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) </mrow>
+    <mrow> \amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) </mrow>
+    <mrow> \amp = k.\ve{v} + k.\ve={w} </mrow>
+    <mrow> \amp = \text{RK} </mrow>
+    </md>
+    </p>
+    </solution>
   </exercise>
 
   <example>
@@ -310,7 +378,7 @@
       <p>
         Definieer skalaarvermenigvuldiging as
         <men>
-          (k \cdot \mathbf{f})(x) := k \mathbf{f}(x)
+          (k \smul \mathbf{f})(x) := k \mathbf{f}(x)
         </men>.
       </p>
     </statement>
@@ -320,9 +388,9 @@
     <statement>
       <p>
         Notasie-uitdaging!
-        S&#xea; of die volgende kombinasie
+        Sê of die volgende kombinasie
         van
-        simbole 'n re&#xeb;le waarde of 'n funksie voorstel.
+        simbole 'n reële waarde of 'n funksie voorstel.
 
         <ol>
           <li>
@@ -351,6 +419,24 @@
         </ol>
       </p>
     </statement>
+      <solution>
+      <p>
+        <ol>
+          <li>
+            Funksie
+          </li>
+          <li>
+            Reële getal
+          </li>
+          <li>
+            Funksie
+          </li>
+          <li>
+            Reële getal
+          </li>
+        </ol>
+      </p>
+      </solution>
   </exercise>
 
   <exercise>
@@ -384,58 +470,50 @@
   <exercise>
     <statement>
       <p>
-        Wys dat die data hierbo re&#xeb;ls R1 tot R8 bevredig,
+        Wys dat die data hierbo reëls R1 tot R8 bevredig,
         i.e. dat <m>\Fun(X)</m> 'n vektorruimte is.
       </p>
     </statement>
+      <solution>
+        <p>
+        <ol>
+          <li> 
+            <md>
+            <mrow> f(a)= 4 </mrow>
+            <mrow> f(b) = 0 </mrow>
+            <mrow> f(c) = 2 </mrow>     
+            <mrow></mrow>
+            <mrow> g(a)= 1 </mrow>
+            <mrow> g(b) = 1 </mrow>
+            <mrow> g(c) = 1 </mrow>
+            <mrow></mrow>
+            <mrow> h(a)= 0 </mrow>
+            <mrow> h(b) = 3</mrow>
+            <mrow> h(c) = 0 </mrow>
+          </md>
+          </li>
+          <li>
+          <md>
+          <mrow> (f+g)(a) =5</mrow>
+          <mrow> (f+g)(b) =1 </mrow>
+          <mrow> (f+g)(c) = 3</mrow>
+          <mrow></mrow>
+          <mrow>( 3 \smul h)(a) = 0 </mrow>
+          <mrow>( 3 \smul h)(b) = 9 </mrow>
+          <mrow>( 3 \smul h)(c) = 0 </mrow>
+          </md>
+          </li>
+        </ol>
+        </p>
+      </solution>
+
   </exercise>
 
   <example xml:id="matrices_example_vec_space">
     <title>Matrikse</title>
     <statement>
       <p>
-        Onthou dat 'n
-        <em><m>n \times m</m>-matriks</em>
-        <m>\mat{A}</m> 'n reghoekigge skikking getalle is,
-        met <m>n</m> rye en <m>m</m>
-        kolomme:
-        <me>
-          \mat{A} = \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp 
-          \cdots \amp  \mat{A}_{1m} \\
-          \mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
-          \vdots \amp  \amp  \ddots \amp  \vdots \\
-          \mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
-          \end{array} 
-          \right]
-        </me>
-      </p>
-
-      <p>
-        Twee <m>n \times m</m> matrikse <m>\mat{A}</m> en <m>\mat{B}</m> kan saamgetel word,
-        om 'n nuwe <m>n \times m</m>-matriks <m>\mat{A} + \mat{B}</m> te kry:
-        <me>
-          (\mat{A} + \mat{B})_{ij} := \mat{A}_{ij} + \mat{B}_{ij}
-        </me>
-      </p>
-
-      <p>
-        Daar is die <em>null-<m>n \times m</m>-matriks</em>:
-        <me>
-          \mat{0} = \left[ \begin{array}{cccc} 
-          0 \amp  0 \amp   \cdots \amp 0 \\
-          0 \amp  0 \amp   \cdots \amp  0 \\
-          \vdots \amp  \amp  \ddots \amp  \vdots \\
-          0 \amp  0 \amp  \cdots \amp  0
-          \end{array}  \right]
-        </me>
-      </p>
-
-      <p>
-        Jy kan ook 'n <m>n \times m</m>-matriks <m>\mat{A}</m> met 'n skalaar <m>k</m>
-        vermenigvuldig om 'n nuwe <m>n \times m</m>-matrik <m>k \mat{A}</m> te kry:
-        <me>
-          (k\mat{A})_{ij} := k \mat{A}_{ij}
-        </me>
+        Die versameling <m>\Mat_{n,m}</m> van alle <m>n \times m </m> matrikse is 'n vektorruimte. Sien <xref ref="AAppAReminderAboutMatrices">Appendix</xref> om matrikse te hersien. 
       </p>
     </statement>
   </example>
@@ -533,24 +611,24 @@
   <exercise>
     <statement>
       <p>
-        Laat <m>\mathbb{R}^+</m> 'n versameling van positiewe re&#xeb;le
+        Laat <m>\mathbb{R}^+</m> die versameling van positiewe reële
         getalle wees.
-        Definieer 'n sommeringsbewerking, 'n nul-vektor en 'n
-        skalaarvermenigvuldiging op <m>\mathbb{R}^+</m> as
+        Definieer 'n sommeringsbewerking <m>\oplus</m>, 'n nul-vektor <m>z</m> en 'n
+        skalaarvermenigvuldigingsbewerking <m>\smul</m> op <m>\mathbb{R}^+</m> as volg:
         <md>
-          <mrow>\ve{x} + \ve{y} \amp := \ve{x} \ve{y}</mrow>
-          <mrow>\ve{0} \amp  := 1</mrow>
-          <mrow>k \cdot \ve{x} \amp := \ve{x}^k</mrow>
+          <mrow>x + y \amp := \ve{x} \ve{y}</mrow>
+          <mrow>z \amp  := 1</mrow>
+          <mrow>k \smul x \amp := x^k</mrow>
         </md>
-        waar <m>\ve{x}</m> en <m>\ve{y}</m> positiewe re&#xeb;le getalle is en <m>k</m> 'n
-        skalaar is (i.e. 'n arbitr&#xea;re re&#xeb;le getal).
+        waar <m>x, y \in \mathbb{R}^+</m> en <m>k</m> 'n
+        skalaar is (i.e. 'n arbitrêre reële getal).
 
         <ol>
           <li>
             <p>
               Gaan na dat hierdie bewerkings goed-gedefinieerd is.
               Byvoorbeeld,
-              is <m>\ve{x} + \ve{y} \in \mathbb{R}^+</m>, soos dit
+              is <m>x + y \in \mathbb{R}^+</m>, soos dit
               hoort?
             </p>
           </li>

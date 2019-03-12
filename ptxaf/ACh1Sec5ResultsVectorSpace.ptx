@@ -1,3 +1,4 @@
+<!-- TO DO: Make all references to the rules in this section into xrefs -->
 
 
 <section xml:id="ACh1Sec5ResultsVectorSpace">
@@ -29,7 +30,7 @@
   <proof>
     <md>
       <mrow>\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } <xref ref="uniqueness_zero"/> \text{ vir } \ve{v}=\ve{0} </mrow>
-      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3">R3b </xref>\text{)}</mrow>
+      <mrow>\amp = \ve{0}' \amp \amp  \text{( } <xref ref="R3b">R3b </xref>\text{)}</mrow>
     </md>
   </proof>
 
@@ -96,11 +97,90 @@
     </md>.
   </proof>
 
+  <p>
+    Laat ons twee meer hulpstellings bewys, net vir goeie oefening.
+  </p>
+
+
+  <lemma xml:id="scalar_times_zero_vec">
+    <statement> 
+      <p>
+      Laat <m>V</m> 'n vektorruimte wees en <m>k</m> enige skalaar. Dan is
+      <me>
+        k \smul\ve{0} = \ve{0}
+      </me>
+     </p>
+    </statement>
+  </lemma>
+  <proof>
+    <md>
+      <mrow> k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp \text{(R8 for } \ve{v}=\ve{0}\text{)} </mrow>
+      <mrow> \amp = ((k)(0))\smul\ve{0} \amp \text{(R6)} </mrow>
+      <mrow> \amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} </mrow>
+      <mrow> \amp = \ve{0} \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} </mrow>
+    </md>
+  </proof>
+
+  <lemma xml:id="dichotomy_lem">
+    <statement>
+      <p>
+        Veronderstel dat <m>\ve{v}</m> 'n vektor in
+        'n vektorruimte <m>V</m> is en dat <m>k</m> 'n skalaar is.
+        Dan volg dit dat
+        <me>
+          k \cdot \ve{v} = \ve{0}  \Leftrightarrow  k = 0 \mbox{ of
+          }  \ve{v} = \ve{0}
+        </me>.
+      </p>
+    </statement>
+  </lemma>
+
+  <proof>
+    <p>
+      <alert>Bewys van <m>\Leftarrow</m></alert>.
+      Veronderstel <m>k=0</m>.
+      Dan <m>k
+      \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
+      Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
+      Dan <m>k \cdot \ve{v}
+      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex">Oefening</xref>.
+    </p>
+
+    <p>
+      <alert>Bewys van <m>\Rightarrow</m>)</alert>.
+      Veronderstel <m>k \cdot \ve{v} = \ve{0}</m>.
+      Daar
+      is twee moontlikhede: óf <m>k = 0</m>, óf <m>k \neq 0</m>.
+      As <m>k=0</m>, dan is ons
+      klaar.
+      As <m>k \neq 0</m>, dan bestaan
+      <m>\frac{1}{k}</m> en ons vermenigvuldig
+      albei kante daardeur:
+      <md>
+        <mrow>k \cdot \ve{v} \amp  = \ve{0}</mrow>
+        <mrow>\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k}
+        \cdot \ve{0} \amp \amp  \mbox{(Vermenigvuldig beide kante met
+        \(\frac{1}{k}\))}</mrow>
+        <mrow>\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp 
+         \mbox{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex">Oefening</xref> \mbox{ aan die RK.)}</mrow>
+        <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(gebruik \(\frac{1}{k}
+        k = 1\))}</mrow>
+        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
+      </md>
+    </p>
+
+    <p>
+      Daarom, in die geval waar <m>k \neq 0</m> dit volg dat <m>\ve{v} = \ve{0}</m>,
+      wat ons in die eerste plek wou bewys.
+    </p>
+  </proof>
+
+
   <example xml:id="explicit_solve_x">
     <statement>
       <p>
         Kom ons oefen die gebruik van
-        die re&#xeb;ls van vektorruimtes om alledaagse berekeninge uit te voer.
+        die reëls van vektorruimtes om alledaagse berekeninge uit te voer.
         Byvoorbeeld,
         veronderstel dat ons vir die vektor <m>\ve{x}</m> in die
         volgende vergelyking wil oplos:
@@ -142,64 +222,7 @@
     </statement>
   </example>
 
-  <p>
-    Ons het een finale lemma nodig.
-  </p>
-
-  <lemma xml:id="dichotomy_lem">
-    <statement>
-      <p>
-        Veronderstel dat <m>\ve{v}</m> 'n vektor in
-        'n vektorruimte <m>V</m> is en dat <m>k</m> 'n skalaar is.
-        Dan volg dit dat
-        <me>
-          k \cdot \ve{v} = \ve{0}  \Leftrightarrow  k = 0 \mbox{ of
-          }  \ve{v} = \ve{0}
-        </me>.
-      </p>
-    </statement>
-  </lemma>
-
-  <proof>
-    <p>
-      (Bewys van <m>\Leftarrow</m>).
-      Veronderstel <m>k=0</m>.
-      Dan <m>k
-      \cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}</m> deur R8 van 'n vektor-ruimte.
-      Aan die ander kant, veronderstel <m>\ve{v} = \ve{0}</m>.
-      Dan <m>k \cdot \ve{v}
-      = k \cdot \ve{0} = \ve{0}</m> deur <xref ref="mult_by_zero_ex">Oefening</xref>.
-    </p>
-
-    <p>
-      (Bewys van <m>\Rightarrow</m>).
-      Veronderstel <m>k \cdot \ve{v} = \ve{0}</m>.
-      Daar
-      is twee moontlikhede: &#xf3;f <m>k = 0</m>, &#xf3;f <m>k \neq 0</m>.
-      As <m>k=0</m>, dan is ons
-      klaar.
-      As <m>k \neq 0</m>, dan bestaan
-      <m>\frac{1}{k}</m> en ons vermenigvuldig
-      albei kante daardeur:
-      <md>
-        <mrow>k \cdot \ve{v} \amp  = \ve{0}</mrow>
-        <mrow>\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k}
-        \cdot \ve{0} \amp \amp  \mbox{(Vermenigvuldig beide kante met
-        \(\frac{1}{k}\))}</mrow>
-        <mrow>\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp 
-         \mbox{(R6 aan LK. Gebruik } <xref ref="mult_by_zero_ex">Oefening</xref> \mbox{ aan die RK.)}</mrow>
-        <mrow>\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(gebruik \(\frac{1}{k}
-        k = 1\))}</mrow>
-        <mrow>\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}</mrow>
-      </md>
-    </p>
-
-    <p>
-      Daarom, in die geval waar <m>k \neq 0</m> dit volg dat <m>\ve{v} = \ve{0}</m>,
-      wat ons in die eerste plek wou bewys.
-    </p>
-  </proof>
-
+ 
   <exercises>
 
   <exercise>
@@ -221,7 +244,20 @@
     </statement>
   </exercise>
 
-  <exercise>
+  <exercise xml:id="fivevequals2v">
+    <statement>
+    <p>
+      Laat <m>V</m> 'n vektorruimte wees. Veronderstel dat 'n vektor  <m>\ve{v} \in V</m> bevredig
+      <men xml:id="funny-eqn-smul">
+        5\smul \ve{v} = 2 \smul \ve{v}.
+      </men>
+      Toon aan dat <m>\ve{v}=\ve{0}</m>.
+    </p>
+  </statement>
+  </exercise>
+
+
+  <exercise xml:id="solve_for_x_exercise">
     <statement>
       <p>
         Veronderstel dat twee vektore <m>\ve{x}</m> en <m>\ve{w}</m> in 'n
@@ -234,6 +270,76 @@
       </p>
     </statement>
   </exercise>
+
+  <exercise>
+    <statement>
+    <p>
+      Suppose <m>V</m> is a vector space which is not the zero vector space. Show that <m>V</m> contains infinitely many elements.
+    </p>
+  </statement>
+  <hint xml:id="inf-elements-hint1">
+    <p>
+      Since <m>V</m> is not the zero vector space, there must exist a vector <m>\ve{v} \in V</m> such that <m>\ve{v} \neq \ve{0}</m>.
+    </p>
+  </hint>
+  <hint>
+    <p>
+      Use the idea of the proof from <xref ref="fivevequals2v"/>.
+    </p>
+  </hint>
+  </exercise>
+
+<!-- TO DO: Translate to Afrikaans: beginning -->
+
+  <exercisegroup>
+    <title>True or False</title>
+    <introduction>
+      <p>
+      For each of the following statements, write down whether the statement is true or false, and prove your assertion. (In other words, if you say that it is true, prove that it is true, and if you say that it is false, prove that it is false, by giving an <em>explicit counterexample</em>.)
+      </p>
+    </introduction>
+    <exercise xml:id="is_k_equal_to_zero">
+      <statement>
+      <p>
+        If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>k=0</m>.
+      </p>
+    </statement>
+    </exercise>
+    <exercise>
+      <statement>
+      <p>
+        If <m>k \smul \ve{v} = \ve{0}</m> in a vector space, then it necessarily follows that <m>\ve{v}=\ve{0}</m>.
+      </p>
+    </statement>
+    </exercise>
+
+    <exercise xml:id="empty_vector_space">
+      <statement>
+      <p>
+        The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2">D2</xref>, <xref ref="D3">D3</xref> satisfying the rules of a vector space.
+      </p>
+    </statement>
+    </exercise>
+    
+    <exercise>
+      <statement>
+      <p>
+      Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.
+      </p>
+    </statement>
+    </exercise>
+
+    <exercise xml:id="R7_follows">
+      <statement>
+      <p>
+      Rule <xref ref="R7">R7</xref> of a vector space follows automatically from the other rules.
+      </p>
+    </statement>
+    </exercise>
+  </exercisegroup>
+
+<!-- Translate to Afrikaans: end -->
+  
 
 </exercises>
 </section>

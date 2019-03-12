@@ -130,7 +130,7 @@
 
   <proof>
     <p>
-      (Proof of <m>\Leftarrow</m>).
+      <alert>(Proof of <m>\Leftarrow</m>)</alert>.
       Suppose <m>k=0</m>.
       Then <m>k \smul\ve{v} = 0 \smul\ve{v} = \ve{0}</m> by R8 of a vector space.
       On the other hand, suppose <m>\ve{v} = \ve{0}</m>.
@@ -245,13 +245,11 @@
     </p>
   </statement>
   <hint xml:id="inf-elements-hint1">
-    <title>First hint</title>
     <p>
       Since <m>V</m> is not the zero vector space, there must exist a vector <m>\ve{v} \in V</m> such that <m>\ve{v} \neq \ve{0}</m>.
     </p>
   </hint>
   <hint>
-    <title>Second hint</title>
     <p>
       Use the idea of the proof from <xref ref="fivevequals2v"/>.
     </p>
