@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="af-ZA">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:37+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.3.1</span> <span class="title">Die versameling \(B\) is 'n vektorruimte.</span>
+</h6>
+<p><em class="alert">1. Definieer 'n versameling \(B\)</em></p>
+<p>Ons definieer</p>
+<div class="displaymath">
+\begin{equation}
+B := \{ (u_1, \, u_2, \, u_3) : u_1, u_2, u_3 \in \mathbb{R} \mbox{ and }  u_1 - u_2 + u_3 = 0\} \text{.}\tag{1.3.1}
+\end{equation}
+</div>
+<p><em class="alert">2. Definieer sommering, die nul-vektor en skalaarvermenigvuldiging.</em></p>
+<dl class="description-list">
+<dt>D1. Sommering</dt>
+<dd>
+<p>Ons definieer sommering soos volg. Veronderstel \(\ve{u} = (u_1, \,
+u_2, \, u_3)\) en \(\ve{v} = (v_1, , v_2, \, v_3)\) is elemente van \(B\text{.}\) Let op dat dit beteken \(u_1 - u_2 + u_3 = 0\) en \(v_1 - v_2 + v_3 = 0\text{.}\) Ons definieer \(\ve{u} + \ve{v}\) as:</p>
+<div class="displaymath">
+\begin{equation}
+\ve{u} + \ve{v} := (u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3)\text{.}\tag{1.3.2}
+\end{equation}
+</div>
+<p>Ons moet nagaan dat dit sin maak. Ons behoort te vind dat \(\ve{u} +
+\ve{v}\) ook 'n element van \(B\) is. Ons kan nie bloot enige definisie neerskryf nie! Om na te gaan of \(\ve{u} + \ve{v}\) 'n element van\(B\) is, moet ons nagaan of dit vergelyking <a knowl="./knowl/def_of_b.html" title="Vergelyking 1.3.1">(1.3.1)</a> bevredig. Kom ons kyk:</p>
+<div class="displaymath">
+\begin{align*}
+\amp (u_1 + v_1) - (u_2 + v_2) + (u_3 + v_3)\\
+\amp = (u_1 - u_2 + u_3) + (v_1 - v_2 + v_3) \amp \amp  \mbox{(Hierdie
+algebra{\"i}ese
+stap is waar vir gewone getalle)}\\
+\amp = 0 + 0 \amp \amp  \mbox{(want \(\ve{u}\) en \(\ve{v}\) is in \(B\))}\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<p>Daarom het ons dat \(\ve{u} + \ve{v}\) inderdaad 'n element van \(B\) is, so ons het ons eie goed-gedefinieerde? sommeringsbewerking op \(B\) definieer, wat twee arbitrêre elemente van \(B\) neem en weer 'n element van \(B\) teruggee.</p>
+</dd>
+<dt>D2. Nulvektor</dt>
+<dd>
+<p>Ons definieer die nulvektor \(\ve{0} \in B\) as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := (0, 0, 0)\text{.}\tag{1.3.3}
+\end{equation}
+</div>
+<p>Ons moet seker maak dat dit sin maak. Is \((0,0,0)\) regtig 'n element van \(B\text{,}\) oftewel, bevredig dit vergelyking <a knowl="./knowl/def_of_b.html" title="Vergelyking 1.3.1">(1.3.1)</a>? Ja, omdat \(0 - 0 + 0 = 0\text{.}\) So ons het 'n goed-gedefinieerde nul-vektor.</p>
+</dd>
+<dt>D3. Skalaarvermenigvuldiging</dt>
+<dd>
+<p>Ons definieer skalaarvermenigvuldiging soos op \(B\) soos volg. Laat \(k\) 'n reële getal en\(\ve{u} = (u_1, \, u_2, \, u_3)\) 'n element van \(B\) wees. Ons definieer</p>
+<div class="displaymath">
+\begin{equation}
+k \cdot \ve{u} := (ku_1, \, ku_2, \, ku_3)\text{.}\tag{1.3.4}
+\end{equation}
+</div>
+<p>Ons moet seker maak dat dit sinmaak. As ek 'n vektor \(\ve{v}\) in \(B\) met 'n skalaar \(k\) vermenigvuldig, dan moet die resultaat \(k \cdot
+\ve{u}\) 'n element van \(B\) wees. Behoort \((ku_1, \, ku_2, \, ku_3)\) werklik aan \(B\text{?}\) Kom ons kyk of dit die definiërende vergelyking <a knowl="./knowl/def_of_b.html" title="Vergelyking 1.3.1">(1.3.1)</a> bevredig:</p>
+<div class="displaymath">
+\begin{align*}
+\amp  ku_1 - ku_2 + ku_3\\
+\amp = k (u_1 - u_2 + u_3) \amp \amp  \mbox{(Hierdie algebra{\"i}ese stap is
+waar vir gewone getalle)}\\
+\amp = k 0 \amp \amp  \mbox{(want \(\ve{u}\) is in \(B\))}\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<p>Daarom is \(k \cdot \ve{u}\) wel 'n element van \(B\text{,}\) so ons het 'n goed-gedefinieerde skalaarvermenigvuldigingsbewerking op \(B\) gevind.</p>
+</dd>
+</dl>
+<p><em class="alert">3. Maak seker die data bevredig die reëls.</em></p>
+<p>Ons moet seker maak dat ons data D1, D2 en D3 reëls R1 — R8 bevredig. So, veronderstel \(\ve{u} = (u_1, \, u_2, \,u_3)\text{,}\) \(\ve{v} =
+(v_1, \, v_2, \, v_3)\) en \(\ve{w} = (w_1, \, w_2, \, w_3)\) is in \(B\) en veronderstel dat \(k\) en \(l\) reëlle getalle is.</p>
+<dl class="description-list">
+<dt>R1</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+\amp  \ve{v} + \ve{w}\tag{R1.}\\
+\amp  = (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(definisie van
+sommering in \(B\))}\\
+\amp  = (w_1 + v_1, \, w_2 + v_2, \, w_3 + v_3) \amp \amp 
+\mbox{(want  \(x + y = y + x\) is waar vir
+re{\"e}le
+getalle)}\\
+\amp = \ve{w} + \ve{v}. \amp \amp  \mbox{(definisie van sommering in \(B\))}
+\end{align*}
+</div>
+</dd>
+<dt>R2</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+\amp  (\ve{u} + \ve{v}) + \ve{w}\\
+\amp = ( u_1 + v_1, \, u_2 + v_2, \, u_3 + v_3) + \ve{w} \amp \amp 
+\mbox{(definisie van sommering in \(B\))}\\
+\amp = ( (u_1 + v_1) + w_1, \, (u_2 + v_2) + w_2, \, (u_3 + v_3) + w_3) \amp \amp 
+\mbox{(definisie van sommering in \(B\))}\\
+\amp = ( u_1 + (v_1 + w_1), \, u_2 + (v_2 + w_2), \, u_3 + (v_3 + w_3)) \amp \amp 
+\mbox{(want \((x + y) + z = x + (y + z)\) is waar
+vir re{\"e}le getalle)}\\
+\amp = \ve{u} + (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp 
+\mbox{(definisie van sommering in \(B\))}\\
+\amp = \ve{u} + (\ve{v} + \ve{w}) \amp \amp  \mbox{(definisie van sommering in
+\(B\))} \text{.}
+\end{align*}
+</div>
+</dd>
+<dt>R3</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+\amp \ve{0} + \ve{v}\\
+\amp = ( 0, \, 0, \, 0) + (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(definisie van die
+nul-vektor in\(B\)}\\
+\amp = (0 + v_1, \, 0 + v_2, \, 0 + v_3) \amp \amp  \mbox{(definisie van sommering
+in \(B\))}\\
+\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(want \(x + 0 = x\) is waar vir
+re{\"e}le getalle)}\\
+\amp = \ve{v}\text{.}
+\end{align*}
+</div>
+<p>Met dieselfde benadering, gaan ons na dat \(\ve{v} + \ve{0} = \ve{v}\text{.}\)</p>
+</dd>
+<dt>R4</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+\amp  k \cdot ( \ve{v + w} )\\
+\amp = k \cdot (v_1 + w_1, \, v_2 + w_2, \, v_3 + w_3) \amp \amp  \mbox{(definisie
+van sommering in \(B\))}\\
+\amp = (k (v_1 + w_1, \, k (v_2 + w_2), \, k (v_3 + w_3) ) \amp \amp 
+\mbox{(definisie van skalaarvermenigvuldiging in\(B\))}\\
+\amp = (kv_1 + kw_1, \, kv_2 + kw_2, \, kv_3 + kw_3) \amp \amp  \mbox{(want \(k(x+y)
+= kx + ky\) vir re{\"e}le getalle \(x,y\))}\\
+\amp = (kv_1, \, kv_2, \, kv_3) + (kw_1, \, kw_2,\, kw_3) \amp \amp 
+\mbox{(definisie van sommering in \(B\))}\\
+\amp = k \cdot \ve{v} + k \cdot \ve{w} \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in \(B\))}
+\end{align*}
+</div>
+</dd>
+<dt>R5</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+\amp  (k + l) \cdot \ve{v}\\
+\amp = ( (k+l) v_1, \, (k+l) v_2,  \, (k+l) v_3) \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in \(B\))}\\
+\amp = (kv_1 + lv_1, \, kv_2 + lv_2, \, kv_3 + lv_3) \amp \amp  \mbox{(want \((k+l)x
+= kx + lx\) vir re{\"e}le getalle)}\\
+\amp = (kv_1, \, kv_2, \, kv_3) + (lv_1, \, lv_2, \, lv_3) \amp \amp 
+\mbox{(definisie van sommering in \(B\))}\\
+\amp = k \cdot \ve{v} + l \cdot \ve{v} \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in \(B\))}
+\end{align*}
+</div>
+</dd>
+<dt>R6</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+\amp  k \cdot (l \cdot \ve{v})\\
+\amp = k \cdot (l v_1, \, l v_2, \, lv_3) \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in \(B\))}\\
+\amp = (k (lv_1), \, k (lv_2), \, k (lv_3)) \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in \(B\))}\\
+\amp = ( (kl) v_1, \, (kl) v_2, \, (kl) v_3) \amp \amp  \mbox{(want \(k(lx) = (kl)x\)
+vir re{\"e}le getalle)}\\
+\amp = (kl) \cdot \ve{v} \amp \amp  \mbox{(definisie van skalaarvermenigvuldiging
+in \(B\))} \text{.}
+\end{align*}
+</div>
+</dd>
+<dt>R7</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+1 \cdot \ve{v} \amp = (1v_1, \, 1v_2, \, 1v_3) \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in \(B\))}\\
+\amp = (v_1, \, v_2, \, v_3) \amp \amp  \mbox{(want \(1 x = x\) vir re{\"e}le getalle
+\(x\))}\\
+\amp = \ve{v}\text{.}
+\end{align*}
+</div>
+</dd>
+<dt>R8</dt>
+<dd>
+<p>Ons gaan na:</p>
+<div class="displaymath">
+\begin{align*}
+0 \cdot \ve{v} \amp = (0v_1, \, 0v_2, \, 0v_3) \amp \amp  \mbox{(definisie van
+skalaarvermenigvuldiging in in \(B\))}\\
+\amp = (0, \, 0, \, 0) \amp \amp  \mbox{(want \(0 x = 0\) vir re{\"e}le getalle}\\
+\amp = \ve{0} \amp \amp  \mbox{(definisie van die nul-vektor in \(B\))} \text{.}
+\end{align*}
+</div>
+</dd>
+</dl></article><span class="incontext"><a href="ACh1Sec3ExampleVectorSpace.html#B_is_vs">in-konteks</a></span>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:36+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="af-ZA">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>'n Paar resultate rakende abstrakte vektorruimtes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Slaan oor na hoofinhoud</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Lineêre Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh1Sec4MoreExamples.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh1Sec6Subspaces.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-right-toggle-button button active">Aantekeninge</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh1Sec4MoreExamples.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh1Sec6Subspaces.html" title="Volgende">Volgende</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Voorsake</span></a></h2>
+<ul><li><a href="ACh0NoteForStudent.html" data-scroll="ACh0NoteForStudent">Nota aan die student</a></li></ul>
+<h2 class="link"><a href="ACh1AbstractVectorSpaces.html" data-scroll="ACh1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstrakte vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh1Sec1Intro.html" data-scroll="ACh1Sec1Intro">Inleiding</a></li>
+<li><a href="ACh1Sec2DefVectorSpace.html" data-scroll="ACh1Sec2DefVectorSpace">Definisie van 'n abstrakte vektorruimte</a></li>
+<li><a href="ACh1Sec3ExampleVectorSpace.html" data-scroll="ACh1Sec3ExampleVectorSpace">Eerste voorbeeld van 'n vektorruimte</a></li>
+<li><a href="ACh1Sec4MoreExamples.html" data-scroll="ACh1Sec4MoreExamples">Verdere voorbeelde en slaggate</a></li>
+<li><a href="ACh1Sec5ResultsVectorSpace.html" data-scroll="ACh1Sec5ResultsVectorSpace" class="active">'n Paar resultate rakende abstrakte vektorruimtes</a></li>
+<li><a href="ACh1Sec6Subspaces.html" data-scroll="ACh1Sec6Subspaces">Deelruimtes</a></li>
+</ul>
+<h2 class="link"><a href="ACh2FinDimVectorSpaces.html" data-scroll="ACh2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Eindigdimensionele vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh2Sec1DefFinDimVectorSpaces.html" data-scroll="ACh2Sec1DefFinDimVectorSpaces">Definisie van eindigdimensionele vektorruimtes</a></li>
+<li><a href="ACh2Sec2LinearIndependence.html" data-scroll="ACh2Sec2LinearIndependence">Lineêre onafhanklikheid</a></li>
+<li><a href="ACh2Sec3BasisDimension.html" data-scroll="ACh2Sec3BasisDimension">Basis en dimensie</a></li>
+<li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
+<li><a href="ACh2Sec5ChangeOfBasis.html" data-scroll="ACh2Sec5ChangeOfBasis">Basisverandering</a></li>
+</ul>
+<h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">3</span> <span class="title">Matrikshersiening</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Geskryf in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh1Sec5ResultsVectorSpace"><h2 class="heading hide-type">
+<span class="type">Afdeling</span> <span class="codenumber">1.5</span> <span class="title">'n Paar resultate rakende abstrakte vektorruimtes</span>
+</h2>
+<a href="ACh1Sec5ResultsVectorSpace.html" class="permalink">¶</a><p id="p-175">Dit is tyd om die reëls van vektorruimtes te gebruik om 'n paar algemene resultate te bewys.</p>
+<article class="assemblage-like" id="assemblage-5"><p id="p-176">Ons is op die punt om on eerste formele bewys in die kursus te doen!</p></article><article class="theorem-like" id="lemma-1"><h6 class="heading">
+<span class="type">Hulpstelling</span> <span class="codenumber">1.5.1</span>
+</h6>
+<p id="p-177">Veronderstel \(V\) is 'n vektor-ruimte met nul-vektor \(\ve{0}\text{.}\) As \(\ve{0}'\) 'n ander vektor is wat reël R3(a) bevredig,</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0}' + \ve{v} = \ve{v}\text{ vir alle }\ve{v} \in V\label{uniqueness_zero}\tag{1.5.1}
+\end{equation}
+</div>
+<p>dan volg dit dat \(\ve{0} = \ve{0}'\text{.}\)</p></article><article class="hiddenproof" id="proof-1"><a knowl="" class="id-ref" refid="hk-proof-1"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-1" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+\ve{0} \amp = \ve{0}' + \ve{0} \amp \amp  \text{gebruik } \knowl{./knowl/uniqueness_zero.html}{\text{(1.5.1)}} \text{ vir } \ve{v}=\ve{0} \\
+\amp = \ve{0}' \amp \amp  \text{( } \knowl{./knowl/R3b.html}{\text{R3b }}\text{)}
+\end{align*}
+</div></article></div>
+<article class="definition-like" id="definition-2"><h6 class="heading">
+<span class="type">Definisie</span> <span class="codenumber">1.5.2</span>
+</h6>
+<p id="p-178">Laat \(V\) 'n vektorruimte wees; ons definieer die <dfn class="terminology">sommeringsinverse</dfn> van 'n vektor \(\ve{v} \in V\) as</p>
+<div class="displaymath">
+\begin{equation*}
+- \ve{v} := (-1) \cdot \ve{v}
+\end{equation*}
+</div></article><article class="theorem-like" id="add_inv"><h6 class="heading">
+<span class="type">Hulpstelling</span> <span class="codenumber">1.5.3</span>
+</h6>
+<p id="p-179">As \(V\) 'n vektorruimte is, dan vir alle \(\ve{v} \in V\text{,}\)</p>
+<div class="displaymath">
+\begin{equation}
+-\ve{v} + \ve{v} = \ve{0} \mbox{ en }  \ve{v} + (-\ve{v}) = \ve{0}\text{.}\tag{1.5.2}
+\end{equation}
+</div></article><article class="hiddenproof" id="proof-2"><a knowl="" class="id-ref" refid="hk-proof-2"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-2" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+-\ve{v} + \ve{v} \amp = (-1) \smul\ve{v} + \ve{v} \amp \amp  \mbox{(Definisie \(- \ve{v}\))}\\
+\amp = (-1) \smul\ve{v} + 1 \smul\ve{v} \amp \amp  \mbox{}\\
+\amp  = (-1 + 1) \smul\ve{v} \amp \amp  \mbox{(R5)}\\
+\amp = 0 \smul\ve{v}\\
+\amp = \ve{0} \amp \amp  \mbox{(R8)}
+\end{align*}
+</div>
+<p id="p-180">Verder,</p>
+<div class="displaymath">
+\begin{align*}
+\ve{v} + (-\ve{v}) \amp = -\ve{v} + \ve{v} \amp \amp  \mbox{(R1)}\\
+\amp  = \ve{0} \amp \amp  \mbox{(deur vorige bewys)}
+\end{align*}
+</div></article></div>
+<article class="theorem-like" id="lemma-3"><h6 class="heading">
+<span class="type">Hulpstelling</span> <span class="codenumber">1.5.4</span>
+</h6>
+<p id="p-181">Veronderstel twee vektore \(\ve{w}\) en \(\ve{v}\) in 'n vektor-ruimte bevredig \(\ve{w} + \ve{v} = \ve{0}\text{.}\) Dan volg dit dat \(\ve{w} = -\ve{v}\text{.}\)</p></article><article class="hiddenproof" id="proof-3"><a knowl="" class="id-ref" refid="hk-proof-3"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-3" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+\ve{w} \amp = \ve{w} + \ve{0} \amp \amp  \mbox{(R3b)}\\
+\amp = \ve{w} + (\ve{v} + -\ve{v}) \amp \amp  \knowl{./knowl/add_inv.html}{\text{Hulpstelling 1.5.3}}\\
+\amp = (\ve{w} + \ve{v}) + -\ve{v}) \amp \amp  \mbox{(R2)}\\
+\amp = \ve{0} + -\ve{v} \amp \amp  \mbox{(volgens aanname)}\\
+\amp = -\ve{v} \amp \amp  \mbox{(R3a)} \text{.}
+\end{align*}
+</div></article></div>
+<p id="p-182">Laat ons twee meer hulpstellings bewys, net vir goeie oefening.</p>
+<article class="theorem-like" id="scalar_times_zero_vec"><h6 class="heading">
+<span class="type">Hulpstelling</span> <span class="codenumber">1.5.5</span>
+</h6>
+<p id="p-183">Laat \(V\) 'n vektorruimte wees en \(k\) enige skalaar. Dan is</p>
+<div class="displaymath">
+\begin{equation*}
+k \smul\ve{0} = \ve{0}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-4"><a knowl="" class="id-ref" refid="hk-proof-4"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-4" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><div class="displaymath">
+\begin{align*}
+k \smul\ve{0} \amp = k \smul(0 \smul\ve{0}) \amp \text{(R8 for } \ve{v}=\ve{0}\text{)} \\
+\amp = ((k)(0))\smul\ve{0} \amp \text{(R6)} \\
+\amp = 0 \smul\ve{0} \amp \text{(} (k)(0)=0 \text{ vir enige reële getal }  k \text{)} \\
+\amp = \ve{0} \amp \text{(R8 vir } \ve{v}=\ve{0}\text{)} 
+\end{align*}
+</div></article></div>
+<article class="theorem-like" id="dichotomy_lem"><h6 class="heading">
+<span class="type">Hulpstelling</span> <span class="codenumber">1.5.6</span>
+</h6>
+<p id="p-184">Veronderstel dat \(\ve{v}\) 'n vektor in 'n vektorruimte \(V\) is en dat \(k\) 'n skalaar is. Dan volg dit dat</p>
+<div class="displaymath">
+\begin{equation*}
+k \cdot \ve{v} = \ve{0}  \Leftrightarrow  k = 0 \mbox{ of
+}  \ve{v} = \ve{0}\text{.}
+\end{equation*}
+</div></article><article class="hiddenproof" id="proof-5"><a knowl="" class="id-ref" refid="hk-proof-5"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-5" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-185"><em class="alert">Bewys van \(\Leftarrow\)</em>. Veronderstel \(k=0\text{.}\) Dan \(k
+\cdot \ve{v} = 0 \cdot \ve{v} = \ve{0}\) deur R8 van 'n vektor-ruimte. Aan die ander kant, veronderstel \(\ve{v} = \ve{0}\text{.}\) Dan \(k \cdot \ve{v}
+= k \cdot \ve{0} = \ve{0}\) deur <a knowl="./knowl/mult_by_zero_ex.html" title="Oefening 1.5.2">Oefening 1.5.2</a>.</p>
+<p id="p-186"><em class="alert">Bewys van \(\Rightarrow\))</em>. Veronderstel \(k \cdot \ve{v} = \ve{0}\text{.}\) Daar is twee moontlikhede: óf \(k = 0\text{,}\) óf \(k \neq 0\text{.}\) As \(k=0\text{,}\) dan is ons klaar. As \(k \neq 0\text{,}\) dan bestaan \(\frac{1}{k}\) en ons vermenigvuldig albei kante daardeur:</p>
+<div class="displaymath">
+\begin{align*}
+k \cdot \ve{v} \amp  = \ve{0}\\
+\therefore  \frac{1}{k} \cdot (k \cdot \ve{v})  \amp  = \frac{1}{k}
+\cdot \ve{0} \amp \amp  \mbox{(Vermenigvuldig beide kante met
+\(\frac{1}{k}\))}\\
+\therefore \left(\frac{1}{k} k\right) \cdot \ve{v} \amp = \ve{0} \amp \amp 
+\mbox{(R6 aan LK. Gebruik } \knowl{./knowl/mult_by_zero_ex.html}{\text{Oefening 1.5.2}} \mbox{ aan die RK.)}\\
+\therefore 1 \cdot \ve{v} \amp = \ve{0} \amp \amp  \mbox{(gebruik \(\frac{1}{k}
+k = 1\))}\\
+\therefore \ve{v} \amp = \ve{0} \amp \amp  \mbox{(R7)}
+\end{align*}
+</div>
+<p id="p-187">Daarom, in die geval waar \(k \neq 0\) dit volg dat \(\ve{v} = \ve{0}\text{,}\) wat ons in die eerste plek wou bewys.</p></article></div>
+<article class="example-like" id="explicit_solve_x"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.5.7</span>
+</h6>
+<p id="p-188">Kom ons oefen die gebruik van die reëls van vektorruimtes om alledaagse berekeninge uit te voer. Byvoorbeeld, veronderstel dat ons vir die vektor \(\ve{x}\) in die volgende vergelyking wil oplos:</p>
+<div class="displaymath">
+\begin{equation}
+\ve{v} + 7 \cdot \ve{x} = \ve{w}\tag{1.5.3}
+\end{equation}
+</div>
+<p id="p-189">Ons gaan te werk met die reëls soos volg:</p>
+<div class="displaymath">
+\begin{align*}
+\ve{v} + 7 \cdot \ve{x} \amp  = \ve{w}\\
+\therefore  -\ve{v} + (\ve{v} + 7 \cdot \ve{x}) \amp  = -\ve{v} +
+\ve{w} \amp \amp  \mbox{(tel \(-\ve{v}\) aan beide kante by)}\\
+\therefore  (-\ve{v} + \ve{v}) + 7 \cdot \ve{x} \amp  = -\ve{v} +
+\ve{w} \amp \amp  \mbox{(gebruik R2 aan LK)}\\
+\therefore  \ve{0} + 7 \cdot \ve{x} \amp  = -\ve{v} + \ve{w} \amp \amp 
+\mbox{(gebruik \knowl{./knowl/add_inv.html}{\text{Lemma 1.5.3}} aan LK)}\\
+\therefore  7 \cdot \ve{x} \amp  =  -\ve{v} + \ve{w} \amp \amp  \mbox{(gebruik
+R3a aan LK)}\\
+\therefore  \frac{1}{7} \cdot (7 \cdot \ve{x}) \amp  = \frac{1}{7}
+\cdot (-\ve{v} + \ve{w}) \amp \amp  \mbox{(skalaarvermenigvuldig aan beide
+kante met \(\frac{1}{7}\))}\\
+\therefore  (\frac{1}{7} 7) \cdot   \ve{x} \amp  = \frac{1}{7} \cdot
+(-\ve{v} + \ve{w}) \amp \amp  \mbox{(gebruik R6 aan LK)}\\
+\therefore  1 \cdot \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} +
+\ve{w})  \amp \amp  \mbox{(vermenigvuldig \(\frac{1}{7}\) met \(7\))}\\
+\therefore  \ve{x} \amp  =  \frac{1}{7} \cdot (-\ve{v} + \ve{w}) \amp \amp 
+\mbox{(R7)}
+\end{align*}
+</div>
+<p id="p-190">Soos die kursus vorder sal ons hierdie stappe uitlaat. Maar dit is belangrik dat jy hulle almal kan weergee, as dit van jou gevra sou word!</p></article><section class="exercises" id="exercises-3"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber"></span> <span class="title">Oefeninge</span>
+</h3>
+<article class="exercise-like" id="exercise-17"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-191">Bewys dat, vir alle vektore \(v\) in 'n vektorruimte, \(-(-\ve{v}) = \ve{v}\text{.}\)</p></article><article class="exercise-like" id="mult_by_zero_ex"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-192">Laat \(V\) 'n vektorruimte wees met nul-vektor \(\ve{0}\text{.}\) Bewys dat vir alle skalare \(k\text{,}\) \(k \cdot \ve{0} = \ve{0}\text{.}\)</p></article><article class="exercise-like" id="fivevequals2v"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-193">Laat \(V\) 'n vektorruimte wees. Veronderstel dat 'n vektor  \(\ve{v} \in V\) bevredig</p>
+<div class="displaymath">
+\begin{equation}
+5\smul \ve{v} = 2 \smul \ve{v}.\label{funny-eqn-smul}\tag{1.5.4}
+\end{equation}
+</div>
+<p>Toon aan dat \(\ve{v}=\ve{0}\text{.}\)</p></article><article class="exercise-like" id="solve_for_x_exercise"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-194">Veronderstel dat twee vektore \(\ve{x}\) en \(\ve{w}\) in 'n vektorruimte \(2 \ve{x} + 6 \ve{w} = \ve{0}\) bevredig. Los op vir \(\ve{x}\text{,}\) maar wys eksplisiet hoe jy die reëls van 'n vektorruimte gebruik het, soos in <a knowl="./knowl/explicit_solve_x.html" title="Voorbeeld 1.5.7">Voorbeeld 1.5.7</a>.</p></article><article class="exercise-like" id="exercise-21"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-195">Suppose \(V\) is a vector space which is not the zero vector space. Show that \(V\) contains infinitely many elements.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-inf-elements-hint1" id="inf-elements-hint1"><span class="type">Wenk</span> <span class="codenumber">1</span></a><div id="hk-inf-elements-hint1" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-196">Since \(V\) is not the zero vector space, there must exist a vector \(\ve{v} \in V\) such that \(\ve{v} \neq \ve{0}\text{.}\)</p></div></div>
+<a knowl="" class="id-ref" refid="hk-hint-3" id="hint-3"><span class="type">Wenk</span> <span class="codenumber">2</span></a><div id="hk-hint-3" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-197">Use the idea of the proof from <a knowl="./knowl/fivevequals2v.html" title="Oefening 1.5.3">Oefening 1.5.3</a>.</p></div></div>
+</div></article><div class="exercisegroup" id="exercisegroup-1">
+<h6 class="heading"><span class="title">True or False</span></h6>
+<div class="introduction" id="introduction-3"><p id="p-198">For each of the following statements, write down whether the statement is true or false, and prove your assertion. (In other words, if you say that it is true, prove that it is true, and if you say that it is false, prove that it is false, by giving an <em class="emphasis">explicit counterexample</em>.)</p></div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="is_k_equal_to_zero"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-199">If \(k \smul \ve{v} = \ve{0}\) in a vector space, then it necessarily follows that \(k=0\text{.}\)</p></article><article class="exercise-like" id="exercise-23"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-200">If \(k \smul \ve{v} = \ve{0}\) in a vector space, then it necessarily follows that \(\ve{v}=\ve{0}\text{.}\)</p></article><article class="exercise-like" id="empty_vector_space"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-201">The empty set can be equipped with data <a knowl="./knowl/D1.html" title="Item: D1.">D1 </a>, <a knowl="./knowl/D2.html" title="Item: D2.">D2 </a>, <a knowl="./knowl/D3.html" title="Item: D3.">D3 </a> satisfying the rules of a vector space.</p></article><article class="exercise-like" id="exercise-25"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-202">Rule <a knowl="./knowl/R3b.html" title="Item: R3b.">R3b </a> of a vector space follows automatically from the other rules.</p></article><article class="exercise-like" id="R7_follows"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-203">Rule <a knowl="./knowl/R7.html" title="Item: R7.">R7 </a> of a vector space follows automatically from the other rules.</p></article>
+</div>
+</div></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

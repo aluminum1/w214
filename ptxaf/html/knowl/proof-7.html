@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="af-ZA">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:39+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Bewys</span></h6>
+<p>(1) \(\Rightarrow\) (2). Veronderstel die lys \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_n\) is lineêr afhanklik. Dit beteken dat daar skalare. \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\) bestaan, waarvan nie almal nul is nie, sodat</p>
+<div class="displaymath">
+\begin{equation}
+k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\tag{2.2.6}
+\end{equation}
+</div>
+<p>Laat \(r \in \{1, \,2, \ldots, \, n\}\) die grootste index wees sodat \(k_r \neq 0\text{.}\) (Ons weet dat nie alle \(k_i\) is nul nie, so dit maak sin.) As \(r=1\text{,}\) dan is <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.6">(2.2.6)</a> eenvoudig die vergelyking</p>
+<div class="displaymath">
+\begin{equation*}
+k_1 \ve{v}_1 = \ve{0},  \mbox{waar }  k_1 \neq 0\text{.}
+\end{equation*}
+</div>
+<p>Daarom is \(\ve{v}_1 = \ve{0}\) volgens <a knowl="./knowl/dichotomy_lem.html" title="Hulpstelling 1.5.6">Lemma 1.5.6</a> en ons is klaar. Andersins, veronderstel \(r \neq 1\text{.}\) Dan word <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.6">(2.2.6)</a> die vergelyking</p>
+<div class="displaymath">
+\begin{equation*}
+k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0}, 
+\mbox{waar }  k_r \neq 0\text{.}
+\end{equation*}
+</div>
+<p>Deur met \(k_r\) te deel, kan ons nou vir \(\ve{v}_r\) oplos in terme van die voorafgaande vektore \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r}
+\ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \, \text{.}
+\end{equation*}
+</div>
+<p>(2) \(\Rightarrow\) (1). As \(\ve{v}_1 = \ve{0}\text{,}\) dan is die lys vektore \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_n\) sonder twyfel lineêr afhanklik deur <a knowl="./knowl/remark_about_lin_dependence.html" title="Opmerking 2.2.2">Opmerking 2.2.2</a>. Andersins, veronderstel dat vir 'n \(r \in \{2, 3, \ldots,
+n\}\) is \(\ve{v}_r\) 'n lineêre kombinasie van die voorafgaande vektore, dit is</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{v}_r = a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{r-1}
+\ve{v}_{r-1}\text{.}
+\end{equation*}
+</div>
+<p>Dan volg dit duidelik dat</p>
+<div class="displaymath">
+\begin{equation*}
+a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_{r-1} \ve{v}_{r-1} -
+\ve{v}_r + 0 \ve{v}_{r+1} + \cdots + 0 \ve{v}_n = \ve{0}
+\end{equation*}
+</div>
+<p>wat wys dat die vektore \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_n\) nie lineêr onafhanklik is nie, aangesien nie al die koëffisiënte nul is nie — in besonder is die koëffisiënt van \(\ve{v}_r\) gelyk aan \(-1\text{.}\)</p></article><span class="incontext"><a href="ACh2Sec2LinearIndependence.html#proof-7">in-konteks</a></span>
+</body>
+</html>

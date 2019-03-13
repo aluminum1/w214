@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:36+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="af-ZA">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Verdere voorbeelde en slaggate</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Slaan oor na hoofinhoud</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Lineêre Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh1Sec3ExampleVectorSpace.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh1Sec5ResultsVectorSpace.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-right-toggle-button button active">Aantekeninge</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh1Sec3ExampleVectorSpace.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh1Sec5ResultsVectorSpace.html" title="Volgende">Volgende</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Voorsake</span></a></h2>
+<ul><li><a href="ACh0NoteForStudent.html" data-scroll="ACh0NoteForStudent">Nota aan die student</a></li></ul>
+<h2 class="link"><a href="ACh1AbstractVectorSpaces.html" data-scroll="ACh1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstrakte vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh1Sec1Intro.html" data-scroll="ACh1Sec1Intro">Inleiding</a></li>
+<li><a href="ACh1Sec2DefVectorSpace.html" data-scroll="ACh1Sec2DefVectorSpace">Definisie van 'n abstrakte vektorruimte</a></li>
+<li><a href="ACh1Sec3ExampleVectorSpace.html" data-scroll="ACh1Sec3ExampleVectorSpace">Eerste voorbeeld van 'n vektorruimte</a></li>
+<li><a href="ACh1Sec4MoreExamples.html" data-scroll="ACh1Sec4MoreExamples" class="active">Verdere voorbeelde en slaggate</a></li>
+<li><a href="ACh1Sec5ResultsVectorSpace.html" data-scroll="ACh1Sec5ResultsVectorSpace">'n Paar resultate rakende abstrakte vektorruimtes</a></li>
+<li><a href="ACh1Sec6Subspaces.html" data-scroll="ACh1Sec6Subspaces">Deelruimtes</a></li>
+</ul>
+<h2 class="link"><a href="ACh2FinDimVectorSpaces.html" data-scroll="ACh2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Eindigdimensionele vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh2Sec1DefFinDimVectorSpaces.html" data-scroll="ACh2Sec1DefFinDimVectorSpaces">Definisie van eindigdimensionele vektorruimtes</a></li>
+<li><a href="ACh2Sec2LinearIndependence.html" data-scroll="ACh2Sec2LinearIndependence">Lineêre onafhanklikheid</a></li>
+<li><a href="ACh2Sec3BasisDimension.html" data-scroll="ACh2Sec3BasisDimension">Basis en dimensie</a></li>
+<li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
+<li><a href="ACh2Sec5ChangeOfBasis.html" data-scroll="ACh2Sec5ChangeOfBasis">Basisverandering</a></li>
+</ul>
+<h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">3</span> <span class="title">Matrikshersiening</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Geskryf in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh1Sec4MoreExamples"><h2 class="heading hide-type">
+<span class="type">Afdeling</span> <span class="codenumber">1.4</span> <span class="title">Verdere voorbeelde en slaggate</span>
+</h2>
+<a href="ACh1Sec4MoreExamples.html" class="permalink">¶</a><article class="example-like" id="example-2"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.1</span> <span class="title">Nie 'n vektor-ruimte nie</span>
+</h6>
+<p id="p-113">Definieer die versameling \(V\) deur</p>
+<div class="displaymath">
+\begin{equation}
+V := \{ a, b \} \text{.}\tag{1.4.1}
+\end{equation}
+</div>
+<p id="p-114">Definieer die sommeringsbewerking deur</p>
+<div class="displaymath">
+\begin{align*}
+\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{a}\\
+\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{c}
+\end{align*}
+</div>
+<p id="p-115">Om na te gaan of dit 'n goed-gedefinieerde bewerking is, moet ons nagaan dat die sommering van enige twee elemente van \(V\) 'n goed-gedefinieerde element van \(V\) lewer. Maar \(\ve{v} + \ve{b} =
+\ve{c}\text{,}\) so die som van \(\ve{b} \in V\) met homself lewer iets (\(\ve{c}\)) wat nie 'n element van \(V\) is nie. So \(V\) is nie 'n vektorruimte nie want dit het nie 'n goed-gedefinieerde sommeringsbewerking nie.</p></article><article class="example-like" id="example-3"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.2</span> <span class="title">Weereens nie 'n vektor-ruimte nie</span>
+</h6>
+<p id="p-116">Definieer die versameling \(V\) deur</p>
+<div class="displaymath">
+\begin{equation}
+V := \{ a, b \} \text{.}\tag{1.4.2}
+\end{equation}
+</div>
+<p id="p-117">Definieer die sommeringsbewerking as</p>
+<div class="displaymath">
+\begin{align*}
+\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{b}\\
+\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{a}
+\end{align*}
+</div>
+<p id="p-118">Dit is 'n goed-gedefinieerde bewerking, omdat enige twee elemente van \(V\) se som n goedgedefinieerde element van \(V\) lewer.</p>
+<p id="p-119">Definieer die nul-vektor deur</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := \ve{a}\text{.}\label{ne_13}\tag{1.4.3}
+\end{equation}
+</div>
+<p id="p-120">Dit is goed-gedefinieerd, want \(\ve{a}\) is 'n element van \(V\text{.}\)</p>
+<p id="p-121">Definieer skalaarvermenigvuldiging met 'n reële getal \(k \in
+\mathbb{R}\) as</p>
+<div class="displaymath">
+\begin{equation}
+k \cdot \ve{a} := \ve{a}  \mbox{ en }   k \cdot \ve{b} :=
+\ve{b}\text{.}\label{ne_14}\tag{1.4.4}
+\end{equation}
+</div>
+<p id="p-122">Dit is 'n goed-gedefinieerde skalaarvermenigvuldigingsbewerking, want dit laat skalaarvermenigvuldiging met enige skalaar \(k\) toe en gee 'n goed-gedefinieerde element \(k \cdot \ve{v} \in V\) terug.</p></article><article class="exercise-like" id="exercise-5"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.3</span>
+</h6>
+<p id="p-123">Wys dat hierdie bewerkings R1, R2, R3, R4, R6 en R7 bevredig, maar nie R5 en R8 nie.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="type">Oplossing</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-124">R1: Ons moet kontrolleer of \(\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ vir alle } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}\text{.}\) Duidelik is \(\ve{a} + \ve{a} = \ve{a} + \ve{a}\) en soortgelyk vir \(\ve{b}\text{.}\) Finaalweg \(\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}\text{.}\)</p>
+<p id="p-125">R2: Ons moet kontrolleer of \((\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ vir alle } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}\text{.}\) Dit vereis dat ons 8 vergelykings in totaal kontrolleer. Ons sal net die oplossing vir een van hulle aandui, die res is soortgelyk. Ons kontrolleer of</p>
+<div class="displaymath">
+\begin{gather*}
+(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}
+\end{gather*}
+</div>
+<p>Beskou:</p>
+<div class="displaymath">
+\begin{align*}
+\text{LK} \amp = (\ve{a} + \ve{b}) + \ve{b}\\
+\amp = \ve{b} + \ve{b}\\
+\amp = \ve{a}\text{.}
+\end{align*}
+</div>
+<p>Deur 'n soortgelyke metode,</p>
+<div class="displaymath">
+\begin{align*}
+\text{RK} \amp = \ve{a} +(\ve{b} + \ve{b})\\
+\amp = \ve{a} + \ve{a}\\
+\amp = \ve{a}\\
+\therefore LK \amp = RK \text{.}
+\end{align*}
+</div>
+<p id="p-126">R3, R4, R6, en R7 volg almal in dieselfde manier.</p>
+<p id="p-127">Ons sal aantoon hoekom R5 nie bevredig is nie. Ons sal 'n teenvoorbeeld gee. Vat \(k=2=l, \ve v = \ve b\text{.}\) Dan is:</p>
+<div class="displaymath">
+\begin{align*}
+\text{LK} \amp = (2+2).\ve{b}\\
+\amp = 4.\ve{b}\\
+\amp = \ve{b}
+\end{align*}
+</div>
+<p>maar</p>
+<div class="displaymath">
+\begin{align*}
+\text{RK} \amp = 2.\ve{b} + 2.\ve{b}\\
+\amp = \ve{b} + \ve{b}\\
+\amp =\ve{a}
+\end{align*}
+</div>
+<p>Omdat \(\text{LK} \neq \text{RK}\) in hierdie geval nie, kan R5 nie in algemeen waar wees nie.</p>
+</div></div>
+</div></article><article class="example-like" id="example-4"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.4</span> <span class="title">Die nul-vektorruimte</span>
+</h6>
+<p id="p-128">Definieer die versameling \(Z\) as</p>
+<div class="displaymath">
+\begin{equation}
+Z := \{ \ve{z} \}\text{.}\tag{1.4.5}
+\end{equation}
+</div>
+<p id="p-129">Let op dat dit net 'n enkele element bevat, \(\ve{z}\text{.}\) Definieer sommering as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{z} + \ve{z} := \ve{z}\tag{1.4.6}
+\end{equation}
+</div>
+<p id="p-130">Definieer die nul-element as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := z\text{.}\tag{1.4.7}
+\end{equation}
+</div>
+<p id="p-131">Laastens, definieer skalaarvermenigvuldiging met 'n skalaar \(k \in
+\mathbb{R}\) as:</p>
+<div class="displaymath">
+\begin{equation}
+k \cdot \ve{z} := \ve{z}\text{.}\tag{1.4.8}
+\end{equation}
+</div></article><article class="exercise-like" id="exercise-6"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.5</span>
+</h6>
+<p id="p-132">Wys dat hierdie data reëls R1 tot R8 bevredig.</p></article><article class="example-like" id="example-5"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.6</span> <span class="title">\(\mathbb{R}^n\)</span>
+</h6>
+<p id="p-133">Definieer die versameling \(\mathbb{R}^n\) as</p>
+<div class="displaymath">
+\begin{equation}
+\mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in
+\mathbb{R} \mbox{ vir alle }  i = 1 \ldots n\}\text{.}\tag{1.4.9}
+\end{equation}
+</div>
+<p id="p-134">Definieer sommering as</p>
+<div class="displaymath">
+\begin{equation}
+(x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) :=
+(x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)\text{.}\tag{1.4.10}
+\end{equation}
+</div>
+<p id="p-135">Definieer die nul-element as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := (0, \, 0, \, \ldots, \, 0)\text{.}\tag{1.4.11}
+\end{equation}
+</div>
+<p id="p-136">Definieer skalaarvermenigvuldiging as</p>
+<div class="displaymath">
+\begin{equation}
+k \cdot (x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \,
+\ldots, \, k x_n)\text{.}\tag{1.4.12}
+\end{equation}
+</div></article><article class="exercise-like" id="exercise-7"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.7</span>
+</h6>
+<p id="p-137">Wys dat hierdie data reëls R1 tot R8 bevredig.</p></article><article class="example-like" id="example-6"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.8</span> <span class="title">\(\mathbb{R}^\infty\)</span>
+</h6>
+<p id="p-138">Definieer die versameling \(\mathbb{R}^\infty\) as</p>
+<div class="displaymath">
+\begin{equation}
+\mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in
+\mathbb{R} \mbox{ vir alle }  i = 1, 2, 3, \ldots\}\tag{1.4.13}
+\end{equation}
+</div>
+<p id="p-139">So 'n element \(\ve{x} \in \mathbb{R}^\infty\) is 'n oneindige ry van reële getalle. Definieer die sommeringsbewerking komponentgewys:</p>
+<div class="displaymath">
+\begin{equation}
+(x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) :=
+(x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)\text{.}\tag{1.4.14}
+\end{equation}
+</div>
+<p id="p-140">Definieer die nul-element as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := (0, \, 0, \, 0, \, \ldots )\text{,}\tag{1.4.15}
+\end{equation}
+</div>
+<p>die oneindige reeks waarvan alle komponente nul is. Laastens, definieer skalaarvermenigvuldiging komponentgewys:</p>
+<div class="displaymath">
+\begin{equation}
+k \cdot (x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \,
+\ldots)\tag{1.4.16}
+\end{equation}
+</div>
+<article class="assemblage-like" id="assemblage-4"><p id="p-141">Die studie van oneindigheid is 'n belangrike deel van wiskunde. Het jy al die fliek <em class="emphasis">The man who knew infinity</em> wat oor my gaan, gesien?</p></article></article><article class="exercise-like" id="exercise-8"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.9</span>
+</h6>
+<p id="p-142">Wys dat hierdie data die reëls R1 tot R8 bevredig.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="type">Oplossing</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-143">Ons sal net R4 kontrolleer, die res is soortgelyk.</p>
+<p id="p-144">R4 :Laat</p>
+<div class="displaymath">
+\begin{align*}
+\amp \ve{v} = (v_1,v_2,v_3,\ldots) \\
+\amp \ve{w} = (w_1,w_2,w_3,\ldots) 
+\end{align*}
+</div>
+<p>Ons moet kontrolleer of \(k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\text{LK} \amp = k.(\ve{v} + \ve{w})\\
+\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]\\
+\amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)\\
+\amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)\\
+\amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)\\
+\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) \\
+\amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) \\
+\amp = k.\ve{v} + k.\ve={w} \\
+\amp = \text{RK} 
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="example-like" id="example-7"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.10</span> <span class="title">Funksies op 'n versameling</span>
+</h6>
+<p id="p-145">Laat \(X\) enige versameling wees. Definieer die versameling \(\Fun(X)\) van <em class="emphasis">reële getal-funksies op \(X\)</em> as</p>
+<div class="displaymath">
+\begin{equation}
+\Fun(X) := \{ \mathbf{f} : X \rightarrow \mathbb{R} \}\text{.}\tag{1.4.17}
+\end{equation}
+</div>
+<p id="p-146">Let op dat die funksies arbitrêr kan wees; daar is geen vereiste dat hulle kontinu of differensieerbaar moet wees nie. So 'n vereiste maak nie sin nie, aangesien \(X\) 'n arbitrêre versameling kan wees. Byvoorbeeld, \(X\) kan die versameling \(\{a, b, c\}\) wees — sonder enige verdere inligting maak dit nie sin om te sê dat die funksie \(\mathbf{f} : X \rightarrow \mathbb{R}\) kontinu is nie.</p>
+<p id="p-147">Definieer die sommeringsbewerking as</p>
+<div class="displaymath">
+\begin{equation}
+(\mathbf{f} + \mathbf{g}) (x) := \mathbf{f}(x) + \mathbf{g}(x),  x
+\in X\tag{1.4.18}
+\end{equation}
+</div>
+<p id="p-148">Maak seker dat jy verstaan wat hierdie formule sê! Ons begin met twee funksies\(\mathbf{f}\) en \(\mathbf{g}\text{,}\) en ons definieer hulle som \(\mathbf{f} + \mathbf{g}\text{.}\) Dit is veronderstel om self 'n funksie van \(X\) te wees. Om 'n funksie op \(X\) te definieer, moet ek vir elke \(x \in
+X\) neerskryf watter waarde die funksie lewer. En dit is wat die formule sê: die waarde wat die funksie \(\mathbf{f} + \mathbf{g}\) aan die element \(x \in X\) toeken, word defnieer as die waarde \(\mathbf{f}(x)\) plus die getal \(\mathbf{g}(x)\text{.}\) Onthou: \(\mathbf{f}\) is 'n funksie, terwyl \(\mathbf{f}(x)\) 'n getal is!</p>
+<p id="p-149">Definieer die nul-vektor \(\mathbf{0}\) as die funksie wat die getal \(0\) lewer vir elke insetwaarde \(x \in X\text{:}\)</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} (x) := 0  \mbox{ vir alle \(x \in X\).}\tag{1.4.19}
+\end{equation}
+</div>
+<p id="p-150">Definieer skalaarvermenigvuldiging as</p>
+<div class="displaymath">
+\begin{equation}
+(k \smul \mathbf{f})(x) := k \mathbf{f}(x)\text{.}\tag{1.4.20}
+\end{equation}
+</div></article><article class="exercise-like" id="exercise-9"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.11</span>
+</h6>
+<p id="p-151">Notasie-uitdaging! Sê of die volgende kombinasie van simbole 'n reële waarde of 'n funksie voorstel.</p>
+<ol class="decimal">
+<li id="li-29"><p id="p-152">\(\mathbf{f}\)</p></li>
+<li id="li-30"><p id="p-153">\(\mathbf{f}(x)\)</p></li>
+<li id="li-31"><p id="p-154">\(k \cdot \mathbf{f}\)</p></li>
+<li id="li-32"><p id="p-155">\((k \cdot \mathbf{f})(x)\)</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="type">Oplossing</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-156" class="decimal">
+<li id="li-33">Funksie</li>
+<li id="li-34">Reële getal</li>
+<li id="li-35">Funksie</li>
+<li id="li-36">Reële getal</li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="exercise-10"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.12</span>
+</h6>
+<p id="p-157">Laat \(X = \{a, b, c\}\text{.}\)</p>
+<ol class="decimal">
+<li id="three_function_question"><p id="p-158">Skryf drie verskillende funksies\(\mathbf{f}, \mathbf{g},
+\mathbf{h}\) in \(\Fun(X)\) neer.</p></li>
+<li id="li-38"><p id="p-159">Vir die funksies wat jy in <a knowl="./knowl/three_function_question.html" title="Item 1.4.12.1">Item 1.4.12.1</a> geskryf het, bereken \(\mathbf{f} + \mathbf{g}\text{,}\) asook \(3 \cdot \mathbf{h}\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-11"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.13</span>
+</h6>
+<p id="p-160">Wys dat die data hierbo reëls R1 tot R8 bevredig, i.e. dat \(\Fun(X)\) 'n vektorruimte is.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="type">Oplossing</span></a><div id="hk-solution-4" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-161" class="decimal">
+<li id="li-39"><div class="displaymath">
+\begin{gather*}
+f(a)= 4 \\
+f(b) = 0 \\
+f(c) = 2 \\
+\\
+g(a)= 1 \\
+g(b) = 1 \\
+g(c) = 1 \\
+\\
+h(a)= 0 \\
+h(b) = 3\\
+h(c) = 0 
+\end{gather*}
+</div></li>
+<li id="li-40"><div class="displaymath">
+\begin{gather*}
+(f+g)(a) =5\\
+(f+g)(b) =1 \\
+(f+g)(c) = 3\\
+\\
+( 3 \smul h)(a) = 0 \\
+( 3 \smul h)(b) = 9 \\
+( 3 \smul h)(c) = 0 
+\end{gather*}
+</div></li>
+</ol></div></div>
+</div></article><article class="example-like" id="matrices_example_vec_space"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.14</span> <span class="title">Matrikse</span>
+</h6>
+<p id="p-162">Die versameling \(\Mat_{n,m}\) van alle \(n \times m \) matrikse is 'n vektorruimte. Sien <a href="AAppAReminderAboutMatrices.html" class="xref" title="Hoofstuk 3: Matrikshersiening">Appendix 3</a> om matrikse te hersien.</p></article><article class="exercise-like" id="exercise-12"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.4.15</span>
+</h6>
+<p id="p-163">Wys dat met hierdie bewerkings vorm die versameling \(\Mat_{n, m}\) van alle \(n \times m\)-matrikse 'n vektorruimte.</p></article><article class="example-like" id="example-9"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.4.16</span>
+</h6>
+<p id="p-164">Ons sal \(\Col_n\) skryf vir die vektorruimte\(\Mat_{n,1}\) van \(n\)-dimensionele <em class="emphasis">kolomvektore</em>,</p>
+<div class="displaymath">
+\begin{equation*}
+\Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\
+x_n
+\end{array}  \right] : x_1, \ldots, x_n \in \mathbb{R} \right\}\text{.}
+\end{equation*}
+</div>
+<p id="p-165">So, \(\Col_n\) ‘is’ net \(\mathbb{R}^n\text{,}\) maar ons beklemtoon dat die komponente in kolomme gerangskik word.</p></article><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber"></span> <span class="title">Oefeninge</span>
+</h3>
+<article class="exercise-like" id="non_ass_ex"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-166">Definieer 'n sommeringsbewerking op die versameling \(X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}\) met die volgende tabel:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|ccc}
++ \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
+\hline
+\ve{0} \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
+\ve{a} \amp  \ve{a} \amp  \ve{0} \amp  \ve{a} \\
+\ve{b} \amp  \ve{b} \amp  \ve{a} \amp  \ve{0}
+\end{array}
+\end{equation*}
+</div>
+<p id="p-167">Die tabel werk soos volg. Vir die berekening \(\ve{b} + \ve{a}\text{,}\) vind die kruising van ry \(\ve{b}\) en kolom \(\ve{a}\text{.}\) ons sien dat \(\ve{b} +
+\ve{a} := \ve{a}\text{.}\)</p>
+<p id="p-168">Bewys dat hierdie sommeringsbewerking R1 bevredig.</p></article><article class="exercise-like" id="exercise-14"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-169">Bewys dat die sommeringsoperasie van <a knowl="./knowl/non_ass_ex.html" title="Oefening 1.4.1">Oefening 1.4.1</a> nie R2 bevredig nie.</p></article><article class="exercise-like" id="exercise-15"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-170">Definieer 'n snaakse sommeringsbewerking\(\hat{+}\) op \(\mathbb{R}\) as</p>
+<div class="displaymath">
+\begin{equation*}
+x \hat{+} y := x - y
+\end{equation*}
+</div>
+<p id="p-171">Bevredig \(\hat{+}\) R2? Indien wel, bewys dit. Indien nie, gee 'n teenvoorbeeld.</p></article><article class="exercise-like" id="exercise-16"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-172">Laat \(\mathbb{R}^+\) die versameling van positiewe reële getalle wees. Definieer 'n sommeringsbewerking \(\oplus\text{,}\) 'n nul-vektor \(z\) en 'n skalaarvermenigvuldigingsbewerking \(\smul\) op \(\mathbb{R}^+\) as volg:</p>
+<div class="displaymath">
+\begin{align*}
+x + y \amp := \ve{x} \ve{y}\\
+z \amp  := 1\\
+k \smul x \amp := x^k
+\end{align*}
+</div>
+<p>waar \(x, y \in \mathbb{R}^+\) en \(k\) 'n skalaar is (i.e. 'n arbitrêre reële getal).</p>
+<ol class="lower-alpha">
+<li id="li-41"><p id="p-173">Gaan na dat hierdie bewerkings goed-gedefinieerd is. Byvoorbeeld, is \(x + y \in \mathbb{R}^+\text{,}\) soos dit hoort?</p></li>
+<li id="li-42"><p id="p-174">Gaan na dat hulle R1 tot R8 bevredig, sodat\(\mathbb{R}^+\) 'n vektorruimte met hierdie bewerkings vorm.</p></li>
+</ol></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

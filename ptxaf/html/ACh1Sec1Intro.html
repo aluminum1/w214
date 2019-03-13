@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:35+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="af-ZA">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Inleiding</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Slaan oor na hoofinhoud</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Lineêre Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh1AbstractVectorSpaces.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh1Sec2DefVectorSpace.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-right-toggle-button button active">Aantekeninge</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh1AbstractVectorSpaces.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh1Sec2DefVectorSpace.html" title="Volgende">Volgende</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Voorsake</span></a></h2>
+<ul><li><a href="ACh0NoteForStudent.html" data-scroll="ACh0NoteForStudent">Nota aan die student</a></li></ul>
+<h2 class="link"><a href="ACh1AbstractVectorSpaces.html" data-scroll="ACh1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstrakte vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh1Sec1Intro.html" data-scroll="ACh1Sec1Intro" class="active">Inleiding</a></li>
+<li><a href="ACh1Sec2DefVectorSpace.html" data-scroll="ACh1Sec2DefVectorSpace">Definisie van 'n abstrakte vektorruimte</a></li>
+<li><a href="ACh1Sec3ExampleVectorSpace.html" data-scroll="ACh1Sec3ExampleVectorSpace">Eerste voorbeeld van 'n vektorruimte</a></li>
+<li><a href="ACh1Sec4MoreExamples.html" data-scroll="ACh1Sec4MoreExamples">Verdere voorbeelde en slaggate</a></li>
+<li><a href="ACh1Sec5ResultsVectorSpace.html" data-scroll="ACh1Sec5ResultsVectorSpace">'n Paar resultate rakende abstrakte vektorruimtes</a></li>
+<li><a href="ACh1Sec6Subspaces.html" data-scroll="ACh1Sec6Subspaces">Deelruimtes</a></li>
+</ul>
+<h2 class="link"><a href="ACh2FinDimVectorSpaces.html" data-scroll="ACh2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Eindigdimensionele vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh2Sec1DefFinDimVectorSpaces.html" data-scroll="ACh2Sec1DefFinDimVectorSpaces">Definisie van eindigdimensionele vektorruimtes</a></li>
+<li><a href="ACh2Sec2LinearIndependence.html" data-scroll="ACh2Sec2LinearIndependence">Lineêre onafhanklikheid</a></li>
+<li><a href="ACh2Sec3BasisDimension.html" data-scroll="ACh2Sec3BasisDimension">Basis en dimensie</a></li>
+<li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
+<li><a href="ACh2Sec5ChangeOfBasis.html" data-scroll="ACh2Sec5ChangeOfBasis">Basisverandering</a></li>
+</ul>
+<h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">3</span> <span class="title">Matrikshersiening</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Geskryf in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh1Sec1Intro"><h2 class="heading hide-type">
+<span class="type">Afdeling</span> <span class="codenumber">1.1</span> <span class="title">Inleiding</span>
+</h2>
+<a href="ACh1Sec1Intro.html" class="permalink">¶</a><section class="subsection" id="subsection-1"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.1.1</span> <span class="title">Drie verskillende versamelings</span>
+</h3>
+<p id="p-7">Ons begin met 'n speletjie. In wiskunde is 'n <em class="emphasis">versameling</em> \(X\) maar net 'n kolleksie van onderskeibare objekte. Hierdie objekte word <em class="emphasis">elemente</em> van \(X\) genoem.</p>
+<p id="p-8">Ek gaan drie verskillende versamelings aan jou toon en jy moet sê watter eienskappe hulle in gemeen het.</p>
+<p id="p-9">Die eerste versameling, \(A\text{,}\) word gedefinieer as die versameling van alle geordende pare \((x, y)\text{,}\) waar \(x\) en \(y\) reële getalle is.</p>
+<article class="assemblage-like" id="assemblage-1"><p id="p-10">Kom ons stop hier vir 'n oomblik en vertaal die definisie van Afrikaans na wiskundige simbole. Die vertaling is:</p>
+<div class="displaymath">
+\begin{equation}
+A := \{ (a_1,\, a_2) : a_1,a_2 \in \mathbb{R}  \} \text{.}\tag{1.1.1}
+\end{equation}
+</div>
+<p id="p-11">Die \(:=\) staan vir ‘is gedefinieer as’. Die \(\{\) en \(\}\) simbole staan vir ‘die versalmeling van alle’. Die enkele dubbelpunt \(:\) staan vir ‘waar’ of ‘sodat’. Die komma tussen \(a\) en \(b\) staan vir ‘en’. Die \(\in\) staan vir `'n element van'. En \(\mathbb{R}\) staan vir die versameling van alle reële getalle. Veels geluk! — jy gebruik die taal van wiskunde!</p></article><p id="p-12">'n Element van \(A\) is 'n arbitrêre paar van reële getalle \(\ve{a} = (a_1, \, a_2)\text{.}\) Byvoorbeeld, \((1, \, 2) \in A\) en \((3.891, \,
+e^\pi)\) is elemente van \(A\text{.}\) Let ook op dat ek 'n vetdruk \(\ve{a}\) gebruik om na 'n element van \(A\) te verwys. Dit is sodat ons \(\ve{a}\) kan onderskei van sy <em class="emphasis">komponente</em> \(a_1\) en \(a_2\text{,}\) wat net gewone getalle is (nie elemente van \(A\) nie).</p>
+<p id="p-13">Ons kan 'n element \(\ve{a}\) van \(A\) visualiseer as 'n punt in die Cartesiese vlak waarvan die \(x\)-koördinaat \(a_1\) en die \(y\)-koördinaat \(a_2\) is: <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:40%;">
+<div class="sbspanel" style="width:50%;justify-content:center;"><p id="p-14">\(\ve{a} \xmapsto{\text{visualiseer as}} \)</p></div>
+<div class="sbspanel" style="width:50%;justify-content:center;"><img src="images/image-1.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></p>
+<p id="p-15">Die tweede versameling, \(B\text{,}\) word gedefinieer as die versameling van alle geordende reële drietalle \((u_1, \, u_2, \, u_3)\text{,}\) wat \(u_1 - u_2 + u_3
+= 0\) bevredig. In wiskundige simbole is dit soos volg:</p>
+<div class="displaymath">
+\begin{equation}
+B := \{ (b_1, \, b_2, \, b_3) : b_1, b_2, b_3 \in \mathbb{R} \mbox{ en } 
+b_1 - b_2 + b_3 = 0\} \text{.}\tag{1.1.2}
+\end{equation}
+</div>
+<p id="p-16">Byvoorbeeld, \((2,3, 1) \in B\text{,}\) maar \((1,1,1) \notin B\text{.}\) Ons kan 'n element \(\ve{b}\) van \(B\) visualiseer as 'n punt in die vlak in 3-dimensionele ruimte wat deur die vergelyking \(x-y+z = 0\) daargestel word: <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:40%;">
+<div class="sbspanel" style="width:50%;justify-content:center;"><p id="p-17">\(\ve{b} \xmapsto{\text{visualiseer as}} \)</p></div>
+<div class="sbspanel" style="width:50%;justify-content:center;"><img src="images/image-2.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></p>
+<p id="p-18">Die derde versameling, \(C\text{,}\) is die versameling van alle vierdegraadse polinome. Omgesit in wiskundige simbole, ,</p>
+<div class="displaymath">
+\begin{equation}
+C := \{ \mbox{polinome met graad \(\leq 4\)} \}\text{.}\tag{1.1.3}
+\end{equation}
+</div>
+<p id="p-19">Onthou dat die <em class="emphasis">graad</em> van 'n polinoom is die grootse mag van \(x\) wat daarin verskyn. Byvoorbeeld, \(\ve{c} = x^4 - 3 x^3 + 2x^2\) is 'n vierdegraadse polinoom; so ook is \(\ve{p} = 2x^3 + \pi x\text{.}\) So \(\ve{c}\) en \(\ve{p}\) is elemente van \(C\text{.}\) Maar \(\ve{r} = 8x^5 - 7\) en \(\ve{s} =
+\sin(x)\) is nie elemente van \(C\) nie. Ons kan 'n element \(\ve{c} \in C\) (i.e. 'n vierdegraadse polinoom) met sy <em class="emphasis">grafiek</em> visualiseer. Byvoorbeeld, die polinoom \(\ve{c} = x^4 - 3x^3 + 2x^2 \in C\) word soos volg visualiseer: <div class="sidebyside"><div class="sbsrow" style="margin-left:20%;margin-right:40%;">
+<div class="sbspanel" style="width:50%;justify-content:center;"><p id="p-20">\(\ve{c} \xmapsto{\text{visualiseer as}} \)</p></div>
+<div class="sbspanel" style="width:50%;justify-content:center;"><img src="images/image-3.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></p>
+<p id="p-21">Daar het jy dit. Ek het drie versamelings definieer: \(A\text{,}\) \(B\) en \(C\text{,}\) en ek het verduidelik hoe elkeen visualiseer kan word. Die drie versamelings lyk aanvanklik redelik verskillend. Elemente van \(A\) is arbitrêre punte in \(\mathbb{R}^2\text{.}\) Elemente van \(B\) is punte in \(\mathbb{R}^3\) wat 'n sekere vergelyking bevredig. Elemente van \(C\) is almal polinome.</p>
+<p id="p-22">Watter kenmerke het hierdie versamelings in gemeen?</p></section><section class="subsection" id="subsection-2"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.1.2</span> <span class="title">Gedeelde kenmerke van die versamelings</span>
+</h3>
+<section class="introduction" id="introduction-1"><p id="p-23">Ek wil fokus op twee kenmerke wat versamelings in \(A\text{,}\) \(B\) en \(C\) in gemeen het.</p></section><section class="subsubsection" id="subsubsection-1"><h4 class="heading hide-type">
+<span class="type">Onderonderafdeling</span> <span class="codenumber">1.1.2.1</span> <span class="title">Sommering</span>
+</h4>
+<p id="p-24">Eerstens het aldrie hierdie versamelings 'n natuurlike <em class="emphasis">sommeringsbewerking</em>. Ons kan twee elemente in 'n versameling bymekaar tel om 'n derde element in dieselfde versameling te kry.</p>
+<p id="p-25">In Versameling \(A\) kan ons twee elmente \(\ve{a} = (a_1, \, a_2)\) en \(\ve{a}'= (a_1', \, a_2')\) bymekaar tel deur hulle onderskeie komponente bymekaar te tel om 'n nuwe element \(\ve{a} + \ve{a}' \in A\) te vorm:</p>
+<div class="displaymath">
+\begin{equation}
+\underbrace{(a_1, \, a_2)}_{\ve{a}} + \underbrace{(a'_1, \,a'_2)}_{\ve{a}'}
+:= \underbrace{(a_1 + a_1', \, a_2 + a_2')}_{\ve{a} + \ve{a}'}\label{add_in_A}\tag{1.1.4}
+\end{equation}
+</div>
+<p id="p-26">Byvoorbeeld, \((1, \,3) + (2, \,-1.6) = (3, \,1.4)\text{.}\) Ons kan die sommeringsbewerking soos volg visualiseer: <div class="sidebyside"><div class="sbsrow" style="margin-left:3%;margin-right:3%;">
+<div class="sbspanel" style="width:21.2765957446809%;justify-content:center;"><img src="images/image-4.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:5.319148936170213%;justify-content:center;"><p id="p-27">+</p></div>
+<div class="sbspanel" style="width:21.2765957446809%;justify-content:center;"><img src="images/image-5.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:5.319148936170213%;justify-content:center;"><p id="p-28">=</p></div>
+<div class="sbspanel" style="width:21.2765957446809%;justify-content:center;"><img src="images/image-6.svg" style="width: 100%; height: auto;" alt=""></div>
+</div></div></p>
+<p id="p-29">Ons kan 'n soortgelyke benadering in versameling \(B\) volg. Versonderstel ons het twee elemente van \(B\text{,}\) \(\ve{b} = (b_1, \,b_2, \,b_3)\) en \(\ve{b}'
+= (b_1', \, b_2', \, b_3')\text{.}\) Let daarop dat, omdat \(\ve{b}\in B\text{,}\) bevredig \(\ve{b}\) se komponente die vergelyking \(b_1 - b_2 + b_3 = 0\text{.}\) So bevredig \(b'\) ook \(b'_1 - b'_2 + b'_3 = 0\text{.}\) Ons kan \(\ve{b}\) en \(\ve{b}'\) saamtel om 'n nuwe element \(\ve{b} + \ve{b}'\) van \(B\) te kry, deur hulle komponente saam te tel soos tevore:</p>
+<div class="displaymath">
+\begin{equation}
+\underbrace{(b_1, \, b_2, \, b_3)}_{\ve{b}} + \underbrace{(b'_1, \,b'_2, \,
+b'_3)}_{\ve{b}'} := \underbrace{(b_1 + b_1', \, b_2 + b_2', \, b_3 +
+b'_3)}_{\ve{b} + \ve{b}'}\label{new_add_in_B}\tag{1.1.5}
+\end{equation}
+</div>
+<p id="p-30">Nou moet ons versigtig wees. Hoe weet ons dat die uitdrukking aan die regterkant regtig 'n element van \(B\) is? Ons moet seker maak dat dit die vergelyking ‘die eerste komponent minus die tweede komponent plus die derde komponent is gelyk aan nul’ bevredig. Kom ons doen dit formeel:</p>
+<div class="displaymath">
+\begin{align*}
+(\ve{b} + \ve{b}')_1 - (\ve{b}+\ve{b}')_2 + (\ve{b}+\ve{b}')_3 \amp = (b_1
++ b'_1) - (b_2 + b'_2) + (b_3 + b'_3)\\
+.
+\amp = (b_1 - b_2 + b_3) + (b'_1 - b'_2 + b'_3)\\
+\amp = 0 + 0\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<p id="p-31">\(B\) kan op die selfde manier as \(A\) visualiseer word.</p>
+<p id="p-32">Daar is ook 'n sommeringsbewerking in die versameling \(C\text{.}\) Ons kan twee polinome algebraïes bymekaartel deur hulle ooreenstemmende koëffisiënte bymekaar te tel:</p>
+<div class="displaymath">
+\begin{gather}
+[c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x^1 + c_0] + [d_4 x^4 + d_3 x^3 + d_2 x^2 + d_1 x^1 + d_0]\notag\\
+:= (c_4 + d_4) x^4 + (c_3 + d_3) x^3 + (c_2 + d_2) x^2 + (c_1 + d_1) x^1 + (c_0 + d_0)\label{add_in_C}\tag{1.1.6}
+\end{gather}
+</div>
+<p id="p-33">Byvoorbeeld,</p>
+<div class="displaymath">
+\begin{equation*}
+[2x^4  + x^2 - 3x + 2] + [2x^3 - 7x^2 + x]
+= 2x^4 + 2x^3 - 6x^2 -2x + 2\text{.}
+\end{equation*}
+</div>
+<p id="p-34">Daar is nog 'n manier om aan die sommering van polinome te dink. Elke polinoom \(\ve{c}\) kan gesien word as 'n <em class="emphasis">funksie</em>, in die sin dat ons 'n arbitrêre waarde \(x\) in die polinoom \(\ve{c}\) in kan vervang, en dit sal 'n waarde \(\ve{c}(x)\) voortbring. Byvoorbeeld, as \(\ve{c}(x) = 3x^2 -
+1\text{,}\) dan is \(\ve{c}(2) = 11\text{.}\) As ons polinome as funksies beskou, dan kan aan die som \(\ve{c} + \ve{d}\) van twee polinome gedink word as 'n nuwe funksie wat, wanneer 'n getal \(x\) invervang word, dit die waarde \(\ve{c}(x) + \ve{d}(x)\) teruggee. Wiskundig geskryf,</p>
+<div class="displaymath">
+\begin{equation}
+(\ve{c} + \ve{d})(x) := \ve{c}(x) + \ve{d}(x)\label{add_in_C2}\tag{1.1.7}
+\end{equation}
+</div>
+<p id="p-35">Deur so te dink, kan ons die grafiek van \(\ve{c} + \ve{d}\) as die som van die grafieke van \(\ve{c}\) en \(\ve{d}\) voorstel: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-7.svg" style="width: 100%; height: auto;" alt=""></div></div></div></p></section><section class="subsubsection" id="subsubsection-2"><h4 class="heading hide-type">
+<span class="type">Onderonderafdeling</span> <span class="codenumber">1.1.2.2</span> <span class="title">Nul-element</span>
+</h4>
+<p id="p-36">In aldrie versamelings \(A\text{,}\) \(B\) en \(C\text{,}\) bestaan daar 'n spesifieke element (die <em class="emphasis">nul-element</em>) \(\ve{0}\) wat, as dit by 'n ander element getel word, lewer dit weer dieselfde element onveranderd terug.</p>
+<p id="p-37">In \(A\) word die nul-element \(\ve{0}\) definieer deur</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := (0,0) \in A\text{.}\label{zero_in_A}\tag{1.1.8}
+\end{equation}
+</div>
+<p id="p-38">Wanneer jy hierdie punt by 'n ander punt \((a_1, \, a_2) \in A\) tel, gebeur niks nie!</p>
+<div class="displaymath">
+\begin{equation*}
+(0, \,0) + (a_1, \, a_2) = (a_1, \, a_2)\text{.}
+\end{equation*}
+</div>
+<p id="p-39">Moenie die nul-element \(\ve{0} \in A\) met die reële getal nul (\(0 \in
+\mathbb{R}\)) verwar nie. Dit is nog 'n rede hoekom ek vetdruk gebruik! (Jy moet elemente van \(A\) onderstreep om die onderskeid te tref.)</p>
+<p id="p-40">\((0,0,0) \in B\) is die nul-element \(\ve{0}\) in \(B\text{.}\) As jy dit by 'n ander punt \((u_1, u_2, u_3) \in B\) tel, gebeur niks nie!</p>
+<div class="displaymath">
+\begin{equation*}
+(0, \, 0, \, 0) + (u_1, \, u_2, \, u_3) = (u_1, \, u_2, \, u_3)\text{.}
+\end{equation*}
+</div>
+<p id="p-41">In \(C\) is die <em class="emphasis">nul-polinoom</em> die nul-element \(\ve{0}\text{.}\) Algebraïes is dit die vierdegraadse polinoom waarvan die koëffisiënte almal nul is:</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} = 0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0\label{zero_in_C}\tag{1.1.9}
+\end{equation}
+</div>
+<p id="p-42">As ons aan die polinoom as 'n funksie dink, dan is die nul-polinoom \(\ve{0}\) die funksie wat vir alle waardes van \(x\) nul is, i.e. \(\ve{0} (x)
+= 0\) vir alle \(x\text{.}\) Hoe ons ookal daaraan dink, as ons die nul-polinoom by 'n ander polinoom tel, gebeur niks nie!</p>
+<div class="displaymath">
+\begin{gather*}
+[0 x^4 + 0 x^3 + 0 x^2 + 0 x + 0] + [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] \\
+= [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] 
+\end{gather*}
+</div></section><section class="subsubsection" id="subsubsection-3"><h4 class="heading hide-type">
+<span class="type">Onderonderafdeling</span> <span class="codenumber">1.1.2.3</span> <span class="title">Skalaarvermenigvuldiging</span>
+</h4>
+<p id="p-43">Die laaste kenmerk wat \(A\text{,}\) \(B\) en \(C\) in gemeen het is dat met elke versameling, hul elemente met reële getalle <em class="emphasis">vermenigvuldig</em> kan word en steeds in die versameling sal wees.</p>
+<p id="p-44">Byvoorbeeld, as \(\ve{a} = (a_1, a_2)\) 'n elment van \(A\) is, dan kan ons dit met 'n arbitrêre reële getal, sê maar \(9\text{,}\) vermenigvuldig, om 'n nuwe element \(9\cdot a\) van \(A\) te kry. Hierdie vermenigvuldiging word komponentgewys gedoen:</p>
+<div class="displaymath">
+\begin{equation}
+9 \cdot (a_1, \,a_2) := (9 a_1, \, 9a_2)\text{.}\label{sm_in_A}\tag{1.1.10}
+\end{equation}
+</div>
+<p id="p-45">In die algemeen, as \(k \in \mathbb{R}\) 'n arbitrêre reële getal is, dan kan ons 'n arbitrêre element \(\ve{a} \in A\) met \(k\) vermenigvuldig om 'n nuwe element \(k \cdot \ve{a} \in A\) te kry deur elke komponent van \(\ve{a}\) met \(k\) te vermenigvuldig:</p>
+<div class="displaymath">
+\begin{equation*}
+\underbrace{k.(a_1, \, a_2)}_{\text{ Skalaarvermenigvuldiging} } := (\underbrace{k a_1}_{\text{Vermenigvuldig twee getalle} }, \, \underbrace{k a_2})
+\end{equation*}
+</div>
+<p id="p-46">Wees versigtig om te onderskei tussen skalaarvermenigvuldiging \(k \cdot
+\ve{a}\) (aangedui met \(\cdot\)) en gewone vermenigvuldiging van reële getalle \(k a_1\) (aangedui sonder enige simbool, die twee simbole word bloot langs mekaar geplaas). Later gaan ons 'n kortpad neem en ophou om die \(\cdot\) eksplisiet uit te skryf — wees gewaarsku!</p>
+<p id="p-47">Visueel <em class="emphasis">skaleer</em> die vermenigvuldigingsbewerking \(\ve{a}\) met 'n faktor van \(k\text{.}\) Dit is hoekom ons dit <em class="emphasis">skalaarvermenigvuldiging</em> noem.</p>
+<p id="p-48">Daar is 'n soortgelyke skalaarvermenigvuldigingsbewerking in \(B\text{:}\)</p>
+<div class="displaymath">
+\begin{equation}
+k (u_1, \, u_2, \, u_3) := (k u_1, \, k u_2, \, k u_3)\label{sm_in_B}\tag{1.1.11}
+\end{equation}
+</div>
+<p id="p-49">Daar is ook 'n skalaarvermenigvuldigingsbewerking in \(C\text{.}\) Ons vermenigvuldig elke koëffisient van 'n polinoom \(\ve{c} \in C\) met \(k\text{:}\)</p>
+<div class="displaymath">
+\begin{equation}
+k \cdot [c_4 x^4 + c_3 x^3 + c_2 x^2 + c_1 x + c_0] = k c_0 x^4 + k c_3 x^3
++ k c_2 x^2 + k c_1 x + k c_0\label{sm_in_C}\tag{1.1.12}
+\end{equation}
+</div>
+<p id="p-50">As ons aan 'n polinoom \(\ve{c}\) as 'n funksie dink, dan korrespondeer dit met vertikale <em class="emphasis">skalering</em> van die grafiek met 'n faktor van \(k\text{.}\)</p></section></section><section class="subsection" id="subsection-3"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.1.3</span> <span class="title">Kenmerkse wat die versamelings <em class="emphasis">nie</em> het nie</span>
+</h3>
+<p id="p-51">Kom on noem 'n paar kenmerke wat die versamelings <em class="emphasis">nie</em> het nie, of ten minste nie in gemeen het nie.</p>
+<ul class="disc">
+<li id="li-1"><p id="p-52">Die versameling \(A = \mathbb{R}^2\) het 'n <em class="emphasis">vermenigvuldigingsbewerking</em>. Dit is omdat ons \(\mathbb{R}^2\) as die komplekse vlak \(\mathbb{C}\) kan beskou; ons weet hoe om komplekse getalle kan vermenigvuldig. Daar is geen duidelike kandidaat vir 'n vermenigvuldigingsbewerking op \(B\) nie. Dieselfde geld vir \(C\text{:}\) as jy twee vierdegraadse polinome in \(C\) vermenigvuldig, eindig jy met 'n agtstegraadse polinoom, wat nie in \(C\) is nie!</p></li>
+<li id="li-2">
+<p id="p-53">Daar is 'n <em class="emphasis">‘bereken die afgeleide’</em>-bewerking op \(C\text{,}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{c} \mapsto \frac{d}{dx} \ve{c}
+\end{equation*}
+</div>
+<p>wat ons later weer sal teëkom. Let op dat die wanneer die afgeleide bereken word, die graad van 'n polinoom met 1 afneem, so die resultaat bly in \(C\text{,}\) wat beteken dat dit 'n goedgedefinieerde afbeelding van \(C\) na \(C\) is. Daar is geen ooreenstemmende bewerking hiervoor in \(A\) en \(B\) nie. <article class="assemblage-like" id="assemblage-2"><p id="p-54">Let daarop dat daar geen <em class="emphasis">integrasie</em>-afbeelding van \(C\) na \(C\) is nie, want integrasie van 'n polinoom <em class="emphasis">verhoog</em> die graad met \(1\text{,}\) so die resultaat mag dalk 'n polinoom van graad \(5\) wees, wat nie in \(C\) is nie!</p></article></p>
+</li>
+</ul></section><section class="subsection" id="subsection-4"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.1.4</span> <span class="title">Reëls</span>
+</h3>
+<p id="p-55">Ons het gevind dat elk van ons drie versamelings \(A\text{,}\) \(B\) en \(C\) 'n <em class="emphasis">sommeringsbewerking</em> \(+\text{,}\) 'n <em class="emphasis">nul-element</em> \(\ve{0}\) en 'n <em class="emphasis">skalaarvermenigvuldigingsbewerking</em> \(\cdot\) het. Kan ons enige reëls identifiseer waaraan hierdie bewerkings in al drie versamelings moet voldoen?</p>
+<p id="p-56">Byvoorbeeld, ons kan aan die sommeringsbewerking in \(A\) dink as 'n funksie wat aan elke elementpaar \(\ve{a}\) en \(\ve{a}'\) in \(A\) 'n nuwe element \(\ve{a} + \ve{a}'\) in \(A\) toeken. Voldoen hierdie bewerking aan enige reëls?</p>
+<p id="p-57">Kom ons kyk. Laat \(\ve{a} = (a_1, \,a_2)\) en \(\ve{a}' = (a'_1, \, a'_2)\) elemente van \(A\) wees. Ons kan hulle in twee verskillende volgordes bymekaar tel,</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{a} + \ve{a}' = (a_1 + a'_1, \, a_2 + a'_2)
+\end{equation*}
+</div>
+<p>en</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{a}' + \ve{a} = (a'_1 + a_1, \, a'_2 + a_2)\text{.}
+\end{equation*}
+</div>
+<p id="p-58">Kom dit op dieselfde neer? In ander woorde, geld</p>
+<div class="displaymath">
+\begin{equation}
+\ve{a} + \ve{a}' = \ve{a}' + \ve{a}\label{comm_in_A}\tag{1.1.13}
+\end{equation}
+</div>
+<p>as 'n reël? Die antwoord is <em class="emphasis">ja</em>, maar hoekom? Om na te gaan of twee elemente van \(A\) dieselfde is, moet ons nagaan of elkeen van hulle komponente gelyk is. Die eerste komponent van \(\ve{a} + \ve{a}'\) is \(a_1 +
+a'_1\text{.}\) Die eerste komponent van \(\ve{a}' + \ve{a}\) is \(a'_1 + a_1\text{.}\) Is \(a_1 + a'_1 = a'_1 + a_1\text{?}\) Ja — want beide is net gewone reële getalle (nie elemente van \(A\) nie), en ons weet dat vir gewone reële getalle kan jy in enige orde saamtel met dieselfde resultaat. So die eerste komponent van \(\ve{a} + \ve{a}'\) is gelyk aan die eerste komponent van \(a' + a\text{.}\) Net so kan ons nagaan dat die tweede komponent van \(\ve{a} +
+\ve{a}'\) gelyk is aan die tweede komponent van \(\ve{a}' + \ve{a}\text{.}\) So all die komponente van \(\ve{a} + \ve{a}'\) is gelyk aan al die ooreenstemmende komponente van \(\ve{a}' + \ve{a}\text{.}\) So, uiteindelik kan ons tot die gevolgtrekking kom dat \(\ve{a} + \ve{a}' = \ve{a}' + \ve{a}\text{.}\)</p>
+<p id="p-59">Geld hierdie reël <a knowl="./knowl/comm_in_A.html" title="Vergelyking 1.1.13">(1.1.13)</a> ook vir sommeringsoperators in \(B\) en \(C\text{?}\) Ja. Byvoorbeeld, kom ons gaan na dat dit vir \(C\) geld. Veronderstel dat \(\ve{c}\) en \(\ve{c}'\) polinome in \(C\) is. Geld die reël</p>
+<div class="displaymath">
+\begin{equation}
+\ve{c} + \ve{c}' = \ve{c}' + \ve{c}\label{must_check}\tag{1.1.14}
+\end{equation}
+</div>
+<p>steeds?</p>
+<p id="p-60">Die linker- en regterkante van <a knowl="./knowl/must_check.html" title="Vergelyking 1.1.14">(1.1.14)</a> is elemente van \(C\text{.}\) En alle elemente van \(C\) is polinome. Om na te gaan of twee polinome gelyk is, moet ons nagaan of hulle gelyk is <em class="emphasis">as funksies</em>, met ander woorde, of jy identiese resultate uitkry vir enige moontlike insetwaarde van \(x\) wat invervang word.</p>
+<p id="p-61">By 'n arbitrêre insetwaarde \(x\) is die linkerkant \((\ve{c} +
+\ve{c}')(x) = \ve{c}(x) + \ve{c}'(x)\text{.}\) Aan die anderkant is die regterkant \((\ve{c}' + \ve{c})(x) = \ve{c}'(x) + \ve{c}(x)\text{.}\) Nou, let op dat \(\ve{c}(x)\) en \(\ve{c}'(x)\) gewone getalle is (en nie polinome nie). So \(\ve{c}(x) + \ve{c}'(x) = \ve{c}'(x) + \ve{c}(x)\text{,}\) want dit is waar vir gewone getalle. So vir elke insetwaarde \(x\text{,}\) \((\ve{c} + \ve{c}') (x) =
+(\ve{c}' + \ve{c})(x)\text{.}\) Daarom is die polinome \(\ve{c}+\ve{c}'\) en \(\ve{c}' + \ve{c}\) gelyk, hulle uitsetwaarde is dieselfde vir alle getalle \(x\text{.}\)</p>
+<p id="p-62">Daar is ander reëls wat ook vir al drie versamelings geld. Byvoorbeeld, in al drie versamelings geld die reël</p>
+<div class="displaymath">
+\begin{equation}
+(\ve{x} + \ve{y}) + \ve{z} = \ve{x} + (\ve{y} + \ve{z})\tag{1.1.15}
+\end{equation}
+</div>
+<p>vir alle elemente \(\ve{x}\text{,}\) \(\ve{y}\) en \(\ve{z}\text{.}\) Kan jy ander reëls identifiseer wat vir al drie versamelings geld?</p></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

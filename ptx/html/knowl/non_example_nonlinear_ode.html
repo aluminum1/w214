@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T23:59:58+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.25</span> <span class="title">A non-example: Solutions to a nonlinear ODE</span>
+</h6>
+<p>We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE</p>
+<div class="displaymath">
+\begin{equation}
+y^\prime = y^2.\tag{1.6.9}
+\end{equation}
+</div>
+<p>The general solution is given by</p>
+<div class="displaymath">
+\begin{equation*}
+y_c = \frac{1}{c - x}
+\end{equation*}
+</div>
+<p>where \(c\) is a constant. For instance,</p>
+<div class="displaymath">
+\begin{equation*}
+y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
+\end{equation*}
+</div>
+<p>are solutions.</p>
+<p>Use the SageMath script below to check whether the linear combination \(y_1 + y_2\) is also a solution.</p>
+<div class="sagecell-sage" id="sage-4"><script type="text/x-sage">y = function('y')(x)
+
+def solves_de(f):
+ return bool(diff(f,x) - f^2 == 0)
+
+y1 = 1/(1-x)
+y2 = 1/(2-x)
+
+solves_de(y1+y2)
+</script></div>
+<p>The answer is <code class="code-inline tex2jax_ignore">False!</code> So linear combinations of solutions to the nonlinear differential equation <a knowl="./knowl/explicit_nonlinear_ode.html" title="Equation 1.6.9">(1.6.9)</a> are no longer solutions, in general.</p></article><span class="incontext"><a href="Ch1Sec6Subspaces.html#non_example_nonlinear_ode">in-context</a></span>
+</body>
+</html>

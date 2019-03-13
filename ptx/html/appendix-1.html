@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-02T12:04:06+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{tikzpicture} \end{aligned}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\DeclareMathOperator{\bopen}{\{}
+\DeclareMathOperator{\bclose}{\}}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Linear Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Tut2.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Tut2.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="index.html" title="Up">Up</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="Ch0NoteForStudent.html" data-scroll="Ch0NoteForStudent">Note for the student</a></li></ul>
+<h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstract vector spaces</span></a></h2>
+<ul>
+<li><a href="Ch1Sec1Intro.html" data-scroll="Ch1Sec1Intro">Introduction</a></li>
+<li><a href="Ch1Sec2DefVectorSpace.html" data-scroll="Ch1Sec2DefVectorSpace">Definition of an abstract vector space</a></li>
+<li><a href="Ch1Sec3ExampleVectorSpace.html" data-scroll="Ch1Sec3ExampleVectorSpace">First example of a vector space</a></li>
+<li><a href="Ch1Sec4MoreExamples.html" data-scroll="Ch1Sec4MoreExamples">More examples and non-examples</a></li>
+<li><a href="Ch1Sec5ResultsVectorSpace.html" data-scroll="Ch1Sec5ResultsVectorSpace">Some results about abstract vector spaces</a></li>
+<li><a href="Ch1Sec6Subspaces.html" data-scroll="Ch1Sec6Subspaces">Subspaces</a></li>
+</ul>
+<h2 class="link"><a href="Ch2FinDimVectorSpaces.html" data-scroll="Ch2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Finite-dimensional vector spaces</span></a></h2>
+<ul>
+<li><a href="Ch2Sec1LinearCombinationSpan.html" data-scroll="Ch2Sec1LinearCombinationSpan">Linear combinations and span</a></li>
+<li><a href="Ch2Sec2LinearIndependence.html" data-scroll="Ch2Sec2LinearIndependence">Linear independence</a></li>
+<li><a href="Ch2Sec3BasisDimension.html" data-scroll="Ch2Sec3BasisDimension">Basis and dimension</a></li>
+<li><a href="Ch2Sec4CoordinateVectors.html" data-scroll="Ch2Sec4CoordinateVectors">Coordinate vectors</a></li>
+<li><a href="Ch2Sec5ChangeOfBasis.html" data-scroll="Ch2Sec5ChangeOfBasis">Change of basis</a></li>
+</ul>
+<h2 class="link"><a href="Tut2.html" data-scroll="Tut2"><span class="codenumber">1</span> <span class="title">W219 2019, Linear Algebra Tutorial 2</span></a></h2>
+<h2 class="link active"><a href="appendix-1.html" data-scroll="appendix-1"><span class="codenumber">A</span> <span class="title"></span></a></h2>
+<ul><li><a href="AppAReminderAboutMatrices.html" data-scroll="AppAReminderAboutMatrices">Reminder about matrices</a></li></ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="appendix" id="appendix-1">< class="heading hide-type"><span class="type">Appendix</span> <span class="codenumber">A</span> <span class="title"></span></><section class="appendix" id="AppAReminderAboutMatrices"><h2 class="heading hide-type">
+<span class="type">Appendix</span> <span class="codenumber">A.B</span> <span class="title">Reminder about matrices</span>
+</h2>
+<a href="AppAReminderAboutMatrices.html" class="permalink">¶</a><p id="p-490">Let us recall a few things about matrices, and set up our notation.</p>
+<p id="p-491">An <em class="emphasis">\(n \times m\) matrix</em> \(\mat{A}\) is just a rectangular array of numbers, with \(n\) rows and \(m\) columns:</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{A} = \left[ \begin{array}{cccc} \mat{A}_{11} \amp  \mat{A}_{12} \amp  \cdots \amp  \mat{A}_{1m} \\
+\mat{A}_{21} \amp  \mat{A}_{22} \amp  \cdots \amp  \mat{A}_{2m} \\
+\vdots \amp  \amp  \ddots \amp  \vdots \\
+\mat{A}_{n1} \amp  \mat{A}_{n2} \amp  \cdots \amp  \mat{A}_{nm}
+\end{array}  \right]
+\end{equation*}
+</div>
+<article class="assemblage-like" id="assemblage-19"><p id="p-492">I will always write matrices in ‘sans serif’ font, eg. \(\mat{A}\text{.}\) It is difficult to ‘change fonts’ in handwritten text, but I encourage you to at least reserve the letters \(\mat{A}\text{,}\) \(\mat{B}\text{,}\) \(\mat{C}\text{,}\) etc. for matrices, and \(S\text{,}\) \(T\text{,}\) etc. for linear maps!</p></article><p id="p-493">Two \(n \times m\) matrices \(\mat{A}\) and \(\mat{B}\) can be added, to get a new \(n \times m\) matrix \(\mat{A} + \mat{B}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(\mat{A} + \mat{B})_{ij} := \mat{A}_{ij} + \mat{B}_{ij}
+\end{equation*}
+</div>
+<p id="p-494">There is the <em class="emphasis">zero \(n \times m\) matrix</em>:</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{0} = \left[ \begin{array}{cccc} 
+0 \amp  0 \amp   \cdots \amp 0 \\
+0 \amp  0 \amp   \cdots \amp  0 \\
+\vdots \amp  \amp  \ddots \amp  \vdots \\
+0 \amp  0 \amp  \cdots \amp  0
+\end{array}  \right]
+\end{equation*}
+</div>
+<p id="p-495">You can also multiply an \(n \times m\) matrix \(\mat{A}\) by a scalar \(k\text{,}\) to get a new \(n \times m\) matrix \(k \mat{A}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+(k\mat{A})_{ij} := k \mat{A}_{ij}
+\end{equation*}
+</div>
+<article class="theorem-like" id="lemma-9"><h6 class="heading">
+<span class="type">Lemma</span> <span class="codenumber">A.B.1</span>
+</h6>
+<ol class="decimal">
+<li id="li-66"><p id="p-496">Equipped with these operations, the set \(\Mat_{n, m}\) of all \(n \times m\) matrices is a vector space.</p></li>
+<li id="li-67">
+<p id="p-497">The dimension of \(\Mat_{nm}\) is \(nm\text{,}\) with basis given by the matrices</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
+\end{equation*}
+</div>
+<p>which have a \(1\) in the \(i\)th row and \(j\)th column and zeroes everywhere else.</p>
+</li>
+</ol></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-498">Left as an exercise.</p></article></div>
+<article class="example-like" id="example-49"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">A.B.2</span>
+</h6>
+<p id="p-499">\(\Mat_{2,2}\) has basis</p>
+<div class="displaymath">
+\begin{equation*}
+\mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
+\end{array}  \right], \, \mat{E}_{12} = \left[ \begin{array}{cc} 0 \amp  1 \\ 0 \amp  0
+\end{array}  \right], \mat{E}_{21} = \left[ \begin{array}{cc} 0 \amp  0 \\ 1 \amp  0
+\end{array}  \right], \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
+\end{array}  \right]\text{.}
+\end{equation*}
+</div></article><article class="assemblage-like" id="assemblage-20"><p id="p-500">Usually \(\mat{A}\) is a matrix, and \(\mat{A}_{ij}\) is the element of the matrix at position \((i,j)\text{.}\) But now \(\mat{E}_{ij}\) is a matrix in its own right! Its element at position \((k,l)\) will be written as \((\mat{E}_{ij})_{kl}\text{.}\) I hope you don't find this too confusing. In fact, we can write down an elegant formula for the elements of \(\mat{E}_{ij}\) using the Kronecker delta symbol:</p>
+<div class="displaymath">
+\begin{equation}
+(\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}\label{kronecker_for_matrix_basis-2}\tag{A.B.1}
+\end{equation}
+</div></article><article class="exercise-like" id="exercise-77"></article><article class="example-like" id="example-50"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">A.B.3</span>
+</h6>
+<p id="p-502">We will write \(\Col_n\) for the vector space \(\Mat_{n,1}\) of \(n\)-dimensional <em class="emphasis">column vectors</em>, and we will write the standard basis vectors \({\mathbf \mat{E}}_{i1}\) of \(\Col_n\) more simply as \(\col{e}_i\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
+\end{array}  \right], \, 
+\col{e}_2 := \left[ \begin{array}{c} 0 \\ 1 \\ \vdots \\ 0
+\end{array}  \right], \, 
+\ldots, \,
+\col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
+\end{array}  \right] \text{.}
+\end{equation*}
+</div>
+<p id="p-503">Vectors in \(\Col_n\) will be written in bold sans-serif font eg. \(\col{v} \in \Col_n\text{.}\)</p></article><p id="p-504">Equipped with these operations, the set \(\Mat_{n, m}\) of all \(n \times m\) matrices is a vector space  with dimension \(nm\) . We write \(\Col_n\) for the vector space \(\Mat_{n,1}\) of \(n\)-dimensional <em class="emphasis">column vectors</em>.</p>
+<p id="p-505">The most important operation is <em class="emphasis">matrix multiplication</em>. An \(n \times k\) matrix \(\mat{A}\) can be multiplied from the right with a \(k \times m\) matrix \(\mat{B}\) to get a \(n \times m\) matrix \(\mat{AB}\text{,}\)</p>
+<div class="displaymath">
+\begin{align*}
+\end{align*}
+</div>
+<p>by defining the entries of \(\mat{AB}\) to be</p>
+<div class="displaymath">
+\begin{equation*}
+(\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}\text{.}
+\end{equation*}
+</div>
+<article class="theorem-like" id="props_of_matrix_ops"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">A.B.4</span>
+</h6>
+<p id="p-506">The above operations on matrices satisfy the following rules whenever the sums and products involved are defined:</p>
+<ol class="decimal">
+<li id="li-68"><p id="p-507">\((\mat{A} + \mat{B}) \mat{C} = \mat{A} \mat{C} + \mat{B} \mat{C}\)</p></li>
+<li id="li-69"><p id="p-508">\(\mat{A} (\mat{B} + \mat{C}) = \mat{A} \mat{B} + \mat{A} \mat{C}\)</p></li>
+<li id="li-70"><p id="p-509">\((k \mat{A}) \mat{B} = \mat{A} (k \mat{B}) = k (\mat{A} \mat{B})\)</p></li>
+<li id="li-71"><p id="p-510">\((\mat{A} \mat{B}) \mat{C} = \mat{A} (\mat{B} \mat{C})\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-511">The proofs of (1) - (3) are all routine checks which you have hopefully done before. Let us prove (4), to practice using \(\Sigma\)-notation! Suppose \(\mat{A}\text{,}\) \(\mat{B}\) and \(\mat{C}\) have sizes \(n \times k\text{,}\) \(k \times r\) and \(r \times m\) respectively, so that the matrix products make sense. Then:</p>
+<div class="displaymath">
+\begin{align*}
+((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A} \mat{B})_{ip} \mat{C}_{pj}\\
+\amp = \sum_{p=1}^r \left(\sum_{q=1}^k \mat{A}_{iq} \mat{B}_{qp} \right) \mat{C}_{pj}\\
+\amp = \sum_{p,q} \mat{A}_{iq} \mat{B}_{qp} \mat{C}_{pj}\\
+\amp = \sum_{q=1}^k \mat{A}_{iq} \left( \sum_{p=1}^r \mat{B}_{qp} \mat{C}_{pj}\right)\\
+\amp = \sum_{q=1}^k \mat{A}_{iq} (\mat{B} \mat{C} )_{qj}\\
+\amp = (\mat{A} (\mat{B} \mat{C}))_{ij}\text{.}
+\end{align*}
+</div></article></div>
+<article class="assemblage-like" id="assemblage-21"><p id="p-512">I hope the \(\Sigma\)-notation does not confuse you in the above proof! Let me write out the exact same proof <em class="emphasis">without</em> \(\Sigma\)-notation, in the simple case where \(\mat{A}\text{,}\) \(\mat{B}\) and \(\mat{C}\) are all \(2 \times 2\) matrices, and we are trying to calculate, say, the entry at position \(11\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11} \mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}\\
+\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21}) \mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12} \mat{B}_{22}) \mat{C}_{21}\\
+\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12} \mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21} + \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}\\
+\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12} \mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} + \mat{B}_{22} \mat{C}_{21})\\
+\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B} \mat{C})_{21}\\
+\amp = (\mat{A} (\mat{B} \mat{C}))_{11}\text{.}
+\end{align*}
+</div>
+<p id="p-513">Do you understand the \(\Sigma\)-notation proof now? The crucial step (going from the second to the fourth lines) is called <em class="emphasis">exchanging the order of summation</em>.</p></article><p id="p-514">The <em class="emphasis">transpose</em> of an \(n \times m\) matrix \(\mat{A}\) is the \(m \times n\) matrix \(\mat{A}^T\) whose entries are given by</p>
+<div class="displaymath">
+\begin{equation*}
+(\mat{A}^T)_{ij} := \mat{A}_{ji}\text{.}
+\end{equation*}
+</div>
+<section class="exercises" id="exercises-10"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h2>
+<article class="exercise-like" id="exercise-78"><h6 class="heading">
+<span class="codenumber">1</span> </h6>Prove that if \(A \in \Mat_{2,2}\) satisfies<div class="displaymath">
+\begin{equation*}
+AB = BA
+\end{equation*}
+</div>for all \(B \in \Mat_{2,2}\text{,}\) then \(A\) is of the form<div class="displaymath">
+\begin{equation*}
+\mat{A} = \left[ \begin{array}{cccc} a \amp 0 \\
+0 \amp a
+\end{array}  \right].
+\end{equation*}
+</div></article></section></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

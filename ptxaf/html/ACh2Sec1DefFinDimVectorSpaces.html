@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:36+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="af-ZA">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Definisie van eindigdimensionele vektorruimtes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Slaan oor na hoofinhoud</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Lineêre Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh2FinDimVectorSpaces.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="ACh2FinDimVectorSpaces.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh2Sec2LinearIndependence.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-right-toggle-button button active">Aantekeninge</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh2FinDimVectorSpaces.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="ACh2FinDimVectorSpaces.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh2Sec2LinearIndependence.html" title="Volgende">Volgende</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Voorsake</span></a></h2>
+<ul><li><a href="ACh0NoteForStudent.html" data-scroll="ACh0NoteForStudent">Nota aan die student</a></li></ul>
+<h2 class="link"><a href="ACh1AbstractVectorSpaces.html" data-scroll="ACh1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstrakte vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh1Sec1Intro.html" data-scroll="ACh1Sec1Intro">Inleiding</a></li>
+<li><a href="ACh1Sec2DefVectorSpace.html" data-scroll="ACh1Sec2DefVectorSpace">Definisie van 'n abstrakte vektorruimte</a></li>
+<li><a href="ACh1Sec3ExampleVectorSpace.html" data-scroll="ACh1Sec3ExampleVectorSpace">Eerste voorbeeld van 'n vektorruimte</a></li>
+<li><a href="ACh1Sec4MoreExamples.html" data-scroll="ACh1Sec4MoreExamples">Verdere voorbeelde en slaggate</a></li>
+<li><a href="ACh1Sec5ResultsVectorSpace.html" data-scroll="ACh1Sec5ResultsVectorSpace">'n Paar resultate rakende abstrakte vektorruimtes</a></li>
+<li><a href="ACh1Sec6Subspaces.html" data-scroll="ACh1Sec6Subspaces">Deelruimtes</a></li>
+</ul>
+<h2 class="link"><a href="ACh2FinDimVectorSpaces.html" data-scroll="ACh2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Eindigdimensionele vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh2Sec1DefFinDimVectorSpaces.html" data-scroll="ACh2Sec1DefFinDimVectorSpaces" class="active">Definisie van eindigdimensionele vektorruimtes</a></li>
+<li><a href="ACh2Sec2LinearIndependence.html" data-scroll="ACh2Sec2LinearIndependence">Lineêre onafhanklikheid</a></li>
+<li><a href="ACh2Sec3BasisDimension.html" data-scroll="ACh2Sec3BasisDimension">Basis en dimensie</a></li>
+<li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
+<li><a href="ACh2Sec5ChangeOfBasis.html" data-scroll="ACh2Sec5ChangeOfBasis">Basisverandering</a></li>
+</ul>
+<h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">3</span> <span class="title">Matrikshersiening</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Geskryf in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh2Sec1DefFinDimVectorSpaces"><h2 class="heading hide-type">
+<span class="type">Afdeling</span> <span class="codenumber">2.1</span> <span class="title">Definisie van eindigdimensionele vektorruimtes</span>
+</h2>
+<a href="ACh2Sec1DefFinDimVectorSpaces.html" class="permalink">¶</a><p id="p-278">Ons begin met 'n paar basiese definisies.</p>
+<article class="definition-like" id="definition-5"><h6 class="heading">
+<span class="type">Definisie</span> <span class="codenumber">2.1.1</span>
+</h6>
+<p id="p-279">'n <dfn class="terminology">Lineêre kombinasie</dfn> van 'n eindige kolleksie vektore \(\ve{v}_1, \ldots, \ve{v}_n\) in 'n vektorruimte \(V\) is 'n vektor van die vorm</p>
+<div class="displaymath">
+\begin{equation}
+a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_b \ve{v}_n\tag{2.1.1}
+\end{equation}
+</div>
+<p>waar \(a_1, a_2, \ldots, a_n\) skalare is. As al die skalare \(a_i\) gelyk aan nul is, dan sê ons dat dit die <dfn class="terminology">triviale lineêre kombinasie</dfn> is.</p></article><article class="example-like" id="example-23"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.2</span>
+</h6>
+<p id="p-280">In \(\mathbb{R}^3\) is \((6, 2, -14)\) 'n lineêre kombinasie van \((-3, 1, 2)\) en \((-2, 0, 3)\text{,}\) want</p>
+<div class="displaymath">
+\begin{equation*}
+(6, 2, -14) = 2 (-3, 1, 2) -6 (-2, 0, 3)\text{.}
+\end{equation*}
+</div></article><article class="example-like" id="example-24"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.3</span>
+</h6>
+<p id="p-281">In \(\mathbb{R}^4\text{,}\) is \((2, -1, 3, 0)\) nie 'n lineêre kombinasie van \((1, 3, 2, 0), \, (5, 1, 2, 4)\) en \((-1, 0, 2, 1)\) nie. As dit <em class="emphasis">wel</em> was, dan sou ons vind dat</p>
+<div class="displaymath">
+\begin{equation*}
+(-2, -1, 3, 0) = a_1 (1, 3, 2, 0) + a_2 (5, 1, 2, 4) + a_3 (-1, 0,
+2, 1)
+\end{equation*}
+</div>
+<p>vir sekere skalare \(a_1, a_2, a_3\text{.}\) In ander woorde, ons sou vind dat</p>
+<div class="displaymath">
+\begin{equation*}
+(-2, -1, 3, 0) = (a_1 + a_2 + a_3, \, 3a_1 + a_2, \, 2a_1 + 2a_2 +
+2a_3, \, 4a_2 + a_3)
+\end{equation*}
+</div>
+<p>wat ekwivalent is aan die sisteem van vergelykings</p>
+<div class="displaymath">
+\begin{align}
+a_1 + 5a_2 -a_3 \amp = -2 \label{sim_lin_eqns_first_span_1ex}\tag{2.1.2}\\
+3a_1 + a_2 \amp = -1 \tag{2.1.3}\\
+2a_1 + 2a_2 + 2a_3 \amp = 3\tag{2.1.4}\\
+4a_2 + a_3 \amp = 0 \label{sim_lin_eqns_first_span_4ex}\tag{2.1.5}
+\end{align}
+</div></article><p id="p-282">movebackintoexample</p>
+<article class="exercise-like" id="exercise-47"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.1.4</span>
+</h6>
+<p id="p-283">Bevestig dat die sisteem van vergelykings <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.2">(2.1.2)–(2.1.5)</a> geen oplossing het nie.</p></article><article class="example-like" id="example-25"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.5</span>
+</h6>
+<p id="p-284">Definieer die funksies \(\ve{f}, \ve{f}_1, \ve{f}_2 \in
+\Diff\) as</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2
+(x) = \cos (3x)\text{.}
+\end{equation*}
+</div>
+<p id="p-285">Dan is \(\ve{f}\) 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) vanweë die identiteit \(\cos(3x) = \frac{1}{4} (3 \cos x
++ \cos(3x))\text{.}\) Sien <a knowl="./knowl/trig_poly_example.html" title="Voorbeeld 1.6.18: Trigonometriese polinome">Voorbeeld 1.6.18</a>. Met ander woorde,</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 \text{.}
+\end{equation*}
+</div>
+<p id="p-286">Hierdie voorbeeld wys dat \(\ve{f}\) ook 'n trigonometriese polinoom is,selfs al is die oorspronklike formule \(\ve{f}(x) = cos(3x)\) nie van die form <a knowl="./knowl/formula_for_trig_poly.html" title="Vergelyking 1.6.3">(1.6.3)</a> nie.</p></article><article class="definition-like" id="definition-6"><h6 class="heading">
+<span class="type">Definisie</span> <span class="codenumber">2.1.6</span>
+</h6>
+<p id="p-287">Ons sê dat die lys vektore \(\ve{v}_1, \ve{v}_2,
+\ldots, \ve{v}_n\) in 'n vektorruimte \(V\) \(V\) <dfn class="terminology">span</dfn> as elke vektor \(\ve{v} \in V\) 'n lineêre kombinasie van \(\ve{v}_1,
+\ve{v}_2, \ldots, \ve{v}_n\) is.</p></article><article class="example-like" id="example-26"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.7</span>
+</h6>
+<p id="p-288">\(\mathbb{R}^2\) word deur</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{e}_1 := (1, \, 0), \, \, \ve{e}_2 := (0, 1)
+\end{equation*}
+</div>
+<p>gespan, want elke vektor \(\ve{v} = (a_1, \, a_2)\) kan as 'n lineêre kombinasie</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2
+\end{equation*}
+</div>
+<p>uitgedruk word.</p></article><article class="example-like" id="three_vectors_spanning_R2_example"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.8</span>
+</h6>
+<p id="p-289">\(\mathbb{R}^2\) word ook deur</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1)
+\end{equation*}
+</div>
+<p>gespan. <figure class="figure-like" id="spanning_set_R2"><div style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/image-12.svg" style="width: 100%; height: auto;" alt=""></div>
+<figcaption><span class="type">Figuur</span> <span class="codenumber">2.1.9</span> 'n Lys vektore wat \(\mathbb{R}^2\) span.</figcaption></figure> Let daarop dat elke vektor \(\ve{v}\) geskryf kan vord as 'n lineêre kombinasie van \(\ve{f}_1\text{,}\) \(\ve{f}_2\text{,}\) \(\ve{f}_3\) op meer as een manier (oneindig baie maniere, as't ware). Byvoorbeeld,</p>
+<div class="displaymath">
+\begin{align}
+(2, 3) \amp = 3 \ve{f}_1  - \frac{1}{3} \ve{f}_2 + \frac{8}{3} \ve{f}_3\label{x1st_f_eqn}\tag{2.1.6}\\
+(2,3) \amp = 2 \ve{f}_1 + \frac{2}{3} \ve{f}_2 + \frac{5}{3} \ve{f}_3\label{x2nd_f_eqn}\tag{2.1.7}
+\end{align}
+</div></article><article class="exercise-like" id="exercise-48"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.1.10</span>
+</h6>
+<p id="p-290">Bevestig dat vergelykings <a knowl="./knowl/x1st_f_eqn.html" title="Vergelyking 2.1.6">(2.1.6)</a> en <a knowl="./knowl/x2nd_f_eqn.html" title="Vergelyking 2.1.7">(2.1.7)</a> korrek is.</p></article><article class="example-like" id="Rn_spanning_set"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.11</span>
+</h6>
+<p id="p-291">\(\mathbb{R}^n\) word deur</p>
+<div class="displaymath">
+\begin{equation}
+\ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots,
+0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)\label{defn_of_e_i}\tag{2.1.8}
+\end{equation}
+</div>
+<p>gespan, want elke vektor \(\ve{v} = (a_1, \,a_2, \, \ldots, \, a_n)\) kan as 'n lineêre kombinasie</p>
+<div class="displaymath">
+\begin{equation}
+\ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n\text{.}\label{standard_basis_R_n}\tag{2.1.9}
+\end{equation}
+</div>
+<p>uitgedruk word.</p></article><article class="exercise-like" id="exercise-49"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.1.12</span>
+</h6>
+<p id="p-292">Bevestig die korrektheid van <a knowl="./knowl/standard_basis_R_n.html" title="Vergelyking 2.1.9">(2.1.9)</a>.</p></article><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber"></span> <span class="title">Oefeninge</span>
+</h3>
+<article class="exercise-like" id="exercise-50"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-293">Beskou die volgende polinome in \(\Poly_2\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3
+(x) := x + 1, \, \ve{r}_4 (x) := x-1
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-49"><p id="p-294">Kan die polinoom \(\ve{p}\) met \(\ve{p}(x) = x^2 + 1\) as 'n lineêre kombinasie van \(\ve{r}_1\text{,}\) \(\ve{r}_2\text{,}\) \(\ve{r}_3\text{,}\) \(\ve{r}_4\) geskryf word?</p></li>
+<li id="li-50"><p id="p-295">Indien wel, in <em class="emphasis">hoeveel verskillende maniere</em> kan dit gedoen word?</p></li>
+</ol></article><article class="exercise-like" id="exercise-51"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-296">Veronderstel die vektore \(\ve{e}_1\text{,}\) \(\ve{e}_2\text{,}\) \(\ve{e}_3\) en \(\ve{e}_4\) span 'n vektorruimte \(V\text{.}\) Wys dat die vektore \(\ve{f}_1 := \ve{e}_2 - \ve{e}_1\text{,}\) \(\ve{f}_2 := \ve{e}_3 - \ve{e}_2\text{,}\) \(\ve{f}_3 := \ve{e}_4 - \ve{e}_3\text{,}\) \(\ve{f}_4 := \ve{e}_4\) ook \(V\) span.</p></article><article class="exercise-like" id="chebyshev_example"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-297">Wys dat die polinome</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x) := x, \,\, \ve{q}_2 (x) :=
+2x^2 - 1, \,\,
+\ve{q}_3 (x) := 4x^3 - 3x
+\end{equation*}
+</div>
+<p id="p-298">\(\Poly_3\) span.</p></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-13T00:00:02+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>Let \(\ve{v} \in V\text{.}\) Expand it in the basis \(\basis{B}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]\text{.}
+\end{equation*}
+</div>
+<p>Then,</p>
+<div class="displaymath">
+\begin{align*}
+_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}\\
+\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (\knowl{./knowl/lin_of_coord_vectors.html}{\text{Lemma 2.4.9}})\\
+\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp \knowl{./knowl/column_vector_multiplication.html}{\text{(2.5.6)}}\\
+\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, \text{.}
+\end{align*}
+</div></article><span class="incontext"><a href="Ch2Sec5ChangeOfBasis.html#proof-19">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T23:59:59+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="hiddenproof"><h6 class="heading"><span class="type">Proof</span></h6>
+<p>We will show that (1) \(\Leftrightarrow\) (2), (1) \(\Rightarrow\) (3) and (3) \(\Rightarrow\) (2), and conclude that each statement implies the others.</p>
+<p>(1) \(\Rightarrow\) (2). Suppose that \(\basis{B}\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+<div class="displaymath">
+\begin{equation}
+k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\tag{2.2.6}
+\end{equation}
+</div>
+<p>Let \(k_s\) be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multuplying by \(\frac{1}{k_s}\) we can solve for \(\ve{v}_s\) in terms of the other vectors:</p>
+<div class="displaymath">
+\begin{align*}
+\ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \mbox{(No } \ve{v}_i \mbox{ terms on RHS)}
+\end{align*}
+</div>
+<p>Therefore, (2) is true.</p>
+<p>(2) \(\Rightarrow\) (1). Suppose that one of the vectors in the list, say \(\ve{v}_s\text{,}\) is a linear combination of the others vectors. That is,</p>
+<div class="displaymath">
+\begin{align*}
+\ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No } \mbox{term on RHS.)} 
+\end{align*}
+</div>
+<p>Rearranging this equation gives:</p>
+<div class="displaymath">
+\begin{equation}
+k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.\tag{2.2.7}
+\end{equation}
+</div>
+<p>Not all the coefficients on the LHS of <a knowl="./knowl/rearranged_lin_dep.html" title="Equation 2.2.7">(2.2.7)</a> are zero, since the coefficient of \(\ve{v}_s\) is equal to \(-1\text{.}\) Therefore, \(\basis{B}\) is linearly dependent.</p>
+<p>(1) \(\Rightarrow\) (3). Suppose that the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+<div class="displaymath">
+\begin{equation}
+k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\tag{2.2.8}
+\end{equation}
+</div>
+<p>Let \(r \in \{1, \,2, \ldots, \, n\}\) be the largest index such that \(k_r \neq 0\text{.}\) (We are told that not all the \(k_i\) are zero, so this makes sense.) If \(r=1\text{,}\) then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Equation 2.2.8">(2.2.8)</a> is simply the equation</p>
+<div class="displaymath">
+\begin{equation*}
+k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0\text{.}
+\end{equation*}
+</div>
+<p>Therefore \(\ve{v}_1 = \ve{0}\) by <a knowl="./knowl/dichotomy_lem.html" title="Lemma 1.5.6">Lemma 1.5.6</a>, and we are done. On the other hand, suppose \(r \neq 1\text{.}\) Then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Equation 2.2.8">(2.2.8)</a> becomes the equation</p>
+<div class="displaymath">
+\begin{equation*}
+k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0\text{.}
+\end{equation*}
+</div>
+<p>By dividing by \(k_r\text{,}\) we can now solve for \(\ve{v}_r\) in terms of the preceding vectors \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+\therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
+\end{equation*}
+</div>
+<p>Therefore, (3) is true.</p>
+<p>(3) \(\Rightarrow\) (2) Suppose that (3) is true. In other words, either:</p>
+<ul class="disc">
+<li>\(\ve{v}_1 = \ve{0}\text{.}\) Therefore, \(\basis{B}\) is linearly dependent, by <a knowl="./knowl/remark_about_lin_dependence.html" title="Remark 2.2.2: Zero vector implies linear dependence">Remark 2.2.2</a>. In other words, (1) is true. Therefore, since we have already proved that (1) \(\Rightarrow \) (2), we conclude that (2) is true.</li>
+<li>For some \(r \in \{2, \ldots, n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1, \ldots, \ve{v}_{r-1}\text{.}\) In this case, clearly \(\ve{v}_r\) is a linear combination of the other vectors in \(\basis{B}\text{,}\) so (2) is true.</li>
+</ul>
+<p>In both cases, (2) is true. So, (3) \(\Rightarrow\) (2).</p></article><span class="incontext"><a href="Ch2Sec2LinearIndependence.html#proof-7">in-context</a></span>
+</body>
+</html>

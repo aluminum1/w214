@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T20:50:36+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="af-ZA">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Deelruimtes</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evalueer (Sage)'});
+});
+</script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Slaan oor na hoofinhoud</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Lineêre Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh1Sec5ResultsVectorSpace.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh2FinDimVectorSpaces.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-right-toggle-button button active">Aantekeninge</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh1Sec5ResultsVectorSpace.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="ACh1AbstractVectorSpaces.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh2FinDimVectorSpaces.html" title="Volgende">Volgende</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Voorsake</span></a></h2>
+<ul><li><a href="ACh0NoteForStudent.html" data-scroll="ACh0NoteForStudent">Nota aan die student</a></li></ul>
+<h2 class="link"><a href="ACh1AbstractVectorSpaces.html" data-scroll="ACh1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstrakte vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh1Sec1Intro.html" data-scroll="ACh1Sec1Intro">Inleiding</a></li>
+<li><a href="ACh1Sec2DefVectorSpace.html" data-scroll="ACh1Sec2DefVectorSpace">Definisie van 'n abstrakte vektorruimte</a></li>
+<li><a href="ACh1Sec3ExampleVectorSpace.html" data-scroll="ACh1Sec3ExampleVectorSpace">Eerste voorbeeld van 'n vektorruimte</a></li>
+<li><a href="ACh1Sec4MoreExamples.html" data-scroll="ACh1Sec4MoreExamples">Verdere voorbeelde en slaggate</a></li>
+<li><a href="ACh1Sec5ResultsVectorSpace.html" data-scroll="ACh1Sec5ResultsVectorSpace">'n Paar resultate rakende abstrakte vektorruimtes</a></li>
+<li><a href="ACh1Sec6Subspaces.html" data-scroll="ACh1Sec6Subspaces" class="active">Deelruimtes</a></li>
+</ul>
+<h2 class="link"><a href="ACh2FinDimVectorSpaces.html" data-scroll="ACh2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Eindigdimensionele vektorruimtes</span></a></h2>
+<ul>
+<li><a href="ACh2Sec1DefFinDimVectorSpaces.html" data-scroll="ACh2Sec1DefFinDimVectorSpaces">Definisie van eindigdimensionele vektorruimtes</a></li>
+<li><a href="ACh2Sec2LinearIndependence.html" data-scroll="ACh2Sec2LinearIndependence">Lineêre onafhanklikheid</a></li>
+<li><a href="ACh2Sec3BasisDimension.html" data-scroll="ACh2Sec3BasisDimension">Basis en dimensie</a></li>
+<li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
+<li><a href="ACh2Sec5ChangeOfBasis.html" data-scroll="ACh2Sec5ChangeOfBasis">Basisverandering</a></li>
+</ul>
+<h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">3</span> <span class="title">Matrikshersiening</span></a></h2>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Geskryf in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh1Sec6Subspaces"><h2 class="heading hide-type">
+<span class="type">Afdeling</span> <span class="codenumber">1.6</span> <span class="title">Deelruimtes</span>
+</h2>
+<a href="ACh1Sec6Subspaces.html" class="permalink">¶</a><section class="introduction" id="introduction-4"><p id="p-204">In hierdie deel san ons die konsep van 'n <em class="emphasis">deelruimte</em> bekend stel. Dié konsep sal ons toelaat om vinnig nuwe voorbeelde van vektorruimtes te vind.</p></section><section class="subsection" id="subsection-5"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.6.1</span> <span class="title">Definition of a subspace</span>
+</h3>
+<article class="definition-like" id="defn-subspace"><h6 class="heading">
+<span class="type">Definisie</span> <span class="codenumber">1.6.1</span>
+</h6>
+<p id="p-205">'n deelversameling \(U \subseteq V\) van 'n vektor-ruimte \(V\) is 'n <dfn class="terminology">deelruimte van \(V\)</dfn> as:</p>
+<ul class="disc">
+<li id="li-43"><p id="p-206">Vir alle \(\ve{u}, \ve{u}' \in U\text{,}\) \(\ve{u}+\ve{u}' \in U\)</p></li>
+<li id="li-44"><p id="p-207">\(\ve{0} \in U\)</p></li>
+<li id="li-45"><p id="p-208">Vir alle skalare \(k\) en alle vektore \(\ve{u} \in U\text{,}\) \(k \cdot
+\ve{u} \in U\)</p></li>
+</ul></article><article class="theorem-like" id="subspace_lem"><h6 class="heading">
+<span class="type">Hulpstelling</span> <span class="codenumber">1.6.2</span>
+</h6>
+<p id="p-209">As \(U\) 'n deelruimte van 'n vektorruimte \(V\) is, dan is \(U\) ook 'n vektorruimte, toegerus met dieselfde sommeringsbewerking, nul-vektor en skalaarvermenigvuldigingsbewerking as \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-6"><a knowl="" class="id-ref" refid="hk-proof-6"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-6" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-210">Aangesien \(U\) 'n deelruimte is, weet ons dat dit sin maak om dit “toe te rus met dieselfde sommeringsbewerking, nul-vektor en skalaarvermenigvuldigingsbewerking as \(V\)”. (As \(U\) <em class="emphasis">nie</em> 'n deelruimte was nie, dan sou ons byvoorbeeld kon vind dat \(\ve{u},
+\ve{u}' \in U\) maar \(\ve{u}+\ve{u}' \notin U\text{,}\) So die sommeringsbewerking sou nie sin maak nie.)</p>
+<p id="p-211">So ons moet net reëls R1 tot R8 nagaan. Aangesien die reëls geld vir alle vektore \(\ve{u}, \ve{v}, \ve{w}\) in \(V\text{,}\) Sal hulle beslis geld vir alle vektore \(\ve{u}, \ve{v}, \ve{w}\) in \(U\text{.}\) So reëls R1 tot R8 word bevredig.</p></article></div>
+<article class="example-like" id="example-11"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.3</span> <span class="title">Lyn in $\mathbb{R}^2$</span>
+</h6>
+<p id="p-212">'n Lyn \(L\) deur die oorsprong in \(\mathbb{R}^2\) is 'n deelruimte van \(\mathbb{R}^2\text{:}\)</p>
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-8.svg" style="width: 100%; height: auto;" alt=""></div></div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;"><figcaption class="sbscaption" style="width:100%;"><span class="type">Figuur</span> <span class="codenumber">1.6.4</span> A line through the origin in \(\mathbb{R}^2\text{.}\)</figcaption></div>
+</div>
+<p id="p-213">Onthou dat lyn \(L\) gespesifiseer kan word deur 'n homogene lineêre vergelyking van die form:</p>
+<div class="displaymath">
+\begin{equation}
+L = \{ (x,y) \in \mathbb{R}^2 : ax + by = 0 \}\label{eqn_of_L}\tag{1.6.1}
+\end{equation}
+</div>
+<p>vir konstantes \(a\) en \(b\text{.}\) So, as \(\ve{v} = (x, \, y)\) en \(\ve{v}' =
+(x', \, y')\) op \(L\) lê, dan lê hulle som \(\ve{v} + \ve{v}' = (x
++ x', \, y + y')\) ook op \(L\text{,}\) want hul komponente bevredig die definiërende vergelyking <a knowl="./knowl/eqn_of_L.html" title="Vergelyking 1.6.1">(1.6.1)</a>:</p>
+<div class="displaymath">
+\begin{align*}
+\amp a(x + x') + b (y + y')\\
+\amp  = (ax + by) + (ax' + by')\\
+\amp = 0 + 0 \amp \amp  \mbox{(want \(ax + by = 0\) en \(ax' + by' = 0\))}\\
+\amp = 0\text{.}
+\end{align*}
+</div>
+<p id="p-214">Dit maak ook meetkundig sin: As jy na beeld <a knowl="./knowl/line-through-origin-R2-example.html" title="Figuur 1.6.4">Figuur 1.6.4</a> kyk, sal jy sien dat die som van twee vektore \(\ve{v}, \ve{v}'\) op \(L\) met die kop-op-stert-metode 'n verdere vektor op \(L\) tot gevolg sal hê.</p></article><article class="exercise-like" id="exercise-27"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.5</span>
+</h6>
+<p id="p-215">Voltooi die bewys dat \(L\) 'n deelruimte van \(\mathbb{R}^2\) is deur na te gaan dat die nul-vektor op lyn \(L\) is en dat die vermenigvuldiging van 'n vektor in \(L\) met 'n skalaar 'n vektor op \(L\) lewer.</p></article><article class="example-like" id="example-12"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.6</span> <span class="title">Lyne en vlakke in \(\mathbb{R}^3\)</span>
+</h6>
+<p id="p-216">'n Lyn \(L\) en 'n vlak \(P\) deur die oorsprong in \(\mathbb{R}^3\) is ook 'n deelruimte van \(\mathbb{R}^3\text{:}\) <div class="sidebyside">
+<div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="images/image-9.svg" style="width: 100%; height: auto;" alt=""></div>
+<div class="sbspanel" style="width:44.4444444444444%;justify-content:flex-start;"><img src="images/image-10.svg" style="width: 100%; height: auto;" alt=""></div>
+</div>
+<div class="sbsrow" style="margin-left:5%;margin-right:5%;">
+<figcaption class="sbscaption" style="width:44.4444444444444%;"><span class="type">Figuur</span> <span class="codenumber">1.6.7</span> A line through the origin in \(\mathbb{R}^3\text{.}\)</figcaption><figcaption class="sbscaption" style="width:44.4444444444444%;"><span class="type">Figuur</span> <span class="codenumber">1.6.8</span> A plane through the origin in \(\mathbb{R}^3\text{.}\)</figcaption>
+</div>
+</div></p></article><article class="example-like" id="example-13"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.9</span> <span class="title">Nul-vektorruimte</span>
+</h6>
+<p id="p-217">As \(V\) 'n vektorruimte is, dan is die versameling \(\{\ve{0}\} \subseteq V\) wat slegs die nul-vektor \(\ve{0}\) 'n deelruimte van \(V\text{.}\)</p></article><article class="exercise-like" id="exercise-28"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.10</span>
+</h6>
+<p id="p-218">Gaan na dat dit waar is.</p></article><article class="example-like" id="example-14"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.11</span> <span class="title">Nie 'n vektorruimte nie: 'n Lyn nie deur die oorsprong nie</span>
+</h6>
+<p id="p-219">Wees versigtig — nie <em class="emphasis">elke</em> lyn \(L \subset \mathbb{R}^2\) vorm 'n deelruimte van \(\mathbb{R}^2\) nie. As \(L\) nie deur die oorsprong loop nie, dan vind ons dat \(\ve{0} \notin L\text{,}\) so \(L\) is nie 'n deelruimte nie.</p>
+<p id="p-220">Nog 'n rede dat \(L\) nie 'n deelruimte is nie is dat dit nie geslote onder sommering is nie: As ons twee nie-nul vektore \(\ve{v}\) en \(\ve{v}'\) op \(L\) bymekaar tel, kry ons 'n vektor \(\ve{v} + \ve{v}'\) wat nie op \(L\) lê nie: <div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-11.svg" style="width: 100%; height: auto;" alt=""></div></div>
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;"><figcaption class="sbscaption" style="width:100%;"><span class="type">Figuur</span> <span class="codenumber">1.6.12</span> A line which does not pass through the origin is not closed under addition.</figcaption></div>
+</div></p></article></section><section class="subsection" id="subsection-6"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.6.2</span> <span class="title">Verder voorbeelde van deelruimtes</span>
+</h3>
+<article class="example-like" id="example-15"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.13</span> <span class="title">Kontinue funksies as 'n deelruimte</span>
+</h6>
+<p id="p-221">Die versameling</p>
+<div class="displaymath">
+\begin{equation*}
+\Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} 
+\mbox{ kontinu}  \}
+\end{equation*}
+</div>
+<p>van alle kontinue funksies op die interval \(I\) is 'n deelruimte van die versameling \(\Fun(I)\) van <em class="emphasis">alle</em> funksies op \(I\text{.}\) Kom ons bevestig dat dit die definisie bevredig. Jy weet reeds van vorige kursusse dat:</p>
+<ul class="disc">
+<li id="li-46"><p id="p-222">As \(\ve{f}\) en \(\ve{g}\) kontinue funksies op \(I\) is, dan is \(\ve{f} + \ve{g}\) ook 'n kontinue funksie.</p></li>
+<li id="li-47"><p id="p-223">Die nul-funksie \(\ve{0}\) gedefinieer as \(\ve{0}(x) = 0\) vir alle \(x \in I\) is 'n kontinue funksie.</p></li>
+<li id="li-48"><p id="p-224">As \(\ve{f}\) 'n kontinue funksie is en \(k\) 'n skalaar is, dan is \(k \cdot \ve{f}\) ook kontinu.</p></li>
+</ul>
+<p id="p-225">Daarom, deur <a knowl="./knowl/subspace_lem.html" title="Hulpstelling 1.6.2">Lemma 1.6.2</a>, is \(\Cont(I)\) 'n vektorruimte in eie reg.</p></article><article class="example-like" id="example-16"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.14</span> <span class="title">Differensieerbare funksies as 'n deelruimte</span>
+</h6>
+<p id="p-226">So ook is die versameling</p>
+<div class="displaymath">
+\begin{equation*}
+\Diff(I) := \{ \ve{f}: (0,1) \rightarrow \mathbb{R}, \, \ve{f}
+\mbox{differensieerbaar}  \}
+\end{equation*}
+</div>
+<p>van differensieerbare fuksies op die oop interval \(I\) 'n deelruimte van \(\Fun (I)\text{.}\)</p></article><article class="exercise-like" id="exercise-29"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.15</span>
+</h6>
+<p id="p-227">Bevestig dit. Ook, is \(\Diff( I)\) 'n deelruimte van \(\Cont(I)\text{?}\)</p></article><article class="example-like" id="example-17"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.16</span> <span class="title">Vektorruimtes van polinome</span>
+</h6>
+<p id="p-228">'n <em class="emphasis">Polinoom</em> is 'n funksie \(\ve{p} : \mathbb{R}
+\rightarrow \mathbb{R}\) van die vorm</p>
+<div class="displaymath">
+\begin{equation}
+\ve{p}(x) = a_n x^n + a_{n-1}x^{n-1} + \cdots + a_1 x + a_0\text{.}\label{formula_poly}\tag{1.6.2}
+\end{equation}
+</div>
+<p>vir onveranderlike reële koëffisiënte \(a_0, \ldots, a_n\text{.}\) Twee polinome \(\ve{p}\) en \(\ve{q}\) is <em class="emphasis">gelyk</em> as hulle <em class="emphasis">as funksies</em> gelyk is, m.a.w. as \(\ve{p}(x) = \ve{q} (x)\) vir alle \(x \in
+\mathbb{R}\text{.}\) Die <em class="emphasis">graad</em> van 'n polinoom is die hoogste mag van \(x\) wat in die formule voorkom.</p>
+<p id="p-229">Byvoorbeeld, \(2x^3 - x + 7\) is 'n polinoom van graad 3, terwyl \(x^5 -
+2\) 'n polinoom van graad 5 is.</p>
+<p id="p-230">Die versameling van <em class="emphasis">alle</em> polinome word as \(\Poly\) geskryf en die versameling van alle polinome van 'n graad kleiner of gelyk aan \(n\) word as \(\Poly_n\) geskryf.</p></article><article class="exercise-like" id="exercise-30"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.17</span>
+</h6>
+<p id="p-231">Gaan na dat \(\Poly\) en \(\Poly_n\) wel deelruimtes van \(\Cont
+(\mathbb{R})\) is.</p></article><article class="example-like" id="trig_poly_example"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.18</span> <span class="title">Trigonometriese polinome</span>
+</h6>
+<p id="p-232">'n <em class="emphasis">Trigonometriese polinoom</em> is 'n funksie \(\ve{T} : \mathbb{R}
+\rightarrow \mathbb{R}\) van die vorm</p>
+<div class="displaymath">
+\begin{equation}
+\ve{T} (x) = a_0 + \sum_{k=1}^n a_k \cos(kx) + \sum_{k=1}^n b_k \sin(kx).\label{formula_for_trig_poly}\tag{1.6.3}
+\end{equation}
+</div>
+<p id="p-233">Die <em class="emphasis">graad</em> van 'n trigonometriese polinoom is die grootste veelvoud van \(x\) wat binne een van die sinusse of kosinusse in die formule voorkom. Byvoorbeeld,</p>
+<div class="displaymath">
+\begin{equation*}
+3 - \cos(x) + 6 \sin(3x)
+\end{equation*}
+</div>
+<p>is 'n trigonometriese polinoom van graad 3. Ons skryf die versameling van <em class="emphasis">alle</em> trigonometriese polinome as \(\Trig\) en die versameling van alle trigonometriese polinome van graad kleiner of gelyk aan \(n\) as \(\Trig_n\text{.}\)</p></article><article class="exercise-like" id="exercise-31"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.19</span>
+</h6>
+<p id="p-234">Wys dat \(\Trig\) en \(\Trig_n\) deelruimtes van \(\Cont (\mathbb{R})\) is.</p></article><article class="exercise-like" id="trig_ex_early"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.20</span>
+</h6>
+<p id="p-235">Oorweeg die funksie \(\ve{f} (x) = \sin^3(x)\text{.}\) Wys dat \(\ve{f} \in \Trig_3\) deur dit in die vorm <a knowl="./knowl/formula_for_trig_poly.html" title="Vergelyking 1.6.3">(1.6.3)</a> te skryf. Wenk: gebruik die identiteite</p>
+<div class="displaymath">
+\begin{align*}
+\sin(A) \sin(B) \amp = \frac{1}{2}(\cos(A-B) - \cos(A+B))\\
+\sin(A) \cos(B) \amp = \frac{1}{2}(\sin(A-B) + \sin(A+B))\\
+\cos(A)\cos(B) \amp = \frac{1}{2}(\cos(A-B) + \cos(A+B))
+\end{align*}
+</div>
+<p>wat maklik volg uit die sommeringsformules</p>
+<div class="displaymath">
+\begin{align*}
+\sin(A \pm B) \amp = \sin A \cos B \pm \cos A \sin B\\
+\cos(A \pm B) \amp = \cos A \cos B \mp \sin A \sin B\text{.}
+\end{align*}
+</div></article></section><section class="subsection" id="soln-diff-eqns-sec"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.6.3</span> <span class="title">Solutions to homogenous linear differential equations</span>
+</h3>
+<a href="ACh1Sec6Subspaces.html#soln-diff-eqns-sec" class="permalink">¶</a><p id="p-236">A homogenous \(n\)th order linear ordinary differential equation on an interval \(I\) is a differential equation of the form</p>
+<div class="displaymath">
+\begin{equation}
+a_n(x) y^{(n)}(x) + a_{n-1}(x) y^{(n-1)}(x) + \cdots + a_1(x)y'(x) + a_0(x) y(x) = 0, \quad x \in I\label{general_lin_diff_eqn}\tag{1.6.4}
+\end{equation}
+</div>
+<p>where \(y^{(k)}\) means the \(n\)th derivative of \(y\text{.}\) A <em class="emphasis">solution</em> to the differential equation is just some function \(y(x)\) defined on the interval \(I\) which satisfies <a knowl="./knowl/general_lin_diff_eqn.html" title="Vergelyking 1.6.4">(1.6.4)</a>.</p>
+<article class="example-like" id="first_example_2nd_order_ode"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.21</span> <span class="title">An example of a \(2\)nd order homogenous linear differential equation</span>
+</h6>
+<p id="p-237">For instance,</p>
+<div class="displaymath">
+\begin{equation}
+x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)\label{first_example_2nd_order_ode_eqn}\tag{1.6.5}
+\end{equation}
+</div>
+<p>is a homogenous 2nd order linear differential equation on the interval \((0, \infty)\text{,}\) and</p>
+<div class="displaymath">
+\begin{equation}
+y_1(x) = x^2 \sin (\log x)\label{a_soln_to_my_ode}\tag{1.6.6}
+\end{equation}
+</div>
+<p>is a solution to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>. Similarly,</p>
+<div class="displaymath">
+\begin{equation}
+y_2(x) = x^2 \cos (\log x)\label{a_2nd_soln_to_my_ode}\tag{1.6.7}
+\end{equation}
+</div>
+<p>is also a solution to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>.</p>
+<p id="p-238">We can use SageMath to check that these are indeed solutions to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>. Click the <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> button --- it should output 'True', indicating that \(y_1\) is indeed a solution to the differential equation.</p>
+<div class="sagecell-sage" id="sage-1"><script type="text/x-sage">def solves_de(y):
+ return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+y1 = x^2*sin(log(x))
+
+solves_de(y1)
+</script></div>
+<article class="assemblage-like" id="assemblage-6"><p id="p-239">Edit the code above to check whether \(y_2\) is a solution of the differential equation <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>.</p></article><p id="p-240">We can also plot the graphs of \(y_1\) and \(y_2\text{.}\) Again, click on <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
+<div class="sagecell-sage" id="sage-2"><script type="text/x-sage">y1 = x^2*sin(log(x))
+y2 = x^2*cos(log(x))
+
+plot([y1, y2], (x, 0, 1), legend_label=['y1', 'y2'])
+</script></div>
+<article class="assemblage-like" id="assemblage-7"><p id="p-241">Play with the code above, and plot some different functions.</p></article></article><article class="exercise-like" id="exercise-33"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.22</span>
+</h6>
+<p id="p-242">Check by hand that <a knowl="./knowl/a_soln_to_my_ode.html" title="Vergelyking 1.6.6">(1.6.6)</a> and <a knowl="./knowl/a_2nd_soln_to_my_ode.html" title="Vergelyking 1.6.7">(1.6.7)</a> are indeed  solutions of the differential equation <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>.</p></article><p id="p-243">Suppose we are given an \(n\)th order homogenous linear differential equation of the form <a knowl="./knowl/general_lin_diff_eqn.html" title="Vergelyking 1.6.4">(1.6.4)</a> on some interval \(I \subseteq \mathbb{R}\text{.}\) Write \(V\) for the set of <em class="emphasis">all</em> solutions to the differential equation. That is,</p>
+<div class="displaymath">
+\begin{equation}
+V := \{ y : a_n(x) y^{(n)}(x) + \cdots + a_1(x) y'(x) + a_0(x) y(x) = 0 \}\tag{1.6.8}
+\end{equation}
+</div>
+<p id="p-244">We can regard \(V\) as a subset of the set of <em class="emphasis">all</em> functions on the interval \(I\text{:}\)</p>
+<div class="displaymath">
+\begin{equation*}
+V \subseteq \Fun(I)
+\end{equation*}
+</div>
+<article class="exercise-like" id="exercise-34"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">1.6.23</span>
+</h6>
+<p id="p-245">Show that \(V\) is a <a knowl="./knowl/defn-subspace.html" title="Definisie 1.6.1">subspace</a> of \(\Fun(I)\text{.}\)</p></article><p id="p-246">So, by <a knowl="./knowl/subspace_lem.html" title="Hulpstelling 1.6.2">Hulpstelling 1.6.2</a>, we conclude that <em class="emphasis">the set of solutions to a homogenous linear differential equation is a vector space</em>.</p>
+<article class="example-like" id="first_example_2nd_order_ode_cont"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.24</span> <span class="title">Continuation of Voorbeeld 1.6.21</span>
+</h6>
+<p id="p-247">Consider the differential equation from <a knowl="./knowl/first_example_2nd_order_ode.html" title="Voorbeeld 1.6.21: An example of a \(2\)nd order homogenous linear differential equation">Voorbeeld 1.6.21</a>. We saw that</p>
+<div class="displaymath">
+\begin{equation*}
+y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
+\end{equation*}
+</div>
+<p>are solutions. So, any linear combination of \(y_1\) and \(y_2\) is <em class="emphasis">also</em> a solution. For instance,</p>
+<div class="displaymath">
+\begin{equation*}
+y = 2y_1 + 5 y_2
+\end{equation*}
+</div>
+<p>is also a solution. Let us check this in SageMath.</p>
+<div class="sagecell-sage" id="sage-3"><script type="text/x-sage">def solves_de(y):
+  return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+y1 = x^2*sin(log(x))
+y2 = x^2*sin(cos(x))
+
+solves_de(2*y1 + 5*y2)
+</script></div></article><article class="example-like" id="non_example_nonlinear_ode"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.25</span> <span class="title">A non-example: Solutions to a nonlinear ODE</span>
+</h6>
+<p id="p-248">We saw in the previous example that linear ordinary differential equations (ODEs) are well-behaved - a linear combination of solutions is still a solution. This need not occur in the nonlinear case. For example, consider the nonlinear ODE</p>
+<div class="displaymath">
+\begin{equation}
+y^\prime = y^2.\label{explicit_nonlinear_ode}\tag{1.6.9}
+\end{equation}
+</div>
+<p>The general solution is given by</p>
+<div class="displaymath">
+\begin{equation*}
+y_c = \frac{1}{c - x}
+\end{equation*}
+</div>
+<p>where \(c\) is a constant. For instance,</p>
+<div class="displaymath">
+\begin{equation*}
+y_1 = \frac{1}{1-x}, \quad y_2 =\frac{1}{2-x}
+\end{equation*}
+</div>
+<p>are solutions.</p>
+<p id="p-249">Use the SageMath script below to check whether the linear combination \(y_1 + y_2\) is also a solution.</p>
+<div class="sagecell-sage" id="sage-4"><script type="text/x-sage">y = function('y')(x)
+
+def solves_de(f):
+ return bool(diff(f,x) - f^2 == 0)
+
+y1 = 1/(1-x)
+y2 = 1/(2-x)
+
+solves_de(y1+y2)
+</script></div>
+<p id="p-250">The answer is <code class="code-inline tex2jax_ignore">False!</code> So linear combinations of solutions to the nonlinear differential equation <a knowl="./knowl/explicit_nonlinear_ode.html" title="Vergelyking 1.6.9">(1.6.9)</a> are no longer solutions, in general.</p></article><article class="example-like" id="example-22"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.26</span> <span class="title">Finding the general solution to a differential equation in SageMath</span>
+</h6>
+<p id="p-251">Let us use SageMath to find the general solution of the following ordinary differential equation</p>
+<div class="displaymath">
+\begin{equation}
+y^{\prime \prime} + 2y^\prime + y = 0.\label{explicit_diff_eq}\tag{1.6.10}
+\end{equation}
+</div>
+<p>We can do this as follows. Note that we need to be a bit more careful now, first defining our variable \(x\) and then declaring that \(y\) is a function of \(x\text{.}\)</p>
+<div class="sagecell-sage" id="sage-5"><script type="text/x-sage">var('x')
+y = function('y')(x)
+
+diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+  desolve(diff_eqn,y)
+
+desolve(diff_eqn, y)
+</script></div>
+<p id="p-252">SageMath reports that the general solution is given in terms of two unspecified constants <code class="code-inline tex2jax_ignore">_K1</code> and <code class="code-inline tex2jax_ignore">_K2</code> as <code class="code-inline tex2jax_ignore">(_K2*cos(2*x) + _K1*sin(2*x))*e^(-x)</code>.</p>
+<p id="p-253">If we set <code class="code-inline tex2jax_ignore">_K1</code> equal to 1 and <code class="code-inline tex2jax_ignore">_K2</code> equal to 0 in the general solution, we will get a particular solution \(y_1\) of the differential equation.</p>
+<div class="sagecell-sage" id="sage-6"><script type="text/x-sage">var('x, _K1, _K2')
+y = function('y')(x)
+
+diff_eqn = diff(y,x,2) +2*diff(y,x,1) + 5*y == 0
+
+my_soln = desolve(diff_eqn,y)
+
+y1 = my_soln.substitute(_K1==1, _K2==0)
+
+y1
+</script></div>
+<p id="p-254">SageMath is telling us that \(y_1 = e^{-x} \sin(2x)\) is a particular solution.</p>
+<article class="assemblage-like" id="assemblage-8"><p id="p-255">Edit the code to set <code class="code-inline tex2jax_ignore">_K2</code> equal to 0 and <code class="code-inline tex2jax_ignore">_K1</code> equal to 1 in the general solution to get a different particular solution \(y_2\text{.}\) What is \(y_2\text{?}\)</p></article></article></section><section class="exercises" id="exercises-4"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">1.6.4</span> <span class="title">Oefeninge</span>
+</h3>
+<article class="exercise-like" id="exercise-35"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-256">Wys dat die versameling</p>
+<div class="displaymath">
+\begin{equation*}
+V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
+\end{equation*}
+</div>
+<p id="p-257">'n deelruimte van \(\mathbb{R}^4\) is.</p></article><article class="exercise-like" id="exercise-36"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-258">Wys dat die versameling</p>
+<div class="displaymath">
+\begin{equation*}
+V := \{ \mbox{polinome van die vorm }  \ve{p}(x) = ax^3 + bx^2 - cx
++ a, \, a,b,c \in \mathbb{R}\}
+\end{equation*}
+</div>
+<p id="p-259">'n deelruimte van \(\Poly_3\) is.</p></article><article class="exercise-like" id="exercise-37"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-260">Laat \(b \in \mathbb{R}\text{.}\) Bewys dat</p>
+<div class="displaymath">
+\begin{equation*}
+V := \{ (x_1, \, x_2, \, x_3) \in \mathbb{R}^3 : 2x_1 - 3x_2 + 5x_3
+= b \}
+\end{equation*}
+</div>
+<p id="p-261">'n deelruimte van \(\mathbb{R}^3\) is as en slegs as \(b=0\text{.}\) (Onthou dat as en slegs as beteken dat die vorentoe- <em class="emphasis">en</em> die terug-implikasie bewys moet word.)</p></article><article class="exercise-like" id="exercise-38"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-262">Beskou die versameling</p>
+<div class="displaymath">
+\begin{equation*}
+V := \{ \mathbf{f} \in \Diff((-1, 1)) : f'(0) = 2 \}\text{.}
+\end{equation*}
+</div>
+<p id="p-263">Is \(V\) 'n deelruimte van \(\Diff((-1,1))\text{?}\) As jy dink dat dit is, <em class="emphasis">bewys</em> dat dit so is. As jy dink dit is nie, <em class="emphasis">bewys</em> dat dit nie is nie!</p></article><article class="exercise-like" id="exercise-39"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-264">Beskou die versameling</p>
+<div class="displaymath">
+\begin{equation*}
+V := \{ (x_1, \, x_2, \, x_3, \, \ldots) \in \mathbb{R}^\infty :
+\lim_{n \rightarrow \infty} x_n = 0 \}\text{.}
+\end{equation*}
+</div>
+<p id="p-265">Is \(V\) 'n deelruimte van \(\mathbb{R}^\infty\text{?}\) As jy dink dit is wel, <em class="emphasis">bewys</em> dat dit so is. As jy dink dit is nie, <em class="emphasis">bewys</em> dat dit nie is nie!</p></article><article class="exercise-like" id="exercise-40"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-266">Is \(\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq
+0 \}\) 'n deelruimte van \(\mathbb{R}\text{?}\) As jy dink dit is wel, <em class="emphasis">bewys</em> dat dit so is. As jy dink dit is nie, <em class="emphasis">bewys</em> dat dit nie is nie!</p></article><article class="exercise-like" id="exercise-41"><h6 class="heading">
+<span class="codenumber">7</span> </h6>
+<p id="p-267">Gee 'n voorbeeld van 'n nie-leë deelversameling \(U\) van \(\mathbb{R}^2\) wat geslote is onder sommering en die vind van sommeringsinverses (i.e. as \(\ve{u}\) in \(U\) is, dan is \(-\ve{u}\) in \(V\)), maar nié 'n deelruimte van \(\mathbb{R}^2\) is nie.</p></article><article class="exercise-like" id="exercise-42"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-268">Gee 'n voorbeeld van 'n nie-leë deelversameling \(V\) van \(\mathbb{R}^2\) wat geslote onder skalaarvermenigvuldiging is, maar nié 'n deelruimte van \(\mathbb{R}^2\) is nie.</p></article><div class="exercisegroup" id="exercisegroup-2">
+<div class="introduction" id="introduction-5">
+<p id="p-269">The next 4 exercises will help acquaint the reader with the concept of the sum of two subspaces. First, we'll need a definition.</p>
+<article class="definition-like" id="def_sum_subspace"><h6 class="heading">
+<span class="type">Definisie</span> <span class="codenumber">1.6.27</span>
+</h6>
+<p id="p-270">Let \(V\) be a vector space. Suppose \(U\) and \(W\) are two subspaces of \(V\text{.}\) The sum \(U + W\) of \(U\) and \(W\) is defined by</p>
+<div class="displaymath">
+\begin{equation*}
+U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
+\end{equation*}
+</div></article><p id="p-271">In the exercises below, \(V,U,W\) will be as above.</p>
+</div>
+<div class="exercisegroup-exercises">
+<article class="exercise-like" id="exercise-43"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-272">Show that \(U + V\) is a subspace of \(V\text{.}\)</p></article><article class="exercise-like" id="exercise-44"><h6 class="heading">
+<span class="codenumber">10</span> </h6>
+<p id="p-273">Show that  \(U + V\) is, in fact, the smallest subspace of \(V\) containing both \(U\) and \(V\text{.}\)</p></article><article class="exercise-like" id="exercise-45"><h6 class="heading">
+<span class="codenumber">11</span> </h6>
+<p id="p-274">If \(W \subset U\) what is \(U + W\text{?}\)</p></article><article class="exercise-like" id="exercise-46"><h6 class="heading">
+<span class="codenumber">12</span> </h6>
+<p id="p-275">Can you think of two subspaces of \(\mathbb{R}^2\) whose sum is \(\mathbb{R}^2\text{?}\) Similarly, can you think of two subspaces of \(\mathbb{R}^2\) whose sum is not all of \(\mathbb{R}^2\text{?}\)</p></article>
+</div>
+</div></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

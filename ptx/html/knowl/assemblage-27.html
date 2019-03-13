@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-13T00:00:04+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+</head>
+<body>
+<article class="assemblage-like"><p>I hope the \(\Sigma\)-notation does not confuse you in the above proof! Let me write out the exact same proof <em class="emphasis">without</em> \(\Sigma\)-notation, in the simple case where \(\mat{A}\text{,}\) \(\mat{B}\) and \(\mat{C}\) are all \(2 \times 2\) matrices, and we are trying to calculate, say, the entry at position \(11\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11} \mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}\\
+\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21}) \mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12} \mat{B}_{22}) \mat{C}_{21}\\
+\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12} \mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21} + \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}\\
+\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12} \mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} + \mat{B}_{22} \mat{C}_{21})\\
+\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B} \mat{C})_{21}\\
+\amp = (\mat{A} (\mat{B} \mat{C}))_{11}\text{.}
+\end{align*}
+</div>
+<p>Do you understand the \(\Sigma\)-notation proof now? The crucial step (going from the second to the fourth lines) is called <em class="emphasis">exchanging the order of summation</em>.</p></article><span class="incontext"><a href="AppAReminderAboutMatrices.html#assemblage-27">in-context</a></span>
+</body>
+</html>

@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T23:59:54+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<html lang="en-US">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>More examples and non-examples</title>
+<meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width,  initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+<script src="https://sagecell.sagemath.org/static/jquery.min.js"></script><script src="https://sagecell.sagemath.org/embedded_sagecell.js"></script><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [['\\(','\\)']]
+    },
+    asciimath2jax: {
+        ignoreClass: ".*",
+        processClass: "has_am"
+    },
+    jax: ["input/AsciiMath"],
+    extensions: ["asciimath2jax.js"],
+    TeX: {
+        extensions: ["extpfeil.js", "autobold.js", "https://aimath.org/mathbook/mathjaxknowl.js", ],
+        // scrolling to fragment identifiers is controlled by other Javascript
+        positionToHash: false,
+        equationNumbers: { autoNumber: "none", useLabelIds: true, },
+        TagSide: "right",
+        TagIndent: ".8em",
+    },
+    // HTML-CSS output Jax to be dropped for MathJax 3.0
+    "HTML-CSS": {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+    CommonHTML: {
+        scale: 88,
+        mtextFontInherit: true,
+    },
+});
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
+<link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
+<link href="https://pretextbook.org/css/0.1/features.css" rel="stylesheet" type="text/css">
+<script>var logged_in = false;
+var role = 'student';
+var guest_access = true;
+var login_required = false;
+</script>
+</head>
+<body class="mathbook-book has-toc has-sidebar-left">
+<a class="assistive" href="#content">Skip to main content</a><div class="hidden-content" style="display:none">\(\newcommand{\be}{\begin{equation}}
+\newcommand{\ee}{\end{equation}}
+\newcommand{\ba}{\begin{aligned}}
+\newcommand{\ea}{\end{aligned}}
+\newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
+\newcommand{\et}{\end{tikzpicture} \end{aligned}}
+\newcommand{\ve}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\mathsf{#1}}
+\newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
+\newcommand{\basis}[1]{{\mathcal #1}}
+\newcommand{\cvector}[1]{\bracketVectorstack{#1}}
+\newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
+\newcommand{\dotp}{\boldsymbol{\cdot}}
+\newcommand{\smul}{.}
+\newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
+\newcommand{\bopen}{\left\{}
+\newcommand{\bclose}{\right\}}
+\newcommand{\mamp}{&amp;}
+
+
+\DeclareMathOperator{\Fun}{Fun}
+\DeclareMathOperator{\Cont}{Cont}
+\DeclareMathOperator{\Diff}{Diff}
+\DeclareMathOperator{\Poly}{Poly}
+\DeclareMathOperator{\Trig}{Trig}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Col}{Col}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\vc}{vec}
+\DeclareMathOperator{\Dim}{Dim}
+\DeclareMathOperator{\Ker}{Ker}
+\DeclareMathOperator{\Nullity}{Nullity}
+\DeclareMathOperator{\Rank}{Rank}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\)</div>
+<header id="masthead" class="smallbuttons"><div class="banner"><div class="container">
+<a id="logo-link" href=""></a><div class="title-container">
+<h1 class="heading"><a href="index.html"><span class="title">Linear Algebra W214</span></a></h1>
+<p class="byline">Bruce Bartlett</p>
+</div>
+</div></div>
+<nav id="primary-navbar" class="navbar"><div class="container">
+<div class="navbar-top-buttons">
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Contents</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Ch1Sec3ExampleVectorSpace.html" title="Previous">Prev</a><a id="upbutton" class="up-button button toolbar-item" href="Ch1AbstractVectorSpaces.html" title="Up">Up</a><a id="nextbutton" class="next-button button toolbar-item" href="Ch1Sec5ResultsVectorSpace.html" title="Next">Next</a></span></div>
+<button class="sidebar-right-toggle-button button active">Annotations</button>
+</div>
+<div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
+<button class="sidebar-left-toggle-button button toolbar-item active">Contents</button><a class="previous-button toolbar-item button" href="Ch1Sec3ExampleVectorSpace.html" title="Previous">Prev</a><a class="up-button button toolbar-item" href="Ch1AbstractVectorSpaces.html" title="Up">Up</a><a class="next-button button toolbar-item" href="Ch1Sec5ResultsVectorSpace.html" title="Next">Next</a>
+</div>
+</div></nav></header><div class="page">
+<div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
+<nav id="toc"><h2 class="link"><a href="frontmatter-1.html" data-scroll="frontmatter-1"><span class="title">Front Matter</span></a></h2>
+<ul><li><a href="Ch0NoteForStudent.html" data-scroll="Ch0NoteForStudent">Note for the student</a></li></ul>
+<h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">1</span> <span class="title">Abstract vector spaces</span></a></h2>
+<ul>
+<li><a href="Ch1Sec1Intro.html" data-scroll="Ch1Sec1Intro">Introduction</a></li>
+<li><a href="Ch1Sec2DefVectorSpace.html" data-scroll="Ch1Sec2DefVectorSpace">Definition of an abstract vector space</a></li>
+<li><a href="Ch1Sec3ExampleVectorSpace.html" data-scroll="Ch1Sec3ExampleVectorSpace">First example of a vector space</a></li>
+<li><a href="Ch1Sec4MoreExamples.html" data-scroll="Ch1Sec4MoreExamples" class="active">More examples and non-examples</a></li>
+<li><a href="Ch1Sec5ResultsVectorSpace.html" data-scroll="Ch1Sec5ResultsVectorSpace">Some results about abstract vector spaces</a></li>
+<li><a href="Ch1Sec6Subspaces.html" data-scroll="Ch1Sec6Subspaces">Subspaces</a></li>
+</ul>
+<h2 class="link"><a href="Ch2FinDimVectorSpaces.html" data-scroll="Ch2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Finite-dimensional vector spaces</span></a></h2>
+<ul>
+<li><a href="Ch2Sec1LinearCombinationSpan.html" data-scroll="Ch2Sec1LinearCombinationSpan">Linear combinations and span</a></li>
+<li><a href="Ch2Sec2LinearIndependence.html" data-scroll="Ch2Sec2LinearIndependence">Linear independence</a></li>
+<li><a href="Ch2Sec3BasisDimension.html" data-scroll="Ch2Sec3BasisDimension">Basis and dimension</a></li>
+<li><a href="Ch2Sec4CoordinateVectors.html" data-scroll="Ch2Sec4CoordinateVectors">Coordinate vectors</a></li>
+<li><a href="Ch2Sec5ChangeOfBasis.html" data-scroll="Ch2Sec5ChangeOfBasis">Change of basis</a></li>
+</ul>
+<h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">3</span> <span class="title">Tutorials</span></a></h2>
+<ul>
+<li><a href="Tut1.html" data-scroll="Tut1">Tutorial 1</a></li>
+<li><a href="Tut2.html" data-scroll="Tut2">Tutorial 2</a></li>
+<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
+</ul>
+<h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
+<h2 class="link"><a href="AppAReminderAboutMatrices.html" data-scroll="AppAReminderAboutMatrices"><span class="codenumber">A</span> <span class="title">Reminder about matrices</span></a></h2>
+<ul><li><a href="exercises-13.html" data-scroll="exercises-13">Exercises</a></li></ul>
+<h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
+</div></div>
+<main class="main"><div id="content" class="mathbook-content"><section class="section" id="Ch1Sec4MoreExamples"><h2 class="heading hide-type">
+<span class="type">Section</span> <span class="codenumber">1.4</span> <span class="title">More examples and non-examples</span>
+</h2>
+<a href="Ch1Sec4MoreExamples.html" class="permalink">¶</a><article class="example-like" id="example-2"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.1</span> <span class="title">A non-example</span>
+</h6>
+<p id="p-115">Define the set \(V\) by</p>
+<div class="displaymath">
+\begin{equation}
+V := \{ \mathbf{a}, \mathbf{b} \} \text{.}\tag{1.4.1}
+\end{equation}
+</div>
+<p id="p-116">Define the addition operation by</p>
+<div class="displaymath">
+\begin{align*}
+\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{a}\\
+\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{c}
+\end{align*}
+</div>
+<p id="p-117">For this to be a well-defined addition operation, we need to check that whenever you add two elements of \(V\) together, you get out a well-defined element of \(V\text{.}\) But \(\ve{b} + \ve{b} = \ve{c}\text{,}\) so adding \(\ve{b} \in V\) to itself outputs something, namely \(\ve{c}\text{,}\) which is not an element of \(V\text{.}\) So \(V\) does not form a vector space since it does not even have a well-defined addition operation.</p></article><article class="example-like" id="example-3"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.2</span> <span class="title">Another non-example</span>
+</h6>
+<p id="p-118">Define the set \(V\) by</p>
+<div class="displaymath">
+\begin{equation}
+V := \{ \mathbf{a}, \mathbf{b} \} \text{.}\tag{1.4.2}
+\end{equation}
+</div>
+<p id="p-119">Define the addition operation by</p>
+<div class="displaymath">
+\begin{align*}
+\ve{a} + \ve{a} := \ve{a} \amp \amp  \ve{a} + \ve{b} := \ve{b}\\
+\ve{b} + \ve{a} := \ve{b} \amp \amp  \ve{b} + \ve{b} := \ve{a}
+\end{align*}
+</div>
+<p id="p-120">This is a well-defined addition operation, since whenever you add two elements of \(V\) together, you get out a well-defined element of \(V\text{.}\)</p>
+<p id="p-121">Define the zero vector by</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := \ve{a}\text{.}\label{ne_13}\tag{1.4.3}
+\end{equation}
+</div>
+<p id="p-122">This is well-defined, since \(\ve{a}\) is indeed an element of \(V\text{.}\)</p>
+<p id="p-123">Define scalar multiplication by a real number \(k \in \mathbb{R}\) by</p>
+<div class="displaymath">
+\begin{equation}
+k \smul\ve{a} := \ve{a}  \text{ and }   k \smul\ve{b} := \ve{b}\text{.}\label{ne_14}\tag{1.4.4}
+\end{equation}
+</div>
+<p id="p-124">This is a well-defined scalar multiplication, since it allows us to multiply any element \(\ve{v} \in V\) by a scalar \(k\) and it outputs a well-defined element \(k \smul\ve{v} \in V\text{.}\)</p></article><article class="exercise-like" id="exercise-5"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.3</span>
+</h6>
+<p id="p-125">Show that these operations satisfy rules R1, R2, R3, R4, R6 and R7, but not R5 and R8.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-1" id="solution-1"><span class="type">Solution</span></a><div id="hk-solution-1" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-126">R1: We must check whether \(\ve{v} + \ve{w} = \ve{w} + \ve{v} \text{ for all } \ve{v}, \ve{w} \in \{\ve{a},\ve{b}\}\text{.}\) Clearly \(\ve{a} + \ve{a} = \ve{a} + \ve{a}\) and likewise for \(\ve{b}\text{.}\) And finally \(\ve{b} = \ve{a} +\ve{b} = \ve{b} + \ve{a}\text{.}\)</p>
+<p id="p-127">R2: We must check whether \((\ve{u} + \ve{v}) + \ve{w} = \ve{u} + (\ve{v} + \ve{w})  \text{ for all } \ve{u} , \ve{v},\ve{w} \in \{\ve{a},\ve{b}\}\text{.}\) This requires we check 8 equations in total. For brevity, we shall only present the solution for one of them, the rest are virtually identical. We check whether</p>
+<div class="displaymath">
+\begin{gather*}
+(\ve{a} + \ve{b}) + \ve{b} = \ve{a} +(\ve{b} + \ve{b}
+\end{gather*}
+</div>
+<p>To that end, consider:</p>
+<div class="displaymath">
+\begin{align*}
+\text{LHS} \amp = (\ve{a} + \ve{b}) + \ve{b}\\
+\amp = \ve{b} + \ve{b}\\
+\amp = \ve{a}\text{.}
+\end{align*}
+</div>
+<p>By a similar method:</p>
+<div class="displaymath">
+\begin{align*}
+\text{RHS} \amp = \ve{a} +(\ve{b} + \ve{b})\\
+\amp = \ve{a} + \ve{a}\\
+\amp = \ve{a}\text{.}
+\end{align*}
+</div>
+<p id="p-128">R3, R4, R6, and R7 all follow from routine checks.</p>
+<p id="p-129">We shall demonstrate why R5 is not satisfied. For that, we need to find a counterexample. Take \(k=2=l, \ve v = \ve b\text{.}\) Then</p>
+<div class="displaymath">
+\begin{align*}
+\text{LHS} \amp = (2+2).\ve{b}\\
+\amp = 4.\ve{b}\\
+\amp = \ve{b}
+\end{align*}
+</div>
+<p>whereas</p>
+<div class="displaymath">
+\begin{align*}
+\text{RHS} \amp = 2.\ve{b} + 2.\ve{b}\\
+\amp = \ve{b} + \ve{b}\\
+\amp =\ve{a}
+\end{align*}
+</div>
+<p>Since \(\text{LHS} \neq \text{RHS}\text{,}\) R5 cannot be true.</p>
+</div></div>
+</div></article><article class="example-like" id="example-4"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.4</span> <span class="title">The zero vector space</span>
+</h6>
+<p id="p-130">Define the set \(Z\) by</p>
+<div class="displaymath">
+\begin{equation}
+Z := \{ \ve{z} \}\text{.}\tag{1.4.5}
+\end{equation}
+</div>
+<p id="p-131">Note that it contains just a single element, \(\ve{z}\text{.}\) Define the addition operation as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{z} + \ve{z} := \ve{z}\tag{1.4.6}
+\end{equation}
+</div>
+<p id="p-132">Define the zero element as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := \ve{z}\text{.}\tag{1.4.7}
+\end{equation}
+</div>
+<p id="p-133">Finally define scalar multiplication by a scalar \(k \in \mathbb{R}\) as:</p>
+<div class="displaymath">
+\begin{equation}
+k \smul\ve{z} := \ve{z}\text{.}\tag{1.4.8}
+\end{equation}
+</div></article><article class="exercise-like" id="exercise-6"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.5</span>
+</h6>
+<p id="p-134">Show that this data satisfies the rules R1 to R8.</p></article><article class="example-like" id="example-5"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.6</span> <span class="title">\(\mathbb{R}^n\)</span>
+</h6>
+<p id="p-135">Define the set \(\mathbb{R}^n\) by</p>
+<div class="displaymath">
+\begin{equation}
+\mathbb{R}^n := \{ (x_1, \, x_2, \, \ldots, \, x_n) : x_i \in \mathbb{R} \mbox{ for all }  i = 1 \ldots n\}\text{.}\tag{1.4.9}
+\end{equation}
+</div>
+<p id="p-136">Define the addition operation as</p>
+<div class="displaymath">
+\begin{equation}
+(x_1, \, x_2, \, \ldots, \, x_n) + (y_1, \, y_2, \, \ldots, \, y_n) := (x_1 + y_1, \, x_2 + y_2, \, \ldots, \, x_n + y_n)\text{.}\tag{1.4.10}
+\end{equation}
+</div>
+<p id="p-137">Define the zero element as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := (0, \, 0, \, \ldots, \, 0)\text{.}\tag{1.4.11}
+\end{equation}
+</div>
+<p id="p-138">Define scalar multiplication by</p>
+<div class="displaymath">
+\begin{equation}
+k \smul(x_1, \, x_2, \, \ldots, \, x_n) := (k x_1, \, k x_2, \, \ldots, \, k x_n)\text{.}\tag{1.4.12}
+\end{equation}
+</div></article><article class="exercise-like" id="exercise-7"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.7</span>
+</h6>
+<p id="p-139">Show that this data satisfies the rules R1 to R8.</p></article><article class="example-like" id="example-6"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.8</span> <span class="title">\(\mathbb{R}^\infty\)</span>
+</h6>
+<p id="p-140">Define the set \(\mathbb{R}^\infty\) by</p>
+<div class="displaymath">
+\begin{equation}
+\mathbb{R}^\infty := \{ (x_1, \, x_2, \, x_3, \, \ldots, ) : x_i \in \mathbb{R} \mbox{ for all }  i = 1, 2, 3, \ldots\}\tag{1.4.13}
+\end{equation}
+</div>
+<p id="p-141">So an element \(\ve{x} \in \mathbb{R}^\infty\) is an infinite sequence of real numbers. Define the addition operation componentwise:</p>
+<div class="displaymath">
+\begin{equation}
+(x_1, \, x_2, \, x_3, \, \ldots) + (y_1, \, y_2, \, y_3, \, \ldots) := (x_1 + y_1, \, x_2 + y_2, \, x_3 + y_3, \, \ldots)\text{.}\tag{1.4.14}
+\end{equation}
+</div>
+<p id="p-142">Define the zero element as</p>
+<div class="displaymath">
+\begin{equation}
+\ve{0} := (0, \, 0, \, 0, \, \ldots )\text{,}\tag{1.4.15}
+\end{equation}
+</div>
+<p>the infinite sequence whose components are all zero. Finally, define scalar multiplication componentwise:</p>
+<div class="displaymath">
+\begin{equation}
+k \smul(x_1, \, x_2, \, x_3, \, \ldots) := (kx_1, \, kx_2, \, kx_3, \, \ldots)\tag{1.4.16}
+\end{equation}
+</div>
+<article class="assemblage-like" id="assemblage-4"><p id="p-143">Thinking about infinity is an important part of mathematics. Have you watched the movie about me called <em class="emphasis">The man who knew infinity</em>?</p></article></article><article class="exercise-like" id="exercise-8"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.9</span>
+</h6>
+<p id="p-144">Show that this data satisfies the rules R1 to R8.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-2" id="solution-2"><span class="type">Solution</span></a><div id="hk-solution-2" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-145">We shall only check R4 below, the rest are similar.</p>
+<p id="p-146">R4 :Let</p>
+<div class="displaymath">
+\begin{align*}
+\amp \ve{v} = (v_1,v_2,v_3,\ldots) \\
+\amp \ve{w} = (w_1,w_2,w_3,\ldots) 
+\end{align*}
+</div>
+<p>We must check whether \(k.(\ve{v} + \ve{w}) = k.\ve{v} + k. \ve{w}\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+\text{LHS} \amp = k.(\ve{v} + \ve{w})\\
+\amp = k.\left[(v_1,v_2,v_3,\ldots) +(w_1,w_2,w_3,\ldots)\right]\\
+\amp = k.\left(v_1 + w_1, v_2 + w_2, v_3 + w_3, \ldots \right)\\
+\amp = (k(v_1+w_1), k(v_2 + w_2), k(v_3 + w_3), \ldots)\\
+\amp = (kv_1+kw_1, kv_2 + kw_2, kv_3 + kw_3, \ldots)\\
+\amp =(kv_1,kv_2,kv_3,\ldots) + (kw_1,kw_2,kw_3,\ldots) \\
+\amp = k.(v_1,v_2,v_3,\ldots) +  k.(w_1,w_2,w_3,\ldots) \\
+\amp = k.\ve{v} + k.\ve={w} \\
+\amp = \text{LHS} 
+\end{align*}
+</div>
+</div></div>
+</div></article><article class="example-like" id="example-7"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.10</span> <span class="title">Functions on a set</span>
+</h6>
+<p id="p-147">Let \(X\) be any set. Define the set \(\Fun(X)\) of <em class="emphasis">real-valued functions on \(X\)</em> by</p>
+<div class="displaymath">
+\begin{equation}
+\Fun(X) := \{ f : X \rightarrow \mathbb{R} \}\text{.}\tag{1.4.17}
+\end{equation}
+</div>
+<p id="p-148">Note that the functions can be arbitrary; there is no requirement for them to be continuous, or differentiable. Such a requirement would not make sense, since \(X\) could be an arbitrary set. For instance \(X\) could be the set \(\{a, b, c\}\) —without any further informaiton, it does not make sense to say that a function \(f : X \rightarrow \mathbb{R}\) is continuous.</p>
+<p id="p-149">Define the addition operation by</p>
+<div class="displaymath">
+\begin{equation}
+(f + g) (x) := f(x) + g(x),  x \in X\label{add_op_functions}\tag{1.4.18}
+\end{equation}
+</div>
+<p id="p-150">Make sure you understand what this formula is saying! We start with two functions \(f\) and \(g\text{,}\) and we are defining their sum \(f + g\text{.}\) This is supposed to be another function on \(X\text{.}\) To define a function on \(X\text{,}\) I am supposed to write down what value it assigns to each \(x \in X\text{.}\) And that is what the formula says: the value that the function \(\mathbf{f} + \mathbf{g}\) assigns to an element \(x \in X\) is defined to be the number \(f(x)\) plus the number \(g(x)\text{.}\) Remember: \(f\) is a function, while \(f(x)\) is a number!</p>
+<p id="p-151">Define the zero vector, which we will call \(z\) in this example, to be the function which outputs the number \(0\) for every input value of \(x \in X\text{:}\)</p>
+<div class="displaymath">
+\begin{equation}
+z (x) := 0  \text{ for all \(x \in X\).}\label{zero_vec_functions}\tag{1.4.19}
+\end{equation}
+</div>
+<p id="p-152">Define scalar multiplication by</p>
+<div class="displaymath">
+\begin{equation}
+(k \smul f)(x) := k f(x)\text{.}\label{smul_functions}\tag{1.4.20}
+\end{equation}
+</div></article><article class="exercise-like" id="notation_quiz_functions"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.11</span>
+</h6>
+<p id="p-153">Notation quiz! Say whether the following combination of symbols represents a real number or a function.</p>
+<ol class="decimal">
+<li id="li-29"><p id="p-154">\(f\)</p></li>
+<li id="li-30"><p id="p-155">\(f(x)\)</p></li>
+<li id="li-31"><p id="p-156">\(k \smul f\)</p></li>
+<li id="li-32"><p id="p-157">\((k \smul f)(x)\)</p></li>
+</ol>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-solution-3" id="solution-3"><span class="type">Solution</span> <span class="codenumber">1</span></a><div id="hk-solution-3" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-158" class="decimal">
+<li id="li-33">Function</li>
+<li id="li-34">Real Number</li>
+<li id="li-35">Function</li>
+<li id="li-36">Real Number</li>
+</ol></div></div>
+<a knowl="" class="id-ref" refid="hk-solution-4" id="solution-4"><span class="type">Solution</span> <span class="codenumber">2</span></a><div id="hk-solution-4" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-159" class="decimal">
+<li id="li-37"><div class="displaymath">
+\begin{gather*}
+f(a)= 4 \\
+f(b) = 0 \\
+f(c) = 2 \\
+\\
+g(a)= 1 \\
+g(b) = 1 \\
+g(c) = 1 \\
+\\
+h(a)= 0 \\
+h(b) = 3\\
+h(c) = 0 
+\end{gather*}
+</div></li>
+<li id="li-38"><div class="displaymath">
+\begin{gather*}
+(f+g)(a) =5\\
+(f+g)(b) =1 \\
+(f+g)(c) = 3\\
+\\
+( 3 \smul h)(a) = 0 \\
+( 3 \smul h)(b) = 9 \\
+( 3 \smul h)(c) = 0 
+\end{gather*}
+</div></li>
+</ol></div></div>
+</div></article><article class="exercise-like" id="quiz_different_functions"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.12</span>
+</h6>
+<p id="p-160">Let \(X = \{a, b, c\}\text{.}\)</p>
+<ol class="decimal">
+<li id="three_functions"><p id="p-161">Write down three different functions \(f, g, h\) in \(\Fun(X)\text{.}\)</p></li>
+<li id="li-40"><p id="p-162">For each of the functions you wrote down in  <a knowl="./knowl/three_functions.html" title="Item 1.4.12.1">Item 1.4.12.1</a>, calculate (i) \(f + g\) and (ii) \(3 \smul h\text{.}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-11"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.13</span>
+</h6>
+<p id="p-163">Show that the data <a knowl="./knowl/add_op_functions.html" title="Equation 1.4.18">(1.4.18)</a>, <a knowl="./knowl/zero_vec_functions.html" title="Equation 1.4.19">(1.4.19)</a>, <a knowl="./knowl/smul_functions.html" title="Equation 1.4.20">(1.4.20)</a> satisfies the rules R1 to R8, so that \(\Fun(X)\) is a vector space.</p></article><article class="example-like" id="matrices_example_vec_space"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.14</span> <span class="title">Matrices</span>
+</h6>
+<p id="p-164">The set \(\Mat_{n, m}\) of all \(n \times m\) matrices is a vector space. See <a href="AppAReminderAboutMatrices.html" class="xref" title="Appendix A: Reminder about matrices">Appendix A</a> for a reminder about matrices.</p></article><article class="exercise-like" id="exercise-12"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">1.4.15</span>
+</h6>
+<p id="p-165">Show that when equipped with the addition operation, zero vector, and scalar multiplication operation as defined in <a href="AppAReminderAboutMatrices.html" class="xref" title="Appendix A: Reminder about matrices">Appendix A</a>, the set \(\Mat_{n, m}\) of all \(n \times m\) matrices is a vector space.</p></article><article class="example-like" id="example-9"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.4.16</span>
+</h6>
+<p id="p-166">We will write \(\Col_n\) for the vector space \(\Mat_{n,1}\) of \(n\)-dimensional <em class="emphasis">column vectors</em>,</p>
+<div class="displaymath">
+\begin{equation*}
+\Col_n = \left\{ \left[ \begin{array}{c} x_1 \\ x_2 \\ \vdots \\ x_n
+\end{array}  \right] : x_1, \ldots, x_n \in \mathbb{R} \right\}
+\end{equation*}
+</div>
+<p id="p-167">So, \(\Col_n\) ‘is’ just \(\mathbb{R}^n\text{,}\) but we make explicit the fact that the components of the vectors are arranged in a column.</p></article><section class="exercises" id="exercises-2"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
+</h3>
+<article class="exercise-like" id="non_ass_ex"><h6 class="heading">
+<span class="codenumber">1</span> </h6>
+<p id="p-168">Define an addition operation on the set \(X := \{ \ve{0}, \, \ve{a}, \, \ve{b} \}\) by the following table:</p>
+<div class="displaymath">
+\begin{equation*}
+\begin{array}{c|ccc}
++ \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\ 
+\hline
+\ve{0} \amp  \ve{0} \amp  \ve{a} \amp  \ve{b} \\
+\ve{a} \amp  \ve{a} \amp  \ve{0} \amp  \ve{a} \\
+\ve{b} \amp  \ve{b} \amp  \ve{a} \amp  \ve{0}
+\end{array}
+\end{equation*}
+</div>
+<p id="p-169">This table works as follows. To calculate, for example, \(\ve{b} + \ve{a}\text{,}\) find the intersection of the row labelled by \(\ve{b}\) with the column labelled by \(\ve{a}\text{.}\) We see that \(\ve{b} + \ve{a} := \ve{a}\text{.}\)</p>
+<p id="p-170">Prove that this addition operation satisfies R1.</p></article><article class="exercise-like" id="exercise-14"><h6 class="heading">
+<span class="codenumber">2</span> </h6>
+<p id="p-171">Prove that the addition operation from <a knowl="./knowl/non_ass_ex.html" title="Exercise 1.4.1">Exercise 1.4.1</a> does not satisfy R2.</p></article><article class="exercise-like" id="strange_addition_R"><h6 class="heading">
+<span class="codenumber">3</span> </h6>
+<p id="p-172">Define a strange new addition operation \(\hat{+}\) on \(\mathbb{R}\) by</p>
+<div class="displaymath">
+\begin{equation*}
+x \hat{+} y := x - y, \qquad x, y \in \mathbb{R}\text{.}
+\end{equation*}
+</div>
+<p id="p-173">Does \(\hat{+}\) satisfy R2? If it does, prove it. If it does not, give a counterexample.</p></article><article class="exercise-like" id="strange_addition_R_new"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-174">Construct an operation \(\boxplus\) on \(\mathbb{R}\) satisfying R1 but not R2.</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-2" id="hint-2"><span class="type">Hint</span></a><div id="hk-hint-2" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-175">Try adjusting the formula from <a knowl="./knowl/strange_addition_R.html" title="Exercise 1.4.3">Exercise 1.4.3</a>.</p></div></div>
+</div></article><article class="exercise-like" id="exercise-17"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-176">Let \(\mathbb{R}^+\) be the set of positive real numbers. Define an addition operation \(\oplus\text{,}\) a zero vector \(z\) and a scalar multiplication \(.\)on \(\mathbb{R}^+\) by</p>
+<div class="displaymath">
+\begin{align*}
+x \oplus y \amp := xy\\
+z \amp  := 1\\
+k \smul x \amp := x^k
+\end{align*}
+</div>
+<p>where \(x, y \in \mathbb{R}^+\text{,}\) and \(k\) is a scalar (i.e. an arbitrary real number).</p>
+<ol class="lower-alpha">
+<li id="li-41"><p id="p-177">Check that these operations are well-defined. For instance, is \(x+ y \in \mathbb{R}^+\text{,}\) as it should be?</p></li>
+<li id="li-42"><p id="p-178">Check that these operations satisfy R1 to R8.</p></li>
+</ol>
+<p id="p-179">We conclude that \(\mathbb{R}^+\text{,}\) equipped with these operations, forms a vector space.</p></article><article class="exercise-like" id="exercise-18"><h6 class="heading">
+<span class="codenumber">6</span> </h6>
+<p id="p-180">Consider the operation \(\oplus\) on \(\mathbb{R}^2\) defined by:</p>
+<div class="displaymath">
+\begin{equation*}
+(a_1, a_2) \oplus (b_1, b_2) := (a_1 + b_2, a_2 + b_1).
+\end{equation*}
+</div>
+<ol class="lower-alpha">
+<li id="li-43">Does this operation satisfy <a knowl="./knowl/R1.html" title="Item: R1.">R1 </a>?</li>
+<li id="li-44">Does this operation satisfy <a knowl="./knowl/R2.html" title="Item: R2.">R2 </a>?</li>
+</ol></article></section></section></div></main>
+</div>
+<div class="login-link"><span id="loginlogout" class="login">login</span></div>
+<script src="https://pretextbook.org/js/0.1/login.js"></script>
+</body>
+</html>

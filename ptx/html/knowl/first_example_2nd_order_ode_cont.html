@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<!--**************************************-->
+<!--*    Generated from PreTeXt source   *-->
+<!--*    on 2019-03-12T23:59:58+02:00    *-->
+<!--*                                    *-->
+<!--*      https://pretextbook.org       *-->
+<!--*                                    *-->
+<!--**************************************-->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
+</head>
+<body>
+<article class="example-like"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">1.6.24</span> <span class="title">Continuation of Example 1.6.21</span>
+</h6>
+<p>Consider the differential equation from <a knowl="./knowl/first_example_2nd_order_ode.html" title="Example 1.6.21: An example of a \(2\)nd order homogenous linear differential equation">Example 1.6.21</a>. We saw that</p>
+<div class="displaymath">
+\begin{equation*}
+y_1 = x^2 \sin (\log x), \quad y_2 = x^2 \cos (\log x)
+\end{equation*}
+</div>
+<p>are solutions. So, any linear combination of \(y_1\) and \(y_2\) is <em class="emphasis">also</em> a solution. For instance,</p>
+<div class="displaymath">
+\begin{equation*}
+y = 2y_1 + 5 y_2
+\end{equation*}
+</div>
+<p>is also a solution. Let us check this in SageMath.</p>
+<div class="sagecell-sage" id="sage-3"><script type="text/x-sage">def solves_de(y):
+  return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
+
+y1 = x^2*sin(log(x))
+y2 = x^2*sin(cos(x))
+
+solves_de(2*y1 + 5*y2)
+</script></div></article><span class="incontext"><a href="Ch1Sec6Subspaces.html#first_example_2nd_order_ode_cont">in-context</a></span>
+</body>
+</html>
