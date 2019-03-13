@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T20:50:36+02:00    *-->
+<!--*    on 2019-03-13T23:05:20+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -41,7 +41,15 @@ MathJax.Hub.Config({
         mtextFontInherit: true,
     },
 });
-</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
+</script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_CHTML-full"></script><script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evalueer (Sage)'});
+});
+</script><script src="https://aimath.org/knowl.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.sticky.js"></script><script src="https://aimath.org/mathbook/js/lib/jquery.espy.min.js"></script><script src="https://pretextbook.org/js/0.1/pretext.js"></script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/stylesheets/mathbook-1.css" rel="stylesheet" type="text/css">
 <link href="https://aimath.org/mathbook/mathbook-add-on2.css" rel="stylesheet" type="text/css">
@@ -58,15 +66,21 @@ var login_required = false;
 \newcommand{\ba}{\begin{aligned}}
 \newcommand{\ea}{\end{aligned}}
 \newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
-\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\et}{\end{tikzpicture} \end{aligned}}
 \newcommand{\ve}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\mathsf{#1}}
-\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
 \newcommand{\basis}[1]{{\mathcal #1}}
 \newcommand{\cvector}[1]{\bracketVectorstack{#1}}
 \newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
+\newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
+\newcommand{\bopen}{\left\{}
+\newcommand{\bclose}{\right\}}
+\newcommand{\mamp}{&amp;}
+
+
 \DeclareMathOperator{\Fun}{Fun}
 \DeclareMathOperator{\Cont}{Cont}
 \DeclareMathOperator{\Diff}{Diff}
@@ -92,11 +106,11 @@ var login_required = false;
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh1Sec6Subspaces.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh2Sec1DefFinDimVectorSpaces.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh1Sec6Subspaces.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="ACh2Sec1LineereKombinasieSpan.html" title="Volgende">Volgende</a></span></div>
 <button class="sidebar-right-toggle-button button active">Aantekeninge</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh1Sec6Subspaces.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh2Sec1DefFinDimVectorSpaces.html" title="Volgende">Volgende</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh1Sec6Subspaces.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a class="next-button button toolbar-item" href="ACh2Sec1LineereKombinasieSpan.html" title="Volgende">Volgende</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -113,7 +127,7 @@ var login_required = false;
 </ul>
 <h2 class="link active"><a href="ACh2FinDimVectorSpaces.html" data-scroll="ACh2FinDimVectorSpaces"><span class="codenumber">2</span> <span class="title">Eindigdimensionele vektorruimtes</span></a></h2>
 <ul>
-<li><a href="ACh2Sec1DefFinDimVectorSpaces.html" data-scroll="ACh2Sec1DefFinDimVectorSpaces">Definisie van eindigdimensionele vektorruimtes</a></li>
+<li><a href="ACh2Sec1LineereKombinasieSpan.html" data-scroll="ACh2Sec1LineereKombinasieSpan">Lineêre kombinasies en span</a></li>
 <li><a href="ACh2Sec2LinearIndependence.html" data-scroll="ACh2Sec2LinearIndependence">Lineêre onafhanklikheid</a></li>
 <li><a href="ACh2Sec3BasisDimension.html" data-scroll="ACh2Sec3BasisDimension">Basis en dimensie</a></li>
 <li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
@@ -129,7 +143,7 @@ var login_required = false;
 <a href="ACh2FinDimVectorSpaces.html" class="permalink">¶</a><section class="introduction" id="introduction-6"><p id="p-276">In hierdie kursus konsentreer ons op <em class="emphasis">eindigdimensionele</em> vektorruimtes, wat ons in hierdie hoofstuk sal definieer.</p>
 <article class="assemblage-like" id="assemblage-9"><p id="p-277"><em class="emphasis">Waarskuwing</em>: Van hier af verder gaan ek verkorte notasie vir skalaarvermenigvuldiging gebruik en \(k \cdot \ve{v}\) bloot as \(k
 \ve{v}\) skryf!</p></article></section><nav class="summary-links"><ul>
-<li><a href="ACh2Sec1DefFinDimVectorSpaces.html"><span class="codenumber">2.1</span> <span class="title">Definisie van eindigdimensionele vektorruimtes</span></a></li>
+<li><a href="ACh2Sec1LineereKombinasieSpan.html"><span class="codenumber">2.1</span> <span class="title">Lineêre kombinasies en span</span></a></li>
 <li><a href="ACh2Sec2LinearIndependence.html"><span class="codenumber">2.2</span> <span class="title">Lineêre onafhanklikheid</span></a></li>
 <li><a href="ACh2Sec3BasisDimension.html"><span class="codenumber">2.3</span> <span class="title">Basis en dimensie</span></a></li>
 <li><a href="ACh2Sec4CoordinateVectors.html"><span class="codenumber">2.4</span> <span class="title">Koördinaatvektore</span></a></li>

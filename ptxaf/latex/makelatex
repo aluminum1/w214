@@ -1,0 +1,2 @@
+xsltproc -xinclude ../../../PreTeXt/dev/xsl/mathbook-latex.xsl ../index.ptx 
+

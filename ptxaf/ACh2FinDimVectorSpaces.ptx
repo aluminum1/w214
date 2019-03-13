@@ -18,7 +18,7 @@
     </assemblage>
   </introduction>
 
-  <xi:include  href="ACh2Sec1DefFinDimVectorSpaces.ptx" />
+  <xi:include  href="ACh2Sec1LineereKombinasieSpan.ptx" />
   <xi:include  href="ACh2Sec2LinearIndependence.ptx" />
   <xi:include  href="ACh2Sec3BasisDimension.ptx" />
   <xi:include  href="ACh2Sec4CoordinateVectors.ptx" />

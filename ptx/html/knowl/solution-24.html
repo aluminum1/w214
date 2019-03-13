@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:01+02:00    *-->
+<!--*    on 2019-03-13T23:23:34+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,10 +14,35 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">2.3.2.5.1</span>
+<span class="type">Solution</span> <span class="codenumber">2.4.8.1</span>
 </h6>
-<p>\(\Mat_{2,2}\) has dimension 4 since it is spanned by \(\ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} \) where \(\ve e_{i,j}\) is the matrix with a \(1 \) in the \(ij^\text{th} \) entry and 0's everywhere else. By <a knowl="./knowl/true_false_span_lin_ind.html" title="Exercise 2.3.2.2">Exercise 2.3.2.2</a>(a), any linearly indepedent list of vectors in  \(\Mat_{2,2}\) has length at most 4. Since the list of matrices in \(\Mat_{2,2}\) in <a knowl="./knowl/x2_by_2_matrices_lin_dep.html" title="Exercise 2.2.2">Exercise 2.2.2</a> has length 5, it cannot be linearly independent.</p>
+<div class="displaymath">
+\begin{equation*}
+\cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
+\end{equation*}
 </div>
-<span class="incontext"><a href="Ch2Sec3BasisDimension.html#solution-24">in-context</a></span>
+<div class="displaymath">
+\begin{equation*}
+\cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
+= \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
+= \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
+\implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
+\end{equation*}
+</div>
+<p>Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
+= \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
+= \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
+\end{equation*}
+</div>
+</div>
+<span class="incontext"><a href="Ch2Sec4CoordinateVectors.html#solution-24">in-context</a></span>
 </body>
 </html>

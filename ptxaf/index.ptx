@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="af-ZA">
+
   <docinfo>
+
+  <latex-image-preamble>
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-euclide}
+\usepackage{amsmath}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usetikzlibrary{matrix,arrows}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes}
+\usetikzlibrary{through,intersections,decorations,shadows,fadings}
+
+\usepackage{pgfplots}
+
+</latex-image-preamble>
 
 <macros>
 \newcommand{\be}{\begin{equation}}
@@ -9,15 +26,21 @@
 \newcommand{\ba}{\begin{aligned}}
 \newcommand{\ea}{\end{aligned}}
 \newcommand{\bt}{\begin{aligned} \begin{tikzpicture}}
-\newcommand{\et}{\end{aligned} \end{tikzpicture}}
+\newcommand{\et}{\end{tikzpicture} \end{aligned}}
 \newcommand{\ve}[1]{\mathbf{#1}}
 \newcommand{\mat}[1]{\mathsf{#1}}
-\newcommand{\col}[1]{\bm{\mat{#1}}}
+\newcommand{\col}[1]{\boldsymbol{\mat{#1}}}
 \newcommand{\basis}[1]{{\mathcal #1}}
 \newcommand{\cvector}[1]{\bracketVectorstack{#1}}
 \newcommand{\cmatrix}[1]{\bracketMatrixstack{#1}}
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
+\newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
+\newcommand{\bopen}{\{\llap{-}}
+\newcommand{\bclose}{\rlap{-}\}}
+\newcommand{\mamp}{&amp;}
+
+
 \DeclareMathOperator{\Fun}{Fun}
 \DeclareMathOperator{\Cont}{Cont}
 \DeclareMathOperator{\Diff}{Diff}
@@ -31,22 +54,10 @@
 \DeclareMathOperator{\Ker}{Ker}
 \DeclareMathOperator{\Nullity}{Nullity}
 \DeclareMathOperator{\Rank}{Rank}
+
 </macros>
 
-<latex-image-preamble>
-\usepackage{tikz}
-\usepackage{tkz-graph}
-\usepackage{tkz-euclide}
-\usetikzlibrary{patterns}
-\usetikzlibrary{positioning}
-\usetikzlibrary{matrix,arrows}
-\usetikzlibrary{calc}
-\usetikzlibrary{shapes}
-\usetikzlibrary{through,intersections,decorations,shadows,fadings}
 
-\usepackage{pgfplots}
-
-</latex-image-preamble>
   </docinfo>
 
   <book>

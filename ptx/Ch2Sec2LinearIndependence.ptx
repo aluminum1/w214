@@ -26,7 +26,7 @@
       <me>
        k_1 = 0, \ldots, k_{i-1} = 0, k_i = 1, k_{i+1} = 0, \ldots, k_n = 0.
       </me>
-      So: <em>a list of linearly independent vectors never contains the zero vector!</em>
+      So: <em>a linearly independent list ofvectors never contains the zero vector!</em>
     </p>
   </remark>
 
@@ -304,8 +304,8 @@ We have a system of consistent homogenous linear equations so we know there exis
     <title>Bumping Off Proposition</title>
     <statement>
       <p>
-        Suppose <m>\basis{L} = \left\{ \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \right\}</m> is a linearly independent list of vectors in a vector space <m>V</m>,
-        and that <m>\basis{S} = \left\{ \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \right\}</m> spans <m>V</m>.
+        Suppose <m>\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose</m> is a linearly independent list of vectors in a vector space <m>V</m>,
+        and that <m>\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose</m> spans <m>V</m>.
         Then <m>m \leq n</m>.
       </p>
     </statement>
@@ -348,7 +348,7 @@ We have a system of consistent homogenous linear equations so we know there exis
       </md>
     </p>
     <p>
-      Now, suppose that <m>m > n</m>. When we reach the <m>n</m>th stage of this process, we will have <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, and it will span <m>V</m>. Therefore, in particular, <m>\ve{l}_{n+1}</m> (which we know exists, since <m>m > n </m>) will be a linear combination of <m>\ve{l}_1, \ldots, \ve{l}_n</m>. But then, by <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>, we conclude that <m>\basis{L}</m> is linearly dependent. But we were told in the beginning that <m>\basis{L}</m> is linearly indepedent, so we have a contradiction. Hence, our assumption that <m>m > n</m> must be false. Therefore, we must have <m>m \leq n</m>. 
+      Now, suppose that <m>m > n</m>. When we reach the <m>n</m>th stage of this process, we will have <m>\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose</m>, and it will span <m>V</m>. Therefore, in particular, <m>\ve{l}_{n+1}</m> (which we know exists, since <m>m > n </m>) will be a linear combination of <m>\ve{l}_1, \ldots, \ve{l}_n</m>. But then, by <xref ref="lin_comb_other_vec"/> of <xref ref="lin_dependence_prop"/>, we conclude that <m>\basis{L}</m> is linearly dependent. But we were told in the beginning that <m>\basis{L}</m> is linearly <em>in</em>dependent, so we have a contradiction. Hence, our assumption that <m>m > n</m> must be false. Therefore, we must have <m>m \leq n</m>. 
    </p>
   </proof>
 
@@ -524,6 +524,26 @@ To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <
     </solution>
   </exercise>
 -->
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
+        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors in <m>\basis{B}</m>.
+        Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
+        (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
+      </p>
+    </statement>
+    <!--
+    <solution>
+      <p>
+        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
+      </p>
+    </solution>
+  -->
+  </exercise>
+
+
   </exercises>
 </section>
 

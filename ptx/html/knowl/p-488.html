@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:02+02:00    *-->
+<!--*    on 2019-03-13T23:23:34+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,11 +13,31 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The fact that each \(\ve{v}\) <em class="emphasis">can</em> be written as a linear combination of the vectors \(\ve{e}_1\text{,}\) \(\ve{e}_2\text{,}\) \(\ldots\text{,}\) \(\ve{e}_n\) means that \(\basis{B}\) spans \(V\text{.}\) We still need to show that this list \(\basis{B}\) is linearly independent. So, suppose that there exist scalars \(b_1\text{,}\) \(b_2\text{,}\) \(\ldots\text{,}\) \(b_n\) such that</p>
 <div class="displaymath">
-\begin{equation}
-b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}\text{.}\tag{2.4.4}
-\end{equation}
+\begin{equation*}
+\cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
+= \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
+\end{equation*}
+</div>
+<div class="displaymath">
+\begin{equation*}
+\cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
+= \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
+\implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
+\end{equation*}
+</div>
+<p>Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
+= \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
+= \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
+\end{equation*}
 </div>
 <span class="incontext"><a href="Ch2Sec4CoordinateVectors.html#p-488">in-context</a></span>
 </body>

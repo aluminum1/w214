@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T20:50:39+02:00    *-->
+<!--*    on 2019-03-13T23:05:25+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -16,34 +16,34 @@
 <p>Begin met die oorspronglike lys vektore</p>
 <div class="displaymath">
 \begin{equation}
-\basis{S} = \left\{ \,\, L_0: \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n
-\right\}\tag{2.2.7}
+\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose      \tag{2.2.10}
 \end{equation}
 </div>
 <p>wat \(V\) span en oorweeg die ‘opgeblase’ lys</p>
 <div class="displaymath">
 \begin{equation}
-\basis{S^{\prime}} = \left\{ \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
-\ve{s}_n.
-\right\}\tag{2.2.8}
+\basis{S^{\prime}} = \bopen \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
+\ve{s}_n \bclose\tag{2.2.11}
 \end{equation}
 </div>
-<p>Omdat \(\ve{l}_1\) 'n lineêre kombinasie van \(\ve{s}_i\) is, is hierdie lys lineêr afhanklik volgens <a knowl="./knowl/crit_ind.html" title="Opmerking 2.2.3">Opmerking 2.2.3</a>. Dus, deur <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.10: Lineêre kombinase van voorafgaande vektore">Proposisie 2.2.10</a> (Lineêre Kombinasie van Voorafgaande Vektore), kan een van die \(\ve{s}\)-vektore, sê \(\ve{s}_r\text{,}\) uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan \(\ve{s}_r\) uit die lys verwyder (‘afstamp’), en die resulterende lys</p>
-<div class="displaymath">
+<p>Nou, omdat \(\basis{S}\) vir \(V\) span, weet ons in besonder dat \(\ve{l}_1\) kan uitgedruk word as 'n lineêre kombinasie van die vektore \(\ve{s}_1, \ldots, \ve{s}_n\text{.}\) Dus, deur <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, weet ons dat  \(\basis{S}'\) lineêr afhanklik is. Dus, deur <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, óf:</p>
+<ul class="disc">
+<li>\(\ve{l}_1 = \ve{0}\text{.}\) Dit kan nie waar wees nie, want dan sou \(\basis{L}\) lineêr afhanklik wees weens <a knowl="./knowl/remark_about_lin_dependence.html" title="Opmerking 2.2.2: Nulvektor impliseer lineêr onafhanklik">Opmerking 2.2.2</a>, wat in teenstryding is met ons oorspronklike aanname.</li>
+<li>een van die \(\ve{s}\)-vectore, noem dit \(\ve{s}_r\text{,}\) kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan \(\ve{s}_r\) uit die lys \(\basis{S}'\) verwyder (‘afstamp’), en die resulterende lys<div class="displaymath">
 \begin{equation}
-\basis{S_1}:= \left\{ \,\, \ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots,
-\hat{\ve{s}_r}, \cdots,
-\ve{s}_n  \right\} \qquad \mbox{(\(\ve{s}_r\) weggelaat)}\tag{2.2.9}
+\basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}\tag{2.2.12}
 \end{equation}
-</div>
-<p>span steeds \(V\text{.}\) Ons kan so aangaan en elke keer 'n \(\ve{l}\)-vektor oorplaas op dieselfde manier, om elke keer by 'n nuwe lys \(L_2\text{,}\) \(L_3\text{,}\) \(L_4\text{,}\) en so voorts uit te kom, waar lys \(L_k\) \((n-k)\) \(\ve{s}\)-vektore bevat.</p>
-<p>Veronderstel \(m &gt; n\text{.}\) Dan sal die lys \(L_n\) slegs \(\ve{l}\)-vektore bevat,</p>
+</div>sal nog steeds vir \(V\) span, deur <a knowl="./knowl/exercise-span-omission.html" title="Oefening 2.1.7">Oefening 2.1.7</a>.</li>
+</ul>
+<p>In hierdie manier kan ons aangaan: elke keer 'n \(\ve{l}\)-vektor oor te dra en 'n \(\ve{s}\)-vektor te verwyder, en die resulterende lys sal nog steeds vir  \(V\) span:</p>
 <div class="displaymath">
-\begin{equation*}
-\basis{S_n}: \,\, \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_n
-\end{equation*}
+\begin{align*}
+\basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose \\
+\basis{L}_1 \amp = \bopen \ve{l}_2, \ldots, \ve{l}_m \bclose \amp \basis{S}_1 \amp = \bopen \ve{l}_1, \underbrace{\ve{s}_1, \ldots, \ve{s}_n}_{n-1} \bclose \\
+\basis{L}_2 \amp = \bopen \ve{l}_3, \ldots, \ve{l}_m \bclose \amp \basis{S}_2 \amp = \bopen \ve{l}_2, \ve{l}_1, \underbrace{\ve{s}_1, \ldots, \ve{s}_n}_{n-2} \bclose \\
+\amp \vdots \amp \amp \vdots 
+\end{align*}
 </div>
-<p>en dit span \(V\) volgens konstruksie. Maar daar bly not 'n paar \(\ve{l}\)-vektore \(\ve{l}_{n+1}, \ldots \ve{l}_{m}\) oor! Dit dui daarop dat \(\ve{l}_{n+1}\) 'n lineêre kombinasie van vektore in \(L_n\) is, wat in teenstelling is met die feit dat die lys vektore \(\ve{l}_1,
-\ve{l}_2, \ldots, \ve{l}_m\) lineêr onafhanklik is. So dit kan nie wees dat \(m &gt; n\text{,}\) daarom is \(m \leq n\text{.}\)</p></article><span class="incontext"><a href="ACh2Sec2LinearIndependence.html#proof-8">in-konteks</a></span>
+<p>Nou, veronderstel dat \(m &gt; n\text{.}\) Wanneer ons die \(n\)ste stadium van hierdie proses bereik, sal \(\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose\text{,}\) en dit sal vir \(V\) span. Dus, in besonder, \(\ve{l}_{n+1}\) (let op dat hierdie vektore wel bestaan, want \(m &gt; n \)) sal 'n lineêre kombinasie van \(\ve{l}_1, \ldots, \ve{l}_n\) wees. Maar dan, deur <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, lei ons af dat \(\basis{L}\) lineêr afhanklik is. Maar ons het aangeneem van die begin af dat  \(\basis{L}\)  lineêr <em class="emphasis">on</em>afhanklik is. So ons het 'n teenstryding. Dus, ons aanname dat  \(m &gt; n\) moet vals wees. Dus, dit moet waar wees dat \(m \leq n\text{.}\)</p></article><span class="incontext"><a href="ACh2Sec2LinearIndependence.html#proof-8">in-konteks</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:01+02:00    *-->
+<!--*    on 2019-03-13T23:23:34+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,12 +12,23 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution"><ol class="lower-alpha">
-<li>We omit the check that \(V \) is a subspace of \(\Poly_2 \) since it is routine. Let us now construct a basis for \(V \text{.}\) Begin with a non-zero vector \(\ve v_1 \)  in \(V \text{.}\) We make the most obvious choice, let \(\ve v_1 = x -2 \text{.}\) Next pick any vector  \(\ve v_2 \) in \(V \) not in the span of \(\left \{ \ve v_1 \right\} \text{.}\) An obvious choice is \(\ve v_2 = x(x-2) \text{.}\) Since \(V \) is not all of \(\Poly_2 \text{,}\) we know that \(\dim V \lt 3 \text{.}\) Thus \(\basis B' = \bopen \ve v_1, \ve v_2 \bclose\) is a basis for \(V \) and so \(\dim V = 2 \text{.}\)</li>
-<li>Once again, we omit the check that \(V \) is a subspace of \(\Poly_2 \text{.}\) Pick any non-zero vector \(\ve v_1 \) in \(V \text{.}\) Let's choose \(\ve v_1 = x \text{.}\) It is not as obvious as before whether there are indeed any vectors in \(V \) not in the span of \(\left\{ \ve v_1 \right\} \text{,}\) and so we must do some computations. If \(p(x) = ax^2 + bx + c\) is in \(V \text{,}\) \(p(x)\) must satisfy<div class="displaymath">
+<li>
+<div class="displaymath">
 \begin{equation*}
-x(2ax + b) = ax^2 + bx + c \\
-\implies 2ax^2 + bx = ax^2 + bx + c.
+p(x) = x^2 + x -6 = (x+3)(x_2)
 \end{equation*}
-</div>Hence \(a  = c = 0 \text{.}\) Thus all vectors in \(V \) are scalar multiples of \(\ve v_1 = x \text{.}\) Hence \(\bopen \ve v_1 \bclose \) is a basis for \(V \) and so \(\dim V = 1\text{.}\)</li>
+</div>
+<p>and so \(p(2) = \) and hence \(p \in V \text{.}\)</p>
+</li>
+<li>Recall that \(\basis B = \bopen x-2 , x(x-2) \bclose \text{.}\)<div class="displaymath">
+\begin{equation*}
+p(x) = x^2 + x -6 = (x+3)(x - 2) =  3(x-2) + x(x-2) 
+\end{equation*}
+</div>and so<div class="displaymath">
+\begin{equation*}
+[p]_\basis{B} = \begin{bmatrix} 3  \\ 1 \end{bmatrix}.
+\end{equation*}
+</div>
+</li>
 </ol></div></body>
 </html>

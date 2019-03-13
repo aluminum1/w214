@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T23:59:59+02:00    *-->
+<!--*    on 2019-03-13T23:23:31+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,23 +10,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evaluate (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>For instance, suppose we try to write \(\ve{v} = (2,3)\) as a linear combination of \(\ve{f}_1, \ve{f}_2, \ve{f}_3\text{.}\) If we take our general solution (<a knowl="./knowl/span_ex_aa1.html" title="Equation 2.1.27">(2.1.27)–(2.1.29)</a>), and set \(t=0\text{,}\) then we get</p>
-<div class="displaymath">
-\begin{gather*}
-a_1 = \frac{1}{3}, \, a_2 = \frac{7}{3}, \, a_3 = 0 \\
-\text{i.e. } \ve{v} = \frac{1}{3} \ve{f}_1 + \frac{7}{3} \ve{f}_2 
-\end{gather*}
-</div>
-<p>Or we could take, say, \(t = 1\text{.}\) Then our solution will be</p>
-<div class="displaymath">
-\begin{gather*}
-a_1 = \frac{4}{3}, \, a_2 = \frac{4}{3}, \, a_3 = 1 \\
-\text{i.e. } \ve{v} = \frac{4}{3} \ve{f}_1 + \frac{4}{3} \ve{f}_2 + \ve{f}_3 
-\end{gather*}
-</div>
+<p>Finally, let us solve this problem using SageMath. Working by hand, we arrive at the simultanous linear equations <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Equation 2.1.19">(2.1.19)–(2.1.20)</a>, and then put it into a Sage cell: <div class="sagecell-sage" id="sage-9"><script type="text/x-sage">var('a1, a2, a3, v1, v2')
+
+solve([-a1 + a2 + 2*a3 == v1,
+       2*a1 + a2 - a3  == v2],
+       [a1, a2, a3])
+</script></div> Note that I needed to tell Sage that <code class="code-inline tex2jax_ignore">v1</code> and <code class="code-inline tex2jax_ignore">v2</code> are variables, and that I am asking it to solve for <code class="code-inline tex2jax_ignore">a1</code>, <code class="code-inline tex2jax_ignore">a2</code> and <code class="code-inline tex2jax_ignore">a3</code>. On my computer, Sage outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p><code class="code-inline tex2jax_ignore"> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </code></p></div></div></div> Here, <code class="code-inline tex2jax_ignore">r1</code> is to be interpreted as our free parameter \(t\text{.}\) So Sage is giving us the same solution as we found by hand, <a knowl="./knowl/span_ex_aa1.html" title="Equation 2.1.27">(2.1.27)–(2.1.29)</a>.</p>
 <span class="incontext"><a href="Ch2Sec1LinearCombinationSpan.html#p-313">in-context</a></span>
 </body>
 </html>

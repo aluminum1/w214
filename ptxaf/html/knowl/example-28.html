@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T20:47:59+02:00    *-->
+<!--*    on 2019-03-13T11:17:44+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,31 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.3.14</span>
+<span class="type">Voorbeeld</span> <span class="codenumber">2.2.6</span>
 </h6>
-<p>Ons sal dit nie hier bewys nie, maar die volgende vektorruimtes is ook eindigdimensioneel:</p>
-<ul class="disc">
-<li><p>\(\mathbb{R}^\infty\text{,}\)</p></li>
-<li><p>\(\Fun(X)\) waar \(X\) 'n eindige versameling is,</p></li>
-<li><p>\(\Cont(I)\) vir enige nie-leë interval \(I\) en</p></li>
-<li><p>\(\Diff(I)\) vir enige oop interval \(I\text{.}\)</p></li>
-</ul></article><span class="incontext"><a href="ACh2Sec3BasisDimension.html#example-28">in-konteks</a></span>
+<p>Die lys polinome</p>
+<div class="displaymath">
+\begin{equation*}
+\ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \,
+\ldots, \, \ve{p}_n (x) := x^n
+\end{equation*}
+</div>
+<p>is 'n basis vir \(\Poly_n\text{,}\) so \(\dim \Poly_n = n+1\text{.}\) Duidelik span hierdie lys \(\Poly_n\) per definisie, so ons moet net seker maak dat hulle line{êr} onafhanklik is. Veronderstel dat</p>
+<div class="displaymath">
+\begin{equation*}
+a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n
+= \ve{0}\text{.}
+\end{equation*}
+</div>
+<p><em class="emphasis">Dit is 'n vergelyking van funksies, so dit geld vir alle \(x \in
+\mathbb{R}\text{!}\)</em> Met ander woorde, vir <em class="emphasis">alle</em> \(x \in \mathbb{R}\) het ons het die vergelyking</p>
+<div class="displaymath">
+\begin{equation}
+a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\text{.}\tag{2.2.5}
+\end{equation}
+</div>
+<p>Maar, ons weet uit algebra dat 'n polinoom van die vorm <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.2.5">(2.2.5)</a> met nie-nul koëffisiënte <em class="emphasis">meestens</em> \(n\) wortels \(x_1, x_2, \ldots,
+x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
+= a_2 = \cdots = a_n = 0\text{,}\) wat is wat ons moes bewys.</p></article><span class="incontext"><a href="ACh2Sec3BasisDimension.html#example-28">in-konteks</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:04+02:00    *-->
+<!--*    on 2019-03-13T23:23:37+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,17 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Equipped with these operations, the set \(\Mat_{n, m}\) of all \(n \times m\) matrices is a vector space.</p>
+<p>I hope the \(\Sigma\)-notation does not confuse you in the above proof! Let me write out the exact same proof <em class="emphasis">without</em> \(\Sigma\)-notation, in the simple case where \(\mat{A}\text{,}\) \(\mat{B}\) and \(\mat{C}\) are all \(2 \times 2\) matrices, and we are trying to calculate, say, the entry at position \(11\text{.}\)</p>
+<div class="displaymath">
+\begin{align*}
+((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11} \mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}\\
+\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21}) \mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12} \mat{B}_{22}) \mat{C}_{21}\\
+\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12} \mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21} + \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}\\
+\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12} \mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} + \mat{B}_{22} \mat{C}_{21})\\
+\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B} \mat{C})_{21}\\
+\amp = (\mat{A} (\mat{B} \mat{C}))_{11}\text{.}
+\end{align*}
+</div>
 <span class="incontext"><a href="AppAReminderAboutMatrices.html#p-624">in-context</a></span>
 </body>
 </html>

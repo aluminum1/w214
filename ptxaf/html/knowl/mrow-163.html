@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T20:50:40+02:00    *-->
+<!--*    on 2019-03-13T11:17:46+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,11 +14,17 @@
 <body>
 <div class="displaymath">
 \begin{align*}
-\ve{w} \amp = -3 \ve{b}_1 + 2 \ve{b}_2\\
-\amp = -3 (\ve{c}_1 + 3 \ve{c}_2) + 2(2 \ve{c}_1 + 3 \ve{c}_2)\\
-\amp = \ve{c}_1 - 3 \ve{c}_2
+((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A}
+\mat{B})_{ip} \mat{C}_{pj}\\
+\amp = \sum_{p=1}^r \left(\sum_{q=1}^k \mat{A}_{iq} \mat{B}_{qp}
+\right) \mat{C}_{pj}\\
+\amp = \sum_{p,q} \mat{A}_{iq} \mat{B}_{qp} \mat{C}_{pj}\\
+\amp = \sum_{q=1}^k \mat{A}_{iq} \left( \sum_{p=1}^r \mat{B}_{qp}
+\mat{C}_{pj}\right)\\
+\amp = \sum_{q=1}^k \mat{A}_{iq} (\mat{B} \mat{C} )_{qj}\\
+\amp = (\mat{A} (\mat{B} \mat{C}))_{ij}
 \end{align*}
 </div>
-<span class="incontext"><a href="ACh2Sec5ChangeOfBasis.html#mjx-eqn-mrow-163">in-konteks</a></span>
+<span class="incontext"><a href="AAppAReminderAboutMatrices.html#mjx-eqn-mrow-163">in-konteks</a></span>
 </body>
 </html>

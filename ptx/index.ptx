@@ -36,8 +36,8 @@
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
-\newcommand{\bopen}{\left\{}
-\newcommand{\bclose}{\right\}}
+\newcommand{\bopen}{\{\llap{-}}
+\newcommand{\bclose}{\rlap{-}\}}
 \newcommand{\mamp}{&amp;}
 
 

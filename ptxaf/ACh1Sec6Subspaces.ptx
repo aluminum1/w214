@@ -142,8 +142,7 @@
 
   <example>
     <title>Lyne en vlakke in <m>\mathbb{R}^3</m></title>
-    <statement>
-      <p>
+    <statement>      <p>
         'n Lyn <m>L</m> en 'n vlak <m>P</m>
         deur die oorsprong in <m>\mathbb{R}^3</m> is ook 'n deelruimte van
         <m>\mathbb{R}^3</m>:

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:04+02:00    *-->
+<!--*    on 2019-03-13T22:40:18+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,16 +13,16 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The proofs of (1) - (3) are all routine checks which you have hopefully done before. Let us prove (4), to practice using \(\Sigma\)-notation! Suppose \(\mat{A}\text{,}\) \(\mat{B}\) and \(\mat{C}\) have sizes \(n \times k\text{,}\) \(k \times r\) and \(r \times m\) respectively, so that the matrix products make sense. Then:</p>
+<p>The most important operation is <em class="emphasis">matrix multiplication</em>. An \(n \times k\) matrix \(\mat{A}\) can be multiplied from the right with a \(k \times m\) matrix \(\mat{B}\) to get a \(n \times m\) matrix \(\mat{AB}\text{,}\)</p>
 <div class="displaymath">
 \begin{align*}
-((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A} \mat{B})_{ip} \mat{C}_{pj}\\
-\amp = \sum_{p=1}^r \left(\sum_{q=1}^k \mat{A}_{iq} \mat{B}_{qp} \right) \mat{C}_{pj}\\
-\amp = \sum_{p,q} \mat{A}_{iq} \mat{B}_{qp} \mat{C}_{pj}\\
-\amp = \sum_{q=1}^k \mat{A}_{iq} \left( \sum_{p=1}^r \mat{B}_{qp} \mat{C}_{pj}\right)\\
-\amp = \sum_{q=1}^k \mat{A}_{iq} (\mat{B} \mat{C} )_{qj}\\
-\amp = (\mat{A} (\mat{B} \mat{C}))_{ij}\text{.}
 \end{align*}
+</div>
+<p>by defining the entries of \(\mat{AB}\) to be</p>
+<div class="displaymath">
+\begin{equation*}
+(\mat{AB})_{ij} := \mat{A}_{i1} \mat{B}_{1j} + \mat{A}_{i2} \mat{B}_{2j} + \cdots + \mat{A}_{ik} \mat{B}_{kj}\text{.}
+\end{equation*}
 </div>
 <span class="incontext"><a href="AppAReminderAboutMatrices.html#p-639">in-context</a></span>
 </body>

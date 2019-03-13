@@ -168,8 +168,8 @@
     <statement>
       <p>
         We say that a list of vectors
-        <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m> in a vector space <m>V</m> <term>spans</term>
-        <m>V</m> if every vector <m>\ve{v} \in V</m> is a linear combination of <m>\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n</m>.
+        <m>\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose </m> in a vector space <m>V</m> <term>spans</term>
+        <m>V</m> if every vector <m>\ve{v} \in V</m> is a linear combination of the vectors from <m>\basis{B}</m>.
       </p>
     </statement>
   </definition>

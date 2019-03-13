@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:02+02:00    *-->
+<!--*    on 2019-03-13T23:23:35+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,13 +13,15 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Now, suppose we only knew \([\ve{w}]_\basis{B}\text{,}\) the coordinate vector of \(\ve{w}\) in the basis \(\basis{B}\text{.}\) In other words, suppose we only knew that</p>
+<p>Then,</p>
 <div class="displaymath">
-\begin{equation*}
-[\ve{w}]_\basis{B} = \left[ \begin{array}{c} -3 \\ 2 \end{array}\right]\text{,}
-\end{equation*}
+\begin{align*}
+_\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}\\
+\amp = a_1 [\ve{b}_1]_\basis{C} + \cdots + a_n [\ve{b}_n]_\basis{C}  \amp \amp  (\knowl{./knowl/lin_of_coord_vectors.html}{\text{Lemma 2.4.9}})\\
+\amp =   \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right] \amp \amp \knowl{./knowl/column_vector_multiplication.html}{\text{(2.5.6)}}\\
+\amp =    \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, \text{.}
+\end{align*}
 </div>
-<p>that is, \(\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2\text{.}\) How could we compute \([\ve{w}]_\basis{C}\text{,}\) the coordinate vector of \(\ve{w}\) in the basis \(\basis{C}\text{?}\)</p>
 <span class="incontext"><a href="Ch2Sec5ChangeOfBasis.html#p-528">in-context</a></span>
 </body>
 </html>

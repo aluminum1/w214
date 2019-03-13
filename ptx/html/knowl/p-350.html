@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T23:59:59+02:00    *-->
+<!--*    on 2019-03-13T23:23:31+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,8 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Either \(\ve{v}_1 = \ve{0}\text{,}\) or for some \(r \in \{2, 3, \ldots,
-n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{.}\)</p>
+<p>(1) \(\Rightarrow\) (2). Suppose that \(\basis{B}\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+<div class="displaymath">
+\begin{equation}
+k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\tag{2.2.6}
+\end{equation}
+</div>
+<p>Let \(k_s\) be one of the nonzero coefficients. Then, by taking the other vectors to the other side of the equation, and multuplying by \(\frac{1}{k_s}\) we can solve for \(\ve{v}_s\) in terms of the other vectors:</p>
+<div class="displaymath">
+\begin{align*}
+\ve{v}_s \amp = -\frac{k_1}{k_s} \ve{v}_1 - \ldots - \frac{k_n}{k_s} \ve{v}_n \amp \amp \mbox{(No } \ve{v}_i \mbox{ terms on RHS)}
+\end{align*}
+</div>
+<p>Therefore, (2) is true.</p>
 <span class="incontext"><a href="Ch2Sec2LinearIndependence.html#p-350">in-context</a></span>
 </body>
 </html>

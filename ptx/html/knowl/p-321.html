@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T23:59:59+02:00    *-->
+<!--*    on 2019-03-13T23:23:31+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,17 +13,14 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>The solution is relatively straightforward. Define the following two functions:</p>
+<p>If we are given that \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) spans \(V\) then to show that any other collection of vectors in \(V\) spans \(V\) it suffices to show that each of \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) can be written has a linear combination of the new collection - you should try prove this yourself! <p>With this observation in hand, the exercise has an easy solution.</p></p>
 <div class="displaymath">
-\begin{equation*}
-f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
-\end{equation*}
-</div>
-<p>It is easy to see that, as the names suggest, \(f_{\text{even}} \) is an even function and \(f_{\text{odd}} (x) \) is an odd function. We simply sum \(f_{\text{even}} \) and \(f_{\text{odd}}  \text{:}\)</p>
-<div class="displaymath">
-\begin{equation*}
-f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right) + \frac{1}{2}\left( f(x) - f(-x) \right) = f(x).
-\end{equation*}
+\begin{align*}
+\ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 \\
+\ve v_2 \amp= (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 \\
+\ve v_3 \amp= (\ve v_3 - \ve v_4) + \ve v_4  \\
+\ve v_4 \amp= \ve v_4 
+\end{align*}
 </div>
 <span class="incontext"><a href="Ch2Sec1LinearCombinationSpan.html#p-321">in-context</a></span>
 </body>

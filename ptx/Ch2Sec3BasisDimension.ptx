@@ -3,12 +3,12 @@
 <section xml:id="Ch2Sec3BasisDimension">
   <title>Basis and dimension</title>
   <introduction>
-    <definition>
+    <definition xml:id="defn_of_basis">
       <statement>
         <p>
-          A list of vectors <m>\basis{B} = \left\{ \ve{e}_1,
+          A list of vectors <m>\basis{B} = \bopen \ve{e}_1,
           \ve{e}_2,\ldots,
-         \ve{e}_n\right\}</m> in a vector space <m>V</m> is called a <term>basis</term>
+         \ve{e}_n\bclose</m> in a vector space <m>V</m> is called a <term>basis</term>
           for <m>V</m> if it is linearly independent and spans <m>V</m>.
         </p>
       </statement>
@@ -38,12 +38,12 @@
       </p>
     </proof>
 
-    <definition>
+    <definition xml:id="dim_vec_space">
       <statement>
         <p>
-          A vector space <m>V</m> is <term>finite-dimensional</term> if it has a basis.
+          A vector space <m>V</m> is <term>finite-dimensional</term> if there exists a basis <m>\basis{B}</m> for <m>V</m>.
           In that case, the <term>dimension</term>
-          of <m>V</m> is the number of elements in a basis for <m>V</m>.
+          of <m>V</m> is the number of vectors in the basis <m>\basis{B}</m>.
           A vector space is <term>infinte-dimensional</term>
           if it is not finite-dimensional.
         </p>
@@ -54,6 +54,10 @@
       <p>
         Note that the concept of <sq>dimension of a vector space</sq> is only well-defined because of <xref ref="inv_dim">Theorem</xref>.
       </p>
+    </assemblage>
+
+    <assemblage xml:id="defn_dim_zero_vec_space">
+      <p>The case of the zero vector space <m>Z = \{\ve{0}\}</m> is not explicitly handled in <xref ref="dim_vec_space"/> and we treat it as a special case. Namely, we <em>define</em> the dimension of the zero vector space <m>Z</m> to be <m>0</m>. So, by definition, <m>Z</m> is finite-dimensional, and its dimension equals <m>0</m>. </p>
     </assemblage>
 
     <example xml:id="standard_basis_R_n_ex">
@@ -211,6 +215,20 @@
             a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0
           </men>
         </p>
+
+        <p>Think about this carefully. Equation <xref ref="root_of_poly"/> represents an <em>infinite</em> family of equations for the unknowns <m>a_0, a_1, \ldots, a_n</m>. There is one equation for each value of <m>x \in \mathbb{R}</m>. For example: 
+        <mdn>
+          <mrow xml:id="poly-example-first-eqn"> (x=1) \amp \amp a_0 + a_1 + a_2 + \cdots + a_n \amp = 0 </mrow>
+          <mrow> (x= -1) \amp \amp a_0 - a_1 + a_2 + \cdots + (-1)^n a_n \amp = 0 </mrow>
+          <mrow> (x= 2) \amp \amp a_0 + 2a_1 + 4a_3 + \cdots + 2^n a_n = 0 </mrow>
+          <mrow> (x= 3) \amp \amp a_0 + 3a_1 + 9a_3 + \cdots + 3^n a_n = 0 </mrow>
+          <mrow xml:id ="poly-example-last-eqn"> \amp \amp \vdots </mrow>
+        </mdn>
+        </p>
+
+        <p>Suppose we find values for <m>a_0, a_1, a_2, \ldots, a_n </m> which solve <em>all</em> these infinitely many equations <xref first="poly-example-first-eqn" last="poly-example-last-eqn" />. We can now change our point of view. Namely, substitute these fixed values for <m>a_0, a_1, \ldots, a_n</m> into Equation <xref ref="root_of_poly"/> and regard Equation <xref ref="root_of_poly"/> as an equation for the unknown <m>x</m> (the coefficients <m>a_0, a_1, \ldots, a_n</m> are now <em>fixed</em>.) We conclude that <em>every <m>x \in \mathbb{R}</m> </em> is a root of this polynomial equation!
+      </p>
+
 
         <p>
           But, we know from algebra that a polynomial equation of the form <xref ref="root_of_poly" /> with nonzero coefficients has <em>at most</em>
@@ -404,35 +422,31 @@
     </proposition>
 
     <proof>
-      <p>
-        Let <m>n = \Dim(V)</m>.
-        If <m>W = \{ \ve{0} \}</m>, then the statement is clearly true.
-        Suppose <m>W \neq \{ \ve{0} \}</m>.
-        Choose a nonzero vector <m>\ve{e}_1 \in W</m> and form the list <m>\basis{B}_1 = \left\{ \ve{e}_1 \right\}</m>.
-        If it spans <m>W</m>, then we are done.
-        If not, there exists <m>\ve{e}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
-        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>.
-        If it spans <m>W</m>, we are done.
-        If not, there exists a vector
-        <m>\ve{e}_3 \in W</m> which is not a linear combination of <m>\ve{e}_1</m> and <m>\ve{e}_2</m>.
-        Consider the new list <m>\basis{B}_3 = \left\{ \ve{e}_1, \ve{e}_2, \ve{e}_3 \right\}</m>.
-        And so on.
-      </p>
+      <p> Let 
+        <me>
+          \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
+        </me> 
+        be a basis for <m>V</m>, so that <m>\Dim(V) = n</m>. We just need to show that <m>W</m> is finite-dimensional, i.e. that there exists a basis
+      <me>
+        \basis{B} = \bopen \ve{w}_1, \ldots, \ve{w}_k \bclose
+      </me>
+      for <m>W</m>. For then <m>\basis{B}</m> will be a list of <m>k</m> linearly independent vectors which live in <m>W</m> (and hence also in <m>V</m>) and hence we must have <m>k \leq n</m> by <xref ref="bumping_off_lemma"/>, as <m>\basis{C}</m> spans <m>V</m>.</p>
 
-      <p>
-        This process must eventually terminate.
-        That is, there must exist some
-        <m>k \geq 1</m> such that <m>\basis{B}_k = \left\{ \ve{e}_1, \ldots, \ve{e}_k \right\}</m> spans <m>W</m>,
-        and hence is a basis for <m>W</m>.
-        This is because each list <m>\basis{B}_i</m> is linearly independent
-        (by construction,
-        no vector is a linear combination of the preceding vectors).
-        And it is impossible to construct a linearly independent list of vectors in <m>W</m>
-        (and hence in <m>V</m>)
-        which has more than <m>n</m> elements,
-        by the Bumping Off Proposition.
-        This also shows that <m>k \leq n</m>.
-      </p>
+      <p>We show that <m>W</m> is finite-dimensional as follows.</p>
+
+      <p> If <m>W</m> is the zero vector space <m>\{ \ve{0} \} </m>, then <m>W</m> is finite-dimensional <xref ref="defn_dim_zero_vec_space" text="title">by definition</xref>. </p>
+
+      <p>If <m>W</m> is not the zero vector space, then there exists a nonzero vector <m>\ve{w}_1 \in W</m>. Consider the list <m>\basis{B}_1 = \bopen \ve{w}_1 \bclose</m>. Note that <m>\basis{B}_1</m> is linearly independent, by <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_1</m> spans <m>W</m>, then it is a basis for <m>W</m>, and so <m>W</m> is finite-dimensional and we are done.</p>
+
+      <p>If <m>\basis{B}_1</m> does not span <m>W</m>, then there exists a vector <m>\ve{w}_2 \in W</m> which is not a scalar multiple of <m>\ve{e}_1</m>.
+        Now consider the list <m>\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}</m>. Once again, <m>\basis{B}_2</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. So, if <m>\basis{B}_2</m> spans <m>W</m>, then it is a basis for <m>W</m>, and we are done. </p>
+
+
+      <p>If <m>\basis{B}_2</m> does not span <m>W</m>, then there exists a vector
+        <m>\ve{w}_3 \in W</m> which is not a linear combination of <m>\ve{w}_1</m> and <m>\ve{w}_2</m>.
+        Now consider the list <m>\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}</m>. Again, <m>\basis{B}_3</m> is linearly independent, by  <xref ref="lin_comb_prec_vec"/> of <xref ref="lin_dependence_prop"/>. If it does not span <m>W</m>, then there exists a vector <m>\ve{w}_4 \in W</m> which is not a linear combination of <m>\ve{w}_1, \ve{w}_2, \ve{w}_3</m>. So consider the list <m>\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose </m>. </p>
+
+       <p>This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.</p>
     </proof>
 
     <p>
@@ -568,43 +582,45 @@
           <p>
             Do the three <sq>check this</sq> calculations above.
           </p>
-        </statement>Do the 
-        <solution>
-<p>
-<ol>
-<li>
-<p>
-Suppose <me> (a,2a,-a) = (1,0,5) </me>. Then the first entry requires that <m> a =1 </m> but the second entry requires that <m> a = 0 </m>. Hence there can be no <m> a </m> satisfying the equation.
-</p>
-</li>
+        </statement>
+        <!--
+                <solution>
+        <p>
+        <ol>
+        <li>
+        <p>
+        Suppose <me> (a,2a,-a) = (1,0,5) </me>. Then the first entry requires that <m> a =1 </m> but the second entry requires that <m> a = 0 </m>. Hence there can be no <m> a </m> satisfying the equation.
+        </p>
+        </li>
 
-<li>
-<p>
-<me>
-2 \ve v_1 + 3 \ve v_2 = 2(1,2,-1) + 3(1,0,5) \\ = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4
-</me>
-</p>
-</li>
-
-
-<li>
-  <p>
-Suppose 
-<me>
-a \ve v_1 + b \ve v_4 = \ve v_6 
-</me>
-i.e.
-<me>
-(a,2a,-a) + (b,0,5b)= (1,1,0).
-</me>
-Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looking at the first entry, forces <m> b = \frac{1}{2}</m> but then, if we look at the third entry, <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Hence there are no solutions to the equation.
-</p>
-</li>
+        <li>
+        <p>
+        <me>
+        2 \ve v_1 + 3 \ve v_2 = 2(1,2,-1) + 3(1,0,5) \\ = (2 + 3, 4 + 0, -2 + 15) =  (5,4,13) = \ve v_4
+        </me>
+        </p>
+        </li>
 
 
-</ol>
-</p>
-        </solution>
+        <li>
+          <p>
+        Suppose 
+        <me>
+        a \ve v_1 + b \ve v_4 = \ve v_6 
+        </me>
+        i.e.
+        <me>
+        (a,2a,-a) + (b,0,5b)= (1,1,0).
+        </me>
+        Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looking at the first entry, forces <m> b = \frac{1}{2}</m> but then, if we look at the third entry, <m> -\frac{1}{2} + \frac{5}{2} \neq 0 </m>. Hence there are no solutions to the equation.
+        </p>
+        </li>
+
+
+        </ol>
+        </p>
+                </solution>
+        -->
       </exercise>
 
     <p>
@@ -756,6 +772,7 @@ Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looki
         </ol>
       </p>
     </statement>
+    <!--
     <solution>
       <p>
         <ol>
@@ -783,23 +800,9 @@ Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looki
         </ol>
       </p>
     </solution>
+  -->
   </exercise>
 
-  <exercise>
-    <statement>
-      <p>
-        Let <m>\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}</m> be a linearly independent list of vectors in a vector space <m>V</m>.
-        Suppose that <m>\ve{v}</m> is a vector in <m>V</m> which cannot be written as a linear combination of the vectors in <m>\basis{B}</m>.
-        Show that the list <m>\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is still linearly independent.
-        (Hint: Use the Linear Combination of Preceding Vectors Proposition.)
-      </p>
-    </statement>
-    <solution>
-      <p>
-        If we use the Linear Combination of Preceding Vectors Proposition, the proof is very slick! <m> \ve v_i </m> (for any <m>i \in \left\{1,\ldots n\right\}</m>) cannot be a linear combination of <m> \ve v_1 \ldots \ve v_{i-1} </m> or else we would contradict the Linear Combination of Preceding Vectors Proposition. It is given that <m> \ve v </m> is not a linear combination of  <m> \ve v_1 \ldots \ve v_{n} </m>. Hence no vector in <m>{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}</m> is a linear combination of the previous vectors. Thus by the Linear Combination of Preceding Vectors Proposition, <m> {B}' </m> must be linearly independent.
-      </p>
-    </solution>
-  </exercise>
 
   <exercise xml:id="n_lin_ind_is_basis">
     <statement>
@@ -846,6 +849,7 @@ Consideration of the second entry gives <m> a = \frac{1}{2} </m> which, by looki
         Hence, <m>\basis{B}</m> must be a basis for <m>V</m>.
       </p>
     </statement>
+    <!--
     <solution>
       <p>
       <ol>
@@ -881,6 +885,7 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
       </ol>
       </p>
 </solution>
+-->
 
   </exercise>
 
@@ -891,12 +896,14 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
       </p>
     </statement>
+    <!--
     <solution>
       <p>
         <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
       </p>
     </solution>
+  -->
   </exercise>
 
   <exercise>
@@ -947,6 +954,7 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </statement>
+    <!--
     <solution>
       <p>
         <ol>
@@ -965,6 +973,7 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </solution>
+  -->
   </exercise>
 
   <exercise>
@@ -993,6 +1002,7 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </statement>
+    <!--
     <solution>
 <p>
 <ol>
@@ -1045,6 +1055,7 @@ Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}
 </ol>
   </p>
     </solution>
+  -->
   </exercise>
 
   <exercise xml:id="dim_poly_at_2_ex">
@@ -1071,6 +1082,7 @@ Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}
         </ol>
       </p>
     </statement>
+    <!--
     <solution>
 <ol>
 
@@ -1088,6 +1100,7 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
   </li>
 </ol>
     </solution>
+  -->
   </exercise>
 
   </exercises>

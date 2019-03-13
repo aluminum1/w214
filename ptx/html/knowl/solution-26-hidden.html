@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T00:00:01+02:00    *-->
+<!--*    on 2019-03-13T23:23:34+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -11,51 +11,36 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
 </head>
-<body><div class="solution"><ol class="lower-alpha">
-<li>
-<p>True. Suppose there is a linear relation on  \(\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}\text{:}\)</p>
+<body><div class="solution">
+<p>To determine  \([\mat{A}]_\basis{B}\text{,}\) we must find the scalars \(a_1 , a_2 , a_3, a_4 \) satisfying</p>
 <div class="displaymath">
 \begin{equation*}
-a( \ve{u} + \ve{v}) + b(\ve{v} + \ve{w}) + c(\ve{u} + \ve{w}).
+a_1 \mat{B_1} + a_2\mat{B_2} + a_3\mat{B_3} + a_4\mat{B_4} = \mat A.
 \end{equation*}
 </div>
-<p>This induces a linear relation on \(\left\{ \ve{u}, \ve{v}, \ve{w} \right\}\text{:}\) \((a + c)\ve u + (a +b )\ve v + (b + c)w = \ve 0\) Since \(\left\{ \ve{u}, \ve{v}, \ve{w} \right\}\) is linearly independent, we must have that</p>
+<p>This results in a system of 4 linear equations in 4 variables, one equation for each entry in \(\mat A \text{:}\)</p>
+<div class="displaymath">
+\begin{gather*}
+a_1 + a_2 + a_3 = 1 \\
+a_3 + a_4 = 2 \\
+a_3 - a_4 = 3 \\
+a_1 - a_2 + a_3 = 4
+\end{gather*}
+</div>
+<p>Solving this equation, we get</p>
 <div class="displaymath">
 \begin{equation*}
-a + c = 0 \qquad (1) \\
-a + b = 0 \qquad (2) \\
-b + c = 0 \qquad (3)
+a_1  = 0, \quad
+a_2  = -\frac{3}{2}, \quad
+a_3  = \frac{5}{2}, \quad
+a_4  = -\frac{1}{2}.
 \end{equation*}
 </div>
-<p>\((1) + (2) \) combined with \((3) \) gives us that \(a = 0 \) and so \(b = c = 0 \) too. We conclude that  \(\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}\) is linearly independent.</p>
-</li>
-<li>
-<p>False. Let \(V = \mathbb{R}^3 \text{.}\) Let</p>
+<p>Hence</p>
 <div class="displaymath">
 \begin{equation*}
-\ve u = (1,0,0) \, \ve v = (0,1,0), \, \ve w = (0,0,1)
+[\mat{A}]_\basis{B} = \begin{bmatrix} 0 \\ -\frac{3}{2} \\ \frac{5}{2} \\ -\frac{1}{2} \end{bmatrix}
 \end{equation*}
 </div>
-<p>and so</p>
-<div class="displaymath">
-\begin{equation*}
-\ve u - \ve v = (1,-1,0) \\  \ve v - \ve w = (0,1,-1) \\ \ve u - \ve w = (1,0,-1)\text{.}
-\end{equation*}
-</div>
-<p>By inspection, we see that</p>
-<div class="displaymath">
-\begin{equation*}
-(1,-1,0) + (0,1,-1) = (1,0,-1)
-\end{equation*}
-</div>
-<p>and so  \(\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}\) is linearly dependent.</p>
-<p>Alternatively, we could have noticed that for any vectors \(\ve u , \ve v , \ve w \text{:}\)</p>
-<div class="displaymath">
-\begin{equation*}
-(\ve u - \ve v) + (\ve v - \ve w) = \ve u - \ve w.
-\end{equation*}
-</div>
-<p>Thus \(\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}\)  satisfies <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a> and so is linearly dependent.</p>
-</li>
-</ol></div></body>
+</div></body>
 </html>

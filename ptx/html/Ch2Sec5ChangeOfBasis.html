@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T23:59:56+02:00    *-->
+<!--*    on 2019-03-13T23:23:28+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -68,8 +68,8 @@ var login_required = false;
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
-\newcommand{\bopen}{\left\{}
-\newcommand{\bclose}{\right\}}
+\newcommand{\bopen}{\{\llap{-}}
+\newcommand{\bclose}{\rlap{-}\}}
 \newcommand{\mamp}{&amp;}
 
 
@@ -142,7 +142,7 @@ var login_required = false;
 <a href="Ch2Sec5ChangeOfBasis.html" class="permalink">¶</a><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5.1</span> <span class="title">Coordinate vectors are different in different bases</span>
 </h3>
-<p id="p-522">Suppose that \(\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}\) are two different bases for \(\mathbb{R}^2\text{,}\) shown below:</p>
+<p id="p-506">Suppose that \(\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}\) are two different bases for \(\mathbb{R}^2\text{,}\) shown below:</p>
 <figure class="figure-like" id="w_in_different_bases"><div class="sidebyside">
 <div class="sbsrow" style="margin-left:10%;margin-right:10%;">
 <div class="sbspanel" style="width:37.5%;justify-content:flex-start;"><img src="images/image-14.svg" style="width: 100%; height: auto;" alt=""></div>
@@ -152,15 +152,15 @@ var login_required = false;
 <figcaption class="sbscaption" style="width:37.5%;"><span class="codenumber">(a)</span>The basis \(\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}\)</figcaption><figcaption class="sbscaption" style="width:37.5%;"><span class="codenumber">(b)</span>The basis \(\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}\text{.}\)</figcaption>
 </div>
 </div>
-<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.1</span> Two different bases for \(\mathbb{R}^2\)</figcaption></figure><p id="p-523">Suppose we are given a vector \(\ve{w} \in \mathbb{R}^2\text{:}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-16.svg" style="width: 100%; height: auto;" alt=""></div></div></div></p>
-<p id="p-524">We would like to compute the coordinate vector of the <em class="emphasis">same</em> vector \(\ve{w}\) with respect to the two different bases \(\basis{B}\) and \(\basis{C}\text{.}\)</p>
-<p id="p-525">For this particular \(\ve{w}\text{,}\) from <a knowl="./knowl/w_in_different_bases.html" title="Figure 2.5.1">Figure 2.5.1</a>(a), we see that in the basis \(\basis{B}\text{,}\) we have</p>
+<figcaption><span class="type">Figure</span> <span class="codenumber">2.5.1</span> Two different bases for \(\mathbb{R}^2\)</figcaption></figure><p id="p-507">Suppose we are given a vector \(\ve{w} \in \mathbb{R}^2\text{:}\) <div class="sidebyside"><div class="sbsrow" style="margin-left:35%;margin-right:35%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-16.svg" style="width: 100%; height: auto;" alt=""></div></div></div></p>
+<p id="p-508">We would like to compute the coordinate vector of the <em class="emphasis">same</em> vector \(\ve{w}\) with respect to the two different bases \(\basis{B}\) and \(\basis{C}\text{.}\)</p>
+<p id="p-509">For this particular \(\ve{w}\text{,}\) from <a knowl="./knowl/w_in_different_bases.html" title="Figure 2.5.1">Figure 2.5.1</a>(a), we see that in the basis \(\basis{B}\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation}
 \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2   \end{array}\right] \,\text{.}\tag{2.5.1}
 \end{equation}
 </div>
-<p id="p-526">On the other hand, in the basis \(\basis{C}\text{,}\) we have</p>
+<p id="p-510">On the other hand, in the basis \(\basis{C}\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation}
 \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3   \end{array}\right]\text{.}\label{correct_exp_w}\tag{2.5.2}
@@ -175,26 +175,26 @@ var login_required = false;
 <figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">2.5.2</span> \(\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2\)</figcaption><figcaption class="sbscaption" style="width:50%;"><span class="type">Figure</span> <span class="codenumber">2.5.3</span> \(\ve{w} = \ve{c}_1 - 3 \ve{c}_2\)</figcaption>
 </div>
 </div>
-<p id="p-527">So, the <em class="emphasis">same</em> vector \(\ve{w}\) has different coordinate vectors \([\ve{w}]_\basis{B}\) and \([\ve{w}]_\basis{C}\) with respect to the bases \(\basis{B}\) and \(\basis{C}\text{!}\)</p></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<p id="p-511">So, the <em class="emphasis">same</em> vector \(\ve{w}\) has different coordinate vectors \([\ve{w}]_\basis{B}\) and \([\ve{w}]_\basis{C}\) with respect to the bases \(\basis{B}\) and \(\basis{C}\text{!}\)</p></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber">2.5.2</span> <span class="title">Changing from one basis to another</span>
 </h3>
-<p id="p-528">Now, suppose we only knew \([\ve{w}]_\basis{B}\text{,}\) the coordinate vector of \(\ve{w}\) in the basis \(\basis{B}\text{.}\) In other words, suppose we only knew that</p>
+<p id="p-512">Now, suppose we only knew \([\ve{w}]_\basis{B}\text{,}\) the coordinate vector of \(\ve{w}\) in the basis \(\basis{B}\text{.}\) In other words, suppose we only knew that</p>
 <div class="displaymath">
 \begin{equation*}
 [\ve{w}]_\basis{B} = \left[ \begin{array}{c} -3 \\ 2 \end{array}\right]\text{,}
 \end{equation*}
 </div>
 <p>that is, \(\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2\text{.}\) How could we compute \([\ve{w}]_\basis{C}\text{,}\) the coordinate vector of \(\ve{w}\) in the basis \(\basis{C}\text{?}\)</p>
-<p id="p-529">The best way is to express each vector in the basis \(\basis{B}\) as a linear combination of the basis vectors in \(\basis{C}\text{.}\) In the next figure, the vectors \(\ve{b}_1\) and \(\ve{b}_2\) are displayed against the background of the basis \(\basis{C}\text{:}\)</p>
+<p id="p-513">The best way is to express each vector in the basis \(\basis{B}\) as a linear combination of the basis vectors in \(\basis{C}\text{.}\) In the next figure, the vectors \(\ve{b}_1\) and \(\ve{b}_2\) are displayed against the background of the basis \(\basis{C}\text{:}\)</p>
 <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><img src="images/image-19.svg" style="width: 100%; height: auto;" alt=""></div></div></div>
-<p id="p-530">We read off that:</p>
+<p id="p-514">We read off that:</p>
 <div class="displaymath">
 \begin{align}
 \ve{b}_1 \amp = \ve{c}_1 + 3 \ve{c}_2\label{b_in_terms_of_c}\tag{2.5.3}\\
 \ve{b}_2 \amp = 2 \ve{c}_1 + 3 \ve{c}_2\label{b_in_terms_of_c_2}\tag{2.5.4}
 \end{align}
 </div>
-<p id="p-531">Therefore, we compute:</p>
+<p id="p-515">Therefore, we compute:</p>
 <div class="displaymath">
 \begin{align*}
 \ve{w} \amp = -3 \ve{b}_1 + 2 \ve{b}_2\\
@@ -202,18 +202,18 @@ var login_required = false;
 \amp = \ve{c}_1 - 3 \ve{c}_2
 \end{align*}
 </div>
-<p id="p-532">From this we read off that</p>
+<p id="p-516">From this we read off that</p>
 <div class="displaymath">
 \begin{equation}
 [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3 \end{array}\right]\label{w_in_basis_C}\tag{2.5.5}
 \end{equation}
 </div>
 <p>which is the right answer, as we know from <a knowl="./knowl/correct_exp_w.html" title="Equation 2.5.2">(2.5.2)</a>.</p>
-<p id="p-533">In fact, this calculation can be phrased in terms of matrices.</p>
+<p id="p-517">In fact, this calculation can be phrased in terms of matrices.</p>
 <article class="definition-like" id="definition-11"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.5.4</span>
 </h6>
-<p id="p-534">Let \(\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n \right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}\) be bases for a vector space \(V\text{.}\) The <dfn class="terminology">change-of-basis matrix from \(\basis{B}\) to \(\basis{C}\)</dfn> is the \(n \times n\) matrix whose columns are the coordinate vectors \([\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}\text{:}\)</p>
+<p id="p-518">Let \(\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n \right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}\) be bases for a vector space \(V\text{.}\) The <dfn class="terminology">change-of-basis matrix from \(\basis{B}\) to \(\basis{C}\)</dfn> is the \(n \times n\) matrix whose columns are the coordinate vectors \([\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\, \text{.}
@@ -221,24 +221,24 @@ var login_required = false;
 </div></article><article class="example-like" id="example-48"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.5.5</span>
 </h6>
-<p id="p-535">In our running example, we see from <a knowl="./knowl/b_in_terms_of_c.html" title="Equation 2.5.3">(2.5.3)</a> and <a knowl="./knowl/b_in_terms_of_c_2.html" title="Equation 2.5.4">(2.5.4)</a> that</p>
+<p id="p-519">In our running example, we see from <a knowl="./knowl/b_in_terms_of_c.html" title="Equation 2.5.3">(2.5.3)</a> and <a knowl="./knowl/b_in_terms_of_c_2.html" title="Equation 2.5.4">(2.5.4)</a> that</p>
 <div class="displaymath">
 \begin{equation*}
 [\ve{b}_1]_\basis{C} = \left[ \begin{array}{c} 1 \\ 3 \end{array} \right], \quad [\ve{b}_2]_\basis{C} = \left[ \begin{array}{c} 2 \\ 3 \end{array} \right] \, \text{.}
 \end{equation*}
 </div>
-<p id="p-536">Hence the change-of-basis matrix from \(\basis{B}\) to \(\basis{C}\) is</p>
+<p id="p-520">Hence the change-of-basis matrix from \(\basis{B}\) to \(\basis{C}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{P}_{\basis{C} \leftarrow \basis{B}} = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 3  \end{bmatrix}\text{.}
 \end{equation*}
-</div></article><p id="p-537">Before we move on, we need to recall something about matrix multiplication. Suppose you collect together \(m\) column vectors to form a matrix:</p>
+</div></article><p id="p-521">Before we move on, we need to recall something about matrix multiplication. Suppose you collect together \(m\) column vectors to form a matrix:</p>
 <div class="displaymath">
 \begin{equation*}
 \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}
 \end{equation*}
 </div>
-<p id="p-538">(For instance, our change-of-basis matrix \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\) was formed in this way.) Then the product of this matrix with a column vector can be computed as follows:</p>
+<p id="p-522">(For instance, our change-of-basis matrix \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\) was formed in this way.) Then the product of this matrix with a column vector can be computed as follows:</p>
 <div class="displaymath">
 \begin{equation}
 \begin{bmatrix} \left[\begin{array}{c} \, \\ \text{C}_1 \\ \, \end{array}\right] &amp; \left[\begin{array}{c} \,\\ \text{C}_2 \\ \, \end{array}\right] &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \text{C}_m \\ \,\end{array}\right]  \end{bmatrix}\left[\begin{array}{c} a_1 \\ a_2 \\ \vdots \\ a_m \end{array}\right] = a_1 \left[\begin{array}{c} \,  \\ \text{C}_1 \\ \, \end{array}\right] + a_2 \left[\begin{array}{c} \,  \\ \text{C}_2 \\ \, \end{array}\right] + \cdots + a_m \left[\begin{array}{c} \,  \\ \text{C}_m \\ \, \end{array}\right]\text{.}\label{column_vector_multiplication}\tag{2.5.6}
@@ -247,10 +247,10 @@ var login_required = false;
 <article class="exercise-like" id="exercise-76"><h6 class="heading">
 <span class="type">Checkpoint</span> <span class="codenumber">2.5.6</span>
 </h6>
-<p id="p-539">Prove the above formula!</p>
+<p id="p-523">Prove the above formula!</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-36" id="solution-36"><span class="type">Solution</span></a><div id="hk-solution-36" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-540">We check the \(i^\text{th}\) entry on the LHS using just the definition on matrix multiplation.</p>
+<a knowl="" class="id-ref" refid="hk-solution-28" id="solution-28"><span class="type">Solution</span></a><div id="hk-solution-28" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-524">We check the \(i^\text{th}\) entry on the LHS using just the definition on matrix multiplation.</p>
 <div class="displaymath">
 \begin{equation*}
 (\text{LHS})_i = (\text C_1)_ia_1 + \ldots + (\text C_n)_ia_n = (\text{RHS})_i
@@ -258,22 +258,22 @@ var login_required = false;
 </div>
 <p>and we're done!</p>
 </div></div>
-</div></article><p id="p-541">We can now prove the following theorem.</p>
+</div></article><p id="p-525">We can now prove the following theorem.</p>
 <article class="theorem-like" id="change-of-basis-thm"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.5.7</span> <span class="title">Change of basis</span>
 </h6>
-<p id="p-542">Suppose that \(\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n\right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}\) are bases for a vector space \(V\text{,}\) and let \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\) be the change-of-basis matrix from \(\basis{B}\) to \(\basis{C}\text{.}\) Then for all vectors \(\ve{v}\) in \(V\text{,}\)</p>
+<p id="p-526">Suppose that \(\basis{B} = \left\{ \ve{b}_1, \ldots, \ve{b}_n\right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ldots, \ve{c}_n \right\}\) are bases for a vector space \(V\text{,}\) and let \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\) be the change-of-basis matrix from \(\basis{B}\) to \(\basis{C}\text{.}\) Then for all vectors \(\ve{v}\) in \(V\text{,}\)</p>
 <div class="displaymath">
 \begin{equation}
 [\ve{v}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \text{.}\label{change-of-basis-in-action}\tag{2.5.7}
 \end{equation}
-</div></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-543">Let \(\ve{v} \in V\text{.}\) Expand it in the basis \(\basis{B}\text{:}\)</p>
+</div></article><article class="hiddenproof" id="proof-17"><a knowl="" class="id-ref" refid="hk-proof-17"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-17" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-527">Let \(\ve{v} \in V\text{.}\) Expand it in the basis \(\basis{B}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]\text{.}
 \end{equation*}
 </div>
-<p id="p-544">Then,</p>
+<p id="p-528">Then,</p>
 <div class="displaymath">
 \begin{align*}
 _\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}\\
@@ -285,19 +285,19 @@ _\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}\\
 <article class="example-like" id="example-49"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.5.8</span>
 </h6>
-<p id="p-545">In our running example, the theorem says that for <em class="emphasis">any</em> vector \(\ve{v} \in \mathbb{R}^2\text{,}\)</p>
+<p id="p-529">In our running example, the theorem says that for <em class="emphasis">any</em> vector \(\ve{v} \in \mathbb{R}^2\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 [\ve{v}]_\basis{C} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3  \end{bmatrix} [\ve{v}]_\basis{B}  .
 \end{equation*}
 </div>
-<p id="p-546">In particular, this must hold for our vector \(\ve{w}\text{,}\) whose coordinate vector in the basis \(\ve{B}\) was:</p>
+<p id="p-530">In particular, this must hold for our vector \(\ve{w}\text{,}\) whose coordinate vector in the basis \(\ve{B}\) was:</p>
 <div class="displaymath">
 \begin{equation*}
 [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2 \end{array}\right]\text{.}
 \end{equation*}
 </div>
-<p id="p-547">So in this case, the theorem is saying that</p>
+<p id="p-531">So in this case, the theorem is saying that</p>
 <div class="displaymath">
 \begin{equation*}
 [\ve{w}]_{\basis{C}} = \begin{bmatrix} 1 &amp;  2 \\ 3 &amp;  3 \end{bmatrix} \left[\begin{array}{c} -3 \\ 2\end{array}\right] = \left[ \begin{array}{c} 1 \\ -3 \end{array} \right]
@@ -308,7 +308,7 @@ _\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}\\
 </h3>
 <article class="exercise-like" id="exercise-77"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-548">This is a continuation of <a knowl="./knowl/matrix_basis_exercise.html" title="Exercise 2.4.2">Exercise 2.4.2</a>. Consider the following two bases for \(\Mat_{2,2}\text{:}\)</p>
+<p id="p-532">This is a continuation of <a knowl="./knowl/matrix_basis_exercise.html" title="Exercise 2.4.2">Exercise 2.4.2</a>. Consider the following two bases for \(\Mat_{2,2}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \basis B = \left\{ 
@@ -330,22 +330,22 @@ _\basis{C} \amp = [a_1 \ve{b}_1 + \cdots + a_n \ve{b}_n]_\basis{C}\\
 \end{equation*}
 </div>
 <dl class="description-list">
-<dt id="li-101">(a)</dt>
-<dd><p id="p-549">Determine the change-of-basis matrices \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\) and \(\mat{P}_{\basis{B} \leftarrow \basis{C}}\text{.}\)</p></dd>
-<dt id="li-102">(b)</dt>
+<dt id="li-84">(a)</dt>
+<dd><p id="p-533">Determine the change-of-basis matrices \(\mat{P}_{\basis{C} \leftarrow \basis{B}}\) and \(\mat{P}_{\basis{B} \leftarrow \basis{C}}\text{.}\)</p></dd>
+<dt id="li-85">(b)</dt>
 <dd>
-<p id="p-550">Determine \([\mat{A}]_\basis{B}\) and \([\mat{A}]_\basis{C}\) where</p>
+<p id="p-534">Determine \([\mat{A}]_\basis{B}\) and \([\mat{A}]_\basis{C}\) where</p>
 <div class="displaymath">
 \begin{equation*}
 A = \begin{bmatrix} 1 &amp; 2 \\ 3 &amp; 4 \end{bmatrix}\text{.}
 \end{equation*}
 </div>
 </dd>
-<dt id="li-103">(c)</dt>
-<dd><p id="p-551">Check that \([\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}\) and that \([\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}\text{.}\)</p></dd>
+<dt id="li-86">(c)</dt>
+<dd><p id="p-535">Check that \([\mat{A}]_\basis{C} = \mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{A}]_\basis{B}\) and that \([\mat{A}]_\basis{B} = \mat{P}_{\basis{B} \leftarrow \basis{C}} [\mat{A}]_\basis{C}\text{.}\)</p></dd>
 </dl></article><article class="exercise-like" id="exercise-78"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-552">Compute the change-of-basis matrix \(\mat{P}_{\basis{B} \leftarrow \basis{S}}\) from the standard basis</p>
+<p id="p-536">Compute the change-of-basis matrix \(\mat{P}_{\basis{B} \leftarrow \basis{S}}\) from the standard basis</p>
 <div class="displaymath">
 \begin{equation*}
 \basis{S} = \left\{ 1, \cos x, \sin x, \cos 2x, \sin 2x \right\}

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-12T23:59:59+02:00    *-->
+<!--*    on 2019-03-13T23:23:31+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Once again we base our strategy on \(2\text{.}\) Pick a spanning set for \(\Poly_3\text{.}\) We'll use \(1, x , x^2 , x^3\text{,}\) since it's the simplest. \(1, x\) are certainly spanned by \(\ve q_0x), \ve q_1, \ve q_2, \ve q_3\) since \(1 = \ve q_0(x)\) and \(x = \ve q_1(x)\text{.}\) It can easily be seen that</p>
+<p>Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that one of the vectors in the list, say \(\ve{v}_r\text{,}\) can be expressed as a linear combination of the preceding vectors:</p>
+<div class="displaymath">
+\begin{equation}
+\ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}\tag{2.1.32}
+\end{equation}
+</div>
+<p>Suppose that we remove \(\ve{v}_r\) from \(\basis{S}\text{,}\) to arrive at a new list</p>
 <div class="displaymath">
 \begin{equation*}
-x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
-x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
+\basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
 \end{equation*}
 </div>
-<p>.completing the proof.</p>
+<p>Prove that \(\basis{T}\) also spans \(V\text{.}\)</p>
 <span class="incontext"><a href="Ch2Sec1LinearCombinationSpan.html#p-332">in-context</a></span>
 </body>
 </html>

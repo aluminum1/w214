@@ -2,6 +2,144 @@
 
 <section xml:id="ACh2Sec4CoordinateVectors">
   <title>Ko&#xf6;rdinaatvektore</title>
+
+ <p>
+      Daar is 'n meer direkte manier om oor 'n basis te dink.
+    </p>
+
+    <proposition xml:id="prop_bases_give_coordinates">
+      <title>Basisse gee ko&#xf6;rdinate</title>
+      <statement>
+        <p>
+          'n Lys vektore <m>\ve{e}_1</m>,
+          <m>\ve{e}_2</m>, <m>\ldots</m>,
+          <m>\ve{e}_n</m> in 'n vektorruimte <m>V</m> is 'n basis van
+          <m>V</m> as en slegs as elke vektor
+          <m>\ve{v} \in V</m> op presies <em>een</em>
+          manier as 'n line&#xea;re kombinasie
+          <men xml:id="trying_to_formulate_basis">
+            \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+          </men>
+          geskryf kan word.
+          Dit is, vir elke <m>\ve{v} \in V</m>
+          <em>bestaan</em> daar skalare <m>a_1</m>,
+          <m>a_2</m>, <m>\ldots</m>, <m>a_n</m> wat
+          <xref ref="trying_to_formulate_basis" /> bevredig en verder is hierdie skalare
+          <em>uniek</em>.
+        </p>
+      </statement>
+    </proposition>
+
+    <assemblage>
+      <p>
+        Dit is belangrik om die wiskundige frase <sq>daar bestaan </sq>n unieke <m>X</m>
+        wat <m>Y</m> bevredig' te verstaan.
+        Dit beteken twee dinge.
+        Eerstens, daar
+        <em>bestaan</em> 'n <m>X</m> wat <m>Y</m> bevredig.
+        Tweedens, daar <em>geen
+        ander</em> <m>X</m> wat <m>Y</m> bevredig nie.
+      </p>
+    </assemblage>
+
+    <assemblage>
+      <p>
+        Ons noem die skalare <m>a_1, a_2, \ldots, a_n</m> in
+        <xref ref="trying_to_formulate_basis" /> die
+        <em>ko&#xf6;rdinate</em> van
+        <m>\ve{v}</m> in die basis <m>\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n</m>.
+      </p>
+    </assemblage>
+
+    <proof>
+      <p>
+        <m>\Rightarrow</m>.
+        Veronderstel dat die lys vektore <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>,
+        <m>\ve{e}_n</m> 'n basis vir <m>V</m> vorm.
+        Veronderstel
+        <m>\ve{v} \in V</m>.
+        Omdat die lys vektore <m>V</m> span, weet ons dat ons
+        <m>\ve{v}</m> as 'n line&#xea;re kombinasie van vektore in die lys op ten
+        minste een manier <em>kan</em> skryf,
+        <men xml:id="one_way_of_expanding">
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        Ons moet wys dat dit die <em>enigste</em>
+        manier is om <m>\ve{v}</m> as 'n
+        line&#xea;re kombinasie van die vektore <m>\ve{e}_i</m> uit te druk.
+        Veronderstel ons het ook
+        <men xml:id="second_way_of_expanding">
+          \ve{v} = b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n
+        </men>.
+      </p>
+
+      <p>
+        Die verskil van die twee vergelykings lewer
+        <me>
+          \ve{0} = (a_1 - b_1) \ve{e}_1 + (a_2 - b_2) \ve{e}_2 + \cdots +
+          (a_n - b_n) \ve{e}_n
+        </me>.
+      </p>
+
+      <p>
+        Omdat die lys vektore <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
+        line&#xea;r onafhanklik is, kom ons tot die gevolgtrekking dat
+        <me>
+          a_1 - b_1 = 0, \,\, a_2 - b_2 = 0, \,\, \cdots, \,\, a_n - b_n =
+          0
+        </me>.
+      </p>
+
+      <p>
+        Dit is, <m>a_1 = b_1</m>,
+        <m>a_2 = b_2</m>, ensovoorts tot en met <m>a_n = b_n</m> en
+        daarom is <xref ref="one_way_of_expanding" /> uniek.
+      </p>
+
+      <p>
+        <m>\Leftarrow</m>.
+        Aan die ander kant, veronderstel dat elke vektor <m>\ve{v}</m>
+        as 'n unieke line&#xea;re kombinasie
+        <me>
+          \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n
+        </me>
+        geskryf kan word.
+        Die feit dat elke <m>\ve{v}</m> as 'n line&#xea;re
+        kombinasie van <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m> geskryf
+        <em>kan</em> word, beteken hulle span <m>V</m>.
+        Ons moet steeds wys dat hulle
+        line&#xea;r onafhanklik is.
+        So, veronderstel daar bestaan skalare
+        <m>b_1</m>, <m>b_2</m>, <m>\ldots</m>, <m>b_n</m>, sodat
+        <men xml:id="finding_bs_making_zero">
+          b_1 \ve{e}_1 + b_2 \ve{e}_2 + \cdots + b_n \ve{e}_n = \ve{0}
+        </men>.
+      </p>
+
+      <p>
+        Ons moet wys dat <m>b_i</m> almal nul moet wees.
+        Ons weet reeds van
+        <em>een</em> moontlike oplossing van <xref ref="finding_bs_making_zero" /> :
+        stel elke <m>b_i = 0</m>.
+        Maar ons weet ook dat elke vektor (spesifiek, die
+        vektor <m>\ve{0}</m>) op presies een manier as 'n line&#xea;re kombinasie van
+        vektore <m>\ve{e}_i</m> uitgedurk kan word.
+        Daarom moet dit die enigste
+        oplossing wees,
+        i.e. ons vind dat <m>b_1 = b_2 = \cdots = b_n = 0</m>, en
+        daarom is die lys vektore <m>\ve{e}_1</m>,
+        <m>\ve{e}_2</m>, <m>\ldots</m>, <m>\ve{e}_n</m>
+        line&#xea;r onafhanklik.
+      </p>
+    </proof>
+
+
   <definition>
     <statement>
       <p>
@@ -34,8 +172,8 @@
       Ek dui aan dat 'n kolleksie objekte 'n <em>lys</em> is
       (waar volgorde van belang is) en nie bloot 'n <em>versameling</em>
       nie (waar dit nie van belang is nie) deur van my eie tuisgemaakte
-      simbole <m>\left\{</m> en <m>\right\}</m> gebruik te maak. 'n BAsis <m>\basis{B} =
-      \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \right\}</m> is 'n lys van
+      simbole <m>\bopen \ldots \bclose</m> gebruik te maak. 'n Basis <m>\basis{B} =
+      \bopen \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_n \bclose</m> is 'n lys van
       vektore.
       Die volgorde van die vektore is van belang want dit affekteer
       die ko&#xf6;rdinaatvektor <m>[\ve{v}]_\basis{B}</m>.
