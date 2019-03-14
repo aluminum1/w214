@@ -530,6 +530,26 @@ and so
    </solution>
   </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+        Find the coordinate representation of <m>\ve p(x) = 3x^3 - 7x + 1 </m> with respect to your basis in <xref ref="ex_basis_no_deg_2">Exercise </xref>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        We shall use the basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose</m>. Since <m> \ve p(x) </m> has no degree 2 term, we know immediately that 
+        <me>
+        \ve p(x) = ax^3 + 0(x^3 + x^2) + cx + d.
+      </me>
+      Reading off the rest of the coefficients, we see that <m> a =3, c = -7, d = 1 </m>.
+      Hence
+      <me>
+[p]_\basis{B} = \begin{bmatrix} 3 \\ 0 \\-7 \\1\end{bmatrix}.
+    </me>
+      </p>
+    </solution>
+  </exercise>
 
 
   </exercises>
