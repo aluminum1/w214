@@ -1103,6 +1103,32 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
   -->
   </exercise>
 
+  <exercise xml:id="ex_basis_no_deg_2">
+<statement >
+	<p>
+		Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
+	</p>
+</statement>
+<solution>
+<p>
+	The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
+</p>
+</solution>
+  </exercise>
+
+  <exercise>
+  	<statement>
+  		<p>
+Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>
+  		</p>
+  	</statement>
+  	<solution>
+  		<p>
+  			We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
+  		</p>
+  	</solution>
+  </exercise>
+
   </exercises>
 
 </section>
