@@ -2,7 +2,15 @@
 
 <section xml:id="Ch2Sec3BasisDimension">
   <title>Basis and dimension</title>
-  <introduction>
+  <introduction> 
+    <p>
+      In this section we introduce the notions of:
+  <ul>
+  <li> a <em>basis</em> of a vector space </li>, and
+  <li> the <em>dimension</em> of a vector space. </li>
+</ul>
+Then we compute the dimensions of the vector spaces we have introduced up to now. We end by explaining the <em>sifting algorithm</em> which allows us to prove some useful results concerning bases and dimension. </p>
+
     <definition xml:id="defn_of_basis">
       <statement>
         <p>
@@ -59,6 +67,10 @@
     <assemblage xml:id="defn_dim_zero_vec_space">
       <p>The case of the zero vector space <m>Z = \{\ve{0}\}</m> is not explicitly handled in <xref ref="dim_vec_space"/> and we treat it as a special case. Namely, we <em>define</em> the dimension of the zero vector space <m>Z</m> to be <m>0</m>. So, by definition, <m>Z</m> is finite-dimensional, and its dimension equals <m>0</m>. </p>
     </assemblage>
+  </introduction>
+
+  <subsection>
+    <title>Dimensions of some familiar vector spaces</title>
 
     <example xml:id="standard_basis_R_n_ex">
       <title>Standard basis for <m>\mathbb{R}^n</m></title>
@@ -407,6 +419,50 @@
       </statement>
     </example>
 
+    <example xml:id ="dimension_of_hyperplane">
+      <title>Dimension of a hyperplane</title>
+    <statement> 
+      <p> Let <m>\ve{v} \in \mathbb{R}^n</m> be a fixed vector, and consider the hyperplane <m>W \subset \mathbb{R}^n</m> orthogonal to <m>\ve{v}</m> as in <xref ref="hyperplanes_example_subspace"/>. Then you will prove in Exercise <xref ref="dimension_of_hyperplane_exercise"/> that <m>\Dim(W) = n-1</m>. </p>
+
+      <p>For instance, consider the specific example from <xref ref="hyperplanes_example_subspace"/>, namely the plane <m>W \subset \mathbb{R}^3</m> of vectors orthogonal to <m>\ve{v} = (1,2,3)</m>. In other words,
+      <men xml:id="eqn_for_W_1">
+      W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.
+    </men>
+    There is no 'standard' basis for <m>W</m>. But, here is one basis (as good as any other):
+    <men xml:id="ab_basis_orth_plane">
+    \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{1}{2}).
+  </men>
+    You will show this is indeed a basis for <m>W</m> in <xref ref="prove_basis_for_ex_hyperplane"/> below. I computed these vectors as follows. To obtain <m>\ve{a}</m>, I simply set <m>w_1 = 1, w_2 = 0</m> and then solved for <m>w_3</m> using Equation <xref ref="eqn_for_W_1"/>. Similarly, for <m>\ve{b}</m>, I simply set <m>w_1 = 0, w_2 = 1</m> and then solved for <m>w_3</m> using <xref ref="eqn_for_W_1"/>.</p>
+
+    <p> There is nothing special about my method above for computing a basis for <m>W</m>. Here is a different basis for <m>W</m>, which I arrived at by choosing random values of <m>w_1</m> and <m>w_2</m> and then calculating what <m>w_3</m> must be in order to satisfy Equation <xref ref="eqn_for_W_1"/>:
+    <men>
+    \ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).
+  </men>
+</p>
+<p>In any event, we see that <m>\Dim(W) = 2</m>.</p>
+    </statement>
+    </example>
+
+    <exercise xml:id="prove_basis_for_ex_hyperplane">
+      <statement><p> Show that the list of vectors <m>\bopen \ve{a}, \ve{b} \bclose </m> from <xref ref="ab_basis_orth_plane"/> in <xref ref="dimension_of_hyperplane"/> is a basis for <m>W</m>. </p>
+      </statement>
+    </exercise>
+
+    <exercise xml:id="dimension_of_hyperplane_exercise">
+      <statement><p> Let <m>\ve{v} \in \mathbb{R}^n</m> be a fixed vector, and set
+      <me>
+      W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
+    </me>
+    Prove that <m>\Dim(W) = n-1</m>.</p>
+      </statement>
+      <hint>Find a basis for the solution space of the equation determining <m>W</m>.</hint>
+    </exercise>
+
+
+  </subsection>
+
+    <subsection>
+      <title>Dimensions of subspaces</title>
     <p>
       We now consider dimensions of subspaces of vector spaces.
     </p>
@@ -448,6 +504,9 @@
 
        <p>This process must terminate for some <m>k \leq n</m>. If not, then it will produce a list <m>\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose</m>. This would be a linearly independent list of <m>n+1</m> vectors from <m>V</m>. But <m>\Dim V = n</m>, so this is impossible, by <xref ref="bumping_off_lemma"/>. Hence for some <m>k \leq n</m> we must have that <m>\basis{B}_k</m> is a basis for <m>W</m>, and we are done.</p>
     </proof>
+  </subsection>
+    <subsection>
+      <title>Infinite-dimensional vector spaces</title>
 
     <p>
       It is good to have an example of an infinite-dimensional vector space.
@@ -502,17 +561,19 @@
 
             <li>
               <p>
-                <m>\Diff(I)</m> for any open interval <m>I</m>.
+                <m>\Diff(I)</m> for any open interval <m>I</m>
               </p>
             </li>
+
+            <li> <p> <m>\Poly^k</m> </p> </li>
           </ul>
         </p>
       </statement>
     </example>
-  </introduction>
+  </subsection>
 
   <subsection xml:id="sifting_subsection">
-    <title>Sifting</title>
+    <title>The sifting algorithm and its uses</title>
     <p>
       If we consider the proof of <xref ref="bumping_off_lemma">Proposition</xref>
       (the <sq>Bumping off</sq> Proposition)
@@ -1109,24 +1170,27 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
 		Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
 	</p>
 </statement>
+<!--
 <solution>
 <p>
 	The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
 </p>
 </solution>
+-->
   </exercise>
 
   <exercise>
   	<statement>
   		<p>
-Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>
+Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="title">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.) 
   		</p>
   	</statement>
-  	<solution>
+<!--  	<solution>
   		<p>
   			We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
   		</p>
   	</solution>
+-->
   </exercise>
 
   </exercises>

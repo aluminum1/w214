@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-01T16:14:39+02:00    *-->
+<!--*    on 2019-03-14T17:09:25+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,32 +13,60 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.3.15</span>
+<span class="type">Example</span> <span class="codenumber">1.6.20</span> <span class="title">Polynomials in many variables</span>
 </h6>
-<p>Sift the following list of vectors in \(\mathbb{R}^3\text{:}\)</p>
-<div class="displaymath">
-\begin{align*}
-\ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6, -3)\\
-\ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1, 1, 0)\text{.}
-\end{align*}
-</div>
-<p>We start with \(\ve{v}_1\text{.}\) Since it is not the zero vector, and is not a linear combination of any preceding vectors, it remains. We move on to \(\ve{v}_2\text{,}\) which is zero, so we remove it. We move on to \(\ve{v}_3\text{,}\) which by inspection is equal to \(3 \ve{v}_1\text{,}\) so we remove it. We move on to \(\ve{v}_4\text{.}\) It is not zero, and cannot be expressed as a multiple of \(\ve{v}_1\) (check this), so it remains. We move on to \(\ve{v}_5\text{.}\) We check if it can be written as a linear combination</p>
+<p>A <em class="emphasis">monomial</em> in two variables \(x\) and \(y\) is an expression of the form \(x^m y^n\) for some nonnegative integers \(m,n\text{.}\) The <em class="emphasis">total degree</em> of the monomial is \(m+n\text{.}\)For example,</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
+x^3 y^2, xy^7, \quad \mbox{and } x^3
 \end{equation*}
 </div>
-<p>and find the solution \(a=2, b=3\) (check this), so we remove it. Finally we move on to \(\ve{v}_6\text{.}\) We check if it can be written as a linear combination</p>
+<p>are monomials in the variables \(x\) and \(y\) of total degree</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{v}_6 = a\ve{v}_1 + b \ve{v}_4
+5, 8, \quad \mbox{and } 3
 \end{equation*}
 </div>
-<p>and find no solutions (check this), so it remains. Our final sifted list is</p>
+<p>respectively. A <em class="emphasis">polynomial in two variables</em> is a linear combination of monomials. The <em class="emphasis">degree</em> of the polynomial is the highest total degree of the monomials occuring in the linear combination. For instance,</p>
+<div class="displaymath">
+\begin{equation}
+p = 5x^3 y^2 - 3xy^7, \quad q = xy^2 -x^3 + 3y^2\tag{1.6.6}
+\end{equation}
+</div>
+<p>are polynomials in two variables with total degree \(8\) and \(3\) respectively.</p>
+<p>We write \(\Poly^2\) for the set of <em class="emphasis">all</em> polynomials in two variables, and \(\Poly^2_n\) for the set of all two-variable polynomials of total degree less than or equal to \(n\text{.}\) For instance, consier the polynomial</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{v}_1, \ve{v}_4, \ve{v}_6\text{.}
+p = 5x^3 y^2 - 3xy^7
 \end{equation*}
-</div></article><span class="incontext"><a href="Ch2Sec3BasisDimension.html#example-19">in-context</a></span>
+</div>
+<p>The total degree of \(p\) is 8. So:</p>
+<ul class="disc">
+<li>\(p \in \Poly^2\text{,}\)</li>
+<li>\(p \in \Poly^2_8\)</li>
+<li>\(p \in \Poly^2_12\)</li>
+<li>\(p \ni \Poly_2_7\)</li>
+</ul>
+<p>We can regard a polynomial \(p\) in two variables as a special kind of function</p>
+<div class="displaymath">
+\begin{equation*}
+p : \mathbb{R}^2 \rightarrow \mathbb{R}.
+\end{equation*}
+</div>
+<p>In this way, we can regard \(\Poly_2\) (and similarly \(\Poly^2_n\)) as a subset of the vector space \(\Fun(\mathbb{R}^2)\) of <em class="emphasis">all</em> functions on \(\mathbb{R}^2\text{.}\) Indeed, they are <em class="emphasis">subspaces</em>, as the reader will check.</p>
+<p>Two polynomials \(p\) and \(q\) in variables \(x\) and \(y\) are defined to be <em class="emphasis">equal</em> if and only if all their corresponding coefficients are equal. This is equivalent to the statement that \(p(x,y)=q(x,y)\) for all \((x,y) \in \mathbb{R}^2\text{.}\)</p>
+<p>In the same way, we can talk about 3-variable polynomials, and so on, eg.</p>
+<div class="displaymath">
+\begin{equation*}
+r = 5x^3y^2z + 3xy - 4xz^3
+\end{equation*}
+</div>
+<p>is a polynomial of total degree \(6\) in the variables \(x,y,z\text{.}\) We can regard a polynomial in \(k\) variables as a special kind of function</p>
+<div class="displaymath">
+\begin{equation*}
+r : \mathbb{R}^k \rightarrow \mathbb{R}.
+\end{equation*}
+</div>
+<p>We write \(\Poly^k\) for the vector space of all \(k\)-variable polynomials. We can regard \(\Poly^k\) as a subspace of the vector space \(\Fun(\mathbb{R}^k)\) of <em class="emphasis">all</em> functions on \(\mathbb{R}^k\text{.}\) Similary, we write \(\Poly^k_n\) for the vector space of all \(k\)-variable polynomials of total degree less than or equal to \(n\text{,}\) and we regard it too as a subspace of \(\Fun(\mathbb{R}^n)\text{.}\)</p></article><span class="incontext"><a href="Ch1Sec6Subspaces.html#example-19">in-context</a></span>
 </body>
 </html>

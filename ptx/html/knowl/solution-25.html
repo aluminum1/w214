@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:34+02:00    *-->
+<!--*    on 2019-03-14T17:09:28+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,35 +14,34 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">2.4.1.1</span>
+<span class="type">Solution</span> <span class="codenumber">2.4.8.1</span>
 </h6>
-<p>As before, suppose that</p>
-<div class="displaymath">
-\begin{align*}
-\ve{v} \amp = a_1 \ve{e}_1 + a_2 
-\end{align*}
-</div>
-<p>Which gives</p>
 <div class="displaymath">
 \begin{equation*}
-[\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
+\cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
 \end{equation*}
 </div>
-<p>Then</p>
-<div class="displaymath">
-\begin{align*}
-k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) \\
-\amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (\knowl{./knowl/R4.html}{\text{R4 }})\\
-\amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (\knowl{./knowl/R6.html}{\text{R6 }})
-\end{align*}
-</div>
-<p>Reading off the coefficients, we obtain</p>
 <div class="displaymath">
 \begin{equation*}
-k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
+\cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
+= \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
 \end{equation*}
 </div>
-<p>as desired.</p>
+<div class="displaymath">
+\begin{equation*}
+\cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
+= \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
+\implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
+\end{equation*}
+</div>
+<p>Thus</p>
+<div class="displaymath">
+\begin{equation*}
+\sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
+= \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
+= \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
+\end{equation*}
+</div>
 </div>
 <span class="incontext"><a href="Ch2Sec4CoordinateVectors.html#solution-25">in-context</a></span>
 </body>

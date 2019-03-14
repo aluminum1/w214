@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:27+02:00    *-->
+<!--*    on 2019-03-14T17:09:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -130,10 +130,11 @@ var login_required = false;
 <li><a href="Tut1.html" data-scroll="Tut1">Tutorial 1</a></li>
 <li><a href="Tut2.html" data-scroll="Tut2">Tutorial 2</a></li>
 <li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
+<li><a href="Tut3.html" data-scroll="Tut3">Tutorial 3</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <h2 class="link"><a href="AppAReminderAboutMatrices.html" data-scroll="AppAReminderAboutMatrices"><span class="codenumber">A</span> <span class="title">Reminder about matrices</span></a></h2>
-<ul><li><a href="exercises-13.html" data-scroll="exercises-13">Exercises</a></li></ul>
+<ul><li><a href="exercises-14.html" data-scroll="exercises-14">Exercises</a></li></ul>
 <h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="Ch2Sec2LinearIndependence"><h2 class="heading hide-type">
@@ -142,7 +143,7 @@ var login_required = false;
 <a href="Ch2Sec2LinearIndependence.html" class="permalink">¶</a><article class="definition-like" id="defn_of_linear_ind"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.2.1</span>
 </h6>
-<p id="p-334">A list of vectors \(\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose\) in a vector space \(V\) is called <dfn class="terminology">linearly independent</dfn> if the equation</p>
+<p id="p-353">A list of vectors \(\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n \bclose\) in a vector space \(V\) is called <dfn class="terminology">linearly independent</dfn> if the equation</p>
 <div class="displaymath">
 \begin{equation}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}\label{lin_independence_eqn}\tag{2.2.1}
@@ -151,7 +152,7 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}\label{lin_independenc
 <p>has only the trivial solution \(k_1 = k_2 = \cdots = k_n = 0\text{.}\) Otherwise (if <a knowl="./knowl/lin_independence_eqn.html" title="Equation 2.2.1">(2.2.1)</a> has a solution with at least one scalar \(k_i \neq 0\)) the list \(\basis{B}\) is called <dfn class="terminology">linearly dependent</dfn>.</p></article><article class="remark-like" id="remark_about_lin_dependence"><h6 class="heading">
 <span class="type">Remark</span> <span class="codenumber">2.2.2</span> <span class="title">Zero vector implies linear dependence</span>
 </h6>
-<p id="p-335">Suppose one of the vectors \(\ve{v}_i\) in the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) is the zero vector \(\ve{0}\text{.}\) Then \(\basis{B}\) is linearly dependent, since the equation <a knowl="./knowl/lin_independence_eqn.html" title="Equation 2.2.1">(2.2.1)</a> has the nontrivial solution</p>
+<p id="p-354">Suppose one of the vectors \(\ve{v}_i\) in the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) is the zero vector \(\ve{0}\text{.}\) Then \(\basis{B}\) is linearly dependent, since the equation <a knowl="./knowl/lin_independence_eqn.html" title="Equation 2.2.1">(2.2.1)</a> has the nontrivial solution</p>
 <div class="displaymath">
 \begin{equation*}
 0 \ve{v}_1 + \cdots + 0 \ve{v}_{i-1} + 1 \ve{v}_i + 0 \ve{v}_{i+1} + \cdots + 0 \ve{v}_n = \ve{0},
@@ -163,10 +164,10 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots k_n \ve{v}_n = \ve{0}\label{lin_independenc
 k_1 = 0, \ldots, k_{i-1} = 0, k_i = 1, k_{i+1} = 0, \ldots, k_n = 0.
 \end{equation*}
 </div>
-<p>So: <em class="emphasis">a linearly independent list ofvectors never contains the zero vector!</em></p></article><article class="example-like" id="example-30"><h6 class="heading">
+<p>So: <em class="emphasis">a linearly independent list ofvectors never contains the zero vector!</em></p></article><article class="example-like" id="example-32"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.2.3</span>
 </h6>
-<p id="p-336">The list of vectors \(\ve{f}_1 = (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\) from <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Example 2.1.8: Checking if a list of vectors space the vector space">Example 2.1.8</a> is linearly independent, because the equation</p>
+<p id="p-355">The list of vectors \(\ve{f}_1 = (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\) from <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Example 2.1.8: Checking if a list of vectors space the vector space">Example 2.1.8</a> is linearly independent, because the equation</p>
 <div class="displaymath">
 \begin{equation*}
 k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
@@ -178,12 +179,12 @@ k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
 -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0\label{system_from_r2_example}\tag{2.2.2}
 \end{equation}
 </div>
-<p>which has only the trivial solution \(k_1 = 0\) and \(k_2 = 0\text{.}\)</p></article><article class="exercise-like" id="exercise-57"><h6 class="heading">
+<p>which has only the trivial solution \(k_1 = 0\) and \(k_2 = 0\text{.}\)</p></article><article class="exercise-like" id="exercise-58"><h6 class="heading">
 <span class="type">Checkpoint</span> <span class="codenumber">2.2.4</span>
 </h6>
-<p id="p-337">Check that <a knowl="./knowl/system_from_r2_example.html" title="Equation 2.2.2">(2.2.2)</a> has only the trivial solution.</p>
+<p id="p-356">Check that <a knowl="./knowl/system_from_r2_example.html" title="Equation 2.2.2">(2.2.2)</a> has only the trivial solution.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="type">Solution</span></a><div id="hk-solution-13" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="p-338">
+<a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div id="hk-solution-14" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="p-357">
 \begin{equation*}
 (2k_1 + k_2) - (-k_1 + k_2) = 0 = 3k_2 \implies k_2 = 0 \implies k_1 = 0 \text{ too}.
 \end{equation*}
@@ -191,7 +192,7 @@ k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
 </div></article><article class="example-like" id="example_about_lin_dep_1"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.2.5</span>
 </h6>
-<p id="p-339">The list of vectors \(\ve{f}_1 = (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\text{,}\) \(\ve{f}_3 = (2, \, -1)\) from <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Example 2.1.8: Checking if a list of vectors space the vector space">Example 2.1.8</a> is linearly dependent, because the equation</p>
+<p id="p-358">The list of vectors \(\ve{f}_1 = (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\text{,}\) \(\ve{f}_3 = (2, \, -1)\) from <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Example 2.1.8: Checking if a list of vectors space the vector space">Example 2.1.8</a> is linearly dependent, because the equation</p>
 <div class="displaymath">
 \begin{equation}
 k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)\label{eqn_to_check_lin_ind}\tag{2.2.3}
@@ -209,19 +210,19 @@ k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)\label{eqn_to_check_l
 k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}\text{.}\label{supposed_soln}\tag{2.2.5}
 \end{equation}
 </div>
-<p id="p-340">For instance, for \(t=2\text{,}\) we have</p>
+<p id="p-359">For instance, for \(t=2\text{,}\) we have</p>
 <div class="displaymath">
 \begin{equation*}
 2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
 \end{equation*}
 </div>
-<p>so that <a knowl="./knowl/eqn_to_check_lin_ind.html" title="Equation 2.2.3">(2.2.3)</a> has nontrivial solutions.</p></article><article class="exercise-like" id="exercise-58"><h6 class="heading">
+<p>so that <a knowl="./knowl/eqn_to_check_lin_ind.html" title="Equation 2.2.3">(2.2.3)</a> has nontrivial solutions.</p></article><article class="exercise-like" id="exercise-59"><h6 class="heading">
 <span class="type">Checkpoint</span> <span class="codenumber">2.2.6</span>
 </h6>
-<p id="p-341">Check that <a knowl="./knowl/system_from_r2_example_new.html" title="Equation 2.2.4">(2.2.4)</a> has the solution set <a knowl="./knowl/supposed_soln.html" title="Equation 2.2.5">(2.2.5)</a>.</p>
+<p id="p-360">Check that <a knowl="./knowl/system_from_r2_example_new.html" title="Equation 2.2.4">(2.2.4)</a> has the solution set <a knowl="./knowl/supposed_soln.html" title="Equation 2.2.5">(2.2.5)</a>.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="type">Solution</span></a><div id="hk-solution-14" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-342">We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let \(k_1\) be free, i.e. \(k_1 = t, t \in \mathbb{R}\text{.}\) Then</p>
+<a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="type">Solution</span></a><div id="hk-solution-15" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-361">We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let \(k_1\) be free, i.e. \(k_1 = t, t \in \mathbb{R}\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 (-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
@@ -233,7 +234,7 @@ k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}\text{.}\label{supposed_soln}
 </div></article><article class="example-like" id="new_basis_for_poly_3"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.2.7</span>
 </h6>
-<p id="p-343">The list of polynomials</p>
+<p id="p-362">The list of polynomials</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{q}_0(x) := 1, \,\, \ve{q}_1(x) := x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
@@ -251,26 +252,26 @@ k_0 \ve{q}_0 + k_1 \ve{q}_1 + k_2 \ve{q}_2 + k_3 \ve{q}_3 = \ve{0}
 4k_3 x^3 + 2k_2 x^2 + (-3k_3 + k_1) x + (-k_2 + k_0) = 0
 \end{equation*}
 </div>
-<p id="p-344">This is equivalent to the following system of equations,</p>
+<p id="p-363">This is equivalent to the following system of equations,</p>
 <div class="displaymath">
 \begin{equation*}
 4k_3 = 0, \quad 2k_2 = 0, \quad -3 k_3 + k_1 = 0, \quad k_0 - k_2 = 0
 \end{equation*}
 </div>
-<p>which has only the trivial solution \(k_0 = k_1 = k_2 = k_3 = 0\text{.}\)</p></article><p id="p-345">Here are two more ways to think about linearly dependent lists of vectors.</p>
+<p>which has only the trivial solution \(k_0 = k_1 = k_2 = k_3 = 0\text{.}\)</p></article><p id="p-364">Here are two more ways to think about linearly dependent lists of vectors.</p>
 <article class="theorem-like" id="lin_dependence_prop"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">2.2.8</span> <span class="title">Equivalent Criterions for Linear Dependence</span>
+<span class="type">Proposition</span> <span class="codenumber">2.2.8</span> <span class="title">Equivalent Formulations of Linear Dependence</span>
 </h6>
-<p id="p-346">Let \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) be a list of vectors in a vector space \(V\text{.}\) The following statements are equivalent:</p>
+<p id="p-365">Let \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) be a list of vectors in a vector space \(V\text{.}\) The following statements are equivalent:</p>
 <ol class="decimal">
 <li id="defn_lin_dep">The list of vectors \(\basis{B}\) is linearly dependent.</li>
-<li id="lin_comb_other_vec">(Linear Combination of Other Vectors)<p id="p-347">One of the vectors in the list \(\basis{B}\) is a linear combination of the other vectors in \(\basis{B}\text{.}\)</p>
+<li id="lin_comb_other_vec">(Linear Combination of Other Vectors)<p id="p-366">One of the vectors in the list \(\basis{B}\) is a linear combination of the other vectors in \(\basis{B}\text{.}\)</p>
 </li>
-<li id="lin_comb_prec_vec">(Linear Combination of Preceding Vectors)<p id="p-348">Either \(\ve{v}_1 = \ve{0}\text{,}\) or for some \(r \in \{2, 3, \ldots,
+<li id="lin_comb_prec_vec">(Linear Combination of Preceding Vectors)<p id="p-367">Either \(\ve{v}_1 = \ve{0}\text{,}\) or for some \(r \in \{2, 3, \ldots,
 n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{.}\)</p>
 </li>
-</ol></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-349">We will show that (1) \(\Leftrightarrow\) (2), (1) \(\Rightarrow\) (3) and (3) \(\Rightarrow\) (2), and conclude that each statement implies the others.</p>
-<p id="p-350">(1) \(\Rightarrow\) (2). Suppose that \(\basis{B}\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+</ol></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-368">We will show that (1) \(\Leftrightarrow\) (2), (1) \(\Rightarrow\) (3) and (3) \(\Rightarrow\) (2), and conclude that each statement implies the others.</p>
+<p id="p-369">(1) \(\Rightarrow\) (2). Suppose that \(\basis{B}\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
 <div class="displaymath">
 \begin{equation}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\label{lin_dep_lem_another_eqn}\tag{2.2.6}
@@ -283,7 +284,7 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\label{lin_d
 \end{align*}
 </div>
 <p>Therefore, (2) is true.</p>
-<p id="p-351">(2) \(\Rightarrow\) (1). Suppose that one of the vectors in the list, say \(\ve{v}_s\text{,}\) is a linear combination of the others vectors. That is,</p>
+<p id="p-370">(2) \(\Rightarrow\) (1). Suppose that one of the vectors in the list, say \(\ve{v}_s\text{,}\) is a linear combination of the others vectors. That is,</p>
 <div class="displaymath">
 \begin{align*}
 \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No } \mbox{term on RHS.)} 
@@ -296,44 +297,44 @@ k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.\label{rea
 \end{equation}
 </div>
 <p>Not all the coefficients on the LHS of <a knowl="./knowl/rearranged_lin_dep.html" title="Equation 2.2.7">(2.2.7)</a> are zero, since the coefficient of \(\ve{v}_s\) is equal to \(-1\text{.}\) Therefore, \(\basis{B}\) is linearly dependent.</p>
-<p id="p-352">(1) \(\Rightarrow\) (3). Suppose that the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+<p id="p-371">(1) \(\Rightarrow\) (3). Suppose that the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
 <div class="displaymath">
 \begin{equation}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\label{lin_dep_lem_first_eqn}\tag{2.2.8}
 \end{equation}
 </div>
-<p id="p-353">Let \(r \in \{1, \,2, \ldots, \, n\}\) be the largest index such that \(k_r \neq 0\text{.}\) (We are told that not all the \(k_i\) are zero, so this makes sense.) If \(r=1\text{,}\) then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Equation 2.2.8">(2.2.8)</a> is simply the equation</p>
+<p id="p-372">Let \(r \in \{1, \,2, \ldots, \, n\}\) be the largest index such that \(k_r \neq 0\text{.}\) (We are told that not all the \(k_i\) are zero, so this makes sense.) If \(r=1\text{,}\) then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Equation 2.2.8">(2.2.8)</a> is simply the equation</p>
 <div class="displaymath">
 \begin{equation*}
 k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0\text{.}
 \end{equation*}
 </div>
-<p id="p-354">Therefore \(\ve{v}_1 = \ve{0}\) by <a knowl="./knowl/dichotomy_lem.html" title="Lemma 1.5.6">Lemma 1.5.6</a>, and we are done. On the other hand, suppose \(r \neq 1\text{.}\) Then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Equation 2.2.8">(2.2.8)</a> becomes the equation</p>
+<p id="p-373">Therefore \(\ve{v}_1 = \ve{0}\) by <a knowl="./knowl/dichotomy_lem.html" title="Lemma 1.5.6">Lemma 1.5.6</a>, and we are done. On the other hand, suppose \(r \neq 1\text{.}\) Then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Equation 2.2.8">(2.2.8)</a> becomes the equation</p>
 <div class="displaymath">
 \begin{equation*}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0\text{.}
 \end{equation*}
 </div>
-<p id="p-355">By dividing by \(k_r\text{,}\) we can now solve for \(\ve{v}_r\) in terms of the preceding vectors \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{:}\)</p>
+<p id="p-374">By dividing by \(k_r\text{,}\) we can now solve for \(\ve{v}_r\) in terms of the preceding vectors \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
 \end{equation*}
 </div>
 <p>Therefore, (3) is true.</p>
-<p id="p-356">(3) \(\Rightarrow\) (2) Suppose that (3) is true. In other words, either:</p>
+<p id="p-375">(3) \(\Rightarrow\) (2) Suppose that (3) is true. In other words, either:</p>
 <ul class="disc">
-<li id="li-58">\(\ve{v}_1 = \ve{0}\text{.}\) Therefore, \(\basis{B}\) is linearly dependent, by <a knowl="./knowl/remark_about_lin_dependence.html" title="Remark 2.2.2: Zero vector implies linear dependence">Remark 2.2.2</a>. In other words, (1) is true. Therefore, since we have already proved that (1) \(\Rightarrow \) (2), we conclude that (2) is true.</li>
-<li id="li-59">For some \(r \in \{2, \ldots, n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1, \ldots, \ve{v}_{r-1}\text{.}\) In this case, clearly \(\ve{v}_r\) is a linear combination of the other vectors in \(\basis{B}\text{,}\) so (2) is true.</li>
+<li id="li-62">\(\ve{v}_1 = \ve{0}\text{.}\) Therefore, \(\basis{B}\) is linearly dependent, by <a knowl="./knowl/remark_about_lin_dependence.html" title="Remark 2.2.2: Zero vector implies linear dependence">Remark 2.2.2</a>. In other words, (1) is true. Therefore, since we have already proved that (1) \(\Rightarrow \) (2), we conclude that (2) is true.</li>
+<li id="li-63">For some \(r \in \{2, \ldots, n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1, \ldots, \ve{v}_{r-1}\text{.}\) In this case, clearly \(\ve{v}_r\) is a linear combination of the other vectors in \(\basis{B}\text{,}\) so (2) is true.</li>
 </ul>
 <p>In both cases, (2) is true. So, (3) \(\Rightarrow\) (2).</p></article></div>
 <article class="example-like" id="app_of_prop_preceding"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.2.9</span>
 </h6>
-<p id="p-357">We saw in <a knowl="./knowl/example_about_lin_dep_1.html" title="Example 2.2.5">Example 2.2.5</a>, using the definition of linear dependence, that the list of vectors \(\ve{f}_1 = (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\text{,}\) \(\ve{f}_3 = (2, \, -1)\) in \(\mathbb{R}^3\) is linearly dependent. Give two alternative proofs of this, using <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>.</p>
+<p id="p-376">We saw in <a knowl="./knowl/example_about_lin_dep_1.html" title="Example 2.2.5">Example 2.2.5</a>, using the definition of linear dependence, that the list of vectors \(\ve{f}_1 = (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\text{,}\) \(\ve{f}_3 = (2, \, -1)\) in \(\mathbb{R}^3\) is linearly dependent. Give two alternative proofs of this, using <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="type">Solution</span> <span class="codenumber">1</span></a><div id="hk-solution-15" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-358">We check <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>. That is, we check if one of the vectors in the list is a linear combination of the other vectors. Indeed, we observe by inspection that</p>
+<a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="type">Solution</span> <span class="codenumber">1</span></a><div id="hk-solution-16" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-377">We check <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>. That is, we check if one of the vectors in the list is a linear combination of the other vectors. Indeed, we observe by inspection that</p>
 <div class="displaymath">
 \begin{equation}
 \ve{f}_2 = \ve{f}_1 + \ve{f}_3.\tag{2.2.9}
@@ -341,13 +342,13 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 </div>
 <p>Hence, \(\basis{B}\) is linearly dependent.</p>
 </div></div>
-<a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="type">Solution</span> <span class="codenumber">2</span></a><div id="hk-solution-16" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-359">We check <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>. That is, we check:</p>
+<a knowl="" class="id-ref" refid="hk-solution-17" id="solution-17"><span class="type">Solution</span> <span class="codenumber">2</span></a><div id="hk-solution-17" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-378">We check <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>. That is, we check:</p>
 <ul class="disc">
-<li id="li-60"><p id="p-360">Is \(\ve{f}_1 = \ve{0}\text{?}\) No.</p></li>
-<li id="li-61"><p id="p-361">Is \(\ve{f}_2\) is a scalar multiple of \(\ve{f}_1\text{?}\) No.</p></li>
-<li id="li-62">
-<p id="p-362">Is \(\ve{f}_3\) is a linear combination of \(\ve{f}_1\) and \(\ve{f}_2\text{?}\) Yes, since</p>
+<li id="li-64"><p id="p-379">Is \(\ve{f}_1 = \ve{0}\text{?}\) No.</p></li>
+<li id="li-65"><p id="p-380">Is \(\ve{f}_2\) is a scalar multiple of \(\ve{f}_1\text{?}\) No.</p></li>
+<li id="li-66">
+<p id="p-381">Is \(\ve{f}_3\) is a linear combination of \(\ve{f}_1\) and \(\ve{f}_2\text{?}\) Yes, since</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{f}_3 = - \ve{f}_1 + \ve{f}_2.
@@ -360,7 +361,7 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 </div></article><article class="theorem-like" id="bumping_off_lemma"><h6 class="heading">
 <span class="type">Proposition</span> <span class="codenumber">2.2.10</span> <span class="title">Bumping Off Proposition</span>
 </h6>
-<p id="p-363">Suppose \(\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose\) is a linearly independent list of vectors in a vector space \(V\text{,}\) and that \(\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose\) spans \(V\text{.}\) Then \(m \leq n\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-364">Start with the original spanning list of vectors</p>
+<p id="p-382">Suppose \(\basis{L} = \bopen \ve{l}_1, \ve{l}_2, \ldots, \ve{l}_m \bclose\) is a linearly independent list of vectors in a vector space \(V\text{,}\) and that \(\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose\) spans \(V\text{.}\) Then \(m \leq n\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-383">Start with the original spanning list of vectors</p>
 <div class="displaymath">
 \begin{equation}
 \basis{S} = \left\{ \,\,  \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \right\}\tag{2.2.10}
@@ -372,16 +373,16 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 \basis{S}' = \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \ve{s}_n \right\}\label{bloated_list}\tag{2.2.11}
 \end{equation}
 </div>
-<p id="p-365">Now, since \(\basis{S}\) spans \(V\text{,}\) we know that \(\ve{l}_1\) can be written as a linear combination of the vectors \(\ve{s}_1, \ldots, \ve{s}_n\text{.}\) Therefore, by <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>, we know that \(\basis{S}'\) is linearly dependent. Thus, by <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>, either:</p>
+<p id="p-384">Now, since \(\basis{S}\) spans \(V\text{,}\) we know that \(\ve{l}_1\) can be written as a linear combination of the vectors \(\ve{s}_1, \ldots, \ve{s}_n\text{.}\) Therefore, by <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>, we know that \(\basis{S}'\) is linearly dependent. Thus, by <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>, either:</p>
 <ul class="disc">
-<li id="li-63">\(\ve{l}_1 = \ve{0}\text{.}\) This cannot be true, since then \(\basis{L}\) would be linearly dependent by <a knowl="./knowl/remark_about_lin_dependence.html" title="Remark 2.2.2: Zero vector implies linear dependence">Remark 2.2.2</a>, contradicting our initial assumption.</li>
-<li id="li-64">or one of the \(\ve{s}\)-vectors, say \(\ve{s}_r\text{,}\) can be expressed as a linear combination of the preceding vectors. We can then remove \(\ve{s}_r\) from the list \(\basis{S}'\) (‘bump it off’), and the resulting list<div class="displaymath">
+<li id="li-67">\(\ve{l}_1 = \ve{0}\text{.}\) This cannot be true, since then \(\basis{L}\) would be linearly dependent by <a knowl="./knowl/remark_about_lin_dependence.html" title="Remark 2.2.2: Zero vector implies linear dependence">Remark 2.2.2</a>, contradicting our initial assumption.</li>
+<li id="li-68">or one of the \(\ve{s}\)-vectors, say \(\ve{s}_r\text{,}\) can be expressed as a linear combination of the preceding vectors. We can then remove \(\ve{s}_r\) from the list \(\basis{S}'\) (‘bump it off’), and the resulting list<div class="displaymath">
 \begin{equation}
 \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}\tag{2.2.12}
 \end{equation}
 </div>will still span \(V\text{,}\) by <a knowl="./knowl/exercise-span-omission.html" title="Exercise 2.1.7">Exercise 2.1.7</a>.</li>
 </ul>
-<p id="p-366">We can go on in this way, each time transferring another one of the \(\ve{l}\)-vectors into the list, and removing another one of the \(\ve{s}\)-vectors, and still have a list which spans \(V\text{:}\)</p>
+<p id="p-385">We can go on in this way, each time transferring another one of the \(\ve{l}\)-vectors into the list, and removing another one of the \(\ve{s}\)-vectors, and still have a list which spans \(V\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose \\
@@ -390,16 +391,16 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 \amp \vdots \amp \amp \vdots 
 \end{align*}
 </div>
-<p id="p-367">Now, suppose that \(m &gt; n\text{.}\) When we reach the \(n\)th stage of this process, we will have \(\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose\text{,}\) and it will span \(V\text{.}\) Therefore, in particular, \(\ve{l}_{n+1}\) (which we know exists, since \(m &gt; n \)) will be a linear combination of \(\ve{l}_1, \ldots, \ve{l}_n\text{.}\) But then, by <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>, we conclude that \(\basis{L}\) is linearly dependent. But we were told in the beginning that \(\basis{L}\) is linearly <em class="emphasis">in</em>dependent, so we have a contradiction. Hence, our assumption that \(m &gt; n\) must be false. Therefore, we must have \(m \leq n\text{.}\)</p></article></div>
+<p id="p-386">Now, suppose that \(m &gt; n\text{.}\) When we reach the \(n\)th stage of this process, we will have \(\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose\text{,}\) and it will span \(V\text{.}\) Therefore, in particular, \(\ve{l}_{n+1}\) (which we know exists, since \(m &gt; n \)) will be a linear combination of \(\ve{l}_1, \ldots, \ve{l}_n\text{.}\) But then, by <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>, we conclude that \(\basis{L}\) is linearly dependent. But we were told in the beginning that \(\basis{L}\) is linearly <em class="emphasis">in</em>dependent, so we have a contradiction. Hence, our assumption that \(m &gt; n\) must be false. Therefore, we must have \(m \leq n\text{.}\)</p></article></div>
 <section class="exercises" id="exercises-6"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="exercise-like" id="exercise-59"><h6 class="heading">
+<article class="exercise-like" id="exercise-60"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-368">Show that the list of vectors \((2, \, 3, \, 1)\text{,}\) \((1, \, -1, \, 2)\text{,}\) \((7, \, 3, \, c)\) is linearly dependent in \(\mathbb{R}^3\) if and only if \(c=8\text{.}\)</p>
+<p id="p-387">Show that the list of vectors \((2, \, 3, \, 1)\text{,}\) \((1, \, -1, \, 2)\text{,}\) \((7, \, 3, \, c)\) is linearly dependent in \(\mathbb{R}^3\) if and only if \(c=8\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-17" id="solution-17"><span class="type">Solution</span></a><div id="hk-solution-17" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-369">We set up a linear equation and find the necessary conditions on \(c\text{.}\) Suppose some linear combination of the vectors equals 0:</p>
+<a knowl="" class="id-ref" refid="hk-solution-18" id="solution-18"><span class="type">Solution</span></a><div id="hk-solution-18" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-388">We set up a linear equation and find the necessary conditions on \(c\text{.}\) Suppose some linear combination of the vectors equals 0:</p>
 <div class="displaymath">
 \begin{equation*}
 k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
@@ -448,7 +449,7 @@ k_3\\
 </div></div>
 </div></article><article class="exercise-like" id="x2_by_2_matrices_lin_dep"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-370">The list of vectors in \(\Mat_{2,2}\) given by</p>
+<p id="p-389">The list of vectors in \(\Mat_{2,2}\) given by</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v}_1 = \begin{bmatrix}
@@ -473,10 +474,10 @@ k_3\\
 \end{bmatrix}
 \end{equation*}
 </div>
-<p>is linearly dependent (you will prove this in <a knowl="./knowl/checking_matrices_lin_dep.html" title="Exercise 2.3.2.4">Exercise 2.3.2.4</a>, but for the sake of this question you may assume it to be true). Go through the same steps as in <a knowl="./knowl/app_of_prop_preceding.html" title="Example 2.2.9">Example 2.2.9</a> to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors.</p>
+<p>is linearly dependent (you will prove this in <a knowl="./knowl/checking_matrices_lin_dep.html" title="Exercise 2.3.5.4">Exercise 2.3.5.4</a>, but for the sake of this question you may assume it to be true). Go through the same steps as in <a knowl="./knowl/app_of_prop_preceding.html" title="Example 2.2.9">Example 2.2.9</a> to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-18" id="solution-18"><span class="type">Solution</span></a><div id="hk-solution-18" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-371">Firstly note that \(\ve v_1  \) is non-zero, so we consider \(\ve v_2 \text{.}\) \(\ve v_2 \) cannnot be a scalar multiple of \(\ve v_1\) by considering the matrix entry in position (1,2). We now consider \(\ve v_3 \text{.}\) Suppose</p>
+<a knowl="" class="id-ref" refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div id="hk-solution-19" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-390">Firstly note that \(\ve v_1  \) is non-zero, so we consider \(\ve v_2 \text{.}\) \(\ve v_2 \) cannnot be a scalar multiple of \(\ve v_1\) by considering the matrix entry in position (1,2). We now consider \(\ve v_3 \text{.}\) Suppose</p>
 <div class="displaymath">
 \begin{equation*}
 a\begin{bmatrix}
@@ -553,9 +554,13 @@ c \begin{bmatrix}
 </div>
 <p>and so \(b = -1 \text{.}\) SHOW THAT THIS IS INCONSISTENT WITH (2,1).</p>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-61"><h6 class="heading">
+</div></article><article class="exercise-like" id="exercise-62"><h6 class="heading">
 <span class="codenumber">3</span> </h6>
-<p id="p-372">Let \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}\) be a linearly independent list of vectors in a vector space \(V\text{.}\) Suppose that \(\ve{v}\) is a vector in \(V\) which cannot be written as a linear combination of the vectors in \(\basis{B}\text{.}\) Show that the list \(\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}\) is still linearly independent. (Hint: Use the Linear Combination of Preceding Vectors Proposition.)</p></article></section></section></div></main>
+<p id="p-391">Let \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}\) be a linearly independent list of vectors in a vector space \(V\text{.}\) Suppose that \(\ve{v}\) is a vector in \(V\) which cannot be written as a linear combination of the vectors in \(\basis{B}\text{.}\) Show that the list \(\basis{B}' = \left\{ \ve{v}_1, \ldots, \ve{v}_n, \ve{v} \right\}\) is still linearly independent. (Hint: Use the Linear Combination of Preceding Vectors Proposition.)</p></article><article class="exercise-like" id="exercise-63"><h6 class="heading">
+<span class="codenumber">4</span> </h6>
+<p id="p-392">Consider the vector space of functions on the closed unit interval, \(\Fun ([0,1])\text{.}\) Show that for any \(n \in \mathbb N \text{,}\) we can find \(n\) linear independent vectors in \(\Fun ([0,1])\text{.}\)</p></article><article class="exercise-like" id="exercise-64"><h6 class="heading">
+<span class="codenumber">5</span> </h6>
+<p id="p-393">(Bonus) Try adapt the argument in the question above to show that for any \(n \in \mathbb N \text{,}\) we can find \(n\) linear independent vectors in \(\Cont([0,1])\text{,}\) the vector space of all continuous real valued functions on \([0,1]\text{.}\)</p></article></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.1/login.js"></script>

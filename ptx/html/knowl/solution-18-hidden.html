@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:32+02:00    *-->
+<!--*    on 2019-03-14T17:09:27+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,81 +12,51 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body><div class="solution">
-<p>Firstly note that \(\ve v_1  \) is non-zero, so we consider \(\ve v_2 \text{.}\) \(\ve v_2 \) cannnot be a scalar multiple of \(\ve v_1\) by considering the matrix entry in position (1,2). We now consider \(\ve v_3 \text{.}\) Suppose</p>
+<p>We set up a linear equation and find the necessary conditions on \(c\text{.}\) Suppose some linear combination of the vectors equals 0:</p>
 <div class="displaymath">
 \begin{equation*}
-a\begin{bmatrix}
-1 &amp; 2 \\
-1 &amp; 1
-\end{bmatrix} + b \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix} = \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix}
+k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
 \end{equation*}
 </div>
-<p>This gives rise to a system of four linear equations. In particular, we have the equation for the matrix entry in position (1,2):</p>
+<p>This vector equation gives rise to a system of 3 linear equations:</p>
 <div class="displaymath">
 \begin{equation*}
-2a + 0b = 0
+2k_1 + k_2 + 7k_3 = 0,\\
+3k_1 - k_2 + 3k_3 = 0,\\
+k_1 + 2k_2 + ck_3 = 0.
 \end{equation*}
 </div>
-<p>And hence \(a = 0 \text{.}\) But clearly</p>
+<p>The corresponding matrix equation is</p>
 <div class="displaymath">
 \begin{equation*}
-b \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix} \neq \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix}
-\end{equation*}
-</div>
-<p>for any choice of \(b\text{.}\) Hence \(\ve v_3 \) is not a scalar multiple of \(\ve v_1 \) and \(\ve v_2\text{.}\) We consider \(\ve v_4 \) next. Suppose</p>
-<div class="displaymath">
-\begin{equation*}
-a\begin{bmatrix}
-1 &amp; 2 \\
-1 &amp; 1
-\end{bmatrix} +
-b \begin{bmatrix}
-1 &amp; 0 \\
--2 &amp; 1
-\end{bmatrix} +
-c \begin{bmatrix}
-1 &amp; 0 \\
-2 &amp; 3
-\end{bmatrix} = 
 \begin{bmatrix}
-0 &amp; 3 \\
-1 &amp; -1
-\end{bmatrix}
+2 \mamp 1 \mamp 7 \\
+3 \mamp -1 \mamp 3\\
+1 \mamp 2 \mamp c
+\end{bmatrix} 
+\begin{bmatrix}
+k_1 \\
+k_2 \\
+k_3\\
+\end{bmatrix} 
+=
+\begin{bmatrix}
+0 \\ 
+0 \\
+0
+\end{bmatrix} 
 \end{equation*}
 </div>
-<p>The equation for the entry in position (1,2) is simply</p>
+<p>This matrix is non-invertible if and only if its determinant is 0. Furthermore, the matrix being non-invertible will mean we can find a non-trivial solution to the intial equation. We compute the determinant:s</p>
 <div class="displaymath">
 \begin{equation*}
-2a = 3
+\det\begin{bmatrix}
+2 \mamp 1 \mamp 7 \\
+3 \mamp -1 \mamp 3\\
+1 \mamp 2 \mamp c
+\end{bmatrix} = -5c + 40
 \end{equation*}
 </div>
-<p>and so \(a = \frac{3}{2}\text{.}\) The corresponding equation for the entry in position (1,1) is thus</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{3}{2} + b + c = 0.
-\end{equation*}
-</div>
-<p>Using this result, we consider the equation for the entry in position (2,2) and compute:</p>
-<div class="displaymath">
-\begin{equation*}
-\frac{3}{2} + b + 3c = -1 \\
-\implies \frac{3}{2} + b + c + 2c = -1 \\
-\implies 2c = -1
-\implies c = -\frac{1}{2}
-\end{equation*}
-</div>
-<p>and so \(b = -1 \text{.}\) SHOW THAT THIS IS INCONSISTENT WITH (2,1).</p>
+<p>which is 0 if and only if \(c =8 \text{.}\)</p>
 </div></body>
 </html>

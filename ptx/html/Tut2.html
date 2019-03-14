@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:28+02:00    *-->
+<!--*    on 2019-03-14T17:09:23+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -138,44 +138,45 @@ var login_required = false;
 <li><a href="Tut1.html" data-scroll="Tut1">Tutorial 1</a></li>
 <li><a href="Tut2.html" data-scroll="Tut2" class="active">Tutorial 2</a></li>
 <li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
+<li><a href="Tut3.html" data-scroll="Tut3">Tutorial 3</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <h2 class="link"><a href="AppAReminderAboutMatrices.html" data-scroll="AppAReminderAboutMatrices"><span class="codenumber">A</span> <span class="title">Reminder about matrices</span></a></h2>
-<ul><li><a href="exercises-13.html" data-scroll="exercises-13">Exercises</a></li></ul>
+<ul><li><a href="exercises-14.html" data-scroll="exercises-14">Exercises</a></li></ul>
 <h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="Tut2"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">3.2</span> <span class="title">W219 2019, Linear Algebra Tutorial 2</span>
 </h2>
-<a href="Tut2.html" class="permalink">¶</a><p id="p-575">Note: You are welcome to use SageMath to help you solve some of the problems below. You can either just type into one of the provided Sage cells, or you can use the <a class="url" href="https://sagecell.sagemath.org/" target="_blank">SageMath cell server</a>.</p>
+<a href="Tut2.html" class="permalink">¶</a><p id="p-608">Note: You are welcome to use SageMath to help you solve some of the problems below. You can either just type into one of the provided Sage cells, or you can use the <a class="url" href="https://sagecell.sagemath.org/" target="_blank">SageMath cell server</a>.</p>
 <section class="exercises" id="exercises-11"><h3 class="heading hide-type">
 <span class="type">Subsection</span> <span class="codenumber"></span> <span class="title">Exercises</span>
 </h3>
-<article class="assemblage-like" id="assemblage-20"><h6 class="heading"><span class="title">1.6 Subspaces</span></h6></article><article class="exercise-like" id="exercise-91"><h6 class="heading">
+<article class="assemblage-like" id="assemblage-21"><h6 class="heading"><span class="title">1.6 Subspaces</span></h6></article><article class="exercise-like" id="exercise-99"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-576">Read through the webpage version of <a href="Ch1Sec6Subspaces.html#soln-diff-eqns-sec" class="xref" title="Subsection 1.6.3: Solutions to homogenous linear differential equations">Subsection 1.6.3</a> (Solutions to homogenous linear differential equations), which is new and contains a lot of SageMath examples.</p></article><article class="exercise-like" id="exercise-92"><h6 class="heading">
+<p id="p-609">Read through the webpage version of <a href="Ch1Sec6Subspaces.html#soln-diff-eqns-sec" class="xref" title="Subsection 1.6.3: Solutions to homogenous linear differential equations">Subsection 1.6.3</a> (Solutions to homogenous linear differential equations), which is new and contains a lot of SageMath examples.</p></article><article class="exercise-like" id="exercise-100"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-577">Show that the set</p>
+<p id="p-610">Show that the set</p>
 <div class="displaymath">
 \begin{equation*}
 V := \{ (a, -a, b, -b) : a, b \in \mathbb{R} \}
 \end{equation*}
 </div>
-<p>is a subspace of \(\mathbb{R}^4\text{.}\)</p></article><article class="exercise-like" id="exercise-93"><h6 class="heading">
+<p>is a subspace of \(\mathbb{R}^4\text{.}\)</p></article><article class="exercise-like" id="exercise-101"><h6 class="heading">
 <span class="codenumber">3</span> </h6>
-<p id="p-578">Consider the set</p>
+<p id="p-611">Consider the set</p>
 <div class="displaymath">
 \begin{equation*}
 V := \{ \mathbf{f} \in \Diff((-1, 1)) : f'(0) = 2 \}
 \end{equation*}
 </div>
-<p id="p-579">Is \(V\) a subspace of \(\Diff((-1,1))\text{?}\) If you think it is, <em class="emphasis">prove</em> that it is. If you think it is not, <em class="emphasis">prove</em> that it is not!</p></article><article class="exercise-like" id="exercise-94"><h6 class="heading">
+<p id="p-612">Is \(V\) a subspace of \(\Diff((-1,1))\text{?}\) If you think it is, <em class="emphasis">prove</em> that it is. If you think it is not, <em class="emphasis">prove</em> that it is not!</p></article><article class="exercise-like" id="exercise-102"><h6 class="heading">
 <span class="codenumber">4</span> </h6>
-<p id="p-580">Is \(\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq 0 \}\) a subspace of \(\mathbb{R}\text{?}\) If you think it is, <em class="emphasis">prove</em> that it is. If you think it is not, <em class="emphasis">prove</em> that it is not!</p></article><article class="exercise-like" id="exercise-95"><h6 class="heading">
+<p id="p-613">Is \(\mathbb{R}^+ := \{ \ve{x} \in \mathbb{R} : \ve{x} \geq 0 \}\) a subspace of \(\mathbb{R}\text{?}\) If you think it is, <em class="emphasis">prove</em> that it is. If you think it is not, <em class="emphasis">prove</em> that it is not!</p></article><article class="exercise-like" id="exercise-103"><h6 class="heading">
 <span class="codenumber">5</span> </h6>
-<p id="p-581">Give an example of a nonempty subset \(V\) of \(\mathbb{R}^2\) which is closed under scalar multiplication, but \(V\) is not a subspace of \(\mathbb{R}^2\text{.}\)</p></article><article class="assemblage-like" id="assemblage-21"><h6 class="heading"><span class="title">2.1 Linear Combinations and Span</span></h6></article><article class="exercise-like" id="exercise-96"><h6 class="heading">
+<p id="p-614">Give an example of a nonempty subset \(V\) of \(\mathbb{R}^2\) which is closed under scalar multiplication, but \(V\) is not a subspace of \(\mathbb{R}^2\text{.}\)</p></article><article class="assemblage-like" id="assemblage-22"><h6 class="heading"><span class="title">2.1 Linear Combinations and Span</span></h6></article><article class="exercise-like" id="exercise-104"><h6 class="heading">
 <span class="codenumber">6</span> </h6>
-<p id="p-582">Can the polynomial \(p = x^3 -x + 2 \in \Poly_3\) be expressed as a linear combination of</p>
+<p id="p-615">Can the polynomial \(p = x^3 -x + 2 \in \Poly_3\) be expressed as a linear combination of</p>
 <div class="displaymath">
 \begin{equation*}
 p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1 \text{ ?}
@@ -183,9 +184,9 @@ p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1 \text{ ?}
 </div>
 <p>Setup the appropriate system of simultaneous linear equations. Then solve these by hand, or using SageMath, as in Example <a knowl="./knowl/poly_example_lin_comb.html" title="Example 2.1.4: Checking if a polynomial is a linear combination of other polynomials">Example 2.1.4</a>.</p>
 <div class="sagecell-sage" id="sage-12"><script type="text/x-sage">
-</script></div></article><article class="exercise-like" id="exercise-97"><h6 class="heading">
+</script></div></article><article class="exercise-like" id="exercise-105"><h6 class="heading">
 <span class="codenumber">7</span> </h6>
-<p id="p-583">Carrying on from the previous question, can the same polynomial \(p = x^3 -x + 2 \in \Poly_3\) be expressed as a linear combination of</p>
+<p id="p-616">Carrying on from the previous question, can the same polynomial \(p = x^3 -x + 2 \in \Poly_3\) be expressed as a linear combination of</p>
 <div class="displaymath">
 \begin{equation*}
 p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x  \text{ ?}
@@ -193,9 +194,9 @@ p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x  \text{ ?}
 </div>
 <p>Setup the appropriate system of simultaneous linear equations. Then solve these by hand, or using SageMath, as in Example <a knowl="./knowl/poly_example_lin_comb.html" title="Example 2.1.4: Checking if a polynomial is a linear combination of other polynomials">Example 2.1.4</a>.</p>
 <div class="sagecell-sage" id="sage-13"><script type="text/x-sage">
-</script></div></article><article class="exercise-like" id="exercise-98"><h6 class="heading">
+</script></div></article><article class="exercise-like" id="exercise-106"><h6 class="heading">
 <span class="codenumber">8</span> </h6>
-<p id="p-584">Show that the polynomials</p>
+<p id="p-617">Show that the polynomials</p>
 <div class="displaymath">
 \begin{equation*}
 p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x 
@@ -203,12 +204,12 @@ p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x
 </div>
 <p>from the previous question span \(\Poly_3\text{.}\)  Setup the appropriate system of simultaneous linear equations. Then solve these by hand, or using SageMath, as in Example <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Example 2.1.8: Checking if a list of vectors space the vector space">Example 2.1.8</a>.</p>
 <div class="sagecell-sage" id="sage-14"><script type="text/x-sage">
-</script></div></article><article class="assemblage-like" id="assemblage-22"><h6 class="heading"><span class="title">2.2 (Linear Independence)</span></h6></article><article class="exercise-like" id="exercise-99"><h6 class="heading">
+</script></div></article><article class="assemblage-like" id="assemblage-23"><h6 class="heading"><span class="title">2.2 (Linear Independence)</span></h6></article><article class="exercise-like" id="exercise-107"><h6 class="heading">
 <span class="codenumber">9</span> </h6>
-<p id="p-585">Read through the webpage version of <a href="Ch2Sec1LinearCombinationSpan.html" class="xref" title="Section 2.1: Linear combinations and span">Section 2.1</a>. I have added some new material, and gave examples of how to use SageMath to solve systems of linear equations.</p></article><article class="exercise-like" id="exercise-span-omission"><h6 class="heading">
+<p id="p-618">Read through the webpage version of <a href="Ch2Sec1LinearCombinationSpan.html" class="xref" title="Section 2.1: Linear combinations and span">Section 2.1</a>. I have added some new material, and gave examples of how to use SageMath to solve systems of linear equations.</p></article><article class="exercise-like" id="exercise-span-omission"><h6 class="heading">
 <span class="codenumber">10</span> </h6>Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that \(w\) is another vector in \(V\text{.}\) Prove that the list of vectors \(\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose\) also spans \(V\text{.}\)</article><div class="exercisegroup" id="exercisegroup-3">
 <div class="introduction" id="introduction-9">
-<p id="p-586">Consider the following list of matrices, thought of as vectors in \(\Mat_{2,2}\text{:}\)</p>
+<p id="p-619">Consider the following list of matrices, thought of as vectors in \(\Mat_{2,2}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v}_1 = \begin{bmatrix}
@@ -235,13 +236,13 @@ p_1 = 1 + x, p_2 = x^3 + x^2 + x - 1, p_3 = x^3 -x^2 + 1, p_4 = 1-x
 </div>
 </div>
 <div class="exercisegroup-exercises">
-<article class="exercise-like" id="exercise-101"><h6 class="heading">
+<article class="exercise-like" id="exercise-109"><h6 class="heading">
 <span class="codenumber">11</span> </h6>
-<p id="p-587">Show that the list is linearly dependent. You are welcome to use SageMath (you will first need to setup the appropriate system of linear equations).</p>
+<p id="p-620">Show that the list is linearly dependent. You are welcome to use SageMath (you will first need to setup the appropriate system of linear equations).</p>
 <div class="sagecell-sage" id="sage-15"><script type="text/x-sage">
-</script></div></article><article class="exercise-like" id="exercise-102"><h6 class="heading">
+</script></div></article><article class="exercise-like" id="exercise-110"><h6 class="heading">
 <span class="codenumber">12</span> </h6>
-<p id="p-588">Go through the same steps as in <a knowl="./knowl/app_of_prop_preceding.html" title="Example 2.2.9">Example 2.2.9</a> to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors. You are welcome to use SageMath at the points in your calculation when you need to solve a system of simultaneous linear equations.</p>
+<p id="p-621">Go through the same steps as in <a knowl="./knowl/app_of_prop_preceding.html" title="Example 2.2.9">Example 2.2.9</a> to find the first vector in the list which is either the zero vector or a linear combination of the preceding vectors. You are welcome to use SageMath at the points in your calculation when you need to solve a system of simultaneous linear equations.</p>
 <div class="sagecell-sage" id="sage-16"><script type="text/x-sage">
 </script></div></article>
 </div>

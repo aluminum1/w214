@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:30+02:00    *-->
+<!--*    on 2019-03-14T17:09:25+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,21 +13,18 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Consider the function \(\ve{f} (x) = \sin^3(x)\text{.}\) Show that \(\ve{f} \in \Trig_3\) by writing it in the form <a knowl="./knowl/formula_for_trig_poly.html" title="Equation 1.6.3">(1.6.3)</a>. Hint: use the identities</p>
+<p>The set</p>
 <div class="displaymath">
-\begin{align*}
-\sin(A) \sin(B) \amp = \frac{1}{2}(\cos(A-B) - \cos(A+B))\\
-\sin(A) \cos(B) \amp = \frac{1}{2}(\sin(A-B) + \sin(A+B))\\
-\cos(A)\cos(B) \amp = \frac{1}{2}(\cos(A-B) + \cos(A+B))
-\end{align*}
+\begin{equation*}
+\Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ continuous}  \}
+\end{equation*}
 </div>
-<p>which follow easily from the addition formulae</p>
-<div class="displaymath">
-\begin{align*}
-\sin(A \pm B) \amp = \sin A \cos B \pm \cos A \sin B\\
-\cos(A \pm B) \amp = \cos A \cos B \mp \sin A \sin B\text{.}
-\end{align*}
-</div>
+<p>of all continuous functions on an interval \(I\) is a subspace of the set \(\Fun(I)\) of <em class="emphasis">all</em> functions on \(I\text{.}\) Let us check that it satisfies the definition. You know from earlier courses that:</p>
+<ul class="disc">
+<li><p>If \(\ve{f}\) and \(\ve{g}\) are continuous functions on \(I\text{,}\) then \(\ve{f} + \ve{g}\) is also a continuous function.</p></li>
+<li><p>The zero function \({0}\) defined by \(\ve{0}(x) = 0\) for all \(x \in I\) is a continuous function.</p></li>
+<li><p>If \(\ve{f}\) is a continuous function, and \(k\) is a scalar, then \(k \smul\ve{f}\) is also continuous.</p></li>
+</ul>
 <span class="incontext"><a href="Ch1Sec6Subspaces.html#p-241">in-context</a></span>
 </body>
 </html>

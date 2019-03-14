@@ -79,6 +79,8 @@
 
 
     <xi:include href="./ACh2FinDimVectorSpaces.ptx" />
+    <xi:include href="./AChTutorials.ptx"/>
+
 <!--
     <xi:include href="./ACh3LinearMaps.ptx" />
 

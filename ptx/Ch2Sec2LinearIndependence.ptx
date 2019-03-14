@@ -549,7 +549,7 @@ To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <
 Consider the vector space of functions on the closed unit interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
   		</p>
   	</statement>
-  	<solution>
+<!--  	<solution>
 <p>
 Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
 <me>
@@ -566,6 +566,7 @@ for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_
 and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
 </p>
   </solution>
+-->
   </exercise>
 
 <exercise>

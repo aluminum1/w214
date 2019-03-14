@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:31+02:00    *-->
+<!--*    on 2019-03-14T17:09:26+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -14,9 +14,34 @@
 <body>
 <div class="solution">
 <h6 class="heading">
-<span class="type">Solution</span> <span class="codenumber">2.1.4.1</span>
+<span class="type">Solution</span> <span class="codenumber">2.1.3.1</span>
 </h6>
-<p>You could choose to show this directly or we could use a clever approach based on \(\mathbf 2 \text{.}\) From \(\mathbf 2  \text{,}\) we know that \(\ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4\) must span \(V \text{.}\) But if these vectors span \(V \text{,}\) then non-zero multiples of the vectors also span \(V\text{.}\) Thus \(\ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 \) must span \(V\text{.}\)</p>
+<ol class="lower-alpha">
+<li>We must set up the appropriate system of linear equations:<div class="displaymath">
+\begin{align*}
+\amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)\\
+\implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 
+\end{align*}
+</div>After grouping like powers of \(x\) we obtain<div class="displaymath">
+\begin{equation*}
+x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
+\end{equation*}
+</div>We equate coefficients on both sides of the equation to obtain the following system of linear equations:<div class="displaymath">
+\begin{gather*}
+3a +  b +  0c +  0d  = 1,\\
+0a +  1b +  1c +  1d  = 0, \\
+-2a + 0b + 1c +  -1d  = 1 .
+\end{gather*}
+</div>Using your preferred method for solving a system of linear equations (such as Gauss reduction), we obtain a solution set of the form:<div class="displaymath">
+\begin{align*}
+\amp d \text{ is free},\\
+\amp  a = 2 + 2d, \\
+\amp  b = -5 - 6d, \\
+\amp  c = 5 + 5d. 
+\end{align*}
+</div>And so \(\ve p (x)\) is indeed a linear combination of \(\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)\text{.}\)</li>
+<li>Since \(d\) is free in the above solution set, we can write \(\ve p (x)\) as a linear combination of \(\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)\) in an uncountably infinite number of ways (one for each real number!).</li>
+</ol>
 </div>
 <span class="incontext"><a href="Ch2Sec1LinearCombinationSpan.html#solution-10">in-context</a></span>
 </body>

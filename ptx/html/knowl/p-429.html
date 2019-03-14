@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:33+02:00    *-->
+<!--*    on 2019-03-14T17:09:27+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,7 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>At each step, the vector that is removed from the list is either the zero vector, or a linear combination of the vectors before it. So if we remove this vector, the resulting list will still span \(V\text{.}\) Thus by the end of the process, the final sifted list of vectors still spans \(V\text{.}\)</p>
+<p>For instance, consider the specific example from <a knowl="./knowl/hyperplanes_example_subspace.html" title="Example 1.6.13: Hyperplanes orthogonal to a fixed vector">Example 1.6.13</a>, namely the plane \(W \subset \mathbb{R}^3\) of vectors orthogonal to \(\ve{v} = (1,2,3)\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation}
+W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.\tag{2.3.25}
+\end{equation}
+</div>
+<p>There is no 'standard' basis for \(W\text{.}\) But, here is one basis (as good as any other):</p>
+<div class="displaymath">
+\begin{equation}
+\ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{1}{2}).\tag{2.3.26}
+\end{equation}
+</div>
+<p>You will show this is indeed a basis for \(W\) in <a knowl="./knowl/prove_basis_for_ex_hyperplane.html" title="Checkpoint 2.3.14">Checkpoint 2.3.14</a> below. I computed these vectors as follows. To obtain \(\ve{a}\text{,}\) I simply set \(w_1 = 1, w_2 = 0\) and then solved for \(w_3\) using Equation <a knowl="./knowl/eqn_for_W_1.html" title="Equation 2.3.25">(2.3.25)</a>. Similarly, for \(\ve{b}\text{,}\) I simply set \(w_1 = 0, w_2 = 1\) and then solved for \(w_3\) using <a knowl="./knowl/eqn_for_W_1.html" title="Equation 2.3.25">(2.3.25)</a>.</p>
 <span class="incontext"><a href="Ch2Sec3BasisDimension.html#p-429">in-context</a></span>
 </body>
 </html>

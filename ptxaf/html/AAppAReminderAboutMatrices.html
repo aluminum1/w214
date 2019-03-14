@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:05:21+02:00    *-->
+<!--*    on 2019-03-14T17:24:12+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -68,8 +68,8 @@ var login_required = false;
 \newcommand{\dotp}{\boldsymbol{\cdot}}
 \newcommand{\smul}{.}
 \newcommand{\furtherexercises}{\section*{Further exercises for \thesection}}
-\newcommand{\bopen}{\left\{}
-\newcommand{\bclose}{\right\}}
+\newcommand{\bopen}{\{\llap{-}}
+\newcommand{\bclose}{\rlap{-}\}}
 \newcommand{\mamp}{&amp;}
 
 
@@ -98,11 +98,11 @@ var login_required = false;
 </div></div>
 <nav id="primary-navbar" class="navbar"><div class="container">
 <div class="navbar-top-buttons">
-<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="ACh2Sec5ChangeOfBasis.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Volgende">Volgende</a></span></div>
+<button class="sidebar-left-toggle-button button active" aria-label="Show or hide table of contents sidebar">Inhoudsopgawe</button><div class="tree-nav toolbar toolbar-divisor-3"><span class="threebuttons"><a id="previousbutton" class="previous-button toolbar-item button" href="Tut3.html" title="Vorige">Vorige</a><a id="upbutton" class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a id="nextbutton" class="next-button button toolbar-item" href="backmatter-1.html" title="Volgende">Volgende</a></span></div>
 <button class="sidebar-right-toggle-button button active">Aantekeninge</button>
 </div>
 <div class="navbar-bottom-buttons toolbar toolbar-divisor-4">
-<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="ACh2Sec5ChangeOfBasis.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Volgende">Volgende</a>
+<button class="sidebar-left-toggle-button button toolbar-item active">Inhoudsopgawe</button><a class="previous-button toolbar-item button" href="Tut3.html" title="Vorige">Vorige</a><a class="up-button button toolbar-item" href="index.html" title="Op">Op</a><a class="next-button button toolbar-item" href="backmatter-1.html" title="Volgende">Volgende</a>
 </div>
 </div></nav></header><div class="page">
 <div id="sidebar-left" class="sidebar" role="navigation"><div class="sidebar-content">
@@ -125,15 +125,22 @@ var login_required = false;
 <li><a href="ACh2Sec4CoordinateVectors.html" data-scroll="ACh2Sec4CoordinateVectors">Koördinaatvektore</a></li>
 <li><a href="ACh2Sec5ChangeOfBasis.html" data-scroll="ACh2Sec5ChangeOfBasis">Basisverandering</a></li>
 </ul>
-<h2 class="link active"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">3</span> <span class="title">Matrikshersiening</span></a></h2>
+<h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">3</span> <span class="title">Tutoriale</span></a></h2>
+<ul>
+<li><a href="Tut1.html" data-scroll="Tut1">Tutoriaal 1</a></li>
+<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
+<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
+<li><a href="Tut3.html" data-scroll="Tut3">Tutoriaal 3</a></li>
+</ul>
+<h2 class="link active"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">4</span> <span class="title">Matrikshersiening</span></a></h2>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
 <h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Geskryf in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="chapter" id="AAppAReminderAboutMatrices"><h1 class="heading">
-<span class="type">Hoofstuk</span> <span class="codenumber">3</span> <span class="title">Matrikshersiening</span>
+<span class="type">Hoofstuk</span> <span class="codenumber">4</span> <span class="title">Matrikshersiening</span>
 </h1>
-<a href="AAppAReminderAboutMatrices.html" class="permalink">¶</a><p id="p-526">Kom ons onthou 'n paar goed oor matrikse en stel vas watter notasie ons gaan gebruik.</p>
-<p id="p-527">'n <em class="emphasis">\(n \times m\)-matriks</em> \(\mat{A}\) is maar net 'n reghoekige skikking van getalle, met \(n\) rye en \(m\) kolomme:</p>
+<a href="AAppAReminderAboutMatrices.html" class="permalink">¶</a><p id="p-613">Kom ons onthou 'n paar goed oor matrikse en stel vas watter notasie ons gaan gebruik.</p>
+<p id="p-614">'n <em class="emphasis">\(n \times m\)-matriks</em> \(\mat{A}\) is maar net 'n reghoekige skikking van getalle, met \(n\) rye en \(m\) kolomme:</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{A} = \left[
@@ -146,13 +153,13 @@ var login_required = false;
 \right]
 \end{equation*}
 </div>
-<article class="assemblage-like" id="assemblage-20"><p id="p-528">Ek sal altyd matrikse in <em class="emphasis">‘sans serif’</em>-lettertipe skryf, bv. \(\mat{A}\text{.}\) Dit is moeilik om in handgeskrewe teks ‘van lettertipe te verander,’ maar ek moedig jou aan om ten minste die letters \(\mat{A}\text{,}\) \(\mat{B}\text{,}\) \(\mat{C}\text{,}\) ens vir matrikse te reserveer, en om \(S\text{,}\) \(T\text{,}\) etc. vir lineêre afbeeldings te gebruik!</p></article><p id="p-529">Twee \(n \times m\) matrikse \(\mat{A}\) en \(\mat{B}\) kan bymekaargetel word, om n' nuwe \(n \times m\) matriks \(\mat{A} + \mat{B}\) te verkry:</p>
+<article class="assemblage-like" id="assemblage-29"><p id="p-615">Ek sal altyd matrikse in <em class="emphasis">‘sans serif’</em>-lettertipe skryf, bv. \(\mat{A}\text{.}\) Dit is moeilik om in handgeskrewe teks ‘van lettertipe te verander,’ maar ek moedig jou aan om ten minste die letters \(\mat{A}\text{,}\) \(\mat{B}\text{,}\) \(\mat{C}\text{,}\) ens vir matrikse te reserveer, en om \(S\text{,}\) \(T\text{,}\) etc. vir lineêre afbeeldings te gebruik!</p></article><p id="p-616">Twee \(n \times m\) matrikse \(\mat{A}\) en \(\mat{B}\) kan bymekaargetel word, om n' nuwe \(n \times m\) matriks \(\mat{A} + \mat{B}\) te verkry:</p>
 <div class="displaymath">
 \begin{equation*}
 (\mat{A} + \mat{B})_{ij} := \mat{A}_{ij} + \mat{B}_{ij}
 \end{equation*}
 </div>
-<p id="p-530">Daar is die <em class="emphasis">nul \(n \times m\)-matriks</em>:</p>
+<p id="p-617">Daar is die <em class="emphasis">nul \(n \times m\)-matriks</em>:</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{0} = \left[ 
@@ -165,19 +172,19 @@ var login_required = false;
 \right]
 \end{equation*}
 </div>
-<p id="p-531">Jy kan ook 'n \(n \times m\)-matriks \(\mat{A}\) met 'n skalaar \(k\) vermenigvuldig, om 'n nuwe \(n \times m\) matriks \(k \mat{A}\) te verkry:</p>
+<p id="p-618">Jy kan ook 'n \(n \times m\)-matriks \(\mat{A}\) met 'n skalaar \(k\) vermenigvuldig, om 'n nuwe \(n \times m\) matriks \(k \mat{A}\) te verkry:</p>
 <div class="displaymath">
 \begin{equation*}
 (k\mat{A})_{ij} := k \mat{A}_{ij}
 \end{equation*}
 </div>
 <article class="theorem-like" id="lemma-9"><h6 class="heading">
-<span class="type">Hulpstelling</span> <span class="codenumber">3.0.1</span>
+<span class="type">Hulpstelling</span> <span class="codenumber">4.0.1</span>
 </h6>
 <ol class="decimal">
-<li id="li-83"><p id="p-532">Saam met hierdie bewerkings is die versameling \(\Mat_{n, m}\) van alle \(n \times m\) matrikse 'n vektorruimte.</p></li>
-<li id="li-84">
-<p id="p-533">Die dimensie van \(\Mat_{nm}\) is \(nm\text{,}\) met die matrikse</p>
+<li id="li-101"><p id="p-619">Saam met hierdie bewerkings is die versameling \(\Mat_{n, m}\) van alle \(n \times m\) matrikse 'n vektorruimte.</p></li>
+<li id="li-102">
+<p id="p-620">Die dimensie van \(\Mat_{nm}\) is \(nm\text{,}\) met die matrikse</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
@@ -185,11 +192,11 @@ var login_required = false;
 </div>
 <p>as basis, elk met 'n \(1\) in die \(i\)de ry en \(j\)de kolom en nulle orals anders.</p>
 </li>
-</ol></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-534">Die bewys word aan die leser as 'n oefening oorgelaat.</p></article></div>
+</ol></article><article class="hiddenproof" id="proof-18"><a knowl="" class="id-ref" refid="hk-proof-18"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-18" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-621">Die bewys word aan die leser as 'n oefening oorgelaat.</p></article></div>
 <article class="example-like" id="example-50"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">3.0.2</span>
+<span class="type">Voorbeeld</span> <span class="codenumber">4.0.2</span>
 </h6>
-<p id="p-535">\(\Mat_{2,2}\) het die basis</p>
+<p id="p-622">\(\Mat_{2,2}\) het die basis</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{E}_{11} = \left[ 
@@ -214,15 +221,15 @@ var login_required = false;
 \end{array}  
 \right]\text{.}
 \end{equation*}
-</div></article><article class="assemblage-like" id="assemblage-21"><p id="p-536">Gewoonlik is \(\mat{A}\) 'n matriks, en is \(\mat{A}_{ij}\) die element van die matriks by posisie \((i,j)\text{.}\) Maar nou is \(\mat{E}_{ij}\) 'n matriks in eie reg! Sy element by posisie \((k,l)\) sal geskryf word as \((\mat{E}_{ij})_{kl}\text{.}\) Ek hoop dit is nie te verwarrend nie. Ons kan 'n elegante formule vir die elemente van \(\mat{E}_{ij}\) skryf met die Kronecker-delta-simbool:</p>
+</div></article><article class="assemblage-like" id="assemblage-30"><p id="p-623">Gewoonlik is \(\mat{A}\) 'n matriks, en is \(\mat{A}_{ij}\) die element van die matriks by posisie \((i,j)\text{.}\) Maar nou is \(\mat{E}_{ij}\) 'n matriks in eie reg! Sy element by posisie \((k,l)\) sal geskryf word as \((\mat{E}_{ij})_{kl}\text{.}\) Ek hoop dit is nie te verwarrend nie. Ons kan 'n elegante formule vir die elemente van \(\mat{E}_{ij}\) skryf met die Kronecker-delta-simbool:</p>
 <div class="displaymath">
 \begin{equation}
-(\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}\label{kronecker_for_matrix_basis}\tag{3.0.1}
+(\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}\label{kronecker_for_matrix_basis}\tag{4.0.1}
 \end{equation}
 </div></article><article class="example-like" id="example-51"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">3.0.3</span>
+<span class="type">Voorbeeld</span> <span class="codenumber">4.0.3</span>
 </h6>
-<p id="p-538">Ons skryf \(\Col_n\) vir die vektorruimte \(\Mat_{n,1}\) van \(n\)-dimensional <em class="emphasis">kolomvektore</em>, en ons sal die standaard basisvektore as \({\mathbf \mat{E}}_{i1}\) van \(\Col_n\) skryf, of nog eenvoudiger as \(\col{e}_i\text{:}\)</p>
+<p id="p-625">Ons skryf \(\Col_n\) vir die vektorruimte \(\Mat_{n,1}\) van \(n\)-dimensional <em class="emphasis">kolomvektore</em>, en ons sal die standaard basisvektore as \({\mathbf \mat{E}}_{i1}\) van \(\Col_n\) skryf, of nog eenvoudiger as \(\col{e}_i\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \col{e}_1 := \left[ 
@@ -249,9 +256,9 @@ var login_required = false;
 \right] \text{.}
 \end{equation*}
 </div>
-<p id="p-539">Vektore in \(\Col_n\) sal in <em class="emphasis"><em class="emphasis">vetdruk, sans-serif</em></em> geskryf word, bv. \(\col{v} \in \Col_n\text{.}\)</p></article><p id="p-540">\subsection{Matriksvermenigvuldiging}</p>
-<p id="p-541">Toegerus met hierdie bewerkings, vorm die versameling \(\Mat_{n, m}\) van alle \(n \times m\) matrikse 'n vektorruimte (sien <a knowl="./knowl/matrices_example_vec_space.html" title="Voorbeeld 1.4.14: Matrikse">Voorbeeld 1.4.14</a>), met dimensie\(nm\) UNCOMMENT! Ons skryf \(\Col_n\) vir die vektorruimte \(\Mat_{n,1}\) van \(n\)-dimensionele <em class="emphasis">kolomvektore</em>.</p>
-<p id="p-542">Die belangrikste bewerking is <em class="emphasis">matriksvermenigvuldiging</em>. 'n \(n \times
+<p id="p-626">Vektore in \(\Col_n\) sal in <em class="emphasis"><em class="emphasis">vetdruk, sans-serif</em></em> geskryf word, bv. \(\col{v} \in \Col_n\text{.}\)</p></article><p id="p-627">\subsection{Matriksvermenigvuldiging}</p>
+<p id="p-628">Toegerus met hierdie bewerkings, vorm die versameling \(\Mat_{n, m}\) van alle \(n \times m\) matrikse 'n vektorruimte (sien <a knowl="./knowl/matrices_example_vec_space.html" title="Voorbeeld 1.4.14: Matrikse">Voorbeeld 1.4.14</a>), met dimensie\(nm\) UNCOMMENT! Ons skryf \(\Col_n\) vir die vektorruimte \(\Mat_{n,1}\) van \(n\)-dimensionele <em class="emphasis">kolomvektore</em>.</p>
+<p id="p-629">Die belangrikste bewerking is <em class="emphasis">matriksvermenigvuldiging</em>. 'n \(n \times
 k\)-matriks \(\mat{A}\) kan van regs met 'n \(k \times m\)-matriks \(\mat{B}\) vermenigvuldig word om 'n \(n \times m\)-matriks \(\mat{AB}\) te kry,</p>
 <div class="displaymath">
 \begin{align*}
@@ -266,18 +273,18 @@ k\)-matriks \(\mat{A}\) kan van regs met 'n \(k \times m\)-matriks \(\mat{B}\) v
 </div>
 <p>te definieer.</p>
 <article class="theorem-like" id="props_of_matrix_ops"><h6 class="heading">
-<span class="type">Stelling</span> <span class="codenumber">3.0.4</span>
+<span class="type">Stelling</span> <span class="codenumber">4.0.4</span>
 </h6>
-<p id="p-543">Die bostaande bewerkings op matrikse bevredig die volgende reëls presies wanneer die somme en produkte goed-gedefinieer is:</p>
+<p id="p-630">Die bostaande bewerkings op matrikse bevredig die volgende reëls presies wanneer die somme en produkte goed-gedefinieer is:</p>
 <ol class="decimal">
-<li id="li-85"><p id="p-544">\((\mat{A} + \mat{B}) \mat{C} = \mat{A} \mat{C} + \mat{B}
+<li id="li-103"><p id="p-631">\((\mat{A} + \mat{B}) \mat{C} = \mat{A} \mat{C} + \mat{B}
 \mat{C}\)</p></li>
-<li id="li-86"><p id="p-545">\(\mat{A} (\mat{B} + \mat{C}) = \mat{A} \mat{B} + \mat{A}
+<li id="li-104"><p id="p-632">\(\mat{A} (\mat{B} + \mat{C}) = \mat{A} \mat{B} + \mat{A}
 \mat{C}\)</p></li>
-<li id="li-87"><p id="p-546">\((k \mat{A}) \mat{B} = \mat{A} (k \mat{B}) = k (\mat{A}
+<li id="li-105"><p id="p-633">\((k \mat{A}) \mat{B} = \mat{A} (k \mat{B}) = k (\mat{A}
 \mat{B})\)</p></li>
-<li id="li-88"><p id="p-547">\((\mat{A} \mat{B}) \mat{C} = \mat{A} (\mat{B} \mat{C})\)</p></li>
-</ol></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-548">Die bewyse van (1) - (3) is roetinewerk wat jy hopelik voorheen al gedoen het. Kom ons bewys (4), om te oefen om \(\Sigma\)-notasie te gebruik! Veronderstel \(\mat{A}\text{,}\) \(\mat{B}\) en \(\mat{C}\) het groottes \(n \times k\text{,}\) \(k \times r\) en \(r \times m\) onderskeidelik, sodat die matriksprodukte sinmaak. Dan:</p>
+<li id="li-106"><p id="p-634">\((\mat{A} \mat{B}) \mat{C} = \mat{A} (\mat{B} \mat{C})\)</p></li>
+</ol></article><article class="hiddenproof" id="proof-19"><a knowl="" class="id-ref" refid="hk-proof-19"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-19" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-635">Die bewyse van (1) - (3) is roetinewerk wat jy hopelik voorheen al gedoen het. Kom ons bewys (4), om te oefen om \(\Sigma\)-notasie te gebruik! Veronderstel \(\mat{A}\text{,}\) \(\mat{B}\) en \(\mat{C}\) het groottes \(n \times k\text{,}\) \(k \times r\) en \(r \times m\) onderskeidelik, sodat die matriksprodukte sinmaak. Dan:</p>
 <div class="displaymath">
 \begin{align*}
 ((\mat{A}\mat{B})\mat{C})_{ij} \amp = \sum_{p=1}^r (\mat{A}
@@ -291,7 +298,7 @@ k\)-matriks \(\mat{A}\) kan van regs met 'n \(k \times m\)-matriks \(\mat{B}\) v
 \amp = (\mat{A} (\mat{B} \mat{C}))_{ij}\text{.}
 \end{align*}
 </div></article></div>
-<article class="assemblage-like" id="assemblage-22"><p id="p-549">Ek hoop nie die \(\Sigma\)-notasie in die bostaande bewys is te verwarrend nie! Kom ek skryf presies dieselfde bewys uit <em class="emphasis">sonder</em> \(\Sigma\)-notasie, in die eenvoudige geval waar \(\mat{A}\text{,}\) \(\mat{B}\) en \(\mat{C}\) almal \(2 \times 2\)-matrikse is en ons wil die inskrywing by posisie \(11\) uitwerk.</p>
+<article class="assemblage-like" id="assemblage-31"><p id="p-636">Ek hoop nie die \(\Sigma\)-notasie in die bostaande bewys is te verwarrend nie! Kom ek skryf presies dieselfde bewys uit <em class="emphasis">sonder</em> \(\Sigma\)-notasie, in die eenvoudige geval waar \(\mat{A}\text{,}\) \(\mat{B}\) en \(\mat{C}\) almal \(2 \times 2\)-matrikse is en ons wil die inskrywing by posisie \(11\) uitwerk.</p>
 <div class="displaymath">
 \begin{align*}
 ((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11}
@@ -310,7 +317,7 @@ k\)-matriks \(\mat{A}\) kan van regs met 'n \(k \times m\)-matriks \(\mat{B}\) v
 \amp = (\mat{A} (\mat{B} \mat{C}))_{11}\text{.}
 \end{align*}
 </div>
-<p id="p-550">Verstaan jy nou die \(\Sigma\)-notasie-bewys? Die kritieke stap (om van die tweede tot die vierde lyn te vorder) word <em class="emphasis">omruil van die sommeringsvolgorde</em> genoem.</p></article><p id="p-551">Die <em class="emphasis">transponering</em> van 'n \(n \times m\)-matriks \(\mat{A}\) is die \(m
+<p id="p-637">Verstaan jy nou die \(\Sigma\)-notasie-bewys? Die kritieke stap (om van die tweede tot die vierde lyn te vorder) word <em class="emphasis">omruil van die sommeringsvolgorde</em> genoem.</p></article><p id="p-638">Die <em class="emphasis">transponering</em> van 'n \(n \times m\)-matriks \(\mat{A}\) is die \(m
 \times n\)-matriks \(\mat{A}^T\) waarvan die inskrywings gegee word deur</p>
 <div class="displaymath">
 \begin{equation*}

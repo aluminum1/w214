@@ -70,6 +70,10 @@
       So R1 to R8 are satisfied.
     </p>
   </proof>
+</subsection>
+
+<subsection>
+  <title>Examples of subspaces</title>
 
   <example>
     <title>Line in <m>\mathbb{R}^2</m></title>
@@ -128,7 +132,7 @@
       </statement>
     </exercise>
 
-  <example>
+  <example xml:id="lines_planes_R3">
     <title>Lines and planes in <m>\mathbb{R}^3</m></title>
     <statement>
       <p>
@@ -231,10 +235,75 @@
       </p>
     </statement>
   </example>
-</subsection>
 
-<subsection>
-  <title>More examples of subspaces</title>
+  <example xml:id="hyperplanes_example_subspace">
+    <title>Hyperplanes orthogonal to a fixed vector</title>
+    <statement><p>This example generalizes <xref ref="lines_planes_R3"/> to higher dimensions. Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. The <em>hyperplane orthogonal to <m>\ve{v}</m></em> is the set <m>W</m> of all vectors orthogonal to <m>\ve{v}</m>, that is,
+    <men>
+    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+    </men>
+    You will prove in Exercise <xref ref="prove_hyperplane_subspace"/> that <m>W</m> is a subspace of <m>\mathbb{R}^n</m>.  </p>
+
+    <p>For example, consider the vector <m>\ve{v} = (1,2,3) \in \mathbb{R}^3</m>. Then the hyperplane orthogonal to <m>\ve{v}</m> is
+    <men>
+      W = \{ \ve{w} \in \mathbb{R}^3 : \ve{v} \dotp \ve{w} = 0 \}.
+  </men>
+    If we write <m>\ve{w} = (w_1, w_2, w_3)</m> then <m>\ve{v} \dotp \ve{w} = 0</m> translates into the equation
+    <men xml:id="explicit_eqn_hyperplane1">
+      w_1 + 2 w_2 + 3w_3 = 0.
+    </men>
+    So, <m>W</m> can be regarded as the set of vectors in <m>\mathbb{R}^3</m> whose components satisfy <xref ref="explicit_eqn_hyperplane1"/>.</p> 
+</statement>
+</example>
+
+    <exercise xml:id="prove_hyperplane_subspace">
+      <statement>
+    Let <m>\ve{v} \in \mathbb{R}^n </m> be a fixed nonzero vector. Show that 
+        <me>
+    W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0\}.
+    </me>
+    is a subspace of <m>\mathbb{R}^n</m>.
+    </statement>
+    <solution>
+    <paragraphs>
+      <title>Closed under addition.</title>
+      <p> Suppose <m>\ve{w}, \ve{w}' \in W</m>. </p>
+      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m> and <m>\ve{v} \dotp \ve{w}' = 0 </m>.  </p>
+      <p> We must show that <m>\ve{w} + \ve{w}' \in W</m>. </p>
+      <p> That is, we must show that <m> \ve{v} \dotp (\ve{w} + \ve{w}') = 0 </m>. </p>
+      <p> Indeed, 
+        <md>
+      <mrow> \ve{v} \dotp (\ve{w} + \ve{w}) \amp = \ve{v} \dotp \ve{w} + \ve{v} \dotp \ve{w}' </mrow>
+      <mrow> \amp = 0 + 0 </mrow>
+      <mrow> \amp = 0. </mrow>
+      </md>
+      </p>
+    </paragraphs>
+
+    <paragraphs>
+      <title>Contains the zero vector.</title>
+      <p> Since <m>\ve{v} \dotp \ve{0} = 0</m>, we conclude that <m>\ve{0} \in W</m>.
+      </p>
+    </paragraphs>
+
+    <paragraphs>
+      <title>Closed under scalar multiplication.</title>
+      <p> Suppose <m>\ve{w} \in W</m> and <m>k</m> is a scalar. </p>
+      <p> That is, <m>\ve{v} \dotp \ve{w} = 0 </m>.  </p>
+      <p> We must show that <m>k \smul \ve{w}  \in W</m>. </p>
+      <p> That is, we must show that <m> \ve{v} \dotp (k \smul \ve{w}) = 0 </m>. </p>
+      <p> Indeed, 
+        <md>
+      <mrow> \ve{v} \dotp (k \smul \ve{w}) \amp = k \smul (\ve{v} \dotp \ve{w}) </mrow>
+      <mrow> \amp = (k)(0) </mrow>
+      <mrow> \amp = 0. </mrow>
+      </md>
+      </p>
+    </paragraphs>
+  </solution>
+  
+  </exercise>
+  
 
   <example>
     <title>Continuous functions as a subspace</title>
@@ -339,6 +408,65 @@
         </p>
       </statement>
     </exercise>
+
+
+  <example>
+    <title>Polynomials in many variables</title>
+    <statement>
+    <p>
+      A <em>monomial</em> in two variables <m>x</m> and <m>y</m> is an expression of the form <m>x^m y^n</m> for some nonnegative integers <m>m,n</m>. The <em>total degree</em> of the monomial is <m>m+n</m>.For example,
+      <me>
+             x^3 y^2, xy^7, \quad \mbox{and } x^3
+    </me>
+    are monomials in the variables <m>x</m> and <m>y</m> of total degree
+    <me>
+    5, 8, \quad \mbox{and } 3
+  </me>
+  respectively. A <em>polynomial in two variables</em> is a linear combination of monomials. The <em>degree</em> of the polynomial is the highest total degree of the monomials occuring in the linear combination. For instance, 
+      <men xml:id="two_var_poly_ex">
+             p = 5x^3 y^2 - 3xy^7, \quad q = xy^2 -x^3 + 3y^2
+    </men>
+  are polynomials in two variables with total degree <m>8</m> and <m>3</m> respectively.</p>
+
+   <p>   We write <m>\Poly^2</m> for the set of <em>all</em> polynomials in two variables, and <m>\Poly^2_n</m> for the set of all two-variable polynomials of total degree less than or equal to <m>n</m>. For instance, consier the polynomial 
+   <me>
+   p = 5x^3 y^2 - 3xy^7
+   </me>
+   The total degree of <m>p</m> is 8. So:
+   <ul>
+    <li> <m>p \in \Poly^2</m>, </li>
+    <li> <m>p \in \Poly^2_8</m> </li>
+    <li> <m>p \in \Poly^2_12</m> </li>
+    <li> <m>p \ni \Poly_2_7</m> </li>
+  </ul>
+    </p>
+  <p> We can regard a polynomial <m>p</m> in two variables as a special kind of function
+    <me>
+   p : \mathbb{R}^2 \rightarrow \mathbb{R}.
+  </me>
+In this way, we can regard <m>\Poly_2</m> (and similarly <m>\Poly^2_n</m>) as a subset of the vector space <m>\Fun(\mathbb{R}^2)</m> of <em>all</em> functions on <m>\mathbb{R}^2</m>. Indeed, they are <em>subspaces</em>, as the reader will check. </p>
+
+<p>Two polynomials <m>p</m> and <m>q</m> in variables <m>x</m> and <m>y</m> are defined to be <em>equal</em> if and only if all their corresponding coefficients are equal. This is equivalent to the statement that <m>p(x,y)=q(x,y)</m> for all <m>(x,y) \in \mathbb{R}^2</m>. </p>
+
+<p>In the same way, we can talk about 3-variable polynomials, and so on, eg.
+ <me>
+   r = 5x^3y^2z + 3xy - 4xz^3
+</me>
+is a polynomial of total degree <m>6</m> in the variables <m>x,y,z</m>. We can regard a polynomial in <m>k</m> variables as a special kind of function
+ <me>
+   r : \mathbb{R}^k \rightarrow \mathbb{R}.
+</me>
+We write <m>\Poly^k</m> for the vector space of all <m>k</m>-variable polynomials. We can regard <m>\Poly^k</m> as a subspace of the vector space <m>\Fun(\mathbb{R}^k)</m> of <em>all</em> functions on <m>\mathbb{R}^k</m>. Similary, we write <m>\Poly^k_n</m> for the vector space of all <m>k</m>-variable polynomials of total degree less than or equal to <m>n</m>, and we regard it too as a subspace of <m>\Fun(\mathbb{R}^n)</m>. </p> 
+    </statement>
+  </example>
+
+  <assemblage>
+    <p>When we say simply '<m>p</m> is a polynomial' we will mean that <m>p</m> is a polynomial in a single variable, i.e. <m>p \in \Poly</m>. Note that <m>\Poly = \Poly^1</m> and that <m>\Poly_n = \Poly^1_n</m>.</p>
+  </assemblage>
+
+
+
+
 
   <example xml:id="trig_poly_example">
     <title>Trigonometric polynomials</title>
@@ -725,7 +853,7 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
   In the exercises below, <m>V,U,W</m> will be as above.
 </p>
 </introduction>
-<exercise>
+<exercise xml:id="sum_of_subspaces_is_subspace">
     <statement>
       <p>
       Show that <m>U + V</m> is a subspace of <m>V</m>.

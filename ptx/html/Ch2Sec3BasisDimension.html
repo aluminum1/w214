@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:27+02:00    *-->
+<!--*    on 2019-03-14T17:09:22+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -138,31 +138,41 @@ var login_required = false;
 <li><a href="Tut1.html" data-scroll="Tut1">Tutorial 1</a></li>
 <li><a href="Tut2.html" data-scroll="Tut2">Tutorial 2</a></li>
 <li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
+<li><a href="Tut3.html" data-scroll="Tut3">Tutorial 3</a></li>
 </ul>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Back Matter</span></a></h2>
 <h2 class="link"><a href="AppAReminderAboutMatrices.html" data-scroll="AppAReminderAboutMatrices"><span class="codenumber">A</span> <span class="title">Reminder about matrices</span></a></h2>
-<ul><li><a href="exercises-13.html" data-scroll="exercises-13">Exercises</a></li></ul>
+<ul><li><a href="exercises-14.html" data-scroll="exercises-14">Exercises</a></li></ul>
 <h2 class="link"><a href="references-1.html" data-scroll="references-1"><span class="title">Bibliography</span></a></h2></nav><div class="extras"><nav><a class="mathbook-link" href="https://pretextbook.org">Authored in PreTeXt</a><a href="https://www.mathjax.org"><img title="Powered by MathJax" src="https://www.mathjax.org/badge/badge.gif" alt="Powered by MathJax"></a></nav></div>
 </div></div>
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="Ch2Sec3BasisDimension"><h2 class="heading hide-type">
 <span class="type">Section</span> <span class="codenumber">2.3</span> <span class="title">Basis and dimension</span>
 </h2>
-<a href="Ch2Sec3BasisDimension.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><article class="definition-like" id="defn_of_basis"><h6 class="heading">
+<a href="Ch2Sec3BasisDimension.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-394">In this section we introduce the notions of:</p>
+<ul class="disc">
+<li id="li-69">a <em class="emphasis">basis</em> of a vector space</li>
+<li id="li-70">the <em class="emphasis">dimension</em> of a vector space.</li>
+</ul>
+<p>Then we compute the dimensions of the vector spaces we have introduced up to now. We end by explaining the <em class="emphasis">sifting algorithm</em> which allows us to prove some useful results concerning bases and dimension.</p>
+<article class="definition-like" id="defn_of_basis"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.3.1</span>
 </h6>
-<p id="p-373">A list of vectors \(\basis{B} = \bopen \ve{e}_1,
+<p id="p-395">A list of vectors \(\basis{B} = \bopen \ve{e}_1,
 \ve{e}_2,\ldots,
 \ve{e}_n\bclose\) in a vector space \(V\) is called a <dfn class="terminology">basis</dfn> for \(V\) if it is linearly independent and spans \(V\text{.}\)</p></article><article class="theorem-like" id="inv_dim"><h6 class="heading">
 <span class="type">Theorem</span> <span class="codenumber">2.3.2</span> <span class="title">Invariance of dimension</span>
 </h6>
-<p id="p-374">If \(\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_m \right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ve{c}_2, \ldots, \ve{c}_n\right\}\) are bases of a vector space \(V\text{,}\) then \(m=n\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-375">This is a consequence of <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a> (the Bumping Off Proposition). Since the \(\ve{b}\)-vectors are linearly independent and the \(\ve{c}\)-vectors span \(V\text{,}\) we have \(m \leq n\text{.}\) On the other hand, since the \(\ve{c}\)-vectors are linearly independent and the \(\ve{b}\)-vectors span \(V\text{,}\) we have \(n \leq m\text{.}\) Hence \(m=n\text{.}\)</p></article></div>
+<p id="p-396">If \(\basis{B} = \left\{ \ve{b}_1, \ve{b}_2, \ldots, \ve{b}_m \right\}\) and \(\basis{C} = \left\{ \ve{c}_1, \ve{c}_2, \ldots, \ve{c}_n\right\}\) are bases of a vector space \(V\text{,}\) then \(m=n\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-397">This is a consequence of <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a> (the Bumping Off Proposition). Since the \(\ve{b}\)-vectors are linearly independent and the \(\ve{c}\)-vectors span \(V\text{,}\) we have \(m \leq n\text{.}\) On the other hand, since the \(\ve{c}\)-vectors are linearly independent and the \(\ve{b}\)-vectors span \(V\text{,}\) we have \(n \leq m\text{.}\) Hence \(m=n\text{.}\)</p></article></div>
 <article class="definition-like" id="dim_vec_space"><h6 class="heading">
 <span class="type">Definition</span> <span class="codenumber">2.3.3</span>
 </h6>
-<p id="p-376">A vector space \(V\) is <dfn class="terminology">finite-dimensional</dfn> if there exists a basis \(\basis{B}\) for \(V\text{.}\) In that case, the <dfn class="terminology">dimension</dfn> of \(V\) is the number of vectors in the basis \(\basis{B}\text{.}\) A vector space is <dfn class="terminology">infinte-dimensional</dfn> if it is not finite-dimensional.</p></article><article class="assemblage-like" id="assemblage-12"><p id="p-377">Note that the concept of ‘dimension of a vector space’ is only well-defined because of <a knowl="./knowl/inv_dim.html" title="Theorem 2.3.2: Invariance of dimension">Theorem 2.3.2</a>.</p></article><article class="assemblage-like" id="defn_dim_zero_vec_space"><p id="p-378">The case of the zero vector space \(Z = \{\ve{0}\}\) is not explicitly handled in <a knowl="./knowl/dim_vec_space.html" title="Definition 2.3.3">Definition 2.3.3</a> and we treat it as a special case. Namely, we <em class="emphasis">define</em> the dimension of the zero vector space \(Z\) to be \(0\text{.}\) So, by definition, \(Z\) is finite-dimensional, and its dimension equals \(0\text{.}\)</p></article><article class="example-like" id="standard_basis_R_n_ex"><h6 class="heading">
+<p id="p-398">A vector space \(V\) is <dfn class="terminology">finite-dimensional</dfn> if there exists a basis \(\basis{B}\) for \(V\text{.}\) In that case, the <dfn class="terminology">dimension</dfn> of \(V\) is the number of vectors in the basis \(\basis{B}\text{.}\) A vector space is <dfn class="terminology">infinte-dimensional</dfn> if it is not finite-dimensional.</p></article><article class="assemblage-like" id="assemblage-13"><p id="p-399">Note that the concept of ‘dimension of a vector space’ is only well-defined because of <a knowl="./knowl/inv_dim.html" title="Theorem 2.3.2: Invariance of dimension">Theorem 2.3.2</a>.</p></article><article class="assemblage-like" id="defn_dim_zero_vec_space"><p id="p-400">The case of the zero vector space \(Z = \{\ve{0}\}\) is not explicitly handled in <a knowl="./knowl/dim_vec_space.html" title="Definition 2.3.3">Definition 2.3.3</a> and we treat it as a special case. Namely, we <em class="emphasis">define</em> the dimension of the zero vector space \(Z\) to be \(0\text{.}\) So, by definition, \(Z\) is finite-dimensional, and its dimension equals \(0\text{.}\)</p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Dimensions of some familiar vector spaces</span>
+</h3>
+<article class="example-like" id="standard_basis_R_n_ex"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.3.4</span> <span class="title">Standard basis for \(\mathbb{R}^n\)</span>
 </h6>
-<p id="p-379">The list of vectors</p>
+<p id="p-401">The list of vectors</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots, 0), \,\,\, \ldots, \,\,\, \ve{e}_n := (0, 0, \ldots, 0, 1)
@@ -174,23 +184,23 @@ var login_required = false;
 a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}\text{.}
 \end{equation*}
 </div>
-<p id="p-380">Expanding out the left hand side in components using the definition of the standard basis vectors \(\ve{e}_i\text{,}\) this becomes the equation</p>
+<p id="p-402">Expanding out the left hand side in components using the definition of the standard basis vectors \(\ve{e}_i\text{,}\) this becomes the equation</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1, 0, 0, \ldots, 0) + (0, a_2, 0, \ldots, 0) + \cdots + (0, 0, 0,
 \ldots, a_n) = (0, 0, 0, \ldots, 0)\text{.}
 \end{equation*}
 </div>
-<p id="p-381">In other words, we have</p>
+<p id="p-403">In other words, we have</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1, a_2, a_3, \ldots, a_n) = (0, 0, 0, \ldots, 0)
 \end{equation*}
 </div>
-<p>which says precisely that \(a_1 = a_2 = a_3 = \cdots = a_n = 0\text{,}\) which is what we needed to prove. Thus the list of vectors \(\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n\) is linearly independent, and is hence a basis for \(\mathbb{R}^n\text{.}\) So \(\mathbb{R}^n\) has dimension \(n\text{.}\)</p></article><article class="example-like" id="example-35"><h6 class="heading">
+<p>which says precisely that \(a_1 = a_2 = a_3 = \cdots = a_n = 0\text{,}\) which is what we needed to prove. Thus the list of vectors \(\ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n\) is linearly independent, and is hence a basis for \(\mathbb{R}^n\text{.}\) So \(\mathbb{R}^n\) has dimension \(n\text{.}\)</p></article><article class="example-like" id="example-37"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.3.5</span> <span class="title">A basis for \(\mathbb{R}^4\)</span>
 </h6>
-<p id="p-382">Check whether the following list of vectors</p>
+<p id="p-404">Check whether the following list of vectors</p>
 <div class="displaymath">
 \begin{equation}
 \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)\tag{2.3.1}
@@ -198,8 +208,8 @@ a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}\text{.}
 </div>
 <p>is a basis for \(\mathbb{R}^4\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-19" id="solution-19"><span class="type">Solution</span></a><div id="hk-solution-19" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-383">First we check if the list of vectors is <a knowl="./knowl/defn_of_linear_ind.html" title="Definition 2.2.1">linearly independent</a>. Consider the equation</p>
+<a knowl="" class="id-ref" refid="hk-solution-20" id="solution-20"><span class="type">Solution</span></a><div id="hk-solution-20" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-405">First we check if the list of vectors is <a knowl="./knowl/defn_of_linear_ind.html" title="Definition 2.2.1">linearly independent</a>. Consider the equation</p>
 <div class="displaymath">
 \begin{align}
 a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} \tag{2.3.2}\\
@@ -225,8 +235,8 @@ solve([a1 - a2 + a4 == 0,
       -3*a1 + 2*a2 - a3 + 4*a4 == 0],
       [a1, a2, a3, a4])
 </script></div>
-<p id="p-384">SageMath outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-385"><code class="code-inline tex2jax_ignore"> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </code></p></div></div></div> So indeed,  equations <a knowl="./knowl/R4-example-eqn1.html" title="Equation 2.3.5">(2.3.5)–(2.3.8)</a>  have only the trivial solution. Therefore the list of vectors is linearly independent.</p>
-<p id="p-386">Next, we need to check that the list of vectors spans \(\mathbb{R}^4\text{.}\) (There is a shorter way of doing this, using <a knowl="./knowl/lin-ind-implies-basis.html" title="Corollary 2.3.19">Corollary 2.3.19</a> below, but for now we prove it from first principles.) So, let \(\ve{w} = (w_1, w_2, w_3, w_4)\) be an arbitrary vector in \(\mathbb{R}^4\text{.}\) We need to show that there exists at least one way to express \(\ve{w}\) as a linear combination of the vectors \(\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4\text{.}\) In other words, we need to check if there exists at least one solution to the following equation:</p>
+<p id="p-406">SageMath outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-407"><code class="code-inline tex2jax_ignore"> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </code></p></div></div></div> So indeed,  equations <a knowl="./knowl/R4-example-eqn1.html" title="Equation 2.3.5">(2.3.5)–(2.3.8)</a>  have only the trivial solution. Therefore the list of vectors is linearly independent.</p>
+<p id="p-408">Next, we need to check that the list of vectors spans \(\mathbb{R}^4\text{.}\) (There is a shorter way of doing this, using <a knowl="./knowl/lin-ind-implies-basis.html" title="Corollary 2.3.23">Corollary 2.3.23</a> below, but for now we prove it from first principles.) So, let \(\ve{w} = (w_1, w_2, w_3, w_4)\) be an arbitrary vector in \(\mathbb{R}^4\text{.}\) We need to show that there exists at least one way to express \(\ve{w}\) as a linear combination of the vectors \(\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4\text{.}\) In other words, we need to check if there exists at least one solution to the following equation:</p>
 <div class="displaymath">
 \begin{align}
 a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} \label{fund_eqn_span_r4_ex}\tag{2.3.9}\\
@@ -252,9 +262,9 @@ solve([a1 - a2 + a4 == w1,
       -3*a1 + 2*a2 - a3 + 4*a4 == w4],
       [a1, a2, a3, a4])
 </script></div>
-<p id="p-387">Note that we ask SageMath to solve for <code class="code-inline tex2jax_ignore">a1, a2, a3, a4</code>, since <code class="code-inline tex2jax_ignore">w1, w2, w3, w4</code> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-388"><code class="code-inline tex2jax_ignore"> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </code></p></div></div></div>
-<p id="p-389">In other words, there does indeed exist a solution, no matter what \((w_1, w_2, w_3, w_4)\) is. For instance, if \((w_1, w_2, w_3, w_4) = (3, 1, 2, 4) \text{,}\) then the solution is</p>
+<p id="p-409">Note that we ask SageMath to solve for <code class="code-inline tex2jax_ignore">a1, a2, a3, a4</code>, since <code class="code-inline tex2jax_ignore">w1, w2, w3, w4</code> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-410"><code class="code-inline tex2jax_ignore"> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </code></p></div></div></div>
+<p id="p-411">In other words, there does indeed exist a solution, no matter what \((w_1, w_2, w_3, w_4)\) is. For instance, if \((w_1, w_2, w_3, w_4) = (3, 1, 2, 4) \text{,}\) then the solution is</p>
 <div class="displaymath">
 \begin{equation*}
 a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
@@ -267,12 +277,12 @@ a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{
 \end{equation*}
 </div>
 <p>Since there exists a solution to equation <a knowl="./knowl/fund_eqn_span_r4_ex.html" title="Equation 2.3.9">(2.3.9)</a> for each vector \(\ve{w} \in \mathbb{R}^4\text{,}\) we conclude that \(\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose\) spans \(\mathbb{R}^4\text{.}\)</p>
-<p id="p-390">Hence \(\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose\)  is a basis for \(\mathbb{R}^4\text{,}\) since it is linearly independent and spans \(\mathbb{R}^4\text{.}\)</p>
+<p id="p-412">Hence \(\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose\)  is a basis for \(\mathbb{R}^4\text{,}\) since it is linearly independent and spans \(\mathbb{R}^4\text{.}\)</p>
 </div></div>
-</div></article><article class="example-like" id="example-36"><h6 class="heading">
+</div></article><article class="example-like" id="example-38"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.3.6</span>
 </h6>
-<p id="p-391">The list of polynomials</p>
+<p id="p-413">The list of polynomials</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
@@ -284,13 +294,13 @@ a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{
 a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}\text{.}
 \end{equation*}
 </div>
-<p id="p-392"><em class="emphasis">This is an equation between functions, so it holds for all \(x \in \mathbb{R}\text{!}\)</em> In other words, for all \(x \in \mathbb{R}\text{,}\) the following equation holds:</p>
+<p id="p-414"><em class="emphasis">This is an equation between functions, so it holds for all \(x \in \mathbb{R}\text{!}\)</em> In other words, for all \(x \in \mathbb{R}\text{,}\) the following equation holds:</p>
 <div class="displaymath">
 \begin{equation}
 a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\label{root_of_poly}\tag{2.3.16}
 \end{equation}
 </div>
-<p id="p-393">Think about this carefully. Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> represents an <em class="emphasis">infinite</em> family of equations for the unknowns \(a_0, a_1, \ldots, a_n\text{.}\) There is one equation for each value of \(x \in \mathbb{R}\text{.}\) For example:</p>
+<p id="p-415">Think about this carefully. Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> represents an <em class="emphasis">infinite</em> family of equations for the unknowns \(a_0, a_1, \ldots, a_n\text{.}\) There is one equation for each value of \(x \in \mathbb{R}\text{.}\) For example:</p>
 <div class="displaymath">
 \begin{align}
 (x=1) \amp \amp a_0 + a_1 + a_2 + \cdots + a_n \amp = 0 \label{poly-example-first-eqn}\tag{2.3.17}\\
@@ -300,51 +310,54 @@ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\label{root_of_poly}\tag{2.3.16}
 \amp \amp \vdots \label{poly-example-last-eqn}\tag{2.3.21}
 \end{align}
 </div>
-<p id="p-394">Suppose we find values for \(a_0, a_1, a_2, \ldots, a_n \) which solve <em class="emphasis">all</em> these infinitely many equations <a knowl="./knowl/poly-example-first-eqn.html" title="Equation 2.3.17">(2.3.17)–(2.3.21)</a>. We can now change our point of view. Namely, substitute these fixed values for \(a_0, a_1, \ldots, a_n\) into Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> and regard Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> as an equation for the unknown \(x\) (the coefficients \(a_0, a_1, \ldots, a_n\) are now <em class="emphasis">fixed</em>.) We conclude that <em class="emphasis">every \(x \in \mathbb{R}\)</em> is a root of this polynomial equation!</p>
-<p id="p-395">But, we know from algebra that a polynomial equation of the form <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> with nonzero coefficients has <em class="emphasis">at most</em> \(n\) roots \(x_1, x_2, \ldots, x_n\text{.}\) So, in order for <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> to hold for <em class="emphasis">all</em> real numbers \(x\text{,}\) the coefficients must be zero, i.e. \(a_0 = a_1 = a_2 = \cdots = a_n = 0\text{,}\) which is what we needed to show.</p></article><article class="example-like" id="example-37"><h6 class="heading">
+<p id="p-416">Suppose we find values for \(a_0, a_1, a_2, \ldots, a_n \) which solve <em class="emphasis">all</em> these infinitely many equations <a knowl="./knowl/poly-example-first-eqn.html" title="Equation 2.3.17">(2.3.17)–(2.3.21)</a>. We can now change our point of view. Namely, substitute these fixed values for \(a_0, a_1, \ldots, a_n\) into Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> and regard Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> as an equation for the unknown \(x\) (the coefficients \(a_0, a_1, \ldots, a_n\) are now <em class="emphasis">fixed</em>.) We conclude that <em class="emphasis">every \(x \in \mathbb{R}\)</em> is a root of this polynomial equation!</p>
+<p id="p-417">But, we know from algebra that a polynomial equation of the form <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> with nonzero coefficients has <em class="emphasis">at most</em> \(n\) roots \(x_1, x_2, \ldots, x_n\text{.}\) So, in order for <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> to hold for <em class="emphasis">all</em> real numbers \(x\text{,}\) the coefficients must be zero, i.e. \(a_0 = a_1 = a_2 = \cdots = a_n = 0\text{,}\) which is what we needed to show.</p></article><article class="example-like" id="example-39"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.3.7</span>
 </h6>
-<p id="p-396">Suppose \(X\) is a finite set. Then \(\Fun(X)\) is finite-dimensional, with dimension \(|X|\text{,}\) with basis given by the functions \(\ve{f}_a\text{,}\) \(a \in X\text{,}\) defined by:</p>
+<p id="p-418">Suppose \(X\) is a finite set. Then \(\Fun(X)\) is finite-dimensional, with dimension \(|X|\text{,}\) with basis given by the functions \(\ve{f}_a\text{,}\) \(a \in X\text{,}\) defined by:</p>
 <div class="displaymath">
 \begin{equation}
 \ve{f}_a (x) :=  \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ otherwise}  \end{cases}\label{defn_of_basis_of_functions}\tag{2.3.22}
 \end{equation}
 </div>
-<p id="p-397">We will prove this in a series of exercises.</p>
-<article class="assemblage-like" id="assemblage-14"><p id="p-398">The formula on the right hand side of <a knowl="./knowl/defn_of_basis_of_functions.html" title="Equation 2.3.22">(2.3.22)</a> occurs so often in mathematics we give it a symbol of its own, \(\delta_{ab}\) (the ‘Kronecker delta’). This symbol stands for the formula: “If \(a=b\text{,}\) return a 1. If \(a \neq b\text{,}\) return a \(0\)”. In this language, we can rewrite the definition of the functions \(\ve{f}_a\) as</p>
+<p id="p-419">We will prove this in a series of exercises.</p>
+<article class="assemblage-like" id="assemblage-15"><p id="p-420">The formula on the right hand side of <a knowl="./knowl/defn_of_basis_of_functions.html" title="Equation 2.3.22">(2.3.22)</a> occurs so often in mathematics we give it a symbol of its own, \(\delta_{ab}\) (the ‘Kronecker delta’). This symbol stands for the formula: “If \(a=b\text{,}\) return a 1. If \(a \neq b\text{,}\) return a \(0\)”. In this language, we can rewrite the definition of the functions \(\ve{f}_a\) as</p>
 <div class="displaymath">
 \begin{equation}
 \ve{f}_a (x) := \delta_{ax}\text{.}\tag{2.3.23}
 \end{equation}
-</div></article></article><article class="example-like" id="example-38"><h6 class="heading">
+</div></article></article><article class="example-like" id="example-40"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.3.8</span>
 </h6>
-<p id="p-399">\(\Trig_n\) is \((2n+1)\)-dimensional, with basis</p>
+<p id="p-421">\(\Trig_n\) is \((2n+1)\)-dimensional, with basis</p>
 <div class="displaymath">
 \begin{gather*}
 \ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, \\
 \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.
 \end{gather*}
 </div>
-<p id="p-400">You know that these functions span \(\Trig_n\text{,}\) by definition. They are also linearly independent, though we will not prove this.</p></article><article class="example-like" id="dimension_of_matrix_space_example"><h6 class="heading">
+<p id="p-422">You know that these functions span \(\Trig_n\text{,}\) by definition. They are also linearly independent, though we will not prove this.</p></article><article class="example-like" id="dimension_of_matrix_space_example"><h6 class="heading">
 <span class="type">Example</span> <span class="codenumber">2.3.9</span>
 </h6>
-<p id="p-401">The dimension of \(\Mat_{n,m}\) is \(nm\text{,}\) with basis given by the matrices</p>
+<p id="p-423">The dimension of \(\Mat_{n,m}\) is \(nm\text{,}\) with basis given by the matrices</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
 \end{equation*}
 </div>
 <p>which have a \(1\) in the \(i\)th row and \(j\)th column and zeroes everywhere else.</p>
-<article class="assemblage-like" id="assemblage-15"><p id="p-402">Usually \(\mat{A}\) is a matrix, and \(\mat{A}_{ij}\) is the element of the matrix at position \((i,j)\text{.}\) But now \(\mat{E}_{ij}\) is a matrix in its own right! Its element at position \((k,l)\) will be written as \((\mat{E}_{ij})_{kl}\text{.}\) I hope you don't find this too confusing. In fact, we can write down an elegant formula for the elements of \(\mat{E}_{ij}\) using the Kronecker delta symbol:</p>
+<article class="assemblage-like" id="assemblage-16"><p id="p-424">Usually \(\mat{A}\) is a matrix, and \(\mat{A}_{ij}\) is the element of the matrix at position \((i,j)\text{.}\) But now \(\mat{E}_{ij}\) is a matrix in its own right! Its element at position \((k,l)\) will be written as \((\mat{E}_{ij})_{kl}\text{.}\) I hope you don't find this too confusing. In fact, we can write down an elegant formula for the elements of \(\mat{E}_{ij}\) using the Kronecker delta symbol:</p>
 <div class="displaymath">
 \begin{equation}
 (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}\label{kronecker_for_matrix_basis}\tag{2.3.24}
 \end{equation}
-</div></article></article><article class="exercise-like" id="exercise-62"></article><article class="example-like" id="example-40"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.10</span>
+</div></article></article><article class="exercise-like" id="exercise-65"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.10</span>
 </h6>
-<p id="p-404">The standard basis of \(\Mat_{2,2}\) is</p>
+<p id="p-425">Check that <a knowl="./knowl/kronecker_for_matrix_basis.html" title="Equation 2.3.24">(2.3.24)</a> is indeed the correct formula for the matrix elements of \(\mat{E}_{ij}\text{.}\)</p></article><article class="example-like" id="example-42"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.11</span>
+</h6>
+<p id="p-426">The standard basis of \(\Mat_{2,2}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{E}_{11} = \left[ \begin{array}{cc} 1 \amp  0 \\ 0 \amp  0
@@ -353,10 +366,10 @@ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\label{root_of_poly}\tag{2.3.16}
 \end{array}  \right], \mat{E}_{22} = \left[ \begin{array}{cc} 0 \amp  0 \\ 0 \amp  1
 \end{array}  \right]\text{.}
 \end{equation*}
-</div></article><article class="example-like" id="example-41"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.11</span>
+</div></article><article class="example-like" id="example-43"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.12</span>
 </h6>
-<p id="p-405">The standard basis of \(\Col_n\) is</p>
+<p id="p-427">The standard basis of \(\Col_n\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \col{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
@@ -367,11 +380,52 @@ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\label{root_of_poly}\tag{2.3.16}
 \col{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
 \end{array}  \right] \text{.}
 \end{equation*}
-</div></article><p id="p-406">We now consider dimensions of subspaces of vector spaces.</p>
-<article class="theorem-like" id="dim-of-subspace-prop"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">2.3.12</span>
+</div></article><article class="example-like" id="dimension_of_hyperplane"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.13</span> <span class="title">Dimension of a hyperplane</span>
 </h6>
-<p id="p-407">Let \(W\) be a subspace of a finite-dimensional vector space \(V\text{.}\) Then \(W\) is finite-dimensional, and \(\Dim(W) \leq \Dim(V)\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-408">Let</p>
+<p id="p-428">Let \(\ve{v} \in \mathbb{R}^n\) be a fixed vector, and consider the hyperplane \(W \subset \mathbb{R}^n\) orthogonal to \(\ve{v}\) as in <a knowl="./knowl/hyperplanes_example_subspace.html" title="Example 1.6.13: Hyperplanes orthogonal to a fixed vector">Example 1.6.13</a>. Then you will prove in Exercise <a knowl="./knowl/dimension_of_hyperplane_exercise.html" title="Checkpoint 2.3.15">Checkpoint 2.3.15</a> that \(\Dim(W) = n-1\text{.}\)</p>
+<p id="p-429">For instance, consider the specific example from <a knowl="./knowl/hyperplanes_example_subspace.html" title="Example 1.6.13: Hyperplanes orthogonal to a fixed vector">Example 1.6.13</a>, namely the plane \(W \subset \mathbb{R}^3\) of vectors orthogonal to \(\ve{v} = (1,2,3)\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation}
+W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.\label{eqn_for_W_1}\tag{2.3.25}
+\end{equation}
+</div>
+<p>There is no 'standard' basis for \(W\text{.}\) But, here is one basis (as good as any other):</p>
+<div class="displaymath">
+\begin{equation}
+\ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{1}{2}).\label{ab_basis_orth_plane}\tag{2.3.26}
+\end{equation}
+</div>
+<p>You will show this is indeed a basis for \(W\) in <a knowl="./knowl/prove_basis_for_ex_hyperplane.html" title="Checkpoint 2.3.14">Checkpoint 2.3.14</a> below. I computed these vectors as follows. To obtain \(\ve{a}\text{,}\) I simply set \(w_1 = 1, w_2 = 0\) and then solved for \(w_3\) using Equation <a knowl="./knowl/eqn_for_W_1.html" title="Equation 2.3.25">(2.3.25)</a>. Similarly, for \(\ve{b}\text{,}\) I simply set \(w_1 = 0, w_2 = 1\) and then solved for \(w_3\) using <a knowl="./knowl/eqn_for_W_1.html" title="Equation 2.3.25">(2.3.25)</a>.</p>
+<p id="p-430">There is nothing special about my method above for computing a basis for \(W\text{.}\) Here is a different basis for \(W\text{,}\) which I arrived at by choosing random values of \(w_1\) and \(w_2\) and then calculating what \(w_3\) must be in order to satisfy Equation <a knowl="./knowl/eqn_for_W_1.html" title="Equation 2.3.25">(2.3.25)</a>:</p>
+<div class="displaymath">
+\begin{equation}
+\ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).\tag{2.3.27}
+\end{equation}
+</div>
+<p id="p-431">In any event, we see that \(\Dim(W) = 2\text{.}\)</p></article><article class="exercise-like" id="prove_basis_for_ex_hyperplane"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.14</span>
+</h6>
+<p id="p-432">Show that the list of vectors \(\bopen \ve{a}, \ve{b} \bclose \) from <a knowl="./knowl/ab_basis_orth_plane.html" title="Equation 2.3.26">(2.3.26)</a> in <a knowl="./knowl/dimension_of_hyperplane.html" title="Example 2.3.13: Dimension of a hyperplane">Example 2.3.13</a> is a basis for \(W\text{.}\)</p></article><article class="exercise-like" id="dimension_of_hyperplane_exercise"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.15</span>
+</h6>
+<p id="p-433">Let \(\ve{v} \in \mathbb{R}^n\) be a fixed vector, and set</p>
+<div class="displaymath">
+\begin{equation*}
+W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
+\end{equation*}
+</div>
+<p>Prove that \(\Dim(W) = n-1\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-5" id="hint-5"><span class="type">Hint</span></a><div id="hk-hint-5" class="hidden-content tex2jax_ignore"><div class="solution">\(W\text{.}\)</div></div>
+</div></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Dimensions of subspaces</span>
+</h3>
+<p id="p-434">We now consider dimensions of subspaces of vector spaces.</p>
+<article class="theorem-like" id="dim-of-subspace-prop"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.3.16</span>
+</h6>
+<p id="p-435">Let \(W\) be a subspace of a finite-dimensional vector space \(V\text{.}\) Then \(W\) is finite-dimensional, and \(\Dim(W) \leq \Dim(V)\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-436">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
@@ -384,41 +438,44 @@ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\label{root_of_poly}\tag{2.3.16}
 \end{equation*}
 </div>
 <p>for \(W\text{.}\) For then \(\basis{B}\) will be a list of \(k\) linearly independent vectors which live in \(W\) (and hence also in \(V\)) and hence we must have \(k \leq n\) by <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a>, as \(\basis{C}\) spans \(V\text{.}\)</p>
-<p id="p-409">We show that \(W\) is finite-dimensional as follows.</p>
-<p id="p-410">If \(W\) is the zero vector space \(\{ \ve{0} \} \text{,}\) then \(W\) is finite-dimensional <a knowl="./knowl/defn_dim_zero_vec_space.html" title="Assemblage">by definition</a>.</p>
-<p id="p-411">If \(W\) is not the zero vector space, then there exists a nonzero vector \(\ve{w}_1 \in W\text{.}\) Consider the list \(\basis{B}_1 = \bopen \ve{w}_1 \bclose\text{.}\) Note that \(\basis{B}_1\) is linearly independent, by <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>. So, if \(\basis{B}_1\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and so \(W\) is finite-dimensional and we are done.</p>
-<p id="p-412">If \(\basis{B}_1\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_2 \in W\) which is not a scalar multiple of \(\ve{e}_1\text{.}\) Now consider the list \(\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}\text{.}\) Once again, \(\basis{B}_2\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>. So, if \(\basis{B}_2\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and we are done.</p>
-<p id="p-413">If \(\basis{B}_2\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_3 \in W\) which is not a linear combination of \(\ve{w}_1\) and \(\ve{w}_2\text{.}\) Now consider the list \(\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}\text{.}\) Again, \(\basis{B}_3\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>. If it does not span \(W\text{,}\) then there exists a vector \(\ve{w}_4 \in W\) which is not a linear combination of \(\ve{w}_1, \ve{w}_2, \ve{w}_3\text{.}\) So consider the list \(\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose \text{.}\)</p>
-<p id="p-414">This process must terminate for some \(k \leq n\text{.}\) If not, then it will produce a list \(\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose\text{.}\) This would be a linearly independent list of \(n+1\) vectors from \(V\text{.}\) But \(\Dim V = n\text{,}\) so this is impossible, by <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a>. Hence for some \(k \leq n\) we must have that \(\basis{B}_k\) is a basis for \(W\text{,}\) and we are done.</p></article></div>
-<p id="p-415">It is good to have an example of an infinite-dimensional vector space.</p>
-<article class="theorem-like" id="proposition-4"><h6 class="heading">
-<span class="type">Proposition</span> <span class="codenumber">2.3.13</span>
-</h6>
-<p id="p-416">\(\Poly\) is infinite-dimensional.</p></article><article class="hiddenproof" id="proof-11"><a knowl="" class="id-ref" refid="hk-proof-11"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-417">Suppose \(\Poly\) is finite-dimensional. This means there exists a finite collection of polynomials \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\) which spans \(\Poly\text{.}\) But, let \(d\) be the highest degree of all the polynomials in the list \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\text{.}\) Then \(\ve{p} := x^{d+1}\) is a polynomial which is not in the span of \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\text{,}\) since adding polynomials together and multiplying them by scalars can never increase the degree. We have arrived at a contradiction. So our initial assumption cannot be correct, i.e. \(\Poly\) cannot be finite-dimensional.</p></article></div>
-<article class="example-like" id="example-42"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.14</span>
-</h6>
-<p id="p-418">We will not prove this here, but the following vector spaces are also infinite-dimensional:</p>
-<ul class="disc">
-<li id="li-65"><p id="p-419">\(\mathbb{R}^\infty\text{,}\)</p></li>
-<li id="li-66"><p id="p-420">\(\Fun(X)\) where \(X\) is an infinite set,</p></li>
-<li id="li-67"><p id="p-421">\(\Cont(I)\) for any nonempty interval \(I\text{,}\) and</p></li>
-<li id="li-68"><p id="p-422">\(\Diff(I)\) for any open interval \(I\text{.}\)</p></li>
-</ul></article></section><section class="subsection" id="sifting_subsection"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.1</span> <span class="title">Sifting</span>
+<p id="p-437">We show that \(W\) is finite-dimensional as follows.</p>
+<p id="p-438">If \(W\) is the zero vector space \(\{ \ve{0} \} \text{,}\) then \(W\) is finite-dimensional <a knowl="./knowl/defn_dim_zero_vec_space.html" title="Assemblage">by definition</a>.</p>
+<p id="p-439">If \(W\) is not the zero vector space, then there exists a nonzero vector \(\ve{w}_1 \in W\text{.}\) Consider the list \(\basis{B}_1 = \bopen \ve{w}_1 \bclose\text{.}\) Note that \(\basis{B}_1\) is linearly independent, by <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>. So, if \(\basis{B}_1\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and so \(W\) is finite-dimensional and we are done.</p>
+<p id="p-440">If \(\basis{B}_1\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_2 \in W\) which is not a scalar multiple of \(\ve{e}_1\text{.}\) Now consider the list \(\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}\text{.}\) Once again, \(\basis{B}_2\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>. So, if \(\basis{B}_2\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and we are done.</p>
+<p id="p-441">If \(\basis{B}_2\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_3 \in W\) which is not a linear combination of \(\ve{w}_1\) and \(\ve{w}_2\text{.}\) Now consider the list \(\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}\text{.}\) Again, \(\basis{B}_3\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>. If it does not span \(W\text{,}\) then there exists a vector \(\ve{w}_4 \in W\) which is not a linear combination of \(\ve{w}_1, \ve{w}_2, \ve{w}_3\text{.}\) So consider the list \(\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose \text{.}\)</p>
+<p id="p-442">This process must terminate for some \(k \leq n\text{.}\) If not, then it will produce a list \(\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose\text{.}\) This would be a linearly independent list of \(n+1\) vectors from \(V\text{.}\) But \(\Dim V = n\text{,}\) so this is impossible, by <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a>. Hence for some \(k \leq n\) we must have that \(\basis{B}_k\) is a basis for \(W\text{,}\) and we are done.</p></article></div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.3</span> <span class="title">Infinite-dimensional vector spaces</span>
 </h3>
-<a href="Ch2Sec3BasisDimension.html#sifting_subsection" class="permalink">¶</a><p id="p-423">If we consider the proof of <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a> (the ‘Bumping off’ Proposition) carefully, we find that it makes use of a <em class="emphasis">sifting algorithm</em>. This algorithm can actually be applied to <em class="emphasis">any</em> list of vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) in a vector space. Consider each vector \(\ve{v}_i\) in the list consecutively. If \(\ve{v}_i\) is the zero vector, or if it is a linear combination of the preceding vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_{n-1}\text{,}\) remove it from the list.</p>
-<article class="example-like" id="example-43"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.15</span>
+<p id="p-443">It is good to have an example of an infinite-dimensional vector space.</p>
+<article class="theorem-like" id="proposition-4"><h6 class="heading">
+<span class="type">Proposition</span> <span class="codenumber">2.3.17</span>
 </h6>
-<p id="p-424">Sift the following list of vectors in \(\mathbb{R}^3\text{:}\)</p>
+<p id="p-444">\(\Poly\) is infinite-dimensional.</p></article><article class="hiddenproof" id="proof-11"><a knowl="" class="id-ref" refid="hk-proof-11"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-445">Suppose \(\Poly\) is finite-dimensional. This means there exists a finite collection of polynomials \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\) which spans \(\Poly\text{.}\) But, let \(d\) be the highest degree of all the polynomials in the list \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\text{.}\) Then \(\ve{p} := x^{d+1}\) is a polynomial which is not in the span of \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\text{,}\) since adding polynomials together and multiplying them by scalars can never increase the degree. We have arrived at a contradiction. So our initial assumption cannot be correct, i.e. \(\Poly\) cannot be finite-dimensional.</p></article></div>
+<article class="example-like" id="example-45"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.18</span>
+</h6>
+<p id="p-446">We will not prove this here, but the following vector spaces are also infinite-dimensional:</p>
+<ul class="disc">
+<li id="li-71"><p id="p-447">\(\mathbb{R}^\infty\text{,}\)</p></li>
+<li id="li-72"><p id="p-448">\(\Fun(X)\) where \(X\) is an infinite set,</p></li>
+<li id="li-73"><p id="p-449">\(\Cont(I)\) for any nonempty interval \(I\text{,}\) and</p></li>
+<li id="li-74"><p id="p-450">\(\Diff(I)\) for any open interval \(I\)</p></li>
+<li id="li-75"><p id="p-451">\(\Poly^k\)</p></li>
+</ul></article></section><section class="subsection" id="sifting_subsection"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.4</span> <span class="title">The sifting algorithm and its uses</span>
+</h3>
+<a href="Ch2Sec3BasisDimension.html#sifting_subsection" class="permalink">¶</a><p id="p-452">If we consider the proof of <a knowl="./knowl/bumping_off_lemma.html" title="Proposition 2.2.10: Bumping Off Proposition">Proposition 2.2.10</a> (the ‘Bumping off’ Proposition) carefully, we find that it makes use of a <em class="emphasis">sifting algorithm</em>. This algorithm can actually be applied to <em class="emphasis">any</em> list of vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) in a vector space. Consider each vector \(\ve{v}_i\) in the list consecutively. If \(\ve{v}_i\) is the zero vector, or if it is a linear combination of the preceding vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_{n-1}\text{,}\) remove it from the list.</p>
+<article class="example-like" id="example-46"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.19</span>
+</h6>
+<p id="p-453">Sift the following list of vectors in \(\mathbb{R}^3\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6, -3)\\
 \ve{v}_4 \amp = (1, 0, 5), \amp  \ve{v}_5 \amp = (5, 4, 13), \amp   \ve{v}_6 \amp = (1, 1, 0)\text{.}
 \end{align*}
 </div>
-<p id="p-425">We start with \(\ve{v}_1\text{.}\) Since it is not the zero vector, and is not a linear combination of any preceding vectors, it remains. We move on to \(\ve{v}_2\text{,}\) which is zero, so we remove it. We move on to \(\ve{v}_3\text{,}\) which by inspection is equal to \(3 \ve{v}_1\text{,}\) so we remove it. We move on to \(\ve{v}_4\text{.}\) It is not zero, and cannot be expressed as a multiple of \(\ve{v}_1\) (check this), so it remains. We move on to \(\ve{v}_5\text{.}\) We check if it can be written as a linear combination</p>
+<p id="p-454">We start with \(\ve{v}_1\text{.}\) Since it is not the zero vector, and is not a linear combination of any preceding vectors, it remains. We move on to \(\ve{v}_2\text{,}\) which is zero, so we remove it. We move on to \(\ve{v}_3\text{,}\) which by inspection is equal to \(3 \ve{v}_1\text{,}\) so we remove it. We move on to \(\ve{v}_4\text{.}\) It is not zero, and cannot be expressed as a multiple of \(\ve{v}_1\) (check this), so it remains. We move on to \(\ve{v}_5\text{.}\) We check if it can be written as a linear combination</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
@@ -435,45 +492,45 @@ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\label{root_of_poly}\tag{2.3.16}
 \begin{equation*}
 \ve{v}_1, \ve{v}_4, \ve{v}_6\text{.}
 \end{equation*}
-</div></article><article class="exercise-like" id="exercise-63"><h6 class="heading">
-<span class="type">Checkpoint</span> <span class="codenumber">2.3.16</span>
+</div></article><article class="exercise-like" id="exercise-68"><h6 class="heading">
+<span class="type">Checkpoint</span> <span class="codenumber">2.3.20</span>
 </h6>
-<p id="p-426">Do the three ‘check this’ calculations above.</p></article><p id="p-427">Sifting is a very useful way to construct a basis of a vector space!</p>
+<p id="p-455">Do the three ‘check this’ calculations above.</p></article><p id="p-456">Sifting is a very useful way to construct a basis of a vector space!</p>
 <article class="theorem-like" id="sift_lemma_basis"><h6 class="heading">
-<span class="type">Lemma</span> <span class="codenumber">2.3.17</span>
+<span class="type">Lemma</span> <span class="codenumber">2.3.21</span>
 </h6>
-<p id="p-428">If a list of vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) spans a vector space \(V\text{,}\) then sifting the list will result in a basis for \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-429">At each step, the vector that is removed from the list is either the zero vector, or a linear combination of the vectors before it. So if we remove this vector, the resulting list will still span \(V\text{.}\) Thus by the end of the process, the final sifted list of vectors still spans \(V\text{.}\)</p>
-<p id="p-430">To see that the final sifted list is linearly independent, we can apply <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Criterions for Linear Dependence">Proposition 2.2.8</a>. By construction, no vector in the final sifted list is a linear combination of the preceding vectors (if it was, it would have been removed!). Hence the final sifted list is not linearly dependent, so it must be linearly independent!</p></article></div>
+<p id="p-457">If a list of vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) spans a vector space \(V\text{,}\) then sifting the list will result in a basis for \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-458">At each step, the vector that is removed from the list is either the zero vector, or a linear combination of the vectors before it. So if we remove this vector, the resulting list will still span \(V\text{.}\) Thus by the end of the process, the final sifted list of vectors still spans \(V\text{.}\)</p>
+<p id="p-459">To see that the final sifted list is linearly independent, we can apply <a knowl="./knowl/lin_dependence_prop.html" title="Proposition 2.2.8: Equivalent Formulations of Linear Dependence">Proposition 2.2.8</a>. By construction, no vector in the final sifted list is a linear combination of the preceding vectors (if it was, it would have been removed!). Hence the final sifted list is not linearly dependent, so it must be linearly independent!</p></article></div>
 <article class="theorem-like" id="first_corollary_please"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">2.3.18</span>
+<span class="type">Corollary</span> <span class="codenumber">2.3.22</span>
 </h6>
-<p id="p-431">Any linearly independent list of vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k\) in a finite-dimensional vector space \(V\) can be extended to a basis of \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a knowl="" class="id-ref" refid="hk-proof-13"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-432">Since \(V\) is finite-dimensional, it has a basis \(\ve{e}_1, \ldots, \ve{e}_n\text{.}\) Now consider the list</p>
+<p id="p-460">Any linearly independent list of vectors \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k\) in a finite-dimensional vector space \(V\) can be extended to a basis of \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a knowl="" class="id-ref" refid="hk-proof-13"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-461">Since \(V\) is finite-dimensional, it has a basis \(\ve{e}_1, \ldots, \ve{e}_n\text{.}\) Now consider the list</p>
 <div class="displaymath">
 \begin{equation*}
 L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n
 \end{equation*}
 </div>
-<p>which clearly spans \(V\text{.}\) By sifting this list, we will arrive at a basis for \(V\text{,}\) by <a knowl="./knowl/sift_lemma_basis.html" title="Lemma 2.3.17">Lemma 2.3.17</a>. Some of the \(\ve{e}\)-vectors may have been removed. But none of the \(\ve{v}\)-vectors will have been removed, since that would mean some \(\ve{v}_i\) is a linear combination of the preceding vectors \(\ve{v}_1, \ldots, \ve{v}_{i-1}\text{,}\) which is impossible, as \(\ve{v}_1, \ldots, \ve{v}_k\) is linearly independent list. Hence after sifting the list \(L\) we indeed extend our original list \(\ve{v}_1, \ldots, \ve{v}_k\) to a basis of \(V\text{.}\)</p></article></div>
+<p>which clearly spans \(V\text{.}\) By sifting this list, we will arrive at a basis for \(V\text{,}\) by <a knowl="./knowl/sift_lemma_basis.html" title="Lemma 2.3.21">Lemma 2.3.21</a>. Some of the \(\ve{e}\)-vectors may have been removed. But none of the \(\ve{v}\)-vectors will have been removed, since that would mean some \(\ve{v}_i\) is a linear combination of the preceding vectors \(\ve{v}_1, \ldots, \ve{v}_{i-1}\text{,}\) which is impossible, as \(\ve{v}_1, \ldots, \ve{v}_k\) is linearly independent list. Hence after sifting the list \(L\) we indeed extend our original list \(\ve{v}_1, \ldots, \ve{v}_k\) to a basis of \(V\text{.}\)</p></article></div>
 <article class="theorem-like" id="lin-ind-implies-basis"><h6 class="heading">
-<span class="type">Corollary</span> <span class="codenumber">2.3.19</span>
+<span class="type">Corollary</span> <span class="codenumber">2.3.23</span>
 </h6>
-<p id="p-433">If \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) is a linearly independent list of \(n\) vectors in an \(n\)-dimensional vector space \(V\text{,}\) then it is a basis.</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-434">By <a knowl="./knowl/first_corollary_please.html" title="Corollary 2.3.18">Corollary 2.3.18</a>, we can extend \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) to a basis for \(V\text{.}\) But \(V\) has dimension \(n\text{,}\) so the basis must contain only \(n\) vectors by <a knowl="./knowl/inv_dim.html" title="Theorem 2.3.2: Invariance of dimension">Theorem 2.3.2</a> (Invariance of Dimension). So we have not added any vectors at all! Hence our original list was already a basis.</p></article></div>
-<article class="example-like" id="example-44"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.20</span>
+<p id="p-462">If \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) is a linearly independent list of \(n\) vectors in an \(n\)-dimensional vector space \(V\text{,}\) then it is a basis.</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Proof</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-463">By <a knowl="./knowl/first_corollary_please.html" title="Corollary 2.3.22">Corollary 2.3.22</a>, we can extend \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) to a basis for \(V\text{.}\) But \(V\) has dimension \(n\text{,}\) so the basis must contain only \(n\) vectors by <a knowl="./knowl/inv_dim.html" title="Theorem 2.3.2: Invariance of dimension">Theorem 2.3.2</a> (Invariance of Dimension). So we have not added any vectors at all! Hence our original list was already a basis.</p></article></div>
+<article class="example-like" id="example-47"><h6 class="heading">
+<span class="type">Example</span> <span class="codenumber">2.3.24</span>
 </h6>
-<p id="p-435">In <a knowl="./knowl/new_basis_for_poly_3.html" title="Example 2.2.7">Example 2.2.7</a> we showed that the list of polynomials</p>
+<p id="p-464">In <a knowl="./knowl/new_basis_for_poly_3.html" title="Example 2.2.7">Example 2.2.7</a> we showed that the list of polynomials</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
 \end{equation*}
 </div>
 <p>is linearly independent in \(\Poly_3\text{.}\) Since \(\Dim \Poly_3 = 4\text{,}\) we see that it is a basis of \(\Poly_3\text{.}\)</p>
-<article class="assemblage-like" id="assemblage-16"><p id="p-436">In <a knowl="./knowl/chebyshev_example.html" title="Exercise 2.1.5">Exercise 2.1.5</a>, you showed that \(\ve{q}_0, \ldots, \ve{q}_3\) is a basis for \(\Poly_3\) by ‘brute force’. This new method is <em class="emphasis">different</em>!</p></article></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
-<span class="type">Subsection</span> <span class="codenumber">2.3.2</span> <span class="title">Exercises</span>
+<article class="assemblage-like" id="assemblage-17"><p id="p-465">In <a knowl="./knowl/chebyshev_example.html" title="Exercise 2.1.5">Exercise 2.1.5</a>, you showed that \(\ve{q}_0, \ldots, \ve{q}_3\) is a basis for \(\Poly_3\) by ‘brute force’. This new method is <em class="emphasis">different</em>!</p></article></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Subsection</span> <span class="codenumber">2.3.5</span> <span class="title">Exercises</span>
 </h3>
 <article class="exercise-like" id="exercise_for_new_basis"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-437">Sift the list of vectors</p>
+<p id="p-466">Sift the list of vectors</p>
 <div class="displaymath">
 \begin{align*}
 \ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2, 3)\\
@@ -481,30 +538,30 @@ L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n
 \end{align*}
 </div></article><article class="exercise-like" id="true_false_span_lin_ind"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-438">Let \(V\) be a vector space of dimension \(n\text{.}\) State whether each of the following statements is true or false. If it is true, prove it. If it is false, give a counterexample.</p>
+<p id="p-467">Let \(V\) be a vector space of dimension \(n\text{.}\) State whether each of the following statements is true or false. If it is true, prove it. If it is false, give a counterexample.</p>
 <ol class="lower-alpha">
-<li id="li-69"><p id="p-439">Any linearly independent list of vectors in \(V\) contains at most \(n\) vectors.</p></li>
-<li id="li-70"><p id="p-440">Any list of vectors which spans \(V\) contains at least \(n\) vectors.</p></li>
+<li id="li-76"><p id="p-468">Any linearly independent list of vectors in \(V\) contains at most \(n\) vectors.</p></li>
+<li id="li-77"><p id="p-469">Any list of vectors which spans \(V\) contains at least \(n\) vectors.</p></li>
 </ol></article><article class="exercise-like" id="n_lin_ind_is_basis"><h6 class="heading">
 <span class="codenumber">3</span> </h6>
-<p id="p-441">Complete the proof of the following lemma.</p>
-<p id="p-442"><em class="emphasis">Lemma.</em> Suppose \(V\) is a vector space of dimension \(n\text{.}\) Then any linearly independent set of \(n\) vectors in \(V\) is a basis for \(V\text{.}\)</p>
-<p id="p-443"><em class="emphasis">Proof.</em> Let \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}\) be a linearly independent set of vectors in \(V\text{.}\)</p>
-<p id="p-444">Suppose that \(\basis{B}\) is <em class="emphasis">not</em> a basis for \(V\text{.}\)</p>
-<p id="p-445">Therefore, \(\basis{B}\) does not span \(V\text{,}\) since ... (a)</p>
-<p id="p-446">Therefore, there exists \(\ve{v} \in V\) such that ... (b)</p>
-<p id="p-447">Now, add \(\ve{v}\) to the list \(\basis{B}\) to obtain a new list \(\basis{B}' :=\) ... (c)</p>
-<p id="p-448">The new list \(\basis{B}'\) is linearly independent because ... (d)</p>
-<p id="p-449">This is a contradiction because ... (e)</p>
-<p id="p-450">Hence, \(\basis{B}\) must be a basis for \(V\text{.}\)</p></article><article class="exercise-like" id="checking_matrices_lin_dep"><h6 class="heading">
+<p id="p-470">Complete the proof of the following lemma.</p>
+<p id="p-471"><em class="emphasis">Lemma.</em> Suppose \(V\) is a vector space of dimension \(n\text{.}\) Then any linearly independent set of \(n\) vectors in \(V\) is a basis for \(V\text{.}\)</p>
+<p id="p-472"><em class="emphasis">Proof.</em> Let \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n \right\}\) be a linearly independent set of vectors in \(V\text{.}\)</p>
+<p id="p-473">Suppose that \(\basis{B}\) is <em class="emphasis">not</em> a basis for \(V\text{.}\)</p>
+<p id="p-474">Therefore, \(\basis{B}\) does not span \(V\text{,}\) since ... (a)</p>
+<p id="p-475">Therefore, there exists \(\ve{v} \in V\) such that ... (b)</p>
+<p id="p-476">Now, add \(\ve{v}\) to the list \(\basis{B}\) to obtain a new list \(\basis{B}' :=\) ... (c)</p>
+<p id="p-477">The new list \(\basis{B}'\) is linearly independent because ... (d)</p>
+<p id="p-478">This is a contradiction because ... (e)</p>
+<p id="p-479">Hence, \(\basis{B}\) must be a basis for \(V\text{.}\)</p></article><article class="exercise-like" id="checking_matrices_lin_dep"><h6 class="heading">
 <span class="codenumber">4</span> </h6>
-<p id="p-451">Use <a knowl="./knowl/true_false_span_lin_ind.html" title="Exercise 2.3.2.2">Exercise 2.3.2.2</a>(a) to show that the list of matrices in \(\Mat_{2,2}\) in <a knowl="./knowl/x2_by_2_matrices_lin_dep.html" title="Exercise 2.2.2">Exercise 2.2.2</a> is linearly dependent.</p></article><article class="exercise-like" id="exercise-68"><h6 class="heading">
+<p id="p-480">Use <a knowl="./knowl/true_false_span_lin_ind.html" title="Exercise 2.3.5.2">Exercise 2.3.5.2</a>(a) to show that the list of matrices in \(\Mat_{2,2}\) in <a knowl="./knowl/x2_by_2_matrices_lin_dep.html" title="Exercise 2.2.2">Exercise 2.2.2</a> is linearly dependent.</p></article><article class="exercise-like" id="exercise-73"><h6 class="heading">
 <span class="codenumber">5</span> </h6>
-<p id="p-452">In each case, use the results in <a knowl="./knowl/true_false_span_lin_ind.html" title="Exercise 2.3.2.2">Exercise 2.3.2.2</a> and <a knowl="./knowl/n_lin_ind_is_basis.html" title="Exercise 2.3.2.3">Exercise 2.3.2.3</a> to determine if \(\basis{B}\) is a basis for \(V\text{.}\)</p>
+<p id="p-481">In each case, use the results in <a knowl="./knowl/true_false_span_lin_ind.html" title="Exercise 2.3.5.2">Exercise 2.3.5.2</a> and <a knowl="./knowl/n_lin_ind_is_basis.html" title="Exercise 2.3.5.3">Exercise 2.3.5.3</a> to determine if \(\basis{B}\) is a basis for \(V\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-71"><p id="p-453">\(V = \Poly_2\text{,}\) \(\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \right\}\)</p></li>
-<li id="li-72">
-<p id="p-454">\(V = \Mat_{2,2}\text{,}\)</p>
+<li id="li-78"><p id="p-482">\(V = \Poly_2\text{,}\) \(\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1 + x - 3x^2, \, x-x^2 \right\}\)</p></li>
+<li id="li-79">
+<p id="p-483">\(V = \Mat_{2,2}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \basis{B} = \left\{ 
@@ -524,20 +581,24 @@ L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2, \ldots, \ve{e}_n
 \end{equation*}
 </div>
 </li>
-<li id="li-73"><p id="p-455">\(V = \Trig_2\text{,}\) \(\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}\)</p></li>
-</ol></article><article class="exercise-like" id="exercise-69"><h6 class="heading">
+<li id="li-80"><p id="p-484">\(V = \Trig_2\text{,}\) \(\basis{B} = \left\{ \sin^2 x, \, \cos^2 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}\)</p></li>
+</ol></article><article class="exercise-like" id="exercise-74"><h6 class="heading">
 <span class="codenumber">6</span> </h6>
-<p id="p-456">Let \(\left\{ \ve{u}, \ve{v}, \ve{w} \right\}\) be a linearly independent list of vectors in a vector space \(V\text{.}\) State whether each of the following statements is true or false. If it is true, prove it. If it is false, give a counterexample. (Hint: Use the definition of linear independence.)</p>
+<p id="p-485">Let \(\left\{ \ve{u}, \ve{v}, \ve{w} \right\}\) be a linearly independent list of vectors in a vector space \(V\text{.}\) State whether each of the following statements is true or false. If it is true, prove it. If it is false, give a counterexample. (Hint: Use the definition of linear independence.)</p>
 <ol class="lower-alpha">
-<li id="li-74"><p id="p-457">The list \(\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}\) is linearly independent.</p></li>
-<li id="li-75"><p id="p-458">The list \(\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}\) is linearly independent.</p></li>
+<li id="li-81"><p id="p-486">The list \(\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \, \ve{u} + \ve{w} \right\}\) is linearly independent.</p></li>
+<li id="li-82"><p id="p-487">The list \(\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}\) is linearly independent.</p></li>
 </ol></article><article class="exercise-like" id="dim_poly_at_2_ex"><h6 class="heading">
 <span class="codenumber">7</span> </h6>
-<p id="p-459">For each of the following, show that \(V\) is a subspace of \(\Poly_2\text{,}\) find a basis for \(V\text{,}\) and compute \(\Dim V\text{.}\)</p>
+<p id="p-488">For each of the following, show that \(V\) is a subspace of \(\Poly_2\text{,}\) find a basis for \(V\text{,}\) and compute \(\Dim V\text{.}\)</p>
 <ol class="lower-alpha">
-<li id="li-76"><p id="p-460">\(V = \{ p \in \Poly_2 : p(2) = 0 \}\)</p></li>
-<li id="li-77"><p id="p-461">\(V = \{ p \in \Poly_2 : xp'(x) = p(x) \}\)</p></li>
-</ol></article></section></section></div></main>
+<li id="li-83"><p id="p-489">\(V = \{ p \in \Poly_2 : p(2) = 0 \}\)</p></li>
+<li id="li-84"><p id="p-490">\(V = \{ p \in \Poly_2 : xp'(x) = p(x) \}\)</p></li>
+</ol></article><article class="exercise-like" id="ex_basis_no_deg_2"><h6 class="heading">
+<span class="codenumber">8</span> </h6>
+<p id="p-491">Prove or disprove: there exits a basis \(\bopen p_0, p_1, p_2, p_3 \bclose\) of \(\Poly_3 \) such that none of the polynomials \(p_0, p_1, p_2, p_3\) have degree 2.</p></article><article class="exercise-like" id="exercise-77"><h6 class="heading">
+<span class="codenumber">9</span> </h6>
+<p id="p-492">Prove or disprove: if \(U\) and \(W \) are distinct subspaces of \(V\) with \(U \neq V\) and \(W \neq V\text{,}\) then \(\dim(U + V) = \dim(U) + \dim(V)\text{.}\) (Recall the <a knowl="./knowl/def_sum_subspace.html" title="Definition 1.6.30">definition of the sum of two subspaces</a> from <a knowl="./knowl/sum_of_subspaces_is_subspace.html" title="Exercise 1.6.4.9">Exercise 1.6.4.9</a>.)</p></article></section></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.1/login.js"></script>

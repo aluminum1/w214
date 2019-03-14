@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:31+02:00    *-->
+<!--*    on 2019-03-14T17:09:26+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,19 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>(2) \(\Rightarrow\) (1). Suppose that one of the vectors in the list, say \(\ve{v}_s\text{,}\) is a linear combination of the others vectors. That is,</p>
-<div class="displaymath">
-\begin{align*}
-\ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No } \mbox{term on RHS.)} 
-\end{align*}
-</div>
-<p>Rearranging this equation gives:</p>
+<p>Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that one of the vectors in the list, say \(\ve{v}_r\text{,}\) can be expressed as a linear combination of the preceding vectors:</p>
 <div class="displaymath">
 \begin{equation}
-k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.\tag{2.2.7}
+\ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}\tag{2.1.32}
 \end{equation}
 </div>
-<p>Not all the coefficients on the LHS of <a knowl="./knowl/rearranged_lin_dep.html" title="Equation 2.2.7">(2.2.7)</a> are zero, since the coefficient of \(\ve{v}_s\) is equal to \(-1\text{.}\) Therefore, \(\basis{B}\) is linearly dependent.</p>
-<span class="incontext"><a href="Ch2Sec2LinearIndependence.html#p-351">in-context</a></span>
+<p>Suppose that we remove \(\ve{v}_r\) from \(\basis{S}\text{,}\) to arrive at a new list</p>
+<div class="displaymath">
+\begin{equation*}
+\basis{T} = \bopen \ve{v}_1, \ldots, \hat{\ve{v}_r}, \ldots, \ve{s}_n \bclose 
+\end{equation*}
+</div>
+<p>Prove that \(\basis{T}\) also spans \(V\text{.}\)</p>
+<span class="incontext"><a href="Ch2Sec1LinearCombinationSpan.html#p-351">in-context</a></span>
 </body>
 </html>

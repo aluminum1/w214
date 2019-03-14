@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:35+02:00    *-->
+<!--*    on 2019-03-14T17:09:28+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,33 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraph</span></h6>
-<p>Let \(\ve{v} \in V\text{.}\) Expand it in the basis \(\basis{B}\text{:}\)</p>
+<p>As before, suppose that</p>
+<div class="displaymath">
+\begin{align*}
+\ve{v} \amp = a_1 \ve{e}_1 + a_2 
+\end{align*}
+</div>
+<p>Which gives</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_n \ve{b}_n,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \left[\begin{array}{c} a_1 \\ \vdots \\ a_n \end{array}\right]\text{.}
+[\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
 \end{equation*}
 </div>
-<span class="incontext"><a href="Ch2Sec5ChangeOfBasis.html#p-527">in-context</a></span>
+<p>Then</p>
+<div class="displaymath">
+\begin{align*}
+k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) \\
+\amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (\knowl{./knowl/R4.html}{\text{R4 }})\\
+\amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (\knowl{./knowl/R6.html}{\text{R6 }})
+\end{align*}
+</div>
+<p>Reading off the coefficients, we obtain</p>
+<div class="displaymath">
+\begin{equation*}
+k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
+\end{equation*}
+</div>
+<p>as desired.</p>
+<span class="incontext"><a href="Ch2Sec4CoordinateVectors.html#p-527">in-context</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:30+02:00    *-->
+<!--*    on 2019-03-14T17:09:25+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,14 +13,20 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">1.6.14</span> <span class="title">Differentiable functions as a subspace</span>
+<span class="type">Example</span> <span class="codenumber">1.6.15</span> <span class="title">Continuous functions as a subspace</span>
 </h6>
-<p>Similarly, the set</p>
+<p>The set</p>
 <div class="displaymath">
 \begin{equation*}
-\Diff(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ differentiable}  \}
+\Cont(I) := \{ \ve{f}: I \rightarrow \mathbb{R}, \, \ve{f} \mbox{ continuous}  \}
 \end{equation*}
 </div>
-<p>of differentiable functions on an open interval \(I\) is a <a knowl="./knowl/defn-subspace.html" title="Definition 1.6.1">subspace</a> of \(\Fun (I)\text{.}\)</p></article><span class="incontext"><a href="Ch1Sec6Subspaces.html#example-16">in-context</a></span>
+<p>of all continuous functions on an interval \(I\) is a subspace of the set \(\Fun(I)\) of <em class="emphasis">all</em> functions on \(I\text{.}\) Let us check that it satisfies the definition. You know from earlier courses that:</p>
+<ul class="disc">
+<li><p>If \(\ve{f}\) and \(\ve{g}\) are continuous functions on \(I\text{,}\) then \(\ve{f} + \ve{g}\) is also a continuous function.</p></li>
+<li><p>The zero function \({0}\) defined by \(\ve{0}(x) = 0\) for all \(x \in I\) is a continuous function.</p></li>
+<li><p>If \(\ve{f}\) is a continuous function, and \(k\) is a scalar, then \(k \smul\ve{f}\) is also continuous.</p></li>
+</ul>
+<p>Hence, by <a knowl="./knowl/subspace_lem.html" title="Lemma 1.6.2">Lemma 1.6.2</a>, \(\Cont(I)\) is a vector space in its own right.</p></article><span class="incontext"><a href="Ch1Sec6Subspaces.html#example-16">in-context</a></span>
 </body>
 </html>

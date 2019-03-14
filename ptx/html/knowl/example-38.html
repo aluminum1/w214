@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T23:23:32+02:00    *-->
+<!--*    on 2019-03-14T17:09:27+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,15 +13,37 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.3.8</span>
+<span class="type">Example</span> <span class="codenumber">2.3.6</span>
 </h6>
-<p>\(\Trig_n\) is \((2n+1)\)-dimensional, with basis</p>
+<p>The list of polynomials</p>
 <div class="displaymath">
-\begin{gather*}
-\ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, \\
-\ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.
-\end{gather*}
+\begin{equation*}
+\ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
+\end{equation*}
 </div>
-<p>You know that these functions span \(\Trig_n\text{,}\) by definition. They are also linearly independent, though we will not prove this.</p></article><span class="incontext"><a href="Ch2Sec3BasisDimension.html#example-38">in-context</a></span>
+<p>is a basis for \(\Poly_n\text{,}\) so \(\Dim \Poly_n = n+1\text{.}\) Indeed, this list spans \(\Poly_n\) by definition, so we just need to check that it is linearly independent. Suppose that</p>
+<div class="displaymath">
+\begin{equation*}
+a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}\text{.}
+\end{equation*}
+</div>
+<p><em class="emphasis">This is an equation between functions, so it holds for all \(x \in \mathbb{R}\text{!}\)</em> In other words, for all \(x \in \mathbb{R}\text{,}\) the following equation holds:</p>
+<div class="displaymath">
+\begin{equation}
+a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\tag{2.3.16}
+\end{equation}
+</div>
+<p>Think about this carefully. Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> represents an <em class="emphasis">infinite</em> family of equations for the unknowns \(a_0, a_1, \ldots, a_n\text{.}\) There is one equation for each value of \(x \in \mathbb{R}\text{.}\) For example:</p>
+<div class="displaymath">
+\begin{align}
+(x=1) \amp \amp a_0 + a_1 + a_2 + \cdots + a_n \amp = 0 \tag{2.3.17}\\
+(x= -1) \amp \amp a_0 - a_1 + a_2 + \cdots + (-1)^n a_n \amp = 0 \tag{2.3.18}\\
+(x= 2) \amp \amp a_0 + 2a_1 + 4a_3 + \cdots + 2^n a_n = 0 \tag{2.3.19}\\
+(x= 3) \amp \amp a_0 + 3a_1 + 9a_3 + \cdots + 3^n a_n = 0 \tag{2.3.20}\\
+\amp \amp \vdots \tag{2.3.21}
+\end{align}
+</div>
+<p>Suppose we find values for \(a_0, a_1, a_2, \ldots, a_n \) which solve <em class="emphasis">all</em> these infinitely many equations <a knowl="./knowl/poly-example-first-eqn.html" title="Equation 2.3.17">(2.3.17)–(2.3.21)</a>. We can now change our point of view. Namely, substitute these fixed values for \(a_0, a_1, \ldots, a_n\) into Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> and regard Equation <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> as an equation for the unknown \(x\) (the coefficients \(a_0, a_1, \ldots, a_n\) are now <em class="emphasis">fixed</em>.) We conclude that <em class="emphasis">every \(x \in \mathbb{R}\)</em> is a root of this polynomial equation!</p>
+<p>But, we know from algebra that a polynomial equation of the form <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> with nonzero coefficients has <em class="emphasis">at most</em> \(n\) roots \(x_1, x_2, \ldots, x_n\text{.}\) So, in order for <a knowl="./knowl/root_of_poly.html" title="Equation 2.3.16">(2.3.16)</a> to hold for <em class="emphasis">all</em> real numbers \(x\text{,}\) the coefficients must be zero, i.e. \(a_0 = a_1 = a_2 = \cdots = a_n = 0\text{,}\) which is what we needed to show.</p></article><span class="incontext"><a href="Ch2Sec3BasisDimension.html#example-38">in-context</a></span>
 </body>
 </html>

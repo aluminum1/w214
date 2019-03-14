@@ -2,7 +2,7 @@
 <html lang="en-US">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-02T11:04:00+02:00    *-->
+<!--*    on 2019-03-14T17:09:26+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,26 +13,20 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Example</span> <span class="codenumber">2.2.6</span>
+<span class="type">Example</span> <span class="codenumber">2.1.5</span>
 </h6>
-<p>The list of polynomials</p>
+<p>Define the functions \(\ve{f}, \ve{f}_1, \ve{f}_2 \in \Diff\) by</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \, \ldots, \, \ve{p}_n (x) := x^n
+\ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2 (x) = \cos (3x)\text{.}
 \end{equation*}
 </div>
-<p>is a basis for \(\Poly_n\text{,}\) so \(\Dim \Poly_n = n+1\text{.}\) Indeed, this list spans \(\Poly_n\) by definition, so we just need to check that it is linearly independent. Suppose that</p>
+<p>Then \(\ve{f}\) is a linear combination of \(\ve{f}_1\) and \(\ve{f}_2\) because of the identity \(\cos(3x) = \frac{1}{4} (3 \cos x  + \cos(3x))\text{.}\) See <a knowl="./knowl/trig_poly_example.html" title="Example 1.6.21: Trigonometric polynomials">Example 1.6.21</a>. In other words,</p>
 <div class="displaymath">
 \begin{equation*}
-a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n = \ve{0}\text{.}
+\ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 \text{.}
 \end{equation*}
 </div>
-<p><em class="emphasis">This is an equation between functions, so it holds for all \(x \in \mathbb{R}\text{!}\)</em> In other words, for all \(x \in \mathbb{R}\text{,}\) the following equation holds:</p>
-<div class="displaymath">
-\begin{equation}
-a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\tag{2.2.5}
-\end{equation}
-</div>
-<p>But, we know from algebra that a polynomial equation of the form <a knowl="./knowl/root_of_poly.html" title="Equation 2.2.5">(2.2.5)</a> with nonzero coefficients has <em class="emphasis">at most</em> \(n\) roots \(x_1, x_2, \ldots, x_n\text{.}\) So, in order for <a knowl="./knowl/root_of_poly.html" title="Equation 2.2.5">(2.2.5)</a> to hold for <em class="emphasis">all</em> real numbers \(x\text{,}\) the coefficients must be zero, i.e. \(a_0 = a_1 = a_2 = \cdots = a_n = 0\text{,}\) which is what we needed to show.</p></article><span class="incontext"><a href="Ch2Sec3BasisDimension.html#example-28">in-context</a></span>
+<p>This example shows that \(\ve{f}\) is also a trigonometric polynomial, even though its original formula \(\ve{f}(x) = \cos(3x)\) was not in the form <a knowl="./knowl/formula_for_trig_poly.html" title="Equation 1.6.7">(1.6.7)</a>.</p></article><span class="incontext"><a href="Ch2Sec1LinearCombinationSpan.html#example-28">in-context</a></span>
 </body>
 </html>
