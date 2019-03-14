@@ -436,8 +436,8 @@
    <ul>
     <li> <m>p \in \Poly^2</m>, </li>
     <li> <m>p \in \Poly^2_8</m> </li>
-    <li> <m>p \in \Poly^2_12</m> </li>
-    <li> <m>p \ni \Poly_2_7</m> </li>
+    <li> <m>p \in \Poly^2_{12}</m> </li>
+    <li> <m>p \ni \Poly^2_7</m> </li>
   </ul>
     </p>
   <p> We can regard a polynomial <m>p</m> in two variables as a special kind of function

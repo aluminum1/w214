@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:14+02:00    *-->
+<!--*    on 2019-03-14T17:49:08+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -22,28 +22,28 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">1.6.21</span> <span class="title">An example of a \(2\)nd order homogenous linear differential equation</span>
+<span class="type">Voorbeeld</span> <span class="codenumber">1.6.24</span> <span class="title">An example of a \(2\)nd order homogenous linear differential equation</span>
 </h6>
 <p>For instance,</p>
 <div class="displaymath">
 \begin{equation}
-x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)\tag{1.6.5}
+x^2 y^{''} -3 x y' + 5 y = 0, \quad x \in (0, \infty)\tag{1.6.9}
 \end{equation}
 </div>
 <p>is a homogenous 2nd order linear differential equation on the interval \((0, \infty)\text{,}\) and</p>
 <div class="displaymath">
 \begin{equation}
-y_1(x) = x^2 \sin (\log x)\tag{1.6.6}
+y_1(x) = x^2 \sin (\log x)\tag{1.6.10}
 \end{equation}
 </div>
-<p>is a solution to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>. Similarly,</p>
+<p>is a solution to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.9">(1.6.9)</a>. Similarly,</p>
 <div class="displaymath">
 \begin{equation}
-y_2(x) = x^2 \cos (\log x)\tag{1.6.7}
+y_2(x) = x^2 \cos (\log x)\tag{1.6.11}
 \end{equation}
 </div>
-<p>is also a solution to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>.</p>
-<p>We can use SageMath to check that these are indeed solutions to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>. Click the <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> button --- it should output 'True', indicating that \(y_1\) is indeed a solution to the differential equation.</p>
+<p>is also a solution to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.9">(1.6.9)</a>.</p>
+<p>We can use SageMath to check that these are indeed solutions to <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.9">(1.6.9)</a>. Click the <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> button --- it should output 'True', indicating that \(y_1\) is indeed a solution to the differential equation.</p>
 <div class="sagecell-sage" id="sage-1"><script type="text/x-sage">def solves_de(y):
  return bool(x^2 *diff(y,x,2) -3*x*diff(y,x) + 5*y == 0)
 
@@ -51,7 +51,7 @@ y1 = x^2*sin(log(x))
 
 solves_de(y1)
 </script></div>
-<article class="assemblage-like"><p>Edit the code above to check whether \(y_2\) is a solution of the differential equation <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.5">(1.6.5)</a>.</p></article><p>We can also plot the graphs of \(y_1\) and \(y_2\text{.}\) Again, click on <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
+<article class="assemblage-like"><p>Edit the code above to check whether \(y_2\) is a solution of the differential equation <a knowl="./knowl/first_example_2nd_order_ode_eqn.html" title="Vergelyking 1.6.9">(1.6.9)</a>.</p></article><p>We can also plot the graphs of \(y_1\) and \(y_2\text{.}\) Again, click on <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code>.</p>
 <div class="sagecell-sage" id="sage-2"><script type="text/x-sage">y1 = x^2*sin(log(x))
 y2 = x^2*cos(log(x))
 

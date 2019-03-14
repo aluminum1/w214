@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:18+02:00    *-->
+<!--*    on 2019-03-14T17:45:39+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -12,25 +12,11 @@
 <meta name="robots" content="noindex, nofollow">
 </head>
 <body>
-<article class="assemblage-like"><p>Ek hoop nie die \(\Sigma\)-notasie in die bostaande bewys is te verwarrend nie! Kom ek skryf presies dieselfde bewys uit <em class="emphasis">sonder</em> \(\Sigma\)-notasie, in die eenvoudige geval waar \(\mat{A}\text{,}\) \(\mat{B}\) en \(\mat{C}\) almal \(2 \times 2\)-matrikse is en ons wil die inskrywing by posisie \(11\) uitwerk.</p>
+<article class="assemblage-like"><p>Gewoonlik is \(\mat{A}\) 'n matriks, en is \(\mat{A}_{ij}\) die element van die matriks by posisie \((i,j)\text{.}\) Maar nou is \(\mat{E}_{ij}\) 'n matriks in eie reg! Sy element by posisie \((k,l)\) sal geskryf word as \((\mat{E}_{ij})_{kl}\text{.}\) Ek hoop dit is nie te verwarrend nie. Ons kan 'n elegante formule vir die elemente van \(\mat{E}_{ij}\) skryf met die Kronecker-delta-simbool:</p>
 <div class="displaymath">
-\begin{align*}
-((\mat{A}\mat{B})\mat{C})_{11} \amp = (\mat{A}\mat{B})_{11}
-\mat{C}_{11} + (\mat{A} \mat{B})_{12} \mat{C}_{21}\\
-\amp = (\mat{A}_{11} \mat{B}_{11} + \mat{A}_{12} \mat{B}_{21})
-\mat{C}_{11} + (\mat{A}_{11} \mat{B}_{12} + \mat{A}_{12}
-\mat{B}_{22}) \mat{C}_{21}\\
-\amp = \mat{A}_{11} \mat{B}_{11} \mat{C}_{11} + \mat{A}_{12}
-\mat{B}_{21} \mat{C}_{11} + \mat{A}_{11} \mat{B}_{12} \mat{C}_{21}
-+ \mat{A}_{12} \mat{B}_{22} \mat{C}_{21}\\
-\amp = \mat{A}_{11} (\mat{B}_{11} \mat{C}_{11} + \mat{B}_{12}
-\mat{C}_{21}) + \mat{A}_{12} ( \mat{B}_{21} \mat{C}_{11} +
-\mat{B}_{22} \mat{C}_{21})\\
-\amp = \mat{A}_{11} (\mat{B} \mat{C})_{11} + \mat{A}_{12} (\mat{B}
-\mat{C})_{21}\\
-\amp = (\mat{A} (\mat{B} \mat{C}))_{11}\text{.}
-\end{align*}
-</div>
-<p>Verstaan jy nou die \(\Sigma\)-notasie-bewys? Die kritieke stap (om van die tweede tot die vierde lyn te vorder) word <em class="emphasis">omruil van die sommeringsvolgorde</em> genoem.</p></article><span class="incontext"><a href="AAppAReminderAboutMatrices.html#assemblage-31">in-konteks</a></span>
+\begin{equation}
+(\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}\tag{4.0.1}
+\end{equation}
+</div></article><span class="incontext"><a href="AAppAReminderAboutMatrices.html#assemblage-31">in-konteks</a></span>
 </body>
 </html>

@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-13T11:17:44+02:00    *-->
+<!--*    on 2019-03-14T17:49:08+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,31 +13,23 @@
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.2.6</span>
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.5</span>
 </h6>
-<p>Die lys polinome</p>
+<p>Definieer die funksies \(\ve{f}, \ve{f}_1, \ve{f}_2 \in
+\Diff\) as</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \,
-\ldots, \, \ve{p}_n (x) := x^n
+\ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2
+(x) = \cos (3x)\text{.}
 \end{equation*}
 </div>
-<p>is 'n basis vir \(\Poly_n\text{,}\) so \(\dim \Poly_n = n+1\text{.}\) Duidelik span hierdie lys \(\Poly_n\) per definisie, so ons moet net seker maak dat hulle line{êr} onafhanklik is. Veronderstel dat</p>
+<p>Dan is \(\ve{f}\) 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) vanweë die identiteit \(\cos(3x) = \frac{1}{4} (3 \cos x
++ \cos(3x))\text{.}\) Sien <a knowl="./knowl/trig_poly_example.html" title="Voorbeeld 1.6.21: Trigonometriese polinome">Voorbeeld 1.6.21</a>. Met ander woorde,</p>
 <div class="displaymath">
 \begin{equation*}
-a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n
-= \ve{0}\text{.}
+\ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 \text{.}
 \end{equation*}
 </div>
-<p><em class="emphasis">Dit is 'n vergelyking van funksies, so dit geld vir alle \(x \in
-\mathbb{R}\text{!}\)</em> Met ander woorde, vir <em class="emphasis">alle</em> \(x \in \mathbb{R}\) het ons het die vergelyking</p>
-<div class="displaymath">
-\begin{equation}
-a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\text{.}\tag{2.2.5}
-\end{equation}
-</div>
-<p>Maar, ons weet uit algebra dat 'n polinoom van die vorm <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.2.5">(2.2.5)</a> met nie-nul koëffisiënte <em class="emphasis">meestens</em> \(n\) wortels \(x_1, x_2, \ldots,
-x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
-= a_2 = \cdots = a_n = 0\text{,}\) wat is wat ons moes bewys.</p></article><span class="incontext"><a href="ACh2Sec3BasisDimension.html#example-28">in-konteks</a></span>
+<p>Hierdie voorbeeld wys dat \(\ve{f}\) ook 'n trigonometriese polinoom is,selfs al is die oorspronklike formule \(\ve{f}(x) = cos(3x)\) nie van die form <a knowl="./knowl/formula_for_trig_poly.html" title="Vergelyking 1.6.7">(1.6.7)</a> nie.</p></article><span class="incontext"><a href="ACh2Sec1LineereKombinasieSpan.html#example-28">in-konteks</a></span>
 </body>
 </html>

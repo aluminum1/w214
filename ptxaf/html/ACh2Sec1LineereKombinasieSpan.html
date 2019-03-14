@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:10+02:00    *-->
+<!--*    on 2019-03-14T17:49:04+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -135,10 +135,9 @@ var login_required = false;
 </ul>
 <h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">3</span> <span class="title">Tutoriale</span></a></h2>
 <ul>
-<li><a href="Tut1.html" data-scroll="Tut1">Tutoriaal 1</a></li>
-<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
-<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
-<li><a href="Tut3.html" data-scroll="Tut3">Tutoriaal 3</a></li>
+<li><a href="Tut1Afr.html" data-scroll="Tut1Afr">Tutoriaal 1</a></li>
+<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2</a></li>
+<li><a href="Tut3Afr.html" data-scroll="Tut3Afr">Tutoriaal 3</a></li>
 </ul>
 <h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">4</span> <span class="title">Matrikshersiening</span></a></h2>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
@@ -147,34 +146,34 @@ var login_required = false;
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh2Sec1LineereKombinasieSpan"><h2 class="heading hide-type">
 <span class="type">Afdeling</span> <span class="codenumber">2.1</span> <span class="title">Lineêre kombinasies en span</span>
 </h2>
-<a href="ACh2Sec1LineereKombinasieSpan.html" class="permalink">¶</a><p id="p-278">Ons begin met 'n paar basiese definisies.</p>
+<a href="ACh2Sec1LineereKombinasieSpan.html" class="permalink">¶</a><p id="p-297">Ons begin met 'n paar basiese definisies.</p>
 <article class="definition-like" id="definition-5"><h6 class="heading">
 <span class="type">Definisie</span> <span class="codenumber">2.1.1</span>
 </h6>
-<p id="p-279">'n <dfn class="terminology">Lineêre kombinasie</dfn> van 'n eindige kolleksie vektore \(\ve{v}_1, \ldots, \ve{v}_n\) in 'n vektorruimte \(V\) is 'n vektor van die vorm</p>
+<p id="p-298">'n <dfn class="terminology">Lineêre kombinasie</dfn> van 'n eindige kolleksie vektore \(\ve{v}_1, \ldots, \ve{v}_n\) in 'n vektorruimte \(V\) is 'n vektor van die vorm</p>
 <div class="displaymath">
 \begin{equation}
 a_1 \ve{v}_1 + a_2 \ve{v}_2 + \cdots + a_b \ve{v}_n\tag{2.1.1}
 \end{equation}
 </div>
-<p>waar \(a_1, a_2, \ldots, a_n\) skalare is. As al die skalare \(a_i\) gelyk aan nul is, dan sê ons dat dit die <dfn class="terminology">triviale lineêre kombinasie</dfn> is.</p></article><article class="example-like" id="example-23"><h6 class="heading">
+<p>waar \(a_1, a_2, \ldots, a_n\) skalare is. As al die skalare \(a_i\) gelyk aan nul is, dan sê ons dat dit die <dfn class="terminology">triviale lineêre kombinasie</dfn> is.</p></article><article class="example-like" id="example-25"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.2</span>
 </h6>
-<p id="p-280">In \(\mathbb{R}^3\) is \((6, 2, -14)\) 'n lineêre kombinasie van \((-3, 1, 2)\) en \((-2, 0, 3)\text{,}\) want</p>
+<p id="p-299">In \(\mathbb{R}^3\) is \((6, 2, -14)\) 'n lineêre kombinasie van \((-3, 1, 2)\) en \((-2, 0, 3)\text{,}\) want</p>
 <div class="displaymath">
 \begin{equation*}
 (6, 2, -14) = 2 (-3, 1, 2) -6 (-2, 0, 3)\text{.}
 \end{equation*}
-</div></article><article class="example-like" id="example-24"><h6 class="heading">
+</div></article><article class="example-like" id="example-26"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.3</span> <span class="title">Checking if a vector is a linear combination of other vectors</span>
 </h6>
-<p id="p-281">In \(\mathbb{R}^4\text{,}\) is \(\ve{v}=(2, -1, 3, 0)\) a linear combination of</p>
+<p id="p-300">In \(\mathbb{R}^4\text{,}\) is \(\ve{v}=(2, -1, 3, 0)\) a linear combination of</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ and } \ve{v}_3 = (-1, 0, 2, 1) \text{?}
 \end{equation*}
 </div>
-<p id="p-282">To check this, we need to check if the equation</p>
+<p id="p-301">To check this, we need to check if the equation</p>
 <div class="displaymath">
 \begin{equation}
 \ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,\label{first_span_ex_eqn}\tag{2.1.2}
@@ -196,8 +195,8 @@ a_1 + 5a_2 -a_3 \amp = -2 \label{sim_lin_eqns_first_span_1ex}\tag{2.1.5}\\
 4a_2 + a_3 \amp = 0 \label{sim_lin_eqns_first_span_4ex}\tag{2.1.8}
 \end{align}
 </div>
-<p id="p-283">In other words, our question becomes: do equations <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.5">(2.1.5)–(2.1.8)</a> have a solution?</p>
-<p id="p-284">This is the kind of problem you already know how to solve by hand, from first year. We can also use SageMath to do it for us. We simply tell it what our unknown variables are, and then ask it to solve the equation. Press <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> to see the result.</p>
+<p id="p-302">In other words, our question becomes: do equations <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.5">(2.1.5)–(2.1.8)</a> have a solution?</p>
+<p id="p-303">This is the kind of problem you already know how to solve by hand, from first year. We can also use SageMath to do it for us. We simply tell it what our unknown variables are, and then ask it to solve the equation. Press <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> to see the result.</p>
 <div class="sagecell-sage" id="sage-7"><script type="text/x-sage">var('a1, a2, a3')
 
 solve([a1 + 5*a2 - a3 == 2, 
@@ -206,16 +205,16 @@ solve([a1 + 5*a2 - a3 == 2,
       4*a2 + a3 == 0], 
       [a1, a2, a3])
 </script></div>
-<p id="p-285">SageMath returns an empty list <code class="code-inline tex2jax_ignore">[]</code>. In other words, there are no solutions to equations <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.5">(2.1.5)–(2.1.8)</a>. Therefore \(\ve{v}\) cannot be expressed as a linear combination of \(\ve{v}_1, \ve{v}_2, \ve{v}_3\text{.}\)</p></article><article class="example-like" id="poly_example_lin_comb"><h6 class="heading">
+<p id="p-304">SageMath returns an empty list <code class="code-inline tex2jax_ignore">[]</code>. In other words, there are no solutions to equations <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.5">(2.1.5)–(2.1.8)</a>. Therefore \(\ve{v}\) cannot be expressed as a linear combination of \(\ve{v}_1, \ve{v}_2, \ve{v}_3\text{.}\)</p></article><article class="example-like" id="poly_example_lin_comb"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.4</span> <span class="title">Checking if a polynomial is a linear combination of other polynomials</span>
 </h6>
-<p id="p-286">In \(\Poly_2\text{,}\) can \(p=x^2 - 1\) be expressed as a linear combination of</p>
+<p id="p-305">In \(\Poly_2\text{,}\) can \(p=x^2 - 1\) be expressed as a linear combination of</p>
 <div class="displaymath">
 \begin{equation*}
 p_1 = 1+x^2, \, p_2 = x-3, \, p_3 = x^2+x+1, \, p_4 = x^2 + x - 1 \text{?}
 \end{equation*}
 </div>
-<p id="p-287">To check this, we need to check if the equation</p>
+<p id="p-306">To check this, we need to check if the equation</p>
 <div class="displaymath">
 \begin{equation}
 p = a_1 p_1 + a_2 p_2 + a_3 p_3 + a_4 p_4,\label{second_span_ex_eqn}\tag{2.1.9}
@@ -238,26 +237,26 @@ a_2 + a_3 + a_4 \amp = 0\tag{2.1.11}\\
 a_1 + a_3 + a_4 \amp = 1 \label{sim_lin_eqns_second_span_4ex}\tag{2.1.12}
 \end{align}
 </div>
-<p id="p-288">In other words, our question becomes: do equations <a knowl="./knowl/sim_lin_eqns_second_span_1ex.html" title="Vergelyking 2.1.10">(2.1.10)–(2.1.12)</a> have a solution? We ask SageMath.</p>
+<p id="p-307">In other words, our question becomes: do equations <a knowl="./knowl/sim_lin_eqns_second_span_1ex.html" title="Vergelyking 2.1.10">(2.1.10)–(2.1.12)</a> have a solution? We ask SageMath.</p>
 <div class="sagecell-sage" id="sage-8"><script type="text/x-sage">var('a1, a2, a3, a4')
 
 solve([a1 - 3*a2 + a3 - a4 == -1, 
       a2 + a3 + a4 == 0, 
       a1 + a3 - a4 == 1], 
       [a1, a2, a3, a4])
-</script></div> On my computer, Sage returns: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-289"><code class="code-inline tex2jax_ignore"> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </code></p></div></div></div>
-<p id="p-290">Here, <code class="code-inline tex2jax_ignore">r1</code> and <code class="code-inline tex2jax_ignore">r2</code> are to be interpreted as free paramters. I'm going to call them  \(s\) and \(t\) instead, because that's what we usually call our free parameters! So, equations <a knowl="./knowl/sim_lin_eqns_second_span_1ex.html" title="Vergelyking 2.1.10">(2.1.10)–(2.1.12)</a> have <em class="emphasis">infinitely</em> many solutions, parameterized by two free parameters \(s\) and \(t\text{.}\) In particular, there exists <em class="emphasis">at least one</em> solution. For instance, if we take \(s=2\) and \(t = 1\) (a totally arbitrary choice!), we get the following solution:</p>
+</script></div> On my computer, Sage returns: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-308"><code class="code-inline tex2jax_ignore"> [[a1 == 2*r1 + 2/3, a2 == (2/3), a3 == -r1 + 1/3, a4 == r1]] </code></p></div></div></div>
+<p id="p-309">Here, <code class="code-inline tex2jax_ignore">r1</code> and <code class="code-inline tex2jax_ignore">r2</code> are to be interpreted as free paramters. I'm going to call them  \(s\) and \(t\) instead, because that's what we usually call our free parameters! So, equations <a knowl="./knowl/sim_lin_eqns_second_span_1ex.html" title="Vergelyking 2.1.10">(2.1.10)–(2.1.12)</a> have <em class="emphasis">infinitely</em> many solutions, parameterized by two free parameters \(s\) and \(t\text{.}\) In particular, there exists <em class="emphasis">at least one</em> solution. For instance, if we take \(s=2\) and \(t = 1\) (a totally arbitrary choice!), we get the following solution:</p>
 <div class="displaymath">
 \begin{gather}
 a_1 = \frac{8}{3}, \, a_2 = \frac{2}{3}, a_3 = -\frac{5}{3}, a_4 = 1 \tag{2.1.13}\\
 \text{i.e. } p = \frac{8}{3} p_1 + \frac{2}{3} p_2 - \frac{5}{3} p_3 + p_4 \label{soln_poly_span_prob}\tag{2.1.14}
 \end{gather}
 </div>
-<p id="p-291">You should expand out the right hand side of <a knowl="./knowl/soln_poly_span_prob.html" title="Vergelyking 2.1.14">(2.1.14)</a> by hand and check that it indeed is equal to \(p\text{.}\)</p>
-<p id="p-292">We conclude that \(p\) can indeed be expressed as a linear combination of \(p_1\text{,}\) \(p_2\text{,}\) \(p_3\) and \(p_4\text{.}\)</p></article><article class="example-like" id="example-26"><h6 class="heading">
+<p id="p-310">You should expand out the right hand side of <a knowl="./knowl/soln_poly_span_prob.html" title="Vergelyking 2.1.14">(2.1.14)</a> by hand and check that it indeed is equal to \(p\text{.}\)</p>
+<p id="p-311">We conclude that \(p\) can indeed be expressed as a linear combination of \(p_1\text{,}\) \(p_2\text{,}\) \(p_3\) and \(p_4\text{.}\)</p></article><article class="example-like" id="example-28"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.5</span>
 </h6>
-<p id="p-293">Definieer die funksies \(\ve{f}, \ve{f}_1, \ve{f}_2 \in
+<p id="p-312">Definieer die funksies \(\ve{f}, \ve{f}_1, \ve{f}_2 \in
 \Diff\) as</p>
 <div class="displaymath">
 \begin{equation*}
@@ -265,21 +264,21 @@ a_1 = \frac{8}{3}, \, a_2 = \frac{2}{3}, a_3 = -\frac{5}{3}, a_4 = 1 \tag{2.1.13
 (x) = \cos (3x)\text{.}
 \end{equation*}
 </div>
-<p id="p-294">Dan is \(\ve{f}\) 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) vanweë die identiteit \(\cos(3x) = \frac{1}{4} (3 \cos x
-+ \cos(3x))\text{.}\) Sien <a knowl="./knowl/trig_poly_example.html" title="Voorbeeld 1.6.18: Trigonometriese polinome">Voorbeeld 1.6.18</a>. Met ander woorde,</p>
+<p id="p-313">Dan is \(\ve{f}\) 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) vanweë die identiteit \(\cos(3x) = \frac{1}{4} (3 \cos x
++ \cos(3x))\text{.}\) Sien <a knowl="./knowl/trig_poly_example.html" title="Voorbeeld 1.6.21: Trigonometriese polinome">Voorbeeld 1.6.21</a>. Met ander woorde,</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 \text{.}
 \end{equation*}
 </div>
-<p id="p-295">Hierdie voorbeeld wys dat \(\ve{f}\) ook 'n trigonometriese polinoom is,selfs al is die oorspronklike formule \(\ve{f}(x) = cos(3x)\) nie van die form <a knowl="./knowl/formula_for_trig_poly.html" title="Vergelyking 1.6.3">(1.6.3)</a> nie.</p></article><article class="definition-like" id="definition-6"><h6 class="heading">
+<p id="p-314">Hierdie voorbeeld wys dat \(\ve{f}\) ook 'n trigonometriese polinoom is,selfs al is die oorspronklike formule \(\ve{f}(x) = cos(3x)\) nie van die form <a knowl="./knowl/formula_for_trig_poly.html" title="Vergelyking 1.6.7">(1.6.7)</a> nie.</p></article><article class="definition-like" id="definition-6"><h6 class="heading">
 <span class="type">Definisie</span> <span class="codenumber">2.1.6</span>
 </h6>
-<p id="p-296">Ons sê dat die lys vektore \(\basis{B} = \bopen \ve{v}_1, \ve{v}_2,
-\ldots, \ve{v}_n \bclose\) in 'n vektorruimte \(V\) \(V\) <dfn class="terminology">span</dfn> as elke vektor \(\ve{v} \in V\) 'n lineêre kombinasie van die vektore uit \(\basis{B}\text{.}\)</p></article><article class="example-like" id="example-27"><h6 class="heading">
+<p id="p-315">Ons sê dat die lys vektore \(\basis{B} = \bopen \ve{v}_1, \ve{v}_2,
+\ldots, \ve{v}_n \bclose\) in 'n vektorruimte \(V\) \(V\) <dfn class="terminology">span</dfn> as elke vektor \(\ve{v} \in V\) 'n lineêre kombinasie van die vektore uit \(\basis{B}\text{.}\)</p></article><article class="example-like" id="example-29"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.7</span>
 </h6>
-<p id="p-297">\(\mathbb{R}^2\) word deur</p>
+<p id="p-316">\(\mathbb{R}^2\) word deur</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{e}_1 := (1, \, 0), \, \, \ve{e}_2 := (0, 1)
@@ -294,18 +293,18 @@ a_1 = \frac{8}{3}, \, a_2 = \frac{2}{3}, a_3 = -\frac{5}{3}, a_4 = 1 \tag{2.1.13
 <p>uitgedruk word.</p></article><article class="example-like" id="three_vectors_spanning_R2_example"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.8</span> <span class="title">Checking if a list of vectors space the vector space</span>
 </h6>
-<p id="p-298">Is \(\mathbb{R}^2\) spanned by the following list of vectors?</p>
+<p id="p-317">Is \(\mathbb{R}^2\) spanned by the following list of vectors?</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{f}_1 := (-1, 2), \, \ve{f}_2 := (1, 1), \, \ve{f}_3 := (2, -1) 
 \end{equation*}
 </div>
-<p id="p-299"><figure class="figure-like" id="spanning_set_R2"><div style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/image-12.svg" style="width: 100%; height: auto;" alt=""></div>
+<p id="p-318"><figure class="figure-like" id="spanning_set_R2"><div style="width: 70%; margin-left: 15%; margin-right: 15%;"><img src="images/image-12.svg" style="width: 100%; height: auto;" alt=""></div>
 <figcaption><span class="type">Figuur</span> <span class="codenumber">2.1.9</span> A list of vectors which spans \(\mathbb{R}^2\text{.}\)</figcaption></figure></p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-5" id="solution-5"><span class="type">Oplossing</span></a><div id="hk-solution-5" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-300">To check this, we need check if every vector \(\ve{v} \in V\) can be written as a linear combination of \(\ve{f}_1, \ve{f}_2\) and \(\ve{f}_3\text{.}\)</p>
-<p id="p-301">So, let \(\ve{v} = (v_1,v_2) \) be a fixed, but arbitrary, vector in \(\mathbb{R}^2\text{.}\) We need to check if the following equation has a solution for \(a_1, a_2, a_3\text{:}\)</p>
+<a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="type">Oplossing</span></a><div id="hk-solution-6" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-319">To check this, we need check if every vector \(\ve{v} \in V\) can be written as a linear combination of \(\ve{f}_1, \ve{f}_2\) and \(\ve{f}_3\text{.}\)</p>
+<p id="p-320">So, let \(\ve{v} = (v_1,v_2) \) be a fixed, but arbitrary, vector in \(\mathbb{R}^2\text{.}\) We need to check if the following equation has a solution for \(a_1, a_2, a_3\text{:}\)</p>
 <div class="displaymath">
 \begin{equation}
 \ve{v} = a_1 \ve{f}_1 + a_2 \ve{f}_2 + a_3 \ve{f}_3\label{eqn_for_R2_span}\tag{2.1.15}
@@ -327,9 +326,9 @@ a_1 (-1, 2) + a_2 (1, 1) + a_3 (2, -1) \tag{2.1.17}\\
 2a_1 + a_2 - a_3 \amp = v_2\label{sim_lin_eqns_3ex2}\tag{2.1.20}
 \end{align}
 </div>
-<p id="p-302">In other words, the original question</p>
-<article class="assemblage-like" id="assemblage-10"><p id="p-303">Is \(\mathbb{R}^2\) spanned by \(\ve{f}_1, \ve{f}_2, \ve{f}_3 \) ?</p></article><p id="p-304">is equivalent to the question</p>
-<article class="assemblage-like" id="assemblage-11"><p id="p-305">Can we always solve <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a> for \(a_1, a_2, a_3\text{,}\) no matter what the fixed constants \(\ve{v}_1, \ve{v}_2\) are?</p></article><p id="p-306">You already know how to solve simultaneous linear equations such as <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a> by hand:</p>
+<p id="p-321">In other words, the original question</p>
+<article class="assemblage-like" id="assemblage-11"><p id="p-322">Is \(\mathbb{R}^2\) spanned by \(\ve{f}_1, \ve{f}_2, \ve{f}_3 \) ?</p></article><p id="p-323">is equivalent to the question</p>
+<article class="assemblage-like" id="assemblage-12"><p id="p-324">Can we always solve <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a> for \(a_1, a_2, a_3\text{,}\) no matter what the fixed constants \(\ve{v}_1, \ve{v}_2\) are?</p></article><p id="p-325">You already know how to solve simultaneous linear equations such as <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a> by hand:</p>
 <div class="displaymath">
 \begin{align}
 -a_1 + a_2 + 2a_3 \amp = v_1 \tag{2.1.21}\\
@@ -343,8 +342,8 @@ a_1 (-1, 2) + a_2 (1, 1) + a_3 (2, -1) \tag{2.1.17}\\
 \therefore a_1 \amp = -\frac{1}{3} (-v_1 + v_2) + t \label{span_ex_aa2}\tag{2.1.29}
 \end{align}
 </div>
-<p id="p-307">In other words, no matter what \(v_1, v_2\) are, there are always infinitely many solutions (they are parameterized a free parameter \(t\)) to <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a>, and hence to our original equation <a knowl="./knowl/eqn_for_R2_span.html" title="Vergelyking 2.1.15">(2.1.15)</a>. That is, we can express <em class="emphasis">any</em> \(\ve{v} \in \mathbb{R}^2\) as a linear combination of the vectors \(\ve{f}_1, \ve{f}_2, \ve{f}_3\text{...}\) and in fact there are <em class="emphasis">infinitely</em> many ways to do it, parameterized by a free parameter \(t\text{!}\)</p>
-<p id="p-308">For instance, suppose we try to write \(\ve{v} = (2,3)\) as a linear combination of \(\ve{f}_1, \ve{f}_2, \ve{f}_3\text{.}\) If we take our general solution (<a knowl="./knowl/span_ex_aa1.html" title="Vergelyking 2.1.27">(2.1.27)–(2.1.29)</a>), and set \(t=0\text{,}\) then we get</p>
+<p id="p-326">In other words, no matter what \(v_1, v_2\) are, there are always infinitely many solutions (they are parameterized a free parameter \(t\)) to <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a>, and hence to our original equation <a knowl="./knowl/eqn_for_R2_span.html" title="Vergelyking 2.1.15">(2.1.15)</a>. That is, we can express <em class="emphasis">any</em> \(\ve{v} \in \mathbb{R}^2\) as a linear combination of the vectors \(\ve{f}_1, \ve{f}_2, \ve{f}_3\text{...}\) and in fact there are <em class="emphasis">infinitely</em> many ways to do it, parameterized by a free parameter \(t\text{!}\)</p>
+<p id="p-327">For instance, suppose we try to write \(\ve{v} = (2,3)\) as a linear combination of \(\ve{f}_1, \ve{f}_2, \ve{f}_3\text{.}\) If we take our general solution (<a knowl="./knowl/span_ex_aa1.html" title="Vergelyking 2.1.27">(2.1.27)–(2.1.29)</a>), and set \(t=0\text{,}\) then we get</p>
 <div class="displaymath">
 \begin{gather*}
 a_1 = \frac{1}{3}, \, a_2 = \frac{7}{3}, \, a_3 = 0 \\
@@ -358,18 +357,18 @@ a_1 = \frac{4}{3}, \, a_2 = \frac{4}{3}, \, a_3 = 1 \\
 \text{i.e. } \ve{v} = \frac{4}{3} \ve{f}_1 + \frac{4}{3} \ve{f}_2 + \ve{f}_3 
 \end{gather*}
 </div>
-<p id="p-309">There are infinitely many solutions. But the important point is that <em class="emphasis">there is always a solution to <a knowl="./knowl/eqn_for_R2_span.html" title="Vergelyking 2.1.15">(2.1.15)</a></em>, no matter what \(\ve{v}\) is. Therefore, the vectors \(\ve{f}_1, \ve{f}_2, \ve{f}_3\) indeed span \(\mathbb{R}^2\text{.}\)</p>
-<p id="p-310">Finally, let us solve this problem using SageMath. Working by hand, we arrive at the simultanous linear equations <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a>, and then put it into a Sage cell: <div class="sagecell-sage" id="sage-9"><script type="text/x-sage">var('a1, a2, a3, v1, v2')
+<p id="p-328">There are infinitely many solutions. But the important point is that <em class="emphasis">there is always a solution to <a knowl="./knowl/eqn_for_R2_span.html" title="Vergelyking 2.1.15">(2.1.15)</a></em>, no matter what \(\ve{v}\) is. Therefore, the vectors \(\ve{f}_1, \ve{f}_2, \ve{f}_3\) indeed span \(\mathbb{R}^2\text{.}\)</p>
+<p id="p-329">Finally, let us solve this problem using SageMath. Working by hand, we arrive at the simultanous linear equations <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a>, and then put it into a Sage cell: <div class="sagecell-sage" id="sage-9"><script type="text/x-sage">var('a1, a2, a3, v1, v2')
 
 solve([-a1 + a2 + 2*a3 == v1,
        2*a1 + a2 - a3  == v2],
        [a1, a2, a3])
-</script></div> Note that I needed to tell Sage that <code class="code-inline tex2jax_ignore">v1</code> and <code class="code-inline tex2jax_ignore">v2</code> are variables, and that I am asking it to solve for <code class="code-inline tex2jax_ignore">a1</code>, <code class="code-inline tex2jax_ignore">a2</code> and <code class="code-inline tex2jax_ignore">a3</code>. On my computer, Sage outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-311"><code class="code-inline tex2jax_ignore"> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </code></p></div></div></div> Here, <code class="code-inline tex2jax_ignore">r1</code> is to be interpreted as our free parameter \(t\text{.}\) So Sage is giving us the same solution as we found by hand, <a knowl="./knowl/span_ex_aa1.html" title="Vergelyking 2.1.27">(2.1.27)–(2.1.29)</a>.</p>
+</script></div> Note that I needed to tell Sage that <code class="code-inline tex2jax_ignore">v1</code> and <code class="code-inline tex2jax_ignore">v2</code> are variables, and that I am asking it to solve for <code class="code-inline tex2jax_ignore">a1</code>, <code class="code-inline tex2jax_ignore">a2</code> and <code class="code-inline tex2jax_ignore">a3</code>. On my computer, Sage outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-330"><code class="code-inline tex2jax_ignore"> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </code></p></div></div></div> Here, <code class="code-inline tex2jax_ignore">r1</code> is to be interpreted as our free parameter \(t\text{.}\) So Sage is giving us the same solution as we found by hand, <a knowl="./knowl/span_ex_aa1.html" title="Vergelyking 2.1.27">(2.1.27)–(2.1.29)</a>.</p>
 </div></div>
 </div></article><article class="example-like" id="Rn_spanning_set"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.1.10</span>
 </h6>
-<p id="p-312">\(\mathbb{R}^n\) word deur</p>
+<p id="p-331">\(\mathbb{R}^n\) word deur</p>
 <div class="displaymath">
 \begin{equation}
 \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots,
@@ -382,18 +381,18 @@ solve([-a1 + a2 + 2*a3 == v1,
 \ve{v} = a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n\text{.}\label{standard_basis_R_n}\tag{2.1.31}
 \end{equation}
 </div>
-<p>uitgedruk word.</p></article><article class="exercise-like" id="exercise-47"><h6 class="heading">
+<p>uitgedruk word.</p></article><article class="exercise-like" id="exercise-48"><h6 class="heading">
 <span class="type">Verstaanpunt</span> <span class="codenumber">2.1.11</span>
 </h6>
-<p id="p-313">Bevestig die korrektheid van <a knowl="./knowl/standard_basis_R_n.html" title="Vergelyking 2.1.31">(2.1.31)</a>.</p></article><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
+<p id="p-332">Bevestig die korrektheid van <a knowl="./knowl/standard_basis_R_n.html" title="Vergelyking 2.1.31">(2.1.31)</a>.</p></article><section class="exercises" id="exercises-5"><h3 class="heading hide-type">
 <span class="type">Onderafdeling</span> <span class="codenumber"></span> <span class="title">Oefeninge</span>
 </h3>
-<article class="exercise-like" id="exercise-48"><h6 class="heading">
+<article class="exercise-like" id="exercise-49"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-314">Recall from \(1^\text{st}\) year that a function \(f: \mathbb R \to \mathbb R \) is even if \(f(-x) = f(x) \) and odd if  \(f(-x) = -f(x) \text{.}\) Show that every vector in the vector space \(\Fun(\mathbb R)\) is a linear combination of an even function and an odd function.</p>
+<p id="p-333">Recall from \(1^\text{st}\) year that a function \(f: \mathbb R \to \mathbb R \) is even if \(f(-x) = f(x) \) and odd if  \(f(-x) = -f(x) \text{.}\) Show that every vector in the vector space \(\Fun(\mathbb R)\) is a linear combination of an even function and an odd function.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-6" id="solution-6"><span class="type">Oplossing</span></a><div id="hk-solution-6" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-315">The solution is relatively straightforward. Define the following two functions:</p>
+<a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="type">Oplossing</span></a><div id="hk-solution-7" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-334">The solution is relatively straightforward. Define the following two functions:</p>
 <div class="displaymath">
 \begin{equation*}
 f_{\text{even}} (x)= \frac{1}{2}\left(f(x) + f(-x) \right), \quad f_{\text{odd}} (x)= \frac{1}{2}\left( f(x) - f(-x) \right)
@@ -406,12 +405,12 @@ f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right
 \end{equation*}
 </div>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-49"><h6 class="heading">
+</div></article><article class="exercise-like" id="exercise-50"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-316">Suppose \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) spans \(V\text{.}\) Prove that \(\ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4\) also spans \(V\text{.}\)</p>
+<p id="p-335">Suppose \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) spans \(V\text{.}\) Prove that \(\ve v_1 - \ve v_2, \ve v_2 - \ve v_3, \ve v_3 - \ve v_4 , \ve v_4\) also spans \(V\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-7" id="solution-7"><span class="type">Oplossing</span></a><div id="hk-solution-7" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-317">If we are given that \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) spans \(V\) then to show that any other collection of vectors in \(V\) spans \(V\) it suffices to show that each of \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) can be written has a linear combination of the new collection - you should try prove this yourself! <p id="p-318">With this observation in hand, the exercise has an easy solution.</p></p>
+<a knowl="" class="id-ref" refid="hk-solution-8" id="solution-8"><span class="type">Oplossing</span></a><div id="hk-solution-8" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-336">If we are given that \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) spans \(V\) then to show that any other collection of vectors in \(V\) spans \(V\) it suffices to show that each of \(\ve v_1, \ve v_2 , \ve v_3, \ve v_4\) can be written has a linear combination of the new collection - you should try prove this yourself! <p id="p-337">With this observation in hand, the exercise has an easy solution.</p></p>
 <div class="displaymath">
 \begin{align*}
 \ve v_1 \amp = (\ve v_1 - \ve v_2)  + (\ve v_2 - \ve v_3) + (\ve v_3 - \ve v_4) + \ve v_4 \\
@@ -421,21 +420,21 @@ f_{\text{even}} (x) +  f_{\text{odd}} (x) = \frac{1}{2}\left(f(x) + f(-x) \right
 \end{align*}
 </div>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-50"><h6 class="heading">
+</div></article><article class="exercise-like" id="exercise-51"><h6 class="heading">
 <span class="codenumber">3</span> </h6>
-<p id="p-319">Consider the following polynomials in \(\Poly_2\text{:}\)</p>
+<p id="p-338">Consider the following polynomials in \(\Poly_2\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{r}_1 (x) := 3x^2 - 2, \, \ve{r}_2 (x) := x^2 + x, \, \ve{r}_3 (x) := x + 1, \, \ve{r}_4 (x) := x-1
 \end{equation*}
 </div>
 <ol class="lower-alpha">
-<li id="li-49"><p id="p-320">Can the polynomial \(\ve{p}\) with \(\ve{p}(x) = x^2 + 1\) be written as a linear combination of \(\ve{r}_1\text{,}\) \(\ve{r}_2\text{,}\) \(\ve{r}_3\text{,}\) \(\ve{r}_4\text{?}\)</p></li>
-<li id="li-50"><p id="p-321">If so, in <em class="emphasis">how many ways</em> can this be done?</p></li>
+<li id="li-53"><p id="p-339">Can the polynomial \(\ve{p}\) with \(\ve{p}(x) = x^2 + 1\) be written as a linear combination of \(\ve{r}_1\text{,}\) \(\ve{r}_2\text{,}\) \(\ve{r}_3\text{,}\) \(\ve{r}_4\text{?}\)</p></li>
+<li id="li-54"><p id="p-340">If so, in <em class="emphasis">how many ways</em> can this be done?</p></li>
 </ol>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-8" id="solution-8"><span class="type">Oplossing</span></a><div id="hk-solution-8" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-322" class="lower-alpha">
-<li id="li-51">We must set up the appropriate system of linear equations:<div class="displaymath">
+<a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="type">Oplossing</span></a><div id="hk-solution-9" class="hidden-content tex2jax_ignore"><div class="solution"><ol id="p-341" class="lower-alpha">
+<li id="li-55">We must set up the appropriate system of linear equations:<div class="displaymath">
 \begin{align*}
 \amp a\ve r_1(x) + b \ve r_2(x) + c \ve r_3(x) + d \ve r_4(x) \amp = \amp\ve p(x)\\
 \implies \amp a(3x^2 - 2) + b(x^2 + x) + c(x+1) + d(x-1) \amp  = \amp x^2 + 1 
@@ -458,16 +457,16 @@ x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
 \amp  c = 5 + 5d. 
 \end{align*}
 </div>And so \(\ve p (x)\) is indeed a linear combination of \(\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)\text{.}\)</li>
-<li id="li-52">Since \(d\) is free in the above solution set, we can write \(\ve p (x)\) as a linear combination of \(\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)\) in an uncountably infinite number of ways (one for each real number!).</li>
+<li id="li-56">Since \(d\) is free in the above solution set, we can write \(\ve p (x)\) as a linear combination of \(\ve r_1(x),\ve r_2(x),\ve r_3(x),\ve r_4(x)\) in an uncountably infinite number of ways (one for each real number!).</li>
 </ol></div></div>
-</div></article><article class="exercise-like" id="exercise-51"><h6 class="heading">
+</div></article><article class="exercise-like" id="exercise-52"><h6 class="heading">
 <span class="codenumber">4</span> </h6>
-<p id="p-323">Suppose that the vectors \(\ve{e}_1\text{,}\) \(\ve{e}_2\text{,}\) \(\ve{e}_3\) and \(\ve{e}_4\) span a vector space \(V\text{.}\) Show that the vectors \(\ve{f}_1 := \ve{e}_2 - \ve{e}_1\text{,}\) \(\ve{f}_2 := \ve{e}_3 - \ve{e}_2\text{,}\) \(\ve{f}_3 := \ve{e}_4 - \ve{e}_3\text{,}\) \(\ve{f}_4 := \ve{e}_4\) also span \(V\text{.}\)</p>
+<p id="p-342">Suppose that the vectors \(\ve{e}_1\text{,}\) \(\ve{e}_2\text{,}\) \(\ve{e}_3\) and \(\ve{e}_4\) span a vector space \(V\text{.}\) Show that the vectors \(\ve{f}_1 := \ve{e}_2 - \ve{e}_1\text{,}\) \(\ve{f}_2 := \ve{e}_3 - \ve{e}_2\text{,}\) \(\ve{f}_3 := \ve{e}_4 - \ve{e}_3\text{,}\) \(\ve{f}_4 := \ve{e}_4\) also span \(V\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-9" id="solution-9"><span class="type">Oplossing</span></a><div id="hk-solution-9" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-324">You could choose to show this directly or we could use a clever approach based on \(\mathbf 2 \text{.}\) From \(\mathbf 2  \text{,}\) we know that \(\ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4\) must span \(V \text{.}\) But if these vectors span \(V \text{,}\) then non-zero multiples of the vectors also span \(V\text{.}\) Thus \(\ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 \) must span \(V\text{.}\)</p></div></div>
+<a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="type">Oplossing</span></a><div id="hk-solution-10" class="hidden-content tex2jax_ignore"><div class="solution"><p id="p-343">You could choose to show this directly or we could use a clever approach based on \(\mathbf 2 \text{.}\) From \(\mathbf 2  \text{,}\) we know that \(\ve e_1 - \ve e_2, \ve e_2 - \ve ev_3, \ve e_3 - \ve e_4 , \ve e_4\) must span \(V \text{.}\) But if these vectors span \(V \text{,}\) then non-zero multiples of the vectors also span \(V\text{.}\) Thus \(\ve{f}_1, \ve{f}_2, \ve{f}_3 ,\ve{f}_4 \) must span \(V\text{.}\)</p></div></div>
 </div></article><article class="exercise-like" id="chebyshev_example"><h6 class="heading">
 <span class="codenumber">5</span> </h6>
-<p id="p-325">Show that the polynomials</p>
+<p id="p-344">Show that the polynomials</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2 - 1, \,\, \ve{q}_3(x) := 4x^3 - 3x
@@ -475,8 +474,8 @@ x^2(3a + b) + x(b + c + d) + (-2a + c -d ) = x^2 + 1 .
 </div>
 <p>span \(\Poly_3\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-10" id="solution-10"><span class="type">Oplossing</span></a><div id="hk-solution-10" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-326">Once again we base our strategy on \(2\text{.}\) Pick a spanning set for \(\Poly_3\text{.}\) We'll use \(1, x , x^2 , x^3\text{,}\) since it's the simplest. \(1, x\) are certainly spanned by \(\ve q_0x), \ve q_1, \ve q_2, \ve q_3\) since \(1 = \ve q_0(x)\) and \(x = \ve q_1(x)\text{.}\) It can easily be seen that</p>
+<a knowl="" class="id-ref" refid="hk-solution-11" id="solution-11"><span class="type">Oplossing</span></a><div id="hk-solution-11" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-345">Once again we base our strategy on \(2\text{.}\) Pick a spanning set for \(\Poly_3\text{.}\) We'll use \(1, x , x^2 , x^3\text{,}\) since it's the simplest. \(1, x\) are certainly spanned by \(\ve q_0x), \ve q_1, \ve q_2, \ve q_3\) since \(1 = \ve q_0(x)\) and \(x = \ve q_1(x)\text{.}\) It can easily be seen that</p>
 <div class="displaymath">
 \begin{equation*}
 x^2 = \frac{1}{2}\ve q_2(x) + \frac{1}{2}\ve q_0(x) \\
@@ -485,11 +484,11 @@ x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
 </div>
 <p>.completing the proof.</p>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-53"><h6 class="heading">
+</div></article><article class="exercise-like" id="exercise-54"><h6 class="heading">
 <span class="codenumber">6</span> </h6>
-<p id="p-327">Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that \(w\) is another vector in \(V\text{.}\) Prove that the list of vectors \(\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose\) also spans \(V\text{.}\)</p></article><article class="exercise-like" id="exercise-span-omission"><h6 class="heading">
+<p id="p-346">Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that \(w\) is another vector in \(V\text{.}\) Prove that the list of vectors \(\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose\) also spans \(V\text{.}\)</p></article><article class="exercise-like" id="exercise-span-omission"><h6 class="heading">
 <span class="codenumber">7</span> </h6>
-<p id="p-328">Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that one of the vectors in the list, say \(\ve{v}_r\text{,}\) can be expressed as a linear combination of the preceding vectors:</p>
+<p id="p-347">Let \(\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) be a list of vectors in a vector space \(V\text{.}\) Suppose that \(\basis{S}\) spans \(V\text{.}\) Suppose that one of the vectors in the list, say \(\ve{v}_r\text{,}\) can be expressed as a linear combination of the preceding vectors:</p>
 <div class="displaymath">
 \begin{equation}
 \ve{v}_r = a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}\label{exercise-span-omission-1}\tag{2.1.32}
@@ -503,8 +502,8 @@ x^3 = \frac{1}{4}\ve q_3(x) + \frac{3}{4}\ve q_1(x),
 </div>
 <p>Prove that \(\basis{T}\) also spans \(V\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-11" id="solution-11"><span class="type">Oplossing</span></a><div id="hk-solution-11" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-329">We must show that every vector \(\ve{v} \in V\) can be written as a linear combination of the vectors from \(\basis{T}\text{.}\) So let \(\ve{v} \in V\text{.}\) Since \(\basis{S}\) spans \(V\text{,}\) we know we can write \(\ve{v}\) as a linear combination of the vectors from \(\basis{S}\text{:}\)</p>
+<a knowl="" class="id-ref" refid="hk-solution-12" id="solution-12"><span class="type">Oplossing</span></a><div id="hk-solution-12" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-348">We must show that every vector \(\ve{v} \in V\) can be written as a linear combination of the vectors from \(\basis{T}\text{.}\) So let \(\ve{v} \in V\text{.}\) Since \(\basis{S}\) spans \(V\text{,}\) we know we can write \(\ve{v}\) as a linear combination of the vectors from \(\basis{S}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation}
 \ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n\label{exercise-span-omission-2}\tag{2.1.33}

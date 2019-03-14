@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:11+02:00    *-->
+<!--*    on 2019-03-14T17:49:05+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -135,10 +135,9 @@ var login_required = false;
 </ul>
 <h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">3</span> <span class="title">Tutoriale</span></a></h2>
 <ul>
-<li><a href="Tut1.html" data-scroll="Tut1">Tutoriaal 1</a></li>
-<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
-<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
-<li><a href="Tut3.html" data-scroll="Tut3">Tutoriaal 3</a></li>
+<li><a href="Tut1Afr.html" data-scroll="Tut1Afr">Tutoriaal 1</a></li>
+<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2</a></li>
+<li><a href="Tut3Afr.html" data-scroll="Tut3Afr">Tutoriaal 3</a></li>
 </ul>
 <h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">4</span> <span class="title">Matrikshersiening</span></a></h2>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
@@ -147,22 +146,31 @@ var login_required = false;
 <main class="main"><div id="content" class="mathbook-content"><section class="section" id="ACh2Sec3BasisDimension"><h2 class="heading hide-type">
 <span class="type">Afdeling</span> <span class="codenumber">2.3</span> <span class="title">Basis en dimensie</span>
 </h2>
-<a href="ACh2Sec3BasisDimension.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><article class="definition-like" id="defn_basis"><h6 class="heading">
+<a href="ACh2Sec3BasisDimension.html" class="permalink">¶</a><section class="introduction" id="introduction-7"><p id="p-388">In hierdie afdeling introduseer ons die begrippe van:</p>
+<ul class="disc">
+<li id="li-67">'n <em class="emphasis">deelruimte</em> van 'n vektorruimte, en ,</li>
+<li id="li-68">die <em class="emphasis">dimensie</em> van 'n vektorruimte.</li>
+</ul>
+<p>Dan bereken ons die dimensies van die vektorruimtes wat ons tot hierdie punt gesien het. Ons eindig deur die <em class="emphasis">sifalgoritme</em> te verduidelik, wat ons toelaat om nuttige resultate rakend basis en dimensie te bewys.</p>
+<article class="definition-like" id="defn_basis"><h6 class="heading">
 <span class="type">Definisie</span> <span class="codenumber">2.3.1</span>
 </h6>
-<p id="p-369">'n Lys vektore \(\basis{B} = \bopen \ve{e}_1,
+<p id="p-389">'n Lys vektore \(\basis{B} = \bopen \ve{e}_1,
 \ve{e}_2, \ldots, \ve{e}_n \bclose \) in 'n vektorruimte \(V\) word 'n <dfn class="terminology">basis</dfn> van \(V\) genoem as dit lineêr onafhanklik is en \(V\) span.</p></article><article class="theorem-like" id="inv_dim"><h6 class="heading">
 <span class="type">Stelling</span> <span class="codenumber">2.3.2</span> <span class="title">Invariansie van dimensie</span>
 </h6>
-<p id="p-370">As \(\ve{e}_1,
-\ve{e}_2, \ldots, \ve{e}_n\) en \(\ve{f}_1, \ve{f}_2, \ldots, \ve{f}_n\) albei basisse van 'n vektorruimte \(V\) is, dan is \(m=n\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-371">Dit is 'n gevolg van <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Proposisie 2.2.10</a> (die afstampproposisie). Aangesien die \(\ve{e}\)-vectore \(V\) lineêr onfafhanklik is en die \(\ve{f}\)-vektore \(V\) span, het ons \(m \leq n\text{.}\) Aan die ander kant, omdat die \(\ve{f}\)-vektore linêr onfahanklik is en die \(\ve{e}\)-vektore \(V\) span, het ons \(n \leq m\text{.}\) Daarom is \(m=n\text{.}\)</p></article></div>
+<p id="p-390">As \(\ve{e}_1,
+\ve{e}_2, \ldots, \ve{e}_n\) en \(\ve{f}_1, \ve{f}_2, \ldots, \ve{f}_n\) albei basisse van 'n vektorruimte \(V\) is, dan is \(m=n\text{.}\)</p></article><article class="hiddenproof" id="proof-9"><a knowl="" class="id-ref" refid="hk-proof-9"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-9" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-391">Dit is 'n gevolg van <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Proposisie 2.2.10</a> (die afstampproposisie). Aangesien die \(\ve{e}\)-vectore \(V\) lineêr onfafhanklik is en die \(\ve{f}\)-vektore \(V\) span, het ons \(m \leq n\text{.}\) Aan die ander kant, omdat die \(\ve{f}\)-vektore linêr onfahanklik is en die \(\ve{e}\)-vektore \(V\) span, het ons \(n \leq m\text{.}\) Daarom is \(m=n\text{.}\)</p></article></div>
 <article class="definition-like" id="dim_vec_space"><h6 class="heading">
 <span class="type">Definisie</span> <span class="codenumber">2.3.3</span>
 </h6>
-<p id="p-372">'n Vektorruimte \(V\) is <dfn class="terminology">eindigdimensioneel</dfn> as dit 'n eindige basis het. In daardie geval is die <dfn class="terminology">dimensie</dfn> van \(V\) die aantal elemente in 'n basis vir \(V\text{.}\) 'n Vektorruimte is <dfn class="terminology">oneindigdimensioneel</dfn> as dit nie eindigdimensioneel is nie.</p></article><article class="assemblage-like" id="assemblage-12"><p id="p-373">Let op dat die konsep van die ‘dimensie van’n vektorruimte' slegs goedgedefinieerd is as gevolg van <a knowl="./knowl/inv_dim.html" title="Stelling 2.3.2: Invariansie van dimensie">Stelling 2.3.2</a>.</p></article><article class="assemblage-like" id="defn_dim_zero_vec_space"><p id="p-374">Die geval van die nulvektorruimte \(Z = \{\ve{0}\}\) is nie eksplisiet in <a knowl="./knowl/dim_vec_space.html" title="Definisie 2.3.3">Definisie 2.3.3</a> gehanteer nie. Ons hanteer dit as 'n spesiale geval. Naamlik, ons <em class="emphasis">defineer</em> die dimensie van die nulvektorruimte \(Z\) as \(0\text{.}\) So, volgens die definisie is \(Z\) is eindig-dimensionaal, en sy dimensie is gelyk aan \(0\text{.}\)</p></article><article class="example-like" id="standard_basis_R_n_ex"><h6 class="heading">
+<p id="p-392">'n Vektorruimte \(V\) is <dfn class="terminology">eindigdimensioneel</dfn> as dit 'n eindige basis het. In daardie geval is die <dfn class="terminology">dimensie</dfn> van \(V\) die aantal elemente in 'n basis vir \(V\text{.}\) 'n Vektorruimte is <dfn class="terminology">oneindigdimensioneel</dfn> as dit nie eindigdimensioneel is nie.</p></article><article class="assemblage-like" id="assemblage-13"><p id="p-393">Let op dat die konsep van die ‘dimensie van’n vektorruimte' slegs goedgedefinieerd is as gevolg van <a knowl="./knowl/inv_dim.html" title="Stelling 2.3.2: Invariansie van dimensie">Stelling 2.3.2</a>.</p></article><article class="assemblage-like" id="defn_dim_zero_vec_space"><p id="p-394">Die geval van die nulvektorruimte \(Z = \{\ve{0}\}\) is nie eksplisiet in <a knowl="./knowl/dim_vec_space.html" title="Definisie 2.3.3">Definisie 2.3.3</a> gehanteer nie. Ons hanteer dit as 'n spesiale geval. Naamlik, ons <em class="emphasis">defineer</em> die dimensie van die nulvektorruimte \(Z\) as \(0\text{.}\) So, volgens die definisie is \(Z\) is eindig-dimensionaal, en sy dimensie is gelyk aan \(0\text{.}\)</p></article></section><section class="subsection" id="subsection-8"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">2.3.1</span> <span class="title">Dimensies van bekende vektorruimtes</span>
+</h3>
+<article class="example-like" id="standard_basis_R_n_ex"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.3.4</span> <span class="title">Standaard basis vir \(\mathbb{R}^n\)</span>
 </h6>
-<p id="p-375">Die lys vektore</p>
+<p id="p-395">Die lys vektore</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{e}_1 := (1, 0, \ldots, 0), \,\,\, \ve{e}_2 := (0, 1, \ldots,
@@ -175,24 +183,24 @@ var login_required = false;
 a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}\text{.}
 \end{equation*}
 </div>
-<p id="p-376">Uitbreiding van die linkerkant na komponente volgens die definisie van die standaard basisvektore \(\ve{e}_i\) lewer die vergelyking</p>
+<p id="p-396">Uitbreiding van die linkerkant na komponente volgens die definisie van die standaard basisvektore \(\ve{e}_i\) lewer die vergelyking</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1, 0, 0, \ldots, 0) + (0, a_2, 0, \ldots, 0) + \cdots + (0, 0,
 0, \ldots, a_n) = (0, 0, 0, \ldots, 0)\text{.}
 \end{equation*}
 </div>
-<p id="p-377">Met ander woorde, ons het dat</p>
+<p id="p-397">Met ander woorde, ons het dat</p>
 <div class="displaymath">
 \begin{equation*}
 (a_1, a_2, a_3, \ldots, a_n) = (0, 0, 0, \ldots, 0)
 \end{equation*}
 </div>
 <p>wat beteken dat \(a_1 = a_2 = a_3 = \cdots = a_n = 0\text{,}\) presies wat ons moes bewys. Gevolglik is die lys vektore \(\ve{e}_1, \ve{e}_2,
-\ldots, \ve{e}_n\) lineêr onafhanklik en daarom is dit 'n basis vir \(\mathbb{R}^n\text{.}\) So \(\mathbb{R}^n\) het dimensie \(n\text{.}\)</p></article><article class="example-like" id="example-35"><h6 class="heading">
+\ldots, \ve{e}_n\) lineêr onafhanklik en daarom is dit 'n basis vir \(\mathbb{R}^n\text{.}\) So \(\mathbb{R}^n\) het dimensie \(n\text{.}\)</p></article><article class="example-like" id="example-37"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.3.5</span> <span class="title">A basis for \(\mathbb{R}^4\)</span>
 </h6>
-<p id="p-378">Check whether the following list of vectors</p>
+<p id="p-398">Check whether the following list of vectors</p>
 <div class="displaymath">
 \begin{equation}
 \ve{v}_1 = (1, 0, 2, -3), \, \ve{v}_2 = (1, 3, -1, 2), \, \ve{v}_3 = (0, 1, 2, -1), \ve{v}_4 = (1, 2, 3, 4)\tag{2.3.1}
@@ -200,8 +208,8 @@ a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_n \ve{e}_n = \ve{0}\text{.}
 </div>
 <p>is a basis for \(\mathbb{R}^4\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-18" id="solution-18"><span class="type">Oplossing</span></a><div id="hk-solution-18" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-379">First we check if the list of vectors is <a knowl="./knowl/defn_of_linear_ind.html" title="Definisie 2.2.1">linearly independent</a>. Consider the equation</p>
+<a knowl="" class="id-ref" refid="hk-solution-19" id="solution-19"><span class="type">Oplossing</span></a><div id="hk-solution-19" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-399">First we check if the list of vectors is <a knowl="./knowl/defn_of_linear_ind.html" title="Definisie 2.2.1">linearly independent</a>. Consider the equation</p>
 <div class="displaymath">
 \begin{align}
 a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{0} \tag{2.3.2}\\
@@ -227,8 +235,8 @@ solve([a1 - a2 + a4 == 0,
       -3*a1 + 2*a2 - a3 + 4*a4 == 0],
       [a1, a2, a3, a4])
 </script></div>
-<p id="p-380">SageMath outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-381"><code class="code-inline tex2jax_ignore"> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </code></p></div></div></div> So indeed,  equations <a knowl="./knowl/R4-example-eqn1.html" title="Vergelyking 2.3.5">(2.3.5)–(2.3.8)</a>  have only the trivial solution. Therefore the list of vectors is linearly independent.</p>
-<p id="p-382">Next, we need to check that the list of vectors spans \(\mathbb{R}^4\text{.}\) (There is a shorter way of doing this, using <a knowl="./knowl/lin-ind-implies-basis.html" title="Gevolg 2.3.19">Gevolg 2.3.19</a> below, but for now we prove it from first principles.) So, let \(\ve{w} = (w_1, w_2, w_3, w_4)\) be an arbitrary vector in \(\mathbb{R}^4\text{.}\) We need to show that there exists at least one way to express \(\ve{w}\) as a linear combination of the vectors \(\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4\text{.}\) In other words, we need to check if there exists at least one solution to the following equation:</p>
+<p id="p-400">SageMath outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-401"><code class="code-inline tex2jax_ignore"> [[a1 == 0, a2 == 0, a3 == 0, a4 == 0]] </code></p></div></div></div> So indeed,  equations <a knowl="./knowl/R4-example-eqn1.html" title="Vergelyking 2.3.5">(2.3.5)–(2.3.8)</a>  have only the trivial solution. Therefore the list of vectors is linearly independent.</p>
+<p id="p-402">Next, we need to check that the list of vectors spans \(\mathbb{R}^4\text{.}\) (There is a shorter way of doing this, using <a knowl="./knowl/lin-ind-implies-basis.html" title="Gevolg 2.3.23">Gevolg 2.3.23</a> below, but for now we prove it from first principles.) So, let \(\ve{w} = (w_1, w_2, w_3, w_4)\) be an arbitrary vector in \(\mathbb{R}^4\text{.}\) We need to show that there exists at least one way to express \(\ve{w}\) as a linear combination of the vectors \(\ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4\text{.}\) In other words, we need to check if there exists at least one solution to the following equation:</p>
 <div class="displaymath">
 \begin{align}
 a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3 + a_4 \ve{v}_4 \amp = \ve{w} \label{fund_eqn_span_r4_ex}\tag{2.3.9}\\
@@ -254,9 +262,9 @@ solve([a1 - a2 + a4 == w1,
       -3*a1 + 2*a2 - a3 + 4*a4 == w4],
       [a1, a2, a3, a4])
 </script></div>
-<p id="p-383">Note that we ask SageMath to solve for <code class="code-inline tex2jax_ignore">a1, a2, a3, a4</code>, since <code class="code-inline tex2jax_ignore">w1, w2, w3, w4</code> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
-<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-384"><code class="code-inline tex2jax_ignore"> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </code></p></div></div></div>
-<p id="p-385">In other words, there does indeed exist a solution, no matter what \((w_1, w_2, w_3, w_4)\) is. For instance, if \((w_1, w_2, w_3, w_4) = (3, 1, 2, 4) \text{,}\) then the solution is</p>
+<p id="p-403">Note that we ask SageMath to solve for <code class="code-inline tex2jax_ignore">a1, a2, a3, a4</code>, since <code class="code-inline tex2jax_ignore">w1, w2, w3, w4</code> are regarded as constants in the equation... we are not trying to solve for them, they are fixed, but arbitrary! SageMath outputs:</p>
+<div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p id="p-404"><code class="code-inline tex2jax_ignore"> [[a1 == 1/9*w1 + 7/18*w2 - 2/9*w3 - 1/18*w4, a2 == -2/3*w1 + 5/12*w2 - 1/6*w3 + 1/12*w4, a3 == -7/9*w1 - 2/9*w2 + 5/9*w3 - 1/9*w4, a4 == 2/9*w1 + 1/36*w2 + 1/18*w3 + 5/36*w4]] </code></p></div></div></div>
+<p id="p-405">In other words, there does indeed exist a solution, no matter what \((w_1, w_2, w_3, w_4)\) is. For instance, if \((w_1, w_2, w_3, w_4) = (3, 1, 2, 4) \text{,}\) then the solution is</p>
 <div class="displaymath">
 \begin{equation*}
 a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{36}.
@@ -269,12 +277,12 @@ a_1 = \frac{1}{18}, a_2 = - \frac{19}{12}, a_3 = -\frac{17}{9}, a_4 = \frac{49}{
 \end{equation*}
 </div>
 <p>Since there exists a solution to equation <a knowl="./knowl/fund_eqn_span_r4_ex.html" title="Vergelyking 2.3.9">(2.3.9)</a> for each vector \(\ve{w} \in \mathbb{R}^4\text{,}\) we conclude that \(\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose\) spans \(\mathbb{R}^4\text{.}\)</p>
-<p id="p-386">Hence \(\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose\)  is a basis for \(\mathbb{R}^4\text{,}\) since it is linearly independent and spans \(\mathbb{R}^4\text{.}\)</p>
+<p id="p-406">Hence \(\bopen \ve{v}_1, \ve{v}_2, \ve{v}_3, \ve{v}_4 \bclose\)  is a basis for \(\mathbb{R}^4\text{,}\) since it is linearly independent and spans \(\mathbb{R}^4\text{.}\)</p>
 </div></div>
-</div></article><article class="example-like" id="example-36"><h6 class="heading">
+</div></article><article class="example-like" id="example-38"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.3.6</span>
 </h6>
-<p id="p-387">Die lys polinome</p>
+<p id="p-407">Die lys polinome</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{p}_0 (x) := 1, \, \ve{p}_1 (x) := x, \, \ve{p}_2 (x) := x^2, \,
@@ -288,14 +296,14 @@ a_0 \ve{p}_0 + a_1 \ve{p}_1 + a_2 \ve{p_2} + \cdots + a_n \ve{p}_n
 = \ve{0}\text{.}
 \end{equation*}
 </div>
-<p id="p-388"><em class="emphasis">Dit is 'n vergelyking van funksies, so dit geld vir alle \(x \in
+<p id="p-408"><em class="emphasis">Dit is 'n vergelyking van funksies, so dit geld vir alle \(x \in
 \mathbb{R}\text{!}\)</em> Met ander woorde, vir <em class="emphasis">alle</em> \(x \in \mathbb{R}\) het ons het die vergelyking</p>
 <div class="displaymath">
 \begin{equation}
 a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\text{.}\label{root_of_poly}\tag{2.3.16}
 \end{equation}
 </div>
-<p id="p-389">Dink versigtig hieraan. Vergelyking <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> verteenwordig 'n <em class="emphasis">oneindige</em> stelsel van vergelykings vir die onbekendes \(a_0, a_1, \ldots, a_n\text{.}\) Daar is een vergelyking vir elke waarde van \(x \in \mathbb{R}\text{.}\) Byvoorbeeld</p>
+<p id="p-409">Dink versigtig hieraan. Vergelyking <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> verteenwordig 'n <em class="emphasis">oneindige</em> stelsel van vergelykings vir die onbekendes \(a_0, a_1, \ldots, a_n\text{.}\) Daar is een vergelyking vir elke waarde van \(x \in \mathbb{R}\text{.}\) Byvoorbeeld</p>
 <div class="displaymath">
 \begin{align}
 (x=1) \amp \amp a_0 + a_1 + a_2 + \cdots + a_n \amp = 0 \label{poly-example-first-eqn}\tag{2.3.17}\\
@@ -305,13 +313,13 @@ a_0 + a_1 x + a_2 x^2 + \cdots + a_n x^n = 0\text{.}\label{root_of_poly}\tag{2.3
 \amp \amp \vdots \label{poly-example-last-eqn}\tag{2.3.21}
 \end{align}
 </div>
-<p id="p-390">Veronderstel dat ons waardes vir \(a_0, a_1, a_2, \ldots, a_n \) kan vind wat <em class="emphasis">elkeen</em> van hierdie oneindig veel vergelykings <a knowl="./knowl/poly-example-first-eqn.html" title="Vergelyking 2.3.17">(2.3.17)–(2.3.21)</a> op los. Ons kan nou ons standpunt verander. Naamlik, stel hierdie vaste waardes vir \(a_0, a_1, \ldots, a_n\) in Vergelyking <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> en beskou Vergelyking <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> as 'n vergelyking vir die onbekende \(x\) (die koëffisiente \(a_0, a_1, \ldots, a_n\) is nou <em class="emphasis">vasgemaak</em>.) Ons trek die gevolg dat <em class="emphasis">elke \(x \in \mathbb{R}\)</em> 'n wortel van hierdie polinoom vergelyking is!</p>
-<p id="p-391">Maar, ons weet uit algebra dat 'n polinoom van die vorm <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> met nie-nul koëffisiënte <em class="emphasis">meestens</em> \(n\) wortels \(x_1, x_2, \ldots,
+<p id="p-410">Veronderstel dat ons waardes vir \(a_0, a_1, a_2, \ldots, a_n \) kan vind wat <em class="emphasis">elkeen</em> van hierdie oneindig veel vergelykings <a knowl="./knowl/poly-example-first-eqn.html" title="Vergelyking 2.3.17">(2.3.17)–(2.3.21)</a> op los. Ons kan nou ons standpunt verander. Naamlik, stel hierdie vaste waardes vir \(a_0, a_1, \ldots, a_n\) in Vergelyking <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> en beskou Vergelyking <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> as 'n vergelyking vir die onbekende \(x\) (die koëffisiente \(a_0, a_1, \ldots, a_n\) is nou <em class="emphasis">vasgemaak</em>.) Ons trek die gevolg dat <em class="emphasis">elke \(x \in \mathbb{R}\)</em> 'n wortel van hierdie polinoom vergelyking is!</p>
+<p id="p-411">Maar, ons weet uit algebra dat 'n polinoom van die vorm <a knowl="./knowl/root_of_poly.html" title="Vergelyking 2.3.16">(2.3.16)</a> met nie-nul koëffisiënte <em class="emphasis">meestens</em> \(n\) wortels \(x_1, x_2, \ldots,
 x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
-= a_2 = \cdots = a_n = 0\text{,}\) wat is wat ons moes bewys.</p></article><article class="example-like" id="example-37"><h6 class="heading">
+= a_2 = \cdots = a_n = 0\text{,}\) wat is wat ons moes bewys.</p></article><article class="example-like" id="example-39"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.3.7</span>
 </h6>
-<p id="p-392">Veronderstel \(X\) is 'n eindige versameling. Dan is \(\Fun(X)\) eindig-dimensioneel, met dimensie \(|X|\text{,}\) waar die basis gegee word deur die funksies \(\ve{f}_a\text{,}\) \(a \in X\text{,}\) gedefinieer deur:</p>
+<p id="p-412">Veronderstel \(X\) is 'n eindige versameling. Dan is \(\Fun(X)\) eindig-dimensioneel, met dimensie \(|X|\text{,}\) waar die basis gegee word deur die funksies \(\ve{f}_a\text{,}\) \(a \in X\text{,}\) gedefinieer deur:</p>
 <div class="displaymath">
 \begin{equation}
 \ve{f}_a (x) :=  
@@ -319,42 +327,45 @@ x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
 \end{cases}\label{defn_of_basis_of_functions}\tag{2.3.22}
 \end{equation}
 </div>
-<p id="p-393">Ons sal dit in 'n reeks oefeninge bewys.</p>
-<article class="assemblage-like" id="assemblage-14"><p id="p-394">Die formule aan die regterkant van <a knowl="./knowl/defn_of_basis_of_functions.html" title="Vergelyking 2.3.22">(2.3.22)</a> kom so gereeld in wiskunde voor dat ons dit 'n spesiale simbool gee, naamlik \(\delta_{ab}\) (die ‘Kronecker-delta’). Hierdie simbool staan vir die formule: “As \(a=b\text{,}\) gee die waarde 1. As \(a \neq b\text{,}\) gee die waarde \(0\)”. In hierdie taal kan ons die definisie van die funksies \(\ve{f}_a\) as</p>
+<p id="p-413">Ons sal dit in 'n reeks oefeninge bewys.</p>
+<article class="assemblage-like" id="assemblage-15"><p id="p-414">Die formule aan die regterkant van <a knowl="./knowl/defn_of_basis_of_functions.html" title="Vergelyking 2.3.22">(2.3.22)</a> kom so gereeld in wiskunde voor dat ons dit 'n spesiale simbool gee, naamlik \(\delta_{ab}\) (die ‘Kronecker-delta’). Hierdie simbool staan vir die formule: “As \(a=b\text{,}\) gee die waarde 1. As \(a \neq b\text{,}\) gee die waarde \(0\)”. In hierdie taal kan ons die definisie van die funksies \(\ve{f}_a\) as</p>
 <div class="displaymath">
 \begin{equation}
 \ve{f}_a (x) := \delta_{ax}\tag{2.3.23}
 \end{equation}
 </div>
-<p>herskryf.</p></article></article><article class="example-like" id="example-38"><h6 class="heading">
+<p>herskryf.</p></article></article><article class="example-like" id="example-40"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.3.8</span>
 </h6>
-<p id="p-395">\(\Trig_n\) is \((2n+1\))-dimensioneel, met basis</p>
+<p id="p-415">\(\Trig_n\) is \((2n+1\))-dimensioneel, met basis</p>
 <div class="displaymath">
 \begin{gather*}
 \ve{T}_0 (x) := 1, \,\,\, \ve{T}_1 (x) := \cos x, \,  \ve{T}_2 (x) := \sin x, \, \ve{T}_3 (x) := \cos 2x, \\
 \ve{T}_4 (x) := \sin 2x, \, \ldots, \, \ve{T}_{2n-1} (x) := \cos nx , \, \ve{T}_{2n} (x) := \sin nx.
 \end{gather*}
 </div>
-<p id="p-396">Hierdie funksies span \(\Trig_n\) per definisie. Hulle is ook lineêr onafhanklik, alhoewel ons dit nie sal bewys nie.</p></article><article class="example-like" id="dimension_of_matrix_space_example"><h6 class="heading">
+<p id="p-416">Hierdie funksies span \(\Trig_n\) per definisie. Hulle is ook lineêr onafhanklik, alhoewel ons dit nie sal bewys nie.</p></article><article class="example-like" id="dimension_of_matrix_space_example"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.3.9</span>
 </h6>
-<p id="p-397">Die dimensie van \(\Mat_{n,m}\) is \(nm\text{.}\) 'n Basis word gegee deur die matrikse</p>
+<p id="p-417">Die dimensie van \(\Mat_{n,m}\) is \(nm\text{.}\) 'n Basis word gegee deur die matrikse</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{E}_{ij} ,  i=1 \ldots n, \, j = 1 \ldots m
 \end{equation*}
 </div>
 <p>wat 'n \(1\) in ry \(i\) en kolom \(j\) het, en nulle orals elders.</p>
-<article class="assemblage-like" id="assemblage-15"><p id="p-398">Normaalweg is \(\mat{A}\) 'n matriks en \(\mat{A}_{ij}\) is die element van die matriks in die posisie \((i,j)\text{.}\) Maar nou is \(\mat{E}_{ij}\) 'n matriks in eie reg! 'n Element in posisie \((k,l)\) sal geskryf word as \((\mat{E}_{ij})_{kl}\text{.}\) Ek hoop jy vind dit nie te verwarrend nie. Trouens, ons kan 'n elegante formule vir die elemente van \(\mat{E}_{ij}\) neerskryf deur gebruik te maak van die Kronecker delta-simbool:</p>
+<article class="assemblage-like" id="assemblage-16"><p id="p-418">Normaalweg is \(\mat{A}\) 'n matriks en \(\mat{A}_{ij}\) is die element van die matriks in die posisie \((i,j)\text{.}\) Maar nou is \(\mat{E}_{ij}\) 'n matriks in eie reg! 'n Element in posisie \((k,l)\) sal geskryf word as \((\mat{E}_{ij})_{kl}\text{.}\) Ek hoop jy vind dit nie te verwarrend nie. Trouens, ons kan 'n elegante formule vir die elemente van \(\mat{E}_{ij}\) neerskryf deur gebruik te maak van die Kronecker delta-simbool:</p>
 <div class="displaymath">
 \begin{equation}
 (\mat{E}_{ij})_{kl} = \delta_{ik} \delta_{jl}\label{kronecker_for_matrix_basis}\tag{2.3.24}
 \end{equation}
-</div></article></article><article class="exercise-like" id="exercise-60"></article><article class="example-like" id="example-40"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.3.10</span>
+</div></article></article><article class="exercise-like" id="exercise-61"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.10</span>
 </h6>
-<p id="p-400">Die standaard basis van \(\Mat_{2,2}\) is</p>
+<p id="p-419">Kontroleer dat <a knowl="./knowl/kronecker_for_matrix_basis.html" title="Vergelyking 2.3.24">(2.3.24)</a> wel die korrekte formule vir die matrikselemente van \(\mat{E}_{ij}\) gee.</p></article><article class="example-like" id="example-42"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.3.11</span>
+</h6>
+<p id="p-420">Die standaard basis van \(\Mat_{2,2}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \mat{E}_{11} = \left[ 
@@ -378,10 +389,10 @@ x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
 \end{array}  
 \right]\text{.}
 \end{equation*}
-</div></article><article class="example-like" id="example-41"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.3.11</span>
+</div></article><article class="example-like" id="example-43"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.3.12</span>
 </h6>
-<p id="p-401">Die standaard basis van \(\Col_n\) is</p>
+<p id="p-421">Die standaard basis van \(\Col_n\) is</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{e}_1 := \left[ \begin{array}{c} 1 \\ 0 \\ \vdots \\ 0
@@ -392,12 +403,53 @@ x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
 \ve{e}_n := \left[ \begin{array}{c} 0 \\ 0 \\ \vdots \\ 1
 \end{array}  \right] \text{.}
 \end{equation*}
-</div></article><p id="p-402">Ons gaan nou deelruimtes van vektorruimtes se dimensie bestudeer.</p>
-<article class="theorem-like" id="dim-of-subspace-prop"><h6 class="heading">
-<span class="type">Stelling</span> <span class="codenumber">2.3.12</span>
+</div></article><article class="example-like" id="dimension_of_hyperplane"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.3.13</span> <span class="title">Dimension of a hyperplane</span>
 </h6>
-<p id="p-403">Laat \(W\) 'n deelruimte van 'n eindig-dimensionele vektorruimte \(V\) wees. Dan is \(W\) eindig-dimensioneel, en \(\Dim(W) \leq
-\Dim(V)\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-404">Let</p>
+<p id="p-422">Let \(\ve{v} \in \mathbb{R}^n\) be a fixed vector, and consider the hyperplane \(W \subset \mathbb{R}^n\) orthogonal to \(\ve{v}\) as in <a knowl="./knowl/hyperplanes_example_subspace.html" title="Voorbeeld 1.6.13: Hyperplanes orthogonal to a fixed vector">Voorbeeld 1.6.13</a>. Then you will prove in Exercise <a knowl="./knowl/dimension_of_hyperplane_exercise.html" title="Verstaanpunt 2.3.15">Verstaanpunt 2.3.15</a> that \(\Dim(W) = n-1\text{.}\)</p>
+<p id="p-423">For instance, consider the specific example from <a knowl="./knowl/hyperplanes_example_subspace.html" title="Voorbeeld 1.6.13: Hyperplanes orthogonal to a fixed vector">Voorbeeld 1.6.13</a>, namely the plane \(W \subset \mathbb{R}^3\) of vectors orthogonal to \(\ve{v} = (1,2,3)\text{.}\) In other words,</p>
+<div class="displaymath">
+\begin{equation}
+W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \}.\label{eqn_for_W_1}\tag{2.3.25}
+\end{equation}
+</div>
+<p>There is no 'standard' basis for \(W\text{.}\) But, here is one basis (as good as any other):</p>
+<div class="displaymath">
+\begin{equation}
+\ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{1}{2}).\label{ab_basis_orth_plane}\tag{2.3.26}
+\end{equation}
+</div>
+<p>You will show this is indeed a basis for \(W\) in <a knowl="./knowl/prove_basis_for_ex_hyperplane.html" title="Verstaanpunt 2.3.14">Verstaanpunt 2.3.14</a> below. I computed these vectors as follows. To obtain \(\ve{a}\text{,}\) I simply set \(w_1 = 1, w_2 = 0\) and then solved for \(w_3\) using Equation <a knowl="./knowl/eqn_for_W_1.html" title="Vergelyking 2.3.25">(2.3.25)</a>. Similarly, for \(\ve{b}\text{,}\) I simply set \(w_1 = 0, w_2 = 1\) and then solved for \(w_3\) using <a knowl="./knowl/eqn_for_W_1.html" title="Vergelyking 2.3.25">(2.3.25)</a>.</p>
+<p id="p-424">There is nothing special about my method above for computing a basis for \(W\text{.}\) Here is a different basis for \(W\text{,}\) which I arrived at by choosing random values of \(w_1\) and \(w_2\) and then calculating what \(w_3\) must be in order to satisfy Equation <a knowl="./knowl/eqn_for_W_1.html" title="Vergelyking 2.3.25">(2.3.25)</a>:</p>
+<div class="displaymath">
+\begin{equation}
+\ve{u} = (1, 2, -\frac{5}{3}), \quad \ve{v} = (-4, 2, 0).\tag{2.3.27}
+\end{equation}
+</div>
+<p id="p-425">In any event, we see that \(\Dim(W) = 2\text{.}\)</p></article><article class="exercise-like" id="prove_basis_for_ex_hyperplane"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.14</span>
+</h6>
+<p id="p-426">Show that the list of vectors \(\bopen \ve{a}, \ve{b} \bclose \) from <a knowl="./knowl/ab_basis_orth_plane.html" title="Vergelyking 2.3.26">(2.3.26)</a> in <a knowl="./knowl/dimension_of_hyperplane.html" title="Voorbeeld 2.3.13: Dimension of a hyperplane">Voorbeeld 2.3.13</a> is a basis for \(W\text{.}\)</p></article><article class="exercise-like" id="dimension_of_hyperplane_exercise"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.15</span>
+</h6>
+<p id="p-427">Let \(\ve{v} \in \mathbb{R}^n\) be a fixed vector, and set</p>
+<div class="displaymath">
+\begin{equation*}
+W := \{ \ve{w} \in \mathbb{R}^n : \ve{v} \dotp \ve{w} = 0 \}
+\end{equation*}
+</div>
+<p>Prove that \(\Dim(W) = n-1\text{.}\)</p>
+<div class="solutions">
+<a knowl="" class="id-ref" refid="hk-hint-4" id="hint-4"><span class="type">Wenk</span></a><div id="hk-hint-4" class="hidden-content tex2jax_ignore"><div class="solution">\(W\text{.}\)</div></div>
+</div></article></section><section class="subsection" id="subsection-9"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">2.3.2</span> <span class="title">Dimensies van deelruimtes</span>
+</h3>
+<p id="p-428">Ons gaan nou deelruimtes van vektorruimtes se dimensie bestudeer.</p>
+<article class="theorem-like" id="dim-of-subspace-prop"><h6 class="heading">
+<span class="type">Stelling</span> <span class="codenumber">2.3.16</span>
+</h6>
+<p id="p-429">Laat \(W\) 'n deelruimte van 'n eindig-dimensionele vektorruimte \(V\) wees. Dan is \(W\) eindig-dimensioneel, en \(\Dim(W) \leq
+\Dim(V)\text{.}\)</p></article><article class="hiddenproof" id="proof-10"><a knowl="" class="id-ref" refid="hk-proof-10"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-10" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-430">Let</p>
 <div class="displaymath">
 \begin{equation*}
 \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
@@ -410,37 +462,40 @@ x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
 \end{equation*}
 </div>
 <p>for \(W\text{.}\) For then \(\basis{B}\) will be a list of \(k\) linearly independent vectors which live in \(W\) (and hence also in \(V\)) and hence we must have \(k \leq n\) by <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Stelling 2.2.10</a>, as \(\basis{C}\) spans \(V\text{.}\)</p>
-<p id="p-405">We show that \(W\) is finite-dimensional as follows.</p>
-<p id="p-406">If \(W\) is the zero vector space \(\{ \ve{0} \} \text{,}\) then \(W\) is finite-dimensional <a knowl="./knowl/defn_dim_zero_vec_space.html" title="Versameling">by definition</a>.</p>
-<p id="p-407">If \(W\) is not the zero vector space, then there exists a nonzero vector \(\ve{w}_1 \in W\text{.}\) Consider the list \(\basis{B}_1 = \bopen \ve{w}_1 \bclose\text{.}\) Note that \(\basis{B}_1\) is linearly independent, by <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. So, if \(\basis{B}_1\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and so \(W\) is finite-dimensional and we are done.</p>
-<p id="p-408">If \(\basis{B}_1\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_2 \in W\) which is not a scalar multiple of \(\ve{e}_1\text{.}\) Now consider the list \(\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}\text{.}\) Once again, \(\basis{B}_2\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. So, if \(\basis{B}_2\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and we are done.</p>
-<p id="p-409">If \(\basis{B}_2\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_3 \in W\) which is not a linear combination of \(\ve{w}_1\) and \(\ve{w}_2\text{.}\) Now consider the list \(\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}\text{.}\) Again, \(\basis{B}_3\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. If it does not span \(W\text{,}\) then there exists a vector \(\ve{w}_4 \in W\) which is not a linear combination of \(\ve{w}_1, \ve{w}_2, \ve{w}_3\text{.}\) So consider the list \(\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose \text{.}\)</p>
-<p id="p-410">This process must terminate for some \(k \leq n\text{.}\) If not, then it will produce a list \(\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose\text{.}\) This would be a linearly independent list of \(n+1\) vectors from \(V\text{.}\) But \(\Dim V = n\text{,}\) so this is impossible, by <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Stelling 2.2.10</a>. Hence for some \(k \leq n\) we must have that \(\basis{B}_k\) is a basis for \(W\text{,}\) and we are done.</p></article></div>
-<p id="p-411">Dit is goed om 'n voorbeeld van 'n oneindig-dimensionele vektorruimte te hê.</p>
+<p id="p-431">We show that \(W\) is finite-dimensional as follows.</p>
+<p id="p-432">If \(W\) is the zero vector space \(\{ \ve{0} \} \text{,}\) then \(W\) is finite-dimensional <a knowl="./knowl/defn_dim_zero_vec_space.html" title="Versameling">by definition</a>.</p>
+<p id="p-433">If \(W\) is not the zero vector space, then there exists a nonzero vector \(\ve{w}_1 \in W\text{.}\) Consider the list \(\basis{B}_1 = \bopen \ve{w}_1 \bclose\text{.}\) Note that \(\basis{B}_1\) is linearly independent, by <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. So, if \(\basis{B}_1\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and so \(W\) is finite-dimensional and we are done.</p>
+<p id="p-434">If \(\basis{B}_1\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_2 \in W\) which is not a scalar multiple of \(\ve{e}_1\text{.}\) Now consider the list \(\basis{B}_2 = \left\{ \ve{e}_1, \ve{e}_2 \right\}\text{.}\) Once again, \(\basis{B}_2\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. So, if \(\basis{B}_2\) spans \(W\text{,}\) then it is a basis for \(W\text{,}\) and we are done.</p>
+<p id="p-435">If \(\basis{B}_2\) does not span \(W\text{,}\) then there exists a vector \(\ve{w}_3 \in W\) which is not a linear combination of \(\ve{w}_1\) and \(\ve{w}_2\text{.}\) Now consider the list \(\basis{B}_3 = \left\{ \ve{w}_1, \ve{w}_2, \ve{w}_3 \right\}\text{.}\) Again, \(\basis{B}_3\) is linearly independent, by  <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> of <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. If it does not span \(W\text{,}\) then there exists a vector \(\ve{w}_4 \in W\) which is not a linear combination of \(\ve{w}_1, \ve{w}_2, \ve{w}_3\text{.}\) So consider the list \(\basis{B}_4 = \bopen \ve{w}_1, \ve{w}_2, \ve{w}_3, \ve{w}_4 \bclose \text{.}\)</p>
+<p id="p-436">This process must terminate for some \(k \leq n\text{.}\) If not, then it will produce a list \(\basis{B}_{n+1} = \bopen \ve{w}_1, \ldots, \ve{w}_{n+1} \bclose\text{.}\) This would be a linearly independent list of \(n+1\) vectors from \(V\text{.}\) But \(\Dim V = n\text{,}\) so this is impossible, by <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Stelling 2.2.10</a>. Hence for some \(k \leq n\) we must have that \(\basis{B}_k\) is a basis for \(W\text{,}\) and we are done.</p></article></div></section><section class="subsection" id="subsection-10"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">2.3.3</span> <span class="title">Oneindig-dimensionele vektorruimtes</span>
+</h3>
+<p id="p-437">Dit is goed om 'n paar voorbeelde van oneindig-dimensionele vektorruimte te hê.</p>
 <article class="theorem-like" id="proposition-4"><h6 class="heading">
-<span class="type">Stelling</span> <span class="codenumber">2.3.13</span>
+<span class="type">Stelling</span> <span class="codenumber">2.3.17</span>
 </h6>
-<p id="p-412">\(\Poly\) is oneindigdimensioneel.</p></article><article class="hiddenproof" id="proof-11"><a knowl="" class="id-ref" refid="hk-proof-11"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-413">Veronderstel \(\Poly\) is eindigdimensioneel. Dit beteken daar bestaan 'n eindige versameling polinome \(\ve{p}_1, \ve{p}_2, \ldots,
+<p id="p-438">\(\Poly\) is oneindigdimensioneel.</p></article><article class="hiddenproof" id="proof-11"><a knowl="" class="id-ref" refid="hk-proof-11"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-11" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-439">Veronderstel \(\Poly\) is eindigdimensioneel. Dit beteken daar bestaan 'n eindige versameling polinome \(\ve{p}_1, \ve{p}_2, \ldots,
 \ve{p}_n\) wat \(\Poly\) span. Maar, laat \(d\) die hoogste graad van al die polinome in die lys \(\ve{p}_1, \ve{p}_2, \ldots, \ve{p}_n\) wees. Dan is \(\ve{p} := x^{d+1}\) 'n polinoom wat nie in die span van \(\ve{p}_1,
 \ve{p}_2, \ldots, \ve{p}_n\) is nie, want die sommering en skalaarvermenigvuldiging van polinome kan nooit die graad verhoog nie. Ons het 'n teenstelling bereik. So ons aanvanklike aanname kan nie waar wees nie, i.e. \(\Poly\) kan nie eindigdimensioneel wees nie.</p></article></div>
-<article class="example-like" id="example-42"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.3.14</span>
+<article class="example-like" id="example-45"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.3.18</span>
 </h6>
-<p id="p-414">Ons sal dit nie hier bewys nie, maar die volgende vektorruimtes is ook eindigdimensioneel:</p>
+<p id="p-440">Ons sal dit nie hier bewys nie, maar die volgende vektorruimtes is ook eindigdimensioneel:</p>
 <ul class="disc">
-<li id="li-63"><p id="p-415">\(\mathbb{R}^\infty\text{,}\)</p></li>
-<li id="li-64"><p id="p-416">\(\Fun(X)\) waar \(X\) 'n eindige versameling is,</p></li>
-<li id="li-65"><p id="p-417">\(\Cont(I)\) vir enige nie-leë interval \(I\) en</p></li>
-<li id="li-66"><p id="p-418">\(\Diff(I)\) vir enige oop interval \(I\text{.}\)</p></li>
+<li id="li-69"><p id="p-441">\(\mathbb{R}^\infty\text{,}\)</p></li>
+<li id="li-70"><p id="p-442">\(\Fun(X)\) waar \(X\) 'n eindige versameling is,</p></li>
+<li id="li-71"><p id="p-443">\(\Cont(I)\) vir enige nie-leë interval \(I\text{,}\)</p></li>
+<li id="li-72"><p id="p-444">\(\Diff(I)\) vir enige oop interval \(I\text{,}\) en</p></li>
+<li id="li-73"><p id="p-445">\(\Poly^k\text{.}\)</p></li>
 </ul></article></section><section class="subsection" id="sifting_subsection"><h3 class="heading hide-type">
-<span class="type">Onderafdeling</span> <span class="codenumber">2.3.1</span> <span class="title">Sifting</span>
+<span class="type">Onderafdeling</span> <span class="codenumber">2.3.4</span> <span class="title">Die sifalgoritme en die gebruike daarvan</span>
 </h3>
-<a href="ACh2Sec3BasisDimension.html#sifting_subsection" class="permalink">¶</a><p id="p-419">As ons die bewys van <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Proposisie 2.2.10</a> (die ‘Afstampproposisie’) noukeurig bestudeer, vind ons dat dit van 'n <em class="emphasis">sif-algoritme</em> gebruik maak. Hierdie algoritme kan op <em class="emphasis">enige</em> lys vektore \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) in 'n vektorruimte toegepas word. Beskou elke vektor \(\ve{v}_i\) in so 'n lys opeenvolgend. As \(\ve{v}_i\) die nul-vektor is, of as dit 'n lineêre kombinasie van die voorafgaande vektore \(\ve{v}_1, \ve{v}_2, \ldots,
+<a href="ACh2Sec3BasisDimension.html#sifting_subsection" class="permalink">¶</a><p id="p-446">As ons die bewys van <a knowl="./knowl/bumping_off_lemma.html" title="Stelling 2.2.10: Afstampproposisie">Proposisie 2.2.10</a> (die ‘Afstampproposisie’) noukeurig bestudeer, vind ons dat dit van 'n <em class="emphasis">sif-algoritme</em> gebruik maak. Hierdie algoritme kan op <em class="emphasis">enige</em> lys vektore \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) in 'n vektorruimte toegepas word. Beskou elke vektor \(\ve{v}_i\) in so 'n lys opeenvolgend. As \(\ve{v}_i\) die nul-vektor is, of as dit 'n lineêre kombinasie van die voorafgaande vektore \(\ve{v}_1, \ve{v}_2, \ldots,
 \ve{v}_{n-1}\) is, verwyder dit van die lys.</p>
-<article class="example-like" id="example-43"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.3.15</span>
+<article class="example-like" id="example-46"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.3.19</span>
 </h6>
-<p id="p-420">Sif die volgende lys vektore in \(\mathbb{R}^3\text{:}\)</p>
+<p id="p-447">Sif die volgende lys vektore in \(\mathbb{R}^3\text{:}\)</p>
 <div class="displaymath">
 \begin{align*}
 \ve{v}_1 \amp = (1,2,-1), \amp  \ve{v}_2 \amp = (0, 0, 0), \amp  \ve{v}_3 \amp = (3, 6,
@@ -449,7 +504,7 @@ x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
 1, 0)\text{.}
 \end{align*}
 </div>
-<p id="p-421">Ons begin met \(\ve{v}_1\text{.}\) Aangesien dit nie die nul-vektor is nie en nie 'n lineêre kombinasie van enige voorafgaande vektore is nie, bly dit in die lys. Nou beweeg ons aan na \(\ve{v}_2\text{,}\) wat nul is, so ons verwyder dit. Ons skuif aan na \(\ve{v}_3\text{,}\) wat ons deur inspeksie vasstel dat dit as\(3 \ve{v}_1\) geskryf kan word, so ons verwyder dit. Ons beweeg aan na \(\ve{v}_4\text{.}\) Dit is nie nul nie, en dit kan nie as 'n veelvoud van \(\ve{v}_1\) uitgedruk word nie (bevestig dit vir jouself), so dit bly in die lys. Ons beweeg aan na \(\ve{v}_5\text{.}\) Ons kyk of dit as die lineêre kombinasie</p>
+<p id="p-448">Ons begin met \(\ve{v}_1\text{.}\) Aangesien dit nie die nul-vektor is nie en nie 'n lineêre kombinasie van enige voorafgaande vektore is nie, bly dit in die lys. Nou beweeg ons aan na \(\ve{v}_2\text{,}\) wat nul is, so ons verwyder dit. Ons skuif aan na \(\ve{v}_3\text{,}\) wat ons deur inspeksie vasstel dat dit as\(3 \ve{v}_1\) geskryf kan word, so ons verwyder dit. Ons beweeg aan na \(\ve{v}_4\text{.}\) Dit is nie nul nie, en dit kan nie as 'n veelvoud van \(\ve{v}_1\) uitgedruk word nie (bevestig dit vir jouself), so dit bly in die lys. Ons beweeg aan na \(\ve{v}_5\text{.}\) Ons kyk of dit as die lineêre kombinasie</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v}_5 = a\ve{v}_1 + b \ve{v}_4
@@ -466,37 +521,37 @@ x_n\) het . So, die koëffisiënte moet nul wees, i.e. \(a_0 = a_1
 \begin{equation*}
 \ve{v}_1, \ve{v}_4, \ve{v}_6\text{.}
 \end{equation*}
-</div></article><article class="exercise-like" id="exercise-61"><h6 class="heading">
-<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.16</span>
+</div></article><article class="exercise-like" id="exercise-64"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.20</span>
 </h6>
-<p id="p-422">Doen die drie ‘bevestig self’-bewerkings hierbo.</p></article><p id="p-423">Die volgende resultate wys dat sifting a baie nuttige manier is om 'n basis vir 'n vektorruimte te konstrueer!</p>
+<p id="p-449">Doen die drie ‘bevestig self’-bewerkings hierbo.</p></article><p id="p-450">Die volgende resultate wys dat sifting a baie nuttige manier is om 'n basis vir 'n vektorruimte te konstrueer!</p>
 <article class="theorem-like" id="sift_lemma_basis"><h6 class="heading">
-<span class="type">Hulpstelling</span> <span class="codenumber">2.3.17</span>
+<span class="type">Hulpstelling</span> <span class="codenumber">2.3.21</span>
 </h6>
-<p id="p-424">As 'n lys vektore \(\ve{v}_1, \ve{v}_2, \ldots,
-\ve{v}_n\) 'n vektorruimte \(V\) span, dan sal sifting van die lys in 'n basis vir \(V\) resulteer.</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-425">By elke stap vind ons dat 'n vektor wat uit die lys verwyder word óf die nul-vektor is, óf 'n lineêre kombinasie van die voorafgaande vektore is wat nié uit die lys verwyder word nie. So as ons die vektor uit die lys verwyder, sal die oorblywende vektore steeds \(V\) span. Daarom span die vektore in die finale lys steeds \(V\text{.}\)</p>
-<p id="p-426">Om te sien dat die finale gesifte lys lineêr onafhanklik is, pas ons <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Proposisie 2.2.8</a> toe. Deur konstruksie is geen vektor in die finale lys 'n lineêre kombinasie van die voorafgaande vektore nie (ander sou dit verwyder gewees het!). Daarom is die finale lys nie lineêr afhanklik nie, so dit moet lineêr onafhanklik wees!</p></article></div>
+<p id="p-451">As 'n lys vektore \(\ve{v}_1, \ve{v}_2, \ldots,
+\ve{v}_n\) 'n vektorruimte \(V\) span, dan sal sifting van die lys in 'n basis vir \(V\) resulteer.</p></article><article class="hiddenproof" id="proof-12"><a knowl="" class="id-ref" refid="hk-proof-12"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-12" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-452">By elke stap vind ons dat 'n vektor wat uit die lys verwyder word óf die nul-vektor is, óf 'n lineêre kombinasie van die voorafgaande vektore is wat nié uit die lys verwyder word nie. So as ons die vektor uit die lys verwyder, sal die oorblywende vektore steeds \(V\) span. Daarom span die vektore in die finale lys steeds \(V\text{.}\)</p>
+<p id="p-453">Om te sien dat die finale gesifte lys lineêr onafhanklik is, pas ons <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Proposisie 2.2.8</a> toe. Deur konstruksie is geen vektor in die finale lys 'n lineêre kombinasie van die voorafgaande vektore nie (ander sou dit verwyder gewees het!). Daarom is die finale lys nie lineêr afhanklik nie, so dit moet lineêr onafhanklik wees!</p></article></div>
 <article class="theorem-like" id="first_corollary_please"><h6 class="heading">
-<span class="type">Gevolg</span> <span class="codenumber">2.3.18</span>
+<span class="type">Gevolg</span> <span class="codenumber">2.3.22</span>
 </h6>
-<p id="p-427">Enige lineêr onafhanklike lys vektore \(\ve{v}_1,
-\ve{v}_2, \ldots, \ve{v}_k\) in 'n eindig-dimensionele vektorruimte \(V\) kan uitgebrei word tot 'n basis van \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a knowl="" class="id-ref" refid="hk-proof-13"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-428">Aangesien \(V\) eindig-dimensioneel is, het dit 'n basis \(\ve{e}_1, \ldots, \ve{e}_n\text{.}\) Oorweeg nou die lys</p>
+<p id="p-454">Enige lineêr onafhanklike lys vektore \(\ve{v}_1,
+\ve{v}_2, \ldots, \ve{v}_k\) in 'n eindig-dimensionele vektorruimte \(V\) kan uitgebrei word tot 'n basis van \(V\text{.}\)</p></article><article class="hiddenproof" id="proof-13"><a knowl="" class="id-ref" refid="hk-proof-13"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-13" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-455">Aangesien \(V\) eindig-dimensioneel is, het dit 'n basis \(\ve{e}_1, \ldots, \ve{e}_n\text{.}\) Oorweeg nou die lys</p>
 <div class="displaymath">
 \begin{equation*}
 L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2,
 \ldots, \ve{e}_n
 \end{equation*}
 </div>
-<p>wat duidelik \(V\) span. Deur die lys te sif, sal ons 'n basis vir \(V\) kry, volgens <a knowl="./knowl/sift_lemma_basis.html" title="Hulpstelling 2.3.17">Lemma 2.3.17</a>. Sommige van die \(\ve{e}\)-vektore mag dalk verwyder wees in die proses. Maar geeneen van die \(\ve{v}\)-vektore sal verwyder word nie, aangesien dit sou beteken dat sommige vektore \(\ve{v}_i\) 'n lineêre kombinasie van die voorafgaande vektore \(\ve{v}_1, \ldots, \ve{v}_{i-1}\) is, wat onmoontlik is, omdat \(\ve{v}_1, \ldots, \ve{v}_k\) 'n lineêr onafhanklike lys is. Dus ná sifting van die lys \(L\) brei ons ons die oorspronklike lys \(\ve{v}_1, \ldots, \ve{v}_k\) uit na 'n basis van \(V\text{.}\)</p></article></div>
+<p>wat duidelik \(V\) span. Deur die lys te sif, sal ons 'n basis vir \(V\) kry, volgens <a knowl="./knowl/sift_lemma_basis.html" title="Hulpstelling 2.3.21">Lemma 2.3.21</a>. Sommige van die \(\ve{e}\)-vektore mag dalk verwyder wees in die proses. Maar geeneen van die \(\ve{v}\)-vektore sal verwyder word nie, aangesien dit sou beteken dat sommige vektore \(\ve{v}_i\) 'n lineêre kombinasie van die voorafgaande vektore \(\ve{v}_1, \ldots, \ve{v}_{i-1}\) is, wat onmoontlik is, omdat \(\ve{v}_1, \ldots, \ve{v}_k\) 'n lineêr onafhanklike lys is. Dus ná sifting van die lys \(L\) brei ons ons die oorspronklike lys \(\ve{v}_1, \ldots, \ve{v}_k\) uit na 'n basis van \(V\text{.}\)</p></article></div>
 <article class="theorem-like" id="lin-ind-implies-basis"><h6 class="heading">
-<span class="type">Gevolg</span> <span class="codenumber">2.3.19</span>
+<span class="type">Gevolg</span> <span class="codenumber">2.3.23</span>
 </h6>
-<p id="p-429">As \(\ve{v}_1, \ve{v}_2,
-\ldots, \ve{v}_n\) 'n lineêr onafhanklike lys van \(n\) vektore in 'n \(n\)-dimensionele vektorruimte \(V\) is, dan is dit 'n basis.</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-430">Volgens <a knowl="./knowl/first_corollary_please.html" title="Gevolg 2.3.18">Gevolgtrekking 2.3.18</a> kan ons \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) uitbrei tot 'n basis van \(V\text{.}\) Maar \(V\) het dimensie \(n\text{,}\) so die basis moet slegs \(n\) vektore bevat volgens <a knowl="./knowl/inv_dim.html" title="Stelling 2.3.2: Invariansie van dimensie">Stelling 2.3.2</a> (Onveranderlikheid van Dimensie). Gevolglike het ons geen vektore bygevoeg nie, en ons oorspronklike lys is reeds 'n basis.</p></article></div>
-<article class="example-like" id="example-44"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.3.20</span>
+<p id="p-456">As \(\ve{v}_1, \ve{v}_2,
+\ldots, \ve{v}_n\) 'n lineêr onafhanklike lys van \(n\) vektore in 'n \(n\)-dimensionele vektorruimte \(V\) is, dan is dit 'n basis.</p></article><article class="hiddenproof" id="proof-14"><a knowl="" class="id-ref" refid="hk-proof-14"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-14" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-457">Volgens <a knowl="./knowl/first_corollary_please.html" title="Gevolg 2.3.22">Gevolgtrekking 2.3.22</a> kan ons \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) uitbrei tot 'n basis van \(V\text{.}\) Maar \(V\) het dimensie \(n\text{,}\) so die basis moet slegs \(n\) vektore bevat volgens <a knowl="./knowl/inv_dim.html" title="Stelling 2.3.2: Invariansie van dimensie">Stelling 2.3.2</a> (Onveranderlikheid van Dimensie). Gevolglike het ons geen vektore bygevoeg nie, en ons oorspronklike lys is reeds 'n basis.</p></article></div>
+<article class="example-like" id="example-47"><h6 class="heading">
+<span class="type">Voorbeeld</span> <span class="codenumber">2.3.24</span>
 </h6>
-<p id="p-431">In <a knowl="./knowl/new_basis_for_poly_3.html" title="Voorbeeld 2.2.7">Voorbeeld 2.2.7</a> het ons gewys dat die lys polinome</p>
+<p id="p-458">In <a knowl="./knowl/new_basis_for_poly_3.html" title="Voorbeeld 2.2.7">Voorbeeld 2.2.7</a> het ons gewys dat die lys polinome</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x):= x, \,\, \ve{q}_2(x) := 2x^2
@@ -504,12 +559,12 @@ L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2,
 \end{equation*}
 </div>
 <p>lineêr onafhanklik in \(\Poly_3\) is. Aangesien \(\dim \Poly_3 = 4\text{,}\) sien ons dat dit 'n basis vir \(\Poly_3\) is.</p>
-<article class="assemblage-like" id="assemblage-16"><p id="p-432">In <a knowl="./knowl/chebyshev_example.html" title="Oefening 2.1.5">Oefening 2.1.5</a> het jy gewys dat \(\ve{q}_0, \ldots, \ve{q}_3\) 'n basis vir \(\Poly_3\) is deur 'n ‘brute krag’ benadering. Hierdie nuwe metode is <em class="emphasis">verskillend</em>!</p></article></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
-<span class="type">Onderafdeling</span> <span class="codenumber">2.3.2</span> <span class="title">Oefeninge</span>
+<article class="assemblage-like" id="assemblage-17"><p id="p-459">In <a knowl="./knowl/chebyshev_example.html" title="Oefening 2.1.5">Oefening 2.1.5</a> het jy gewys dat \(\ve{q}_0, \ldots, \ve{q}_3\) 'n basis vir \(\Poly_3\) is deur 'n ‘brute krag’ benadering. Hierdie nuwe metode is <em class="emphasis">verskillend</em>!</p></article></article></section><section class="exercises" id="exercises-7"><h3 class="heading hide-type">
+<span class="type">Onderafdeling</span> <span class="codenumber">2.3.5</span> <span class="title">Oefeninge</span>
 </h3>
-<article class="exercise-like" id="exercise-62"><h6 class="heading">
+<article class="exercise-like" id="exercise-65"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-433">Sif die lys vektore</p>
+<p id="p-460">Sif die lys vektore</p>
 <div class="displaymath">
 \begin{align*}
 \ve{v}_1 \amp = (0,0,0), \amp  \ve{v}_2 \amp = (1, 0, -1), \amp  \ve{v}_3 \amp = (1, 2,
@@ -519,32 +574,32 @@ L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2,
 \end{align*}
 </div></article><article class="exercise-like" id="true_false_span_lin_ind"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-434">Laat \(V\) 'n vektorruimte van dimensie \(n\) wees. Besluit (en skryf jou besluit neer!) of die volgende bewerings waar of onwaar is. As dit waar is, bewys dit. Indien nie, gee 'n teenvoorbeeld.</p>
+<p id="p-461">Laat \(V\) 'n vektorruimte van dimensie \(n\) wees. Besluit (en skryf jou besluit neer!) of die volgende bewerings waar of onwaar is. As dit waar is, bewys dit. Indien nie, gee 'n teenvoorbeeld.</p>
 <ul class="disc">
-<li id="li-67"><p id="p-435">Enige lineêr onafhanklike lys vektore in \(V\) bevat hoogstens \(n\) vektore.</p></li>
-<li id="li-68"><p id="p-436">Enige lys vektore wat \(V\) span bevat ten minste \(n\) vektore.</p></li>
+<li id="li-74"><p id="p-462">Enige lineêr onafhanklike lys vektore in \(V\) bevat hoogstens \(n\) vektore.</p></li>
+<li id="li-75"><p id="p-463">Enige lys vektore wat \(V\) span bevat ten minste \(n\) vektore.</p></li>
 </ul></article><article class="exercise-like" id="n_lin_ind_is_basis"><h6 class="heading">
 <span class="codenumber">3</span> </h6>
-<p id="p-437">Voltooi die bewys van die volgende Lemma.</p>
-<p id="p-438"><em class="emphasis">Lemma.</em> Veronderstel dat \(V\) 'n vektorruimte van dimensie \(n\) is. Dan is enige lineêr onafhanklike lys van \(n\) vektore in \(V\) 'n basis vir \(V\text{.}\)</p>
-<p id="p-439"><em class="emphasis">Bewys.</em> Laat \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
+<p id="p-464">Voltooi die bewys van die volgende Lemma.</p>
+<p id="p-465"><em class="emphasis">Lemma.</em> Veronderstel dat \(V\) 'n vektorruimte van dimensie \(n\) is. Dan is enige lineêr onafhanklike lys van \(n\) vektore in \(V\) 'n basis vir \(V\text{.}\)</p>
+<p id="p-466"><em class="emphasis">Bewys.</em> Laat \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
 \right\}\) 'n lineêr onafhanklike lys vektore in \(V\) wees.</p>
-<p id="p-440">Veronderstel dat \(\basis{B}\) <em class="emphasis">nie</em> 'n basis vir \(V\) is nie.</p>
-<p id="p-441">Daarom span \(\basis{B}\) nie \(V\) nie, want... (a)</p>
-<p id="p-442">Daarom bestaan daar \(\ve{v} \in V\) sodanig dat ... (b)</p>
-<p id="p-443">Voeg nou \(\ve{v}\) by die lys \(\basis{B}\) om 'n nuwe lys te vorm, \(\basis{B}' :=\) ... (c)</p>
-<p id="p-444">Die nuwe lys \(\basis{B}'\) is lineêr onafhanklik omdat ... (d)</p>
-<p id="p-445">Dit is 'n teenstelling, omdat ... (e)</p>
-<p id="p-446">Dus \(\basis{B}\) moet 'n basis vir \(V\) wees.</p></article><article class="exercise-like" id="checking_matrices_lin_dep"><h6 class="heading">
+<p id="p-467">Veronderstel dat \(\basis{B}\) <em class="emphasis">nie</em> 'n basis vir \(V\) is nie.</p>
+<p id="p-468">Daarom span \(\basis{B}\) nie \(V\) nie, want... (a)</p>
+<p id="p-469">Daarom bestaan daar \(\ve{v} \in V\) sodanig dat ... (b)</p>
+<p id="p-470">Voeg nou \(\ve{v}\) by die lys \(\basis{B}\) om 'n nuwe lys te vorm, \(\basis{B}' :=\) ... (c)</p>
+<p id="p-471">Die nuwe lys \(\basis{B}'\) is lineêr onafhanklik omdat ... (d)</p>
+<p id="p-472">Dit is 'n teenstelling, omdat ... (e)</p>
+<p id="p-473">Dus \(\basis{B}\) moet 'n basis vir \(V\) wees.</p></article><article class="exercise-like" id="checking_matrices_lin_dep"><h6 class="heading">
 <span class="codenumber">4</span> </h6>
-<p id="p-447">Gebruik <a knowl="./knowl/true_false_span_lin_ind.html" title="Oefening 2.3.2.2">Oefening 2.3.2.2</a>(a) om aan te toon dat die lys matrikse in \(\Mat_{2,2}\) vanaf <a knowl="./knowl/x2_by_2_matrices_lin_dep.html" title="Oefening 2.2.2">Oefening 2.2.2</a> lineêr onafhanklik is.</p></article><article class="exercise-like" id="dim_poly_at_2_ex"><h6 class="heading">
+<p id="p-474">Gebruik <a knowl="./knowl/true_false_span_lin_ind.html" title="Oefening 2.3.5.2">Oefening 2.3.5.2</a>(a) om aan te toon dat die lys matrikse in \(\Mat_{2,2}\) vanaf <a knowl="./knowl/x2_by_2_matrices_lin_dep.html" title="Oefening 2.2.2">Oefening 2.2.2</a> lineêr onafhanklik is.</p></article><article class="exercise-like" id="dim_poly_at_2_ex"><h6 class="heading">
 <span class="codenumber">5</span> </h6>
-<p id="p-448">In elke geval, gebruik die resultate uit <a knowl="./knowl/true_false_span_lin_ind.html" title="Oefening 2.3.2.2">Oefeninge 2.3.2.2</a> <a knowl="./knowl/n_lin_ind_is_basis.html" title="Oefening 2.3.2.3">en 2.3.2.3</a> om te bepaal of \(\basis{B}\) 'n basis vir \(V\) is:</p>
+<p id="p-475">In elke geval, gebruik die resultate uit <a knowl="./knowl/true_false_span_lin_ind.html" title="Oefening 2.3.5.2">Oefeninge 2.3.5.2</a> <a knowl="./knowl/n_lin_ind_is_basis.html" title="Oefening 2.3.5.3">en 2.3.5.3</a> om te bepaal of \(\basis{B}\) 'n basis vir \(V\) is:</p>
 <ul class="disc">
-<li id="li-69"><p id="p-449">\(V = \Poly_2\text{,}\) \(\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1
+<li id="li-76"><p id="p-476">\(V = \Poly_2\text{,}\) \(\basis{B} = \left\{ 2 + x^2, \, 1-x, \, 1
 + x - 3x^2, \, x-x^2 \right\}\)</p></li>
-<li id="li-70">
-<p id="p-450">\(V = \Mat_{2,2}\text{,}\)</p>
+<li id="li-77">
+<p id="p-477">\(V = \Mat_{2,2}\text{,}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \basis{B} = \left\{ 
@@ -564,24 +619,30 @@ L : \ve{v}_1, \ve{v}_2, \ldots, \ve{v}_k, \ve{e}_1, \ve{e}_2,
 \end{equation*}
 </div>
 </li>
-<li id="li-71"><p id="p-451">\(V = \Trig_2\text{,}\) \(\basis{B} = \left\{ \sin^2 x, \, \cos^2
+<li id="li-78"><p id="p-478">\(V = \Trig_2\text{,}\) \(\basis{B} = \left\{ \sin^2 x, \, \cos^2
 x, \, 1 - \sin 2x, \, \cos 2x + 3 \sin 2x \right\}\)</p></li>
-</ul></article><article class="exercise-like" id="exercise-67"><h6 class="heading">
+</ul></article><article class="exercise-like" id="exercise-70"><h6 class="heading">
 <span class="codenumber">6</span> </h6>
-<p id="p-452">Laat \(\left\{ \ve{u}, \ve{v}, \ve{w} \right\}\) 'n lineêr onafhanklike lys vektore in 'n vektorruimte \(V\) wees. Skryf neer of die volgende bewerings waar of onwaar is. As dit waar is, bewys dit. As dit onwaar is, gee 'n teenvoorbeeld. Wenk: Gebruik die definisie van lineêre onafhanklikheid.</p>
+<p id="p-479">Laat \(\left\{ \ve{u}, \ve{v}, \ve{w} \right\}\) 'n lineêr onafhanklike lys vektore in 'n vektorruimte \(V\) wees. Skryf neer of die volgende bewerings waar of onwaar is. As dit waar is, bewys dit. As dit onwaar is, gee 'n teenvoorbeeld. Wenk: Gebruik die definisie van lineêre onafhanklikheid.</p>
 <ul class="disc">
-<li id="li-72"><p id="p-453">Die lys \(\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \,
+<li id="li-79"><p id="p-480">Die lys \(\left\{ \ve{u} + \ve{v}, \, \ve{v} + \ve{w}, \,
 \ve{u} + \ve{w} \right\}\) is lineêr onafhanklik.</p></li>
-<li id="li-73"><p id="p-454">Die lys \(\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \,
+<li id="li-80"><p id="p-481">Die lys \(\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \,
 \ve{u} - \ve{w} \right\}\) is lineêr onafhanklik.</p></li>
-</ul></article><article class="exercise-like" id="exercise-68"><h6 class="heading">
+</ul></article><article class="exercise-like" id="exercise-71"><h6 class="heading">
 <span class="codenumber">7</span> </h6>
-<p id="p-455">Vir elkeen van die volgende, toon aan dat \(V\) 'n deelruimte van \(\Poly_2\) is, vind 'n basis vir \(V\text{,}\) en bereken \(\dim
+<p id="p-482">Vir elkeen van die volgende, toon aan dat \(V\) 'n deelruimte van \(\Poly_2\) is, vind 'n basis vir \(V\text{,}\) en bereken \(\dim
 V\text{.}\)</p>
 <ul class="disc">
-<li id="li-74"><p id="p-456">\(V = \{ p \in \Poly_2 : p(2) = 0 \}\)</p></li>
-<li id="li-75"><p id="p-457">\(V = \{ p \in \Poly_2 : xp'(x) = p(x) \}\)</p></li>
-</ul></article></section></section></div></main>
+<li id="li-81"><p id="p-483">\(V = \{ p \in \Poly_2 : p(2) = 0 \}\)</p></li>
+<li id="li-82"><p id="p-484">\(V = \{ p \in \Poly_2 : xp'(x) = p(x) \}\)</p></li>
+</ul></article></section><article class="exercise-like" id="ex_basis_no_deg_2"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.25</span>
+</h6>
+<p id="p-485">Prove or disprove: there exits a basis \(\bopen p_0, p_1, p_2, p_3 \bclose\) of \(\Poly_3 \) such that none of the polynomials \(p_0, p_1, p_2, p_3\) have degree 2.</p></article><article class="exercise-like" id="exercise-73"><h6 class="heading">
+<span class="type">Verstaanpunt</span> <span class="codenumber">2.3.26</span>
+</h6>
+<p id="p-486">Prove or disprove: if \(U\) and \(W \) are distinct subspaces of \(V\) with \(U \neq V\) and \(W \neq V\text{,}\) then \(\dim(U + V) = \dim(U) + \dim(V)\text{.}\) (Recall the <a knowl="./knowl/def_sum_subspace.html" title="Definisie 1.6.30">definition of the sum of two subspaces</a> from <a knowl="./knowl/sum_of_subspaces_is_subspace.html" title="Oefening 1.6.4.9">Oefening 1.6.4.9</a>.)</p></article></section></div></main>
 </div>
 <div class="login-link"><span id="loginlogout" class="login">login</span></div>
 <script src="https://pretextbook.org/js/0.1/login.js"></script>

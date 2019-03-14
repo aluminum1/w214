@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:14+02:00    *-->
+<!--*    on 2019-03-14T17:49:08+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,26 +10,58 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evalueer (Sage)'});
+});
+</script>
 </head>
 <body>
 <article class="example-like"><h6 class="heading">
-<span class="type">Voorbeeld</span> <span class="codenumber">2.1.5</span>
+<span class="type">Voorbeeld</span> <span class="codenumber">2.1.3</span> <span class="title">Checking if a vector is a linear combination of other vectors</span>
 </h6>
-<p>Definieer die funksies \(\ve{f}, \ve{f}_1, \ve{f}_2 \in
-\Diff\) as</p>
+<p>In \(\mathbb{R}^4\text{,}\) is \(\ve{v}=(2, -1, 3, 0)\) a linear combination of</p>
 <div class="displaymath">
 \begin{equation*}
-\ve{f}(x) = \cos^3 x,  \ve{f}_1 (x) = \cos (x),  \ve{f}_2
-(x) = \cos (3x)\text{.}
+\ve{v}_1 = (1, 3, 2, 0), \ve{v}_2=(5, 1, 2, 4), \text{ and } \ve{v}_3 = (-1, 0, 2, 1) \text{?}
 \end{equation*}
 </div>
-<p>Dan is \(\ve{f}\) 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) vanweë die identiteit \(\cos(3x) = \frac{1}{4} (3 \cos x
-+ \cos(3x))\text{.}\) Sien <a knowl="./knowl/trig_poly_example.html" title="Voorbeeld 1.6.18: Trigonometriese polinome">Voorbeeld 1.6.18</a>. Met ander woorde,</p>
+<p>To check this, we need to check if the equation</p>
 <div class="displaymath">
-\begin{equation*}
-\ve{f} = \frac{3}{4} \ve{f}_1 + \frac{1}{4} \ve{f}_2 \text{.}
-\end{equation*}
+\begin{equation}
+\ve{v} = a_1 \ve{v}_1 + a_2 \ve{v}_2 + a_3 \ve{v}_3,\tag{2.1.2}
+\end{equation}
 </div>
-<p>Hierdie voorbeeld wys dat \(\ve{f}\) ook 'n trigonometriese polinoom is,selfs al is die oorspronklike formule \(\ve{f}(x) = cos(3x)\) nie van die form <a knowl="./knowl/formula_for_trig_poly.html" title="Vergelyking 1.6.3">(1.6.3)</a> nie.</p></article><span class="incontext"><a href="ACh2Sec1LineereKombinasieSpan.html#example-26">in-konteks</a></span>
+<p>which is an equation in the unknowns \(a_1, a_2, a_3\text{,}\) has any solutions. Let us write out <a knowl="./knowl/first_span_ex_eqn.html" title="Vergelyking 2.1.2">(2.1.2)</a> explicitly:</p>
+<div class="displaymath">
+\begin{align}
+(2, -1, 3, 0) \amp = a_1 (1, 3, 2, 0) + a_2 (5, 1, 2, 4) + a_3 (-1, 0, 2, 1)     \tag{2.1.3}\\
+\therefore (2, -1, 3, 0) \amp = (a_1 + 5a_2 -a_3, 3a_1 + a_2, 2a_1 + 2a_2 + 2a_3, 4a_2 + a_3) \tag{2.1.4}
+\end{align}
+</div>
+<p><a knowl="./knowl/last_eqn_in_lin_comb_ex.html" title="Vergelyking 2.1.4">(2.1.4)</a> is an equation between two vectors in \(\mathbb{R}^4\text{.}\) Two vectors in \(\mathbb{R}^4\) are equal if and only if their corresponding coefficients are equal. So, <a knowl="./knowl/first_span_ex_eqn.html" title="Vergelyking 2.1.2">(2.1.2)</a> is equivalent to the following system of simultaneous linear equations:</p>
+<div class="displaymath">
+\begin{align}
+a_1 + 5a_2 -a_3 \amp = -2 \tag{2.1.5}\\
+3a_1 + a_2 \amp = -1 \tag{2.1.6}\\
+2a_1 + 2a_2 + 2a_3 \amp = 3\tag{2.1.7}\\
+4a_2 + a_3 \amp = 0 \tag{2.1.8}
+\end{align}
+</div>
+<p>In other words, our question becomes: do equations <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.5">(2.1.5)–(2.1.8)</a> have a solution?</p>
+<p>This is the kind of problem you already know how to solve by hand, from first year. We can also use SageMath to do it for us. We simply tell it what our unknown variables are, and then ask it to solve the equation. Press <code class="code-inline tex2jax_ignore">Evaluate (Sage)</code> to see the result.</p>
+<div class="sagecell-sage" id="sage-7"><script type="text/x-sage">var('a1, a2, a3')
+
+solve([a1 + 5*a2 - a3 == 2, 
+      3*a1 + a2 == -1, 
+      2*a1 + 2*a2 + 2*a3 ==3,
+      4*a2 + a3 == 0], 
+      [a1, a2, a3])
+</script></div>
+<p>SageMath returns an empty list <code class="code-inline tex2jax_ignore">[]</code>. In other words, there are no solutions to equations <a knowl="./knowl/sim_lin_eqns_first_span_1ex.html" title="Vergelyking 2.1.5">(2.1.5)–(2.1.8)</a>. Therefore \(\ve{v}\) cannot be expressed as a linear combination of \(\ve{v}_1, \ve{v}_2, \ve{v}_3\text{.}\)</p></article><span class="incontext"><a href="ACh2Sec1LineereKombinasieSpan.html#example-26">in-konteks</a></span>
 </body>
 </html>

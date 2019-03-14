@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:11+02:00    *-->
+<!--*    on 2019-03-14T17:49:04+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -127,10 +127,9 @@ var login_required = false;
 </ul>
 <h2 class="link"><a href="Ch1AbstractVectorSpaces.html" data-scroll="Ch1AbstractVectorSpaces"><span class="codenumber">3</span> <span class="title">Tutoriale</span></a></h2>
 <ul>
-<li><a href="Tut1.html" data-scroll="Tut1">Tutoriaal 1</a></li>
-<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
-<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2 (Afr)</a></li>
-<li><a href="Tut3.html" data-scroll="Tut3">Tutoriaal 3</a></li>
+<li><a href="Tut1Afr.html" data-scroll="Tut1Afr">Tutoriaal 1</a></li>
+<li><a href="Tut2Afr.html" data-scroll="Tut2Afr">Tutoriaal 2</a></li>
+<li><a href="Tut3Afr.html" data-scroll="Tut3Afr">Tutoriaal 3</a></li>
 </ul>
 <h2 class="link"><a href="AAppAReminderAboutMatrices.html" data-scroll="AAppAReminderAboutMatrices"><span class="codenumber">4</span> <span class="title">Matrikshersiening</span></a></h2>
 <h2 class="link"><a href="backmatter-1.html" data-scroll="backmatter-1"><span class="title">Nasake</span></a></h2>
@@ -142,7 +141,7 @@ var login_required = false;
 <a href="ACh2Sec2LinearIndependence.html" class="permalink">¶</a><article class="definition-like" id="defn_of_linear_ind"><h6 class="heading">
 <span class="type">Definisie</span> <span class="codenumber">2.2.1</span>
 </h6>
-<p id="p-330">'n Lys van vektore \(\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots,
+<p id="p-349">'n Lys van vektore \(\basis{B} = \bopen \ve{v}_1, \ve{v}_2, \ldots,
 \ve{v}_n \bclose\) in 'n vektorruimte \(V\) is <dfn class="terminology">lineêr onafhanklik</dfn> as die vergelyking</p>
 <div class="displaymath">
 \begin{equation}
@@ -152,7 +151,7 @@ k_1 \ve{v}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{v}_n = \ve{0}\label{lin_independenc
 <p>slegs die triviale oplossing \(k_1 = k_2 = \cdots = k_n = 0\) het. Andersins word die lys vektore \(\ve{v}_1, \ve{v}_2, \ldots, \ve{v}_n\) <dfn class="terminology">lineêr afhanklik</dfn> genoem.</p></article><article class="remark-like" id="remark_about_lin_dependence"><h6 class="heading">
 <span class="type">Opmerking</span> <span class="codenumber">2.2.2</span> <span class="title">Nulvektor impliseer lineêr onafhanklik</span>
 </h6>
-<p id="p-331">Veronderstel een van die vektore \(\ve{v}_i\) in die lys \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) is die nulvektor \(\ve{0}\text{.}\) Dan is die lys \(\basis{B}\) lineêr afhanklik, want die vergelyking <a knowl="./knowl/lin_independence_eqn.html" title="Vergelyking 2.2.1">(2.2.1)</a> het die nie-triviale oplossing</p>
+<p id="p-350">Veronderstel een van die vektore \(\ve{v}_i\) in die lys \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) is die nulvektor \(\ve{0}\text{.}\) Dan is die lys \(\basis{B}\) lineêr afhanklik, want die vergelyking <a knowl="./knowl/lin_independence_eqn.html" title="Vergelyking 2.2.1">(2.2.1)</a> het die nie-triviale oplossing</p>
 <div class="displaymath">
 \begin{equation*}
 0 \ve{v}_1 + \cdots + 0 \ve{v}_{i-1} + 1 \ve{v}_i + 0 \ve{v}_{i+1} + \cdots + 0 \ve{v}_n = \ve{0},
@@ -164,10 +163,10 @@ k_1 \ve{v}_1 + k_2 \ve{e}_2 + \cdots k_n \ve{v}_n = \ve{0}\label{lin_independenc
 k_1 = 0, \ldots, k_{i-1} = 0, k_i = 1, k_{i+1} = 0, \ldots, k_n = 0.
 \end{equation*}
 </div>
-<p>So: <em class="emphasis">'n lineêr onafhanklike lys bevat nooit die nulvektor nie!</em></p></article><article class="example-like" id="example-30"><h6 class="heading">
+<p>So: <em class="emphasis">'n lineêr onafhanklike lys bevat nooit die nulvektor nie!</em></p></article><article class="example-like" id="example-32"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.2.3</span>
 </h6>
-<p id="p-332">Die lys van vektore \(\ve{f}_1 = (-1, \, 2)\) en \(\ve{f}_2 =
+<p id="p-351">Die lys van vektore \(\ve{f}_1 = (-1, \, 2)\) en \(\ve{f}_2 =
 (1, \,1)\) uit <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Voorbeeld 2.1.8: Checking if a list of vectors space the vector space">Voorbeeld 2.1.8</a> is lineêr onafhanklik, omdat die vergelyking</p>
 <div class="displaymath">
 \begin{equation*}
@@ -180,12 +179,12 @@ k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
 -k_1 + k_2 = 0, \quad 2k_1 + k_2 = 0\label{system_from_r2_example}\tag{2.2.2}
 \end{equation}
 </div>
-<p>wat slegs die trivale oplossing \(k_1 = 0\) en \(k_2 = 0\) het.</p></article><article class="exercise-like" id="exercise-55"><h6 class="heading">
+<p>wat slegs die trivale oplossing \(k_1 = 0\) en \(k_2 = 0\) het.</p></article><article class="exercise-like" id="exercise-56"><h6 class="heading">
 <span class="type">Verstaanpunt</span> <span class="codenumber">2.2.4</span>
 </h6>
-<p id="p-333">Bevestig dat <a knowl="./knowl/system_from_r2_example.html" title="Vergelyking 2.2.2">(2.2.2)</a> slegs die triviale oplossing het.</p>
+<p id="p-352">Bevestig dat <a knowl="./knowl/system_from_r2_example.html" title="Vergelyking 2.2.2">(2.2.2)</a> slegs die triviale oplossing het.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-12" id="solution-12"><span class="type">Oplossing</span></a><div id="hk-solution-12" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="p-334">
+<a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="type">Oplossing</span></a><div id="hk-solution-13" class="hidden-content tex2jax_ignore"><div class="solution"><div class="displaymath" id="p-353">
 \begin{equation*}
 (2k_1 + k_2) - (-k_1 + k_2) = 0 = 3k_2 \implies k_2 = 0 \implies k_1 = 0.
 \end{equation*}
@@ -193,7 +192,7 @@ k_1 (-1, \, 2) + k_2 (1, \, 1) = (0, \, 0)
 </div></article><article class="example-like" id="example_about_lin_dep_1"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.2.5</span>
 </h6>
-<p id="p-335">Die lys van vektore \(\ve{f}_1 =
+<p id="p-354">Die lys van vektore \(\ve{f}_1 =
 (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\text{,}\) \(\ve{f}_3 = (2, \, -1)\) uit <a knowl="./knowl/three_vectors_spanning_R2_example.html" title="Voorbeeld 2.1.8: Checking if a list of vectors space the vector space">Voorbeeld 2.1.8</a> is lineêr afhanklik, want die vergelyking</p>
 <div class="displaymath">
 \begin{equation}
@@ -212,19 +211,19 @@ k_1 (-1, \, 2) + k_2 (1, \, 1) + k_3 (2, \, -1) = (0, \, 0)\label{eqn_to_check_l
 k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}\text{.}\label{supposed_soln}\tag{2.2.5}
 \end{equation}
 </div>
-<p id="p-336">Byvoorbeeld, vir \(t=2\text{,}\) is</p>
+<p id="p-355">Byvoorbeeld, vir \(t=2\text{,}\) is</p>
 <div class="displaymath">
 \begin{equation*}
 2 (-1, \, 2) - 2 (1, \, 1) + 2 (2, \, -1) = (0, \, 0)
 \end{equation*}
 </div>
-<p>sodat <a knowl="./knowl/eqn_to_check_lin_ind.html" title="Vergelyking 2.2.3">(2.2.3)</a> non-triviale oplossings het.</p></article><article class="exercise-like" id="exercise-56"><h6 class="heading">
+<p>sodat <a knowl="./knowl/eqn_to_check_lin_ind.html" title="Vergelyking 2.2.3">(2.2.3)</a> non-triviale oplossings het.</p></article><article class="exercise-like" id="exercise-57"><h6 class="heading">
 <span class="type">Verstaanpunt</span> <span class="codenumber">2.2.6</span>
 </h6>
-<p id="p-337">Wys dat <a knowl="./knowl/system_from_r2_example_new.html" title="Vergelyking 2.2.4">(2.2.4)</a> die oplossingsversameling <a knowl="./knowl/supposed_soln.html" title="Vergelyking 2.2.5">(2.2.5)</a> het.</p>
+<p id="p-356">Wys dat <a knowl="./knowl/system_from_r2_example_new.html" title="Vergelyking 2.2.4">(2.2.4)</a> die oplossingsversameling <a knowl="./knowl/supposed_soln.html" title="Vergelyking 2.2.5">(2.2.5)</a> het.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-13" id="solution-13"><span class="type">Oplossing</span></a><div id="hk-solution-13" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-338">We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let \(k_1\) be free, i.e. \(k_1 = t, t \in \mathbb{R}\text{.}\) Then</p>
+<a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="type">Oplossing</span></a><div id="hk-solution-14" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-357">We have a system of consistent homogenous linear equations so we know there exists at least one solution, namely the trivial solution. Since we have 3 unknowns but only 2 equations, we do not have a unique solution. Let \(k_1\) be free, i.e. \(k_1 = t, t \in \mathbb{R}\text{.}\) Then</p>
 <div class="displaymath">
 \begin{equation*}
 (-k_1 + k_2 + 2k_3) - (2k_1 + k_2 - k_3) = 0 = -3k_1 + 3k_3 \\
@@ -236,7 +235,7 @@ k_1 = t, \, k_2 = -t, \, k_3 = t,  t \in \mathbb{R}\text{.}\label{supposed_soln}
 </div></article><article class="example-like" id="new_basis_for_poly_3"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.2.7</span>
 </h6>
-<p id="p-339">Die lys polinome</p>
+<p id="p-358">Die lys polinome</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{q}_0 (x) := 1, \,\, \ve{q}_1 (x) := x, \,\, \ve{q}_2 (x) :=
@@ -255,26 +254,26 @@ k_0 \ve{q}_0 + k_1 \ve{q}_1 + k_2 \ve{q}_2 + k_3 \ve{q}_3 = \ve{0}
 4k_3 x^3 + 2k_2 x^2 + (-3k_3 + k_1) x + (-k_2 + k_0) = 0
 \end{equation*}
 </div>
-<p id="p-340">Hierdie is ekwivalent aan die volgende stelsel vergelykings,</p>
+<p id="p-359">Hierdie is ekwivalent aan die volgende stelsel vergelykings,</p>
 <div class="displaymath">
 \begin{equation*}
 4k_3 = 0, \quad 2k_2 = 0, \quad -3 k_3 + k_1 = 0, \quad k_0 - k_2 = 0
 \end{equation*}
 </div>
-<p>wat slegs die triviale oplossing \(k_0 = k_1 = k_2 = k_3 = 0\) het.</p></article><p id="p-341">Hier is twee meer maniere om hoe van lineêre afhanklike lyste vektore te dink.</p>
+<p>wat slegs die triviale oplossing \(k_0 = k_1 = k_2 = k_3 = 0\) het.</p></article><p id="p-360">Hier is twee meer maniere om hoe van lineêre afhanklike lyste vektore te dink.</p>
 <article class="theorem-like" id="lin_dependence_prop"><h6 class="heading">
 <span class="type">Stelling</span> <span class="codenumber">2.2.8</span> <span class="title">Equivalent Criterions for Linear Dependence</span>
 </h6>
-<p id="p-342">Let \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) be a list of vectors in a vector space \(V\text{.}\) The following statements are equivalent:</p>
+<p id="p-361">Let \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) be a list of vectors in a vector space \(V\text{.}\) The following statements are equivalent:</p>
 <ol class="decimal">
 <li id="defn_lin_dep">The list of vectors \(\basis{B}\) is linearly dependent.</li>
-<li id="lin_comb_other_vec">(Linear Combination of Other Vectors)<p id="p-343">One of the vectors in the list \(\basis{B}\) is a linear combination of the other vectors in \(\basis{B}\text{.}\)</p>
+<li id="lin_comb_other_vec">(Linear Combination of Other Vectors)<p id="p-362">One of the vectors in the list \(\basis{B}\) is a linear combination of the other vectors in \(\basis{B}\text{.}\)</p>
 </li>
-<li id="lin_comb_prec_vec">(Linear Combination of Preceding Vectors)<p id="p-344">Either \(\ve{v}_1 = \ve{0}\text{,}\) or for some \(r \in \{2, 3, \ldots,
+<li id="lin_comb_prec_vec">(Linear Combination of Preceding Vectors)<p id="p-363">Either \(\ve{v}_1 = \ve{0}\text{,}\) or for some \(r \in \{2, 3, \ldots,
 n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{.}\)</p>
 </li>
-</ol></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-345">We will show that (1) \(\Leftrightarrow\) (2), (1) \(\Rightarrow\) (3) and (3) \(\Rightarrow\) (2), and conclude that each statement implies the others.</p>
-<p id="p-346">(1) \(\Rightarrow\) (2). Suppose that \(\basis{B}\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+</ol></article><article class="hiddenproof" id="proof-7"><a knowl="" class="id-ref" refid="hk-proof-7"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-7" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-364">We will show that (1) \(\Leftrightarrow\) (2), (1) \(\Rightarrow\) (3) and (3) \(\Rightarrow\) (2), and conclude that each statement implies the others.</p>
+<p id="p-365">(1) \(\Rightarrow\) (2). Suppose that \(\basis{B}\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
 <div class="displaymath">
 \begin{equation}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\label{lin_dep_lem_another_eqn}\tag{2.2.6}
@@ -287,7 +286,7 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\label{lin_d
 \end{align*}
 </div>
 <p>Therefore, (2) is true.</p>
-<p id="p-347">(2) \(\Rightarrow\) (1). Suppose that one of the vectors in the list, say \(\ve{v}_s\text{,}\) is a linear combination of the others vectors. That is,</p>
+<p id="p-366">(2) \(\Rightarrow\) (1). Suppose that one of the vectors in the list, say \(\ve{v}_s\text{,}\) is a linear combination of the others vectors. That is,</p>
 <div class="displaymath">
 \begin{align*}
 \ve{v}_s \amp= k_1\ve{v}_1 + \ldots + k_n \ve{v}_n \amp \amp \mbox{(No } \mbox{term on RHS.)} 
@@ -300,45 +299,45 @@ k_1 \ve{v}_1 + \ldots + (-1)\ve{v}_s + \ldots + k_n \ve{v}_n = \ve{0}.\label{rea
 \end{equation}
 </div>
 <p>Not all the coefficients on the LHS of <a knowl="./knowl/rearranged_lin_dep.html" title="Vergelyking 2.2.7">(2.2.7)</a> are zero, since the coefficient of \(\ve{v}_s\) is equal to \(-1\text{.}\) Therefore, \(\basis{B}\) is linearly dependent.</p>
-<p id="p-348">(1) \(\Rightarrow\) (3). Suppose that the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
+<p id="p-367">(1) \(\Rightarrow\) (3). Suppose that the list \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose\) is linearly dependent. This means that there are scalars \(k_1\text{,}\) \(k_2\text{,}\) \(\ldots\text{,}\) \(k_n\text{,}\) not all zero, such that</p>
 <div class="displaymath">
 \begin{equation}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_n \ve{v}_n = \ve{0}\text{.}\label{lin_dep_lem_first_eqn}\tag{2.2.8}
 \end{equation}
 </div>
-<p id="p-349">Let \(r \in \{1, \,2, \ldots, \, n\}\) be the largest index such that \(k_r \neq 0\text{.}\) (We are told that not all the \(k_i\) are zero, so this makes sense.) If \(r=1\text{,}\) then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.8">(2.2.8)</a> is simply the equation</p>
+<p id="p-368">Let \(r \in \{1, \,2, \ldots, \, n\}\) be the largest index such that \(k_r \neq 0\text{.}\) (We are told that not all the \(k_i\) are zero, so this makes sense.) If \(r=1\text{,}\) then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.8">(2.2.8)</a> is simply the equation</p>
 <div class="displaymath">
 \begin{equation*}
 k_1 \ve{v}_1 = \ve{0},  \mbox{where }  k_1 \neq 0\text{.}
 \end{equation*}
 </div>
-<p id="p-350">Therefore \(\ve{v}_1 = \ve{0}\) by <a knowl="./knowl/dichotomy_lem.html" title="Hulpstelling 1.5.6">Lemma 1.5.6</a>, and we are done. On the other hand, suppose \(r \neq 1\text{.}\) Then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.8">(2.2.8)</a> becomes the equation</p>
+<p id="p-369">Therefore \(\ve{v}_1 = \ve{0}\) by <a knowl="./knowl/dichotomy_lem.html" title="Hulpstelling 1.5.6">Lemma 1.5.6</a>, and we are done. On the other hand, suppose \(r \neq 1\text{.}\) Then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.8">(2.2.8)</a> becomes the equation</p>
 <div class="displaymath">
 \begin{equation*}
 k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0\text{.}
 \end{equation*}
 </div>
-<p id="p-351">By dividing by \(k_r\text{,}\) we can now solve for \(\ve{v}_r\) in terms of the preceding vectors \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{:}\)</p>
+<p id="p-370">By dividing by \(k_r\text{,}\) we can now solve for \(\ve{v}_r\) in terms of the preceding vectors \(\ve{v}_1\text{,}\) \(\ve{v}_2\text{,}\) \(\ldots\text{,}\) \(\ve{v}_{r-1}\text{:}\)</p>
 <div class="displaymath">
 \begin{equation*}
 \therefore \ve{v}_r = - \frac{k_1}{k_r} \ve{v}_1 - \frac{k_2}{k_r} \ve{v}_2 - \cdots - \frac{k_{r-1}}{k_r} \ve{v}_{r-1} \,
 \end{equation*}
 </div>
 <p>Therefore, (3) is true.</p>
-<p id="p-352">(3) \(\Rightarrow\) (2) Suppose that (3) is true. In other words, either:</p>
+<p id="p-371">(3) \(\Rightarrow\) (2) Suppose that (3) is true. In other words, either:</p>
 <ul class="disc">
-<li id="li-56">\(\ve{v}_1 = \ve{0}\text{.}\) Therefore, \(\basis{B}\) is linearly dependent, by <a knowl="./knowl/remark_about_lin_dependence.html" title="Opmerking 2.2.2: Nulvektor impliseer lineêr onafhanklik">Opmerking 2.2.2</a>. In other words, (1) is true. Therefore, since we have already proved that (1) \(\Rightarrow \) (2), we conclude that (2) is true.</li>
-<li id="li-57">For some \(r \in \{2, \ldots, n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1, \ldots, \ve{v}_{r-1}\text{.}\) In this case, clearly \(\ve{v}_r\) is a linear combination of the other vectors in \(\basis{B}\text{,}\) so (2) is true.</li>
+<li id="li-60">\(\ve{v}_1 = \ve{0}\text{.}\) Therefore, \(\basis{B}\) is linearly dependent, by <a knowl="./knowl/remark_about_lin_dependence.html" title="Opmerking 2.2.2: Nulvektor impliseer lineêr onafhanklik">Opmerking 2.2.2</a>. In other words, (1) is true. Therefore, since we have already proved that (1) \(\Rightarrow \) (2), we conclude that (2) is true.</li>
+<li id="li-61">For some \(r \in \{2, \ldots, n\}\text{,}\) \(\ve{v}_r\) is a linear combination of \(\ve{v}_1, \ldots, \ve{v}_{r-1}\text{.}\) In this case, clearly \(\ve{v}_r\) is a linear combination of the other vectors in \(\basis{B}\text{,}\) so (2) is true.</li>
 </ul>
 <p>In both cases, (2) is true. So, (3) \(\Rightarrow\) (2).</p></article></div>
 <article class="example-like" id="app_of_prop_preceding"><h6 class="heading">
 <span class="type">Voorbeeld</span> <span class="codenumber">2.2.9</span>
 </h6>
-<p id="p-353">Ons het in <a knowl="./knowl/example_about_lin_dep_1.html" title="Voorbeeld 2.2.5">Voorbeeld 2.2.5</a> gesien dat die lys vektore \(\ve{f}_1 =
+<p id="p-372">Ons het in <a knowl="./knowl/example_about_lin_dep_1.html" title="Voorbeeld 2.2.5">Voorbeeld 2.2.5</a> gesien dat die lys vektore \(\ve{f}_1 =
 (-1, \, 2)\text{,}\) \(\ve{f}_2 = (1, \,1)\text{,}\) \(\ve{f}_3 = (2, \, -1)\) in \(\mathbb{R}^3\) lineêr afhanklik is. Gee twee alternatiewe bewyse hiervan, deur gebruik te maak van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-14" id="solution-14"><span class="type">Oplossing</span> <span class="codenumber">1</span></a><div id="hk-solution-14" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-354">Ons kontrolleer <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> uit <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. Dit wil sê, ons kontrolleer of een van die vektore in die lys 'n lineêre kombinasie van die ander vektore is. Inderdaad, ons sien deur inspeksie dat</p>
+<a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="type">Oplossing</span> <span class="codenumber">1</span></a><div id="hk-solution-15" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-373">Ons kontrolleer <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> uit <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. Dit wil sê, ons kontrolleer of een van die vektore in die lys 'n lineêre kombinasie van die ander vektore is. Inderdaad, ons sien deur inspeksie dat</p>
 <div class="displaymath">
 \begin{equation}
 \ve{f}_2 = \ve{f}_1 + \ve{f}_3.\tag{2.2.9}
@@ -346,13 +345,13 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 </div>
 <p>Dus, \(\basis{B}\) is lineêr afhanklik.</p>
 </div></div>
-<a knowl="" class="id-ref" refid="hk-solution-15" id="solution-15"><span class="type">Oplossing</span> <span class="codenumber">2</span></a><div id="hk-solution-15" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-355">Ons kontrolleer <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> uit <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. Dit wil sê, ons kontrolleer:</p>
+<a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="type">Oplossing</span> <span class="codenumber">2</span></a><div id="hk-solution-16" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-374">Ons kontrolleer <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> uit <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>. Dit wil sê, ons kontrolleer:</p>
 <ul class="disc">
-<li id="li-58"><p id="p-356">\(\ve{f}_1 = \ve{0}\) (nie waar nie), óf</p></li>
-<li id="li-59"><p id="p-357">\(\ve{f}_2\) is 'n skalaarveelvoud van \(\ve{f}_1\) (nie waar nie), óf</p></li>
-<li id="li-60">
-<p id="p-358">\(\ve{f}_3\) is 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) wat waar is:</p>
+<li id="li-62"><p id="p-375">\(\ve{f}_1 = \ve{0}\) (nie waar nie), óf</p></li>
+<li id="li-63"><p id="p-376">\(\ve{f}_2\) is 'n skalaarveelvoud van \(\ve{f}_1\) (nie waar nie), óf</p></li>
+<li id="li-64">
+<p id="p-377">\(\ve{f}_3\) is 'n lineêre kombinasie van \(\ve{f}_1\) en \(\ve{f}_2\text{,}\) wat waar is:</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{f}_3 = - \ve{f}_1 + \ve{f}_2
@@ -364,8 +363,8 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 </div></article><article class="theorem-like" id="bumping_off_lemma"><h6 class="heading">
 <span class="type">Stelling</span> <span class="codenumber">2.2.10</span> <span class="title">Afstampproposisie</span>
 </h6>
-<p id="p-359">Veronderstel \(\basis{L} = \bopen \ve{l}_1, \ve{l}_2,
-\ldots, \ve{l}_m \bclose\) is 'n lineêr onafhanklike lys vektore in 'n vektorruimte \(V\) en dat \(\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose\) vir \(V\) span. Dan is \(m \leq n\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-360">Begin met die oorspronglike lys vektore</p>
+<p id="p-378">Veronderstel \(\basis{L} = \bopen \ve{l}_1, \ve{l}_2,
+\ldots, \ve{l}_m \bclose\) is 'n lineêr onafhanklike lys vektore in 'n vektorruimte \(V\) en dat \(\basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose\) vir \(V\) span. Dan is \(m \leq n\text{.}\)</p></article><article class="hiddenproof" id="proof-8"><a knowl="" class="id-ref" refid="hk-proof-8"><h6 class="heading"><span class="type">Bewys</span></h6></a></article><div id="hk-proof-8" class="hidden-content tex2jax_ignore"><article class="hiddenproof"><p id="p-379">Begin met die oorspronglike lys vektore</p>
 <div class="displaymath">
 \begin{equation}
 \basis{S} = \bopen \ve{s}_1, \ve{s}_2, \ldots, \ve{s}_n \bclose      \tag{2.2.10}
@@ -378,16 +377,16 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 \ve{s}_n \bclose\label{bloated_list}\tag{2.2.11}
 \end{equation}
 </div>
-<p id="p-361">Nou, omdat \(\basis{S}\) vir \(V\) span, weet ons in besonder dat \(\ve{l}_1\) kan uitgedruk word as 'n lineêre kombinasie van die vektore \(\ve{s}_1, \ldots, \ve{s}_n\text{.}\) Dus, deur <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, weet ons dat  \(\basis{S}'\) lineêr afhanklik is. Dus, deur <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, óf:</p>
+<p id="p-380">Nou, omdat \(\basis{S}\) vir \(V\) span, weet ons in besonder dat \(\ve{l}_1\) kan uitgedruk word as 'n lineêre kombinasie van die vektore \(\ve{s}_1, \ldots, \ve{s}_n\text{.}\) Dus, deur <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, weet ons dat  \(\basis{S}'\) lineêr afhanklik is. Dus, deur <a knowl="./knowl/lin_comb_prec_vec.html" title="Item 3: Linear Combination of Preceding Vectors">Item 3</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, óf:</p>
 <ul class="disc">
-<li id="li-61">\(\ve{l}_1 = \ve{0}\text{.}\) Dit kan nie waar wees nie, want dan sou \(\basis{L}\) lineêr afhanklik wees weens <a knowl="./knowl/remark_about_lin_dependence.html" title="Opmerking 2.2.2: Nulvektor impliseer lineêr onafhanklik">Opmerking 2.2.2</a>, wat in teenstryding is met ons oorspronklike aanname.</li>
-<li id="li-62">een van die \(\ve{s}\)-vectore, noem dit \(\ve{s}_r\text{,}\) kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan \(\ve{s}_r\) uit die lys \(\basis{S}'\) verwyder (‘afstamp’), en die resulterende lys<div class="displaymath">
+<li id="li-65">\(\ve{l}_1 = \ve{0}\text{.}\) Dit kan nie waar wees nie, want dan sou \(\basis{L}\) lineêr afhanklik wees weens <a knowl="./knowl/remark_about_lin_dependence.html" title="Opmerking 2.2.2: Nulvektor impliseer lineêr onafhanklik">Opmerking 2.2.2</a>, wat in teenstryding is met ons oorspronklike aanname.</li>
+<li id="li-66">een van die \(\ve{s}\)-vectore, noem dit \(\ve{s}_r\text{,}\) kan uitgedruk word as 'n lineêre kombinasie van die voorafgaande vektore. Ons kan dan \(\ve{s}_r\) uit die lys \(\basis{S}'\) verwyder (‘afstamp’), en die resulterende lys<div class="displaymath">
 \begin{equation}
 \basis{S}_1 :=  \left\{\ve{l}_1, \ve{s}_1, \ve{s}_2, \cdots, \hat{\ve{s}_r}, \cdots, \ve{s}_n \right\} \qquad \mbox{(\(\ve{s}_r\) omitted)}\tag{2.2.12}
 \end{equation}
 </div>sal nog steeds vir \(V\) span, deur <a knowl="./knowl/exercise-span-omission.html" title="Oefening 2.1.7">Oefening 2.1.7</a>.</li>
 </ul>
-<p id="p-362">In hierdie manier kan ons aangaan: elke keer 'n \(\ve{l}\)-vektor oor te dra en 'n \(\ve{s}\)-vektor te verwyder, en die resulterende lys sal nog steeds vir  \(V\) span:</p>
+<p id="p-381">In hierdie manier kan ons aangaan: elke keer 'n \(\ve{l}\)-vektor oor te dra en 'n \(\ve{s}\)-vektor te verwyder, en die resulterende lys sal nog steeds vir  \(V\) span:</p>
 <div class="displaymath">
 \begin{align*}
 \basis{L} \amp = \bopen \ve{l}_1, \ldots, \ve{l}_m \bclose \amp \basis{S} \amp = \bopen \ve{s}_1, \ldots, \ve{s}_n \bclose \\
@@ -396,18 +395,18 @@ k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_
 \amp \vdots \amp \amp \vdots 
 \end{align*}
 </div>
-<p id="p-363">Nou, veronderstel dat \(m &gt; n\text{.}\) Wanneer ons die \(n\)ste stadium van hierdie proses bereik, sal \(\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose\text{,}\) en dit sal vir \(V\) span. Dus, in besonder, \(\ve{l}_{n+1}\) (let op dat hierdie vektore wel bestaan, want \(m &gt; n \)) sal 'n lineêre kombinasie van \(\ve{l}_1, \ldots, \ve{l}_n\) wees. Maar dan, deur <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, lei ons af dat \(\basis{L}\) lineêr afhanklik is. Maar ons het aangeneem van die begin af dat  \(\basis{L}\)  lineêr <em class="emphasis">on</em>afhanklik is. So ons het 'n teenstryding. Dus, ons aanname dat  \(m &gt; n\) moet vals wees. Dus, dit moet waar wees dat \(m \leq n\text{.}\)</p></article></div>
+<p id="p-382">Nou, veronderstel dat \(m &gt; n\text{.}\) Wanneer ons die \(n\)ste stadium van hierdie proses bereik, sal \(\basis{S}_n = \bopen \ve{l}_n, \ldots, \ve{l}_1 \bclose\text{,}\) en dit sal vir \(V\) span. Dus, in besonder, \(\ve{l}_{n+1}\) (let op dat hierdie vektore wel bestaan, want \(m &gt; n \)) sal 'n lineêre kombinasie van \(\ve{l}_1, \ldots, \ve{l}_n\) wees. Maar dan, deur <a knowl="./knowl/lin_comb_other_vec.html" title="Item 2">Item 2</a> van <a knowl="./knowl/lin_dependence_prop.html" title="Stelling 2.2.8: Equivalent Criterions for Linear Dependence">Stelling 2.2.8</a>, lei ons af dat \(\basis{L}\) lineêr afhanklik is. Maar ons het aangeneem van die begin af dat  \(\basis{L}\)  lineêr <em class="emphasis">on</em>afhanklik is. So ons het 'n teenstryding. Dus, ons aanname dat  \(m &gt; n\) moet vals wees. Dus, dit moet waar wees dat \(m \leq n\text{.}\)</p></article></div>
 <section class="exercises" id="exercises-6"><h3 class="heading hide-type">
 <span class="type">Onderafdeling</span> <span class="codenumber"></span> <span class="title">Oefeninge</span>
 </h3>
 <article class="exercise-like" id="exercise_for_new_basis"><h6 class="heading">
 <span class="codenumber">1</span> </h6>
-<p id="p-364">Wys dat die lys vektore \((2,
+<p id="p-383">Wys dat die lys vektore \((2,
 \, 3, \, 1)\text{,}\) \((1, \, -1, \,
 2)\text{,}\) \((7, \, 3, \, c)\) lineêr afhanklik in \(\mathbb{R}^3\) is as en slegs as \(c=8\text{.}\)</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-16" id="solution-16"><span class="type">Oplossing</span></a><div id="hk-solution-16" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-365">We set up a linear equation and find the necessary conditions on \(c\text{.}\) Suppose some linear combination of the vectors equals 0:</p>
+<a knowl="" class="id-ref" refid="hk-solution-17" id="solution-17"><span class="type">Oplossing</span></a><div id="hk-solution-17" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-384">We set up a linear equation and find the necessary conditions on \(c\text{.}\) Suppose some linear combination of the vectors equals 0:</p>
 <div class="displaymath">
 \begin{equation*}
 k_1(2, \, 3, \, 1) + k_2(1, \, -1, \, 2) + k_3(7, \, 3, \, c) = \ve 0 = (0,0,0)
@@ -456,7 +455,7 @@ k_3\\
 </div></div>
 </div></article><article class="exercise-like" id="x2_by_2_matrices_lin_dep"><h6 class="heading">
 <span class="codenumber">2</span> </h6>
-<p id="p-366">Die lys vektore in \(\Mat_{2,2}\) gegee deur</p>
+<p id="p-385">Die lys vektore in \(\Mat_{2,2}\) gegee deur</p>
 <div class="displaymath">
 \begin{equation*}
 \ve{v}_1 = \begin{bmatrix}
@@ -481,10 +480,10 @@ k_3\\
 \end{bmatrix}
 \end{equation*}
 </div>
-<p>is lineêr onafhanklik (ons sal dit in <a knowl="./knowl/checking_matrices_lin_dep.html" title="Oefening 2.3.2.4">Oefening 2.3.2.4</a> bewys, maar ter wille van hierdie vraag kan jy aanvaar dat dit waar is). Herhaal dieselfde stappe as in <a knowl="./knowl/app_of_prop_preceding.html" title="Voorbeeld 2.2.9">Voorbeeld 2.2.9</a> om die eerste vektor in die lys te vind wat of die nulvektor of 'n lineêre kombinasie van die voorafgaande vektore is.</p>
+<p>is lineêr onafhanklik (ons sal dit in <a knowl="./knowl/checking_matrices_lin_dep.html" title="Oefening 2.3.5.4">Oefening 2.3.5.4</a> bewys, maar ter wille van hierdie vraag kan jy aanvaar dat dit waar is). Herhaal dieselfde stappe as in <a knowl="./knowl/app_of_prop_preceding.html" title="Voorbeeld 2.2.9">Voorbeeld 2.2.9</a> om die eerste vektor in die lys te vind wat of die nulvektor of 'n lineêre kombinasie van die voorafgaande vektore is.</p>
 <div class="solutions">
-<a knowl="" class="id-ref" refid="hk-solution-17" id="solution-17"><span class="type">Oplossing</span></a><div id="hk-solution-17" class="hidden-content tex2jax_ignore"><div class="solution">
-<p id="p-367">Firstly note that \(\ve v_1  \) is non-zero, so we consider \(\ve v_2 \text{.}\) \(\ve v_2 \) cannnot be a scalar multiple of \(\ve v_1\) by considering the matrix entry in position (1,2). We now consider \(\ve v_3 \text{.}\) Suppose</p>
+<a knowl="" class="id-ref" refid="hk-solution-18" id="solution-18"><span class="type">Oplossing</span></a><div id="hk-solution-18" class="hidden-content tex2jax_ignore"><div class="solution">
+<p id="p-386">Firstly note that \(\ve v_1  \) is non-zero, so we consider \(\ve v_2 \text{.}\) \(\ve v_2 \) cannnot be a scalar multiple of \(\ve v_1\) by considering the matrix entry in position (1,2). We now consider \(\ve v_3 \text{.}\) Suppose</p>
 <div class="displaymath">
 \begin{equation*}
 a\begin{bmatrix}
@@ -561,9 +560,9 @@ c \begin{bmatrix}
 </div>
 <p>and so \(b = -1 \text{.}\) SHOW THAT THIS IS INCONSISTENT WITH (2,1).</p>
 </div></div>
-</div></article><article class="exercise-like" id="exercise-59"><h6 class="heading">
+</div></article><article class="exercise-like" id="exercise-60"><h6 class="heading">
 <span class="codenumber">3</span> </h6>
-<p id="p-368">Laat \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
+<p id="p-387">Laat \(\basis{B} = \left\{ \ve{v}_1, \ldots, \ve{v}_n
 \right\}\) 'n lineêr onafhanklike lys vektore in 'n vektorruimte \(V\) wees. Veronderstel dat \(\ve{v}\) 'n vektor in \(V\) is wat nie as 'n lineêre kombinasie van die vektore uit \(\basis{B}\) geskryf kan word nie. Toon aan dat die lys \(\basis{B}' = \left\{ \ve{v}_1, \ldots,
 \ve{v}_n, \ve{v} \right\}\) lineêr onafhanklik is. (Wenk: Gebruik die Lineêre Kombinasie van Voorafgaande Vektore Proposisie.)</p></article></section></section></div></main>
 </div>

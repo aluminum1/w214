@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:15+02:00    *-->
+<!--*    on 2019-03-14T17:49:09+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -10,23 +10,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="robots" content="noindex, nofollow">
+<script>$(function () {
+    // Make *any* div with class 'sagecell-sage' an executable Sage cell
+    // Their results will be linked, only within language type
+    sagecell.makeSagecell({inputLocation: 'div.sagecell-sage',
+                           linked: true,
+                           languages: ['sage'],
+                           evalButtonText: 'Evalueer (Sage)'});
+});
+</script>
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraaf</span></h6>
-<p>We must show that every vector \(\ve{v} \in V\) can be written as a linear combination of the vectors from \(\basis{T}\text{.}\) So let \(\ve{v} \in V\text{.}\) Since \(\basis{S}\) spans \(V\text{,}\) we know we can write \(\ve{v}\) as a linear combination of the vectors from \(\basis{S}\text{:}\)</p>
-<div class="displaymath">
-\begin{equation}
-\ve{v} = b_1 \ve{v}_1 + \cdots + b_r \ve{v}_r + \cdots + b_{n} \ve{v}_n\tag{2.1.33}
-\end{equation}
-</div>
-<p>Substituting <a knowl="./knowl/exercise-span-omission-1.html" title="Vergelyking 2.1.32">(2.1.32)</a> into <a knowl="./knowl/exercise-span-omission-2.html" title="Vergelyking 2.1.33">(2.1.33)</a> gives</p>
-<div class="displaymath">
-\begin{align}
-\ve{v} \amp = b_1 \ve{v}_1 + \cdots + b_r (a_1 \ve{v}_1 + \cdots + a_{r-1} \ve{v}_{r-1}) + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n \tag{2.1.34}\\
-\amp = (b_1 + b_r a_1) \ve{v}_1 + \cdots + (b_r + b_r a_{r-1}) \ve{v}_{r-1} + b_{r+1} \ve{v}_{r+1} + \cdots + b_n \ve{v}_n \tag{2.1.35}
-\end{align}
-</div>
-<p>Equation <a knowl="./knowl/exercise-span-omission-3.html" title="Vergelyking 2.1.35">(2.1.35)</a> shows that we can express \(\ve{v}\) as a linear combination of the vectors from \(\basis{T}\text{.}\) Hence \(\basis{T}\) spans V.</p>
+<p>Finally, let us solve this problem using SageMath. Working by hand, we arrive at the simultanous linear equations <a knowl="./knowl/sim_lin_eqns_3ex.html" title="Vergelyking 2.1.19">(2.1.19)–(2.1.20)</a>, and then put it into a Sage cell: <div class="sagecell-sage" id="sage-9"><script type="text/x-sage">var('a1, a2, a3, v1, v2')
+
+solve([-a1 + a2 + 2*a3 == v1,
+       2*a1 + a2 - a3  == v2],
+       [a1, a2, a3])
+</script></div> Note that I needed to tell Sage that <code class="code-inline tex2jax_ignore">v1</code> and <code class="code-inline tex2jax_ignore">v2</code> are variables, and that I am asking it to solve for <code class="code-inline tex2jax_ignore">a1</code>, <code class="code-inline tex2jax_ignore">a2</code> and <code class="code-inline tex2jax_ignore">a3</code>. On my computer, Sage outputs: <div class="sidebyside"><div class="sbsrow" style="margin-left:0%;margin-right:0%;"><div class="sbspanel" style="width:100%;justify-content:flex-start;"><p><code class="code-inline tex2jax_ignore"> [[a1 == r1 - 1/3*v1 + 1/3*v2, a2 == -r1 + 2/3*v1 + 1/3*v2, a3 == r1]] </code></p></div></div></div> Here, <code class="code-inline tex2jax_ignore">r1</code> is to be interpreted as our free parameter \(t\text{.}\) So Sage is giving us the same solution as we found by hand, <a knowl="./knowl/span_ex_aa1.html" title="Vergelyking 2.1.27">(2.1.27)–(2.1.29)</a>.</p>
 <span class="incontext"><a href="ACh2Sec1LineereKombinasieSpan.html#p-329">in-konteks</a></span>
 </body>
 </html>

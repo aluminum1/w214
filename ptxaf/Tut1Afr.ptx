@@ -1,9 +1,9 @@
-<section xml:id="Tut1">
+<section xml:id="Tut1Afr">
   <title>W214 Lineêre Algebra 2019, Tutoriaal 1</title>
   <shorttitle>Tutoriaal 1</shorttitle>
   <introduction>
   	<p>
-  		Tutorial 1 bevat <xref ref="Ch1Sec1Intro"/> tot en met die einde van <xref ref="Ch1Sec5ResultsVectorSpace"/>. Die volgende oefeninge is gekies.
+  		Tutorial 1 bevat <xref ref="ACh1Sec1Intro"/> tot en met die einde van <xref ref="ACh1Sec5ResultsVectorSpace"/>. Die volgende oefeninge is gekies.
   	</p>
   </introduction>
 
@@ -12,7 +12,7 @@
     <exercise>
       <statement>
         <p>
-          Prove that set <m>C</m> from <xref ref="Ch1Sec1Intro">Section</xref>
+          Prove that set <m>C</m> from <xref ref="ACh1Sec1Intro">Section</xref>
           together with the addition operation <xref ref="add_in_C"/>,
           the zero vector <xref ref="zero_in_C" /> and the scalar multiplication operation <xref ref="sm_in_C" /> forms a vector space.
         </p>

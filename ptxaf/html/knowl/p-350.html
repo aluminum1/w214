@@ -2,7 +2,7 @@
 <html lang="af-ZA">
 <!--**************************************-->
 <!--*    Generated from PreTeXt source   *-->
-<!--*    on 2019-03-14T17:24:15+02:00    *-->
+<!--*    on 2019-03-14T17:49:09+02:00    *-->
 <!--*                                    *-->
 <!--*      https://pretextbook.org       *-->
 <!--*                                    *-->
@@ -13,12 +13,19 @@
 </head>
 <body>
 <h6 class="heading"><span class="type">Paragraaf</span></h6>
-<p>Therefore \(\ve{v}_1 = \ve{0}\) by <a knowl="./knowl/dichotomy_lem.html" title="Hulpstelling 1.5.6">Lemma 1.5.6</a>, and we are done. On the other hand, suppose \(r \neq 1\text{.}\) Then <a knowl="./knowl/lin_dep_lem_first_eqn.html" title="Vergelyking 2.2.8">(2.2.8)</a> becomes the equation</p>
+<p>Veronderstel een van die vektore \(\ve{v}_i\) in die lys \(\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose \) is die nulvektor \(\ve{0}\text{.}\) Dan is die lys \(\basis{B}\) lineêr afhanklik, want die vergelyking <a knowl="./knowl/lin_independence_eqn.html" title="Vergelyking 2.2.1">(2.2.1)</a> het die nie-triviale oplossing</p>
 <div class="displaymath">
 \begin{equation*}
-k_1 \ve{v}_1 + k_2 \ve{v}_2 + \cdots + k_r \ve{v}_r = \ve{0},  \mbox{where }  k_r \neq 0\text{.}
+0 \ve{v}_1 + \cdots + 0 \ve{v}_{i-1} + 1 \ve{v}_i + 0 \ve{v}_{i+1} + \cdots + 0 \ve{v}_n = \ve{0},
 \end{equation*}
 </div>
+<p>met ander woorde,</p>
+<div class="displaymath">
+\begin{equation*}
+k_1 = 0, \ldots, k_{i-1} = 0, k_i = 1, k_{i+1} = 0, \ldots, k_n = 0.
+\end{equation*}
+</div>
+<p>So: <em class="emphasis">'n lineêr onafhanklike lys bevat nooit die nulvektor nie!</em></p>
 <span class="incontext"><a href="ACh2Sec2LinearIndependence.html#p-350">in-konteks</a></span>
 </body>
 </html>
