@@ -147,7 +147,7 @@ We have a system of consistent homogenous linear equations so we know there exis
   </p>
 
   <proposition xml:id="lin_dependence_prop">
-    <title>Equivalent Criterions for Linear Dependence</title>
+    <title>Equivalent Formulations of Linear Dependence</title>
     <statement>
       <p>
         Let <m>\basis{B} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose</m> be a list of vectors in a vector space <m>V</m>.
