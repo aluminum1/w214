@@ -398,5 +398,63 @@
       <mrow>\amp = \mbox{LHS} </mrow>
     </md>.
   </proof>
+
+  <exercises>
+      <exercise xml:id="trig_ex_1">
+    <statement>
+      <p>
+        Let
+        <me>
+          T : \Trig_1 \rightarrow \Trig_2
+        </me>
+        be the <sq>multiply with <m>\sin x</m></sq> linear map,
+        <m>T(f)(x) = \sin x f(x)</m>.
+        Compute <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with respect to the standard basis
+        <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise xml:id="trig_ex_2">
+    <statement>
+      <p>
+        Let
+        <me>
+          S : \Trig_2 \rightarrow \Trig_2
+        </me>
+        be the <sq>shift by <m>\frac{\pi}{6}</m></sq> map,
+        <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
+        Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="lin-map-in-matrix-theorem">Theorem</xref>
+        for the linear map <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> given by <m>S(\mat{M}) = \mat{M}^T</m>,
+        for the vector <m>\mat{A} \in \Mat_{2,2}</m> given by
+        <md>
+          \mat{A} = \cmatrix{0 \amp  1 \\ 0 \amp  0}
+        </md>
+        and using the following bases of <m>\Mat_{2,2}</m>:
+        <md>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \cmatrix{1 \amp  1 \\ 2 \amp  3}, \, \mat{M}_2 = \cmatrix{1 \amp  0 \\ 1 \amp  1}, \, \mat{M}_3 = \cmatrix{1 \amp  1 \\ 1 \amp  1}, \, \mat{M}_4 = \cmatrix{0 \amp  1 \\ 1 \amp  1} \bclose.
+        </md>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Check that the linear maps <m>T</m> and <m>S</m> from <xref ref="trig_ex_1">Exercises</xref>
+        and <xref ref="trig_ex_2"></xref>
+        satisfy <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m>.
+      </p>
+    </statement>
+  </exercise>
+</exercises>
 </section>
 

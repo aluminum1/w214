@@ -647,5 +647,134 @@
       so that <m>\ve{w}</m> is indeed a linear combination of the vectors from <m>\basis{D}</m>.
     </p>
   </proof>
+
+  <exercises>
+    <exercise>
+    <statement>
+      <p>
+        Verify the Rank-Nullity theorem for the following linear maps.
+        That is, for each map <m>T</m>, (a) determine <m>\Ker(T)</m> and <m>\Im(T)</m> explicitly, (b) determine the dimension of <m>\Ker(T)</m> and <m>\Im(T)</m>, (c) check that these numbers satisfy the Rank-Nullity theorem.
+
+        <ol>
+          <li>
+            <p>
+              The identity map <m>\id_V : V \rightarrow V</m> on a finite-dimensional vector space <m>V</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The zero map
+              <md>
+                <mrow>Z : V \amp  \rightarrow V</mrow>
+                <mrow>\ve{v} \amp  \mapsto \ve{0}</mrow>
+              </md>
+              on a finite-dimensional vector space <m>V</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The map
+              <md>
+                <mrow>T : \Poly_3 \amp  \rightarrow \Col_3</mrow>
+                <mrow>p \amp  \mapsto \cvector{p(1)</mrow>
+                <mrow>p(2)</mrow>
+                <mrow>p(3)}</mrow>
+              </md>
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The map
+              <md>
+                <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
+                <mrow>f \amp  \mapsto \cvector{ \displaystyle \int_0^\pi f(x) \cos x dx</mrow>
+                <mrow>\displaystyle \int_0^\pi f(x) \sin x dx}</mrow>
+              </md>
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Given an example of a linear map
+        <m>T : \Col_4 \rightarrow \Col_4</m> such that <m>\Rank(T) = \Nullity(T)</m>.
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        For each of the following assertions,
+        state whether it is <em>true</em> or <em>false</em>.
+        If it is true, prove it.
+        If it is false, prove that it is false.
+
+        <ol>
+          <li>
+            <p>
+              There exists a linear map <m>T : \mathbb{R}^5 \rightarrow \mathbb{R}^2</m> such that
+              <me>
+                \Ker(T) = \{ (x_1, x_2, x_3, x_4, x_5) \in \mathbb{R}^5 : x_1 = 3x_2 \text{ and }  x_3 = x_4 = x_5\}
+              </me>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              There exists a linear map <m>F : \Trig_3 \rightarrow \Trig_3</m> such that <m>\Rank(T) = \Nullity(T)</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Let <m>f(x,y,z)</m> be a function on
+        <m>\mathbb{R}^3</m> and fix a point <m>\ve{p} = (x_0, y_0, z_0) \in \mathbb{R}^3</m>.
+        For each vector <m>\ve{u} \in \mathbb{R}^3</m>,
+        we can regard the derivative of <m>f</m> in the direction of <m>\ve{u}</m> at <m>\ve{p}</m> as a map
+        <md>
+          <mrow>D_{\ve{p}} : \mathbb{R}^3 \amp \rightarrow \mathbb{R}</mrow>
+          <mrow>\ve{u} \amp \mapsto (\nabla f)(\ve{p}) \cdot \ve{u}</mrow>
+        </md>.
+        <ol>
+          <li>
+            <p>
+              Show that <m>D_{\ve{p}}</m> as defined above is a linear map.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              Consider the example of <m>f(x,y,z) = x^2 + y^2 + z^2</m>.
+              Determine <m>\Ker(D_\ve{p})</m> for all points <m>\ve{p} \in \mathbb{R}^3</m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Using the Rank-Nullity theorem,
+        give a different proof of the fact that the image of the map <m>C</m> in <xref ref="cross-product-example">Example</xref>
+        is <m>\{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}</m>.
+      </p>
+    </statement>
+  </exercise>
+</exercises>
 </section>
 
