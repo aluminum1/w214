@@ -157,7 +157,11 @@
 
     </solution>
 
-    <exercise>
+
+    </statement>
+  </example>
+
+      <exercise>
       <statement>
         <p>
           Is <m>A \circ D = \id_{\Poly_{n+1}}</m>?
@@ -165,10 +169,18 @@
           If it is not, give an explicit counterexample.
         </p>
       </statement>
+
+      <solution>
+        <p>
+The statement is not true! For example, let <m> \ve p(x) = x + 1 </m>.
+Then
+<me>
+(A \circ D)(x + 1)  = A(1) = x \neq x + 1.
+</me>
+</p>
+      </solution>
     </exercise>
 
-    </statement>
-  </example>
 
   <exercises>
   <exercise>
@@ -184,6 +196,17 @@
         Check algebraically that <m>R_\phi \circ R_\theta = R_{\phi + \theta}</m> by computing the action of the linear maps on both sides of this equation on an arbitrary vector <m>(x,y) \in \mathbb{R}^2</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        <md>
+        <mrow>R_\phi R_\theta (x,y) \amp = R_\phi (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)</mrow>
+        <mrow>\amp =  \left((x\cos\theta-y\sin\theta)\cos\phi - (x\sin\theta + y \cos\theta)\sin\phi ,\, (x\cos\theta - y\sin\theta)\sin\phi + (x\sin\theta + y\cos\theta)\cos \phi\right) </mrow>
+        <mrow> \amp = \left(x(\cos\theta\cos\phi - \sin\theta\sin\phi) - y(\sin\theta\cos\phi + \cos\theta\sin\phi),\, x(\cos\theta\sin\phi + \sin\theta\cos\phi) + y(\cos\theta\cos\phi - \sin\theta\sin\phi)\right) </mrow>
+        <mrow> \amp = \left(x\cos(\theta + \phi) - y\sin(\theta + \phi), \,x\sin(\theta+\phi) + y\cos(\theta + \phi_)\right) </mrow>
+        <mrow> \amp = R_{\phi + \theta}(x,y) </mrow>
+      </md>
+</p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -197,6 +220,18 @@
         Are they equal?
       </p>
     </statement>
+    <solution>
+      <p>
+        <me>
+        (S \circ M)(p(x)) = S(M(p(x))) = S(x p(x)) = (x-1)p(x-1)
+      </me>
+      whereas
+      <me>
+      (M \circ S)(p(x)) = M(p(x-1)) = xp(x-1).
+    </me>
+Thus <m> S \circ M \neq M \circ S </m>.
+      </p>
+    </solution>
   </exercise>
   </exercises>
 </section>
