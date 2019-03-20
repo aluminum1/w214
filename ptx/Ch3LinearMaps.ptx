@@ -10,8 +10,10 @@
 
   <xi:include  href="Ch3Sec4LinearMapsMatrices.ptx" />
 
+<!--
   <xi:include  href="Ch3Sec5KernelRange.ptx" />
 
   <xi:include  href="Ch3Sec6InjectiveSurjective.ptx" />
+-->
 </chapter>
 

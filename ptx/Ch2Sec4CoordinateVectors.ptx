@@ -509,7 +509,7 @@ Hence <me>
 <li>
 <p>
 <me>
-p(x) = x^2 + x -6 = (x+3)(x_2)
+p(x) = x^2 + x -6 = (x+3)(x - 2)
 </me>
 and so <m> p(2) = </m> and hence <m> p \in V </m>.
 </p>

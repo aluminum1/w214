@@ -1,7 +1,7 @@
 
 
 <section xml:id="Ch3Sec1DefinitionsExamples">
-  <title>Definition and examples</title>
+  <title>Definitions and Examples</title>
   <p>
     Recall that a <em>function</em>
     (or a <em>map</em>)
@@ -40,14 +40,14 @@
         <ul>
           <li>
             <p>
-              <m>T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}')</m> for all vectors <m>\ve{v}, \ve{v}' \in V</m>
+              <m>T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}')</m> for all vectors <m>\ve{v}, \ve{v}' \in V</m>.
             </p>
           </li>
 
           <li>
             <p>
               <m>T(k \ve{v}) = k T (\ve{v})</m> for all vectors
-              <m>\ve{v} \in V</m> and scalars <m>k \in \mathbb{R}</m>
+              <m>\ve{v} \in V</m> and scalars <m>k \in \mathbb{R}</m>.
             </p>
           </li>
         </ul>
@@ -457,7 +457,7 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
         <ol>
           <li>
             <p>
-              <m>T(\ve{0}_V) = \ve{0}_W</m>
+              <m>T(\ve{0}_V) = \ve{0}_W</m>.
             </p>
           </li>
 
@@ -733,7 +733,7 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
               Yes.
             </p>
           </li>
-          <li>.
+          <li>
             <p>
              <me>
              T\left((x,y,z) + (a,b,c)\right) = T\left( (x+a,y+b , z + c) \right) = (z+c,x+a,y+b) \\ 
@@ -794,7 +794,7 @@ T(k(x,y,z)) = T(kx,ky,kz) = (kz,kx,ky) = k(z,x,y) = k T((x,y,z)).
             <p>
               The proof is simple and follows from the usual properties of polynomials. Using the fact that multiplication of polynomials distributes over addition we compute
               <me>
-              M(\ve p + \ve q)(x) = x^2(\ve p(x) + \veq(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x).
+              M(\ve p + \ve q)(x) = x^2(\ve p(x) + \ve q(x)) = x^2\ve p(x) + x^2\ve q(x) = M(\ve p)(x) + M(\ve q)(x).
             </me>
             We may consider the scalar <m> k </m> as a constant polynomial. Thus, using the commutativity and associativity of polynomial multiplication we compute
             <me>

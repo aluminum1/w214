@@ -533,19 +533,19 @@ Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are i
     <p>
 <m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
 <me>
-\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp a_{12} \\ a_{21} \mamp -a_{22}\end{bmatrix}.
+\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
 </me>
-Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = c</m>. So <m>W</m> consists of all those matrices  of the form
+Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
 <me>
-\begin{bmatrix} 0 \mamp k \\ k \mamp 0\end{bmatrix}
+\begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
 </me>.
 This also shows that 
 <me>
-\bopen \begin{bmatrix} 0 \mamp 1 \\ 1 \mamp 0\end{bmatrix} \bclose
+\bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
 </me>
 is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
 <me>
-(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ 1 \mamp 0\end{bmatrix}
+(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
 </me>
     </p>
   </solution>
