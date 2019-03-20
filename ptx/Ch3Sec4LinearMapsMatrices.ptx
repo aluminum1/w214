@@ -431,9 +431,9 @@
           \mat{A} = \cmatrix{0 \amp  1 \\ 0 \amp  0}
         </md>
         and using the following bases of <m>\Mat_{2,2}</m>:
-        <md>
-          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \cmatrix{1 \amp  1 \\ 2 \amp  3}, \, \mat{M}_2 = \cmatrix{1 \amp  0 \\ 1 \amp  1}, \, \mat{M}_3 = \cmatrix{1 \amp  1 \\ 1 \amp  1}, \, \mat{M}_4 = \cmatrix{0 \amp  1 \\ 1 \amp  1} \bclose.
-        </md>
+        <me>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \begin{bmatrix}1 \mamp  1 \\ 2 \mamp  3\end{bmatrix}, \, \mat{M}_2 = \begin{bmatrix}1 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_3 = \begin{bmatrix}1 \amp  1 \\ 1 \amp  1\end{bmatrix}, \, \mat{M}_4 =\begin{bmatrix}0 \amp  1 \\ 1 \amp  1 \end{bmatrix} \bclose.
+        </me>
       </p>
     </statement>
   </exercise>
