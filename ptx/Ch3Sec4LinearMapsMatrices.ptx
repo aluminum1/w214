@@ -405,6 +405,25 @@
         <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        Recall the standard double angle formulae:
+        <md>
+          <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
+          <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>.
+          </md>
+           With these in mind, we compute:
+          <md>
+            <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
+            <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
+            <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
+      </md>
+      Thus
+      <me>
+[T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
+    </me>
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="trig_ex_2">
@@ -419,6 +438,47 @@
         Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        In this exercise, we shall use the standard angle addition formulae for trigonometric functions:
+        <md>
+          <mrow>\cos(x - y) \amp = \cos x \cos y + \sin x \sin y </mrow>
+          <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>.
+        </md>
+        We compute
+        <md>
+<mrow> S(T_0) \amp = 1 = T_0 </mrow>
+
+<mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
+
+<mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
+
+<mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
+
+<mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
+
+<mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
+        </md>
+        Similarly,
+        <md>
+          <mrow> S(T_4) = \sin (2x - \frac{\pi}{6}) =  -\frac{1}{2} \cos 2x + \frac{\sqrt 3}{2} \sin 2x = -\frac{1}{2} T_3 + \frac{\sqrt 3}{2}T_4.</mrow>
+        </md>
+        Hence
+        <me>
+        [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
+1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
+
+0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
+
+0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
+
+0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
+
+0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
+\end{bmatrix}.
+      </me>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -428,7 +488,7 @@
         for the linear map <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> given by <m>S(\mat{M}) = \mat{M}^T</m>,
         for the vector <m>\mat{A} \in \Mat_{2,2}</m> given by
         <md>
-          \mat{A} = \cmatrix{0 \amp  1 \\ 0 \amp  0}
+         <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
         </md>
         and using the following bases of <m>\Mat_{2,2}</m>:
         <me>
