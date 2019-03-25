@@ -304,7 +304,7 @@
       Ons kan nou die volgende stelling bewys.
     </p>
 
-    <theorem>
+    <theorem xml:id="change-of-basis-thm">
       <title>Basisomskakeling</title>
       <statement>
         <p>
