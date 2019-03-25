@@ -151,8 +151,9 @@
   <example>
     <statement>
     <p>
-      Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>.
+      Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>
     </p>
+    <p>
     <solution>
       <p>
         We define a pair of linear maps
@@ -164,8 +165,15 @@
         </md>
       </p>
     </solution>
+</p>
+   
+    <p>
+      We clearly have <m>T \circ S = \id_{\mathbb{R}^n}</m> and <m>S \circ T = \id_{\Poly_{n-1}}</m>.
+    </p>
+    </statement>
+  </example>
 
-    <exercise>
+ <exercise>
       <statement>
         <p>
           Check that these maps are linear.
@@ -173,18 +181,13 @@
       </statement>
     </exercise>
 
-    <p>
-      We clearly have <m>T \circ S = \id_{\mathbb{R}^n}</m> and <m>S \circ T = \id_{\Poly_{n-1}}</m>.
-    </p>
-    </statement>
-  </example>
 
   <p>
     We will now show that up to isomorphism,
     there is only one vector space of each dimension!
   </p>
 
-  <theorem>
+  <theorem xml:id="iso_same_dim">
     <statement>
       <p>
         Two finite-dimensional vector spaces <m>V</m> and <m>W</m> are isomorphic if and only if they have the same dimension.
@@ -307,9 +310,7 @@
         (check this).
         Then, for instance,
         <md>
-          <mrow>\ve{vec}_{\Poly_3, \basis{B}} \left( \cvector{2</mrow>
-          <mrow>-3</mrow>
-          <mrow>3} \right) \amp = 2(1+x) -3 (1+x+x^2) + 3(1-x^2)</mrow>
+          <mrow>\ve{vec}_{\Poly_3, \basis{B}} \left( \begin{bmatrix}  2 \\ -3 \\ 3\end{bmatrix}\right) \amp = 2(1+x) -3 (1+x+x^2) + 3(1-x^2)</mrow>
           <mrow>\amp =  2 -x -6x^2 \in \Poly_3 \, </mrow>
         </md>.
       </p>
@@ -321,28 +322,71 @@
       <p>
         Show that:
 
-        <ul>
+        <ol>
           <li>
-            <title>(a)</title>
+            
             <p>
               <m>\ve{vec}_{V, \basis{B}} (\mat{c} + \mat{c}') = \ve{vec}_{V, \basis{B}} (\mat{c}) + \ve{vec}_{V, \basis{B}} (\mat{c}')</m>
             </p>
           </li>
 
           <li>
-            <title>(b)</title>
+           
             <p>
               <m>\ve{vec}_{V, \basis{B}} (k\mat{c}) = k \, \ve{vec}_{V, \basis{B}} (\mat{c})</m>.
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
 
       <p>
         This means that <m>\ve{vec}_{V, \basis{B}} : \Col_m \rightarrow V</m> is a linear map.
       </p>
     </statement>
-  </exercise>
+    <solution>
+      <p>
+ <ol>
+          <li>
+             <p>
+              <md>
+              <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
+
+              <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
+
+              <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
+
+              <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
+
+              <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
+
+            </md>
+
+            </p>
+          </li>
+
+          <li>
+            <p>
+             <md>
+
+              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow> 
+
+              <mrow> \amp =  \ve{vec}_{V, \basis B}\left(\begin{bmatrix}  kc_1 \\ \vdots \\kc_n\end{bmatrix} \right)</mrow>
+
+              <mrow> \amp = (kc_1\ve e_1 + \cdots + kc_n\ve e_n )</mrow>
+
+              <mrow> \amp = k(c_1\ve e_1 + \cdots + c_n\ve e_n ) </mrow>
+
+              <mrow> \amp = k\,\ve{vec}_{V, \basis B}(\mat c) </mrow>
+
+             </md>
+            </p>
+          </li>
+        </ol>
+
+
+</p>
+</solution>
+        </exercise>
 
   <theorem>
     <statement>
@@ -371,25 +415,21 @@
       Then
       <md>
         <mrow>(\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} ) \big(\ve{v}\big) \amp = \ve{vec}_{V, \basis{B}} \big( [\ve{v}]_\basis{B} \big)</mrow>
-        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \cvector{a_1</mrow>
-        <mrow>\vdots</mrow>
-        <mrow>a_m} \right)</mrow>
+        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \right)</mrow>
         <mrow>\amp = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>
       so that <m>\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} = \id_V</m>.
       Conversely, given
       <me>
-        \mat{c} = \cvector{c_1 \\ \vdots \\ c_m} \in \Col_m
+        \mat{c} = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}\in \Col_m
       </me>,
       we have
       <md>
         <mrow>\big( [ \smul]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp = 
         \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
         <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
-        <mrow>\amp = \cvector{ c_1</mrow>
-        <mrow>\vdots</mrow>
-        <mrow>c_m}</mrow>
+        <mrow>\amp = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}</mrow>
         <mrow>\amp = \mat{c}</mrow>
       </md>
       where the second last step uses the <em>definition</em>
@@ -406,6 +446,106 @@
       we can treat the elements of <m>V</m> as if they were column vectors!
     </p>
   </assemblage>
+<exercises>
+   <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces isomorphic?
+       <md>
+         <mrow> V \amp = \left\{ \mat{v} \in \Col_4 : \begin{bmatrix} 1 \mamp  2 \mamp  0 \mamp  -1 \\ -1 \mamp  1 \mamp  1 \mamp  0 \end{bmatrix}  \mat{v}  = \mat{0}  \right\} </mrow>
+      
+        
+          <mrow>W \amp = \left\{ p \in \Poly_2 : \int_0^2 p(x) dx = 0 \right\} </mrow>
+             </md>.
+      </p>
 
+      <p>
+        If they are, construct an explicit isomorphism between them.
+        If not, prove that they are not isomorphic.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        V consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
+        <md>
+
+         <mrow> x + 2y - w = 0 </mrow>
+
+         <mrow> -x + y + z = 0 </mrow>
+
+        </md>.
+
+        We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.
+      </p>
+<p>
+Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
+
+      
+        <me> 
+\int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
+      </me>
+     Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
+      </p>
+      <p>
+Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
+      </p>
+
+      <p>
+        Since <m>V</m> is 2 dimensional, a basis for <m> V </m> consists of any two non-zero vectors in <m>V</m> that are not scalar multiples of one another. By inspection, we find the basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. By similar reasoning, we find a basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. By <xref ref="defining_linear_map_on_basis" />, there is a unique linear map <m> T: V \to W </m> such that
+        <md>
+         <mrow> T((1,0,1,1)) \amp = \frac{3}{8}x^2 - \frac{1}{2} </mrow>
+
+         <mrow> T((0,1,-1,2)) \amp = x -1 </mrow>
+        </md>. This map is an isomorphism, as demonstrated by the proof of <xref ref ="iso_same_dim" />.
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Are the following vector spaces isomorphic?
+        <me>
+          V = \{ \ve{v} \in \mathbb{R}^3 : \ve{v} \times (1,2,3) = \ve{0} \}
+        </me>
+        <me>
+          W = \left\{ M \in \Mat_{2,2} : M^T = -M \right\}
+        </me>.
+      </p>
+
+      <p>
+        If they are, construct an explicit isomorphism between them.
+        If not, prove that they are not isomorphic.
+      </p>
+    </statement>
+  </exercise>
+  <solution>
+    <p>
+      We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
+      <me>
+|\ve v||(1,2,3)|\sin \theta =0 
+    </me>
+    where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
+    </p>
+    <p>
+<m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
+<me>
+\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
+</me>
+Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
+<me>
+\begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
+</me>.
+This also shows that 
+<me>
+\bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
+</me>
+is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
+<me>
+(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
+</me>
+    </p>
+  </solution>
+</exercises>
 </section>
 

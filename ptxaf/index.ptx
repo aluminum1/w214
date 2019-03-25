@@ -79,14 +79,18 @@
 
 
     <xi:include href="./ACh2FinDimVectorSpaces.ptx" />
-    <xi:include href="./AChTutorials.ptx"/>
+   
 
-<!--
+
     <xi:include href="./ACh3LinearMaps.ptx" />
+
+     <xi:include href="./AChTutorials.ptx"/>
+
+    <!--
 
     <xi:include href="./ACh4EigenvaluesEigenvectors.ptx" />
 
-    -->
+  -->
 
     <xi:include href="./AAppAReminderAboutMatrices.ptx" />
 

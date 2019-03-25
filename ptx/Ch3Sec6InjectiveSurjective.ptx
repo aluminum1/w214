@@ -86,10 +86,10 @@
       <m>\Rightarrow</m>.
       Suppose <m>T</m> is injective.
       <md>
-        <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp  \mbox{(by <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
         <mrow>\amp \therefore \Nullity(T) = 0</mrow>
-        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \mbox{(by Rank-Nullity Theorem)}</mrow>
-        <mrow>\amp \therefore \Im(T) = V \amp \amp  \mbox{(by <xref ref="lin-ind-implies-basis">Corollary</xref>)}</mrow>
+        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
+        <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
 
@@ -103,9 +103,9 @@
       <md>
         <mrow>\amp \therefore \Im(T) = V</mrow>
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
-        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \mbox{(by Rank-Nullity Theorem)}</mrow>
+        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore \mbox{\(T\) is injective. }   \amp \amp  \mbox{(by <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp \therefore \mbox{\(T\) is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
   </proof>
