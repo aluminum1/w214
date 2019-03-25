@@ -94,21 +94,21 @@
         Let <m>T : V \rightarrow W</m> be a linear map.
         Then:
 
-        <ul>
+        <ol>
           <li>
-            <title>(i)</title>
+            
             <p>
               <m>\Ker(T)</m> is a subspace of <m>V</m>
             </p>
           </li>
 
           <li>
-            <title>(ii)</title>
+            
             <p>
               <m>\Im(T)</m> is a subspace of <m>W</m>
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   </lemma>
@@ -117,78 +117,78 @@
     <p>
       (i) We must check the three requirements for being a subspace.
 
-      <ul>
+      <ol>
         <li>
-          <title>a.</title>
+       
           <p>
             <m>\Ker(T)</m> is closed under addition.
 
-            <blockquote>
+            <p>
               Suppose <m>\ve{v}</m> and <m>\ve{v}'</m> are in <m>\Ker(T)</m>. In other words, <m>T(\ve{v}) = \ve{0}</m> and <m>T(\ve{v}') = \ve{0}</m>. We need to show that <m>\ve{v} + \ve{v}'</m> is in <m>\Ker(T)</m>, in other words, that <m>T(\ve{v} + \ve{v}') = \ve{0}</m>. Indeed,
               <me>
                 T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}') = \ve{0} + \ve{0} = \ve{0}
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>b.</title>
+        
           <p>
             <m>\ve{0}_V \in \Ker(T)</m>.
 
-            <blockquote>
+            <p>
               To show that <m>\ve{0}_V</m> is in <m>\Ker(T)</m>, we need to show that <m>T(\ve{0}_V) = \ve{0}_W</m>. Indeed, this is true since <m>T</m> is a linear map, by <xref ref="lin_map_zero_to_zero">Lemma</xref>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>c.</title>
+          
           <p>
             <m>\Ker(T)</m> is closed under scalar multiplication.
 
-            <blockquote>
+            <p>
               Suppose <m>\ve{v} \in \Ker(T)</m> and <m>k \in \mathbb{R}</m> is a scalar. We need to show that <m>k \ve{v} \in \Ker(T)</m>, that is, we need to show that <m>T(k \ve{v}) = \ve{0}</m>. Indeed,
               <me>
                 T(k \ve{v}) = k T(\ve{v}) = k \ve{0} = \ve{0}
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
-      </ul>
+      </ol>
     </p>
 
     <p>
       (ii) Again, we must check the three requirements for being a subspace.
 
-      <ul>
+      <ol>
         <li>
-          <title>a.</title>
+          
           <p>
             <m>\Im(T)</m> is closed under addition.
 
-            <blockquote>
+            <p>
               Suppose <m>\ve{w}</m> and <m>\ve{w}'</m> are in <m>\Im(T)</m>. In other words, there exist vectors <m>\ve{v}</m> and <m>\ve{v}'</m> in <m>V</m> such that <m>T(\ve{v}) = \ve{w}</m> and <m>T(\ve{v}') = \ve{w}'</m>. We need to show that <m>\ve{w} + \ve{w}'</m> is also in <m>\Im(T)</m>, in other words, that there exists a vector <m>\ve{u}</m> in <m>V</m> such that <m>T(\ve{u}) = \ve{w} + \ve{w}'</m>. Indeed, set <m>\ve{u} := \ve{v} + \ve{v}'</m>. Then,
               <me>
                 T(\ve{u}) = T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}') = \ve{w} + \ve{w}'
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>b.</title>
+          
           <p>
             <m>\ve{0}_W \in \Im(T)</m>.
 
-            <blockquote>
+            <p>
               To show that <m>\ve{0}_W \in \Im(T)</m>, we need to show that there exists <m>\ve{v} \in V</m> such that <m>T(\ve{v}) = \ve{0}_W</m>. Indeed, choose <m>\ve{v} = \ve{0}_V</m>. Then <m>T(\ve{v}) = T(\ve{0}_V) = \ve{0}_W</m> by <xref ref="lin_map_zero_to_zero">Lemma</xref>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
@@ -198,16 +198,16 @@
           <p>
             <m>\Im(T)</m> is closed under scalar multiplication.
 
-            <blockquote>
+            <p>
               Suppose <m>\ve{w} \in \Im(T)</m> and <m>k</m> is a scalar. We need to show that <m>k \ve{w} \in \Im(T)</m>. The fact that <m>\ve{w}</m> is in <m>\Im(T)</m> means that there exists a <m>\ve{v}</m> in <m>V</m> such that <m>T(\ve{v}) = \ve{w}</m>. We need to show that there exists a <m>\ve{u} \in V</m> such that <m>T(\ve{u}) = k \ve{w}</m>. Indeed, set <m>\ve{u} := k \ve{v}</m>. Then
               <me>
                 T(\ve{u}) = T(k \ve{v}) = k T(\ve{v}) = k \ve{w}
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
-      </ul>
+      </ol>
     </p>
   </proof>
 
@@ -389,7 +389,7 @@
         with no constraints on the other constants <m>a_1, a_2, b_2</m>.
         In other words,
         <me>
-          \Ker(I) = \left\{ \mbox{ all trigonometric polynomials of the form  \(a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}\), \, where \(a_0, a_1, a_2, b_2 \in \mathbb{R}\). }  \right\}
+          \Ker(I) = \left\{ \text{ all trigonometric polynomials of the form  } \\ (a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}), \text{ where } (a_0, a_1, a_2, b_2 \in \mathbb{R}\). \right\}
         </me>
       </p>
 
@@ -488,7 +488,7 @@
         where <m>t \in \mathbb{R}</m>.
         Hence
         <me>
-          \Ker(T) =  \left\{ \mbox{ all polynomials of the form  \\ \( -t -2t x + t x^2\)  where  \(t \in \mathbb{R}\) }  \right\}
+          \Ker(T) =  \left\{ \mbox{ all polynomials of the form \( -t -2t x + t x^2\)  where  \(t \in \mathbb{R}\) }  \right\}
         </me>.
       </p>
 

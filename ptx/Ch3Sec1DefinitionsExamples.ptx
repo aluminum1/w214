@@ -145,7 +145,7 @@
       </statement>
       <solution>
         <p>
-         <me> T(k \ve) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
+         <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
         </p>
       </solution>
     </exercise>
@@ -473,12 +473,12 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
 
   <proof>
     <md>
-      <mrow>\mbox{(i)}   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \mbox{(R8 applied to \(\ve{v} = \ve{0}_V \in V\))}</mrow>
+      <mrow>\mbox{(i)}  \amp   T(\ve{0}_V) \amp = T( 0 \ve{0}_V) \amp  \mbox{(R8 applied to \(\ve{v} = \ve{0}_V \in V\))}</mrow>
       <mrow>\amp = 0T(\ve{0}_V) \amp  \mbox{(T is linear)}</mrow>
       <mrow>\amp = \ve{0}_W \amp  \mbox{(R8 applied to \(\ve{v} = T(\ve{0}_V) \in W\))}</mrow>
     </md>
     <md>
-      <mrow>\mbox{(ii)}    T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \mbox{(defn of \(-\ve{v}\) in \(V\))}</mrow>
+      <mrow>\mbox{(ii)}  \amp  T(-\ve{v}) \amp = T( (-1) \ve{v}) \amp  \mbox{(defn of \(-\ve{v}\) in \(V\))}</mrow>
       <mrow>\amp = (-1) T(\ve{v}) \amp  \mbox{(T is linear)}</mrow>
       <mrow>\amp = - T(\ve{v}) \amp  \mbox{(defn of \(-T(\ve{v})\) in \(W\))}</mrow>
     </md>
@@ -604,7 +604,6 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
         Let us compute the action of the <sq>counterclockwise rotation by <m>\theta</m></sq> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
         with respect to the standard basis
         <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
-        tikzalign
         <md>
           <mrow><image>
 

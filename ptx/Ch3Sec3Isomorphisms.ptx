@@ -151,8 +151,9 @@
   <example>
     <statement>
     <p>
-      Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>.
+      Show that <m>\mathbb{R}^n</m> is isomorphic to <m>\Poly_{n-1}</m>
     </p>
+    <p>
     <solution>
       <p>
         We define a pair of linear maps
@@ -164,7 +165,7 @@
         </md>
       </p>
     </solution>
-
+</p>
    
     <p>
       We clearly have <m>T \circ S = \id_{\mathbb{R}^n}</m> and <m>S \circ T = \id_{\Poly_{n-1}}</m>.
@@ -414,25 +415,21 @@
       Then
       <md>
         <mrow>(\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} ) \big(\ve{v}\big) \amp = \ve{vec}_{V, \basis{B}} \big( [\ve{v}]_\basis{B} \big)</mrow>
-        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \cvector{a_1</mrow>
-        <mrow>\vdots</mrow>
-        <mrow>a_m} \right)</mrow>
+        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \right)</mrow>
         <mrow>\amp = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>
       so that <m>\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} = \id_V</m>.
       Conversely, given
       <me>
-        \mat{c} = \cvector{c_1 \\ \vdots \\ c_m} \in \Col_m
+        \mat{c} = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}\in \Col_m
       </me>,
       we have
       <md>
         <mrow>\big( [ \smul]_\basis{B} \circ \ve{vec}_{V, \basis{B}} \big)  \big( \mat{c} \big) \amp = 
         \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
         <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
-        <mrow>\amp = \cvector{ c_1</mrow>
-        <mrow>\vdots</mrow>
-        <mrow>c_m}</mrow>
+        <mrow>\amp = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}</mrow>
         <mrow>\amp = \mat{c}</mrow>
       </md>
       where the second last step uses the <em>definition</em>

@@ -217,7 +217,7 @@
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, \mat{e}_i \amp \amp  \left(\mbox{
         since \([\ve{b}_i]_\basis{B} = \mat{e}_i\)
         }  \right)</mrow>
-        <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  (<xref ref = "fact-about-columns"/>) </mrow>
+        <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  <xref ref = "fact-about-columns"/> </mrow>
       </md>.
     </p>
   </proof>
