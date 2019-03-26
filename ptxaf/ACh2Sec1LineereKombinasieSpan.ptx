@@ -334,6 +334,35 @@ Or we could take, say, <m>t = 1</m>. Then our solution will be
     </statement>
   </exercise>
 
+  <theorem xml:id ="spanning_check_thm">
+  <statement>
+    <p>
+    Let <m>V</m> be a vector space. Suppose <m> U = \{\ve u_1,\ldots,\ve u_m\} </m> spans <m>V</m>. Furthermore, suppose that <m> W = \{\ve w_1,\ldots,\ve w_n\}</m> has the property that for any <m> \ve u_i \in U</m>, <m>\ve u_i </m> is a linear combination of elements in <m> W</m>. That is, there exist scalars <m>a_{i,1},\ldots,a_{i,m}</m> such that
+    <me>
+\ve u_i = \sum_{k=1}^m  a_{i,1} \ve w_k.
+</me>
+Then <m>W</m> also spans <m>V</m>.
+</p>
+</statement>
+</theorem>
+<proof>
+  <p>
+Let <m> \ve v \in V </m> be arbitrary. Since <m> U </m> spans <m>V</m>, there exist constants <m>c_i</m> such that
+<me>
+\ve v= \sum_{i=1}^n c_i \ve u_i.
+</me>
+By assumption,
+    <me>
+\ve u_i = \sum_{k=1}^m  a_{i,1} \ve w_k.
+</me>
+Substituting the second equation into the first, we obtain
+<me>
+\ve v =  \sum_{i=1}^n c_i \sum_{k=1}^m  a_{i,1} \ve w_k.
+</me>
+Using the usual rules for addition and multiplication in a vector space, we find that <m> v </m> is a linear combination of the <m>w_i</m>'s. Since <m>v \in V </m> was arbitrary, we conclude that <m>W</m> must also span <m>V</m>.
+</p>
+  </proof>
+
   <exercises>
   <exercise>
     <statement>

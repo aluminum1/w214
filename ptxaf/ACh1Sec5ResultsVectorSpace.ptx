@@ -232,6 +232,22 @@
         <m>-(-\ve{v}) = \ve{v}</m>.
       </p>
     </statement>
+    <solution>
+      <p>
+        We apply the definition of <m>-\ve v</m> twice:
+        <me>
+        -(-\ve{v}) = (-1)\smul(- \ve v) = (-1)\smul(-1\smul(\ve v)).
+      </me>
+      Using <xref ref="R6"/> we get
+      <me>
+(-1)\smul(-1(\ve v)) = ((-1)(-1))\smul\ve v = 1.\ve v.
+    </me>
+    Finally, a single application of <xref ref="R7"/> allows us to conclude that
+    <me>
+1.\ve v = \ve v
+  </me>
+      </p>
+    </solution>
   </exercise>
 
   <exercise xml:id="mult_by_zero_ex">
@@ -242,6 +258,27 @@
         <m>k \cdot \ve{0} = \ve{0}</m>.
       </p>
     </statement>
+          <solution>
+        <p>
+          We apply <xref ref = "R3b"/> to <m>k \smul \ve{0}</m>:
+          <me>
+k \smul \ve{0} = k \smul (\ve 0 + \ve 0).
+        </me>
+        By <xref ref = "R4"/> we get
+        <me>
+        k \smul (\ve 0 + \ve 0) = k \smul \ve 0 + k \smul 0.
+      </me>
+      We now know
+      <me>
+k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
+    </me>
+    Adding the inverse of <m>k \smul 0</m> to both sides we get
+    <me>
+\ve 0 = k \smul \ve 0 + \ve 0 = k \smul 0.
+  </me>
+  And we are done.
+        </p>
+        </solution>
   </exercise>
 
   <exercise xml:id="fivevequals2v">
@@ -254,6 +291,19 @@
       Toon aan dat <m>\ve{v}=\ve{0}</m>.
     </p>
   </statement>
+        <solution>
+        <p>
+          <md>
+            <mrow>\amp  5 \smul v = 2\smul v </mrow>
+          <mrow> \amp \implies 5.v + (-2).v = 2.v + (-2).v </mrow>
+          <mrow>\amp \implies (5 - 2).v = (2 - 2).v </mrow>
+          <mrow> \amp \implies 3.v = 0.v </mrow>
+          <mrow> \amp \implies (\frac{1}{3} 3).v = (\frac{1}{3} 0) v </mrow>
+          <mrow> \amp \implies 1v = 0v </mrow>
+          <mrow> \amp \implies v = 0</mrow>
+        </md>
+        </p>
+      </solution>
   </exercise>
 
 
@@ -269,6 +319,28 @@
         soos in <xref ref="explicit_solve_x">Voorbeeld</xref>.
       </p>
     </statement>
+        <solution>
+      <p>
+        <md>
+         <mrow>2 \ve x + 6 \ve w  \amp = \ve 0</mrow>
+
+          <mrow>\implies  2 \ve x + 6 \ve w + (-6 \v w )\amp  \ve 0 + (-6\ve w) 
+           \amp (\text{Existence of Inverses})</mrow>
+
+          <mrow> \implies  2 \ve x + 0  \amp = -6\ve w  \amp (<xref ref = "R3a"/>)</mrow>
+
+           <mrow> \implies  2\ve x   \amp = -6\ve w  \amp (<xref ref = "R3b"/>)</mrow>
+
+           <mrow> \implies  (\frac{1}{2})(2 \ve x) \amp = ((\frac{1}{2}))(-6\ve w)  </mrow>
+
+            <mrow> \implies  (\frac{1}{2}2)\ve x  \amp = (-\frac{1}{2}6)\ve w) \amp (<xref ref = "R6"/>)</mrow>
+
+               <mrow>\implies   1 \ve x  \amp  = -3 \ve w  </mrow>
+
+                <mrow>\implies  \ve x   \amp = -3 \ve w  \amp (<xref ref = "R7"/>) </mrow>
+                </md>
+</p>
+</solution>
   </exercise>
 
   <exercise>
@@ -319,6 +391,11 @@
         The empty set can be equipped with data <xref ref="D1">D1</xref>, <xref ref="D2">D2</xref>, <xref ref="D3">D3</xref> satisfying the rules of a vector space.
       </p>
     </statement>
+     <solution>
+    <p>
+      False. In order for the empty set to be a vector space, it must have a zero vector. That is, we must be able to find some <m> v \in \text{the empty set} </m> satisfying the axioms for the zero vector. However, since the empty set has no elements in it, by definition, we cannot ever hope to find such a <m> v </m>. Hence the empty set can never be a vector space.
+    </p>
+    </solution>
     </exercise>
     
     <exercise>
@@ -327,6 +404,9 @@
       Rule <xref ref="R3b">R3b</xref> of a vector space follows automatically from the other rules.
       </p>
     </statement>
+    <solution>
+      True. Combining <xref ref = "R1">R1</xref> and <xref ref = "R3a">R3a</xref> gives <xref ref="R3b">R3b</xref>.
+    </solution>
     </exercise>
 
     <exercise xml:id="R7_follows">
@@ -335,6 +415,15 @@
       Rule <xref ref="R7">R7</xref> of a vector space follows automatically from the other rules.
       </p>
     </statement>
+      <solution>
+      <p>
+        False. Let <m>V</m> be a non-zero vector space (such as <m>\mathbb{R}^2</m>). Redefine scalar multiplication as follows
+        <me> 
+            k.v := 0 \mbox{ for all scalars k and all vectors v}.
+        </me>
+        Then <m>V</m> will satisfy all the rules of a vector space except R7. Thus it is not the case that R7 follows from the other rules.
+      </p>
+      </solution>
     </exercise>
   </exercisegroup>
 
