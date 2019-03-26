@@ -139,13 +139,18 @@
 <exercise>
       <statement>
         <p>
-          Prove algebraically that <m>T(k \ve{v}) = k T(\ve{v})</m>,
+          Prove algebraically that we also have <m>T(k \ve{v}) = k T(\ve{v})</m>,
           so that <m>T</m> is a linear map.
         </p>
       </statement>
       <solution>
         <p>
-         <me> T(k \ve v) = T(k(x,y)) = T(kx,ky) = kx = kT((x,y)) = kT(\ve v)  </me>
+         <md> 
+          <mrow> T(k \ve v) \amp = T(k(x,y)) </mrow>
+          <mrow> \amp = T((kx,ky))  </mrow>
+          <mrow> \amp = kx = kT((x,y)) </mrow>
+          <mrow> \amp  = kT(\ve v) </mrow>  
+        </md>
         </p>
       </solution>
     </exercise>
@@ -164,7 +169,7 @@
         by a similar graphical argument as in <xref ref="projection_map_example">Example</xref>.
       </p>
 
-      <image>
+      <image width="60%">
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
@@ -312,7 +317,7 @@
   <exercise>
       <statement>
         <p>
-          (a) Check this last sentence. (b) Why is <m>A</m> a map from <m>\Poly_n</m> to
+          (a) Check that <m>A</m> is indeed a linear map. (b) Why is <m>A</m> a map from <m>\Poly_n</m> to
           <m>\Poly_{n+1}</m>? (c) Check that <m>A</m> is linear.
         </p>
       </statement>
@@ -321,7 +326,6 @@
           <ol>
             <li>
               <p>
-              ?<!-- WHICH SENTENCE, the FOR EXAMPLE one or the sentence before that-->
               </p>
             </li>
 
@@ -604,32 +608,27 @@ A (k\ve p) = k\int_0^x \ve p(t) \, dt = \int_0^x k\ve p(t) \, dt = A(k\ve p).
         Let us compute the action of the <sq>counterclockwise rotation by <m>\theta</m></sq> map <m>R</m> from <xref ref="rotation_as_linear_map">Example</xref>
         with respect to the standard basis
         <m>\ve{e}_1, \ve{e}_2</m> of <m>\mathbb{R}^2</m>.
-        <md>
-          <mrow><image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-\draw[<->] (0, -1) -- (0, 2);
-\draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
-\draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
-\draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
-</latex-image>
-          </image>
-
-          \qquad
-
-          <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
-\draw[<->] (0, -1) -- (0, 2);
-\draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
-\draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
-\draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
-</latex-image>
-          </image></mrow>
-        </md>
-      </p>
+        </p>
+        <sidebyside>
+        <image width="40%">
+          <latex-image>
+                    <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+          \draw[<->] (0, -1) -- (0, 2);
+          \draw[very thick, red, ->] (0, 0) -- (1.5, 0) node[below right] {$\ve{e}_1$};
+          \draw[very thick, red, ->] (0,0) -- (30:1.5) node[right] {$R(\ve{e}_1)$};
+          \draw (0:0.5) arc (0:30:0.5) node[right, xshift=2pt, yshift=-2pt] {$\theta$};\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+        <image width="40%">
+          <latex-image>
+                    <![CDATA[\begin{tikzpicture}\draw[<->] (-1, 0) -- (2, 0);
+          \draw[<->] (0, -1) -- (0, 2);
+          \draw[very thick, red, ->] (0, 0) -- (0, 1.5) node[right] {$\ve{e}_2$};
+          \draw[very thick, red, ->] (0,0) -- (120:1.5) node[above left] {$R(\ve{e}_2)$};
+          \draw (90:0.5) arc (90:120:0.5) node[above, xshift=2pt, yshift=2pt] {$\theta$} ;\end{tikzpicture}]]>
+          </latex-image>
+        </image>
+        </sidebyside>
 
       <p>
         From the figure, we have:

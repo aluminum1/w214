@@ -505,7 +505,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 		</sage>
 		SageMath tells us that the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/> is
 		<men xml:id="gen_soln_formula_ode">
-			y = K_1 x^2 \sin(\log(x)) + x^2 K_2 \cos(\log(x)). 
+			y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)). 
 		</men>
 		Let us now apply the initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>. We can compute <m>y(1)</m> and <m>y'(1)</m> using the formula for <m>y</m> from <xref ref="gen_soln_formula_ode"/>. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> becomes (check this):
 		<mdn>
@@ -522,9 +522,9 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 			<mrow> y'(1) \amp = 0 </mrow>
 		</mdn> 
 		then the unique solution is
-		<me xml:id="soln_example_ic">
-			y = -2 x^2 \sin(\log(x)) + x^2 \cos(log(x)).
-		</me>
+		<men xml:id="soln_example_ic">
+			y = -2 x^2 \sin(\log(x)) + x^2 \cos(\log(x)).
+		</men>
 		You can also check this explicitly in SageMath, using the <c>ics=[1,1,0]</c> option of <c>desolve</c> (the first number is the value of <m>x_0</m>, the second number is the value of <m>y(x_0)</m>, and the third number is the value of y'(x_0), etc.):
 		<sage>
 			<input>
