@@ -258,7 +258,7 @@
     <exercise xml:id="prove_C_prime_is_not_vector_space">
       <statement>
         <p>
-          Define the set <m>C^\prime</m> consisting of all polynomials of degree <em>exactly </em> 4. Show that if <m>C^\prime</m> is given the addition operation <xref ref="add_in_C"/>, the zero vector <xref ref="zero_in_C" /> and the scalar multiplication operation <xref ref="sm_in_C" /> then <m>C^\prime</m> <em> does not </em> form a vector space.
+          Define the set <m>C^\prime</m> consisting of all polynomials of degree <em>exactly </em> 4 as well as the zero polynomial. Show that if <m>C^\prime</m> is given the addition operation <xref ref="add_in_C"/>, the zero vector <xref ref="zero_in_C" /> and the scalar multiplication operation <xref ref="sm_in_C" /> then <m>C^\prime</m> <em> does not </em> form a vector space.
         </p>
       </statement>
       <hint>
@@ -266,16 +266,38 @@
           Give a counterexample!
         </p>
     </hint>
+    <solution>
+      <p>
+      Consider the following two polynomials in <m>C^\prime</m>:
+      <md>
+        <mrow>\ve p(x) = x^4 + x^3, </mrow>
+        <mrow> \ve q(x) = -x^4. </mrow>
+      </md>
+        However, their sum is not in <m>C^\prime</m> since
+        <me>
+\ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
+      </me>
+      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space.
+      </p>
+    </solution>
     </exercise>
 
     <exercise xml:id="show_X_is_not_vector_space">
-      <p>Consider the set
+      <statement>
+      <p>
+        Consider the set
         <me>
         X := \{(a_1, a_2) \in \mathbb{R}^2 : a_1 \geq 0, a_2 \geq 0\}
       </me>
       equipped with the same addition operation <xref ref="add_in_A" />,
           zero vector <xref ref="zero_in_A" /> and scalar multiplication operation <xref ref="sm_in_A"/> as in <m>A</m>. Does <m>X</m> form a vector space? If not, why not?
         </p>
+      </statement>
+      <solution>
+        <p>
+          <m> X </m> is not a vector space since the additive inverse of an element in <m>X</m> may fail to be in <m>X</m>. For example, consider <m>(1,0)</m>. The additive inverse of <m>(1,0)</m> would have to be <m>(-1,0)</m>. However, <m>(-1,0)</m> is certainly <em>not</em> in <m>X</m>. Hence <m>X</m> is not a vector space.
+        </p>
+      </solution>
     </exercise>
   </exercises>
   

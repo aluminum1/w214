@@ -314,6 +314,20 @@
           Gee 'n teenvoorbeeld!
         </p>
     </hint>
+    <solution>
+      <p>
+      Consider the following two polynomials in <m>C^\prime</m>:
+      <md>
+        <mrow>\ve p(x) = x^4 + x^3, </mrow>
+        <mrow> \ve q(x) = -x^4. </mrow>
+      </md>
+        However, their sum is not in <m>C^\prime</m> since
+        <me>
+\ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
+      </me>
+      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space.
+      </p>
+    </solution>
     </exercise>
 
     <exercise xml:id="show_X_is_not_vector_space">
@@ -324,6 +338,11 @@
       toegerus met dieselfde sommeringsbewerking <xref ref="add_in_A" />,
           nulvektor <xref ref="zero_in_A" /> en skalaarvermenigvuldigingsbewerking <xref ref="sm_in_A"/> as in <m>A</m>. Is <m>X</m> 'n vektorruimte? Indien nie, hoekom nie?
         </p>
+              <solution>
+        <p>
+          <m> X </m> is not a vector space since the additive inverse of an element in <m>X</m> may fail to be in <m>X</m>. For example, consider <m>(1,0)</m>. The additive inverse of <m>(1,0)</m> would have to be <m>(-1,0)</m>. However, <m>(-1,0)</m> is certainly <em>not</em> in <m>X</m>. Hence <m>X</m> is not a vector space.
+        </p>
+      </solution>
     </exercise>
   </exercises>
 
