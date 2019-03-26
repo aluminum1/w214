@@ -518,8 +518,8 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 		</me>
 		For instance, if our initial conditions were
 		<mdn>
-			<mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
-			<mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
+			<mrow> y(1) \amp = 1 </mrow>
+			<mrow> y'(1) \amp = 0 </mrow>
 		</mdn> 
 		then the unique solution is
 		<me xml:id="soln_example_ic">
@@ -548,14 +548,9 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 		<me>
 			y = x^2 \sin(\log (x)).
 		</me>
-
-
-
-		</statement>
-
-
-
-	</example>     
+	</p>
+	</statement>
+	</example>   
 
  
 
@@ -578,8 +573,8 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
     </proposition>
 
     <proof>
-      <p> Let 
-        <me>
+      <p> Let
+     	<me>
           \basis{C} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose 
         </me> 
         be a basis for <m>V</m>, so that <m>\Dim(V) = n</m>. We just need to show that <m>W</m> is finite-dimensional, i.e. that there exists a basis
