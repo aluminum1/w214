@@ -13,8 +13,9 @@
         is defined as the <m>n \times m</m> matrix whose columns are the coordinate vectors of
         <m>T(\ve{b}_i)</m> with respect to the basis <m>\basis{C}</m>:
         <me>
-          [T]_{\basis{C} \leftarrow \basis{B}} := \left[ \cvector{ \\ T(\ve{b}_1) \\}_\basis{C} \,  \cvector{ \\ T(\ve{b}_2) \\}_\basis{C} \, \cdots \, \cvector{ \\ T(\ve{b}_m) \\}_\basis{C}\right]
-        </me>
+          [T]_{\basis{C} \leftarrow \basis{B}} :=
+\begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}
+  </me>
       </p>
     </statement>
   </definition>
@@ -55,7 +56,7 @@
         Let <m>\ve{v} \in V</m>.
         Expand it in the basis <m>\basis{B}</m>:
         <me>
-          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_m \ve{b}_m,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \cvector{a_1 \\ \vdots \\ a_m}
+          \ve{v} = a_1 \ve{b}_1 + a_2 \ve{b}_2 + \cdots + a_m \ve{b}_m,  \mbox{i.e. }  [\ve{v}]_\basis{B} = \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix}
         </me>.
       </p>
 
@@ -64,16 +65,8 @@
         <md>
           <mrow>_\basis{C} \amp = [T(a_1 \ve{b}_1 + \cdots + a_m \ve{b}_m)]_\basis{C}</mrow>
           <mrow>\amp = [a_1 T(\ve{b}_1) + \cdots + a_n T(\ve{b}_m)]_\basis{C} \amp \amp  \mbox{(\(T\) is linear)}</mrow>
-          <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  \mbox{(by <xref ref="lin_of_coord_vectors">Lemma</xref>)}</mrow>
-          <mrow>\amp = \left[ \cvector{</mrow>
-          <mrow>T(\ve{b}_1)</mrow>
-          <mrow>}_\basis{C} \,  \cvector{</mrow>
-          <mrow>T(\ve{b}_2)</mrow>
-          <mrow>}_\basis{C} \, \cdots \, \cvector{</mrow>
-          <mrow>T(\ve{b}_m)</mrow>
-          <mrow>}_\basis{C}\right] \cvector{a_1</mrow>
-          <mrow>\vdots</mrow>
-          <mrow>a_m} \amp \amp  \mbox{(by (3.5.6))}</mrow>
+          <mrow>\amp = a_1 [T(\ve{b}_1)]_\basis{C} + \cdots + a_n [T(\ve{b}_m)]_\basis{C}  \amp \amp  (<xref ref = "lin_of_coord_vectors" />)</mrow>
+         <mrow> \amp =  \begin{bmatrix} \left[\begin{array}{c} \, \\ T(\ve b_1) \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ T(\ve b_2)  \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ T(\ve b_m) \\ \,\end{array}\right]_\basis{C}  \end{bmatrix} \begin{bmatrix}a_1 \\ \vdots \\ a_m \end{bmatrix} </mrow>
           <mrow>\amp =    [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \, </mrow>
         </md>.
       </p>
@@ -162,7 +155,7 @@
         <mrow>\left( [\cdot]_\basis{C} \circ T \circ \ve{vec}_{V, \basis{B}} \right) (\mat{u})  \amp = [ \smul]_\basis{C} \left( T \left(\ve{vec}_{V, \basis{B}}(\mat{u})\right)\right) \amp \amp  \mbox{(Defn of composite map)}</mrow>
         <mrow>\amp = [\cdot]_\basis{C} (T(\ve{v})) \amp \amp  \mbox{(Defn of \(\ve{v}\))}</mrow>
         <mrow>\amp = [T(\ve{v})]_\basis{C} \amp \amp  \mbox{(Defn of \([\cdot]_\basis{C}\))}</mrow>
-        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp  \mbox{(<xref ref="lin-map-in-matrix-theorem">Theorem</xref>)}  </mrow>
+        <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{B}} [\ve{v}]_\basis{B} \amp \amp(<xref ref = "lin-map-in-matrix-theorem" />)  </mrow>
       </md>.
     </p>
   </proof>
@@ -172,12 +165,12 @@
     Suppose <m>\mat{A}</m> is a matrix with <m>n</m> rows.
     Let
     <me>
-      \mat{e}_1 = \cvector{1 \\ 0 \\ \vdots \\ 0}, \, \mat{e}_2 = \cvector{0 \\ 1 \\ \vdots \\ 0}, \, \ldots, \, \mat{e}_n = \cvector{0 \\ 0 \\ \vdots \\ 1}
+      \mat{e}_1 = \begin{bmatrix}1 \\ 0 \\ \vdots \\ 0\end{bmatrix}, \, \mat{e}_2 = \begin{bmatrix}0 \\ 1 \\ \vdots \\ 0\end{bmatrix}, \, \ldots, \, \mat{e}_n = \begin{bmatrix}0 \\ 0 \\ \vdots \\ 1 \end{bmatrix}
     </me>
     be the standard basis for <m>\Col_n</m>.
     Then the <m>i</m>th column of <m>A</m> can be obtained by multiplying <m>A</m> with <m>\mat{e}_i</m>:
     <men xml:id="fact-about-columns">
-      \mbox{<m>i</m>th column of <m>\mat{A}</m>}  = A \mat{e}_i
+      i^\text{th} \text{ column of } \mat A  = A \mat{e}_i
     </men>.
   </p>
 
@@ -219,13 +212,12 @@
         <mrow>\mbox{\(i\)th colu} \amp \mbox{mn of \([T \circ S]_{\basis{D} \leftarrow \basis{B}}\)}</mrow>
         <mrow>\amp = \left[(T \circ S)(\ve{b}_i)\right]_\basis{D} \amp \amp  \mbox{(Defn of \([T \circ S]_{\basis{D} \leftarrow \basis{B}}\))}</mrow>
         <mrow>\amp = \left[T(S(\ve{b}_i))\right]_\basis{D} \amp \amp  \mbox{(Defn of \(T \circ S\))}</mrow>
-        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S(\ve{b}_i]_\basis{C} \amp \amp  \mbox{(<xref ref="lin-map-in-matrix-theorem">Theorem</xref>)}</mrow>
-        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, [\ve{b}_i]_\basis{B} \amp \amp  \mbox{(<xref ref="lin-map-in-matrix-theorem">Theorem</xref>)}</mrow>
+        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S(\ve{b}_i]_\basis{C} \amp \amp  (<xref ref = "lin-map-in-matrix-theorem"/>)</mrow>
+        <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, [\ve{b}_i]_\basis{B} \amp \amp  (<xref ref = "lin-map-in-matrix-theorem"/>)</mrow>
         <mrow>\amp = [T]_{\basis{D} \leftarrow \basis{C}} \, [S]_{\basis{C} \leftarrow \basis{B}} \, \mat{e}_i \amp \amp  \left(\mbox{
-        since \([\ve{b}_i]_\basis{B} = \mat{e}_i\), the \(i\)th \\
-        standard basis column vector.
+        since \([\ve{b}_i]_\basis{B} = \mat{e}_i\)
         }  \right)</mrow>
-        <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  \mbox{(by (4.4.2))} </mrow>
+        <mrow>\amp = \mbox{\(i\)th column of \([T]_{\basis{D} \leftarrow \basis{C}} [S]_{\basis{C} \leftarrow \basis{B}}\)}  \amp \amp  <xref ref = "fact-about-columns"/> </mrow>
       </md>.
     </p>
   </proof>
@@ -250,7 +242,7 @@
       Suppose the linear map <m>T</m> is an isomorphism.
       This means there exists a linear map <m>S : W \rightarrow V</m> such that
       <me>
-        S \circ T = \id_V  \text{ and }   T \circ S = \id_W/
+        S \circ T = \id_V  \text{ and }   T \circ S = \id_W
       </me>
     </p>
 
@@ -332,13 +324,13 @@
     <p>
       We have
       <md>
-        <mrow>_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(by <xref ref="functoriality_of_matrix">Theorem</xref>)}</mrow>
+        <mrow>_{\basis{C} \leftarrow \basis{B}} [T^{-1}]_{\basis{B} \leftarrow \basis{C}} \amp = [T \circ T^{-1}]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_W]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(\(T \circ T^{-1} = \id_W\))}</mrow>
         <mrow>\amp = I</mrow>
       </md>
       and
       <md>
-        <mrow>_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  \mbox{(by <xref ref="functoriality_of_matrix">Theorem</xref>)}</mrow>
+        <mrow>_{\basis{B} \leftarrow \basis{C}} [T]_{\basis{C} \leftarrow \basis{B}} \amp = [T^{-1} \circ T]_{\basis{B} \leftarrow \basis{B}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
         <mrow>\amp = [\id_V]_{\basis{B} \leftarrow \basis{B}} \amp \amp  \mbox{(\(T^{-1} \circ T = \id_V\))}</mrow>
         <mrow>\amp = I</mrow>
       </md>.
@@ -346,7 +338,7 @@
   </proof>
 
   <p>
-    The next Lemma says that the <sq>change-of-basis matrix</sq> from <xref ref="change-of-basis-sec">Section</xref>
+    The next Lemma says that the <sq>change-of-basis matrix</sq> from <xref ref="Ch2Sec5ChangeOfBasis">Section</xref>
     is just the matrix of the identity linear map with respect to the relevant bases.
   </p>
 
@@ -391,12 +383,130 @@
   <proof>
     <md>
       <mrow>\mbox{RHS}  \amp = \mat{P}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} P</mrow>
-      <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  \mbox{(<xref ref="change-of-basis-as-matrix">Lemma</xref>)}</mrow>
-      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  \mbox {(<xref ref="inverse-of-map-via-matrices">Corollary</xref>)}</mrow>
-      <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  \mbox{(<xref ref="functoriality_of_matrix">Theorem</xref>)}</mrow>
+      <mrow>\amp = [\id]_{\basis{B} \leftarrow \basis{C}}^{-1} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="change-of-basis-as-matrix"/>)</mrow>
+      <mrow>\amp = [\id]_{\basis{C} \leftarrow \basis{B}} [T]_{\basis{B} \leftarrow \basis{B}} [\id]_{\basis{B} \leftarrow \basis{C}} \amp \amp  (<xref ref="inverse-of-map-via-matrices"/>)</mrow>
+      <mrow>\amp = [ \id \circ T \circ \id]_{\basis{C} \leftarrow \basis{C}} \amp \amp  (<xref ref="functoriality_of_matrix"/>)</mrow>
       <mrow>\amp = [T]_{\basis{C} \leftarrow \basis{C}}</mrow>
       <mrow>\amp = \mbox{LHS} </mrow>
     </md>.
   </proof>
+
+  <exercises>
+      <exercise xml:id="trig_ex_1">
+    <statement>
+      <p>
+        Let
+        <me>
+          T : \Trig_1 \rightarrow \Trig_2
+        </me>
+        be the <sq>multiply with <m>\sin x</m></sq> linear map,
+        <m>T(f)(x) = \sin x f(x)</m>.
+        Compute <m>[T]_{\basis{C} \leftarrow \basis{B}}</m> with respect to the standard basis
+        <m>\basis{B}</m> of <m>\Trig_1</m> and <m>\basis{C}</m> of <m>\Trig_2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        Recall the standard double angle formulae:
+        <md>
+          <mrow>\sin(2x) \amp = 2 \sin x \cos x</mrow>
+          <mrow> \cos(2x) \amp = \cos^2 x - \sin^2 x = 2\cos^2 x - 1 = 1-2\sin^2 x</mrow>.
+          </md>
+           With these in mind, we compute:
+          <md>
+            <mrow>T(T_0) \amp= \sin x = T_2 </mrow>
+            <mrow>T(T_1) \amp = \sin x \cos x = \frac{1}{2}\sin(2x) = \frac{1}{2}T_4 </mrow>
+            <mrow> T(T_2) \amp = \sin x \sin x = \frac{1}{2} - \frac{1}{2}\cos(2x) = \frac{1}{2}T_0 - \frac{1}{2}T_3 </mrow>.
+      </md>
+      Thus
+      <me>
+[T]_{\basis{C} \leftarrow \basis{B}}= \begin{bmatrix} 0 \mamp 0 \mamp \frac{1}{2} \\ 0 \mamp 0 \mamp 0 \\ 1 \mamp 0 \mamp 0 \\ 0 \mamp 0 \mamp -\frac{1}{2}\\ 0 \mamp \frac{1}{2} \mamp 0 \end{bmatrix}.
+    </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise xml:id="trig_ex_2">
+    <statement>
+      <p>
+        Let
+        <me>
+          S : \Trig_2 \rightarrow \Trig_2
+        </me>
+        be the <sq>shift by <m>\frac{\pi}{6}</m></sq> map,
+        <m>S(f)(x) = f(x - \frac{\pi}{6})</m>.
+        Compute <m>[S]_{\basis{C} \leftarrow \basis{C}}</m> with respect to the standard basis <m>\basis{C}</m> of <m>\Trig_2</m>.
+      </p>
+    </statement>
+    <solution>
+      <p>
+        In this exercise, we shall use the standard angle addition formulae for trigonometric functions:
+        <md>
+          <mrow>\cos(x - y) \amp = \cos x \cos y + \sin x \sin y </mrow>
+          <mrow>\sin(x-y) \amp = \sin x \cos y - \cos x \sin y </mrow>.
+        </md>
+        We compute
+        <md>
+<mrow> S(T_0) \amp = 1 = T_0 </mrow>
+
+<mrow> S(T_1) \amp = \cos ( x - \frac{\pi}{6}) =  \frac{\sqrt{3}}{2} \cos x + \frac{1}{2}\sin x = \frac{\sqrt 3}{2} T_1 + \frac{1}{2} T_2</mrow>
+
+<mrow> S(T_2) \amp = \sin( x - \frac{\pi}{6}) =  -\frac{1}{2} \cos x +  \frac{\sqrt 3}{2}\sin x =  -\frac{1}{2}T_1 + \frac{\sqrt 3}{2} T_2 </mrow>
+
+<mrow> S(T_3) \amp = \cos(2x - \frac{\pi}{6})=  -\frac{1}{2}\sin^2 x  + \frac{\sqrt 3}{2}\cos^2 x + \sin x \cos x</mrow>
+
+<mrow> \amp  = -\frac{\sqrt 3}{2}(\frac{1}{2} - \frac{1}{2}\cos x) + \frac{\sqrt 3}{2}(\frac{1}{2} + \frac{1}{2}\cos 2x) + \frac{1}{2}\sin 2x </mrow>
+
+<mrow> \amp = \frac{\sqrt 3}{2}\cos 2x + \frac{1}{2} \sin 2x = \frac{\sqrt 3}{2} T_3 + \frac{1}{2} \sin 2x .</mrow>
+        </md>
+        Similarly,
+        <md>
+          <mrow> S(T_4) = \sin (2x - \frac{\pi}{6}) =  -\frac{1}{2} \cos 2x + \frac{\sqrt 3}{2} \sin 2x = -\frac{1}{2} T_3 + \frac{\sqrt 3}{2}T_4.</mrow>
+        </md>
+        Hence
+        <me>
+        [S]_{\basis{C} \leftarrow \basis{C}} = \begin{bmatrix}
+1  \mamp 0 \mamp 0 \mamp 0 \mamp 0 \\
+
+0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \mamp 0 \mamp 0 \\
+
+0 \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2} \mamp 0 \mamp 0 \\
+
+0 \mamp 0 \mamp 0 \mamp \frac{\sqrt 3}{2} \mamp -\frac{1}{2} \\
+
+0 \mamp 0 \mamp 0  \mamp \frac{1}{2} \mamp \frac{\sqrt 3}{2}
+\end{bmatrix}.
+      </me>
+      </p>
+    </solution>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Verify <xref ref="lin-map-in-matrix-theorem">Theorem</xref>
+        for the linear map <m>S : \Mat_{2,2} \rightarrow \Mat_{2,2}</m> given by <m>S(\mat{M}) = \mat{M}^T</m>,
+        for the vector <m>\mat{A} \in \Mat_{2,2}</m> given by
+        <md>
+         <mrow> \mat{A} = \begin{bmatrix} 0 \mamp  1 \\ 0 \mamp  0 \end{bmatrix}</mrow>
+        </md>
+        and using the following bases of <m>\Mat_{2,2}</m>:
+        <me>
+          \basis{B} = \basis{C} = \bopen \mat{M}_1 = \begin{bmatrix}1 \mamp  1 \\ 2 \mamp  3\end{bmatrix}, \, \mat{M}_2 = \begin{bmatrix}1 \amp  0 \\ 1 \amp  1 \end{bmatrix}, \, \mat{M}_3 = \begin{bmatrix}1 \amp  1 \\ 1 \amp  1\end{bmatrix}, \, \mat{M}_4 =\begin{bmatrix}0 \amp  1 \\ 1 \amp  1 \end{bmatrix} \bclose.
+        </me>
+      </p>
+    </statement>
+  </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Check that the linear maps <m>T</m> and <m>S</m> from <xref ref="trig_ex_1">Exercises</xref>
+        and <xref ref="trig_ex_2"></xref>
+        satisfy <m>[S \circ T]_{\basis{C} \leftarrow \basis{B}} = [S]_{\basis{B} \leftarrow \basis{B}} [T]_{\basis{C} \leftarrow \basis{B}}</m>.
+      </p>
+    </statement>
+  </exercise>
+</exercises>
 </section>
 

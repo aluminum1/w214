@@ -27,7 +27,7 @@
     Ons kan twee afbeeldings definieer, byvoorbeeld
     <md>
       <mrow>S: A \amp \rightarrow B</mrow>
-      <mrow>\mbox{vo{\"e}l}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" /> 
+      <mrow>\mbox{vo&#xea;l}  \amp \mapsto \begin{aligned}<image width="100%" source="images/bird.png" /> 
       \end{aligned}</mrow>
       <mrow>\mbox{oog}  \amp \mapsto \begin{aligned}<image width="100%" source="images/eye.png" /> 
       \end{aligned}</mrow>
@@ -36,7 +36,7 @@
       <intertext>en</intertext>
       <mrow>T : B \amp \rightarrow A</mrow>
       <mrow>\begin{aligned}<image width="100%" source="images/bird.png" /> 
-      \end{aligned}  \amp  \mapsto \mbox{vo{\"e}l}</mrow>
+      \end{aligned}  \amp  \mapsto \mbox{vo&#xea;l}</mrow>
       <mrow>\begin{aligned}<image width="100%" source="images/eye.png" /> 
       \end{aligned}  \amp  \mapsto \mbox{oog}</mrow>
       <mrow>\begin{aligned}<image width="100%" source="images/person.png" /> 
@@ -169,6 +169,7 @@
       <p>
         Wys dat <m>\mathbb{R}^n</m> isomorfies aan <m>\Poly_{n-1}</m> is.
       </p>
+      <p>
       <solution>
         <p>
           Ons definieer 'n paar line&#xea;re afbeeldings
@@ -182,17 +183,14 @@
           </md>
         </p>
       </solution>
+    </p>
       <p>
-        ***
         Ons het duidelik dat <m>T \circ S = \id_{\mathbb{R}^n}</m> en <m>S \circ T =
         \id_{\Poly_{n-1}}</m>.
       </p>
     </statement>
   </example>
 
-  <p>
-    ***movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -207,7 +205,7 @@
     vektorruimte van elke dimensie!
   </p>
 
-  <theorem>
+  <theorem xml:id="iso_same_dim">
     <statement>
       <p>
         Twee eindigdimensionele vektorruimtes <m>V</m> en <m>W</m> is
@@ -238,7 +236,7 @@
         <mrow>T(a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m)) \amp  =
         T(\ve{0}_W)</mrow>
         <mrow>\therefore a_1 T(S(\ve{e}_1)) + a_2 T(S(\ve{e}_2)) + \cdots + a_m
-        T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  \mbox{(\(T\) is line{\^e}r)}</mrow>
+        T(S(\ve{e}_m)) \amp = \ve{0}_V \amp \amp  \mbox{(\(T\) is line&#xea;r)}</mrow>
         <mrow>\therefore a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m \amp =
         \ve{0}_V \amp \amp  \mbox{(\(T\circ S = \id_V\))}</mrow>
       </md>
@@ -257,7 +255,7 @@
         <mrow>\ve{w} \amp = S(T(\ve{w})) \amp \amp  \mbox{(since \(S \circ T = \id_W\))}</mrow>
         <mrow>\amp = S(a_1 \ve{e}_1 + a_2 \ve{e}_2 + \cdots + a_m \ve{e}_m)</mrow>
         <mrow>\amp = a_1 S(\ve{e}_1) + a_2 S(\ve{e}_2) + \cdots + a_m S(\ve{e}_m) \amp \amp 
-        \mbox{(\(S\) is line{\^e}r)}</mrow>
+        \mbox{(\(S\) is line&#xea;r)}</mrow>
       </md>
       sodat <m>\basis{C}</m> <m>W</m> span.
       Daarom is <m>\basis{C}</m> 'n basis vir <m>V</m>, so
@@ -362,10 +360,7 @@
         (bevestig dit self).
         Dan, byvoorbeeld,
         <md>
-          <mrow>\ve{vec}_{\Poly_3, \basis{B}} \left( \cvector{2</mrow>
-          <mrow>-3</mrow>
-          <mrow>3} \right)
-          \amp = 2(1+x) -3 (1+x+x^2) + 3(1-x^2)</mrow>
+          <mrow>\ve{vec}_{\Poly_3, \basis{B}} \left( \begin{bmatrix}  2 \\ -3 \\ 3\end{bmatrix}\right) \amp = 2(1+x) -3 (1+x+x^2) + 3(1-x^2)</mrow>
           <mrow>\amp =  2 -x -6x^2 \in \Poly_3 \, </mrow>
         </md>.
       </p>
@@ -402,6 +397,49 @@
         line&#xea;re afbeelding is.
       </p>
     </statement>
+     <solution>
+      <p>
+ <ol>
+          <li>
+             <p>
+              <md>
+              <mrow>\ve{vec}_{V, \basis B}(\mat c + \mat c') \amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} +  \begin{bmatrix}  c^\prime_1\\ \vdots \\ c^\prime_n\end{bmatrix}\right) </mrow>
+
+              <mrow>\amp = \ve{vec}_{V, \basis B}\left( \begin{bmatrix}  c_1+ c^\prime_1 \\ \vdots \\c_n + c^\prime_n \end{bmatrix}\right) </mrow>
+
+              <mrow>\amp =  (c_1+ c^\prime_1)\ve e_1 +\cdots +  (c_n+ c^\prime_n)\ve e_n  </mrow>
+
+              <mrow> \amp = (c_1\ve e_1 + \cdots + c_n\ve e_n )  + (c_1^\prime\ve e_1 + \cdots + c^\prime_n\ve e_n ) </mrow>
+
+              <mrow> \amp = \ve{vec}_{V, \basis B}(\mat c) + \ve{vec}_{V, \basis B}(\mat c')</mrow>
+
+            </md>
+
+            </p>
+          </li>
+
+          <li>
+            <p>
+             <md>
+
+              <mrow>\ve{vec}_{V, \basis B}(k\mat c) \amp = \ve{vec}_{V, \basis B}\left(k \begin{bmatrix}  c_1 \\ \vdots \\c_n\end{bmatrix} \right)  </mrow> 
+
+              <mrow> \amp =  \ve{vec}_{V, \basis B}\left(\begin{bmatrix}  kc_1 \\ \vdots \\kc_n\end{bmatrix} \right)</mrow>
+
+              <mrow> \amp = (kc_1\ve e_1 + \cdots + kc_n\ve e_n )</mrow>
+
+              <mrow> \amp = k(c_1\ve e_1 + \cdots + c_n\ve e_n ) </mrow>
+
+              <mrow> \amp = k\,\ve{vec}_{V, \basis B}(\mat c) </mrow>
+
+             </md>
+            </p>
+          </li>
+        </ol>
+
+
+</p>
+</solution>
   </exercise>
 
   <theorem>
@@ -435,17 +473,14 @@
         <mrow>(\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} )
         \big(\ve{v}\big)
         \amp = \ve{vec}_{V, \basis{B}} \big( [\ve{v}]_\basis{B} \big)</mrow>
-        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \cvector{a_1</mrow>
-        <mrow>\vdots</mrow>
-        <mrow>a_m}
-        \right)</mrow>
+        <mrow>\amp = \ve{vec}_{V,\basis{B}} \left( \begin{bmatrix} a_1 \\ \vdots \\ a_m \end{bmatrix} \right)</mrow>
         <mrow>\amp = a_1 \ve{e}_1 + \cdots + a_m \ve{e}_m</mrow>
         <mrow>\amp = \ve{v}</mrow>
       </md>
       sodat <m>\ve{vec}_{V, \basis{B}} \circ [\cdot]_\basis{B} = \id_V</m>.
       Aan die ander kant, gegee
       <me>
-        \mat{c} = \cvector{c_1 \\ \vdots \\ c_m} \in \Col_m
+        \mat{c} = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}\in \Col_m
       </me>,
       dan het ons
       <md>
@@ -453,9 +488,7 @@
         \big( \mat{c} \big) \amp =
         \big[\ve{vec}_{V, \basis{B}} (\mat{c}) \big]_\basis{B}</mrow>
         <mrow>\amp = \big[ \mat{c}_1 \ve{e}_1 + \cdots + \mat{c}_m \ve{e}_m \big]</mrow>
-        <mrow>\amp = \cvector{ c_1</mrow>
-        <mrow>\vdots</mrow>
-        <mrow>c_m}</mrow>
+        <mrow>\amp = \begin{bmatrix} c_1 \\ \vdots \\ c_m \end{bmatrix}</mrow>
         <mrow>\amp = \mat{c}</mrow>
       </md>
       waar die tweede laaste stap die
@@ -477,9 +510,7 @@
     </p>
   </assemblage>
 
-  <p>
-    \furtherexercises
-  </p>
+ <exercises>
 
   <exercise>
     <statement>
@@ -500,6 +531,41 @@
         bewys dat hulle nie isofmorfies is nie.
       </p>
     </statement>
+    <solution>
+      <p>
+        V consists of all vectors <m>(x,y,z,w)</m> satisyfing the linear equations
+        <md>
+
+         <mrow> x + 2y - w = 0 </mrow>
+
+         <mrow> -x + y + z = 0 </mrow>
+
+        </md>.
+
+        We are free to choose <m>x</m> and <m> y </m> arbitrarily, but then (1) above fixes <m> w </m> and (2) fixes <m> z </m>. Hence <m> V </m> is a 2 dimensional subspace.
+      </p>
+<p>
+Onto <m>W</m>. Let <m>p(x) = ax^2 + bx +c</m>. For <m> p(x) </m> to be in <m> W</m>, <m> p(x)</m> must satisfy the following equation:
+
+      
+        <me> 
+\int_0^2 ax^2 + bx + c \, dx = \frac{8a}{3} + 2b + 2c = 0.
+      </me>
+     Thus, for any choice of <m> a </m> and <m> b </m>, <m> c </m> is uniquely determined. Hence <m>W</m> is a 2 dimensional subspace.
+      </p>
+      <p>
+Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are isomorphic by <xref ref = "iso_same_dim" />. To exhibit an explicit isomorphism between the <m> V</m> and <m> W </m> we shall need find bases for both spaces.
+      </p>
+
+      <p>
+        Since <m>V</m> is 2 dimensional, a basis for <m> V </m> consists of any two non-zero vectors in <m>V</m> that are not scalar multiples of one another. By inspection, we find the basis <m> \basis B_V = \bopen (1,0,1,1) , (0,1,-1,2) \bclose</m>. By similar reasoning, we find a basis <m> \basis B_W = \bopen  \frac{3}{8}x^2 - \frac{1}{2} , x - 1\bclose </m>. By <xref ref="defining_linear_map_on_basis" />, there is a unique linear map <m> T: V \to W </m> such that
+        <md>
+         <mrow> T((1,0,1,1)) \amp = \frac{3}{8}x^2 - \frac{1}{2} </mrow>
+
+         <mrow> T((0,1,-1,2)) \amp = x -1 </mrow>
+        </md>. This map is an isomorphism, as demonstrated by the proof of <xref ref ="iso_same_dim" />.
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -521,5 +587,33 @@
       </p>
     </statement>
   </exercise>
+  <solution>
+    <p>
+      We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
+      <me>
+|\ve v||(1,2,3)|\sin \theta =0 
+    </me>
+    where <m> \theta</m> is the angle between <m> \ve v </m> and <m> (1,2,3)</m>. Thus <m> V </m> consists of <m> \ve 0 </m> as well as all those vectors parallel to <m> (1,2,3)</m>. But this set is precisely all vectors of the form <m>k(1,2,3)</m> with <m> k \in \mathbb R </m>. Hence <m> V </m> is 1 dimensional with basis <m> \bopen (1,2,3) \bclose </m>.
+    </p>
+    <p>
+<m> W </m> consists of all matrices <m>(a_{ij})</m> satisfying
+<me>
+\begin{bmatrix} a_{11} \mamp a_{21} \\ a_{12} \mamp a_{22}\end{bmatrix} = \begin{bmatrix} -a_{11} \mamp -a_{12} \\ -a_{21} \mamp -a_{22}\end{bmatrix}.
+</me>
+Thus <m> a_{11}  = a_{22} = 0 </m> and <m> b = -c</m>. So <m>W</m> consists of all those matrices  of the form
+<me>
+\begin{bmatrix} 0 \mamp k \\ -k \mamp 0\end{bmatrix}
+</me>.
+This also shows that 
+<me>
+\bopen \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix} \bclose
+</me>
+is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the isomorphism given by the unique linear map <m> V \to W</m> satisfying
+<me>
+(1,2,3) \mapsto  \begin{bmatrix} 0 \mamp 1 \\ -1 \mamp 0\end{bmatrix}
+</me>
+    </p>
+  </solution>
+   </exercises>
 </section>
 

@@ -87,24 +87,24 @@
         Laat <m>T : V \rightarrow V</m> 'n line&#xea;re
         afbeelding op 'n eindigdimensionele vektorruimte <m>V</m> wees.
         Dan:
-        <me>
-          \mbox{\(T\) is injektief}  \Longleftrightarrow \mbox{\(T\) is
-          surjektief} 
+             <me>
+          \mbox{\(T\) is injective}  \Longleftrightarrow \mbox{\(T\) is surjektief} 
         </me>.
       </p>
     </statement>
   </lemma>
 
+
+
   <proof>
     <p>
       <m>\Rightarrow</m>.
       Veronderstel <m>T</m> is injektief.
-      <md>
-        <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp  \mbox{(deur <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+ <md>
+        <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\} \amp \amp (<xref ref="injective-kernel-lemma"/>) </mrow>
         <mrow>\amp \therefore \Nullity(T) = 0</mrow>
-        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \mbox{(deur
-        Rang-Nulheidsgraad-stelling)}</mrow>
-        <mrow>\amp \therefore \Im(T) = V \amp \amp  \mbox{(deur <xref ref="lin-ind-implies-basis">Gevolgtrekking</xref>)}</mrow>
+        <mrow>\amp \therefore \Rank(T) = \Dim(V) \amp \amp  \text{(deur Rang-Nulheidsgraad-stelling)}</mrow>
+        <mrow>\amp \therefore \Im(T) = V \amp \amp   (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
 
@@ -115,13 +115,12 @@
     <p>
       <m>\Leftarrow</m>.
       Veronderstel <m>T</m> is surjektief.
-      <md>
+    <md>
         <mrow>\amp \therefore \Im(T) = V</mrow>
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
-        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \mbox{(deur
-        Rang-Nulheidsgraad-stelling)}</mrow>
+        <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \text{(deur Rang-Nulheidsgraad-stelling)}</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore \mbox{\(T\) is injektief. }   \amp \amp  \mbox{(deur <xref ref="injective-kernel-lemma">Lemma</xref>)}</mrow>
+        <mrow>\amp \therefore \mbox{\(T\) is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
   </proof>

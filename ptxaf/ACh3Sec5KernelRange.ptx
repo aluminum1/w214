@@ -32,7 +32,7 @@
   </definition>
 
   <p>
-    Sien <xref ref="ker_and_im_fig">Figuur</xref>
+    Sien <xref ref="ker_fig"/> en <xref ref="im_fig"/>
     vir 'n skematiese voorstelling.
   </p>
 
@@ -55,47 +55,44 @@
     </p>
   </assemblage>
 
-  <figure>
-    <me>
+  <figure xml:id = "ker_fig">
 
-      <image>
-
-<latex-image>
-          <![CDATA[\begin{tikzpicture}[scale=1.1]
-        \draw (0,0) circle (1);
-        \draw (0,0) circle (0.3);
-        \draw (3,0) circle (1);
-        \node at (0, -1.2) {\(V\)};
-        \node at (3, -1.2) {\(W\)};
-        \draw (0.083*0.6, 0.493*0.6) -- (3,0);
-        \draw (0.083*0.6, -0.493*0.6) -- (3,0);
-        \fill[fill=black] (3,0) circle (0.05);
-        \node at (3.4, 0) {\(\ve{0}_W\)};
-        \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
-</latex-image>
-      </image>
-
-    </me>
-    \subcaption{Kern van <m>T</m>}
-    <me>
-
-      <image>
+    <image>
 
 <latex-image>
           <![CDATA[\begin{tikzpicture}[scale=1.1]
-        \draw (0,0) circle (1);
-        \draw (3,0) circle (0.3);
-        \draw (3,0) circle (1);
-        \node at (0, -1.2) {\(V\)};
-        \node at (3, -1.2) {\(W\)};
-        \draw (0.15, 0.987) -- (3.03,0.3);
-        \draw (0.15, -0.987) -- (3.03,-0.3);
-        \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
+ \draw (0,0) circle (1);
+ \draw (0,0) circle (0.3);
+ \draw (3,0) circle (1);
+ \node at (0, -1.2) {\(V\)};
+ \node at (3, -1.2) {\(W\)};
+ \draw (0.083*0.6, 0.493*0.6) -- (3,0);
+ \draw (0.083*0.6, -0.493*0.6) -- (3,0);
+ \fill[fill=black] (3,0) circle (0.05);
+ \node at (3.4, 0) {\(\ve{0}_W\)};
+ \node at (0, -0.5) {\(\Ker(T)\)};\end{tikzpicture}]]>
 </latex-image>
-      </image>
+    </image>
+    <caption><m>\Ker(T)</m> </caption>
+  </figure>
 
-    </me>
-    \subcaption{Beeld van <m>T</m>}
+<figure xml:id = "im_fig">
+    <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=1.1]
+ \draw (0,0) circle (1);
+ \draw (3,0) circle (0.3);
+ \draw (3,0) circle (1);
+ \node at (0, -1.2) {\(V\)};
+ \node at (3, -1.2) {\(W\)};
+ \draw (0.15, 0.987) -- (3.03,0.3);
+ \draw (0.15, -0.987) -- (3.03,-0.3);
+ \node at (3, -0.5) {\(\Im(T)\)};\end{tikzpicture}]]>
+</latex-image>
+    </image>
+
+   <caption > <m>\Im(T)</m></caption>
   </figure>
 
   <lemma xml:id="ker-im-subspace">
@@ -105,21 +102,21 @@
         line&#xea;re afbeelding wees..
         Dan:
 
-        <ul>
+        <ol>
           <li>
-            <title>(i)</title>
+           
             <p>
               <m>\Ker(T)</m> is 'n deelruimte van <m>V</m>
             </p>
           </li>
 
           <li>
-            <title>(ii)</title>
+          
             <p>
               <m>\Im(T)</m> is 'n deelruimte van <m>W</m>
             </p>
           </li>
-        </ul>
+        </ol>
       </p>
     </statement>
   </lemma>
@@ -129,13 +126,13 @@
       (i) Ons moet seker maak dat die drie vereistes van 'n
       deelruimte bevredig word.
 
-      <ul>
+      <ol>
         <li>
-          <title>a.</title>
+         
           <p>
             <m>\Ker(T)</m> is geslote onder sommering.
 
-            <blockquote>
+            <p>
               Veronderstel <m>\ve{v}</m> en <m>\ve{v}'</m> is in
               <m>\Ker(T)</m>. Met ander woorde, <m>T(\ve{v}) = \ve{0}</m> en
               <m>T(\ve{v}') = \ve{0}</m>. Ons moet wys dat <m>\ve{v} + \ve{v}'</m>
@@ -145,31 +142,30 @@
                 T(\ve{v} + \ve{v}') = T(\ve{v}) + T(\ve{v}') = \ve{0} +
                 \ve{0} = \ve{0}
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>b.</title>
           <p>
             <m>\ve{0}_V \in \Ker(T)</m>.
 
-            <blockquote>
+            <p>
               Om te wys dat <m>\ve{0}_V</m> in <m>\Ker(T)</m> is, moet ons wys dat
               <m>T(\ve{0}_V) = \ve{0}_W</m>. Inderdaad, dit is waar want <m>T</m>
               is 'n line&#xea;re afbeelding, volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>c.</title>
+          
           <p>
             <m>\Ker(T)</m> is geslote onder skalaarvermenigvuldiging.
 
-            <blockquote>
+            <p>
               Veronderstel <m>\ve{v} \in \Ker(T)</m> en <m>k \in
               \mathbb{R}</m> is 'n skalaar. Ons moet wys dat <m>k \ve{v} \in
               \Ker(T)</m>, dit is, ons moet wys dat <m>T(k \ve{v}) = \ve{0}</m>.
@@ -177,24 +173,24 @@
               <me>
                 T(k \ve{v}) = k T(\ve{v}) = k \ve{0} = \ve{0}
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
-      </ul>
+      </ol>
     </p>
 
     <p>
       (ii) Weereens moet ons die drie vereistes van 'n deelruimte
       nagaan.
 
-      <ul>
+      <ol>
         <li>
-          <title>a.</title>
+        
           <p>
             <m>\Im(T)</m> is geslote onder sommering.
 
-            <blockquote>
+            <p>
               Veronderstel <m>\ve{w}</m> en <m>\ve{w}'</m> is in <m>\Im(T)</m>. Met
               ander woorde, daar bestaan vektore <m>\ve{v}</m> en <m>\ve{v}'</m> in
               <m>V</m> sodat <m>T(\ve{v}) = \ve{w}</m> en <m>T(\ve{v}') = \ve{w}'</m>.
@@ -206,32 +202,32 @@
                 T(\ve{u}) = T(\ve{v} + \ve{v}') = T(\ve{v}) +
                 T(\ve{v}') = \ve{w} + \ve{w}'
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>b.</title>
+        
           <p>
             <m>\ve{0}_W \in \Im(T)</m>.
 
-            <blockquote>
+            <p>
               Om te wys dat <m>\ve{0}_W \in \Im(T)</m>, moet ons wys dat daar
               'n <m>\ve{v} \in V</m> bestaan, sodat <m>T(\ve{v}) = \ve{0}_W</m>.
               Inderdaad, kies <m>\ve{v} = \ve{0}_V</m>. Dan is <m>T(\ve{v}) =
               T(\ve{0}_V) = \ve{0}_W</m> volgens <xref ref="lin_map_zero_to_zero">Lemma</xref>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
 
         <li>
-          <title>c.</title>
+        
           <p>
             <m>\Im(T)</m> is geslote onder skalaarvermenigvuldiging.
 
-            <blockquote>
+            <p>
               Veronderstel <m>\ve{w} \in \Im(T)</m> en <m>k</m> is 'n
               skalaar. Ons moet wys dat <m>k \ve{w} \in \Im(T)</m>. Die feit
               dat <m>\ve{w}</m> in <m>\Im(T)</m> is, beteken dat daar 'n <m>\ve{v}</m>
@@ -241,11 +237,11 @@
               <me>
                 T(\ve{u}) = T(k \ve{v}) = k T(\ve{v}) = k \ve{w}
               </me>.
-            </blockquote>
+            </p>
 
           </p>
         </li>
-      </ul>
+      </ol>
     </p>
   </proof>
 
@@ -450,14 +446,14 @@
         met geen beperkings op die ander konstantes <m>a_1, a_2, b_2</m> nie.
         Met ander woorde,
         <me>
-          \Ker(I) = \left\{ \mbox{
+          \Ker(I) = \left\{ \text{
           alle
-          trigonometriese polinome van die vorm  \\ \(a_0(1 -
+          trigonometriese polinome van die vorm} \\ (a_0(1 -
           \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2
-          \sin{2x}\), \\ waar \(a_0, a_1, a_2, b_2 \in
-          \mathbb{R}\).
+          \sin{2x}), \text{ waar } (a_0, a_1, a_2, b_2 \in
+          \mathbb{R}).
 
-          }  \right\}
+            \right\}
         </me>
       </p>
 
@@ -530,10 +526,8 @@
           <mrow>\amp = (p(1) + q(1), \, (p+q)'(1) ) \amp \amp  \mbox{(Defn van die funksie
           \(p+q\))}</mrow>
           <mrow>\amp = (p(1) + q(1), \, (p'+q')(1) ) \amp \amp  \mbox{(\((p+q)' = p'+q'\))}</mrow>
-          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \mbox{(Defn van die
-          funksie \(p' + q'\))}</mrow>
-          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \mbox{(Defn van
-          sommering in \(\mathbb{R}^2\))}</mrow>
+          <mrow>\amp = (p(1) + q(1), \, p'(1) + q'(1)) \amp \amp  \mbox{(Defn van \(p' + q'\))}</mrow>
+          <mrow>\amp = (p(1), \, p'(1)) + (q(1), \, q'(1)) \amp \amp  \mbox{(Defn of \(+\) in \(\mathbb{R}^2\))}</mrow>
           <mrow>\amp = T(p) + T(q)</mrow>
         </md>.
       </p>
@@ -556,16 +550,18 @@
 
       <p>
         Dit lei verder na die vergelykings:
-        <me>
-          \systeme{ a_0 + a_1 + a_2 = 0, a_1 + 2a_2 = 0}
-        </me>
+         <md>
+        <mrow>  a_0 + a_1 + a_2 \amp = 0 </mrow>
+        <mrow> a_0 + a_1 + a_2 \amp = 0 </mrow>
+        <mrow> a_1 + 2a_2 \amp = 0 </mrow>
+        </md>
         waarvan die vergelyking <m>a_2 = t</m>,
         <m>a_1 = - 2t</m>, <m>a_0 = -t</m> is,
         waar <m>t \in \mathbb{R}</m>.
         Daarom
         <me>
-          \Ker(T) =  \left\{ \mbox{ alle polinome
-          van die vorm  \\ \( -t -2t x + t x^2\)  waar  \(t \in \mathbb{R}\)
+          \Ker(T) =  \left\{ \mbox{polinome
+          van die vorm \( -t -2t x + t x^2\)  waar  \(t \in \mathbb{R}\)
           }  \right\}
         </me>.
       </p>
@@ -751,10 +747,7 @@
     </p>
   </proof>
 
-  <p>
-    \furtherexercises
-  </p>
-
+<exercises>
   <exercise>
     <statement>
       <p>
@@ -810,6 +803,134 @@
         </ol>
       </p>
     </statement>
+     <solution> 
+
+      <p>
+
+        <ol>
+<li>
+<p>
+<m>\id_V</m> sends only a single vector to <m>0</m>, namely the vector <m>\ve 0_v</m>. Thus <m>\Ker(\id_v) = \{\ve 0_v\}</m> and hence <m>\Nullity(\id_v) = 0</m>. <m>\Im(\id_V) = V</m>  and so <m>\Rank(\id_V) = \Dim(V) </m>. The equation
+<me>
+\Dim V + 0 = \Dim V .
+</me>
+verifies the Rank-Nullity Theorem for this example.
+</p>
+</li>
+
+
+<li>
+<p>
+The zero map spends every element in <m>V </m> to <m> \ve 0 </m>. Hence <m>\Ker(Z) = V </m> and so <m> \Nullity(Z) = \Dim V </m>. For the same reason <m>\Im(Z) = \{0\}</m> and thus <m>\Rank(Z) = 0 </m>. The equation
+<me>
+\Dim V + 0 = \Dim V .
+</me>
+verifies the Rank-Nullity Theorem for this example.
+</p>
+</li>
+
+
+<li>
+<p>
+  <m> \ve p(x) \in \Ker(T) </m> if and only if 
+  <me>
+p(1) = p(2) = p(3) = 0.
+</me>
+But any degree 3 polynomial with <m>1, 2</m> and <m> 3</m> as roots must be of the form
+<me>
+a(x-1)(x-2)(x-3)
+</me>
+where <m> a \in \mathbb R </m>. Conversely, any element of this form is in <m> \Ker T </m>. Hence
+<me>
+\Ker(T) = \{a(x-1)(x-2)(x-3) \in \Poly_3 \, : \, a \in \mathbb R\} 
+</me>
+and thus <m> \Nullity(T)  = 1 </m>.
+</p>
+
+<p>
+I claim that <m>\Im(T) = \Col_3</m>. That is, for any 
+<me>
+\begin{bmatrix} s \\ t \\u \end{bmatrix} \in \Col_3,
+</me>
+we can find a polynomial  <m>\ve p</m>, of degree 3 or less, such that <m> p(1) = s, p(2) = t, p(3) = u</m>. To show this, you could set up the system of linear equations <md>
+<mrow> a + b + c +d = s </mrow>
+<mrow> 8a + 4b + 2c + d = t</mrow>
+<mrow> 27b + 9 b + 3c + d  = u</mrow>
+</md>and solve for the coefficients of <m> \ve p </m>. What is perhaps more elegant is to use the theory of Lagrange interpolation polynomials <fn> https://en.wikipedia.org/wiki/Lagrange_polynomial</fn>. Given any 3 distinct points in <m>\mathbb R^2 </m>, we can always find a degree two polynomial going through these 3 points. In our case, let the points be <m>(1,s), (2,t), (3,u)</m>. The degree two Lagrange polynomial going through these points is
+<me>
+\ve p(x) = u\left[ \frac{(x-2)(x-3)}{(1-2)(1-3)}\right] + s\left[ \frac{(x-1)(x-3)}{(2-1)(2-3)}\right] + t\left[ \frac{(x-1)(x-2)}{(3-1)(3-2)}\right].
+</me>
+It is easy to check that <m> p(1) = s, p(2) = t, p(3) = u</m>. Hence <m>\Im(T) = \Col_3</m> and so <m>\Rank(T) = 3</m>.
+<me>
+\Rank(T) + \Nullity(T) = 1 + 3 = 4 = \Dim(\Poly_3).
+</me>
+</p>
+</li>
+
+
+<li>
+<p>
+It will be useful to have the following integrals at hand:
+<md>
+<mrow>\amp \int_0^\pi \cos(x) = 0 </mrow>
+<mrow>\amp \int_0^\pi \sin(x) = 0 </mrow>
+<mrow>\amp \int_0^\pi \cos^2(x) = \pi/2 </mrow>
+<mrow>\amp \int_0^\pi \sin^2(x) = \pi/2 </mrow>
+<mrow>\amp \int_0^\pi \sin(x)\cos(x) = 0</mrow>
+<mrow>\amp \int_0^\pi \cos(2x)\cos(x) = 0</mrow>
+<mrow>\amp \int_0^\pi \sin(2x)\cos(x) = \frac{4}{3}</mrow>
+<mrow>\amp \int_0^\pi \cos(2x)\sin(x) = -\frac{2}{3}</mrow>
+<mrow>\amp \int_0^\pi \sin(2x)\sin(x) = 0</mrow>
+</md>
+</p>
+
+<p>
+Now suppose
+<me>
+\ve f(x) = a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \in \Ker(S).
+</me>
+Then
+<mdn>
+  <mrow> \int_0^\pi f(x)\cos(x) \, dx = b\frac{\pi}{2} + e\frac{4}{3} = 0</mrow>
+  <mrow> \int_0^\pi f(x)\sin(x) \, dx = c\frac{\pi}{2} - d\frac{2}{3} = 0</mrow>
+</mdn>.
+Conversely, any <m> f </m> satisfying the linear equations above is certainly in <m> \Ker(S)</m>. Hence
+<me>
+\Ker(S) = \{a + b\cos(x) + c\sin(x) + d\cos(2x) + e\sin(2x) \,: \\ b\frac{\pi}{2} + e\frac{4}{3} = 0 \text{ and }  c\frac{\pi}{2} - d\frac{2}{3} = 0 \}
+</me>We can freely choose <m> a </m> since the constant will not affect the integrals. We are free to choose <m> b </m>, but then <m> e </m> is fully determined by (1) above. Similarly, we can freely choose <m> c </m> but then <m> d </m> is determined by (2).
+Hence <me>
+\Nullity(S) = 3.
+</me>
+  </p>
+
+  <p>
+We claim that <m> \Im(S) = \Col_2</m>. To see this, suppose 
+<me>
+\begin{bmatrix} s \\ t \end{bmatrix} \in \Col_2.
+</me>
+Now consider 
+<me>
+f(x) = \frac{2s}{\pi}\cos(x) + \frac{2t}{\pi}\sin(x).
+</me>
+Using the table of integrals above, we see that 
+<me>
+S(T) = \begin{bmatrix} s \\ t \end{bmatrix} .
+</me>
+Hence <me>
+\Rank(T) = 2.
+</me>
+  </p>
+
+  <p>
+    Since <m>\Dim(\Trig_2) = 5</m>, the Rank-Nullity theorem is verified for <m>S</m>.
+
+  </p>
+</li>
+        </ol>
+      </p>
+
+
+    </solution>
   </exercise>
 
   <exercise>
@@ -820,6 +941,24 @@
         \rightarrow \Col_4</m> sodat <m>\Rank(T) = \Nullity(T)</m>.
       </p>
     </statement>
+       <solution>
+<p>
+Define <m> T </m> by
+<me>
+T: \begin{bmatrix} x\\y\\z\\w\end{bmatrix} \mapsto \begin{bmatrix} x\\y\\0\\0\end{bmatrix}.
+</me>
+<me>
+\Ker(T) = \left\{\begin{bmatrix} 0\\0\\z\\w\end{bmatrix} \in \Col_4 \right\}.
+</me>
+and 
+<me>
+\Im(T) = \left\{\begin{bmatrix} x\\y\\0\\0\end{bmatrix} \in \Col_4 \right\}.
+</me>
+Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence <me>
+\Rank(T) = \Nullity(2) = 2.
+</me>
+</p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -853,6 +992,30 @@
         </ol>
       </p>
     </statement>
+   <solution>
+
+ <p>
+
+        <ol>
+          <li>
+            <p>
+             The statement is false. To see this, notice that if such a map were to exist then its kernel would be 2-dimensional since any choice of <m> x_1</m> and <m>x_3 </m> uniquely determines an element in <m>\Ker(T)</m>. But then by the Rank-Nullity theorem, <m> \Rank(T) = 3 </m> since <m> \mathbb R^5 </m> is 5 dimensional. But <m>\Im(T)</m> is a subspace of <m>\mathbb R^2</m> - which is absurd, since <m> \mathbb R^2 </m> itself is 2-dimensional.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              The statemnt is false. Suppose such a map were to exist. Recall that <m> \Dim(\Trig_3) = 7</m>. Then by the Rank-Nullity theorem,
+              <me>
+              7 = \Rank(T) + \Nullity(T) = 2\Rank(T).
+            </me>
+            But 7 is odd, so we have a contradiction! Thus no such map can exist.
+            </p>
+          </li>
+        </ol>
+      </p>
+
+    </solution>
   </exercise>
 
   <exercise>
@@ -888,6 +1051,43 @@
         </ol>
       </p>
     </statement>
+     <solution>
+      <p>
+        <ol>
+
+          <li>
+            <p>
+              <m>D_\ve{p}</m> being a linear maps follows from the usual properties of the dot product:
+              <md>
+                <mrow> D_\ve{p}(\ve u + \ve v) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot (\ve u + \ve v) </mrow>
+                <mrow>\amp  = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u + \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve v  </mrow>
+                <mrow>\amp = D_\ve{p}(\ve u) + D_\ve{p}(\ve v) </mrow>.
+              </md>
+              Similarly,
+              <md>
+                <mrow> D_\ve{p}(k\ve u) \amp = \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve ku</mrow>
+                <mrow> \amp =\begin{bmatrix} k\frac{\partial f}{\partial x}(\ve p)\\ k\frac{\partial f}{\partial y}(\ve p) \\k \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u </mrow>
+                <mrow> \amp = k \begin{bmatrix} \frac{\partial f}{\partial x}(\ve p)\\ \frac{\partial f}{\partial y}(\ve p) \\ \frac{\partial f}{\partial z}(\ve p) \end{bmatrix} \cdot \ve u</mrow>
+                <mrow> \amp = k D_\ve{p} \cdot \ve u</mrow>.
+              </md>
+              And so <m>D_\ve{p}</m> is linear.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <m> \ve u = (x_1,y_1,z_1) \in \Ker(D_\ve{p}) </m> if and only if 
+              <mdn>
+            <mrow> \amp D_\ve{p}(\ve u ) = 0</mrow>
+<mrow>\iff \amp \left( \frac{\partial f}{\partial x}(\ve p) , \frac{\partial f}{\partial y}(\ve p) , \frac{\partial f}{\partial z}(\ve p)\right) \cdot (u_0,u_1,u_2) = 0 </mrow>
+<mrow>\iff \amp 2x_0x_1 + 2y_0y_1 + 2z_0z_1 = 0.</mrow>
+            </mdn>
+            Geometrically, <m>\Ker(D_\ve{p}</m> consists of all vectors <m>\ve v</m> that lie tangent to a circle of radius <m>|\ve p |</m> centred at the origin at the point <m>\ve p </m>.
+            </p>
+          </li>
+        </ol>
+      </p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -900,6 +1100,91 @@
         \ve{u} \cdot \ve{a} = 0 \}</m> is.
       </p>
     </statement>
-  </exercise>
+
+  <solution>
+    <p>
+    <p>
+For reference, we reproduce a portion of the proof in in <xref ref="cross-product-example">Example</xref>:
+  </p>  
+    <p>
+        "The kernel of <m>C</m> is the subspace of
+        <m>\mathbb{R}^3</m> consisting of all vectors
+        <m>\ve{v} \in V</m> such that <m>\ve{a} \times \ve{v} = \ve{0}</m>.
+        From the geometric formula for the cross-product,
+        <me>
+          |\ve{a} \times \ve{v}| = |\ve{a}| |\ve{v}| \sin \theta
+        </me>
+        where <m>\theta</m> is the angle from <m>\ve{a}</m> to <m>\ve{\theta}</m>,
+        we see that
+        <me>
+          \ve{a} \times \ve{v} = \ve{0}  \Leftrightarrow  \mbox{\(\ve{v}=\ve{0}\) or \(\theta = 0\) or \(\theta= \pi\)} 
+        </me>.
+      </p>
+
+      <p>
+        In other words,
+        <m>\ve{v}</m> must be a scalar multiple of <m>\ve{a}</m>.
+        So,
+        <me>
+          \Ker(C) = \{ k \ve{a}, k \in \mathbb{R} \}
+        </me>.
+      </p>
+
+      <p>
+        I claim that the <em>image</em>
+        of <m>C</m> is the subspace of <em>all</em>
+        vectors perpendicular to <m>\ve{a}</m>, i.e.
+        <men>
+          \Im(C) := \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+        </men>.
+      </p>
+
+      <p>
+        If you believe me, then the picture is as follows:
+      </p>
+
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}\draw (0,0) -- (1,2) -- (3,2) -- (2,0) -- (0,0);
+  \draw (1.5, 1) -- (1.5,3.5) node[right] {\(\Ker{C}\)};
+  \draw (1.5, -0.1) -- (1.5, -2);
+  \node at (3.3, 1) {\(\Im(C)\)};  
+  \draw[very thick, red, ->] (1.5,1) -- (1.5, 2.5) node[right] {\(\ve{a}\)};\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+      <p>
+        Let me prove equation <xref ref="image-of-C" />.
+        By definition, the image of <m>C</m> is the subspace of
+        <m>\mathbb{R}^3</m> consisting of all vectors <m>\ve{w}</m> of the form
+        <m>\ve{w} = \ve{a} \times \ve{v}</m> for some <m>\ve{v} \in \mathbb{R}^3</m>.
+        This implies that <m>\ve{w}</m> is perpendicular to <m>\ve{a}</m>.""
+      </p>
+      <p>
+        And thus we know that 
+        <me>
+\Im(C) \subset \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+      </me>We shall use the Rank-Nullity theorem to show the converse in a fantastically succint way. By the Rank-Nullity theorem
+        <md>
+        <mrow> \amp \Dim(\mathbb R^3)  = \Nullity(C) + \Rank(C)</mrow>
+        <mrow>\implies \amp 3 = 1 + \Rank(C).</mrow>
+      </md>
+      And so we also know the <m> \Im(C) </m> is a 2-dimensional subspace of <m>\mathbb R^3 </m>. Of course, 
+      <me>
+       \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+    </me>
+    is also 2-dimensional. But now, if one 2-dimensional subspace is contained in another 2-dimensional subspace then the two subspaces must necessarily be <emp>the same</emp>! Hence 
+    <me>
+\Im(C) = \{ \ve{u} \in \mathbb{R}^3 : \ve{u} \dotp \ve{a} = 0 \}
+  </me>
+      </p>
+      <p>
+        (By using the Rank-Nullity theorem, we managed to bypass the trickest part of <xref ref="cross-product-example"/>!)
+      </p>
+    </p>
+  </solution>
+</exercise>
+</exercises>
 </section>
 

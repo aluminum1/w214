@@ -102,8 +102,8 @@
       <md>
         <mrow>(T \circ S) (\ve{u}_1 + \ve{u}_2)   \amp = T(S(\ve{u}_1 + \ve{u}_2)) \amp 
         \mbox{(defn van \(T \circ S\))}</mrow>
-        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  \mbox{ (\(S\) is line{\^e}r)}</mrow>
-        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp  \mbox{ (\(T\) is line{\^e}r)}</mrow>
+        <mrow>\amp = T(S(\ve{u}_1) + S(\ve{u}_2)) \amp  (S \text{ is line&#xea;r })</mrow>
+        <mrow>\amp = T(S(\ve{u}_1)) + T(S(\ve{u}_2)) \amp (T \text{ is line&#xea;r }) </mrow>
         <mrow>\amp = (T \circ S) (\ve{u}_1) + (T \circ S)(\ve{u}_2) \amp  \mbox{(defn van
         \(T \circ S\))}</mrow>
       </md>
@@ -114,8 +114,8 @@
       <md>
         <mrow>(T \circ S) (k \ve{u}) \amp = T(S(k \ve{u})) \amp  \mbox{(defn van \(T \circ
         S\))}</mrow>
-        <mrow>\amp = T(kS(\ve{u})) \amp  \mbox{(\(S\) is line{\^e}r)}</mrow>
-        <mrow>\amp = k T(S(\ve{u})) \amp  \mbox{(\(T\) is line{\^e}r)}</mrow>
+        <mrow>\amp = T(kS(\ve{u})) \amp  (S \text{ is line&#xea;r })</mrow>
+        <mrow>\amp = k T(S(\ve{u})) \amp  (T \text{ is line&#xea;r })</mrow>
         <mrow>\amp = k (T \circ S) (\ve{u}) \amp  \mbox{(defn van \(T \circ S\))}</mrow>
       </md>
     </p>
@@ -174,9 +174,6 @@
     </solution>
   </example>
 
-  <p>
-    movebackintoexample
-  </p>
 
   <exercise>
     <statement>
@@ -187,11 +184,19 @@
         Indien nie, gee 'n eksplisiete teenvoorbeeld.
       </p>
     </statement>
-  </exercise>
+     <solution>
+        <p>
+The statement is not true! For example, let <m> \ve p(x) = x + 1 </m>.
+Then
+<me>
+(A \circ D)(x + 1)  = A(1) = x \neq x + 1.
+</me>
+</p>
+      </solution>
 
-  <p>
-    \furtherexercises
-  </p>
+  </exercise>
+  <exercises>
+
 
   <exercise>
     <statement>
@@ -211,6 +216,17 @@
         bereken.
       </p>
     </statement>
+    <solution>
+      <p>
+        <md>
+        <mrow>R_\phi R_\theta (x,y) \amp = R_\phi (x\cos\theta - y\sin\theta, x\sin\theta + y\cos\theta)</mrow>
+        <mrow>\amp =  \left((x\cos\theta-y\sin\theta)\cos\phi - (x\sin\theta + y \cos\theta)\sin\phi ,\, (x\cos\theta - y\sin\theta)\sin\phi + (x\sin\theta + y\cos\theta)\cos \phi\right) </mrow>
+        <mrow> \amp = \left(x(\cos\theta\cos\phi - \sin\theta\sin\phi) - y(\sin\theta\cos\phi + \cos\theta\sin\phi),\, x(\cos\theta\sin\phi + \sin\theta\cos\phi) + y(\cos\theta\cos\phi - \sin\theta\sin\phi)\right) </mrow>
+        <mrow> \amp = \left(x\cos(\theta + \phi) - y\sin(\theta + \phi), \,x\sin(\theta+\phi) + y\cos(\theta + \phi_)\right) </mrow>
+        <mrow> \amp = R_{\phi + \theta}(x,y) </mrow>
+      </md>
+</p>
+    </solution>
   </exercise>
 
   <exercise>
@@ -227,6 +243,19 @@
         Is hulle gelyk?
       </p>
     </statement>
+     <solution>
+      <p>
+        <me>
+        (S \circ M)(p(x)) = S(M(p(x))) = S(x p(x)) = (x-1)p(x-1)
+      </me>
+      whereas
+      <me>
+      (M \circ S)(p(x)) = M(p(x-1)) = xp(x-1).
+    </me>
+Thus <m> S \circ M \neq M \circ S </m>.
+      </p>
+    </solution>
   </exercise>
+</exercises>
 </section>
 
