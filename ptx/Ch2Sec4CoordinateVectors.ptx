@@ -495,7 +495,7 @@ Hence <me>
         <ol>
           <li>
             <title>(a)</title>
-            Find a basis <m>\basis{B}</m> for the vector space
+            <p>Find a basis <m>\basis{B}</m> for the vector space
         <me>
           V := \{ p \in \Poly_2 : p(2) = 0 \}
         </me>.
@@ -516,7 +516,6 @@ Hence <me>
             </p>
           </li>
         </ol>
-      </p>
     </statement>
    <solution>
 <p>
@@ -567,8 +566,43 @@ and so
     </solution>
   </exercise>
 
+<exercise>
+  <statement> <p>Consider the vector space <m>W</m> from <xref ref="dimension_of_hyperplane"/>,
+  <me>
+  W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \},
+</me>
+and the following bases for <m>W</m>:
+<me>
+ \basis{B} \amp = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} \amp = \bopen \ve{u}, \ve{v} \bclose
+</me>
+where
+<md>
+ <mrow> \ve{a} \amp = (1, 0, -\frac{1}{3}), \amp \ve{b} \amp = (0, 1, - \frac{2}{3}) </mrow>
+ <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
+</md>
+Consider the vector <m>\ve{w} = (-2, 4, -2) \in W</m>. Compute <m>[\ve{w}]_{\basis{B}}</m> and <m>[\ve{w}]_{\basis{C}}</m>.
+</p>
+</statement>
+</exercise>
 
-
+    <exercise>
+    <statement>
+      <p>Let <m>V</m> be the vector space of solutions to the differential equation
+      <men xml:id="diff_eqn_exerc_1">
+        y^{''} + y = 0.
+      </men>
+      </p>
+      <ol>
+        <li> <p> Show that <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> is a basis for <m>V</m>. </p> </li>
+        <li> <p> Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_1"/> satisfying
+        <me>
+        y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0.
+      </me>
+      (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
+    </li>
+      </ol>
+    </statement>
+    </exercise>
   </exercises>
 </section>
 
