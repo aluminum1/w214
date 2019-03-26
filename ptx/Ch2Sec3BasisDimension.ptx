@@ -260,10 +260,10 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
         Suppose <m>X</m> is a finite set.
         Then <m>\Fun(X)</m> is finite-dimensional,
         with dimension <m>|X|</m>,
-        with basis given by the functions <m>\ve{f}_a</m>,
+        with basis given by the functions <m>f_a</m>,
         <m>a \in X</m>, defined by:
         <men xml:id="defn_of_basis_of_functions">
-          \ve{f}_a (x) :=  \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ otherwise}  \end{cases}
+          f_a (x) :=  \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ otherwise}  \end{cases}
         </men>
       </p>
 
@@ -280,33 +280,30 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
           <q>If <m>a=b</m>, return a 1.
           If <m>a \neq b</m>, return a <m>0</m></q>.
           In this language,
-          we can rewrite the definition of the functions <m>\ve{f}_a</m> as
+          we can rewrite the definition of the functions <m>f_a</m> as
           <men>
-            \ve{f}_a (x) := \delta_{ax}
+            f_a (x) := \delta_{ax}
           </men>.
         </p>
       </assemblage>
       </statement>
     </example>
 
-    <!--ERROR FIX THIS HIEROGLYPHIC STUFF AND THE NEXT EXERCISE TOO
-
     <exercise>
         <statement>
           <p>
-            Suppose <m>X = \left\{\mbox{\pmglyph{\HGi}} , \mbox{\pmglyph{\He}} , \mbox{\pmglyph{\HZxi}} \right\}</m>.
+            Suppose <m>X = \left\{a, b, c\}</m>.
 
             <ol>
               <li>
                 <p>
-                  Evaluate the function <m>\ve{f}_{\mbox{\tiny \pmglyph{\HGi}} }</m> at each <m>x \in X</m>.
+                  Evaluate the function <m>f_{b }</m> at each <m>x \in X</m>.
                 </p>
               </li>
 
               <li>
                 <p>
-                  Show that every function <m>\ve{f} \in \Fun(X)</m> can be written as a linear combination of <m>\ve{f}_{\mbox{\tiny \pmglyph{\HGi}} }</m>,
-                  <m>\ve{f}_{\mbox{\tiny \pmglyph{\He}} }</m> and <m>\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}} }</m>.
+                  Show that <m>\bopen f_a, f_b, f_c \bclose</m> is a basis for <m>\Fun(X)</m>.
                 </p>
               </li>
             </ol>
@@ -314,24 +311,22 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
         </statement>
       </exercise>
 
-      
-
       <exercise>
         <statement>
           <p>
             Now let <m>X</m> be an arbitrary finite set.
             Consider the collection of functions
             <me>
-              \ve{f}_a, \, a \in X
+             \basis{B} = \bopen \ve{f}_a : \, a \in X \bclose 
             </me>
           </p>
           <p>
-            Show that this collection (i) spans <m>\Fun(X)</m> and (ii) is linearly independent.
+            Show that <m>\basis{B}</m> is a basis for <m>\Fun(X)</m>.
           </p>
         </statement>
       </exercise>
 
-      -->
+
 
     <example>
       <statement>
@@ -421,7 +416,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
 
     <example xml:id ="dimension_of_hyperplane">
       <title>Dimension of a hyperplane</title>
-    <statement> 
+    <statement>
       <p> Let <m>\ve{v} \in \mathbb{R}^n</m> be a fixed vector, and consider the hyperplane <m>W \subset \mathbb{R}^n</m> orthogonal to <m>\ve{v}</m> as in <xref ref="hyperplanes_example_subspace"/>. Then you will prove in Exercise <xref ref="dimension_of_hyperplane_exercise"/> that <m>\Dim(W) = n-1</m>. </p>
 
       <p>For instance, consider the specific example from <xref ref="hyperplanes_example_subspace"/>, namely the plane <m>W \subset \mathbb{R}^3</m> of vectors orthogonal to <m>\ve{v} = (1,2,3)</m>. In other words,
@@ -457,7 +452,112 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
       </statement>
       <hint>Find a basis for the solution space of the equation determining <m>W</m>.</hint>
     </exercise>
+    </subsection>
 
+    <subsection>
+	<title>Dimension of space of solutions to a homogenous linear differential equation</title>
+	<introduction>
+		<p>We will now compute the dimension of the vector space of solutions to a homogenous linear ordinary differential equation. We will need the following theorem from the theory of differential equations, which we won't prove.
+			</p>
+	</introduction>
+	<theorem xml:id="diff_eqn_exist_unique">
+		<title>Existence and uniqueness of solutions to linear ODE's</title>
+		<statement>Let
+		<men xml:id="diff_eqn_in_thm">
+			y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
+		</men>
+		be a linear homogenous ordinary differential equation on an interval <m>I</m>, where <m>a_0(x), \cdots, a_{n-1}(x)</m> are continuous on <m>I</m>. Suppose we are given initial conditions
+		<mdn>
+			<mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
+			<mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
+			<mrow> \vdots  \amp </mrow>
+			<mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
+		</mdn>
+		where <m>x_0 \in I</m> and <m>c_0, \ldots, c_{n-1}</m> are arbitrary constants. Then there exists a unique solution <m>y(x)</m> on <m>I</m> saisfying the differential equation <xref ref="diff_eqn_in_thm"/> and the initial conditions <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+		</statement>
+	</theorem>
+
+	<example>
+		<title>Application of existence and uniqueness theorem of solutions to ODE</title>
+		<statement><p>Consider the ODE
+		<men>
+			x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \mbox{on } (0, \infty)
+		</men>
+		from <xref ref="first_example_2nd_order_ode"/>. To apply <xref ref="diff_eqn_exist_unique"/>, we first rewrite it in the form
+		<men xml:id="diff_eqn_example_thm">
+			y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \mbox{on } (0, \infty).
+		</men>
+		The coefficient functions <m>\frac{3}{x}</m> and <m>\frac{5}{x^2}</m> are continuous on <m>(0, \infty)</m> so we can apply <xref ref="diff_eqn_exist_unique"/>. Choose, say, <m>x_0 = 1</m> and two arbitrary numbers <m>c_0, c_1</m>. Then <xref ref="diff_eqn_exist_unique"/> says that there exists a unique solution <m>y(x)</m> to the differential equation <xref ref="diff_eqn_example_thm"/> satisfying the initial conditions:
+		<mdn>
+			<mrow xml:id="ic1_diff_eqn_ex"> y(1) \amp = c_0 </mrow>
+			<mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
+		</mdn> 
+		Let us verify this in SageMath. First, we ask SageMath to find the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/>:
+		<sage>
+			<input>
+				x = var('x')
+				y = function('y')(x)
+
+				ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+
+				show(desolve(ode, y))
+			</input>
+		</sage>
+		SageMath tells us that the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/> is
+		<men xml:id="gen_soln_formula_ode">
+			y = K_1 x^2 \sin(\log(x)) + x^2 K_2 \cos(\log(x)). 
+		</men>
+		Let us now apply the initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>. We can compute <m>y(1)</m> and <m>y'(1)</m> using the formula for <m>y</m> from <xref ref="gen_soln_formula_ode"/>. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> becomes (check this):
+		<mdn>
+			<mrow xml:id="first_eqn_ks"> K_2 \amp = c_0 </mrow>
+			<mrow xml:id="second_eqn_ks"> K_1 + 2K_2 \amp = c_1 </mrow>
+		</mdn>
+		Equations <xref first="first_eqn_ks" last="second_eqn_ks"/> have a unique solution, namely <m>K_1 = c_1 - 2 c_0, K_2 = c_0</m>. So indeed, for any initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>, the differential equation <xref ref="diff_eqn_example_thm"/> has a unique solution, namely:
+		<me>
+			y = (c_1 - 2 c_0) x^2 \sin (\log(x)) + c_0 x^2\cos(\log(x))
+		</me>
+		For instance, if our initial conditions were
+		<mdn>
+			<mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
+			<mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
+		</mdn> 
+		then the unique solution is
+		<me xml:id="soln_example_ic">
+			y = -2 x^2 \sin(\log(x)) + x^2 \cos(log(x)).
+		</me>
+		You can also check this explicitly in SageMath, using the <c>ics=[1,1,0]</c> option of <c>desolve</c> (the first number is the value of <m>x_0</m>, the second number is the value of <m>y(x_0)</m>, and the third number is the value of y'(x_0), etc.):
+		<sage>
+			<input>
+				x = var('x')
+				y = function('y')(x)
+
+				ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+
+				show(desolve(ode, y, ics=[1,1,0]))
+				
+			</input>
+		</sage>
+		SageMath outputs the same solution as in <xref ref="soln_example_ic"/>.
+
+		Similarly, if our initial conditions were
+		<mdn>
+			<mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
+			<mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
+		</mdn> 
+		then the unique solution is
+		<me>
+			y = x^2 \sin(\log (x)).
+		</me>
+
+
+
+		</statement>
+
+
+
+	</example>     
+
+ 
 
   </subsection>
 
