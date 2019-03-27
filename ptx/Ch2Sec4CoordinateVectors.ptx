@@ -573,7 +573,7 @@ and so
 </me>
 and the following bases for <m>W</m>:
 <me>
- \basis{B} \amp = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} \amp = \bopen \ve{u}, \ve{v} \bclose
+ \basis{B} = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} = \bopen \ve{u}, \ve{v} \bclose
 </me>
 where
 <md>
@@ -600,9 +600,44 @@ Consider the vector <m>\ve{w} = (-2, 4, -2) \in W</m>. Compute <m>[\ve{w}]_{\bas
       </me>
       (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
     </li>
+    <li> <p>Let <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.</p>
+      <ol>
+        <li>Show that <m>z \in V</m> by checking that it solves the differential equation <xref ref="diff_eqn_exerc_1"/>.</li>
+        <li>Determine <m>[z]_{\basis{B}}</m>. </li>
+
+      </ol>
+
+    </li>
       </ol>
     </statement>
     </exercise>
+
+    <exercise>
+    <statement>
+      <p>Let <m>V</m> be the vector space of solutions to the differential equation
+      <men xml:id="diff_eqn_exerc_2">
+        (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1).
+      </men>
+      </p>
+      <ol>
+        <li> <p> Show that <m>y_1</m> and <m>y_2</m> are elements of <m>V</m>, where
+        <me>
+        y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}.
+      </me>
+      </p>
+      </li>
+      <li> Show that <m>\basis{B} = \bopen \ve{y}_1, \ve{y}_2 \bclose </m> is a basis for <m>V</m>.
+      </li>
+        <li> <p> Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_2"/> satisfying
+        <me>
+        y(\frac{1}{2}) = 1, \quad y'(\frac{1}{2}) = 0.
+      </me>
+      (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
+    </li>
+      </ol>
+    </statement>
+    </exercise>
+
   </exercises>
 </section>
 
