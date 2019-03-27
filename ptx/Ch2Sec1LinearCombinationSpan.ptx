@@ -358,6 +358,7 @@ Using the usual rules for addition and multiplication in a vector space, we find
 </p>
   </proof>
 
+
 <exercises>
   <exercise>
     <statement>
@@ -534,6 +535,9 @@ Equation <xref ref="exercise-span-omission-3"/> shows that we can express <m>\ve
 
 
 </exercises>
+
+<solutions divisional="solution answer" />
+
 
 </section>
 

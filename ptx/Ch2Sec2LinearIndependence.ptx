@@ -352,6 +352,8 @@ We have a system of consistent homogenous linear equations so we know there exis
    </p>
   </proof>
 
+
+
   <exercises>
   <exercise>
     <statement>
@@ -578,5 +580,9 @@ and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-
 </exercise>
 
   </exercises>
+
+<solutions divisional="solution answer" />
+
+
 </section>
 
