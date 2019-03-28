@@ -306,7 +306,7 @@
     <exercise xml:id="prove_C_prime_is_not_vector_space">
       <statement>
         <p>
-          Defineer <m>C^\prime</m> as die versameling van alle polinome met graad <em>presies</em> gelyk aan <m>4</m>. Toon aan dat as <m>C^\prime</m> die sommeringsbewerking <xref ref="add_in_C"/>, die nulvektor <xref ref="zero_in_C" /> en die skalaarvermenigvuldigingsbewerking <xref ref="sm_in_C" /> gegee word, dan is <m>C^\prime</m> <em> nie </em> 'n vektorruimte nie.
+          Defineer <m>C^\prime</m> as die versameling van alle polinome met graad <em>presies</em> gelyk aan <m>4</m>, asook die nulpolinoom. Toon aan dat as <m>C^\prime</m> die sommeringsbewerking <xref ref="add_in_C"/>, die nulvektor <xref ref="zero_in_C" /> en die skalaarvermenigvuldigingsbewerking <xref ref="sm_in_C" /> gegee word, dan is <m>C^\prime</m> <em> nie </em> 'n vektorruimte nie.
         </p>
       </statement>
       <hint>
@@ -316,21 +316,22 @@
     </hint>
     <solution>
       <p>
-      Consider the following two polynomials in <m>C^\prime</m>:
+      Beskou die volgende twee polinome in <m>C^\prime</m>:
       <md>
         <mrow>\ve p(x) = x^4 + x^3, </mrow>
         <mrow> \ve q(x) = -x^4. </mrow>
       </md>
-        However, their sum is not in <m>C^\prime</m> since
+        Let op dat die som <m>p+q</m> nie in <m>C^\prime</m> is nie, want
         <me>
 \ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
       </me>
-      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space.
+      wat graad 3 het. Dus <m>C^\prime</m> is nie geslote onder addisie nie en so dit kan nie 'n vektorruimte wees nie, want die sommeringsbewerking is nie goed-gedefineerd op <m>C'</m> nie.
       </p>
     </solution>
     </exercise>
 
     <exercise xml:id="show_X_is_not_vector_space">
+      <statement>
       <p>Beskou die versameling
         <me>
         X := \{(a_1, a_2) \in \mathbb{R}^2 : a_1 \geq 0, a_2 \geq 0\}
@@ -338,13 +339,17 @@
       toegerus met dieselfde sommeringsbewerking <xref ref="add_in_A" />,
           nulvektor <xref ref="zero_in_A" /> en skalaarvermenigvuldigingsbewerking <xref ref="sm_in_A"/> as in <m>A</m>. Is <m>X</m> 'n vektorruimte? Indien nie, hoekom nie?
         </p>
-              <solution>
+      </statement>
+      <solution>
         <p>
           <m> X </m> is not a vector space since the additive inverse of an element in <m>X</m> may fail to be in <m>X</m>. For example, consider <m>(1,0)</m>. The additive inverse of <m>(1,0)</m> would have to be <m>(-1,0)</m>. However, <m>(-1,0)</m> is certainly <em>not</em> in <m>X</m>. Hence <m>X</m> is not a vector space.
         </p>
       </solution>
     </exercise>
   </exercises>
+
+<solutions divisional="solution answer" />
+
 
 </section>
 

@@ -1,5 +1,3 @@
-
-
 <section xml:id="Ch2Sec3BasisDimension">
   <title>Basis and dimension</title>
   <introduction> 
@@ -317,7 +315,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
             Now let <m>X</m> be an arbitrary finite set.
             Consider the collection of functions
             <me>
-             \basis{B} = \bopen \ve{f}_a : \, a \in X \bclose 
+             \basis{B} = \bopen f_a : \, a \in X \bclose 
             </me>
           </p>
           <p>

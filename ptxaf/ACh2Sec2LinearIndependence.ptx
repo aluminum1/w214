@@ -537,6 +537,25 @@ and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
 
   </exercise>
 
+
+  <exercise xml:id="exercise-span-omission">
+    <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
+    </statement>
+    <solution>
+<p>
+To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <m> \ve v \in V </m> there exist scalars <m> (a_i^{\ve v}) </m> depending on <m>\ve v</m> such that
+<me>
+\sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v
+</me>. But of course, it is also true that 
+<me>
+0 \ve w + \sum_{i=1}^n a_i^{\ve v} \ve v_i = \ve v 
+</me> because <m> 0 \ve w = 0 </m> and so has no effect on the sum. Hence any vector in <m> V </m> is a linear combination of <m>\ve{w}, \ve{v}_1, \ldots, \ve{v}_n </m> which is to say that the set <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m>  spans <m>V</m>.
+</p>
+    </solution>
+  </exercise>
+
+
+
     <exercise>
       <statement>
         <p>
@@ -561,8 +580,45 @@ and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
    -->
     </exercise>
 
+  <exercise>
+    <statement>
+      <p>
+Consider the vector space of functions on the closed unit interval, <m>\Fun ([0,1])</m>. Show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m>\Fun ([0,1])</m>.
+      </p>
+    </statement>
+<!--    <solution>
+<p>
+Given <m> n \in \mathbb N </m>, consider the set of <m> n </m> functions
+<me>
+X = \left \{ f_m \, : \, f_m\left(\frac{1}{m}\right) = 1, f_m(x) = 0 \text{ otherwise} \right\}.
+</me>
+We shall show that this collections is linearly independent. Suppose there is a linear relation on <m>X</m>. In other words, suppose
+<men xml:id="func_01_lin_rel">
+a_1 f_1(x) + a_2 f_2(x) + \cdots + a_n f_n(x) = 0
+</men>
+for all <m> x \in [0,1] </m>. Plug <m>\frac{1}{n}</m> into <xref ref = "func_01_lin_rel"/>. We obtain
+<me>
+\frac{a_n}{n} = 0
+</me>
+and so <m> a_n </m> must be 0. Continue in this fashion, plugging <m>\frac{1}{n-1}</m> into <xref ref = "func_01_lin_rel"/> to conclude <m> a_{n-1} = 0</m> and so forth. Hence all <m>a_i'\text{s}</m> in <xref ref = "func_01_lin_rel"/> must be 0. Thus <m>X</m> is linearly independent.
+</p>
+  </solution>
+-->
+  </exercise>
+
+<exercise>
+  <statement>
+<p>
+  (Bonus) Try adapt the argument in the question above to show that for any <m> n \in \mathbb N </m>, we can find <m>n</m> linear independent vectors in <m> \Cont([0,1])</m>, the vector space of all <emph>continuous</emph> real valued functions on <m>[0,1]</m>.
+</p>
+</statement>
+</exercise>
+
 
 </exercises>
+
+<solutions divisional="solution answer" />
+
 
 </section>
 

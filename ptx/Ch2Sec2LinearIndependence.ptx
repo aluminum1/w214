@@ -509,7 +509,6 @@ and so <m> b = -1 </m>. SHOW THAT THIS IS INCONSISTENT WITH (2,1).
     </solution>
   </exercise>
 
-<!--
   <exercise xml:id="exercise-span-omission">
     <statement> Let <m>\basis{S} = \bopen \ve{v}_1, \ldots, \ve{v}_n \bclose </m> be a list of vectors in a vector space <m>V</m>. Suppose that <m>\basis{S}</m> spans <m>V</m>. Suppose that <m>w</m> is another vector in <m>V</m>. Prove that the list of vectors <m>\basis{S}' = \bopen \ve{w}, \ve{v}_1, \ldots, \ve{v}_n \bclose</m> also spans <m>V</m>.
     </statement>
@@ -525,7 +524,7 @@ To say that <m> \basis S </m> spans <m> V </m> is to say that for every vector <
 </p>
     </solution>
   </exercise>
--->
+
 
   <exercise>
     <statement>
