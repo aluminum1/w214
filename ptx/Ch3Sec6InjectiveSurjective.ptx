@@ -29,7 +29,7 @@
         Let <m>T : V \rightarrow W</m> be a linear map between vector spaces.
         Then:
         <me>
-          \mbox{\(T\) is injective}  \Longleftrightarrow \mbox{\(\Ker(T) = \{\ve{0}_V\}\)} 
+          \mbox{(}T\mbox{ is injective}  \Longleftrightarrow \mbox{(} \Ker(T) = \{\ve{0}_V\} \mbox{)} 
         </me>.
       </p>
     </statement>
@@ -75,7 +75,7 @@
         Let <m>T : V \rightarrow V</m> be a linear operator on a finite-dimensional vector space <m>V</m>.
         Then:
         <me>
-          \mbox{\(T\) is injective}  \Longleftrightarrow \mbox{\(T\) is surjective} 
+          T \mbox{ is injective}  \Longleftrightarrow T \mbox{ is surjective} 
         </me>.
       </p>
     </statement>
@@ -105,7 +105,7 @@
         <mrow>\amp \therefore \Rank(T) = \Dim(V)</mrow>
         <mrow>\amp \therefore \Nullity(T) = 0 \amp \amp  \text{(by Rank-Nullity Theorem)}</mrow>
         <mrow>\amp \therefore \Ker(T) = \{\ve{0}_V\}</mrow>
-        <mrow>\amp \therefore \mbox{\(T\) is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
+        <mrow>\amp \therefore T \mbox{ is injective. }   \amp \amp  (<xref ref="lin-ind-implies-basis"/>)</mrow>
       </md>
     </p>
   </proof>
@@ -128,7 +128,7 @@
       <md>
         <mrow>\mbox{Suppose that }  T(\ve{v}_1) \amp = T(\ve{v}_2).</mrow>
         <mrow>\therefore S(T(\ve{v}_1)) \amp = S(T(\ve{v}_2))</mrow>
-        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(using \(S \circ T = \id_V\))}</mrow>
+        <mrow>\therefore \id_V(\ve{v}_1) \amp = \id_V(\ve{v}_2)  \mbox{(using } S \circ T = \id_V)</mrow>
         <mrow>\therefore \ve{v}_1 \amp = \ve{v}_2</mrow>
       </md>
       which shows that <m>T</m> is injective.
@@ -139,7 +139,7 @@
       Then
       <md>
         <mrow>T(\ve{v}) \amp = T(S(\ve{w}))</mrow>
-        <mrow>\amp = \id_W (\ve{w})  \mbox{(using \(T \circ S = \id_W\))}</mrow>
+        <mrow>\amp = \id_W (\ve{w})  \mbox{(using } T \circ S = \id_W)</mrow>
         <mrow>\amp = \ve{w}</mrow>
       </md>.
     </p>
@@ -157,7 +157,7 @@
       We define the inverse map <m>S</m> as follows:
       <md>
         <mrow>S : W \amp  \rightarrow V</mrow>
-        <mrow>\ve{w} \amp  \mapsto \mbox{the unique \(\ve{v} \in V\) such that \(T(\ve{v}) = \ve{w}\).}</mrow>
+        <mrow>\ve{w} \amp  \mapsto \mbox{the unique } \ve{v} \in V \text{ such that } T(\ve{v}) = \ve{w}.</mrow>
       </md>
     </p>
 
@@ -178,18 +178,15 @@
       <m>T \circ S = \id_W</m> and <m>S \circ T = \id_V</m>.
       We only need to check that <m>S</m> is linear.
     </p>
-
     <p>
       Let <m>\ve{w}_1, \ve{w}_2 \in W</m>.
       Then
       <md>
-        <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  \mbox{(using \(T \circ S = \id_W\))}</mrow>
-        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp  \left(\mbox{
-        setting \(\ve{v}_1 := S(\ve{w}_1)\), \\ 
-        \(\ve{v}_2 := S(\ve{w}_2)\) 
-        }  \right)</mrow>
-        <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  \mbox{(\(T\) is linear)}</mrow>
-        <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
+        <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  \mbox{(using } T \circ S = \id_W \mbox{)}</mrow>
+        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp  \mbox{(
+        setting } \ve{v}_1 := S(\ve{w}_1), \ve{v}_2 := S(\ve{w}_2) \mbox{)}  </mrow>
+        <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  \mbox{(} T \mbox{ is linear)}</mrow>
+        <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp  \mbox{(}S \circ T = \id_V \mbox{)}</mrow>
       </md>
     </p>
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="af-ZA">
 
   <docinfo>
 
@@ -9,7 +9,6 @@
 \usepackage{tkz-graph}
 \usepackage{tkz-euclide}
 \usepackage{amsmath}
-\usepackage{stmaryrd}
 \usetikzlibrary{patterns}
 \usetikzlibrary{positioning}
 \usetikzlibrary{matrix,arrows}
@@ -61,53 +60,49 @@
 
   </docinfo>
 
-  <book>
-    <title>Linear Algebra W214</title>
+  <book xml:id="W214-Lin-Alg-Af">
+    <title>W214 Lineêre Algebra</title>
     <frontmatter>
-
       <titlepage>
-
         <author>
-          <personname> Bruce Bartlett</personname>
+          <personname>Bruce Bartlett</personname>
         </author>
-
       </titlepage>
 
- <xi:include href="./Ch0NoteForStudent.ptx" />
-
+ <xi:include href="./ACh0NoteForStudent.ptx" />
 
     </frontmatter>
 
 
-
-  <xi:include href="./Ch1AbstractVectorSpaces.ptx" /> 
-  <xi:include href="./Ch2FinDimVectorSpaces.ptx" />
+    <xi:include href="./ACh1AbstractVectorSpaces.ptx" />
 
 
 
+    <xi:include href="./ACh2FinDimVectorSpaces.ptx" />
    
 
-  
 
-    <xi:include href="./Ch3LinearMaps.ptx" />
+    <xi:include href="./ACh3LinearMaps.ptx" />
 
-      <xi:include href="./ChTutorials.ptx"/>
-   
+     <xi:include href="./AChTutorials.ptx"/>
+
+    <!--
+
+    <xi:include href="./ACh4EigenvaluesEigenvectors.ptx" />
+
+  -->
+
+    <xi:include href="./AAppAReminderAboutMatrices.ptx" />
+
 <!--
-    <xi:include href="./Ch4EigenvaluesEigenvectors.ptx" />
 
+    <xi:include href="./AAppBHypersurfaces.ptx" />
 
   -->
 
     <backmatter>
-      <xi:include href="./AppAReminderAboutMatrices.ptx" />
-      <xi:include href="./SageExamples.ptx" />
       <xi:include href="./bibliography.ptx" />
     </backmatter>
-
-
-
   </book>
-
 </mathbook>
 

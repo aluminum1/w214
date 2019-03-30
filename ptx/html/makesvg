@@ -1,2 +1,2 @@
- ~/Sync/Work/Teaching/Maths\ 214\ 2019/PreTeXt/dev/script/mbx -vv -c latex-image -f svg -d ./images ~/Sync/Work/Teaching/Maths\ 214\ 2019/Notes/ptx/index.ptx
+ ~/Sync/Work/Teaching/Maths\ 214\ 2019/PreTeXt/dev/script/mbx -vv -c latex-image -f svg -d ./images ~/Sync/Work/Teaching/Maths\ 214\ 2019/Notes/ptx/W214-Lin-Alg.ptx
  

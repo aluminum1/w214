@@ -190,7 +190,7 @@
   </example>
 
   <example xml:id="three_vectors_spanning_R2_example">
-    <title>Checking if a list of vectors space the vector space</title>
+    <title>Checking if a list of vectors spans the vector space</title>
     <statement>
     <p>
       Is <m>\mathbb{R}^2</m> spanned by the following list of vectors?
