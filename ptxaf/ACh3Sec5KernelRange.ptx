@@ -587,9 +587,10 @@
         Met ander woorde,
         <m>(v,w)</m> is in die beeld van <m>T</m> as en slegs as
         die vergelykings
-        <me>
-          \systeme{ a_0 + a_1 + a_2 = v, a_1 + 2a_2 = w}
-        </me>
+        <md>
+          <mrow> a_0 + a_1 + a_2 \amp = v </mrow>
+          <mrow> a_1 + 2a_2 \amp = w  </mrow>
+        </md>
       </p>
 
       <p>
@@ -782,9 +783,7 @@
               Die afbeelding
               <md>
                 <mrow>T : \Poly_3 \amp  \rightarrow \Col_3</mrow>
-                <mrow>p \amp  \mapsto \cvector{p(1)</mrow>
-                <mrow>p(2)</mrow>
-                <mrow>p(3)}</mrow>
+                <mrow>p \amp  \mapsto \begin{bmatrix} p(1) \\ p(2) \\ p(3) \end{bmatrix}</mrow>
               </md>
             </p>
           </li>
@@ -794,9 +793,9 @@
               Die afbeelding
               <md>
                 <mrow>S : \Trig_2 \amp  \rightarrow \Col_2</mrow>
-                <mrow>f \amp  \mapsto \cvector{ \displaystyle \int_0^\pi f(x) \cos x
-                dx</mrow>
-                <mrow>\displaystyle \int_0^\pi f(x) \sin x dx}</mrow>
+                <mrow>f \amp  \mapsto \begin{bmatrix} \int_0^\pi f(x) \cos x
+                dx \\
+                 \int_0^\pi f(x) \sin x dx \end{bmatrix}</mrow>
               </md>
             </p>
           </li>
