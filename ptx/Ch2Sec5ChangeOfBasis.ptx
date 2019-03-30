@@ -71,8 +71,6 @@
       </men>.
     </p>
 
-    
-
     <sidebyside>
       <figure xml:id="w_in_b_basis">
       <caption> <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m></caption>
@@ -539,7 +537,7 @@
 
  </exercises>
 
-<!-- <solutions divisional="solution answer" /> -->
+ <solutions divisional="solution answer" /> 
 
 </section>
 

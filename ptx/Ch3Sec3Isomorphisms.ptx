@@ -518,8 +518,7 @@ Since both <m> V </m> and <m> W </m> are 2 dimensional vector spaces, they are i
         If not, prove that they are not isomorphic.
       </p>
     </statement>
-  </exercise>
-  <solution>
+    <solution>
     <p>
       We use some geometry to find the dimension of <m> V</m>. <m> \ve v \in V  </m> if and only if
       <me>
@@ -546,9 +545,11 @@ is a basis for <m>W</m>. Hence <m> V </m> and <m> W</m> are isomorphic with the 
 </me>
     </p>
   </solution>
+  </exercise>
+  
 </exercises>
 
-<!-- <solutions divisional="solution answer" /> -->
+ <solutions divisional="solution answer" /> 
 
 </section>
 

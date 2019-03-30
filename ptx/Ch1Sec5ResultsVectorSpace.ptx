@@ -291,20 +291,20 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
         <md>
          <mrow>2 \ve x + 6 \ve w  \amp = \ve 0</mrow>
 
-          <mrow>\implies  2 \ve x + 6 \ve w + (-6 \v w )\amp  \ve 0 + (-6\ve w) 
+          <mrow>\implies  2 \ve x + 6 \ve w + (-6 \ve w )\amp  \ve 0 + (-6\ve w) 
            \amp (\text{Existence of Inverses})</mrow>
 
-          <mrow> \implies  2 \ve x + 0  \amp = -6\ve w  \amp (<xref ref = "R3a"/>)</mrow>
+          <mrow> \implies  2 \ve x + 0  \amp = -6\ve w  \amp (<xref ref = "R3a"> R3a </xref>)</mrow>
 
-           <mrow> \implies  2\ve x   \amp = -6\ve w  \amp (<xref ref = "R3b"/>)</mrow>
+           <mrow> \implies  2\ve x   \amp = -6\ve w  \amp (<xref ref = "R3b"> R3b </xref>)</mrow>
 
            <mrow> \implies  (\frac{1}{2})(2 \ve x) \amp = ((\frac{1}{2}))(-6\ve w)  </mrow>
 
-            <mrow> \implies  (\frac{1}{2}2)\ve x  \amp = (-\frac{1}{2}6)\ve w) \amp (<xref ref = "R6"/>)</mrow>
+            <mrow> \implies  (\frac{1}{2}2)\ve x  \amp = (-\frac{1}{2}6)\ve w) \amp (<xref ref = "R6"> R6 </xref>)</mrow>
 
                <mrow>\implies   1 \ve x  \amp  = -3 \ve w  </mrow>
 
-                <mrow>\implies  \ve x   \amp = -3 \ve w  \amp (<xref ref = "R7"/>) </mrow>
+                <mrow>\implies  \ve x   \amp = -3 \ve w  \amp (<xref ref = "R7"> R7 </xref>) </mrow>
                 </md>
 </p>
 </solution>

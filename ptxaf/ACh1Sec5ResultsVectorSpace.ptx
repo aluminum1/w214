@@ -324,7 +324,7 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
         <md>
          <mrow>2 \ve x + 6 \ve w  \amp = \ve 0</mrow>
 
-          <mrow>\implies  2 \ve x + 6 \ve w + (-6 \v w )\amp  \ve 0 + (-6\ve w) 
+          <mrow>\implies  2 \ve x + 6 \ve w + (-6 \ve w )\amp  \ve 0 + (-6\ve w) 
            \amp (\text{Existence of Inverses})</mrow>
 
           <mrow> \implies  2 \ve x + 0  \amp = -6\ve w  \amp (<xref ref = "R3a"/>)</mrow>

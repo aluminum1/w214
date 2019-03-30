@@ -9,7 +9,7 @@
 \usepackage{tkz-graph}
 \usepackage{tkz-euclide}
 \usepackage{amsmath}
-\usepackage{stmaryrd}
+\usepackage{graphicx}
 \usetikzlibrary{patterns}
 \usetikzlibrary{positioning}
 \usetikzlibrary{matrix,arrows}
@@ -40,6 +40,8 @@
 \newcommand{\bopen}{\{\llap{-}}
 \newcommand{\bclose}{\rlap{-}\}}
 \newcommand{\mamp}{&amp;}
+\newcommand{\mapsfrom}{\mathrel{\reflectbox{\ensuremath{\mapsto}}}}
+
 
 
 \DeclareMathOperator{\Fun}{Fun}
@@ -101,7 +103,7 @@
 
     <backmatter>
       <xi:include href="./AppAReminderAboutMatrices.ptx" />
-      <xi:include href="./SageExamples.ptx" />
+      <!--<xi:include href="./SageExamples.ptx" />-->
       <xi:include href="./bibliography.ptx" />
     </backmatter>
 
