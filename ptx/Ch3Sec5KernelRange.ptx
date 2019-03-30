@@ -389,7 +389,7 @@
         with no constraints on the other constants <m>a_1, a_2, b_2</m>.
         In other words,
         <me>
-          \Ker(I) = \left\{ \text{ all trigonometric polynomials of the form  } \\ (a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}), \text{ where } (a_0, a_1, a_2, b_2 \in \mathbb{R}\). \right\}
+          \Ker(I) = \left\{ \text{ all trigonometric polynomials of the form  } \\ (a_0(1 - \frac{\pi}{2} \sin x) + a_1 \cos x + a_2 \cos{2x} + b_2 \sin{2x}), \text{ where } (a_0, a_1, a_2, b_2 \in \mathbb{R}). \right\}
         </me>
       </p>
 
@@ -976,8 +976,7 @@ Both <m>\Ker(T)</m> and <m>\Im(T)</m> are isomorphic to <m>\Col_2</m> and hence 
         is <m>\{ \ve{u} \in \mathbb{R}^3 : \ve{u} \cdot \ve{a} = 0 \}</m>.
       </p>
     </statement>
-  </exercise>
-  <solution>
+     <solution>
     <p>
     <p>
 For reference, we reproduce a portion of the proof in in <xref ref="cross-product-example">Example</xref>:
@@ -1060,9 +1059,11 @@ For reference, we reproduce a portion of the proof in in <xref ref="cross-produc
       </p>
     </p>
   </solution>
+  </exercise>
+ 
 </exercises>
 
-<!-- <solutions divisional="solution answer" /> -->
+ <solutions divisional="solution answer" /> 
 
 </section>
 

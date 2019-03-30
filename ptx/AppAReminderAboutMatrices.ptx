@@ -284,7 +284,6 @@
     </me>.
   </p>
 
-  <exercises>
      <exercise>
     <statement>
       Prove that if <m>A \in \Mat_{2,2}</m> satisfies
@@ -293,13 +292,12 @@ AB = BA
     </me>
     for all <m>B \in \Mat_{2,2}</m>, then <m>A</m> is of the form
     <me>
-      \mat{A} = \left[ \begin{array}{cccc} a \amp 0 \\
-      0 \amp a
-      \end{array}  \right].
+      \mat{A} = \begin{bmatrix} a \mamp 0 \\
+      0 \mamp a
+      \end{bmatrix}  .
     </me>
     </statement>
   </exercise>
-</exercises>
 
 </appendix>
 

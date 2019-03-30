@@ -183,13 +183,11 @@
       Let <m>\ve{w}_1, \ve{w}_2 \in W</m>.
       Then
       <md>
-        <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  \mbox{(using \(T \circ S = \id_W\))}</mrow>
-        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp  \left(\mbox{
-        setting \(\ve{v}_1 := S(\ve{w}_1)\), \\ 
-        \(\ve{v}_2 := S(\ve{w}_2)\) 
-        }  \right)</mrow>
-        <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  \mbox{(\(T\) is linear)}</mrow>
-        <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp  \mbox{(\(S \circ T = \id_V\))}</mrow>
+        <mrow>S( a \ve{w}_1 + b \ve{w}_2) \amp = S\big(a T(S(\ve{w}_1)) + b T(S(\ve{w}_2)) \big) \amp \amp  (\text{using } T \circ S = \id_W )</mrow>
+        <mrow>\amp = S\big( a T(\ve{v}_1) + b T(\ve{v}_2) \big) \amp \amp \left(\text{setting }  \ve{v}_1 := S(\ve{w}_1), 
+        \ve{v}_2 := S(\ve{w}_2)) \right) </mrow>
+        <mrow>\amp = S\big(T(a \ve{v}_1 + b \ve{v}_2)\big) \amp \amp  (T \text{ is linear})</mrow>
+        <mrow>\amp = a \ve{v}_1 + b \ve{v}_2 \amp \amp   ((S \circ T = \id_V)</mrow>
       </md>
     </p>
 
