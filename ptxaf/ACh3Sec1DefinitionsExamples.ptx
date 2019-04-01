@@ -1003,6 +1003,18 @@ I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx 
         betrekking tot die standaard basisse van die twee vektorruimtes.
       </p>
     </statement>
+      <solution>
+      <p>
+<me>
+D(\ve p_0) = D(1) = 0  \\
+D(\ve p_1) = D(x)= 1 = \ve p_0 \\
+D(\ve p_2) = D(x^2) = 2x = 2\ve p_1 \\
+D(\ve p_3) = D(x^3) = 3x^2 = 3\ve p_2 \\
+D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
+</me>
+      </p>
+    </solution>
+
   </exercise>
 
   <exercise>
@@ -1018,16 +1030,18 @@ I(\ve q_3) = \int_{-1}^1 4x^3 - 3x dx = 4\int_{-1}^1 x^3 dx - 3\int_{-1}^1 x dx 
     </statement>
       <solution>
       <p>
-<me>
-D(\ve p_0) = D(1) = 0  \\
-D(\ve p_1) = D(x)= 1 = \ve p_0 \\
-D(\ve p_2) = D(x^2) = 2x = 2\ve p_1 \\
-D(\ve p_3) = D(x^3) = 3x^2 = 3\ve p_2 \\
-D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
-</me>
+        <me>
+        C((1,0,0)) = (1,2,3) \times (1,0,0) = (0,3,-2) \\
+        C((0,1,0)) = (1,2,3) \times (0,1,0) = (-3,0,1) \\
+        C((0,0,1)) = (1,2,3) \times (0,0,1) = (2,-1,0).
+      </me>
       </p>
     </solution>
   </exercise>
 
 </exercises>
+
+ <!-- <solutions divisional="solution answer" />  -->
+
+
 </section>
