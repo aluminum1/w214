@@ -1,5 +1,3 @@
-
-
 <section xml:id="ACh1Sec6Subspaces">
   <title>Deelruimtes</title>
   <introduction>
@@ -960,7 +958,10 @@ U + V  = \{ \ve u + \ve w \in V \, : \, \ve u \in U, \ve w \in W \}
 
 <!-- Translation job ends here -->
 
-
 </exercises>
+
+<solutions divisional="solution answer" />
+
+
 </section>
 

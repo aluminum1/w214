@@ -63,8 +63,8 @@
 
   </docinfo>
 
-  <book>
-    <title>Linear Algebra W214</title>
+  <book xml:id="w214-lin-alg">
+    <title>W214 Linear Algebra</title>
     <frontmatter>
 
       <titlepage>

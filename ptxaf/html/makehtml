@@ -1,2 +1,2 @@
-xsltproc --stringparam html.knowl.example "no" --stringparam html.knowl.exercise.inline "no" --stringparam html.css.file "mathbook-1.css" -xinclude ../../../PreTeXt/dev/xsl/mathbook-html.xsl ../index.ptx 
+xsltproc --stringparam html.knowl.example "no" --stringparam html.knowl.exercise.inline "no" --stringparam html.css.file "mathbook-1.css" -xinclude ../../../PreTeXt/dev/xsl/mathbook-html.xsl ../W214-Lin-Alg-Af.ptx 
 

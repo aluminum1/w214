@@ -1,5 +1,3 @@
-
-
 <section xml:id="ACh2Sec3BasisDimension">
   <title>Basis en dimensie</title>
   <introduction>
@@ -278,10 +276,10 @@
           Dan is
           <m>\Fun(X)</m> eindig-dimensioneel,
           met dimensie <m>|X|</m>, waar die basis gegee
-          word deur die funksies <m>\ve{f}_a</m>,
+          word deur die funksies <m>f_a</m>,
           <m>a \in X</m>, gedefinieer deur:
           <men xml:id="defn_of_basis_of_functions">
-            \ve{f}_a (x) :=  
+            f_a (x) :=  
             \begin{cases} 1 \amp  \mbox{ if }  x = a \\ 0 \amp  \mbox{ andersins}  
             \end{cases}
           </men>
@@ -303,9 +301,9 @@
             <m>a=b</m>, gee die waarde 1.
             As <m>a \neq b</m>, gee die waarde <m>0</m></q>.
             In
-            hierdie taal kan ons die definisie van die funksies <m>\ve{f}_a</m> as
+            hierdie taal kan ons die definisie van die funksies <m>f_a</m> as
             <men>
-              \ve{f}_a (x) := \delta_{ax}
+              f_a (x) := \delta_{ax}
             </men>
             herskryf.
           </p>
@@ -314,49 +312,41 @@
       </statement>
     </example>
 
-<!--
     <exercise>
-      <statement>
-        <p>
-          Veronderstel <m>X = \left\{\mbox{\pmglyph{\HGi}} ,
-          \mbox{\pmglyph{\He}} , \mbox{\pmglyph{\HZxi}} \right\}</m>.
+        <statement>
+          <p>
+            Suppose <m>X = \{a, b, c\}</m>.
 
-          <ol>
-            <li>
-              <p>
-                Evalueer die funksie <m>\ve{f}_{\mbox{\tiny
-                \pmglyph{\HGi}} }</m> vir elke <m>x \in X</m>.
-              </p>
-            </li>
+            <ol>
+              <li>
+                <p>
+                  Evaluate the function <m>f_{b }</m> at each <m>x \in X</m>.
+                </p>
+              </li>
 
-            <li>
-              <p>
-                Wys dat elke funksie <m>\ve{f} \in \Fun(X)</m> as 'n
-                line&#xea;re kombinasie van
-                <m>\ve{f}_{\mbox{\tiny
-                \pmglyph{\HGi}} }</m>, <m>\ve{f}_{\mbox{\tiny \pmglyph{\He}} }</m> en
-                <m>\ve{f}_{\mbox{\tiny \pmglyph{\HZxi}} }</m> geskryf kan word.
-              </p>
-            </li>
-          </ol>
-        </p>
-      </statement>
-    </exercise>
+              <li>
+                <p>
+                  Show that <m>\bopen f_a, f_b, f_c \bclose</m> is a basis for <m>\Fun(X)</m>.
+                </p>
+              </li>
+            </ol>
+          </p>
+        </statement>
+      </exercise>
 
     <exercise>
       <statement>
         <p>
-          Nou, laat <m>X</m> 'n arbitr&#xea;re eindige versameling
+          Nou, laat <m>X</m> 'n arbitrêre eindige versameling
           wees.
           Oorweeg die versameling funksies
           <me>
-            \ve{f}_a, \, a \in X
+             \basis{B} = \bopen f_a : \, a \in X \bclose 
           </me>
         </p>
 
         <p>
-          Wys dat hierdie versameling (i) <m>\Fun(X)</m> span en (ii) line&#xea;r
-          onafhanklik is.
+          Toon aan dat <m>\basis{B}</m> 'n basis vir <m>\Fun(X)</m> is.
         </p>
       </statement>
     </exercise>
@@ -481,7 +471,7 @@
     </men>
     There is no 'standard' basis for <m>W</m>. But, here is one basis (as good as any other):
     <men xml:id="ab_basis_orth_plane">
-    \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{1}{2}).
+    \ve{a} = (1, 0, -\frac{1}{3}), \quad \ve{b} = (0, 1, -\frac{2}{3}).
   </men>
     You will show this is indeed a basis for <m>W</m> in <xref ref="prove_basis_for_ex_hyperplane"/> below. I computed these vectors as follows. To obtain <m>\ve{a}</m>, I simply set <m>w_1 = 1, w_2 = 0</m> and then solved for <m>w_3</m> using Equation <xref ref="eqn_for_W_1"/>. Similarly, for <m>\ve{b}</m>, I simply set <m>w_1 = 0, w_2 = 1</m> and then solved for <m>w_3</m> using <xref ref="eqn_for_W_1"/>.</p>
 
@@ -510,6 +500,110 @@
     </exercise>
 
     </subsection>
+
+    <subsection>
+  <title>Dimension of space of solutions to a homogenous linear differential equation</title>
+  <introduction>
+    <p>We will now compute the dimension of the vector space of solutions to a homogenous linear ordinary differential equation. We will need the following theorem from the theory of differential equations, which we won't prove.
+      </p>
+  </introduction>
+  <theorem xml:id="diff_eqn_exist_unique">
+    <title>Existence and uniqueness of solutions to linear ODE's</title>
+    <statement>Let
+    <men xml:id="diff_eqn_in_thm">
+      y^{(n)} + a_{n-1}(x) y^{(n-1)} + \cdots + a_1(x) y^{(1)} + a_0(x) y == 0
+    </men>
+    be a linear homogenous ordinary differential equation on an interval <m>I</m>, where <m>a_0(x), \cdots, a_{n-1}(x)</m> are continuous on <m>I</m>. Suppose we are given initial conditions
+    <mdn>
+      <mrow xml:id="diff_eqn_thm_ic1"> y(x_0) \amp = c_0 </mrow>
+      <mrow> y^{(1)}(x_0) \amp = c_1 </mrow>
+      <mrow> \vdots  \amp </mrow>
+      <mrow xml:id="diff_eqn_thm_iclast"> y^{(n-1)}(x_0) \amp = c_{n-1} </mrow>
+    </mdn>
+    where <m>x_0 \in I</m> and <m>c_0, \ldots, c_{n-1}</m> are arbitrary constants. Then there exists a unique solution <m>y(x)</m> on <m>I</m> saisfying the differential equation <xref ref="diff_eqn_in_thm"/> and the initial conditions <xref first="diff_eqn_thm_ic1" last="diff_eqn_thm_iclast"/>.
+    </statement>
+  </theorem>
+
+  <example>
+    <title>Application of existence and uniqueness theorem of solutions to ODE</title>
+    <statement><p>Consider the ODE
+    <men>
+      x^2 y^{''} - 3xy^{'} + 5y = 0 \quad \mbox{on } (0, \infty)
+    </men>
+    from <xref ref="first_example_2nd_order_ode"/>. To apply <xref ref="diff_eqn_exist_unique"/>, we first rewrite it in the form
+    <men xml:id="diff_eqn_example_thm">
+      y^{''} - \frac{3}{x} y' + \frac{5}{x^2} y = 0 \quad \mbox{on } (0, \infty).
+    </men>
+    The coefficient functions <m>\frac{3}{x}</m> and <m>\frac{5}{x^2}</m> are continuous on <m>(0, \infty)</m> so we can apply <xref ref="diff_eqn_exist_unique"/>. Choose, say, <m>x_0 = 1</m> and two arbitrary numbers <m>c_0, c_1</m>. Then <xref ref="diff_eqn_exist_unique"/> says that there exists a unique solution <m>y(x)</m> to the differential equation <xref ref="diff_eqn_example_thm"/> satisfying the initial conditions:
+    <mdn>
+      <mrow xml:id="ic1_diff_eqn_ex"> y(1) \amp = c_0 </mrow>
+      <mrow xml:id="ic2_diff_eqn_ex"> y'(1) \amp = c_1 </mrow>
+    </mdn> 
+    Let us verify this in SageMath. First, we ask SageMath to find the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/>:
+    <sage>
+      <input>
+        x = var('x')
+        y = function('y')(x)
+
+        ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+
+        show(desolve(ode, y))
+      </input>
+    </sage>
+    SageMath tells us that the most general solution to the differential equation <xref ref="diff_eqn_example_thm"/> is
+    <men xml:id="gen_soln_formula_ode">
+      y = K_1 x^2 \sin(\log(x)) + K_2 x^2 \cos(\log(x)). 
+    </men>
+    Let us now apply the initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>. We can compute <m>y(1)</m> and <m>y'(1)</m> using the formula for <m>y</m> from <xref ref="gen_soln_formula_ode"/>. So <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/> becomes (check this):
+    <mdn>
+      <mrow xml:id="first_eqn_ks"> K_2 \amp = c_0 </mrow>
+      <mrow xml:id="second_eqn_ks"> K_1 + 2K_2 \amp = c_1 </mrow>
+    </mdn>
+    Equations <xref first="first_eqn_ks" last="second_eqn_ks"/> have a unique solution, namely <m>K_1 = c_1 - 2 c_0, K_2 = c_0</m>. So indeed, for any initial conditions <xref first="ic1_diff_eqn_ex" last="ic2_diff_eqn_ex"/>, the differential equation <xref ref="diff_eqn_example_thm"/> has a unique solution, namely:
+    <me>
+      y = (c_1 - 2 c_0) x^2 \sin (\log(x)) + c_0 x^2\cos(\log(x))
+    </me>
+    For instance, if our initial conditions were
+    <mdn>
+      <mrow> y(1) \amp = 1 </mrow>
+      <mrow> y'(1) \amp = 0 </mrow>
+    </mdn> 
+    then the unique solution is
+    <men xml:id="soln_example_ic">
+      y = -2 x^2 \sin(\log(x)) + x^2 \cos(\log(x)).
+    </men>
+    You can also check this explicitly in SageMath, using the <c>ics=[1,1,0]</c> option of <c>desolve</c> (the first number is the value of <m>x_0</m>, the second number is the value of <m>y(x_0)</m>, and the third number is the value of y'(x_0), etc.):
+    <sage>
+      <input>
+        x = var('x')
+        y = function('y')(x)
+
+        ode = diff(y,x,2) - 3/x * diff(y,x,1) + 5/x^2 * y == 0
+
+        show(desolve(ode, y, ics=[1,1,0]))
+        
+      </input>
+    </sage>
+    SageMath outputs the same solution as in <xref ref="soln_example_ic"/>.
+
+    Similarly, if our initial conditions were
+    <mdn>
+      <mrow xml:id="ic1_diff_eqn_ex_ex"> y(1) \amp = 1 </mrow>
+      <mrow xml:id="ic2_diff_eqn_ex_ex"> y'(1) \amp = 0 </mrow>
+    </mdn> 
+    then the unique solution is
+    <me>
+      y = x^2 \sin(\log (x)).
+    </me>
+  </p>
+  </statement>
+  </example>   
+
+ 
+
+  </subsection>
+
+
 
     <subsection>
       <title>Dimensies van deelruimtes</title>
@@ -713,7 +807,6 @@
           Doen die drie <sq>bevestig self</sq>-bewerkings hierbo.
         </p>
       </statement>
-      <!--
      <solution>
         <p>
         <ol>
@@ -750,7 +843,6 @@
         </ol>
         </p>
     </solution>
-  -->
 
 
     </exercise>
@@ -931,7 +1023,6 @@
         </p>
       </statement>
       <!-- TO DO: Translate the solutions -->
-      <!--
     <solution>
       <p>
         <ol>
@@ -959,7 +1050,6 @@
         </ol>
       </p>
     </solution>
-  -->
 
     </exercise>
 
@@ -1014,7 +1104,6 @@
           Dus <m>\basis{B}</m> moet 'n basis vir <m>V</m> wees.
         </p>
       </statement>
-      <!--
     <solution>
       <p>
       <ol>
@@ -1050,7 +1139,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
       </ol>
       </p>
 </solution>
--->
           </exercise>
 
     <exercise xml:id="checking_matrices_lin_dep">
@@ -1061,14 +1149,12 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
           onafhanklik is.
         </p>
       </statement>
-      <!--
     <solution>
       <p>
         <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
       </p>
     </solution>
-  -->
 
     </exercise>
 
@@ -1119,7 +1205,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
           </ul>
         </p>
       </statement>
-      <!--
     <solution>
       <p>
         <ol>
@@ -1138,7 +1223,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </solution>
-  -->
 
     </exercise>
 
@@ -1174,7 +1258,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
           </ul>
         </p>
       </statement>
-      <!--
       <solution>
 <p>
 <ol>
@@ -1227,7 +1310,6 @@ Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}
 </ol>
   </p>
     </solution>
-  -->
 
     </exercise>
 
@@ -1256,7 +1338,6 @@ Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}
           </ul>
         </p>
       </statement>
-      <!--
     <solution>
 <ol>
 
@@ -1274,25 +1355,21 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
   </li>
 </ol>
     </solution>
-  -->
 
     </exercise>
-  </exercises>
 
-<!--TO DO: Translate these. -->
   <exercise xml:id="ex_basis_no_deg_2">
 <statement >
   <p>
     Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
   </p>
 </statement>
-<!--
 <solution>
 <p>
   The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
 </p>
 </solution>
--->
+
   </exercise>
 
   <exercise>
@@ -1301,13 +1378,21 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
 Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="title">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.) 
       </p>
     </statement>
-<!--    <solution>
+   <solution>
       <p>
         We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
       </p>
     </solution>
--->
+
   </exercise>
+
+  </exercises>
+
+
+
+ <solutions divisional="solution answer" />
+
+
 
 
 </section>

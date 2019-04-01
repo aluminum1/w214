@@ -1,5 +1,3 @@
-
-
 <section xml:id="Ch2Sec4CoordinateVectors">
   <title>Coordinate vectors</title>
   
@@ -640,7 +638,7 @@ Consider the vector <m>\ve{w} = (-2, 4, -2) \in W</m>. Compute <m>[\ve{w}]_{\bas
 
   </exercises>
 
-  <solutions divisional="solution answer" /> 
+<!--  <solutions divisional="solution answer" />  -->
 
 </section>
 

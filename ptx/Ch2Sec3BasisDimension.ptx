@@ -1,5 +1,3 @@
-
-
 <section xml:id="Ch2Sec3BasisDimension">
   <title>Basis and dimension</title>
   <introduction> 
@@ -292,6 +290,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
     <exercise>
         <statement>
           <p>
+            
             Suppose <m>X = \left\{a, b, c\right\}</m>.
 
             <ol>
@@ -317,7 +316,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
             Now let <m>X</m> be an arbitrary finite set.
             Consider the collection of functions
             <me>
-             \basis{B} = \bopen \ve{f}_a : \, a \in X \bclose 
+             \basis{B} = \bopen f_a : \, a \in X \bclose 
             </me>
           </p>
           <p>
@@ -739,7 +738,6 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
             Do the three <sq>check this</sq> calculations above.
           </p>
         </statement>
-        <!--
                 <solution>
         <p>
         <ol>
@@ -776,7 +774,6 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
         </ol>
         </p>
                 </solution>
-        -->
       </exercise>
 
     <p>
@@ -928,7 +925,6 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
         </ol>
       </p>
     </statement>
-    <!--
     <solution>
       <p>
         <ol>
@@ -956,7 +952,6 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
         </ol>
       </p>
     </solution>
-  -->
   </exercise>
 
 
@@ -1005,7 +1000,6 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
         Hence, <m>\basis{B}</m> must be a basis for <m>V</m>.
       </p>
     </statement>
-    <!--
     <solution>
       <p>
       <ol>
@@ -1041,7 +1035,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
       </ol>
       </p>
 </solution>
--->
 
   </exercise>
 
@@ -1052,14 +1045,12 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> is linearly dependent.
       </p>
     </statement>
-    <!--
     <solution>
       <p>
         <m>\Mat_{2,2}</m> has dimension 4 since it is spanned by <m> \ve e_{1,1}, \ve e_{1,2}, \ve e_{2,1}, \ve e_{2,2} </m> where <m> \ve e_{i,j}</m> is the matrix with a <m> 1 </m> in the <m>ij^\text{th} </m> entry and 0's everywhere else. By <xref ref="true_false_span_lin_ind">Exercise</xref>(a), any linearly indepedent list of vectors in  <m>\Mat_{2,2}</m> has length at most 4. Since the list of matrices in
         <m>\Mat_{2,2}</m> in <xref ref="x2_by_2_matrices_lin_dep">Exercise</xref> has length 5, it cannot be linearly independent.
       </p>
     </solution>
-  -->
   </exercise>
 
   <exercise>
@@ -1110,7 +1101,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </statement>
-    <!--
     <solution>
       <p>
         <ol>
@@ -1129,7 +1119,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </solution>
-  -->
   </exercise>
 
   <exercise>
@@ -1158,7 +1147,6 @@ Any linearly independent spanning set is by definition a basis, contradicting ou
         </ol>
       </p>
     </statement>
-    <!--
     <solution>
 <p>
 <ol>
@@ -1211,7 +1199,6 @@ Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}
 </ol>
   </p>
     </solution>
-  -->
   </exercise>
 
   <exercise xml:id="dim_poly_at_2_ex">
@@ -1238,7 +1225,6 @@ Thus <m>\left\{ \ve{u} - \ve{v}, \, \ve{v} - \ve{w}, \, \ve{u} - \ve{w} \right\}
         </ol>
       </p>
     </statement>
-    <!--
     <solution>
 <ol>
 
@@ -1256,7 +1242,6 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
   </li>
 </ol>
     </solution>
-  -->
   </exercise>
 
   <exercise xml:id="ex_basis_no_deg_2">
@@ -1265,13 +1250,11 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
 		Prove or disprove: there exits a basis <m>\bopen p_0, p_1, p_2, p_3 \bclose</m> of <m>\Poly_3 </m> such that none of the polynomials <m> p_0, p_1, p_2, p_3</m> have degree 2.
 	</p>
 </statement>
-<!--
 <solution>
 <p>
 	The basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose </m> works. The check is routine.
 </p>
 </solution>
--->
   </exercise>
 
   <exercise>
@@ -1280,17 +1263,17 @@ Hence <m> a  = c = 0 </m>. Thus all vectors in <m> V </m> are scalar multiples o
 Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m> with <m>U \neq V</m> and <m> W \neq V</m>, then <m>\dim(U + V) = \dim(U) + \dim(V)</m>. (Recall the <xref ref="def_sum_subspace" text="title">definition of the sum of two subspaces</xref> from <xref ref="sum_of_subspaces_is_subspace"/>.) 
   		</p>
   	</statement>
-<!--  	<solution>
+  	<solution>
   		<p>
   			We can disprove the statement with the following counterexample. Let <m> V = \mathbb{R}^3 </m>. Let <m>U</m> be the vector subspace with basis <m>\bopen (1,0,0), (0,1,0) \bclose</m> and let <m>W</m> be the vector subspace with basis <m>\bopen (0,0,1), (0,1,0) \bclose</m>. Clearly <m>\dim U = \dim W = 2 </m> and thus <m> \dim(U) + \dim(V) = 4</m>. But since <m>U + W =  \mathbb{R}^3</m>, <m> \dim (U+V) = \dim \mathbb{R}^3 = 3 </m>.
   		</p>
   	</solution>
--->
   </exercise>
 
   </exercises>
 
- <solutions divisional="solution answer" />
+ <solutions divisional="solution answer">
+ </solutions>
 
 
 </section>

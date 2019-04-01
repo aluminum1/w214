@@ -1,9 +1,7 @@
-
-
 <section xml:id="ACh2Sec5ChangeOfBasis">
   <title>Basisverandering</title>
   <subsection>
-    <title>Ko&#xf6;rdinaatvektore verskil in verskillende basisse</title>
+    <title>Koördinaatvektore verskil in verskillende basisse</title>
     <p>
       Veronderstel dat <m>\basis{B} = \left\{ \ve{b}_1, \ve{b}_2 \right\}</m> en
       <m>\basis{C} = \left\{ \ve{c}_1, \ve{c}_2 \right\}</m> twee verskillende basisse
@@ -58,7 +56,7 @@
 
     <p>
       Met hierdie spesifieke vektor <m>\ve{w}</m>, uit
-      <xref ref="w_in_different_bases">Figuur</xref>(a) sien ons dat in die basis <m>\basis{B}</m>
+      <xref ref="w_in_b_basis"/> sien ons dat in die basis <m>\basis{B}</m>
       het ons
     <men>
         \ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2 \qquad \therefore \, [\ve{w}]_\basis{B} = \left[\begin{array}{c} -3 \\ 2   \end{array}\right] \,
@@ -66,13 +64,14 @@
     </p>
 
     <p>
-      Aan die anderkant, in basis <m>\basis{C}</m> het ons
+      Aan die anderkant, in basis <m>\basis{C}</m> ons sien uit <xref ref="w_in_c_basis"/> dat:
       <men xml:id="correct_exp_w">
         \ve{w} = \ve{c}_1 - 3\ve{c}_2 \qquad \therefore \, [\ve{w}]_\basis{C} = \left[\begin{array}{c} 1 \\ -3   \end{array}\right]
       </men>.
     </p>
+
    <sidebyside>
-      <figure>
+      <figure xml:id="w_in_b_basis">
       <caption> <m>\ve{w} = -3 \ve{b}_1 + 2 \ve{b}_2</m></caption>
 
       <image>
@@ -102,7 +101,7 @@
       </image>
     </figure>
 
-  <figure>
+  <figure xml:id="w_in_c_basis">
     <caption> <m>\ve{w} = \ve{c}_1 - 3 \ve{c}_2</m> </caption>
       <image>
 
@@ -144,10 +143,7 @@
   <subsection>
     <title>Omskakeling van een basis na 'n ander</title>
     <p>
-      Veronderstel nou ons het slegs <m>[\ve{w}]_\basis{B}</m>, die
-      ko&#xf6;rdinaatvektor van <m>\ve{w}</m> in basis <m>\basis{B}</m>.
-      Met ander woorde,
-      veronderstel ons weet net dat
+      Veronderstel nou dat ons die basisse <m>\basis{B}</m> en <m>\basis{C}</m> ken, asook die koördinaatvektor <m>[\ve{w}]_\basis{B}</m> van <m>\ve{w}</m> in die basis <m>\basis{B}</m>,
      <me>
         [\ve{w}]_\basis{B} = \left[ \begin{array}{c} -3 \\ 2 \end{array}\right]
       </me>,
@@ -239,7 +235,7 @@
           Die
           <term>basisomskakelingsmatriks van
           <m>\basis{B}</m> na <m>\basis{C}</m></term> is die
-          <m>n \times n</m>-matriks waarvan die kolomme die ko&#xf6;rdinaatvektore
+          <m>n \times n</m>-matriks <m>P_{\basis{C} \leftarrow \basis{B}}</m> waarvan die kolomme die ko&#xf6;rdinaatvektore
           <m>[\ve{b}_1]_\basis{C}, \ldots, [\ve{b}_n]_\basis{C}</m> is:
           <me>
             \mat{P}_{\basis{C} \leftarrow \basis{B}} := \begin{bmatrix} \left[\begin{array}{c} \, \\ \ve{b}_1 \\ \, \end{array}\right]_\basis{C} &amp; \left[\begin{array}{c} \,\\ \ve{b}_2 \\ \, \end{array}\right]_\basis{C} &amp; \ldots &amp; \left[\begin{array}{c} \, \\ \ve{b}_n \\ \,\end{array}\right]_\basis{C}  \end{bmatrix}\, 
@@ -298,6 +294,16 @@
           Bewys die bostaande formule!
         </p>
       </statement>
+        <solution>
+        <p>
+        We check the <m>i^\text{th}</m> entry of the LHS of <xref ref="column_vector_multiplication"/> using just the definition of matrix multiplation.
+        <me>
+(\text{LHS})_i = (\text C_1)_ia_1 + \ldots + (\text C_n)_ia_n = (\text{RHS})_i
+      </me>
+      and we're done!
+ </p>
+      </solution>
+
     </exercise>
 
     <p>
@@ -452,7 +458,120 @@
         </p>
       </statement>
     </exercise>
-  </exercises>
+  <exercise>
+    <statement><p><xref ref="w_in_b_basis_exc"/> displays a basis <m>\basis{B} = \bopen \ve{b}_1, \ve{b}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{b}_1</m> and <m>\ve{b}_2</m>, and a certain vector <m>\ve{w} \in \mathbb{R}^2</m>. Similarly, <xref ref="w_in_c_basis_exc"/> displays another basis <m>\basis{C} = \bopen \ve{c}_1, \ve{c}_2 \bclose</m> for <m>\mathbb{R}^2</m>, a background of integral linear combinations of <m>\ve{c}_1</m> and <m>\ve{c}_2</m>, and the same vector <m>\ve{w} \in \mathbb{R}^2</m>. </p>
+    <sidebyside>
+      <figure xml:id="w_in_b_basis_exc">
+      <caption>The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{B}</m>. </caption>
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+  \draw[red, dotted] (-3, -9) -- (9, -3);
+  \draw[red, dotted] (-4, -7) -- (8, -1);  
+  \draw[red, dotted] (-5, -5) -- (7, 1);
+  \draw[red, dotted] (-6, -3) -- (6, 3);
+  \draw[red, dotted] (-7, -1) -- (5, 5);
+  \draw[red, dotted] (-8, 1) -- (4, 7);
+  \draw[red, dotted] (-9, 3) -- (3, 9);
+
+  \draw[red, dotted] (-3, -9) -- (-9, 3);
+  \draw[red, dotted] (-1, -8) -- (-7, 4);
+  \draw[red, dotted] (1, -7) -- (-5, 5);
+  \draw[red, dotted] (3, -6) -- (-3, 6);
+  \draw[red, dotted] (5, -5) -- (-1, 7);
+  \draw[red, dotted] (7, -4) -- (1, 8);
+  \draw[red, dotted] (9, -3) -- (3, 9);
+
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);
+  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+    </figure>
+
+  <figure xml:id="w_in_c_basis_exc">
+    <caption>The vector <m>\ve{w}</m> against a background of integral linear combinations of the basis vectors from <m>\basis{C}</m>. </caption>
+      <image>
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+  \draw[blue, dotted] (0, -6) -- (6, 0);
+  \draw[blue, dotted] (-1, -5) -- (5, 1);
+  \draw[blue, dotted] (-2, -4) -- (4, 2);
+  \draw[blue, dotted] (-3, -3) -- (3, 3);
+  \draw[blue, dotted] (-4, -2) -- (2, 4);
+  \draw[blue, dotted] (-5, -1) -- (1, 5);
+  \draw[blue, dotted] (-6, 0) -- (0, 6);
+
+  \draw[blue, dotted] (0, -6) -- (-6, 0);
+  \draw[blue, dotted] (1, -5) -- (-5, 1);
+  \draw[blue, dotted] (2, -4) -- (-4, 2);
+  \draw[blue, dotted] (3, -3) -- (-3, 3);
+  \draw[blue, dotted] (4, -2) -- (-2, 4);
+  \draw[blue, dotted] (5, -1) -- (-1, 5);
+  \draw[blue, dotted] (6, 0) -- (0, 6);
+
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1); 
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
+  \draw[thick, ->] (0,0) -- node[pos=1.2] {\(\ve{w}\)} (3,-1);\end{tikzpicture}]]>
+</latex-image>
+      </image>
+
+    </figure>
+  </sidebyside>
+    <ol>
+      <li xml:id="ch-basis-exercise2">
+        <p> Determine <m>[\ve{w}]_\basis{B}</m>, directly from <xref ref="w_in_b_basis_exc"/>. </p>
+      </li>
+      <li xml:id="ch-basis-exercise3">
+        <p> Determine <m>[\ve{w}]_\basis{C}</m>, directly from <xref ref="w_in_c_basis_exc"/>. </p>
+      </li>
+      <li xml:id="ch-basis-exercise1"> <p>The following figure displays the <m>\basis{B}</m> basis against a background of integral linear combinations of the <m>\basis{C}</m> basis:
+
+    <sidebyside>
+    <image width="60%">
+
+<latex-image>
+          <![CDATA[\begin{tikzpicture}[scale=0.5]
+
+  \draw[blue, dotted] (0, -6) -- (6, 0);
+  \draw[blue, dotted] (-1, -5) -- (5, 1);
+  \draw[blue, dotted] (-2, -4) -- (4, 2);
+  \draw[blue, dotted] (-3, -3) -- (3, 3);
+  \draw[blue, dotted] (-4, -2) -- (2, 4);
+  \draw[blue, dotted] (-5, -1) -- (1, 5);
+  \draw[blue, dotted] (-6, 0) -- (0, 6);
+
+  \draw[blue, dotted] (0, -6) -- (-6, 0);
+  \draw[blue, dotted] (1, -5) -- (-5, 1);
+  \draw[blue, dotted] (2, -4) -- (-4, 2);
+  \draw[blue, dotted] (3, -3) -- (-3, 3);
+  \draw[blue, dotted] (4, -2) -- (-2, 4);
+  \draw[blue, dotted] (5, -1) -- (-1, 5);
+  \draw[blue, dotted] (6, 0) -- (0, 6);
+
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_1\)} (1,1); 
+  \draw[very thick, blue, ->] (0,0) -- node[pos=1.6] {\(\ve{c}_2\)} (-1,1);
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_1\)} (2,1); 
+  \draw[very thick, red, ->] (0,0) -- node[pos=1.3] {\(\ve{b}_2\)} (-1,2);\end{tikzpicture}]]>
+</latex-image>
+    </image>
+  </sidebyside>
+        Determine the change-of-basis matrix <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}</m>. (You may assume that all coefficients are either integers and half-integers.)</p>
+      </li>
+      <li> Multiply the matrix you computed in <xref ref="ch-basis-exercise1" text="title">(c)</xref> with the column vector you computed in <xref ref="ch-basis-exercise2" text="title">(a)</xref>. That is, compute the product <m>\mat{P}_{\basis{C} \leftarrow \basis{B}} [\mat{w}]_{\basis{B}}</m>. Is your answer the same as what you obtained in <xref ref="ch-basis-exercise3" text="title">(b)</xref>?
+    </li>
+    </ol>
+    </statement>
+  </exercise>
+
+
+
+ </exercises>
+
+<!-- <solutions divisional="solution answer" /> -->
+
 
 </section>
 

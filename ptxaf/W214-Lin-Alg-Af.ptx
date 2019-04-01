@@ -62,8 +62,8 @@
 
   </docinfo>
 
-  <book>
-    <title>Lineêre Algebra W214</title>
+  <book xml:id="W214-Lin-Alg-Af">
+    <title>W214 Lineêre Algebra</title>
     <frontmatter>
       <titlepage>
         <author>

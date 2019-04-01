@@ -1,2 +1,2 @@
-xsltproc -xinclude ../../../PreTeXt/dev/xsl/mathbook-latex.xsl ../index.ptx 
+xsltproc --stringparam exercise.divisional.solution "no" -xinclude ../../../PreTeXt/dev/xsl/mathbook-latex.xsl ../W214-Lin-Alg-Af.ptx 
 

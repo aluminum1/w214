@@ -225,7 +225,7 @@
  
   <exercises>
 
-  <exercise>
+  <exercise xml:id="minus_minus_v_equals_v">
     <statement>
       <p>
         Bewys dat, vir alle vektore <m>v</m> in 'n vektorruimte,
@@ -428,8 +428,11 @@ k \smul \ve{0} = k \smul \ve 0 + k \smul 0.
   </exercisegroup>
 
 <!-- Translate to Afrikaans: end -->
-  
 
 </exercises>
+
+<solutions divisional="solution answer" />
+
+
 </section>
 

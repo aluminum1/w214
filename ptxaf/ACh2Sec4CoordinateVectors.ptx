@@ -1,7 +1,5 @@
-
-
 <section xml:id="ACh2Sec4CoordinateVectors">
-  <title>Ko&#xf6;rdinaatvektore</title>
+  <title>Koördinaatvektore</title>
 
  <p>
       Daar is 'n meer direkte manier om oor 'n basis te dink.
@@ -292,11 +290,20 @@
       <p>
         Met die sommeringsformules vir <m>\sin</m> en <m>\cos</m> soos
         in <xref ref="trig_ex_early">Oefening</xref> bereken ons
-        <me>
-          \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x -
-          \frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x
-        </me>.
+        <men xml:id="expansion_of_nasty_trig">
+          \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{3}{4} \cos x - \frac{1}{2} \cos 2x - \frac{1}{4} \cos 3x
+        </men>.
       </p>
+      <p>We could also do this in SageMath as follows:</p>
+      <sage>
+        <input>
+          x=var('x')
+
+          f = sin(x)^2 - cos(x)^3
+
+          show(f.reduce_trig())
+        </input>
+      </sage>
 
       <p>
         Gevolglik
@@ -311,9 +318,36 @@
   <exercise>
     <statement>
       <p>
-        Bevestig hierdie berekeninge!
+        Bevestig die uitbreiding <xref ref="expansion_of_nasty_trig"/> met die hand.
       </p>
     </statement>
+        <solution>
+          <p>
+          <me>
+          \cos 2x = 1 - 2\sin^2x \implies \sin^2x = \frac{1}{2} - \frac{1}{2}\cos 2x
+          </me>
+          <me>
+          \cos^3 x = \cos x \cos^2 x = \cos x (1 - \sin^2 x) = \cos x(\frac{1}{2} + \frac{1}{2}\cos 2x) \\
+           = \frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x
+          </me>
+          <me>
+          \cos x \cos 2x = \cos 3x + \sin x \sin 2x = \cos 3x + 2 \sin^2 x \cos x \\
+          = \cos 3x + (1 - \cos 2x) \cos x = \cos 3x + \cos x - \cos 2x \cos x \\
+          \implies \cos x \cos 2x = \frac{1}{2}\cos 3x + \frac{1}{2}\cos x
+          </me>
+          Thus
+          <me>
+            \sin^2 x - \cos^3 x = \frac{1}{2} - \frac{1}{2}\cos 2x - (\frac{1}{2}\cos x + \frac{1}{2}\cos x \cos 2x) \\
+            = \frac{1}{2} - \frac{1}{2}\cos 2x - \frac{1}{2}\cos x -  \frac{1}{2}(\frac{1}{2}\cos 3x + \frac{1}{2}\cos x) \\
+            = \frac{1}{2} -\frac{3}{4}\cos x - \frac{1}{2}\cos 2x - \frac{1}{4}\cos 3x.
+          </me>
+
+
+          </p>
+
+        </solution>
+
+
   </exercise>
 
   <lemma xml:id="lin_of_coord_vectors">
@@ -384,6 +418,30 @@
         'n vektorruimte.
       </p>
     </statement>
+      <solution>
+      <p>
+     As before, suppose that 
+      <md>
+        <mrow>\ve{v} \amp = a_1 \ve{e}_1 + a_2 </mrow>.
+      </md>
+      Which gives 
+      <me> 
+      [\ve v]_{\basis B} =\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right].
+    </me>
+    Then 
+      <md>
+<mrow> k\ve v \amp = k(a_1 \ve e_1 + a_2 \ve e_2) </mrow>
+<mrow> \amp = k(a_1 \ve e_1) + k(a_2 \ve e_2) \amp (<xref ref="R4">R4</xref>)</mrow>
+<mrow> \amp = (ka_1)\ve e_1 + (ka_2) \ve e_2 \amp  (<xref ref="R6">R6</xref>)</mrow>
+      </md>
+      Reading off the coefficients, we obtain
+      <me>
+k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c} ka_1  \\  ka_2 \end{array}\right],
+    </me>
+    as desired.
+    </p>
+    </solution>
+
   </exercise>
 
   <exercise xml:id="matrix_basis_exercise">
@@ -421,40 +479,188 @@
         </me>
       </p>
     </statement>
+    <solution>
+      <p>
+To determine  <m>[\mat{A}]_\basis{B}</m>, we must find the scalars <m>a_1 , a_2 , a_3, a_4 </m> satisfying
+<me>
+a_1 \mat{B_1} + a_2\mat{B_2} + a_3\mat{B_3} + a_4\mat{B_4} = \mat A.
+</me>
+This results in a system of 4 linear equations in 4 variables, one equation for each entry in <m>\mat A </m>:
+<md>
+<mrow>a_1 + a_2 + a_3 = 1 </mrow>
+<mrow> a_3 + a_4 = 2 </mrow>
+<mrow> a_3 - a_4 = 3 </mrow>
+<mrow> a_1 - a_2 + a_3 = 4</mrow>
+</md>
+Solving this equation, we get
+<me>
+a_1  = 0, \quad
+a_2  = -\frac{3}{2}, \quad
+a_3  = \frac{5}{2}, \quad
+a_4  = -\frac{1}{2}.
+</me>
+Hence <me>
+[\mat{A}]_\basis{B} = \begin{bmatrix} 0 \\ -\frac{3}{2} \\ \frac{5}{2} \\ -\frac{1}{2} \end{bmatrix}
+</me>
+      </p>
+    </solution>
+
   </exercise>
 
   <exercise>
     <statement>
-      <p>
-        In <xref ref="dim_poly_at_2_ex">Oefening</xref> is jy gevra om 'n basis
-        <m>\basis{B}</m> vir die vektorruimte
-        <me>
-          V := \{ p \in \Poly_2 : p(2) = 0 \}
-        </me>
-        te bepaal.
-        Beskou <m>p(x) = x^2 + x - 6</m>.
-
-        <ul>
+        <ol>
           <li>
             <title>(a)</title>
-            <p>
-              Toon aan dat <m>p \in V</m>.
-            </p>
+            <p>Find a basis <m>\basis{B}</m> for the vector space
+        <me>
+          V := \{ p \in \Poly_2 : p(2) = 0 \}
+        </me>.
+      </p>
           </li>
-
           <li>
             <title>(b)</title>
             <p>
-              Bereken die ko&#xf6;rdinaatvektor van <m>p</m> met betrekking
-              tot jou basis <m>\basis{B}</m>.
-              Met ander woorde, bereken
-              <m>[p]_\basis{B}</m>.
+               Consider <m>p(x) = x^2 + x - 6</m>. Show that <m>p \in V</m>.
             </p>
           </li>
-        </ul>
+
+          <li>
+            <title>(c)</title>
+            <p>
+              Determine the coordinate vector of <m>p</m> with respect to your basis <m>\basis{B}</m>,
+              i.e. determine <m>[p]_\basis{B}</m>.
+            </p>
+          </li>
+        </ol>
+    </statement>
+   <solution>
+<p>
+<ol>
+
+<li>
+<p>
+<me>
+p(x) = x^2 + x -6 = (x+3)(x - 2)
+</me>
+and so <m> p(2) = </m> and hence <m> p \in V </m>.
+</p>
+</li>
+
+<li>
+Recall that <m> \basis B = \bopen x-2 , x(x-2) \bclose </m>.
+<me>
+p(x) = x^2 + x -6 = (x+3)(x - 2) =  3(x-2) + x(x-2) 
+</me>
+and so 
+<me>
+[p]_\basis{B} = \begin{bmatrix} 3  \\ 1 \end{bmatrix}.
+</me>
+</li>
+</ol>
+</p>
+   </solution>
+ </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Find the coordinate representation of <m>\ve p(x) = 3x^3 - 7x + 1 </m> with respect to your basis in <xref ref="ex_basis_no_deg_2">Exercise </xref>.
       </p>
     </statement>
+    <solution>
+      <p>
+        We shall use the basis <m>\basis B = \bopen x^3, x^3 + x^2, x,1 \bclose</m>. Since <m> \ve p(x) </m> has no degree 2 term, we know immediately that 
+        <me>
+        \ve p(x) = ax^3 + 0(x^3 + x^2) + cx + d.
+      </me>
+      Reading off the rest of the coefficients, we see that <m> a =3, c = -7, d = 1 </m>.
+      Hence
+      <me>
+[p]_\basis{B} = \begin{bmatrix} 3 \\ 0 \\-7 \\1\end{bmatrix}.
+    </me>
+      </p>
+    </solution>
   </exercise>
+
+<exercise>
+  <statement> <p>Consider the vector space <m>W</m> from <xref ref="dimension_of_hyperplane"/>,
+  <me>
+  W = \{ (w_1, w_2, w_3) \in \mathbb{R}^3 : w_1 + 2w_2 + 3w_3 = 0 \},
+</me>
+and the following bases for <m>W</m>:
+<me>
+ \basis{B} = \bopen \ve{a}, \ve{b} \bclose, \quad  \basis{C} = \bopen \ve{u}, \ve{v} \bclose
+</me>
+where
+<md>
+ <mrow> \ve{a} \amp = (1, 0, -\frac{1}{3}), \amp \ve{b} \amp = (0, 1, - \frac{2}{3}) </mrow>
+ <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
+</md>
+Consider the vector <m>\ve{w} = (-2, 4, -2) \in W</m>. Compute <m>[\ve{w}]_{\basis{B}}</m> and <m>[\ve{w}]_{\basis{C}}</m>.
+</p>
+</statement>
+</exercise>
+
+    <exercise>
+    <statement>
+      <p>Let <m>V</m> be the vector space of solutions to the differential equation
+      <men xml:id="diff_eqn_exerc_1">
+        y^{''} + y = 0.
+      </men>
+      </p>
+      <ol>
+        <li> <p> Show that <m>\basis{B} = \bopen \cos x, \, \sin x \bclose </m> is a basis for <m>V</m>. </p> </li>
+        <li> <p> Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_1"/> satisfying
+        <me>
+        y(\frac{\pi}{6}) = 1, \quad y'(\frac{\pi}{6}) = 0.
+      </me>
+      (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
+    </li>
+    <li> <p>Let <m>z(x) = \cos\left(x - \frac{\pi}{3} \right)</m>.</p>
+      <ol>
+        <li>Show that <m>z \in V</m> by checking that it solves the differential equation <xref ref="diff_eqn_exerc_1"/>.</li>
+        <li>Determine <m>[z]_{\basis{B}}</m>. </li>
+
+      </ol>
+
+    </li>
+      </ol>
+    </statement>
+    </exercise>
+
+    <exercise>
+    <statement>
+      <p>Let <m>V</m> be the vector space of solutions to the differential equation
+      <men xml:id="diff_eqn_exerc_2">
+        (1-x^2)y^{''} - xy' + 4y = 0, \quad x \in (-1, 1).
+      </men>
+      </p>
+      <ol>
+        <li> <p> Show that <m>y_1</m> and <m>y_2</m> are elements of <m>V</m>, where
+        <me>
+        y_1(x) = 2x^2 - 1, \quad y_2(x) = x\sqrt{1-x^2}.
+      </me>
+      </p>
+      </li>
+      <li> Show that <m>\basis{B} = \bopen \ve{y}_1, \ve{y}_2 \bclose </m> is a basis for <m>V</m>.
+      </li>
+        <li> <p> Let <m>y \in V</m> be defined as the unique solution to the differential equation in <xref ref="diff_eqn_exerc_2"/> satisfying
+        <me>
+        y(\frac{1}{2}) = 1, \quad y'(\frac{1}{2}) = 0.
+      </me>
+      (Note that we can indeed define <m>y</m> uniquely in this way due to <xref ref="diff_eqn_exist_unique"/>.) Compute <m>[y]_\basis{B}</m>. </p>
+    </li>
+      </ol>
+    </statement>
+    </exercise>
+
+
+
 </exercises>
+
+<!--  <solutions divisional="solution answer" /> -->
+
+
 </section>
 

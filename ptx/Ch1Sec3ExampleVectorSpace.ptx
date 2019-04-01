@@ -1,5 +1,3 @@
-
-
 <section xmlns:xi="http://www.w3.org/2001/XInclude" xml:id="Ch1Sec3ExampleVectorSpace">
   <title>First example of a vector space</title>
   <introduction>
@@ -277,7 +275,7 @@
         <me>
 \ve p(x) + \ve q(X) = (1 - 1 )x^4 + x^3 = x^3
       </me>
-      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space.
+      which has degree 3. Hence <m>C^\prime</m> is not closed under addition and so cannot be a vector space, as the addition operation is not well-defined on <m>C'</m>.
       </p>
     </solution>
     </exercise>

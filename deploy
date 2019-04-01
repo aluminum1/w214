@@ -1,0 +1,6 @@
+rsync -av --exclude makehtml --exclude makesvg ptx/html/ math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/html/
+rsync -av ptx/latex/w214-lin-alg.pdf math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/pdf/
+rsync -av --exclude makehtml --exclude makesvg ptxaf/html/ math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/htmlaf/
+rsync -av ptxaf/latex/w214-lin-alg-af.pdf math@math.sun.ac.za:/home/math/public_html/bbartlett/w214-lin-alg/pdfaf/
+
+
