@@ -5,6 +5,11 @@
       There is a more direct way to think about a basis of a vector space.
     </p>
 
+    <figure>
+        <caption>Video recording for <xref ref="prop_bases_give_coordinates"/> and proof.</caption>
+        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ThmBasesGiveCoordinates.mp4" width="70%" />
+    </figure>
+
     <proposition xml:id="prop_bases_give_coordinates">
       <title>Bases give coordinates</title>
       <statement>
@@ -163,8 +168,14 @@
     </p>
   </assemblage>
 
-  <example>
+  <example xml:id="coord_vector_poly_example">
+
     <statement>
+    <figure>
+        <caption>Video recording for <xref ref="coord_vector_poly_example"/>.</caption>
+        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ExamplePoly.mp4" width="70%" />
+    </figure>
+
       <p>
         Find the coordinate vector of
         <m>\ve{p} = 2x^2 - 2x + 3</m> with respect to the basis <m>\basis{B} = \left\{ 1+x, x^2 + x -1, x^2 + x + 1\right\}</m> of <m>\Poly_3</m>. 
@@ -267,8 +278,13 @@
 
   </figure>
 
-  <example>
+  <example xml:id="coord_vector_trig_poly_example">   
     <statement>
+     <figure>
+        <caption>Video recording for <xref ref="coord_vector_trig_poly_example"/>.</caption>
+        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ExampleTrigPoly.mp4" width="70%" />
+    </figure>
+
       <p>
         Find the coordinate vector of the function <m>\ve{f}</m> given by
         <me>

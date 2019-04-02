@@ -885,7 +885,7 @@ Then we compute the dimensions of the vector spaces we have introduced up to now
     </example>
   </subsection>
 
-  <exercises>
+  <exercises xml:id="ch2sec3exercises">
 
 <exercise xml:id="exercise_for_new_basis">
     <statement>
@@ -1271,8 +1271,10 @@ Prove or disprove: if <m>U</m> and <m> W </m> are distinct subspaces of <m>V</m>
 
   </exercises>
 
+
  <solutions divisional="solution answer">
- </solutions>
+</solutions>
+ 
 
 
 </section>
