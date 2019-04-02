@@ -931,6 +931,62 @@ D(\ve p_4) = D(x^4) = 4x^3 = 4 \ve p_3.
       </p>
     </solution>
   </exercise>
+
+  <exercise>
+    <statement>
+      <p>
+        Prove that if <m>V</m> is a finite dimensional vector space then the set of all linear maps from <m>V</m> to <m>\mathbb R</m>,<m>\mathcal L (V,\mathbb R)</m>, is itself a vector space. Since we already know that the set of all real valued functions from <m> V </m> to <m>\mathbb R</m> forms a vector space, you will only have to show that <m>\mathcal L (V,\mathbb R)</m> contains the function <m>\ve 0</m>, and is closed under both addition and scalar multiplication. 
+      </p>
+          </statement>
+      <solution>
+        <p>
+          For all <m>\ve v,\ve w \in  V</m>, for all <m>S, T \in \mathcal L (V,\mathbb R)</m> and for all <m>a , b \in \mathbb R</m>:
+        <ol>
+          <li>
+            <p>
+              <me>
+              \ve 0(\ve v + \ve w) = 0 = \ve 0\ve v + \ve 0\ve w \\
+              0(a\ve v) = 0 = a \ve 0 \\
+            </me>
+            and hence <m> \ve 0 \in \mathcal L (V,\mathbb R)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+              (a S)(\ve v + \ve W) = a(S (\ve v + \ve w )) = a(S \ve v+ S\ve w) = (a S)\ve v + (a S) \ve w\\
+              (a S)(b \ve v) = (ab) S \ve v = b( a S \ve v) \\
+            </me>
+            and hence <m> a S \in \mathcal L (V,\mathbb R)</m>.
+            </p>
+          </li>
+
+          <li>
+            <p>
+              <me>
+              (S + T)(\ve v + \ve w) = S(\ve v+ \ve w) + T(\ve v + \ve w) \\
+              = S\ve v + S \ve w + T \ve v + T \ve w  = (S + T)\ve v + (S + T)\ve w \\
+              (S + T)(a \ve v) = S (a \ve v) + T(a \ve w ) = aS\ve v+  aT \ve w = a(S+T)\ve v
+            </me>
+            and hence <m> S + T  \in \mathcal L (V,\mathbb R)</m>.
+            </p>
+          </li>
+
+        </ol>
+      </p>
+
+      </solution>
+
+      <exercise>
+        <statement>
+          If <m>V </m> is a finite dimensional vector space, find a basis for <m> \mathcal L(V , \mathbb R) </m>.
+        </statement>
+      </exercise>
+
+
+
+  </exercise>
   </exercises>
 
  <!-- <solutions divisional="solution answer" />  -->
