@@ -603,8 +603,37 @@ Beskou die vektor <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>.
   <li>Bereken <m>[\ve{w}]_{\basis{B}}</m>.</li>
   <li>Bereken <m>[\ve{w}]_{\basis{C}}</m>. </li>
  </ol>
-</p></p>
+</p>
 </statement>
+<!--
+<solution>
+<p>
+  <ol>
+  <li> The equation <m>-2 + 2(4) - 3(2) = 0</m> holds and so <m> \ve w \in W</m>. </li>
+  <li> Since only <m>\ve b</m> has non-zero second coordinate, we see that the coefficient of <m>\ve b</m> term must be <m>4</m>. That is
+<me>
+(2,4,2) = s\ve a + 4\ve b
+</me>
+for some <m>s \in \mathbb R</m>. By considering only the first coordinate of <m>s\ve a + 2\ve b</m>, we find that <m>s = -2 </m>. Thus
+<me>
+[\ve{w}]_{\basis{B}} = \begin{bmatrix} 2\\ 4 \end{bmatrix}.
+</me>
+</li>
+  <li>We use a similar approach to the previous question. Since only the thirds coordinate of <m>\ve u</m> is non-zero, the coefficeint of the <m> \ve u </m> term must be <m>\frac{6}{5}</m>. That is 
+  <me>
+(2,4,2) = \frac{6}{5}\ve u + t\ve v
+</me> for some <m>t \in \mathbb R</m>. By looking at the second coordinate, we must have that 
+<me>
+2s + \frac{12}{5} = 4.
+</me> Solving for <m> s</m> we find that <m>s \frac{4}{5}.</m>. Hence
+<me>
+[\ve{w}]_{\basis{C}} = \begin{bmatrix} \frac{6}{5}\\ \frac{4}{5} \end{bmatrix}.
+</me>
+</li>
+</ol>
+</p>
+</solution>
+-->
 </exercise>
 
     <exercise>

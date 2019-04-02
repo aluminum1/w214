@@ -566,6 +566,35 @@
     </statement>
   </exercise>
 
+<exercise>
+  <statement>
+    Consider the following three bases for <m>\mathbb R^3</m>:
+    <md>
+    <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
+      <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
+     <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>.
+    </md>
+    Compute <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> and verify the equation
+    <me>
+\mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
+  </me>
+  </statement>
+</exercise>
+
+<exercise>
+  <statement>
+    Consider the following three bases for <m>\mathbb R^3</m>:
+    <md>
+    <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
+      <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
+     <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>.
+    </md>
+    Compute <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> and verify the equation
+    <me>
+\mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
+  </me>
+  </statement>
+</exercise>
 
 
  </exercises>
