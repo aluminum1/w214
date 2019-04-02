@@ -446,7 +446,7 @@ k\left[\begin{array}{c} a_1  \\  a_2 \end{array}\right] = \left[\begin{array}{c}
   <exercise xml:id="matrix_basis_exercise">
     <statement>
       <p>
-        Let <m>\basis{B}</m> be the basis of <m>\Mat_{2,2}</m> given by
+        Let <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose </m> be the basis of <m>\Mat_{2,2}</m> given by
         <me>
  \mat{B}_1 = \begin{bmatrix}
 1 &amp; 0 \\
@@ -594,7 +594,12 @@ where
  <mrow> \ve{a} \amp = (1, 0, -\frac{1}{3}), \amp \ve{b} \amp = (0, 1, - \frac{2}{3}) </mrow>
  <mrow> \ve{u} \amp = (1, 2, -\frac{5}{3}), \amp \ve{v} \amp = (-4, 2, 0) </mrow>
 </md>
-Consider the vector <m>\ve{w} = (-2, 4, -2) \in W</m>. Compute <m>[\ve{w}]_{\basis{B}}</m> and <m>[\ve{w}]_{\basis{C}}</m>.
+Consider the vector <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>. 
+ <ol>
+  <li>Show that <m>\ve{w} \in W</m>. </li>
+  <li>Determine <m>[\ve{w}]_{\basis{B}}</m>.</li>
+  <li>Determine <m>[\ve{w}]_{\basis{C}}</m>. </li>
+ </ol>
 </p>
 </statement>
 </exercise>
