@@ -7,7 +7,7 @@
 
     <figure>
         <caption>Video recording for <xref ref="prop_bases_give_coordinates"/> and proof.</caption>
-        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ThmBasesGiveCoordinates.mp4" width="70%" />
+        <video source="https://learn.sun.ac.za/pluginfile.php/1653776/mod_folder/content/0/Lec14ThmBasesGiveCoordinates.mp4" width="70%" onerror="this.src='Default.jpg'" />
     </figure>
 
     <proposition xml:id="prop_bases_give_coordinates">

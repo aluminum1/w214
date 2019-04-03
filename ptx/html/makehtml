@@ -1,1 +1,1 @@
-xsltproc --stringparam html.knowl.example "no" --stringparam html.knowl.exercise.inline "no" --stringparam html.css.file "mathbook-1.css" --stringparam exercise.divisional.solution "no" -xinclude ../../../PreTeXt/dev/xsl/mathbook-html.xsl ../W214-Lin-Alg.ptx 
+xsltproc --stringparam html.knowl.example "no" --stringparam html.knowl.exercise.inline "no" --stringparam html.css.file "mathbook-1.css" --stringparam exercise.divisional.solution "no" -xinclude ../../../PreTeXt/mathbook/xsl/mathbook-html.xsl ../W214-Lin-Alg.ptx 

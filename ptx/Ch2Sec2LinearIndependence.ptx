@@ -354,7 +354,7 @@ We have a system of consistent homogenous linear equations so we know there exis
 
 
 
-  <exercises>
+  <exercises xml:id="ch2sec2exercises"> 
   <exercise>
     <statement>
       <p>
