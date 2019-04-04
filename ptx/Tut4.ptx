@@ -15,7 +15,7 @@
   <exercise xml:id="matrix_basis_exercise">
     <statement>
       <p>
-        Let <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose</m> be the basis of <m>\Mat_{2,2}</m> given by
+        Let <m>\basis{B} = \bopen \mat{B}_1, \mat{B}_2, \mat{B}_3, \mat{B}_4 \bclose </m> be the basis of <m>\Mat_{2,2}</m> given by
         <me>
  \mat{B}_1 = \begin{bmatrix}
 1 &amp; 0 \\

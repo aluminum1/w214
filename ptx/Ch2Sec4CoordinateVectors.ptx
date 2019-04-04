@@ -278,6 +278,46 @@
 
   </figure>
 
+                <figure>
+                    <caption>GeoGebra: modified material ID</caption>
+                    <interactive xml:id="geogebra-train-distance" platform="geogebra" width="75%" aspect="2:1">
+                        <slate xml:id="train-distance" surface="geogebra" material="D4s2v4ft" aspect="2:1">
+                            setAxisSteps(1, 1, 5, 1);
+                            setCoordSystem(-0.7, 8, -6, 56);
+                            enableShiftDragZoom(false);
+                        </slate>
+                    </interactive>
+                </figure>
+
+
+  <example xml:id="geogebra_basis_coordinates_example">
+
+  <figure>
+      <caption>GeoGebra: Computing the coordinate vector of <m>\ve{v}</m> in the basis <m>\basis{B}</m>.</caption>
+      <interactive xml:id="geogebra-basis" platform="geogebra" width="75%">
+          <slate xml:id="geogebra-basis-slate" surface="geogebra" material="tpdmz8kj">
+              enableShiftDragZoom(true);
+              showAlgebraInput(false);
+          </slate>
+      </interactive>
+  </figure>
+
+                <figure>
+                    <caption>GeoGebra: modified material ID</caption>
+                    <interactive xml:id="geogebra-train-distance2" platform="geogebra" width="75%" aspect="2:1">
+                        <slate xml:id="train-distance2" surface="geogebra" material="D4s2v4ft" aspect="2:1">
+                            setAxisSteps(1, 1, 5, 1);
+                            setCoordSystem(-0.7, 8, -6, 56);
+                            enableShiftDragZoom(true);
+                        </slate>
+                    </interactive>
+                </figure>
+
+
+  </example>
+
+
+
   <example xml:id="coord_vector_trig_poly_example">   
     <statement>
      <figure>
