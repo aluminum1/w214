@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
-<mathbook xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="af-ZA">
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="af-ZA">
 
   <docinfo>
 
@@ -106,5 +106,5 @@
       <xi:include href="./bibliography.ptx" />
     </backmatter>
   </book>
-</mathbook>
+</pretext>
 

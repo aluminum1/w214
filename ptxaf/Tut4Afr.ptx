@@ -6,8 +6,6 @@
 
 <exercises>
 
-<assemblage><title>2.3 Basis en Dimensie</title>
-</assemblage>
 
 <assemblage><title>2.4 Koördinaatevektore</title>
 </assemblage>
@@ -299,6 +297,21 @@ Beskou die vektor <m>\ve{w} = (-2, 4, -2) \in \mathbb{R}^3</m>.
     </statement>
   </exercise>
 
+
+<exercise>
+  <statement>
+    Beskou die volgende drie basisse vir <m>\mathbb R^3</m>:
+    <md>
+    <mrow>  \mathcal A = \bopen (1,0,0), (0,1,0), (0,0,1) \bclose </mrow>
+      <mrow> \mathcal B = \bopen (2,1,1) , (1,1,1), (0,2,1) \bclose </mrow>
+     <mrow> \mathcal C= \bopen (1,2,3),(0,1,0),(1,0,1) \bclose</mrow>.
+    </md>
+    Bereken <m>\mat{P}_{\basis{C} \leftarrow \basis{B}}, \mat{P}_{\basis{B} \leftarrow \basis{A}}, \mat{P}_{\basis{C} \leftarrow \basis{A}}</m> en verifieer die vergelyking
+    <me>
+\mat{P}_{\basis{C} \leftarrow \basis{B}}  \mat{P}_{\basis{B} \leftarrow \basis{A}} =  \mat{P}_{\basis{C} \leftarrow \basis{A}}.
+  </me>
+  </statement>
+</exercise>
   
 
 
